@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Enciclopédia TEMI/UTI – AVC Agudo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; }
+        .adhd-highlight { background: linear-gradient(120deg, #fef08a 0%, #fde047 100%); padding: 0.1em 0.4em; border-radius: 0.4rem; font-weight: 700; color: #422006; }
+        .dark .adhd-highlight { background: linear-gradient(120deg, #eab308 0%, #ca8a04 100%); color: #fefce8; }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-4px); }
+        .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+        .flipped .flash-inner { transform: rotateY(180deg); }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+        .scrollbar-thin::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .dark .scrollbar-thin::-webkit-scrollbar-thumb { background: #475569; }
+    </style>
+</head>
+<body class="bg-[#f8fafc] dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased selection:bg-yellow-300 selection:text-slate-900">
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800">
+        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 h-[68px] flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <button id="menuBtn" class="lg:hidden p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+                <div class="flex items-center gap-3">
+                    <a href="../../index.html" class="w-11 h-11 rounded-2xl bg-gradient-to-br from-violet-600 to-fuchsia-600 grid place-items-center text-2xl shadow-lg shadow-violet-600/20 hover:scale-105 transition-transform" title="Voltar ao Início">🏠</a>
+                    <div>
+                        <h1 class="text-[17px] sm:text-xl font-extrabold tracking-tight leading-tight">Módulo AVC ⚡</h1>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 font-medium hidden sm:block">Matriz V7 (Antigravity+Meta)</p>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-wrap justify-end">
+                    <a href="avc_31_blocos.html" class="px-4 py-2 bg-slate-800 text-sm font-semibold rounded-xl text-fuchsia-400 hover:bg-slate-700 transition flex items-center gap-2 border border-slate-700">📄 <span class="hidden sm:inline">Material Extenso</span></a>
+                    <a href="avc_31_blocos.html#bloco-18" class="px-4 py-2 bg-emerald-900/40 text-sm font-semibold rounded-xl text-emerald-400 hover:bg-emerald-800/60 transition flex items-center gap-2 border border-emerald-800/50">📸 <span class="hidden sm:inline">Galeria</span></a>
+                    <a href="codigo_avc_10_minutos_dashboard_html.html" class="px-4 py-2 bg-orange-900/40 text-sm font-semibold rounded-xl text-orange-400 hover:bg-orange-800/60 transition flex items-center gap-2 border border-orange-800/50">⏱️ <span class="hidden sm:inline">Dashboard</span></a>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="hidden md:inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">✓ AHA/ASA 2026</span>
+                <button id="themeToggle" class="p-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                    <svg id="sunIcon" class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    <svg id="moonIcon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="fixed top-[68px] left-0 w-[300px] h-[calc(100vh-68px)] bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 -translate-x-full lg:translate-x-0 transition-transform duration-300 z-30 overflow-y-auto scrollbar-thin">
+        <nav class="p-4">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 mb-3">Navegação Dinâmica V7</p>
+            <ul id="sidebar-nav" class="space-y-1 text-[14px]">
+                <!-- PREENCHIDO PELO AVC.JS -->
+            </ul>
+            <div class="mt-6 p-3.5 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border border-amber-200/50 dark:border-amber-800/30">
+                <p class="text-xs font-bold text-amber-900 dark:text-amber-200">⚡ Dica ADHD</p>
+                <p class="text-xs text-amber-800 dark:text-amber-300 mt-1">Use ⌘+F para buscar. Clique nos cards à direita para expandir.</p>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- OVERLAY MOBILE -->
+    <div id="overlay" class="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-20 hidden"></div>
+
+    <!-- MAIN -->
+    <main class="lg:ml-[300px] pt-[84px] pb-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- HERO -->
+            <div class="mb-8 p-6 sm:p-8 rounded-[2rem] bg-gradient-to-br from-violet-600 via-fuchsia-600 to-pink-600 text-white shadow-2xl shadow-violet-600/20 relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+                <div class="relative">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur text-xs font-bold mb-3">ATUALIZADO 2026 • TEM FOCADO</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">AVC Agudo (Matriz V7)</h2>
+                    <p class="mt-2 text-white/90 max-w-2xl">Visual. Rápido. Beira-leito. Sem enrolação. <span class="font-bold">Tempo é cérebro.</span></p>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-xl bg-white/15 text-sm font-semibold">⏱️ Porta-agulha &lt;25min</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-white/15 text-sm font-semibold">🧪 TNK &gt; tPA</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-white/15 text-sm font-semibold">🎯 Metas claras</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINER DINÂMICO PARA OS ACORDEÕES -->
+            <div id="dynamic-content">
+                <!-- PREENCHIDO PELO AVC.JS COM AS TAGS <details> -->
+            </div>
+
+            <footer class="mt-12 text-center text-xs text-slate-500 dark:text-slate-500">
+                Enciclopédia TEMI/UTI • Matriz V7 (Antigravity) • v2026
+            </footer>
+        </div>
+    </main>
+
+    <!-- INJEÇÃO DA MATRIZ DE DADOS -->
+    <script src="db_fundamentos.js"></script>
+    <script src="db_pratica.js"></script>
+    <script src="db_interativo.js"></script>
+    <script src="db_pesquisa.js"></script>
+    <script src="db_cross_ia.js"></script>
+    <!-- MOTOR UNIVERSAL V7 -->
+    <script src="avc.js"></script>
+
+    <script>
+        // Theme Toggle Simplificado
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        if (localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+
+        // Sidebar mobile
+        const menuBtn = document.getElementById('menuBtn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        function toggleSidebar() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+        menuBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+</html>
