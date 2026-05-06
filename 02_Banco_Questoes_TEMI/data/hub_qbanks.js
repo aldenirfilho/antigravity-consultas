@@ -14,7 +14,7 @@ const HUB_DATA =
     "delirium-uti": { "label": "Delirium em UTI", "url": "", "status": "planejado" },
     "disfagia": { "label": "Disfagia", "url": "", "status": "planejado" },
     "sepse": { "label": "Sepse", "url": "", "status": "planejado" },
-    "ventilacao-mecanica": { "label": "Ventilação Mecânica", "url": "../01_Modulos_Clinicos/Ventilacao_Mecanica/ventila-calc.html", "status": "ativo" },
+    "ventilacao-mecanica": { "label": "Ventilação Mecânica", "url": "../01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html", "status": "ativo" },
     "choque": { "label": "Choque", "url": "", "status": "planejado" }
   },
   "qbanks": [
