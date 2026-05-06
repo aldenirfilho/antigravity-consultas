@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>📚 Biblioteca IA — Enciclopédia Médica Intensiva</title>
+<meta name="description" content="Repositório de materiais médicos gerados com suporte de IA, organizados por Dr. Aldenir Rocha, médico intensivista e clínico."/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap');
+
+  :root{
+    --bg:#050d1a;--bg2:#0a1628;--bg3:#0f1f38;
+    --accent:#00d4ff;--accent2:#7c3aed;--accent3:#10b981;--gold:#f59e0b;
+    --red:#ef4444;--text:#e2e8f0;--muted:#64748b;--border:#1e3a5f;
+    --card:#0d1b30;--card2:#111f38;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;min-height:100vh;overflow-x:hidden}
+
+  /* ── HEADER ── */
+  header{background:linear-gradient(135deg,var(--bg2),var(--bg3));border-bottom:1px solid var(--border);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+  header h1{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  header a.back{color:var(--accent);text-decoration:none;font-size:.9rem;border:1px solid var(--border);padding:.4rem .8rem;border-radius:6px;transition:.2s}
+  header a.back:hover{background:var(--bg3);border-color:var(--accent)}
+
+  /* ── AVISO JURÍDICO ── */
+  .juridico{background:linear-gradient(135deg,#1a0a00,#2d1500);border:1px solid var(--gold);border-radius:12px;padding:1.5rem;margin:2rem auto;max-width:900px;position:relative}
+  .juridico::before{content:'⚖️ AVISO JURÍDICO & EDITORIAL';font-family:'Syne',sans-serif;font-weight:800;font-size:.75rem;color:var(--gold);letter-spacing:.1em;display:block;margin-bottom:.8rem}
+  .juridico p{font-size:.82rem;color:#d4a853;line-height:1.7}
+  .juridico strong{color:var(--gold)}
+
+  /* ── STATS BAR ── */
+  .stats{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin:1.5rem auto;max-width:900px}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.8rem 1.2rem;text-align:center;flex:1;min-width:120px}
+  .stat span{display:block;font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent)}
+  .stat small{color:var(--muted);font-size:.75rem}
+
+  /* ── SEARCH ── */
+  .search-bar{max-width:900px;margin:1rem auto;padding:0 1rem;position:relative}
+  .search-bar input{width:100%;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1rem .9rem 3rem;color:var(--text);font-size:.95rem;outline:none;transition:.3s}
+  .search-bar input:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(0,212,255,.15)}
+  .search-bar::before{content:'🔍';position:absolute;left:1.8rem;top:50%;transform:translateY(-50%);font-size:1rem}
+
+  /* ── FILTROS ── */
+  .filtros{display:flex;gap:.5rem;flex-wrap:wrap;max-width:900px;margin:.5rem auto 1.5rem;padding:0 1rem}
+  .filtro{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:.35rem .9rem;font-size:.8rem;cursor:pointer;transition:.2s;color:var(--muted)}
+  .filtro.ativo,.filtro:hover{background:var(--accent);color:#000;border-color:var(--accent);font-weight:600}
+
+  /* ── GRID DE ARQUIVOS ── */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;max-width:900px;margin:0 auto;padding:0 1rem 3rem}
+
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;transition:.25s;cursor:pointer;position:relative;overflow:hidden}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,212,255,.1)}
+  .card.pdf::before{background:linear-gradient(90deg,var(--red),#f97316)}
+  .card.word::before{background:linear-gradient(90deg,#2563eb,#3b82f6)}
+  .card.html::before{background:linear-gradient(90deg,var(--accent3),#059669)}
+
+  .card-icon{font-size:2rem;margin-bottom:.6rem;display:block}
+  .card-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.4rem;line-height:1.3}
+  .card-meta{font-size:.75rem;color:var(--muted);margin-bottom:.8rem;font-family:'JetBrains Mono',monospace}
+  .card-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.8rem}
+  .tag{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:.2rem .6rem;font-size:.68rem;color:var(--accent);font-family:'JetBrains Mono',monospace}
+
+  .card-actions{display:flex;gap:.5rem}
+  .btn{padding:.4rem .9rem;border-radius:7px;font-size:.78rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:.3rem}
+  .btn-primary{background:var(--accent);color:#000}
+  .btn-primary:hover{background:#00b8d9}
+  .btn-secondary{background:transparent;border:1px solid var(--border);color:var(--text)}
+  .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* ── COMO ADICIONAR ── */
+  .how-to{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem;max-width:900px;margin:0 auto 2rem;padding-left:1rem;padding-right:1rem}
+  .how-to h3{font-family:'Syne',sans-serif;color:var(--accent);margin-bottom:1rem;font-size:1rem}
+  .how-to ol{padding-left:1.2rem;color:var(--muted);font-size:.85rem;line-height:2}
+  .how-to code{background:var(--bg3);padding:.1rem .4rem;border-radius:4px;color:var(--accent3);font-family:'JetBrains Mono',monospace;font-size:.8rem}
+
+  /* ── UPLOAD PLACEHOLDER ── */
+  .upload-zone{border:2px dashed var(--border);border-radius:12px;padding:2rem;text-align:center;max-width:900px;margin:0 auto 2rem;color:var(--muted);transition:.3s}
+  .upload-zone:hover{border-color:var(--accent);color:var(--accent)}
+  .upload-zone .big-icon{font-size:2.5rem;display:block;margin-bottom:.5rem}
+
+  section.section-title{max-width:900px;margin:2rem auto .5rem;padding:0 1rem}
+  section.section-title h2{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text)}
+  section.section-title p{font-size:.82rem;color:var(--muted);margin-top:.2rem}
+
+  /* empty state */
+  .empty{text-align:center;color:var(--muted);padding:3rem 1rem;font-size:.9rem}
+  .empty .em{font-size:3rem;display:block;margin-bottom:1rem}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📚 Biblioteca IA — Enciclopédia Médica</h1>
+  <a href="../index.html" class="back">← Voltar ao portal</a>
+</header>
+
+<div style="max-width:900px;margin:2rem auto 0;padding:0 1rem">
+
+  <!-- AVISO JURÍDICO -->
+  <div class="juridico">
+    <p>
+      Os materiais disponibilizados nesta Biblioteca foram produzidos pelo <strong>Dr. Aldenir Rocha (CRM-CE 16587 / RQE Clínica Médica 11846)</strong> no exercício de sua atividade médica e acadêmica, com suporte de ferramentas de Inteligência Artificial (IA) utilizadas como auxiliares de pesquisa e síntese científica, a partir de <strong>diretrizes publicamente disponíveis, evidências científicas de domínio público, protocolos institucionais e anotações clínicas próprias</strong>.
+    </p>
+    <br/>
+    <p>
+      ⚠️ <strong>Limitações editoriais:</strong> O conteúdo gerado por IA pode conter imprecisões, desatualizações ou simplificações. Não substitui julgamento clínico individual, protocolos locais ou decisão da equipe de saúde. O autor realizou curadoria e revisão dos materiais, mas não garante ausência de erros.
+    </p>
+    <br/>
+    <p>
+      📜 <strong>Direitos autorais e isenção de responsabilidade:</strong> Este repositório destina-se exclusivamente a fins educacionais, de estudo pessoal e suporte à prática médica do próprio autor. Não há fins comerciais. A síntese e organização dos conteúdos constituem <strong>obra intelectual derivada</strong> (art. 7º, §1º, Lei 9.610/98 — Lei de Direitos Autorais), em que o elemento criativo e organizacional é de autoria do Dr. Aldenir Rocha. Os materiais de terceiros citados nas referências são de responsabilidade de seus respectivos autores. <strong>Nenhum texto integral protegido por direitos autorais foi reproduzido</strong>; foram produzidas sínteses, comentários e análises originais. Em caso de identificação de eventual reprodução indevida, solicitar remoção imediata pelo canal de contato do portal. O autor se isenta de responsabilidade por uso inadequado por terceiros do conteúdo aqui disponível.
+    </p>
+    <br/>
+    <p>
+      🔬 <strong>Origem dos arquivos:</strong> Materiais produzidos entre 2024–2026, a partir de sessões de estudo clínico orientadas pelas dúvidas e necessidades práticas do autor, com análise assistida por IAs (Claude/Anthropic, Gemini/Google, GPT/OpenAI e outras), revisados e organizados para uso próprio em UTI, enfermaria e preparação para título TEMI/AMIB.
+    </p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><span id="total-pdfs">0</span><small>📄 PDFs</small></div>
+    <div class="stat"><span id="total-docs">0</span><small>📝 Word/DOCX</small></div>
+    <div class="stat"><span id="total-html">0</span><small>🌐 HTML</small></div>
+    <div class="stat"><span id="total-all">0</span><small>📦 Total</small></div>
+  </div>
+
+</div>
+
+<!-- BUSCA -->
+<div class="search-bar">
+  <input type="text" id="busca" placeholder="🔍 Buscar por tema, palavra-chave ou categoria..." oninput="filtrarCards()"/>
+</div>
+
+<!-- FILTROS -->
+<div class="filtros" id="filtros">
+  <span class="filtro ativo" onclick="setFiltro('todos',this)">📦 Todos</span>
+  <span class="filtro" onclick="setFiltro('pdf',this)">📄 PDF</span>
+  <span class="filtro" onclick="setFiltro('word',this)">📝 Word</span>
+  <span class="filtro" onclick="setFiltro('html',this)">🌐 HTML</span>
+  <span class="filtro" onclick="setFiltro('uti',this)">🏥 UTI</span>
+  <span class="filtro" onclick="setFiltro('temi',this)">🏆 TEMI</span>
+  <span class="filtro" onclick="setFiltro('farmacologia',this)">💊 Farmacologia</span>
+  <span class="filtro" onclick="setFiltro('neurologia',this)">🧠 Neurologia</span>
+  <span class="filtro" onclick="setFiltro('sepse',this)">🦠 Sepse</span>
+</div>
+
+<!-- COMO ADICIONAR ARQUIVOS -->
+<div style="max-width:900px;margin:0 auto 1rem;padding:0 1rem">
+  <div class="how-to">
+    <h3>📌 Como adicionar seus arquivos PDF/Word à Biblioteca</h3>
+    <ol>
+      <li><strong>GitHub (recomendado):</strong> Suba os arquivos na pasta <code>biblioteca_ia/arquivos/</code> do seu repositório GitHub (<code>aldenirfilho/antigravity-consultas</code>)</li>
+      <li>Após upload, copie o link direto: <code>https://aldenirfilho.github.io/antigravity-consultas/biblioteca_ia/arquivos/NOME.pdf</code></li>
+      <li>Adicione o card correspondente no array <code>ARQUIVOS</code> abaixo no JavaScript desta página</li>
+      <li><strong>Google Drive (alternativa):</strong> Compartilhe o arquivo como "qualquer pessoa com o link pode visualizar" e use o ID do Drive no link de embed</li>
+      <li>Para PDFs do Drive: <code>https://drive.google.com/file/d/ID_DO_ARQUIVO/preview</code></li>
+    </ol>
+    <br/>
+    <p style="color:var(--accent3);font-size:.82rem">💡 <strong>Dica TDAH:</strong> Use uma planilha simples no Google Sheets para registrar título, link, tags e data de cada arquivo antes de adicionar aqui. Facilita a manutenção!</p>
+  </div>
+</div>
+
+<!-- SEÇÃO DE ARQUIVOS -->
+<section class="section-title">
+  <h2>📂 Arquivos disponíveis</h2>
+  <p>Clique em "🔍 Ver" para abrir online ou "⬇️ Baixar" para download</p>
+</section>
+
+<div class="grid" id="grid-arquivos">
+  <!-- populado via JS -->
+</div>
+
+<div class="empty" id="empty-state" style="display:none">
+  <span class="em">📭</span>
+  Nenhum arquivo encontrado para esta busca.<br/>
+  <small>Tente outro termo ou categoria.</small>
+</div>
+
+<!-- ZONA DE UPLOAD (informativa) -->
+<div style="max-width:900px;margin:0 auto;padding:0 1rem">
+  <div class="upload-zone">
+    <span class="big-icon">☁️</span>
+    <strong>Adicionar novos arquivos</strong><br/>
+    <small>Suba seus PDFs e DOCXs na pasta <code>biblioteca_ia/arquivos/</code> no GitHub e atualize o array <code>ARQUIVOS</code> nesta página.<br/>Veja as instruções acima.</small>
+  </div>
+</div>
+
+<script>
+// ============================================================
+//  ARRAY DE ARQUIVOS — ADICIONE SEUS PDFS/DOCS AQUI
+//  Cada item: { titulo, descricao, tipo:'pdf'|'word'|'html',
+//               tags:[], link_ver, link_baixar, data, ia_origem }
+// ============================================================
+const ARQUIVOS = [
+  // ── EXEMPLO (remova quando tiver arquivos reais) ──
+  {
+    titulo: "🦠 Sepse & Choque Séptico — Bundle Completo",
+    descricao: "Fisiopatologia, Surviving Sepsis Campaign 2024, prescrição UTI, metas de ressuscitação e checklist de 1h/3h/6h.",
+    tipo: "pdf",
+    tags: ["uti","sepse","temi","bundle","choque"],
+    link_ver: "#",   // substitua pelo link real
+    link_baixar: "#",
+    data: "2025-03",
+    ia_origem: "Claude + Gemini"
+  },
+  {
+    titulo: "🧠 AVC Agudo — Roteiro Completo TEMI",
+    descricao: "Trombólise, trombectomia, escores NIH/ASPECTS/DRAGON, condutas na UTI neurológica, janela terapêutica e questões comentadas.",
+    tipo: "word",
+    tags: ["neurologia","uti","temi","avc","emergencia"],
+    link_ver: "#",
+    link_baixar: "#",
+    data: "2025-04",
+    ia_origem: "Claude"
+  },
+  {
+    titulo: "💊 Farmacologia UTI — Sedoanalgesia & Delirium",
+    descricao: "Protocolos ABCDEF, escalas RASS/CAM-ICU, fármacos por score, mnemônicos para TEMI e tabelas de infusão.",
+    tipo: "pdf",
+    tags: ["farmacologia","uti","temi","sedacao","delirium"],
+    link_ver: "#",
+    link_baixar: "#",
+    data: "2025-02",
+    ia_origem: "GPT + Claude"
+  },
+  {
+    titulo: "🫁 Ventilação Mecânica — Guia Beira-Leito",
+    descricao: "Modos ventilatórios, estratégia protetora, plateau, driving pressure, PEEP best, desmame e extubação segura.",
+    tipo: "html",
+    tags: ["uti","temi","ventilacao","pulmonar"],
+    link_ver: "#",
+    link_baixar: "#",
+    data: "2025-05",
+    ia_origem: "Claude"
+  },
+  {
+    titulo: "🩺 IRA na UTI — Diagnóstico e TRS",
+    descricao: "Critérios KDIGO, MAKE30, indicações de hemodiálise, TRRC vs intermitente, prescrição de diálise e fluido.",
+    tipo: "pdf",
+    tags: ["uti","temi","renal","ira","trs"],
+    link_ver: "#",
+    link_baixar: "#",
+    data: "2025-01",
+    ia_origem: "Gemini"
+  },
+  {
+    titulo: "❤️ SCA & Emergências Cardiovasculares",
+    descricao: "IAMCSST, killip, reperfusão, antiplaquetários, anticoagulação, IC descompensada, choque cardiogênico.",
+    tipo: "word",
+    tags: ["temi","cardiologia","emergencia","sca","choque"],
+    link_ver: "#",
+    link_baixar: "#",
+    data: "2025-03",
+    ia_origem: "Claude + GPT"
+  }
+];
+
+// ── FILTRO ATIVO ──
+let filtroAtivo = 'todos';
+
+function setFiltro(f, el){
+  filtroAtivo = f;
+  document.querySelectorAll('.filtro').forEach(x=>x.classList.remove('ativo'));
+  el.classList.add('ativo');
+  filtrarCards();
+}
+
+function filtrarCards(){
+  const busca = document.getElementById('busca').value.toLowerCase();
+  const grid = document.getElementById('grid-arquivos');
+  const empty = document.getElementById('empty-state');
+  
+  const filtrados = ARQUIVOS.filter(a=>{
+    const matchFiltro = filtroAtivo==='todos' || a.tipo===filtroAtivo || a.tags.includes(filtroAtivo);
+    const matchBusca = !busca || 
+      a.titulo.toLowerCase().includes(busca) || 
+      a.descricao.toLowerCase().includes(busca) ||
+      a.tags.some(t=>t.includes(busca));
+    return matchFiltro && matchBusca;
+  });
+
+  grid.innerHTML = filtrados.map(a => `
+    <div class="card ${a.tipo}" data-tags="${a.tags.join(' ')}">
+      <span class="card-icon">${iconeTipo(a.tipo)}</span>
+      <div class="card-title">${a.titulo}</div>
+      <div class="card-meta">📅 ${a.data} · 🤖 ${a.ia_origem}</div>
+      <p style="font-size:.8rem;color:var(--muted);margin-bottom:.7rem;line-height:1.5">${a.descricao}</p>
+      <div class="card-tags">
+        ${a.tags.map(t=>`<span class="tag">#${t}</span>`).join('')}
+      </div>
+      <div class="card-actions">
+        ${a.link_ver !== '#' ? `<a href="${a.link_ver}" target="_blank" class="btn btn-primary">🔍 Ver</a>` : `<button class="btn btn-primary" onclick="avisoEmBreve()">🔍 Ver</button>`}
+        ${a.link_baixar !== '#' ? `<a href="${a.link_baixar}" download class="btn btn-secondary">⬇️ Baixar</a>` : `<button class="btn btn-secondary" onclick="avisoEmBreve()">⬇️ Baixar</button>`}
+      </div>
+    </div>
+  `).join('');
+
+  empty.style.display = filtrados.length === 0 ? 'block' : 'none';
+  atualizarStats();
+}
+
+function iconeTipo(t){
+  return t==='pdf'?'📄':t==='word'?'📝':t==='html'?'🌐':'📦';
+}
+
+function avisoEmBreve(){
+  alert('⚠️ Arquivo em breve!\n\nSuba o PDF/DOCX na pasta biblioteca_ia/arquivos/ no GitHub e atualize o link neste arquivo.');
+}
+
+function atualizarStats(){
+  const pdfs = ARQUIVOS.filter(a=>a.tipo==='pdf').length;
+  const docs = ARQUIVOS.filter(a=>a.tipo==='word').length;
+  const htmls = ARQUIVOS.filter(a=>a.tipo==='html').length;
+  document.getElementById('total-pdfs').textContent = pdfs;
+  document.getElementById('total-docs').textContent = docs;
+  document.getElementById('total-html').textContent = htmls;
+  document.getElementById('total-all').textContent = ARQUIVOS.length;
+}
+
+// inicializar
+filtrarCards();
+</script>
+</body>
+</html>
