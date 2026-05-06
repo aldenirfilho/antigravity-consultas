@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central de Calculadoras UTI | Enciclopédia Médica</title>
+  <meta name="description" content="Central educacional de calculadoras para UTI: infusões, ventilação mecânica, unidades por hora e eletrólitos." />
+  <style>
+    /*
+      ENCICLOPÉDIA MÉDICA INTENSIVA & MEDICINA INTERNA
+      Módulo 03 — Central de Calculadoras UTI
+      Ordem oficial: 01_Modulos_Clinicos → 02_Banco_Questoes_TEMI → 03_Calculadoras_UTI
+
+      PADRÃO PARA OUTRAS IAs / ANTIGRAVITY:
+      - manter a numeração da pasta;
+      - manter links relativos;
+      - não inserir presets medicamentosos sem validação institucional;
+      - calculadoras fazem conversão matemática, não recomendação terapêutica.
+    */
+    :root{
+      --bg:#07111f; --bg2:#0b182b; --border:rgba(255,255,255,.14);
+      --text:#f6f8fc; --muted:#aebbd0; --cyan:#3ee8ff; --green:#4ef0a1;
+      --red:#ff6b6b; --yellow:#ffd166; --violet:#a98cff; --radius:26px;
+      --shadow:0 24px 80px rgba(0,0,0,.34);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top left,rgba(62,232,255,.18),transparent 32rem),
+        radial-gradient(circle at 85% 10%,rgba(169,140,255,.16),transparent 30rem),
+        linear-gradient(135deg,var(--bg),var(--bg2));
+      min-height:100vh;
+    }
+    a{color:inherit;text-decoration:none}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      display:flex; justify-content:space-between; align-items:center; gap:16px;
+      padding:14px 22px; backdrop-filter:blur(18px);
+      background:rgba(7,17,31,.76); border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:16px;background:rgba(62,232,255,.12);border:1px solid var(--border)}
+    .brand strong{display:block;line-height:1}
+    .brand small{color:var(--muted)}
+    .nav{display:flex;gap:10px;flex-wrap:wrap}
+    .nav a{padding:8px 10px;border-radius:999px;color:#dce6f5;font-weight:800;font-size:.88rem}
+    .nav a:hover{background:rgba(255,255,255,.08)}
+    .shell{max-width:1180px;margin:0 auto;padding:28px 22px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch;padding-top:46px}
+    .glass,.card{
+      border:1px solid var(--border);
+      background:linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.045));
+      border-radius:var(--radius); box-shadow:var(--shadow);
+    }
+    .hero-copy{padding:34px}
+    .eyebrow{
+      display:inline-flex;margin-bottom:18px;padding:8px 12px;border-radius:999px;
+      border:1px solid rgba(62,232,255,.24);background:rgba(62,232,255,.08);
+      color:#d9fbff;font-weight:900;
+    }
+    h1{
+      font-size:clamp(2.4rem,7vw,5rem);line-height:.93;letter-spacing:-.08em;margin:0 0 18px;
+      background:linear-gradient(90deg,#fff,#baf3ff 40%,#d9cbff 72%,#caffdf);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    h2{font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.05em;margin:0 0 14px}
+    h3{margin:0 0 10px;letter-spacing:-.03em}
+    p,.muted{color:var(--muted);line-height:1.65}
+    .hero p{color:#dce6f5;font-size:1.08rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn,button{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 15px;border-radius:16px;border:1px solid var(--border);
+      background:rgba(255,255,255,.08);color:var(--text);font-weight:900;
+      cursor:pointer;transition:.18s ease;font-size:.94rem;
+    }
+    .btn:hover,button:hover{transform:translateY(-2px);background:rgba(255,255,255,.12)}
+    .btn.primary,button.primary{background:linear-gradient(135deg,var(--cyan),var(--green));color:#04131f;border:0}
+    .btn.ghost{background:transparent}
+    .status-card{padding:24px}
+    .metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0}
+    .metric-grid div{padding:16px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+    .metric-grid strong{display:block;font-size:1.7rem}
+    .metric-grid span{color:var(--muted);font-size:.88rem}
+    .notice{
+      border:1px solid rgba(255,209,102,.3);
+      background:linear-gradient(145deg,rgba(255,209,102,.12),rgba(255,255,255,.04));
+      border-radius:22px;padding:16px;margin-top:16px;color:#fff4cf;
+    }
+    .section{padding-top:32px;padding-bottom:32px}
+    .tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:14px 0 22px}
+    .tab{
+      border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);
+      border-radius:18px;padding:13px 10px;font-weight:900;text-align:center;cursor:pointer;
+      user-select:none;color:#dce6f5;
+    }
+    .tab.active{
+      background:linear-gradient(135deg,rgba(62,232,255,.22),rgba(78,240,161,.16));
+      border-color:rgba(62,232,255,.46);box-shadow:0 12px 36px rgba(62,232,255,.12);
+    }
+    .panel{display:none}
+    .panel.active{display:block}
+    .grid{display:grid;gap:18px}
+    .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{padding:22px}
+    .card.warn{border-color:rgba(255,209,102,.25);background:radial-gradient(circle at top right,rgba(255,209,102,.12),transparent 20rem),linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.045))}
+    .card.danger{border-color:rgba(255,107,107,.28);background:radial-gradient(circle at top right,rgba(255,107,107,.14),transparent 20rem),linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.045))}
+    label{display:block;font-size:.9rem;color:#dce6f5;font-weight:800;margin:12px 0 6px}
+    input,select{
+      width:100%;background:#0e172a;color:var(--text);border:1px solid rgba(255,255,255,.14);
+      border-radius:14px;padding:12px 12px;font-size:1rem;outline:none;
+    }
+    input:focus,select:focus{border-color:rgba(62,232,255,.62);box-shadow:0 0 0 4px rgba(62,232,255,.08)}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .result{margin-top:14px;border:1px solid rgba(62,232,255,.18);background:rgba(5,13,26,.68);border-radius:18px;padding:15px;min-height:72px}
+    .result .big{font-size:clamp(2rem,5vw,3rem);font-weight:1000;margin:2px 0 6px;color:#dff6ff;letter-spacing:-.05em}
+    .formula{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+      background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.1);
+      border-radius:14px;padding:10px;margin-top:10px;color:#d9efff;overflow:auto;
+    }
+    .pill{display:inline-block;background:rgba(62,232,255,.10);border:1px solid rgba(62,232,255,.22);border-radius:999px;padding:6px 10px;color:#d9efff;font-size:.78rem;margin:6px 6px 0 0;font-weight:800}
+    .ok{color:var(--green)}.warnText{color:var(--yellow)}.dangerText{color:var(--red)}
+    .small{font-size:.84rem}.copy{margin-top:10px;width:auto}
+    .footer{color:var(--muted);border-top:1px solid rgba(255,255,255,.1);margin-top:38px;padding-top:24px}
+    .link-grid a{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);border-radius:18px;padding:14px;display:block;font-weight:900}
+    .link-grid a small{display:block;color:var(--muted);font-weight:600;margin-top:4px;line-height:1.4}
+    @media(max-width:940px){
+      .hero,.grid.two,.grid.three{grid-template-columns:1fr}
+      .tabs{grid-template-columns:repeat(2,1fr)}
+      .nav{display:none}.hero{padding-top:22px}.hero-copy{padding:24px}.row{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">
+      <span class="brand-icon">🧠</span>
+      <span><strong>Enciclopédia Médica</strong><small>Intensiva & Medicina Interna</small></span>
+    </a>
+    <nav class="nav">
+      <a href="../index.html">🏠 Home</a>
+      <a href="../01_Modulos_Clinicos/AVC_Agudo/avc.html">🧠 AVC Agudo</a>
+      <a href="../02_Banco_Questoes_TEMI/index.html">🏆 Banco TEMI</a>
+      <a href="#calculadoras" style="color:#4ef0a1">🧮 Calculadoras</a>
+      <a href="#seguranca">🛡️ Segurança</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy glass">
+        <span class="eyebrow">🧮 Módulo 03 • UTI • Offline • Plantão</span>
+        <h1>Central de Calculadoras UTI</h1>
+        <p>
+          Ferramenta educacional rápida para contas de concentração, bomba, parâmetros ventilatórios e reposição por taxa.
+          Mantém a lógica do HTML original enviado, mas em formato institucional, com links relativos e estrutura assimilável por outras IAs.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#calculadoras">⚡ Abrir calculadoras</a>
+          <a class="btn" href="../index.html">🏠 Voltar à página principal</a>
+          <a class="btn ghost" href="#seguranca">🛡️ Alertas de segurança</a>
+        </div>
+        <div class="notice">
+          <b>⚠️ Uso responsável:</b> esta página agiliza contas matemáticas. A prescrição final exige conferência da concentração preparada,
+          protocolo institucional, dupla checagem e julgamento clínico.
+        </div>
+      </div>
+      <aside class="status-card glass">
+        <h2>📊 Painel do módulo</h2>
+        <div class="metric-grid">
+          <div><strong>03</strong><span>Ordem oficial</span></div>
+          <div><strong>05</strong><span>Famílias de cálculo</span></div>
+          <div><strong>100%</strong><span>Offline/local</span></div>
+          <div><strong>UTI</strong><span>Plantão e round</span></div>
+        </div>
+        <p class="muted">Sem bibliotecas externas. Compatível com GitHub Pages, iPhone, iPad e Mac.</p>
+      </aside>
+    </section>
+
+    <section id="calculadoras" class="shell section">
+      <h2>🧮 Calculadoras principais</h2>
+      <p class="muted">Escolha o bloco. Informe sempre a concentração real preparada no seu serviço.</p>
+
+      <div class="tabs">
+        <div class="tab active" onclick="showTab('infusao',this)">💉 mcg/kg/min</div>
+        <div class="tab" onclick="showTab('horaria',this)">😴 kg/h</div>
+        <div class="tab" onclick="showTab('unidades',this)">🩸 U/h</div>
+        <div class="tab" onclick="showTab('vm',this)">🫁 Ventilação</div>
+        <div class="tab" onclick="showTab('eletrolitos',this)">⚡ Eletrólitos</div>
+        <div class="tab" onclick="showTab('formulas',this)">📚 Fórmulas</div>
+      </div>
+
+      <div id="infusao" class="panel active">
+        <div class="grid two">
+          <article class="card">
+            <h2>💉 Infusão ponderal em mcg/kg/min</h2>
+            <p class="muted">Calcula mL/h a partir de dose prescrita, peso e concentração preparada.</p>
+            <label>Peso (kg)</label><input id="dva_peso" type="text" inputmode="decimal" placeholder="Ex.: 70">
+            <label>Dose prescrita (mcg/kg/min)</label><input id="dva_dose" type="text" inputmode="decimal" placeholder="Ex.: 0,10">
+            <div class="row">
+              <div><label>Quantidade total (mg)</label><input id="dva_mg" type="text" inputmode="decimal" placeholder="Ex.: 4"></div>
+              <div><label>Volume total (mL)</label><input id="dva_ml" type="text" inputmode="decimal" placeholder="Ex.: 50"></div>
+            </div>
+            <button class="primary" onclick="calcDVA()">Calcular mL/h</button>
+            <div class="result" id="dva_out"><div class="small muted">Fórmula: mL/h = dose × peso × 60 ÷ concentração.</div></div>
+          </article>
+          <article class="card warn">
+            <h2>🛡️ Segurança</h2>
+            <p class="muted">Este bloco não sugere doses nem concentrações. Ele apenas converte a prescrição e a diluição informadas em taxa de bomba.</p>
+            <div class="formula">concentração mcg/mL = mg × 1000 ÷ mL</div>
+            <span class="pill">Conferir unidade</span><span class="pill">Conferir diluição</span><span class="pill">Dupla checagem</span>
+          </article>
+        </div>
+      </div>
+
+      <div id="horaria" class="panel">
+        <div class="grid two">
+          <article class="card">
+            <h2>😴 Infusão ponderal por hora</h2>
+            <p class="muted">Calcula mL/h para dose em mcg/kg/h ou mg/kg/h.</p>
+            <label>Peso (kg)</label><input id="sed_peso" type="text" inputmode="decimal" placeholder="Ex.: 70">
+            <label>Tipo de dose</label><select id="sed_tipo"><option value="mcgkgh">mcg/kg/h</option><option value="mgkgh">mg/kg/h</option></select>
+            <label>Dose prescrita</label><input id="sed_dose" type="text" inputmode="decimal" placeholder="Ex.: 1">
+            <div class="row">
+              <div><label>Quantidade total preparada</label><input id="sed_total" type="text" inputmode="decimal" placeholder="Ex.: 2500"></div>
+              <div><label>Unidade</label><select id="sed_unid"><option value="mcg">mcg</option><option value="mg">mg</option></select></div>
+            </div>
+            <label>Volume total (mL)</label><input id="sed_ml" type="text" inputmode="decimal" placeholder="Ex.: 50">
+            <button class="primary" onclick="calcSed()">Calcular mL/h</button>
+            <div class="result" id="sed_out"><div class="small muted">Informe a quantidade real preparada e a unidade correta.</div></div>
+          </article>
+          <article class="card danger">
+            <h2>⚠️ Sem presets automáticos</h2>
+            <p class="muted">Para reduzir risco de erro, esta versão pública não preenche concentrações medicamentosas específicas. Use as apresentações validadas do seu serviço.</p>
+            <div class="formula">mL/h = dose × peso ÷ concentração</div>
+          </article>
+        </div>
+      </div>
+
+      <div id="unidades" class="panel">
+        <div class="grid two">
+          <article class="card">
+            <h2>🩸 Infusão em unidades/h</h2>
+            <p class="muted">Calcula mL/h pela taxa prescrita em unidades por hora.</p>
+            <label>Modo</label><select id="ins_mode"><option value="uh">Taxa fixa em U/h</option><option value="ukgh">Taxa em U/kg/h</option></select>
+            <label>Peso (kg), se U/kg/h</label><input id="ins_peso" type="text" inputmode="decimal" placeholder="Ex.: 70">
+            <label>Taxa prescrita</label><input id="ins_taxa" type="text" inputmode="decimal" placeholder="Ex.: 2">
+            <div class="row">
+              <div><label>Unidades totais</label><input id="ins_u" type="text" inputmode="decimal" placeholder="Ex.: 100"></div>
+              <div><label>Volume total (mL)</label><input id="ins_ml" type="text" inputmode="decimal" placeholder="Ex.: 100"></div>
+            </div>
+            <button class="primary" onclick="calcIns()">Calcular mL/h</button>
+            <div class="result" id="ins_out"><div class="small muted">Concentração = unidades totais ÷ mL.</div></div>
+          </article>
+          <article class="card warn">
+            <h2>📌 Observação</h2>
+            <p class="muted">Ajustes seriados devem seguir protocolo local, metas clínicas, risco de hipoglicemia e monitorização apropriada.</p>
+          </article>
+        </div>
+      </div>
+
+      <div id="vm" class="panel">
+        <div class="grid two">
+          <article class="card">
+            <h2>🫁 Peso predito + volume corrente</h2>
+            <label>Sexo biológico</label><select id="vm_sexo"><option value="M">Masculino</option><option value="F">Feminino</option></select>
+            <label>Altura (cm)</label><input id="vm_altura" type="text" inputmode="decimal" placeholder="Ex.: 170">
+            <label>VT alvo (mL/kg de PBW)</label><input id="vm_vtkg" type="text" inputmode="decimal" placeholder="Ex.: 6">
+            <button class="primary" onclick="calcVM()">Calcular PBW e VT</button>
+            <div class="result" id="vm_out"><div class="small muted">Use peso predito para estratégia protetora.</div></div>
+          </article>
+          <article class="card">
+            <h2>📈 Ventilação minuto</h2>
+            <label>Volume corrente (mL)</label><input id="vm_vt" type="text" inputmode="decimal" placeholder="Ex.: 420">
+            <label>Frequência respiratória (irpm)</label><input id="vm_fr" type="text" inputmode="decimal" placeholder="Ex.: 24">
+            <button class="primary" onclick="calcVM2()">Calcular VM</button>
+            <div class="result" id="vm2_out"><div class="small muted">VM = VT × FR ÷ 1000.</div></div>
+          </article>
+        </div>
+      </div>
+
+      <div id="eletrolitos" class="panel">
+        <div class="grid two">
+          <article class="card">
+            <h2>⚡ Reposição por taxa</h2>
+            <label>Unidade de reposição</label><select id="el_tipo"><option value="mEqh">mEq/h</option><option value="mmolh">mmol/h</option><option value="gh">g/h</option></select>
+            <label>Taxa prescrita</label><input id="el_taxa" type="text" inputmode="decimal" placeholder="Ex.: 10">
+            <div class="row">
+              <div><label>Quantidade total preparada</label><input id="el_total" type="text" inputmode="decimal" placeholder="Ex.: 20"></div>
+              <div><label>Volume total (mL)</label><input id="el_ml" type="text" inputmode="decimal" placeholder="Ex.: 100"></div>
+            </div>
+            <button class="primary" onclick="calcEl()">Calcular mL/h</button>
+            <div class="result" id="el_out"><div class="small muted">Calcula taxa de bomba. Limites dependem de via, solução e protocolo.</div></div>
+          </article>
+          <article class="card danger" id="seguranca">
+            <h2>🔎 Segurança dos eletrólitos</h2>
+            <p class="muted">Confira função renal, ECG quando aplicável, via periférica/central, osmolaridade, concentração final e monitorização laboratorial.</p>
+            <p class="dangerText small"><b>Disnatremias:</b> não use atalho simples sem cálculo dedicado e contexto clínico.</p>
+          </article>
+        </div>
+      </div>
+
+      <div id="formulas" class="panel">
+        <div class="grid three">
+          <article class="card"><h3>💉 mcg/kg/min</h3><div class="formula">mL/h = dose × peso × 60 ÷ conc</div></article>
+          <article class="card"><h3>🫁 PBW</h3><div class="formula">M: 50 + 0,91×(altura−152,4)<br>F: 45,5 + 0,91×(altura−152,4)</div></article>
+          <article class="card"><h3>📈 VM</h3><div class="formula">L/min = VT × FR ÷ 1000</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell section">
+      <h2>🔗 Conexões da Enciclopédia</h2>
+      <div class="grid three link-grid">
+        <a href="../index.html">🏠 Homepage<small>Hub principal.</small></a>
+        <a href="../01_Modulos_Clinicos/AVC_Agudo/avc.html">🧠 AVC Agudo<small>Módulo clínico inaugural.</small></a>
+        <a href="../02_Banco_Questoes_TEMI/index.html">🏆 Banco TEMI<small>Treino ativo e questões comentadas.</small></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>🧠 Enciclopédia Médica Intensiva & Medicina Interna — Módulo 03: Central de Calculadoras UTI.</p>
+  </footer>
+
+<script>
+function showTab(id,el){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+}
+function num(id){return parseFloat(String(document.getElementById(id).value).replace(',','.'))}
+function fmt(x,n=2){return Number(x).toFixed(n).replace('.',',')}
+function valid(vals){return vals.every(v=>Number.isFinite(v)&&v>0)}
+function copyText(text){navigator.clipboard?.writeText(text).catch(()=>{})}
+function render(id,html,copy){
+  document.getElementById(id).innerHTML=html+(copy?`<br><button class="copy" onclick="copyText(\`${copy.replace(/`/g,"'")}\`)">📋 Copiar resultado</button>`:'');
+}
+function calcDVA(){
+  const peso=num('dva_peso'),dose=num('dva_dose'),mg=num('dva_mg'),ml=num('dva_ml');
+  if(!valid([peso,dose,mg,ml])){render('dva_out','<span class="dangerText">Preencha todos os campos com valores > 0.</span>');return}
+  const conc=(mg*1000)/ml,rate=(dose*peso*60)/conc;
+  const copy=`Infusão mcg/kg/min: conc ${fmt(conc)} mcg/mL; dose ${fmt(dose)} mcg/kg/min; peso ${fmt(peso,1)} kg; bomba ${fmt(rate)} mL/h.`;
+  render('dva_out',`<div class="big">${fmt(rate)} mL/h</div><div class="small">Concentração: <b>${fmt(conc)} mcg/mL</b></div><div class="small">Conta: (${fmt(dose)} × ${fmt(peso)} × 60) ÷ ${fmt(conc)}</div>`,copy);
+}
+function calcSed(){
+  const peso=num('sed_peso'),dose=num('sed_dose'),total=num('sed_total'),ml=num('sed_ml'),tipo=document.getElementById('sed_tipo').value,unid=document.getElementById('sed_unid').value;
+  if(!valid([peso,dose,total,ml])){render('sed_out','<span class="dangerText">Preencha todos os campos com valores > 0.</span>');return}
+  let rate=0,concLabel='';
+  if(tipo==='mcgkgh'){
+    const totalMcg=unid==='mg'?total*1000:total,conc=totalMcg/ml;
+    rate=(dose*peso)/conc; concLabel=`${fmt(conc)} mcg/mL`;
+  }else{
+    const totalMg=unid==='mg'?total:total/1000,conc=totalMg/ml;
+    rate=(dose*peso)/conc; concLabel=`${fmt(conc)} mg/mL`;
+  }
+  const copy=`Infusão por kg/h: dose ${fmt(dose)} ${tipo}; peso ${fmt(peso,1)} kg; concentração ${concLabel}; bomba ${fmt(rate)} mL/h.`;
+  render('sed_out',`<div class="big">${fmt(rate)} mL/h</div><div class="small">Concentração: <b>${concLabel}</b></div>`,copy);
+}
+function calcIns(){
+  const mode=document.getElementById('ins_mode').value,peso=num('ins_peso'),taxa=num('ins_taxa'),u=num('ins_u'),ml=num('ins_ml');
+  if(!valid([taxa,u,ml])||(mode==='ukgh'&&!(Number.isFinite(peso)&&peso>0))){render('ins_out','<span class="dangerText">Preencha os campos necessários com valores > 0.</span>');return}
+  const conc=u/ml,uh=mode==='uh'?taxa:taxa*peso,rate=uh/conc;
+  const copy=`Unidades/h: concentração ${fmt(conc)} U/mL; taxa ${fmt(uh)} U/h; bomba ${fmt(rate)} mL/h.`;
+  render('ins_out',`<div class="big">${fmt(rate)} mL/h</div><div class="small">Taxa: <b>${fmt(uh)} U/h</b></div><div class="small">Concentração: <b>${fmt(conc)} U/mL</b></div>`,copy);
+}
+function calcVM(){
+  const sexo=document.getElementById('vm_sexo').value,altura=num('vm_altura'),vtkg=num('vm_vtkg');
+  if(!valid([altura,vtkg])){render('vm_out','<span class="dangerText">Preencha altura e VT alvo.</span>');return}
+  const pbw=sexo==='M'?50+0.91*(altura-152.4):45.5+0.91*(altura-152.4),vt=pbw*vtkg;
+  const copy=`VM: PBW ${fmt(pbw,1)} kg; VT ${fmt(vtkg,1)} mL/kg; alvo ${fmt(vt,0)} mL.`;
+  render('vm_out',`<div class="big">${fmt(vt,0)} mL</div><div class="small">PBW: <b>${fmt(pbw,1)} kg</b></div>`,copy);
+}
+function calcVM2(){
+  const vt=num('vm_vt'),fr=num('vm_fr');
+  if(!valid([vt,fr])){render('vm2_out','<span class="dangerText">Preencha VT e FR.</span>');return}
+  const vm=vt*fr/1000,copy=`VM: VT ${fmt(vt,0)} mL; FR ${fmt(fr,0)}; ventilação minuto ${fmt(vm,2)} L/min.`;
+  render('vm2_out',`<div class="big">${fmt(vm,2)} L/min</div><div class="small">Ventilação minuto = ${fmt(vt,0)} × ${fmt(fr,0)} ÷ 1000</div>`,copy);
+}
+function calcEl(){
+  const taxa=num('el_taxa'),total=num('el_total'),ml=num('el_ml'),tipo=document.getElementById('el_tipo').value;
+  if(!valid([taxa,total,ml])){render('el_out','<span class="dangerText">Preencha todos os campos com valores > 0.</span>');return}
+  const conc=total/ml,rate=taxa/conc,label=tipo==='mEqh'?'mEq/h':tipo==='mmolh'?'mmol/h':'g/h';
+  const copy=`Reposição: taxa ${fmt(taxa)} ${label}; concentração ${fmt(conc)} unid/mL; bomba ${fmt(rate)} mL/h.`;
+  render('el_out',`<div class="big">${fmt(rate)} mL/h</div><div class="small">Taxa: <b>${fmt(taxa)} ${label}</b></div><div class="small">Concentração: <b>${fmt(conc)} unid/mL</b></div>`,copy);
+}
+</script>
+</body>
+</html>

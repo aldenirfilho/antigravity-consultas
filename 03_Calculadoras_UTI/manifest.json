@@ -1,0 +1,45 @@
+{
+  "module_id": "03_Calculadoras_UTI",
+  "title": "Central de Calculadoras UTI",
+  "project": "Enciclopédia Médica Intensiva & Medicina Interna",
+  "order": [
+    "01_Modulos_Clinicos",
+    "02_Banco_Questoes_TEMI",
+    "03_Calculadoras_UTI"
+  ],
+  "homepage_link": "03_Calculadoras_UTI/index.html",
+  "status": "ready_to_insert_antigravity",
+  "safety_policy": [
+    "Calculadoras fazem conversão matemática, não recomendação terapêutica.",
+    "Sem presets medicamentosos automáticos na versão pública.",
+    "Usar concentração real preparada e protocolo institucional.",
+    "Manter links relativos para GitHub Pages."
+  ],
+  "calculators": [
+    {
+      "id": "infusao",
+      "name": "Infusão ponderal em mcg/kg/min"
+    },
+    {
+      "id": "horaria",
+      "name": "Infusão ponderal em mcg/kg/h ou mg/kg/h"
+    },
+    {
+      "id": "unidades",
+      "name": "Infusão em unidades/h ou unidades/kg/h"
+    },
+    {
+      "id": "vm",
+      "name": "Peso predito, volume corrente e ventilação minuto"
+    },
+    {
+      "id": "eletrolitos",
+      "name": "Reposição por taxa em mEq/h, mmol/h ou g/h"
+    }
+  ],
+  "recommended_next_modules": [
+    "04_Checklists_UTI",
+    "05_Bundles_Plantao",
+    "06_Farmaco_UTI"
+  ]
+}
