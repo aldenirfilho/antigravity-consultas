@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventila-Calc | Ventilação Mecânica</title>
+    <meta name="description" content="Calculadora avançada de Ventilação Mecânica, Mecânica Respiratória, Gasometria e Índice ROX para Terapia Intensiva.">
+    <!-- Tailwind via CDN for immediate prototyping matching AVC -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        teal: { 400: '#2dd4bf', 500: '#14b8a6', 900: '#134e4a' },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root { --bg: #0f172a; --text: #f8fafc; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; }
+        .card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        h1, h2, h3 { font-family: 'Merriweather', 'Georgia', serif; letter-spacing: -0.02em; }
+        .input-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: #94a3b8; }
+        .input-group input, .input-group select { width: 100%; padding: 0.75rem; border-radius: 8px; background: rgba(15, 23, 42, 0.8); border: 1px solid #334155; color: white; margin-bottom: 1rem; }
+        .input-group input:focus, .input-group select:focus { outline: none; border-color: #2dd4bf; box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.2); }
+        .result-box { background: rgba(19, 78, 74, 0.3); border-left: 4px solid #2dd4bf; padding: 1rem; border-radius: 0 8px 8px 0; margin-top: 1rem; }
+        .alert-box { padding: 0.75rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600; display: none; }
+        .alert-danger { background: rgba(220, 38, 38, 0.2); border: 1px solid rgba(220, 38, 38, 0.5); color: #fca5a5; }
+        .alert-warning { background: rgba(217, 119, 6, 0.2); border: 1px solid rgba(217, 119, 6, 0.5); color: #fcd34d; }
+        .alert-success { background: rgba(5, 150, 105, 0.2); border: 1px solid rgba(5, 150, 105, 0.5); color: #6ee7b7; }
+        
+        .radio-toolbar input[type="radio"] { display: none; }
+        .radio-toolbar label { display: inline-block; background-color: #1e293b; padding: 10px 20px; font-size: 14px; border: 1px solid #334155; border-radius: 4px; cursor: pointer; color: #cbd5e1; }
+        .radio-toolbar input[type="radio"]:checked + label { background-color: #2dd4bf; border-color: #14b8a6; color: #0f172a; font-weight: bold; }
+    </style>
+</head>
+<body class="antialiased min-h-screen pb-20">
+
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="../../assets/img/logo.png" alt="Logo" class="w-8 h-8 rounded-lg object-cover shadow-[0_2px_10px_rgba(45,212,191,0.3)]">
+                <div>
+                    <h1 class="text-lg font-bold leading-tight">Ventila-Calc 🫁</h1>
+                    <p class="text-[10px] text-teal-400 font-bold uppercase tracking-widest">Módulo UTI</p>
+                </div>
+            </div>
+            <a href="../../index.html" class="text-sm font-semibold text-slate-400 hover:text-white transition">← Voltar</a>
+        </div>
+    </header>
+
+    <nav aria-label="breadcrumb" class="max-w-4xl mx-auto px-4 py-3 text-xs text-slate-500 font-medium">
+        <a href="../../index.html" class="hover:text-teal-400 transition">🏠 Início</a> › 
+        <span>📁 Módulos</span> › 
+        <span class="text-slate-300">🫁 Ventilação Mecânica</span>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 mt-4">
+        
+        <!-- BLOCO 1: PCI -->
+        <section class="card" id="bloco-1">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><span>1.</span> Peso Corporal Ideal (PCI)</h2>
+            <p class="text-sm text-slate-400 mb-6 border-l-2 border-slate-600 pl-3">Base obrigatória para ventilação protetora. NUNCA usar peso real em VM.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <div class="input-group">
+                        <label>Sexo Biológico</label>
+                        <div class="radio-toolbar mb-4 flex gap-2">
+                            <input type="radio" id="sexoM" name="pci_sexo" value="M" checked onchange="calcularPCI()">
+                            <label for="sexoM" class="flex-1 text-center">Masculino</label>
+                            <input type="radio" id="sexoF" name="pci_sexo" value="F" onchange="calcularPCI()">
+                            <label for="sexoF" class="flex-1 text-center">Feminino</label>
+                        </div>
+                        
+                        <label for="pci_altura">Altura (cm)</label>
+                        <input type="number" id="pci_altura" placeholder="Ex: 175" min="140" max="220" oninput="calcularPCI()">
+                    </div>
+                </div>
+                
+                <div class="result-box">
+                    <div class="text-3xl font-black text-teal-400 mb-1"><span id="out_pci">--</span> <span class="text-lg text-teal-600 font-bold">kg</span></div>
+                    <div class="text-sm font-semibold text-teal-200 mb-4 uppercase tracking-wider">Peso Corporal Ideal</div>
+                    
+                    <div class="space-y-3 mt-4 pt-4 border-t border-teal-900/50">
+                        <div class="flex justify-between items-center bg-slate-900/50 p-2 rounded">
+                            <span class="text-xs text-slate-400">Vt 4 mL/kg (SARA grave)</span>
+                            <span class="font-mono text-orange-400 font-bold"><span id="out_vt4">--</span> mL</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-teal-900/40 border border-teal-500/30 p-2 rounded">
+                            <span class="text-sm text-teal-100 font-semibold">Vt Alvo (ARDSnet 6 mL/kg)</span>
+                            <span class="font-mono text-teal-300 font-bold text-lg"><span id="out_vt6">--</span> mL</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-slate-900/50 p-2 rounded">
+                            <span class="text-xs text-slate-400">Vt Máximo (8 mL/kg)</span>
+                            <span class="font-mono text-red-400 font-bold"><span id="out_vt8">--</span> mL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 2: MECANICA -->
+        <section class="card" id="bloco-2">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><span>2.</span> Mecânica Respiratória</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <div class="input-group"><label>Vt Corrente (mL)</label><input type="number" id="mec_vt" placeholder="Ex: 400" oninput="calcularMecanica()"></div>
+                <div class="input-group"><label>P-Pico (cmH₂O)</label><input type="number" id="mec_pico" placeholder="Ex: 30" oninput="calcularMecanica()"></div>
+                <div class="input-group"><label>P-Platô (cmH₂O)</label><input type="number" id="mec_plat" placeholder="Ex: 22" oninput="calcularMecanica()"></div>
+                <div class="input-group"><label>PEEP Total (cmH₂O)</label><input type="number" id="mec_peep" placeholder="Ex: 10" oninput="calcularMecanica()"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-800 rounded-lg p-4 border-t-4 border-blue-500">
+                    <div class="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">Driving Pressure (ΔP)</div>
+                    <div class="text-2xl font-black text-white"><span id="out_dp">--</span></div>
+                    <div id="alert_dp" class="alert-box"></div>
+                </div>
+                <div class="bg-slate-800 rounded-lg p-4 border-t-4 border-indigo-500">
+                    <div class="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">Complacência Estática</div>
+                    <div class="text-2xl font-black text-white"><span id="out_cst">--</span></div>
+                    <div id="alert_cst" class="alert-box"></div>
+                </div>
+                <div class="bg-slate-800 rounded-lg p-4 border-t-4 border-red-500">
+                    <div class="text-xs text-slate-400 uppercase font-bold tracking-wider mb-1">Pressão de Platô</div>
+                    <div class="text-2xl font-black text-white"><span id="out_plat_status">--</span></div>
+                    <div id="alert_plat" class="alert-box"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 3: INDICE ROX -->
+        <section class="card" id="bloco-3">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><span>3.</span> Índice ROX (Risco IOT)</h2>
+            <p class="text-sm text-slate-400 mb-4 border-l-2 border-slate-600 pl-3">Preditor de falha de Cateter Nasal de Alto Fluxo / VNI em SARA.</p>
+            
+            <div class="grid grid-cols-3 gap-3">
+                <div class="input-group"><label>SpO₂ (%)</label><input type="number" id="rox_spo2" placeholder="92" oninput="calcularROX()"></div>
+                <div class="input-group"><label>FiO₂ (%)</label><input type="number" id="rox_fio2" placeholder="50" oninput="calcularROX()"></div>
+                <div class="input-group"><label>Freq. Resp (ipm)</label><input type="number" id="rox_fr" placeholder="28" oninput="calcularROX()"></div>
+            </div>
+            
+            <div class="mt-4 p-4 rounded-lg bg-slate-900 border border-slate-700 flex flex-col md:flex-row items-center gap-6">
+                <div class="text-center md:text-left">
+                    <div class="text-sm text-slate-400 uppercase tracking-widest font-bold">Score ROX</div>
+                    <div class="text-4xl font-black text-white" id="out_rox">--</div>
+                </div>
+                <div class="flex-1">
+                    <div id="alert_rox" class="alert-box w-full !block !m-0 !bg-transparent !border-0 !text-slate-500">Aguardando dados...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 4: SARA P/F -->
+        <section class="card" id="bloco-4">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><span>4.</span> SARA: Relação PaO₂/FiO₂</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="input-group"><label>PaO₂ (mmHg)</label><input type="number" id="pf_pao2" placeholder="70" oninput="calcularPF()"></div>
+                <div class="input-group"><label>FiO₂ (%)</label><input type="number" id="pf_fio2" placeholder="60" oninput="calcularPF()"></div>
+            </div>
+            <div id="alert_pf" class="alert-box mt-4"></div>
+        </section>
+
+        <!-- SECRETS E MNEMÔNICOS -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                <h3 class="text-emerald-400 font-bold mb-2">DOPE (Causas de Dessaturação Súbita)</h3>
+                <ul class="text-sm text-slate-300 space-y-1 font-mono">
+                    <li><strong class="text-white">D</strong>eslocamento do tubo</li>
+                    <li><strong class="text-white">O</strong>bstrução (secreção/rolha)</li>
+                    <li><strong class="text-white">P</strong>neumotórax</li>
+                    <li><strong class="text-white">E</strong>quipamento (falha/desconexão)</li>
+                </ul>
+            </div>
+            <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                <h3 class="text-fuchsia-400 font-bold mb-2">Tabela PEEP ARDSnet (Low PEEP)</h3>
+                <p class="text-xs text-slate-400 mb-2">Escalonamento para pulmão pouco recrutável</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-[10px] text-center border-collapse">
+                        <tr class="bg-slate-900 border-b border-slate-700 text-slate-300"><th class="p-1">FiO₂</th><td>0.3</td><td>0.4</td><td>0.5</td><td>0.6</td><td>0.7</td><td>0.8</td><td>0.9</td><td>1.0</td></tr>
+                        <tr class="text-white"><th class="bg-slate-900 p-1 border-r border-slate-700">PEEP</th><td>5</td><td>5-8</td><td>8-10</td><td>10</td><td>10-14</td><td>14</td><td>14-18</td><td>18-24</td></tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="ventila-calc.js"></script>
+</body>
+</html>

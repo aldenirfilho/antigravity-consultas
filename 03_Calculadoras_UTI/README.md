@@ -1,6 +1,8 @@
-# 🧮 Módulo 03 — Central de Calculadoras UTI
+# 🧮 Módulo 03 — Central de Calculadoras UTI PRO
 
-## Ordem oficial da Enciclopédia
+Versão PRO da calculadora UTI para a Enciclopédia Médica Intensiva & Medicina Interna.
+
+## Ordem oficial
 
 ```txt
 01_Modulos_Clinicos/
@@ -8,37 +10,21 @@
 03_Calculadoras_UTI/
 ```
 
-## Arquivos
+## Blocos incluídos
 
-```txt
-03_Calculadoras_UTI/
-├── index.html
-└── manifest.json
-```
+1. 💉 Drogas vasoativas / hemodinâmicas  
+2. 😴 Sedoanalgesia contínua  
+3. 🧊 Bloqueio neuromuscular  
+4. 🩸 Insulina EV  
+5. 🫁 Ventilação mecânica  
+6. 🧪 Gasometria / oxigenação / acid-base  
+7. 🧫 Renal / ânion gap / osmolaridade  
+8. ⚡ Eletrólitos / reposição por taxa  
 
-## Link público esperado no GitHub Pages
+## Regra para outras IAs
 
-```txt
-https://aldenirfilho.github.io/antigravity-consultas/03_Calculadoras_UTI/index.html
-```
-
-## Padrão para outras IAs
-
-- Manter a numeração `03_`.
-- Não mover para dentro de `01_Modulos_Clinicos`, pois calculadoras são ferramentas transversais.
-- Manter links relativos começando por `../`.
-- Não inserir presets medicamentosos sem validação institucional.
-- A página deve permanecer offline/local, sem dependências externas.
-- Cálculos são conversões matemáticas e não recomendam tratamento.
-
-## Blocos da calculadora
-
-1. 💉 Infusão ponderal em mcg/kg/min.
-2. 😴 Infusão ponderal por hora: mcg/kg/h ou mg/kg/h.
-3. 🩸 Infusão em unidades/h ou unidades/kg/h.
-4. 🫁 Peso predito, volume corrente e ventilação minuto.
-5. ⚡ Reposição por taxa: mEq/h, mmol/h, g/h.
-
-## Observação de segurança
-
-O HTML original possuía presets medicamentosos específicos. Nesta versão pública e institucional, os presets foram removidos para reduzir risco de erro de concentração. O usuário deve informar a concentração real preparada e seguir protocolo local.
+- Não mover esta pasta.
+- Não quebrar links relativos.
+- Presets são editáveis, não prescrição automática.
+- Sempre manter alertas de segurança.
+- Qualquer nova droga deve ter: nome, quantidade total, unidade, volume, faixa de referência, alerta/observação.
