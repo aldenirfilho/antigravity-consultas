@@ -179,6 +179,18 @@
     <div class="nodes-count"><span id="count-nodes">0</span> nós e <span id="count-edges">0</span> conexões ativas</div>
     <button class="btn btn-secondary" style="margin-top:1rem" onclick="window.location.href='../assets/graph/index.html'">🔍 Ver Mapa Completo</button>
   </div>
+
+  <!-- ROADMAP FUTURO -->
+  <div style="max-width:900px;margin:2rem auto 4rem;padding:0 1rem">
+    <div class="how-to" style="border-color:var(--accent2); background:rgba(124,58,237,0.05)">
+      <h3 style="color:var(--accent2)">🚀 Próximas Melhorias (Roadmap 30)</h3>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:1rem">Acompanhe a evolução da Biblioteca IA e os próximos recursos planejados.</p>
+      <div id="roadmap-list" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap:10px">
+        <!-- Populado via JS -->
+      </div>
+      <button class="btn btn-secondary" style="margin-top:1.5rem; width:100%" onclick="window.location.href='../08_Documentacao_Projeto/ROADMAP_30_MELHORIAS_BIBLIOTECA_IA.md'">📄 Ver Roadmap Completo (Documentação)</button>
+    </div>
+  </div>
 </div>
 
 <!-- VIEW: TRIAGEM -->
@@ -265,21 +277,27 @@
 let taxonomy = { themes: [] };
 let catalog = { items: [] };
 let brain = { nodes: [], edges: [] };
+let roadmap = [];
 let currentFilter = 'todos';
 let currentView = 'catalogo';
 
 // Carregar Dados
 async function init() {
   try {
-    const [resTax, resCat, resBrain] = await Promise.all([
+    const [resTax, resCat, resBrain, resRoad] = await Promise.all([
       fetch('data/biblioteca_taxonomia_temas.json'),
       fetch('data/biblioteca_catalogo.json'),
-      fetch('data/biblioteca_brain_connections.json')
+      fetch('data/biblioteca_brain_connections.json'),
+      fetch('../data/roadmap_30_melhorias_biblioteca_ia.json').catch(() => null)
     ]);
     
     taxonomy = await resTax.json();
     catalog = await resCat.json();
     brain = await resBrain.json();
+    if (resRoad) {
+      const roadData = await resRoad.json();
+      roadmap = roadData.roadmap || [];
+    }
     
     // Mesclar classificações locais (se houver)
     const localModifs = JSON.parse(localStorage.getItem('lib_classificacoes') || '[]');
@@ -293,10 +311,24 @@ async function init() {
     renderStats();
     renderGrid();
     renderTriagem();
+    renderRoadmap();
   } catch(e) {
     console.error("Erro ao carregar dados:", e);
     alert("Erro ao carregar banco de dados da biblioteca.");
   }
+}
+
+function renderRoadmap() {
+  const container = document.getElementById('roadmap-list');
+  if (!container || !roadmap.length) return;
+  
+  // Mostrar apenas as top 6 prioridades alta
+  const items = roadmap.filter(r => r.priority === 'alta').slice(0, 6);
+  container.innerHTML = items.map(r => `
+    <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:10px; border-radius:8px; font-size:.78rem">
+      <b style="color:var(--accent2)">#${r.id}</b> ${r.label}
+    </div>
+  `).join('');
 }
 
 // Renderizar Filtros
