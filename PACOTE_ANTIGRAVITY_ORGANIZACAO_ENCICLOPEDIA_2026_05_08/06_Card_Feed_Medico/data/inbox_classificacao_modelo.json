@@ -1,0 +1,113 @@
+{
+  "description": "Modelo de classificação das imagens atualmente em inbox. O Antigravity deve abrir/visualizar cada imagem antes de mover.",
+  "updatedAt": "2026-05-08",
+  "status": "aguardando_classificacao_visual",
+  "classificationRule": "Classificar visualmente por tema; se houver dúvida, manter em inbox com status revisar.",
+  "files": [
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_47_39.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_47_39.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_47_47.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_47_47.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_47_57.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_47_57.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_48_05.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_05.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_48_12.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_12.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_48_21.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_21.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_48_28.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_28.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_48_37.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_37.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_48_47.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_47.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_48_58.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_58.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_49_05.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_05.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_49_12.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_12.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_49_19.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_19.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_49_21.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_21.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    },
+    {
+      "filename": "ChatGPT Image 8 de mai. de 2026, 01_49_28.png",
+      "currentPath": "06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_28.png",
+      "suggestedStatus": "revisar",
+      "suggestedTheme": "inbox",
+      "instruction": "Abrir a imagem, identificar tema, renomear em snake_case e mover para pasta do tema correspondente."
+    }
+  ]
+}

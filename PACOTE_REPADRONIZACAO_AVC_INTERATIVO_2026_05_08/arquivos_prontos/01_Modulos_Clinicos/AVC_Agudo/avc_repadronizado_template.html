@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>🧠 AVC Agudo Interativo | Enciclopédia Médica Intensiva</title>
+  <meta name="description" content="Módulo interativo de AVC Agudo para UTI, emergência, TEMI e prática clínica beira-leito." />
+
+  <!-- Compatibilidade temporária: avc.js ainda injeta classes Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+
+  <!-- Padrão geral do projeto -->
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="avc-theme.css" />
+</head>
+
+<body class="avc-page">
+  <header class="topbar avc-topbar">
+    <a class="brand" href="../../index.html" aria-label="Voltar para a página inicial">
+      <img src="../../assets/img/logo.png" alt="Logo Enciclopédia" class="avc-brand-logo" />
+      <span>
+        <strong>Enciclopédia Médica</strong>
+        <small>Intensiva & Medicina Interna</small>
+      </span>
+    </a>
+
+    <button id="menuBtn" class="btn avc-mobile-menu" type="button" aria-label="Abrir navegação do módulo">
+      ☰ Menu
+    </button>
+
+    <nav class="nav avc-topbar-actions" aria-label="Navegação superior">
+      <a href="../../index.html">🏠 Home</a>
+      <a href="../../02_Banco_Questoes_TEMI/index.html" style="color:#ffd166">🏆 Banco TEMI</a>
+      <a href="../../03_Calculadoras_UTI/index.html" style="color:#4ef0a1">🧮 Calculadoras</a>
+      <a href="../../05_Biblioteca_IA/index.html">📚 Biblioteca IA</a>
+      <a href="../../06_Card_Feed_Medico/index.html" style="color:#38bdf8">🖼️ Card Feed</a>
+    </nav>
+  </header>
+
+  <nav class="avc-breadcrumb" aria-label="breadcrumb">
+    <div class="avc-breadcrumb-inner">
+      <a href="../../index.html">🏠 Início</a>
+      <span>›</span>
+      <span>📁 Módulos Clínicos</span>
+      <span>›</span>
+      <strong>🧠 AVC Agudo Interativo</strong>
+    </div>
+  </nav>
+
+  <div id="overlay" class="avc-overlay hidden"></div>
+
+  <div class="avc-layout">
+    <aside id="sidebar" class="avc-sidebar" aria-label="Navegação rápida do módulo">
+      <nav>
+        <p class="avc-sidebar-title">Navegação rápida • AVC</p>
+        <ul id="sidebar-nav">
+          <!-- Preenchido pelo avc.js -->
+        </ul>
+
+        <div class="avc-tip">
+          <strong>⚡ Dica TDAH-friendly</strong>
+          Use ⌘/Ctrl + F para buscar termos. Abra 1 acordeão por vez no plantão.
+        </div>
+      </nav>
+    </aside>
+
+    <main class="avc-main">
+      <section class="avc-hero glass">
+        <div class="avc-hero-grid">
+          <div>
+            <span class="avc-eyebrow">🧠 Módulo Interativo • AVC Agudo • UTI • TEMI</span>
+            <h1>AVC Agudo em modo central de comando.</h1>
+            <p>
+              Reperfusão, neuroimagem, pressão arterial, complicações, prevenção secundária e pontos de prova
+              em uma interface única, navegável e pronta para estudo ativo.
+            </p>
+
+            <div class="avc-chip-row">
+              <span class="avc-chip">⏱️ Tempo é cérebro</span>
+              <span class="avc-chip">🧲 OGV / trombectomia</span>
+              <span class="avc-chip">💉 Trombólise</span>
+              <span class="avc-chip">🏆 TEMI</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn primary" href="avc_31_blocos.html">📄 Material Extenso</a>
+              <a class="btn blue" href="avc_31_blocos.html#bloco-18">📸 Galeria</a>
+              <a class="btn warning" href="codigo_avc_10_minutos_dashboard_html.html">⏱️ Dashboard 10 min</a>
+            </div>
+          </div>
+
+          <aside class="avc-metrics" aria-label="Painel rápido AVC">
+            <div class="avc-metric"><b>27</b><span>blocos dinâmicos</span></div>
+            <div class="avc-metric"><b>30</b><span>questões TEMI</span></div>
+            <div class="avc-metric"><b>UTI</b><span>foco beira-leito</span></div>
+            <div class="avc-metric"><b>2026</b><span>matriz atual</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="avc-actions-panel glass">
+        <div class="avc-section-title">
+          <div>
+            <h2>🧭 Trilhas rápidas do módulo</h2>
+            <p>Use os botões para conectar o estudo do AVC aos outros braços da Enciclopédia.</p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="../../02_Banco_Questoes_TEMI/avc_agudo_questoes.html">🏆 Questões AVC</a>
+            <a class="btn" href="../../03_Calculadoras_UTI/index.html">🧮 Cálculos UTI</a>
+            <a class="btn" href="../../06_Card_Feed_Medico/index.html">🖼️ Cards</a>
+          </div>
+        </div>
+      </section>
+
+      <div id="dynamic-content" class="avc-dynamic-content">
+        <!-- Preenchido pelo avc.js com os acordeões -->
+      </div>
+
+      <footer class="footer avc-footer">
+        🛡️ Conteúdo educacional para apoio ao raciocínio médico. Usar com julgamento clínico, equipe, protocolos locais e segurança do paciente.
+      </footer>
+    </main>
+  </div>
+
+  <!-- Bancos de dados clínicos -->
+  <script src="db_fundamentos.js"></script>
+  <script src="db_pratica.js"></script>
+  <script src="db_interativo.js"></script>
+  <script src="db_pesquisa.js"></script>
+  <script src="db_cross_ia.js"></script>
+
+  <!-- Motor dinâmico -->
+  <script src="avc.js"></script>
+
+  <script>
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const menuBtn = document.getElementById('menuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    html.classList.add('dark');
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+      });
+    }
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('is-open');
+      overlay.classList.toggle('hidden');
+    }
+
+    if (menuBtn) menuBtn.addEventListener('click', toggleSidebar);
+    if (overlay) overlay.addEventListener('click', toggleSidebar);
+
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('#sidebar-nav a');
+      if (link && window.innerWidth <= 1060) {
+        sidebar.classList.remove('is-open');
+        overlay.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

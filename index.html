@@ -258,6 +258,12 @@
       </div>
     </section>
 
+    <section id="catalogo" class="section-shell section-block">
+      <h2>📦 Catálogo do Projeto</h2>
+      <p class="muted">Mapa central de todos os módulos, cards e recursos da Enciclopédia.</p>
+      <div class="grid three" id="catalogoGrid" style="margin-top: 18px;"></div>
+    </section>
+
     <section id="sugestoes" class="section-shell section-block">
       <h2>💬 Comentários e sugestões</h2>
       <p class="muted">Substitua os links abaixo pelos canais reais do projeto.</p>
@@ -275,5 +281,29 @@
   <script src="assets/js/app.js"></script>
   <script src="assets/js/search.js"></script>
   <script src="assets/js/graph.js"></script>
+  <script>
+    (async () => {
+      try {
+        const res = await fetch('data/catalogo.json');
+        if (!res.ok) return;
+        const data = await res.json();
+        const grid = document.getElementById('catalogoGrid');
+        if (!grid || !data.items) return;
+        const statusColor = { ativo: '#4ef0a1', novo: '#38bdf8', 'pendente-imagem': '#f59e0b', planejado: '#a78bfa', inbox: '#fbbf24' };
+        const typeIcon = { portal: '🏠', 'hub clínico': '🧠', calculadora: '🧮', 'banco de questões': '🏆', 'questões comentadas': '📝', biblioteca: '📚', 'feed visual': '🖼️', 'card visual': '🃏' };
+        grid.innerHTML = data.items.map(it => `
+          <article class="card" style="border-left:3px solid ${statusColor[it.status] || '#64748b'}">
+            <h3>${typeIcon[it.type] || '📄'} ${it.title}</h3>
+            <p style="font-size:.82rem;margin:.4rem 0">${it.caption || ''}</p>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin:.5rem 0">
+              <span style="font-size:.7rem;padding:2px 8px;border-radius:10px;background:${statusColor[it.status] || '#334155'};color:#000;font-weight:600">${it.status}</span>
+              <span style="font-size:.7rem;padding:2px 8px;border-radius:10px;border:1px solid rgba(255,255,255,.15);color:#94a3b8">${it.type}</span>
+            </div>
+            ${it.path ? `<a class="btn" href="${it.path}" style="margin-top:6px;font-size:.8rem">Abrir →</a>` : ''}
+          </article>
+        `).join('');
+      } catch(e) { console.warn('Catálogo:', e); }
+    })();
+  </script>
 </body>
 </html>
