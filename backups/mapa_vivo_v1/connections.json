@@ -1,0 +1,79 @@
+{
+  "nodes": [
+    {
+      "id": "avc",
+      "label": "🧠 AVC Agudo",
+      "body": "Hub inicial: emergência, UTI, reperfusão e prevenção secundária.",
+      "x": 42,
+      "y": 38
+    },
+    {
+      "id": "trombolise",
+      "label": "💉 Trombólise",
+      "body": "Janela terapêutica, contraindicações, PA e sangramento.",
+      "x": 10,
+      "y": 18
+    },
+    {
+      "id": "trombectomia",
+      "label": "🧲 Trombectomia",
+      "body": "OGV, angioTC, perfusão e regulação.",
+      "x": 68,
+      "y": 18
+    },
+    {
+      "id": "pa",
+      "label": "🎚️ PA no AVC",
+      "body": "Metas pressóricas conforme cenário e terapia de reperfusão.",
+      "x": 12,
+      "y": 64
+    },
+    {
+      "id": "fa",
+      "label": "❤️ FA",
+      "body": "AVC cardioembólico, anticoagulação e prevenção secundária.",
+      "x": 72,
+      "y": 64
+    },
+    {
+      "id": "neuroimagem",
+      "label": "🖥️ Neuroimagem",
+      "body": "TC, ASPECTS, angioTC e perfusão cerebral.",
+      "x": 34,
+      "y": 10
+    },
+    {
+      "id": "temi",
+      "label": "🏆 TEMI",
+      "body": "Pontos de prova, pegadinhas, flashcards e questões.",
+      "x": 44,
+      "y": 74
+    }
+  ],
+  "edges": [
+    {
+      "from": "avc",
+      "to": "trombolise"
+    },
+    {
+      "from": "avc",
+      "to": "trombectomia"
+    },
+    {
+      "from": "avc",
+      "to": "pa"
+    },
+    {
+      "from": "avc",
+      "to": "fa"
+    },
+    {
+      "from": "avc",
+      "to": "neuroimagem"
+    },
+    {
+      "from": "avc",
+      "to": "temi"
+    }
+  ]
+}

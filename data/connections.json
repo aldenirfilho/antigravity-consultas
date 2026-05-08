@@ -1,79 +1,1249 @@
 {
+  "updatedAt": "2026-05-08",
+  "version": "2.0-mapa-vivo-organizado",
+  "description": "Mapa vivo organizado da Enciclopédia: portal, Biblioteca IA, Card Feed, Banco TEMI, Calculadoras, AVC e macrotemas de UTI.",
+  "legend": {
+    "hub": "Nó central do projeto",
+    "biblioteca": "Base de documentos e curadoria IA",
+    "feed": "Cards e imagens",
+    "qbank": "Banco de questões",
+    "tool": "Ferramenta/calculadora",
+    "module": "Módulo clínico ativo",
+    "topic": "Subtema clínico",
+    "theme": "Tema/macrotema"
+  },
   "nodes": [
     {
-      "id": "avc",
+      "id": "home",
+      "label": "🏠 Portal",
+      "body": "Página-mãe da Enciclopédia: entrada para módulos, Biblioteca, TEMI, Calculadoras e Card Feed.",
+      "x": 48,
+      "y": 8,
+      "type": "hub",
+      "url": "index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "biblioteca-ia",
+      "label": "📚 Biblioteca IA",
+      "body": "Repositório de PDFs, Word, HTML e materiais gerados/curados com IA.",
+      "x": 18,
+      "y": 24,
+      "type": "biblioteca",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "card-feed-medico",
+      "label": "🖼️ Card Feed",
+      "body": "Feed visual de cards/wallpapers médicos para revisão rápida.",
+      "x": 80,
+      "y": 24,
+      "type": "feed",
+      "url": "06_Card_Feed_Medico/index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "banco-temi",
+      "label": "🏆 Banco TEMI",
+      "body": "Questões comentadas, prova TEMI e revisão ativa.",
+      "x": 34,
+      "y": 38,
+      "type": "qbank",
+      "url": "02_Banco_Questoes_TEMI/index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "calculadoras-uti",
+      "label": "🧮 Calculadoras UTI",
+      "body": "Drogas, diluições, ventilação, eletrólitos, renal e gasometria.",
+      "x": 64,
+      "y": 38,
+      "type": "tool",
+      "url": "03_Calculadoras_UTI/index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "avc-agudo",
       "label": "🧠 AVC Agudo",
-      "body": "Hub inicial: emergência, UTI, reperfusão e prevenção secundária.",
-      "x": 42,
-      "y": 38
+      "body": "Módulo ativo: emergência, reperfusão, neuroimagem, UTI e prevenção secundária.",
+      "x": 49,
+      "y": 54,
+      "type": "module",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html",
+      "status": "ativo"
     },
     {
-      "id": "trombolise",
+      "id": "neuroimagem-avc",
+      "label": "🖥️ Neuroimagem",
+      "body": "TC, ASPECTS, angioTC e perfusão para decisão de reperfusão.",
+      "x": 23,
+      "y": 58,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#neuroimagem",
+      "status": "ativo"
+    },
+    {
+      "id": "trombolise-avc",
       "label": "💉 Trombólise",
-      "body": "Janela terapêutica, contraindicações, PA e sangramento.",
-      "x": 10,
-      "y": 18
+      "body": "Janela, contraindicações, PA e sangramento.",
+      "x": 36,
+      "y": 68,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#trombolise",
+      "status": "ativo"
     },
     {
-      "id": "trombectomia",
+      "id": "trombectomia-avc",
       "label": "🧲 Trombectomia",
       "body": "OGV, angioTC, perfusão e regulação.",
-      "x": 68,
-      "y": 18
+      "x": 61,
+      "y": 68,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#trombectomia",
+      "status": "ativo"
     },
     {
-      "id": "pa",
+      "id": "pa-avc",
       "label": "🎚️ PA no AVC",
-      "body": "Metas pressóricas conforme cenário e terapia de reperfusão.",
-      "x": 12,
-      "y": 64
+      "body": "Metas pressóricas conforme cenário e reperfusão.",
+      "x": 18,
+      "y": 74,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#pressao",
+      "status": "ativo"
     },
     {
-      "id": "fa",
-      "label": "❤️ FA",
+      "id": "fa-avc",
+      "label": "❤️ FA / prevenção",
       "body": "AVC cardioembólico, anticoagulação e prevenção secundária.",
-      "x": 72,
-      "y": 64
+      "x": 80,
+      "y": 74,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#prevencao-secundaria",
+      "status": "ativo"
     },
     {
-      "id": "neuroimagem",
-      "label": "🖥️ Neuroimagem",
-      "body": "TC, ASPECTS, angioTC e perfusão cerebral.",
-      "x": 34,
-      "y": 10
+      "id": "edema-cerebral-avc",
+      "label": "🌊 Edema cerebral",
+      "body": "Neuro UTI, osmoterapia e craniectomia descompressiva.",
+      "x": 50,
+      "y": 82,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#edema",
+      "status": "ativo"
     },
     {
-      "id": "temi",
-      "label": "🏆 TEMI",
-      "body": "Pontos de prova, pegadinhas, flashcards e questões.",
-      "x": 44,
-      "y": 74
+      "id": "vm-sdra",
+      "label": "🫁 VM/SDRA",
+      "body": "Ventilação protetora, driving pressure, PEEP, prona e resgate.",
+      "x": 86,
+      "y": 50,
+      "type": "theme",
+      "url": "01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html",
+      "status": "ativo/parcial"
+    },
+    {
+      "id": "sepse-choque",
+      "label": "🩸 Sepse/Choque",
+      "body": "Bundle, lactato, antibiótico, fluidos, vasopressores e choque refratário.",
+      "x": 78,
+      "y": 58,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "nefro-aki-trs",
+      "label": "🧪 AKI/TRS",
+      "body": "KDIGO, hemodiálise, CRRT e complicações intradialíticas.",
+      "x": 14,
+      "y": 50,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "infectologia-uti",
+      "label": "🦠 Infectologia",
+      "body": "CVC, PAV, pneumonia aspirativa, antimicrobianos e culturas.",
+      "x": 10,
+      "y": 64,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "endocrino-metabolico",
+      "label": "🍬 Endócrino",
+      "body": "CAD, EHH, hipoglicemia, crise tireotóxica e diabetes.",
+      "x": 10,
+      "y": 86,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "farmaco-doses",
+      "label": "💊 Doses",
+      "body": "Doses, diluições, bomba, DVA, sedação e alto risco.",
+      "x": 90,
+      "y": 84,
+      "type": "theme",
+      "url": "03_Calculadoras_UTI/index.html",
+      "status": "ativo/parcial"
+    },
+    {
+      "id": "pocus-usg",
+      "label": "🔊 POCUS",
+      "body": "USG beira-leito para choque, pulmão, volume e procedimentos.",
+      "x": 68,
+      "y": 88,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "familia-paciente",
+      "label": "👨‍👩‍👧 Família",
+      "body": "Orientações visuais para pacientes, cuidadores e segurança domiciliar.",
+      "x": 88,
+      "y": 14,
+      "type": "theme",
+      "url": "06_Card_Feed_Medico/index.html",
+      "status": "ativo/parcial"
+    },
+    {
+      "id": "ia-produtividade",
+      "label": "⚙️ IA/Produtividade",
+      "body": "Obsidian, Antigravity, GitHub, prompts e organização médica.",
+      "x": 8,
+      "y": 12,
+      "type": "theme",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo/parcial"
+    },
+    {
+      "id": "brain-protocolo-ipcs-cvc-uti-temi",
+      "label": "Protocolo Ipcs Cvc Uti Temi...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-protocolo-desmame-vm-sedoanalgesia",
+      "label": "Protocolo Desmame Vm Sedoanalgesia...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-suporte-respiratorio-decisao-uti-sara-grave",
+      "label": "Suporte Respiratorio Decisao Uti Sara Gr...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-simulador-suporte-respiratorio-vm-sara",
+      "label": "Simulador Suporte Respiratorio Vm Sara...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
+      "label": "Versao Temi Prova Titulo Vm Pegadinhas I...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-protocolo-teste-estresse-furosemida-uti-temi",
+      "label": "Protocolo Teste Estresse Furosemida Uti ...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-hic-guia-temi",
+      "label": "Hic Guia Temi...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-guia-de-suporte-respirato-rio-e-simulador-de-tomada-de-decisa-o-me-dica-v1",
+      "label": "Guia De Suporte RespiratóRio E Simulado...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-tce-temi-draldenir",
+      "label": "Tce Temi Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-pag-sara-uti-temi",
+      "label": "Pag Sara Uti Temi...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-kdigo-2026-aki-na-uti-temi-resumo-mapa-memorycards-aldenir-rocha",
+      "label": "Kdigo 2026 Aki Na Uti Temi Resumo Mapa M...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-protocolo-sara-grave-uti-adulto",
+      "label": "Protocolo Sara Grave Uti Adulto...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-desmamevm-bnm-neurointensivismo-draldenir",
+      "label": "Desmamevm Bnm Neurointensivismo Draldeni...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-vm-suporte-respiratorio-draldenir",
+      "label": "Vm Suporte Respiratorio Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-desmamevm-bnm-neurointensivismo-draldenir",
+      "label": "Desmamevm Bnm Neurointensivismo Draldeni...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
+      "label": "Temi 2026 Tema 02 Avaliacao Abcde Uti 30...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-kdigo2026-aki-uti-draldenir",
+      "label": "Kdigo2026 Aki Uti Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-sdra-vm-protetora-draldenir",
+      "label": "Sdra Vm Protetora Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-fst-temi-aldenir",
+      "label": "Fst Temi Aldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-trials-temi",
+      "label": "Trials Temi...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-avch-hsa-protocolo-completo",
+      "label": "Avch Hsa Protocolo Completo...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-tce-temi-draldenir",
+      "label": "Tce Temi Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-pancreatite-aguda-grave-sara-grave",
+      "label": "Pancreatite Aguda Grave + Sara Grave...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-simulado-temi-2026-draldenir",
+      "label": "Simulado Temi 2026 Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-desmame-da-vm",
+      "label": "Desmame Da Vm...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-simulador-suporte-respiratorio-vm-sara",
+      "label": "Simulador Suporte Respiratorio Vm Sara...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-simulado-temi-2026-draldenir",
+      "label": "Simulado Temi 2026 Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-sdra-vm-protetora-draldenir",
+      "label": "Sdra Vm Protetora Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-vm-suporte-respiratorio-draldenir",
+      "label": "Vm Suporte Respiratorio Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-broncoscopia-uti-temi",
+      "label": "Broncoscopia Uti Temi...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-hic-guia-temi",
+      "label": "Hic Guia Temi...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
+      "label": "Protocolo Uti Sedacao Desmame Delirium B...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
+    },
+    {
+      "id": "brain-01-protocolo-sepse-bundle1hhora",
+      "label": "01 Protocolo Sepse Bundle1Hhora...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 50,
+      "y": 50
     }
   ],
   "edges": [
     {
-      "from": "avc",
-      "to": "trombolise"
+      "from": "home",
+      "to": "biblioteca-ia",
+      "relation": "organiza-conhecimento"
     },
     {
-      "from": "avc",
-      "to": "trombectomia"
+      "from": "home",
+      "to": "card-feed-medico",
+      "relation": "revisao-visual"
     },
     {
-      "from": "avc",
-      "to": "pa"
+      "from": "home",
+      "to": "banco-temi",
+      "relation": "treino-ativo"
     },
     {
-      "from": "avc",
-      "to": "fa"
+      "from": "home",
+      "to": "calculadoras-uti",
+      "relation": "ferramenta-beira-leito"
     },
     {
-      "from": "avc",
-      "to": "neuroimagem"
+      "from": "home",
+      "to": "avc-agudo",
+      "relation": "modulo-ativo"
     },
     {
-      "from": "avc",
-      "to": "temi"
+      "from": "biblioteca-ia",
+      "to": "banco-temi",
+      "relation": "gera-questoes"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "card-feed-medico",
+      "relation": "gera-cards"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "avc-agudo",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "vm-sdra",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "sepse-choque",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "nefro-aki-trs",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "infectologia-uti",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "endocrino-metabolico",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "calculadoras-uti",
+      "to": "farmaco-doses",
+      "relation": "calcula"
+    },
+    {
+      "from": "calculadoras-uti",
+      "to": "vm-sdra",
+      "relation": "apoia"
+    },
+    {
+      "from": "calculadoras-uti",
+      "to": "nefro-aki-trs",
+      "relation": "apoia"
+    },
+    {
+      "from": "card-feed-medico",
+      "to": "familia-paciente",
+      "relation": "orienta"
+    },
+    {
+      "from": "card-feed-medico",
+      "to": "vm-sdra",
+      "relation": "revisa"
+    },
+    {
+      "from": "card-feed-medico",
+      "to": "nefro-aki-trs",
+      "relation": "revisa"
+    },
+    {
+      "from": "banco-temi",
+      "to": "avc-agudo",
+      "relation": "questoes"
+    },
+    {
+      "from": "banco-temi",
+      "to": "vm-sdra",
+      "relation": "questoes"
+    },
+    {
+      "from": "banco-temi",
+      "to": "sepse-choque",
+      "relation": "questoes"
+    },
+    {
+      "from": "banco-temi",
+      "to": "nefro-aki-trs",
+      "relation": "questoes"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "neuroimagem-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "trombolise-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "trombectomia-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "pa-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "fa-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "edema-cerebral-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "neuroimagem-avc",
+      "to": "trombectomia-avc",
+      "relation": "decide"
+    },
+    {
+      "from": "pa-avc",
+      "to": "trombolise-avc",
+      "relation": "seguranca"
+    },
+    {
+      "from": "fa-avc",
+      "to": "avc-agudo",
+      "relation": "prevencao-secundaria"
+    },
+    {
+      "from": "edema-cerebral-avc",
+      "to": "neuroimagem-avc",
+      "relation": "monitoriza"
+    },
+    {
+      "from": "sepse-choque",
+      "to": "infectologia-uti",
+      "relation": "intersecao"
+    },
+    {
+      "from": "sepse-choque",
+      "to": "farmaco-doses",
+      "relation": "dva-antibiotico"
+    },
+    {
+      "from": "vm-sdra",
+      "to": "farmaco-doses",
+      "relation": "sedacao-bloqueio"
+    },
+    {
+      "from": "nefro-aki-trs",
+      "to": "farmaco-doses",
+      "relation": "ajuste-renal"
+    },
+    {
+      "from": "pocus-usg",
+      "to": "sepse-choque",
+      "relation": "avalia-choque"
+    },
+    {
+      "from": "pocus-usg",
+      "to": "vm-sdra",
+      "relation": "pulmao"
+    },
+    {
+      "from": "brain-protocolo-ipcs-cvc-uti-temi",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-protocolo-ipcs-cvc-uti-temi",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-protocolo-ipcs-cvc-uti-temi",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-protocolo-desmame-vm-sedoanalgesia",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-protocolo-desmame-vm-sedoanalgesia",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-protocolo-desmame-vm-sedoanalgesia",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-suporte-respiratorio-decisao-uti-sara-grave",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-suporte-respiratorio-decisao-uti-sara-grave",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-suporte-respiratorio-decisao-uti-sara-grave",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-simulador-suporte-respiratorio-vm-sara",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-simulador-suporte-respiratorio-vm-sara",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-simulador-suporte-respiratorio-vm-sara",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-protocolo-teste-estresse-furosemida-uti-temi",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-protocolo-teste-estresse-furosemida-uti-temi",
+      "to": "nefro-aki-trs",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-protocolo-teste-estresse-furosemida-uti-temi",
+      "to": "calculadoras-uti",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-hic-guia-temi",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-hic-guia-temi",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-hic-guia-temi",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-guia-de-suporte-respirato-rio-e-simulador-de-tomada-de-decisa-o-me-dica-v1",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-guia-de-suporte-respirato-rio-e-simulador-de-tomada-de-decisa-o-me-dica-v1",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-guia-de-suporte-respirato-rio-e-simulador-de-tomada-de-decisa-o-me-dica-v1",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-tce-temi-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-tce-temi-draldenir",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-tce-temi-draldenir",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-pag-sara-uti-temi",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-pag-sara-uti-temi",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-pag-sara-uti-temi",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-kdigo-2026-aki-na-uti-temi-resumo-mapa-memorycards-aldenir-rocha",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-kdigo-2026-aki-na-uti-temi-resumo-mapa-memorycards-aldenir-rocha",
+      "to": "nefro-aki-trs",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-kdigo-2026-aki-na-uti-temi-resumo-mapa-memorycards-aldenir-rocha",
+      "to": "calculadoras-uti",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-protocolo-sara-grave-uti-adulto",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-protocolo-sara-grave-uti-adulto",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-protocolo-sara-grave-uti-adulto",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-desmamevm-bnm-neurointensivismo-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-desmamevm-bnm-neurointensivismo-draldenir",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-desmamevm-bnm-neurointensivismo-draldenir",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-vm-suporte-respiratorio-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-vm-suporte-respiratorio-draldenir",
+      "to": "nefro-aki-trs",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-vm-suporte-respiratorio-draldenir",
+      "to": "calculadoras-uti",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-desmamevm-bnm-neurointensivismo-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-desmamevm-bnm-neurointensivismo-draldenir",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-desmamevm-bnm-neurointensivismo-draldenir",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-kdigo2026-aki-uti-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-kdigo2026-aki-uti-draldenir",
+      "to": "nefro-aki-trs",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-kdigo2026-aki-uti-draldenir",
+      "to": "calculadoras-uti",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-sdra-vm-protetora-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-sdra-vm-protetora-draldenir",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-sdra-vm-protetora-draldenir",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-fst-temi-aldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-fst-temi-aldenir",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-fst-temi-aldenir",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-trials-temi",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-trials-temi",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-trials-temi",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-avch-hsa-protocolo-completo",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-avch-hsa-protocolo-completo",
+      "to": "neuro-uti",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-avch-hsa-protocolo-completo",
+      "to": "avc-agudo",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-tce-temi-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-tce-temi-draldenir",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-tce-temi-draldenir",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-pancreatite-aguda-grave-sara-grave",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-pancreatite-aguda-grave-sara-grave",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-pancreatite-aguda-grave-sara-grave",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-simulado-temi-2026-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-simulado-temi-2026-draldenir",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-simulado-temi-2026-draldenir",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-desmame-da-vm",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-desmame-da-vm",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-desmame-da-vm",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-simulador-suporte-respiratorio-vm-sara",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-simulador-suporte-respiratorio-vm-sara",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-simulador-suporte-respiratorio-vm-sara",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-simulado-temi-2026-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-simulado-temi-2026-draldenir",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-simulado-temi-2026-draldenir",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-sdra-vm-protetora-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-sdra-vm-protetora-draldenir",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-sdra-vm-protetora-draldenir",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-vm-suporte-respiratorio-draldenir",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-vm-suporte-respiratorio-draldenir",
+      "to": "nefro-aki-trs",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-vm-suporte-respiratorio-draldenir",
+      "to": "calculadoras-uti",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-broncoscopia-uti-temi",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-broncoscopia-uti-temi",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-broncoscopia-uti-temi",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-hic-guia-temi",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-hic-guia-temi",
+      "to": "temi-prova",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-hic-guia-temi",
+      "to": "banco-temi",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
+      "to": "vm-sdra",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
+      "to": "ventilacao-mecanica",
+      "relation": "complementa-modulo"
+    },
+    {
+      "from": "brain-01-protocolo-sepse-bundle1hhora",
+      "to": "biblioteca-ia",
+      "relation": "pertence-a"
+    },
+    {
+      "from": "brain-01-protocolo-sepse-bundle1hhora",
+      "to": "sepse-choque",
+      "relation": "vinculado-a"
+    },
+    {
+      "from": "brain-01-protocolo-sepse-bundle1hhora",
+      "to": "card-feed",
+      "relation": "complementa-modulo"
     }
   ]
 }

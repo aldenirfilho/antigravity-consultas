@@ -1,0 +1,424 @@
+{
+  "updatedAt": "2026-05-08",
+  "version": "2.0-mapa-vivo-organizado",
+  "description": "Mapa vivo organizado da Enciclopédia: portal, Biblioteca IA, Card Feed, Banco TEMI, Calculadoras, AVC e macrotemas de UTI.",
+  "legend": {
+    "hub": "Nó central do projeto",
+    "biblioteca": "Base de documentos e curadoria IA",
+    "feed": "Cards e imagens",
+    "qbank": "Banco de questões",
+    "tool": "Ferramenta/calculadora",
+    "module": "Módulo clínico ativo",
+    "topic": "Subtema clínico",
+    "theme": "Tema/macrotema"
+  },
+  "nodes": [
+    {
+      "id": "home",
+      "label": "🏠 Portal",
+      "body": "Página-mãe da Enciclopédia: entrada para módulos, Biblioteca, TEMI, Calculadoras e Card Feed.",
+      "x": 48,
+      "y": 8,
+      "type": "hub",
+      "url": "index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "biblioteca-ia",
+      "label": "📚 Biblioteca IA",
+      "body": "Repositório de PDFs, Word, HTML e materiais gerados/curados com IA.",
+      "x": 18,
+      "y": 24,
+      "type": "biblioteca",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "card-feed-medico",
+      "label": "🖼️ Card Feed",
+      "body": "Feed visual de cards/wallpapers médicos para revisão rápida.",
+      "x": 80,
+      "y": 24,
+      "type": "feed",
+      "url": "06_Card_Feed_Medico/index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "banco-temi",
+      "label": "🏆 Banco TEMI",
+      "body": "Questões comentadas, prova TEMI e revisão ativa.",
+      "x": 34,
+      "y": 38,
+      "type": "qbank",
+      "url": "02_Banco_Questoes_TEMI/index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "calculadoras-uti",
+      "label": "🧮 Calculadoras UTI",
+      "body": "Drogas, diluições, ventilação, eletrólitos, renal e gasometria.",
+      "x": 64,
+      "y": 38,
+      "type": "tool",
+      "url": "03_Calculadoras_UTI/index.html",
+      "status": "ativo"
+    },
+    {
+      "id": "avc-agudo",
+      "label": "🧠 AVC Agudo",
+      "body": "Módulo ativo: emergência, reperfusão, neuroimagem, UTI e prevenção secundária.",
+      "x": 49,
+      "y": 54,
+      "type": "module",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html",
+      "status": "ativo"
+    },
+    {
+      "id": "neuroimagem-avc",
+      "label": "🖥️ Neuroimagem",
+      "body": "TC, ASPECTS, angioTC e perfusão para decisão de reperfusão.",
+      "x": 23,
+      "y": 58,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#neuroimagem",
+      "status": "ativo"
+    },
+    {
+      "id": "trombolise-avc",
+      "label": "💉 Trombólise",
+      "body": "Janela, contraindicações, PA e sangramento.",
+      "x": 36,
+      "y": 68,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#trombolise",
+      "status": "ativo"
+    },
+    {
+      "id": "trombectomia-avc",
+      "label": "🧲 Trombectomia",
+      "body": "OGV, angioTC, perfusão e regulação.",
+      "x": 61,
+      "y": 68,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#trombectomia",
+      "status": "ativo"
+    },
+    {
+      "id": "pa-avc",
+      "label": "🎚️ PA no AVC",
+      "body": "Metas pressóricas conforme cenário e reperfusão.",
+      "x": 18,
+      "y": 74,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#pressao",
+      "status": "ativo"
+    },
+    {
+      "id": "fa-avc",
+      "label": "❤️ FA / prevenção",
+      "body": "AVC cardioembólico, anticoagulação e prevenção secundária.",
+      "x": 80,
+      "y": 74,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#prevencao-secundaria",
+      "status": "ativo"
+    },
+    {
+      "id": "edema-cerebral-avc",
+      "label": "🌊 Edema cerebral",
+      "body": "Neuro UTI, osmoterapia e craniectomia descompressiva.",
+      "x": 50,
+      "y": 82,
+      "type": "topic",
+      "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#edema",
+      "status": "ativo"
+    },
+    {
+      "id": "vm-sdra",
+      "label": "🫁 VM/SDRA",
+      "body": "Ventilação protetora, driving pressure, PEEP, prona e resgate.",
+      "x": 86,
+      "y": 50,
+      "type": "theme",
+      "url": "01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html",
+      "status": "ativo/parcial"
+    },
+    {
+      "id": "sepse-choque",
+      "label": "🩸 Sepse/Choque",
+      "body": "Bundle, lactato, antibiótico, fluidos, vasopressores e choque refratário.",
+      "x": 78,
+      "y": 58,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "nefro-aki-trs",
+      "label": "🧪 AKI/TRS",
+      "body": "KDIGO, hemodiálise, CRRT e complicações intradialíticas.",
+      "x": 14,
+      "y": 50,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "infectologia-uti",
+      "label": "🦠 Infectologia",
+      "body": "CVC, PAV, pneumonia aspirativa, antimicrobianos e culturas.",
+      "x": 10,
+      "y": 64,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "endocrino-metabolico",
+      "label": "🍬 Endócrino",
+      "body": "CAD, EHH, hipoglicemia, crise tireotóxica e diabetes.",
+      "x": 10,
+      "y": 86,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "farmaco-doses",
+      "label": "💊 Doses",
+      "body": "Doses, diluições, bomba, DVA, sedação e alto risco.",
+      "x": 90,
+      "y": 84,
+      "type": "theme",
+      "url": "03_Calculadoras_UTI/index.html",
+      "status": "ativo/parcial"
+    },
+    {
+      "id": "pocus-usg",
+      "label": "🔊 POCUS",
+      "body": "USG beira-leito para choque, pulmão, volume e procedimentos.",
+      "x": 68,
+      "y": 88,
+      "type": "theme",
+      "url": "#",
+      "status": "planejado"
+    },
+    {
+      "id": "familia-paciente",
+      "label": "👨‍👩‍👧 Família",
+      "body": "Orientações visuais para pacientes, cuidadores e segurança domiciliar.",
+      "x": 88,
+      "y": 14,
+      "type": "theme",
+      "url": "06_Card_Feed_Medico/index.html",
+      "status": "ativo/parcial"
+    },
+    {
+      "id": "ia-produtividade",
+      "label": "⚙️ IA/Produtividade",
+      "body": "Obsidian, Antigravity, GitHub, prompts e organização médica.",
+      "x": 8,
+      "y": 12,
+      "type": "theme",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo/parcial"
+    }
+  ],
+  "edges": [
+    {
+      "from": "home",
+      "to": "biblioteca-ia",
+      "relation": "organiza-conhecimento"
+    },
+    {
+      "from": "home",
+      "to": "card-feed-medico",
+      "relation": "revisao-visual"
+    },
+    {
+      "from": "home",
+      "to": "banco-temi",
+      "relation": "treino-ativo"
+    },
+    {
+      "from": "home",
+      "to": "calculadoras-uti",
+      "relation": "ferramenta-beira-leito"
+    },
+    {
+      "from": "home",
+      "to": "avc-agudo",
+      "relation": "modulo-ativo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "banco-temi",
+      "relation": "gera-questoes"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "card-feed-medico",
+      "relation": "gera-cards"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "avc-agudo",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "vm-sdra",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "sepse-choque",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "nefro-aki-trs",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "infectologia-uti",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "endocrino-metabolico",
+      "relation": "alimenta-modulo"
+    },
+    {
+      "from": "calculadoras-uti",
+      "to": "farmaco-doses",
+      "relation": "calcula"
+    },
+    {
+      "from": "calculadoras-uti",
+      "to": "vm-sdra",
+      "relation": "apoia"
+    },
+    {
+      "from": "calculadoras-uti",
+      "to": "nefro-aki-trs",
+      "relation": "apoia"
+    },
+    {
+      "from": "card-feed-medico",
+      "to": "familia-paciente",
+      "relation": "orienta"
+    },
+    {
+      "from": "card-feed-medico",
+      "to": "vm-sdra",
+      "relation": "revisa"
+    },
+    {
+      "from": "card-feed-medico",
+      "to": "nefro-aki-trs",
+      "relation": "revisa"
+    },
+    {
+      "from": "banco-temi",
+      "to": "avc-agudo",
+      "relation": "questoes"
+    },
+    {
+      "from": "banco-temi",
+      "to": "vm-sdra",
+      "relation": "questoes"
+    },
+    {
+      "from": "banco-temi",
+      "to": "sepse-choque",
+      "relation": "questoes"
+    },
+    {
+      "from": "banco-temi",
+      "to": "nefro-aki-trs",
+      "relation": "questoes"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "neuroimagem-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "trombolise-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "trombectomia-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "pa-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "fa-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "avc-agudo",
+      "to": "edema-cerebral-avc",
+      "relation": "subtema"
+    },
+    {
+      "from": "neuroimagem-avc",
+      "to": "trombectomia-avc",
+      "relation": "decide"
+    },
+    {
+      "from": "pa-avc",
+      "to": "trombolise-avc",
+      "relation": "seguranca"
+    },
+    {
+      "from": "fa-avc",
+      "to": "avc-agudo",
+      "relation": "prevencao-secundaria"
+    },
+    {
+      "from": "edema-cerebral-avc",
+      "to": "neuroimagem-avc",
+      "relation": "monitoriza"
+    },
+    {
+      "from": "sepse-choque",
+      "to": "infectologia-uti",
+      "relation": "intersecao"
+    },
+    {
+      "from": "sepse-choque",
+      "to": "farmaco-doses",
+      "relation": "dva-antibiotico"
+    },
+    {
+      "from": "vm-sdra",
+      "to": "farmaco-doses",
+      "relation": "sedacao-bloqueio"
+    },
+    {
+      "from": "nefro-aki-trs",
+      "to": "farmaco-doses",
+      "relation": "ajuste-renal"
+    },
+    {
+      "from": "pocus-usg",
+      "to": "sepse-choque",
+      "relation": "avalia-choque"
+    },
+    {
+      "from": "pocus-usg",
+      "to": "vm-sdra",
+      "relation": "pulmao"
+    }
+  ]
+}
