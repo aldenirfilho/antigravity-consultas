@@ -1,6 +1,6 @@
 /**
- * MAPA VIVO 4.0 PERSISTENTE — ANTIGRAVITY ENGINE
- * Curadoria Profissional, Persistência Local e Busca Contextual.
+ * MAPA VIVO 4.1 PERSISTENTE — ANTIGRAVITY ENGINE
+ * Curadoria PRO com Painel de Inclusão, localStorage e Busca Contextual.
  */
 
 const CONFIG_V4 = {
@@ -45,7 +45,7 @@ async function initGraph() {
   const container = document.getElementById('graph');
   if (!container) return;
 
-  container.innerHTML = '<div style="padding:40px; color:#64748b; font-family:Syne;">🧠 Carregando Cérebro Clínico v4.0...</div>';
+  container.innerHTML = '<div style="padding:40px; color:#64748b; font-family:Syne;">🧠 Carregando Cérebro Clínico v4.1...</div>';
 
   try {
     const dataUrl = container.getAttribute('data-graph-src') || 'data/connections.json';
@@ -133,27 +133,42 @@ function renderInterface(container) {
         <button class="btn ghost" onclick="setMode('ALL')">🌐 Tudo</button>
       </div>
       <div class="graph-actions" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:10px;">
-        <button id="btnEdit" class="btn-curadoria btn ghost" onclick="toggleEditMode()">🛠️ Curadoria</button>
+        <button id="btnEdit" class="btn-curadoria btn ghost" onclick="toggleEditMode()">🛠️ Modo Curadoria</button>
         <button id="btnExport" class="btn ghost" onclick="exportPatch()" style="display:none">💾 Exportar Patch</button>
         <button id="btnReset" class="btn ghost" onclick="clearLocalChanges()" style="display:none">🧹 Limpar Local</button>
       </div>
     </div>
     <div id="debugPanel" class="debug-panel" hidden></div>
+    <div id="curatorshipPanel" hidden>
+      <h4 style="margin:0 0 10px 0; color:#3ee8ff; font-family:Syne;">✨ Adicionar Tema</h4>
+      <label>Título</label>
+      <input type="text" id="addTitle" placeholder="Ex: Sepse no Idoso">
+      <label>ID (Slug)</label>
+      <input type="text" id="addId" placeholder="Ex: sepse-idoso" onfocus="autoSlug()">
+      <label>Tipo</label>
+      <select id="addType">
+        <option value="theme">Tema Clínico</option>
+        <option value="module">Módulo Principal</option>
+        <option value="file">Arquivo de Estudo</option>
+      </select>
+      <label>Tags (vírgula)</label>
+      <input type="text" id="addTags" placeholder="uti, temi, sepse">
+      <button class="btn primary" onclick="addNewNodeManual()" style="margin-top:10px; width:100%">Adicionar ao Mapa →</button>
+    </div>
     <div id="graph-canvas-wrap" style="width:100%; height:${CONFIG_V4.HEIGHT}px"></div>
   `;
 
-  state.svg = d3.select("#graph-canvas-wrap").append("svg").attr("width", "100%").attr("height", "100%").attr("viewBox", `0 0 ${width} ${CONFIG_V4.HEIGHT}`);
-  state.g = state.svg.append("g");
-  state.zoom = d3.zoom().scaleExtent([0.05, 8]).on("zoom", (event) => state.g.attr("transform", event.transform));
+  state.svg = state.svg || d3.select("#graph-canvas-wrap").append("svg").attr("width", "100%").attr("height", "100%").attr("viewBox", `0 0 ${width} ${CONFIG_V4.HEIGHT}`);
+  state.g = state.g || state.svg.append("g");
+  state.zoom = state.zoom || d3.zoom().scaleExtent([0.05, 8]).on("zoom", (event) => state.g.attr("transform", event.transform));
   state.svg.call(state.zoom);
 }
 
 function updateGraph() {
   const width = document.getElementById('graph-canvas-wrap').clientWidth || 1000;
   
-  // 1. Filtrar Nós
   const typesToMatch = CONFIG_V4.MODES[state.currentMode];
-  let nodes = state.fullData.nodes.filter(n => n.visible !== false && (typesToMatch.includes(n.type) || isNodeInMatch(n)));
+  let nodes = state.fullData.nodes.filter(n => n.visible !== false && (typesToMatch.includes(n.type) || isNodeInMatch(n) || n.isNew));
   
   if (state.currentMode === 'FILES' && !state.searchTerm) nodes = nodes.slice(0, 50);
 
@@ -169,7 +184,6 @@ function updateGraph() {
 
   state.g.selectAll("*").remove();
 
-  // 2. Renderizar Links (Paths Curvos)
   const link = state.g.append("g")
     .attr("class", "edges-layer")
     .selectAll("path")
@@ -178,18 +192,14 @@ function updateGraph() {
     .attr("class", d => `edge ${d.style === 'dashed' ? 'edge--suggested' : 'edge--direct'}`)
     .attr("fill", "none");
 
-  // 3. Renderizar Nós
   const node = state.g.append("g")
     .attr("class", "nodes-layer")
     .selectAll(".node-group")
     .data(state.filteredNodes)
     .join("g")
-    .attr("class", d => `node-group node-${d.type} ${state.selectedNodes.includes(d.id) ? 'is-selected' : ''} ${isExactMatch(d) ? 'is-match' : ''}`)
+    .attr("class", d => `node-group node-${d.type} ${state.selectedNodes.includes(d.id) ? 'is-selected' : ''} ${isExactMatch(d) ? 'is-match' : ''} ${d.isNew ? 'is-new' : ''}`)
     .style("color", d => getNodeColor(d.type))
-    .call(d3.drag()
-      .on("start", dragStarted)
-      .on("drag", dragged)
-      .on("end", dragEnded))
+    .call(d3.drag().on("start", dragStarted).on("drag", dragged).on("end", dragEnded))
     .on("click", (event, d) => handleNodeClick(event, d));
 
   node.append("rect").attr("class", "node-card").attr("rx", 14).attr("ry", 14)
@@ -199,7 +209,6 @@ function updateGraph() {
   node.append("text").attr("class", "node-label").attr("text-anchor", "middle").attr("dy", 6).text(d => d.label);
   node.append("text").attr("class", "node-sub").attr("text-anchor", "middle").attr("dy", 28).text(d => d.type.toUpperCase());
 
-  // 4. Simulação
   if (state.simulation) state.simulation.stop();
   state.simulation = d3.forceSimulation(state.filteredNodes)
     .force("link", d3.forceLink(state.filteredLinks).id(d => d.id).distance(CONFIG_V4.DISTANCE))
@@ -211,12 +220,55 @@ function updateGraph() {
     link.attr("d", d => {
       const dx = d.target.x - d.source.x;
       const dy = d.target.y - d.source.y;
-      const dr = Math.sqrt(dx * dx + dy * dy) * 1.5; // Curva leve
+      const dr = Math.sqrt(dx * dx + dy * dy) * 1.5;
       return `M${d.source.x},${d.source.y}A${dr},${dr} 0 0,1 ${d.target.x},${d.target.y}`;
     });
     node.attr("transform", d => `translate(${d.x},${d.y})`);
   });
 }
+
+// ── LÓGICA DE CURADORIA ADICIONAL ──
+
+window.autoSlug = () => {
+  const title = document.getElementById('addTitle').value;
+  if (title && !document.getElementById('addId').value) {
+    document.getElementById('addId').value = safeSlugify(title);
+  }
+};
+
+function safeSlugify(text) {
+  if (!text) return "";
+  return text.toLowerCase()
+    .replace(/[^\w ]+/g, '')
+    .replace(/ +/g, '-');
+}
+
+window.addNewNodeManual = () => {
+  const id = document.getElementById('addId').value;
+  const label = document.getElementById('addTitle').value;
+  if (!id || !label) { alert("ID e Título são obrigatórios."); return; }
+
+  const newNode = {
+    id, label, 
+    type: document.getElementById('addType').value,
+    tags: document.getElementById('addTags').value.split(',').map(t => t.trim()),
+    body: "Novo tema adicionado via curadoria.",
+    visible: true,
+    isNew: true
+  };
+
+  state.overlay.addedNodes.push(newNode);
+  saveOverlay();
+  applyOverlay();
+  
+  // Limpar campos
+  document.getElementById('addId').value = '';
+  document.getElementById('addTitle').value = '';
+  document.getElementById('addTags').value = '';
+
+  alert(`✅ Tópico "${label}" adicionado! Ele aparecerá em destaque pulsar.`);
+  updateGraph();
+};
 
 // ── LÓGICA DE BUSCA VIZINHOS ──
 
@@ -233,9 +285,8 @@ function isExactMatch(d) {
 function isNodeInMatch(d) {
   if (!state.searchTerm) return false;
   if (isExactMatch(d)) return true;
-  if (d.id === 'portal') return true; // Sempre mostrar hub central na busca
+  if (d.id === 'portal') return true;
 
-  // Mostrar vizinhos
   const links = state.fullData.edges.filter(e => e.visible !== false);
   const matchedNodeIds = state.fullData.nodes
     .filter(n => n.label.toLowerCase().includes(state.searchTerm) || n.id.toLowerCase().includes(state.searchTerm))
@@ -255,6 +306,7 @@ function toggleEditMode() {
   document.getElementById('btnExport').style.display = state.isEditMode ? 'block' : 'none';
   document.getElementById('btnReset').style.display = state.isEditMode ? 'block' : 'none';
   document.getElementById('debugPanel').hidden = !state.isEditMode;
+  document.getElementById('curatorshipPanel').hidden = !state.isEditMode;
   document.body.classList.toggle('is-editing');
   state.selectedNodes = [];
   updateGraph();

@@ -80,20 +80,54 @@
   stroke: var(--edge-direct);
   stroke-width: 3.5;
   stroke-opacity: 0.65;
-  filter: drop-shadow(0 0 4px rgba(62, 232, 255, 0.4));
+  filter: drop-shadow(0 0 5px rgba(62, 232, 255, 0.4));
 }
 
 .edge--suggested {
   stroke: var(--edge-suggested);
-  stroke-width: 3;
-  stroke-opacity: 0.8;
-  stroke-dasharray: 10, 7;
-  filter: drop-shadow(0 0 6px rgba(255, 159, 67, 0.5));
+  stroke-width: 4;
+  stroke-opacity: 0.9;
+  stroke-dasharray: 12, 8;
+  filter: drop-shadow(0 0 8px rgba(255, 159, 67, 0.6));
 }
 
 .edge:hover {
   stroke-opacity: 1 !important;
-  stroke-width: 5 !important;
+  stroke-width: 6 !important;
+}
+
+/* 🛠️ MODO CURADORIA & PAINEL ADICIONAR */
+#curatorshipPanel {
+  position: absolute;
+  top: 180px;
+  left: 24px;
+  width: 320px;
+  background: rgba(15, 31, 56, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+#curatorshipPanel input, #curatorshipPanel select {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+}
+
+#curatorshipPanel label {
+  font-size: 10px;
+  color: var(--node-feed);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /* 🛠️ MODO CURADORIA */
