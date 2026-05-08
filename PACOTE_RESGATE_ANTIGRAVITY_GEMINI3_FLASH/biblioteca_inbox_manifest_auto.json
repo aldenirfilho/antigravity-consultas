@@ -1,0 +1,2780 @@
+{
+  "updatedAt": "2026-05-08",
+  "source": "LISTA_MESTRA_ANTIGRAVITY.txt",
+  "basePath": "05_Biblioteca_IA/inbox/",
+  "count": 198,
+  "items": [
+    {
+      "id": "grandes-sindromes-clinicas-mariana-lima-montenegro",
+      "name": "Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
+      "path": "05_Biblioteca_IA/inbox/Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
+      "relativePath": "Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
+      "type": "pdf",
+      "theme": "clinica-medica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "clinica-medica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf"
+    },
+    {
+      "id": "checkpoint-fatorxiii",
+      "name": "checkpoint_fatorXIII.pdf",
+      "path": "05_Biblioteca_IA/inbox/checkpoint_fatorXIII.pdf",
+      "relativePath": "checkpoint_fatorXIII.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/checkpoint_fatorXIII.pdf"
+    },
+    {
+      "id": "pocus-protocolo-completo-draldenir-v2",
+      "name": "POCUS_Protocolo_Completo_DrAldenir_v2.pdf",
+      "path": "05_Biblioteca_IA/inbox/POCUS_Protocolo_Completo_DrAldenir_v2.pdf",
+      "relativePath": "POCUS_Protocolo_Completo_DrAldenir_v2.pdf",
+      "type": "pdf",
+      "theme": "pocus",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "pocus",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/POCUS_Protocolo_Completo_DrAldenir_v2.pdf"
+    },
+    {
+      "id": "e-book-fundamentos-basicos-pra-plantao-em-uti",
+      "name": "E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf",
+      "path": "05_Biblioteca_IA/inbox/E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf",
+      "relativePath": "E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf"
+    },
+    {
+      "id": "protocolo-hemodialise-na-uti-aldenir-rocha-2",
+      "name": "Protocolo_Hemodialise_na_UTI_Aldenir_Rocha 2.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha 2.docx",
+      "relativePath": "Protocolo_Hemodialise_na_UTI_Aldenir_Rocha 2.docx",
+      "type": "word",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha 2.docx"
+    },
+    {
+      "id": "protocolo-ipcs-cvc-uti-temi",
+      "name": "Protocolo_IPCS_CVC_UTI_TEMI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_IPCS_CVC_UTI_TEMI.docx",
+      "relativePath": "Protocolo_IPCS_CVC_UTI_TEMI.docx",
+      "type": "word",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_IPCS_CVC_UTI_TEMI.docx"
+    },
+    {
+      "id": "pocus-cardiaco-focado",
+      "name": "POCUS Cardiaco Focado.docx",
+      "path": "05_Biblioteca_IA/inbox/POCUS Cardiaco Focado.docx",
+      "relativePath": "POCUS Cardiaco Focado.docx",
+      "type": "word",
+      "theme": "pocus",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "pocus",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/POCUS Cardiaco Focado.docx"
+    },
+    {
+      "id": "protocolo-desmame-vm-sedoanalgesia",
+      "name": "protocolo_desmame_vm_sedoanalgesia.pdf",
+      "path": "05_Biblioteca_IA/inbox/protocolo_desmame_vm_sedoanalgesia.pdf",
+      "relativePath": "protocolo_desmame_vm_sedoanalgesia.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/protocolo_desmame_vm_sedoanalgesia.pdf"
+    },
+    {
+      "id": "protocolo-decanulacao-uti",
+      "name": "Protocolo_Decanulacao_UTI.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Decanulacao_UTI.pdf",
+      "relativePath": "Protocolo_Decanulacao_UTI.pdf",
+      "type": "pdf",
+      "theme": "procedimentos",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "procedimentos",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Decanulacao_UTI.pdf"
+    },
+    {
+      "id": "mapaprofilaxias-uti-draldenir",
+      "name": "MapaProfilaxias UTI DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/MapaProfilaxias UTI DrAldenir.docx",
+      "relativePath": "MapaProfilaxias UTI DrAldenir.docx",
+      "type": "word",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/MapaProfilaxias UTI DrAldenir.docx"
+    },
+    {
+      "id": "tridil-nipride-uti-abordagem-completa",
+      "name": "Tridil_Nipride_UTI_Abordagem_Completa.docx",
+      "path": "05_Biblioteca_IA/inbox/Tridil_Nipride_UTI_Abordagem_Completa.docx",
+      "relativePath": "Tridil_Nipride_UTI_Abordagem_Completa.docx",
+      "type": "word",
+      "theme": "sepse-choque",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "sepse-choque",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Tridil_Nipride_UTI_Abordagem_Completa.docx"
+    },
+    {
+      "id": "resumo-executivo-aldenir",
+      "name": "resumo_executivo_aldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/resumo_executivo_aldenir.docx",
+      "relativePath": "resumo_executivo_aldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/resumo_executivo_aldenir.docx"
+    },
+    {
+      "id": "icsac-cateter-uti-temi",
+      "name": "ICSAC_Cateter_UTI_TEMI.docx",
+      "path": "05_Biblioteca_IA/inbox/ICSAC_Cateter_UTI_TEMI.docx",
+      "relativePath": "ICSAC_Cateter_UTI_TEMI.docx",
+      "type": "word",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/ICSAC_Cateter_UTI_TEMI.docx"
+    },
+    {
+      "id": "jetem-10-3-s25-2",
+      "name": "jetem-10-3-s25 2.pdf",
+      "path": "05_Biblioteca_IA/inbox/jetem-10-3-s25 2.pdf",
+      "relativePath": "jetem-10-3-s25 2.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/jetem-10-3-s25 2.pdf"
+    },
+    {
+      "id": "suporte-respiratorio-decisao-uti-sara-grave",
+      "name": "Suporte_Respiratorio_Decisao_UTI_SARA_Grave.docx",
+      "path": "05_Biblioteca_IA/inbox/Suporte_Respiratorio_Decisao_UTI_SARA_Grave.docx",
+      "relativePath": "Suporte_Respiratorio_Decisao_UTI_SARA_Grave.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Suporte_Respiratorio_Decisao_UTI_SARA_Grave.docx"
+    },
+    {
+      "id": "protocolo-cetoacidose-diabetica-uti",
+      "name": "Protocolo_Cetoacidose_Diabetica_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Cetoacidose_Diabetica_UTI.docx",
+      "relativePath": "Protocolo_Cetoacidose_Diabetica_UTI.docx",
+      "type": "word",
+      "theme": "endocrino-metabolico",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "endocrino-metabolico",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Cetoacidose_Diabetica_UTI.docx"
+    },
+    {
+      "id": "simulador-suporte-respiratorio-vm-sara",
+      "name": "Simulador_Suporte_Respiratorio_VM_SARA.pdf",
+      "path": "05_Biblioteca_IA/inbox/Simulador_Suporte_Respiratorio_VM_SARA.pdf",
+      "relativePath": "Simulador_Suporte_Respiratorio_VM_SARA.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Simulador_Suporte_Respiratorio_VM_SARA.pdf"
+    },
+    {
+      "id": "documento-irmao-3-curvas-ventilatorias-normais-e-patologicas-refeito",
+      "name": "Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx",
+      "path": "05_Biblioteca_IA/inbox/Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx",
+      "relativePath": "Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx"
+    },
+    {
+      "id": "fa-protocolo-completo-draldenir",
+      "name": "FA_Protocolo_Completo_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/FA_Protocolo_Completo_DrAldenir.docx",
+      "relativePath": "FA_Protocolo_Completo_DrAldenir.docx",
+      "type": "word",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/FA_Protocolo_Completo_DrAldenir.docx"
+    },
+    {
+      "id": "protocolo-shr-draldenir",
+      "name": "Protocolo_SHR_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_SHR_DrAldenir.docx",
+      "relativePath": "Protocolo_SHR_DrAldenir.docx",
+      "type": "word",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_SHR_DrAldenir.docx"
+    },
+    {
+      "id": "guia-ia-medicos-clinicos-intensivistas",
+      "name": "guia ia medicos clinicos intensivistas.md",
+      "path": "05_Biblioteca_IA/inbox/guia ia medicos clinicos intensivistas.md",
+      "relativePath": "guia ia medicos clinicos intensivistas.md",
+      "type": "markdown",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "md"
+      ],
+      "url": "05_Biblioteca_IA/inbox/guia ia medicos clinicos intensivistas.md"
+    },
+    {
+      "id": "acidobase-eletrolitos-draldenir",
+      "name": "AcidoBase_Eletrolitos_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/AcidoBase_Eletrolitos_DrAldenir.docx",
+      "relativePath": "AcidoBase_Eletrolitos_DrAldenir.docx",
+      "type": "word",
+      "theme": "endocrino-metabolico",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "endocrino-metabolico",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/AcidoBase_Eletrolitos_DrAldenir.docx"
+    },
+    {
+      "id": "cards-pocus-12-protocolos",
+      "name": "Cards_POCUS_12_Protocolos.docx",
+      "path": "05_Biblioteca_IA/inbox/Cards_POCUS_12_Protocolos.docx",
+      "relativePath": "Cards_POCUS_12_Protocolos.docx",
+      "type": "word",
+      "theme": "pocus",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "pocus",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Cards_POCUS_12_Protocolos.docx"
+    },
+    {
+      "id": "guia-ia-medicos-clinicos-intensivistas",
+      "name": "guia ia medicos clinicos intensivistas.docx",
+      "path": "05_Biblioteca_IA/inbox/guia ia medicos clinicos intensivistas.docx",
+      "relativePath": "guia ia medicos clinicos intensivistas.docx",
+      "type": "word",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/guia ia medicos clinicos intensivistas.docx"
+    },
+    {
+      "id": "quadro-comparativo-unico-alarmes-assincronias-curvas-patologicas",
+      "name": "Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx",
+      "path": "05_Biblioteca_IA/inbox/Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx",
+      "relativePath": "Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx"
+    },
+    {
+      "id": "versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
+      "name": "Versao_TEMI_Prova_Titulo_VM_Pegadinhas_Interpretacao_Avancada.docx",
+      "path": "05_Biblioteca_IA/inbox/Versao_TEMI_Prova_Titulo_VM_Pegadinhas_Interpretacao_Avancada.docx",
+      "relativePath": "Versao_TEMI_Prova_Titulo_VM_Pegadinhas_Interpretacao_Avancada.docx",
+      "type": "word",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Versao_TEMI_Prova_Titulo_VM_Pegadinhas_Interpretacao_Avancada.docx"
+    },
+    {
+      "id": "protocolo-morte-cerebral-2",
+      "name": "protocolo_morte_cerebral_2.docx",
+      "path": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral_2.docx",
+      "relativePath": "protocolo_morte_cerebral_2.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral_2.docx"
+    },
+    {
+      "id": "protocolo-teste-estresse-furosemida-uti-temi",
+      "name": "Protocolo_Teste_Estresse_Furosemida_UTI_TEMI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Teste_Estresse_Furosemida_UTI_TEMI.docx",
+      "relativePath": "Protocolo_Teste_Estresse_Furosemida_UTI_TEMI.docx",
+      "type": "word",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Teste_Estresse_Furosemida_UTI_TEMI.docx"
+    },
+    {
+      "id": "protocolo-morte-cerebral-3",
+      "name": "protocolo_morte_cerebral_3.docx",
+      "path": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral_3.docx",
+      "relativePath": "protocolo_morte_cerebral_3.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral_3.docx"
+    },
+    {
+      "id": "protocolo-azul-de-metileno-uti-atualizado-2026",
+      "name": "Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
+      "relativePath": "Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
+      "type": "word",
+      "theme": "sepse-choque",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "sepse-choque",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx"
+    },
+    {
+      "id": "protocolo-ptt-hfg-hpn-scms",
+      "name": "Protocolo_PTT_HFG_HPN_SCMS.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_PTT_HFG_HPN_SCMS.pdf",
+      "relativePath": "Protocolo_PTT_HFG_HPN_SCMS.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_PTT_HFG_HPN_SCMS.pdf"
+    },
+    {
+      "id": "alarmes-vm-manual-pratico",
+      "name": "Alarmes VM Manual Pratico.docx",
+      "path": "05_Biblioteca_IA/inbox/Alarmes VM Manual Pratico.docx",
+      "relativePath": "Alarmes VM Manual Pratico.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Alarmes VM Manual Pratico.docx"
+    },
+    {
+      "id": "broncoscopia-na-uti",
+      "name": "BRONCOSCOPIA NA UTI.pdf",
+      "path": "05_Biblioteca_IA/inbox/BRONCOSCOPIA NA UTI.pdf",
+      "relativePath": "BRONCOSCOPIA NA UTI.pdf",
+      "type": "pdf",
+      "theme": "procedimentos",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "procedimentos",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/BRONCOSCOPIA NA UTI.pdf"
+    },
+    {
+      "id": "hic-guia-temi",
+      "name": "HIC_Guia_TEMI.pdf",
+      "path": "05_Biblioteca_IA/inbox/HIC_Guia_TEMI.pdf",
+      "relativePath": "HIC_Guia_TEMI.pdf",
+      "type": "pdf",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/HIC_Guia_TEMI.pdf"
+    },
+    {
+      "id": "pneumonia-aspirativa-abordagem-completa",
+      "name": "Pneumonia_Aspirativa_Abordagem_Completa.docx",
+      "path": "05_Biblioteca_IA/inbox/Pneumonia_Aspirativa_Abordagem_Completa.docx",
+      "relativePath": "Pneumonia_Aspirativa_Abordagem_Completa.docx",
+      "type": "word",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Pneumonia_Aspirativa_Abordagem_Completa.docx"
+    },
+    {
+      "id": "protocolo-morte-cerebral",
+      "name": "protocolo_morte_cerebral.docx",
+      "path": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral.docx",
+      "relativePath": "protocolo_morte_cerebral.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral.docx"
+    },
+    {
+      "id": "du-vidas-diretas-uti-cm-hemocultura-positiva-candida",
+      "name": "DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf",
+      "path": "05_Biblioteca_IA/inbox/DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf",
+      "relativePath": "DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf",
+      "type": "pdf",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf"
+    },
+    {
+      "id": "guia-de-suporte-respirato-rio-e-simulador-de-tomada-de-decisa-o-me-dica-v1",
+      "name": "Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1.pdf",
+      "path": "05_Biblioteca_IA/inbox/Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1.pdf",
+      "relativePath": "Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1.pdf",
+      "type": "pdf",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1.pdf"
+    },
+    {
+      "id": "pocus-pulmonar-em-vm",
+      "name": "POCUS Pulmonar em VM.docx",
+      "path": "05_Biblioteca_IA/inbox/POCUS Pulmonar em VM.docx",
+      "relativePath": "POCUS Pulmonar em VM.docx",
+      "type": "word",
+      "theme": "pocus",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "pocus",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/POCUS Pulmonar em VM.docx"
+    },
+    {
+      "id": "tce-temi-draldenir",
+      "name": "TCE_TEMI_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/TCE_TEMI_DrAldenir.docx",
+      "relativePath": "TCE_TEMI_DrAldenir.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/TCE_TEMI_DrAldenir.docx"
+    },
+    {
+      "id": "prescricoes-uti-draldenir",
+      "name": "Prescricoes_UTI_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Prescricoes_UTI_DrAldenir.docx",
+      "relativePath": "Prescricoes_UTI_DrAldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Prescricoes_UTI_DrAldenir.docx"
+    },
+    {
+      "id": "modelos-prontuario-dnar-plantao",
+      "name": "MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
+      "path": "05_Biblioteca_IA/inbox/MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
+      "relativePath": "MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/MODELOS_PRONTUARIO_DNAR_PLANTAO.docx"
+    },
+    {
+      "id": "protocolo-shr-sindrome-hepatorrenal-draldenir",
+      "name": "Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf",
+      "relativePath": "Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf"
+    },
+    {
+      "id": "protocolo-bradicardia-em-uti-final",
+      "name": "Protocolo_Bradicardia_em_UTI_final.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Bradicardia_em_UTI_final.docx",
+      "relativePath": "Protocolo_Bradicardia_em_UTI_final.docx",
+      "type": "word",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Bradicardia_em_UTI_final.docx"
+    },
+    {
+      "id": "protocolo-crise-convulsiva-estado-mal-uti-adulto",
+      "name": "Protocolo_Crise_Convulsiva_Estado_Mal_UTI_Adulto.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Crise_Convulsiva_Estado_Mal_UTI_Adulto.docx",
+      "relativePath": "Protocolo_Crise_Convulsiva_Estado_Mal_UTI_Adulto.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Crise_Convulsiva_Estado_Mal_UTI_Adulto.docx"
+    },
+    {
+      "id": "ventila-cards-verso",
+      "name": "VENTILA-CARDS-VERSO.pdf",
+      "path": "05_Biblioteca_IA/inbox/VENTILA-CARDS-VERSO.pdf",
+      "relativePath": "VENTILA-CARDS-VERSO.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/VENTILA-CARDS-VERSO.pdf"
+    },
+    {
+      "id": "perioperatorio-grandessindromes-draldenir",
+      "name": "Perioperatorio GrandesSindromes DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Perioperatorio GrandesSindromes DrAldenir.docx",
+      "relativePath": "Perioperatorio GrandesSindromes DrAldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Perioperatorio GrandesSindromes DrAldenir.docx"
+    },
+    {
+      "id": "protocolo-hemodialise-na-uti-aldenir-rocha",
+      "name": "Protocolo_Hemodialise_na_UTI_Aldenir_Rocha.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha.docx",
+      "relativePath": "Protocolo_Hemodialise_na_UTI_Aldenir_Rocha.docx",
+      "type": "word",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha.docx"
+    },
+    {
+      "id": "protocolo-tce-grave-uti-adulto",
+      "name": "Protocolo_TCE_Grave_UTI_Adulto.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_TCE_Grave_UTI_Adulto.docx",
+      "relativePath": "Protocolo_TCE_Grave_UTI_Adulto.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_TCE_Grave_UTI_Adulto.docx"
+    },
+    {
+      "id": "documento-irmao-assincronias-paciente-ventilador",
+      "name": "Documento_Irmao_Assincronias_Paciente_Ventilador.docx",
+      "path": "05_Biblioteca_IA/inbox/Documento_Irmao_Assincronias_Paciente_Ventilador.docx",
+      "relativePath": "Documento_Irmao_Assincronias_Paciente_Ventilador.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Documento_Irmao_Assincronias_Paciente_Ventilador.docx"
+    },
+    {
+      "id": "pag-sara-uti-temi",
+      "name": "PAG_SARA_UTI_TEMI.docx",
+      "path": "05_Biblioteca_IA/inbox/PAG_SARA_UTI_TEMI.docx",
+      "relativePath": "PAG_SARA_UTI_TEMI.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/PAG_SARA_UTI_TEMI.docx"
+    },
+    {
+      "id": "parestesias-e-guillain-barre-protocolo-completo",
+      "name": "Parestesias e Guillain Barre Protocolo Completo.docx",
+      "path": "05_Biblioteca_IA/inbox/Parestesias e Guillain Barre Protocolo Completo.docx",
+      "relativePath": "Parestesias e Guillain Barre Protocolo Completo.docx",
+      "type": "word",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Parestesias e Guillain Barre Protocolo Completo.docx"
+    },
+    {
+      "id": "04-protocolo-tromboprofilaxia",
+      "name": "04_Protocolo_Tromboprofilaxia.pdf",
+      "path": "05_Biblioteca_IA/inbox/04_Protocolo_Tromboprofilaxia.pdf",
+      "relativePath": "04_Protocolo_Tromboprofilaxia.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/04_Protocolo_Tromboprofilaxia.pdf"
+    },
+    {
+      "id": "protocolo-npt-uti-draldenir",
+      "name": "Protocolo NPT UTI DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo NPT UTI DrAldenir.docx",
+      "relativePath": "Protocolo NPT UTI DrAldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo NPT UTI DrAldenir.docx"
+    },
+    {
+      "id": "06-protocolo-pcr-acls-enfermaria",
+      "name": "06_Protocolo_PCR_ACLS_Enfermaria.pdf",
+      "path": "05_Biblioteca_IA/inbox/06_Protocolo_PCR_ACLS_Enfermaria.pdf",
+      "relativePath": "06_Protocolo_PCR_ACLS_Enfermaria.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/06_Protocolo_PCR_ACLS_Enfermaria.pdf"
+    },
+    {
+      "id": "kdigo-2026-aki-na-uti-temi-resumo-mapa-memorycards-aldenir-rocha",
+      "name": "KDIGO_2026_AKI_na_UTI_TEMI_Resumo_Mapa_MemoryCards_Aldenir_Rocha.docx",
+      "path": "05_Biblioteca_IA/inbox/KDIGO_2026_AKI_na_UTI_TEMI_Resumo_Mapa_MemoryCards_Aldenir_Rocha.docx",
+      "relativePath": "KDIGO_2026_AKI_na_UTI_TEMI_Resumo_Mapa_MemoryCards_Aldenir_Rocha.docx",
+      "type": "word",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/KDIGO_2026_AKI_na_UTI_TEMI_Resumo_Mapa_MemoryCards_Aldenir_Rocha.docx"
+    },
+    {
+      "id": "acidobase-eletrolitos-draldenir",
+      "name": "AcidoBase_Eletrolitos_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/AcidoBase_Eletrolitos_DrAldenir.pdf",
+      "relativePath": "AcidoBase_Eletrolitos_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "endocrino-metabolico",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "endocrino-metabolico",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/AcidoBase_Eletrolitos_DrAldenir.pdf"
+    },
+    {
+      "id": "nutricao-uti-draldenir",
+      "name": "Nutricao UTI DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Nutricao UTI DrAldenir.docx",
+      "relativePath": "Nutricao UTI DrAldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Nutricao UTI DrAldenir.docx"
+    },
+    {
+      "id": "pocus-protocolo-completo-draldenir-v2",
+      "name": "POCUS_Protocolo_Completo_DrAldenir_v2.docx",
+      "path": "05_Biblioteca_IA/inbox/POCUS_Protocolo_Completo_DrAldenir_v2.docx",
+      "relativePath": "POCUS_Protocolo_Completo_DrAldenir_v2.docx",
+      "type": "word",
+      "theme": "pocus",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "pocus",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/POCUS_Protocolo_Completo_DrAldenir_v2.docx"
+    },
+    {
+      "id": "protocolo-morte-cerebral-4",
+      "name": "protocolo_morte_cerebral_4.docx",
+      "path": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral_4.docx",
+      "relativePath": "protocolo_morte_cerebral_4.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral_4.docx"
+    },
+    {
+      "id": "hemostasia-transfusao-uti-draldenir",
+      "name": "Hemostasia_Transfusao_UTI_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Hemostasia_Transfusao_UTI_DrAldenir.pdf",
+      "relativePath": "Hemostasia_Transfusao_UTI_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Hemostasia_Transfusao_UTI_DrAldenir.pdf"
+    },
+    {
+      "id": "protocolo-sara-grave-uti-adulto",
+      "name": "Protocolo_SARA_Grave_UTI_Adulto.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_SARA_Grave_UTI_Adulto.docx",
+      "relativePath": "Protocolo_SARA_Grave_UTI_Adulto.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_SARA_Grave_UTI_Adulto.docx"
+    },
+    {
+      "id": "plano-r3-clinica-medica-santacasa-hrn",
+      "name": "Plano_R3_Clinica_Medica_SantaCasa_HRN.docx",
+      "path": "05_Biblioteca_IA/inbox/Plano_R3_Clinica_Medica_SantaCasa_HRN.docx",
+      "relativePath": "Plano_R3_Clinica_Medica_SantaCasa_HRN.docx",
+      "type": "word",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Plano_R3_Clinica_Medica_SantaCasa_HRN.docx"
+    },
+    {
+      "id": "hemodialise-uti",
+      "name": "hemodialise_uti.docx",
+      "path": "05_Biblioteca_IA/inbox/hemodialise_uti.docx",
+      "relativePath": "hemodialise_uti.docx",
+      "type": "word",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/hemodialise_uti.docx"
+    },
+    {
+      "id": "guia-antigravity-comandos-atalhos",
+      "name": "Guia_Antigravity_Comandos_Atalhos.docx",
+      "path": "05_Biblioteca_IA/inbox/Guia_Antigravity_Comandos_Atalhos.docx",
+      "relativePath": "Guia_Antigravity_Comandos_Atalhos.docx",
+      "type": "word",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Guia_Antigravity_Comandos_Atalhos.docx"
+    },
+    {
+      "id": "monetizar-dados-me-dicos-em-renda-passiva",
+      "name": "Monetizar dados médicos em renda passiva.pdf",
+      "path": "05_Biblioteca_IA/inbox/Monetizar dados médicos em renda passiva.pdf",
+      "relativePath": "Monetizar dados médicos em renda passiva.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Monetizar dados médicos em renda passiva.pdf"
+    },
+    {
+      "id": "prescricoes-uti-draldenir",
+      "name": "Prescricoes_UTI_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Prescricoes_UTI_DrAldenir.pdf",
+      "relativePath": "Prescricoes_UTI_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Prescricoes_UTI_DrAldenir.pdf"
+    },
+    {
+      "id": "pav-pneumonia-associada-ventilacao-temi",
+      "name": "PAV_Pneumonia_Associada_Ventilacao_TEMI.docx",
+      "path": "05_Biblioteca_IA/inbox/PAV_Pneumonia_Associada_Ventilacao_TEMI.docx",
+      "relativePath": "PAV_Pneumonia_Associada_Ventilacao_TEMI.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/PAV_Pneumonia_Associada_Ventilacao_TEMI.docx"
+    },
+    {
+      "id": "protocolos-assistenciais-1",
+      "name": "Protocolos_Assistenciais (1).pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolos_Assistenciais (1).pdf",
+      "relativePath": "Protocolos_Assistenciais (1).pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolos_Assistenciais (1).pdf"
+    },
+    {
+      "id": "ventila-cards-frente",
+      "name": "VENTILA-CARDS-FRENTE.pdf",
+      "path": "05_Biblioteca_IA/inbox/VENTILA-CARDS-FRENTE.pdf",
+      "relativePath": "VENTILA-CARDS-FRENTE.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/VENTILA-CARDS-FRENTE.pdf"
+    },
+    {
+      "id": "ventila-decision",
+      "name": "VENTILA-DECISION.docx",
+      "path": "05_Biblioteca_IA/inbox/VENTILA-DECISION.docx",
+      "relativePath": "VENTILA-DECISION.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/VENTILA-DECISION.docx"
+    },
+    {
+      "id": "desmamevm-bnm-neurointensivismo-draldenir",
+      "name": "DesmameVM_BNM_Neurointensivismo_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/DesmameVM_BNM_Neurointensivismo_DrAldenir.docx",
+      "relativePath": "DesmameVM_BNM_Neurointensivismo_DrAldenir.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/DesmameVM_BNM_Neurointensivismo_DrAldenir.docx"
+    },
+    {
+      "id": "avaliacao-e-tratamento-da-hipertensao-intracraniana-em-adultos",
+      "name": "Avaliação e tratamento da hipertensão intracraniana em adultos.pdf",
+      "path": "05_Biblioteca_IA/inbox/Avaliação e tratamento da hipertensão intracraniana em adultos.pdf",
+      "relativePath": "Avaliação e tratamento da hipertensão intracraniana em adultos.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Avaliação e tratamento da hipertensão intracraniana em adultos.pdf"
+    },
+    {
+      "id": "00-master-completo-11-protocolos-santacasa-2026",
+      "name": "00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
+      "path": "05_Biblioteca_IA/inbox/00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
+      "relativePath": "00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf"
+    },
+    {
+      "id": "protocolo-complicacoes-intradialiticas-uti-aldenir-rocha",
+      "name": "Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha.docx",
+      "relativePath": "Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha.docx",
+      "type": "word",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha.docx"
+    },
+    {
+      "id": "qualidadeseguranca-uti-draldenir",
+      "name": "QualidadeSeguranca UTI DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/QualidadeSeguranca UTI DrAldenir.docx",
+      "relativePath": "QualidadeSeguranca UTI DrAldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/QualidadeSeguranca UTI DrAldenir.docx"
+    },
+    {
+      "id": "usg-pointofcare-protocolo-draldenir",
+      "name": "USG_PointOfCare_Protocolo_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/USG_PointOfCare_Protocolo_DrAldenir.docx",
+      "relativePath": "USG_PointOfCare_Protocolo_DrAldenir.docx",
+      "type": "word",
+      "theme": "pocus",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "pocus",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/USG_PointOfCare_Protocolo_DrAldenir.docx"
+    },
+    {
+      "id": "03-checklist-alta-segura",
+      "name": "03_Checklist_Alta_Segura.pdf",
+      "path": "05_Biblioteca_IA/inbox/03_Checklist_Alta_Segura.pdf",
+      "relativePath": "03_Checklist_Alta_Segura.pdf",
+      "type": "pdf",
+      "theme": "clinica-medica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "clinica-medica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/03_Checklist_Alta_Segura.pdf"
+    },
+    {
+      "id": "protocolo-afogamento-uti-adulto",
+      "name": "Protocolo_Afogamento_UTI_Adulto.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Afogamento_UTI_Adulto.docx",
+      "relativePath": "Protocolo_Afogamento_UTI_Adulto.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Afogamento_UTI_Adulto.docx"
+    },
+    {
+      "id": "manual-fa-aguda-cronica-cardioversao-controle-fc",
+      "name": "Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx",
+      "path": "05_Biblioteca_IA/inbox/Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx",
+      "relativePath": "Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx",
+      "type": "word",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx"
+    },
+    {
+      "id": "infeccao-antibioticos-uti-draldenir",
+      "name": "Infeccao_Antibioticos_UTI_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Infeccao_Antibioticos_UTI_DrAldenir.pdf",
+      "relativePath": "Infeccao_Antibioticos_UTI_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Infeccao_Antibioticos_UTI_DrAldenir.pdf"
+    },
+    {
+      "id": "08-protocolo-hiponatremia",
+      "name": "08_Protocolo_Hiponatremia.pdf",
+      "path": "05_Biblioteca_IA/inbox/08_Protocolo_Hiponatremia.pdf",
+      "relativePath": "08_Protocolo_Hiponatremia.pdf",
+      "type": "pdf",
+      "theme": "endocrino-metabolico",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "endocrino-metabolico",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/08_Protocolo_Hiponatremia.pdf"
+    },
+    {
+      "id": "bradiarritmias-bav-protocolo",
+      "name": "bradiarritmias_bav_protocolo.docx",
+      "path": "05_Biblioteca_IA/inbox/bradiarritmias_bav_protocolo.docx",
+      "relativePath": "bradiarritmias_bav_protocolo.docx",
+      "type": "word",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/bradiarritmias_bav_protocolo.docx"
+    },
+    {
+      "id": "advpub-cj-26-0119",
+      "name": "advpub_CJ-26-0119.pdf",
+      "path": "05_Biblioteca_IA/inbox/advpub_CJ-26-0119.pdf",
+      "relativePath": "advpub_CJ-26-0119.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/advpub_CJ-26-0119.pdf"
+    },
+    {
+      "id": "s13054-026-06015-8-reference",
+      "name": "s13054-026-06015-8_reference.pdf",
+      "path": "05_Biblioteca_IA/inbox/s13054-026-06015-8_reference.pdf",
+      "relativePath": "s13054-026-06015-8_reference.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/s13054-026-06015-8_reference.pdf"
+    },
+    {
+      "id": "protocolo-intoxicacao-exogena-na-uti",
+      "name": "Protocolo_Intoxicacao_Exogena_na_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Intoxicacao_Exogena_na_UTI.docx",
+      "relativePath": "Protocolo_Intoxicacao_Exogena_na_UTI.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Intoxicacao_Exogena_na_UTI.docx"
+    },
+    {
+      "id": "vm-suporte-respiratorio-draldenir",
+      "name": "VM_Suporte_Respiratorio_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/VM_Suporte_Respiratorio_DrAldenir.docx",
+      "relativePath": "VM_Suporte_Respiratorio_DrAldenir.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/VM_Suporte_Respiratorio_DrAldenir.docx"
+    },
+    {
+      "id": "protocolo-transfusao-crioprecipitado-uti-pandoc",
+      "name": "protocolo_transfusao_crioprecipitado_UTI_pandoc.docx",
+      "path": "05_Biblioteca_IA/inbox/protocolo_transfusao_crioprecipitado_UTI_pandoc.docx",
+      "relativePath": "protocolo_transfusao_crioprecipitado_UTI_pandoc.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/protocolo_transfusao_crioprecipitado_UTI_pandoc.docx"
+    },
+    {
+      "id": "hda-protocolo-completo-draldenir",
+      "name": "HDA Protocolo Completo DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/HDA Protocolo Completo DrAldenir.docx",
+      "relativePath": "HDA Protocolo Completo DrAldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/HDA Protocolo Completo DrAldenir.docx"
+    },
+    {
+      "id": "desmamevm-bnm-neurointensivismo-draldenir",
+      "name": "DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf",
+      "relativePath": "DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf"
+    },
+    {
+      "id": "protocolo-complicacoes-intradialiticas-uti-aldenir-rocha-2",
+      "name": "Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha 2.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha 2.docx",
+      "relativePath": "Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha 2.docx",
+      "type": "word",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha 2.docx"
+    },
+    {
+      "id": "protocolo-choque-septico-refratario-uti",
+      "name": "Protocolo_Choque_Septico_Refratario_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Choque_Septico_Refratario_UTI.docx",
+      "relativePath": "Protocolo_Choque_Septico_Refratario_UTI.docx",
+      "type": "word",
+      "theme": "sepse-choque",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "sepse-choque",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Choque_Septico_Refratario_UTI.docx"
+    },
+    {
+      "id": "comparativo-ia-medicina-2026",
+      "name": "Comparativo_IA_Medicina_2026.pdf",
+      "path": "05_Biblioteca_IA/inbox/Comparativo_IA_Medicina_2026.pdf",
+      "relativePath": "Comparativo_IA_Medicina_2026.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Comparativo_IA_Medicina_2026.pdf"
+    },
+    {
+      "id": "protocolo-albumina-paracentese",
+      "name": "PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
+      "path": "05_Biblioteca_IA/inbox/PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
+      "relativePath": "PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/PROTOCOLO_ALBUMINA_PARACENTESE.pdf"
+    },
+    {
+      "id": "parecer-cuidados-paliativos-padrao",
+      "name": "Parecer Cuidados Paliativos PADRAO.pdf",
+      "path": "05_Biblioteca_IA/inbox/Parecer Cuidados Paliativos PADRAO.pdf",
+      "relativePath": "Parecer Cuidados Paliativos PADRAO.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Parecer Cuidados Paliativos PADRAO.pdf"
+    },
+    {
+      "id": "temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
+      "name": "TEMI_2026_Tema_02_Avaliacao_ABCDE_UTI_30_flashcards.csv",
+      "path": "05_Biblioteca_IA/inbox/TEMI_2026_Tema_02_Avaliacao_ABCDE_UTI_30_flashcards.csv",
+      "relativePath": "TEMI_2026_Tema_02_Avaliacao_ABCDE_UTI_30_flashcards.csv",
+      "type": "data",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "csv"
+      ],
+      "url": "05_Biblioteca_IA/inbox/TEMI_2026_Tema_02_Avaliacao_ABCDE_UTI_30_flashcards.csv"
+    },
+    {
+      "id": "tabelas-dva-mlh-peso-40a120",
+      "name": "tabelas_DVA_mlh_peso_40a120.pdf",
+      "path": "05_Biblioteca_IA/inbox/tabelas_DVA_mlh_peso_40a120.pdf",
+      "relativePath": "tabelas_DVA_mlh_peso_40a120.pdf",
+      "type": "pdf",
+      "theme": "sepse-choque",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "sepse-choque",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/tabelas_DVA_mlh_peso_40a120.pdf"
+    },
+    {
+      "id": "05-formulario-evolucao-soap-diaria",
+      "name": "05_Formulario_Evolucao_SOAP_Diaria.pdf",
+      "path": "05_Biblioteca_IA/inbox/05_Formulario_Evolucao_SOAP_Diaria.pdf",
+      "relativePath": "05_Formulario_Evolucao_SOAP_Diaria.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/05_Formulario_Evolucao_SOAP_Diaria.pdf"
+    },
+    {
+      "id": "protocolo-crise-tireotoxica-uti",
+      "name": "Protocolo_Crise_Tireotoxica_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Crise_Tireotoxica_UTI.docx",
+      "relativePath": "Protocolo_Crise_Tireotoxica_UTI.docx",
+      "type": "word",
+      "theme": "endocrino-metabolico",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "endocrino-metabolico",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Crise_Tireotoxica_UTI.docx"
+    },
+    {
+      "id": "kdigo2026-aki-uti-draldenir",
+      "name": "KDIGO2026_AKI_UTI_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/KDIGO2026_AKI_UTI_DrAldenir.docx",
+      "relativePath": "KDIGO2026_AKI_UTI_DrAldenir.docx",
+      "type": "word",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/KDIGO2026_AKI_UTI_DrAldenir.docx"
+    },
+    {
+      "id": "protocolo-hipoglicemia-uti",
+      "name": "Protocolo_Hipoglicemia_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Hipoglicemia_UTI.docx",
+      "relativePath": "Protocolo_Hipoglicemia_UTI.docx",
+      "type": "word",
+      "theme": "endocrino-metabolico",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "endocrino-metabolico",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Hipoglicemia_UTI.docx"
+    },
+    {
+      "id": "protocolo-morte-cerebral",
+      "name": "Protocolo_Morte_Cerebral.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Morte_Cerebral.pdf",
+      "relativePath": "Protocolo_Morte_Cerebral.pdf",
+      "type": "pdf",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Morte_Cerebral.pdf"
+    },
+    {
+      "id": "protocolo-hiponatremia-grave-uti",
+      "name": "Protocolo_Hiponatremia_Grave_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Hiponatremia_Grave_UTI.docx",
+      "relativePath": "Protocolo_Hiponatremia_Grave_UTI.docx",
+      "type": "word",
+      "theme": "endocrino-metabolico",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "endocrino-metabolico",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Hiponatremia_Grave_UTI.docx"
+    },
+    {
+      "id": "cardio-critica-draldenir",
+      "name": "Cardio_Critica_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Cardio_Critica_DrAldenir.docx",
+      "relativePath": "Cardio_Critica_DrAldenir.docx",
+      "type": "word",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Cardio_Critica_DrAldenir.docx"
+    },
+    {
+      "id": "readme",
+      "name": "README.md",
+      "path": "05_Biblioteca_IA/inbox/README.md",
+      "relativePath": "README.md",
+      "type": "markdown",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "md"
+      ],
+      "url": "05_Biblioteca_IA/inbox/README.md"
+    },
+    {
+      "id": "modos-ventilatorios-comparativo",
+      "name": "Modos Ventilatorios Comparativo.docx",
+      "path": "05_Biblioteca_IA/inbox/Modos Ventilatorios Comparativo.docx",
+      "relativePath": "Modos Ventilatorios Comparativo.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Modos Ventilatorios Comparativo.docx"
+    },
+    {
+      "id": "protocolo-pneumonia-aspirativa-uti-adulto",
+      "name": "Protocolo_Pneumonia_Aspirativa_UTI_Adulto.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Pneumonia_Aspirativa_UTI_Adulto.docx",
+      "relativePath": "Protocolo_Pneumonia_Aspirativa_UTI_Adulto.docx",
+      "type": "word",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Pneumonia_Aspirativa_UTI_Adulto.docx"
+    },
+    {
+      "id": "protocolo-estado-hiperglicemico-hiperosmolar-uti",
+      "name": "Protocolo_Estado_Hiperglicemico_Hiperosmolar_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Estado_Hiperglicemico_Hiperosmolar_UTI.docx",
+      "relativePath": "Protocolo_Estado_Hiperglicemico_Hiperosmolar_UTI.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Estado_Hiperglicemico_Hiperosmolar_UTI.docx"
+    },
+    {
+      "id": "hrn-sepsis-intelligence-2",
+      "name": "HRN_Sepsis_Intelligence 2.pdf",
+      "path": "05_Biblioteca_IA/inbox/HRN_Sepsis_Intelligence 2.pdf",
+      "relativePath": "HRN_Sepsis_Intelligence 2.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/HRN_Sepsis_Intelligence 2.pdf"
+    },
+    {
+      "id": "plano-investigacao-dor-abdominal-cronica-paciente-jovem",
+      "name": "plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx",
+      "path": "05_Biblioteca_IA/inbox/plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx",
+      "relativePath": "plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx"
+    },
+    {
+      "id": "kdigo-2026-aki-na-uti-memorycards-anki-obsidian",
+      "name": "KDIGO_2026_AKI_na_UTI_MemoryCards_Anki_Obsidian.tsv",
+      "path": "05_Biblioteca_IA/inbox/KDIGO_2026_AKI_na_UTI_MemoryCards_Anki_Obsidian.tsv",
+      "relativePath": "KDIGO_2026_AKI_na_UTI_MemoryCards_Anki_Obsidian.tsv",
+      "type": "data",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "tsv"
+      ],
+      "url": "05_Biblioteca_IA/inbox/KDIGO_2026_AKI_na_UTI_MemoryCards_Anki_Obsidian.tsv"
+    },
+    {
+      "id": "ventila-atlas",
+      "name": "VENTILA-ATLAS.pdf",
+      "path": "05_Biblioteca_IA/inbox/VENTILA-ATLAS.pdf",
+      "relativePath": "VENTILA-ATLAS.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/VENTILA-ATLAS.pdf"
+    },
+    {
+      "id": "cardio-critica-draldenir",
+      "name": "Cardio_Critica_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Cardio_Critica_DrAldenir.pdf",
+      "relativePath": "Cardio_Critica_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Cardio_Critica_DrAldenir.pdf"
+    },
+    {
+      "id": "sdra-vm-protetora-draldenir",
+      "name": "SDRA_VM_Protetora_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/SDRA_VM_Protetora_DrAldenir.docx",
+      "relativePath": "SDRA_VM_Protetora_DrAldenir.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/SDRA_VM_Protetora_DrAldenir.docx"
+    },
+    {
+      "id": "choque-septico-uti-ssc2026",
+      "name": "Choque_Septico_UTI_SSC2026.docx",
+      "path": "05_Biblioteca_IA/inbox/Choque_Septico_UTI_SSC2026.docx",
+      "relativePath": "Choque_Septico_UTI_SSC2026.docx",
+      "type": "word",
+      "theme": "sepse-choque",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "sepse-choque",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Choque_Septico_UTI_SSC2026.docx"
+    },
+    {
+      "id": "fst-temi-aldenir",
+      "name": "FST_TEMI_Aldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/FST_TEMI_Aldenir.docx",
+      "relativePath": "FST_TEMI_Aldenir.docx",
+      "type": "word",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/FST_TEMI_Aldenir.docx"
+    },
+    {
+      "id": "protocolo-ic-vm-draldenir",
+      "name": "Protocolo_IC_VM_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_IC_VM_DrAldenir.docx",
+      "relativePath": "Protocolo_IC_VM_DrAldenir.docx",
+      "type": "word",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_IC_VM_DrAldenir.docx"
+    },
+    {
+      "id": "nota-evolucao-dnar-lsv",
+      "name": "NOTA_EVOLUCAO_DNAR_LSV.docx",
+      "path": "05_Biblioteca_IA/inbox/NOTA_EVOLUCAO_DNAR_LSV.docx",
+      "relativePath": "NOTA_EVOLUCAO_DNAR_LSV.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/NOTA_EVOLUCAO_DNAR_LSV.docx"
+    },
+    {
+      "id": "trials-temi",
+      "name": "Trials Temi.docx",
+      "path": "05_Biblioteca_IA/inbox/Trials Temi.docx",
+      "relativePath": "Trials Temi.docx",
+      "type": "word",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Trials Temi.docx"
+    },
+    {
+      "id": "avch-hsa-protocolo-completo",
+      "name": "AVCH_HSA_Protocolo_Completo.docx",
+      "path": "05_Biblioteca_IA/inbox/AVCH_HSA_Protocolo_Completo.docx",
+      "relativePath": "AVCH_HSA_Protocolo_Completo.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/AVCH_HSA_Protocolo_Completo.docx"
+    },
+    {
+      "id": "shr",
+      "name": "SHR.pdf",
+      "path": "05_Biblioteca_IA/inbox/SHR.pdf",
+      "relativePath": "SHR.pdf",
+      "type": "pdf",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/SHR.pdf"
+    },
+    {
+      "id": "pocus-aula-residentes-draldenir",
+      "name": "POCUS_Aula_Residentes_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/POCUS_Aula_Residentes_DrAldenir.pdf",
+      "relativePath": "POCUS_Aula_Residentes_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "pocus",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "pocus",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/POCUS_Aula_Residentes_DrAldenir.pdf"
+    },
+    {
+      "id": "peticao-inicial-aldenir-rocha",
+      "name": "peticao_inicial_aldenir_rocha.pdf",
+      "path": "05_Biblioteca_IA/inbox/peticao_inicial_aldenir_rocha.pdf",
+      "relativePath": "peticao_inicial_aldenir_rocha.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/peticao_inicial_aldenir_rocha.pdf"
+    },
+    {
+      "id": "protocolo-morte-encefalica-cfm2173",
+      "name": "Protocolo_Morte_Encefalica_CFM2173.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Morte_Encefalica_CFM2173.docx",
+      "relativePath": "Protocolo_Morte_Encefalica_CFM2173.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Morte_Encefalica_CFM2173.docx"
+    },
+    {
+      "id": "protocolo-urgencias-dialiticas",
+      "name": "Protocolo_Urgencias_Dialiticas.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Urgencias_Dialiticas.pdf",
+      "relativePath": "Protocolo_Urgencias_Dialiticas.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Urgencias_Dialiticas.pdf"
+    },
+    {
+      "id": "protocolo-abdomen-agudo-obstrutivo-uti",
+      "name": "Protocolo_Abdomen_Agudo_Obstrutivo_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Abdomen_Agudo_Obstrutivo_UTI.docx",
+      "relativePath": "Protocolo_Abdomen_Agudo_Obstrutivo_UTI.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Abdomen_Agudo_Obstrutivo_UTI.docx"
+    },
+    {
+      "id": "sedacao-delirium-uti-draldenir",
+      "name": "Sedacao_Delirium_UTI_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Sedacao_Delirium_UTI_DrAldenir.pdf",
+      "relativePath": "Sedacao_Delirium_UTI_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Sedacao_Delirium_UTI_DrAldenir.pdf"
+    },
+    {
+      "id": "protocolo-azulmetileno-uti-santacasa-sobral",
+      "name": "Protocolo_AzulMetileno_UTI_SantaCasa_Sobral.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_AzulMetileno_UTI_SantaCasa_Sobral.pdf",
+      "relativePath": "Protocolo_AzulMetileno_UTI_SantaCasa_Sobral.pdf",
+      "type": "pdf",
+      "theme": "sepse-choque",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "sepse-choque",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_AzulMetileno_UTI_SantaCasa_Sobral.pdf"
+    },
+    {
+      "id": "ventila-cards-guia",
+      "name": "VENTILA-CARDS-GUIA.pdf",
+      "path": "05_Biblioteca_IA/inbox/VENTILA-CARDS-GUIA.pdf",
+      "relativePath": "VENTILA-CARDS-GUIA.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/VENTILA-CARDS-GUIA.pdf"
+    },
+    {
+      "id": "nejmoa2511420",
+      "name": "NEJMoa2511420.pdf",
+      "path": "05_Biblioteca_IA/inbox/NEJMoa2511420.pdf",
+      "relativePath": "NEJMoa2511420.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/NEJMoa2511420.pdf"
+    },
+    {
+      "id": "11-pocket-cards-clinica-medica",
+      "name": "11_Pocket_Cards_Clinica_Medica.pdf",
+      "path": "05_Biblioteca_IA/inbox/11_Pocket_Cards_Clinica_Medica.pdf",
+      "relativePath": "11_Pocket_Cards_Clinica_Medica.pdf",
+      "type": "pdf",
+      "theme": "clinica-medica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "clinica-medica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/11_Pocket_Cards_Clinica_Medica.pdf"
+    },
+    {
+      "id": "hrn-sepsis-intelligence",
+      "name": "HRN_Sepsis_Intelligence.pdf",
+      "path": "05_Biblioteca_IA/inbox/HRN_Sepsis_Intelligence.pdf",
+      "relativePath": "HRN_Sepsis_Intelligence.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/HRN_Sepsis_Intelligence.pdf"
+    },
+    {
+      "id": "px-aldenir",
+      "name": "Px Aldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Px Aldenir.pdf",
+      "relativePath": "Px Aldenir.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Px Aldenir.pdf"
+    },
+    {
+      "id": "protocolo-admissao-clinica-medica-santacasa-sobral-2026",
+      "name": "Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx",
+      "relativePath": "Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx",
+      "type": "word",
+      "theme": "clinica-medica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "clinica-medica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx"
+    },
+    {
+      "id": "protocolo-morte-cerebral",
+      "name": "protocolo morte cerebral.docx",
+      "path": "05_Biblioteca_IA/inbox/protocolo morte cerebral.docx",
+      "relativePath": "protocolo morte cerebral.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/protocolo morte cerebral.docx"
+    },
+    {
+      "id": "protocolo-scr-sindrome-cardiorrenal-draldenir",
+      "name": "Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf",
+      "relativePath": "Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf"
+    },
+    {
+      "id": "hemostasia-transfusao-uti-draldenir",
+      "name": "Hemostasia_Transfusao_UTI_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Hemostasia_Transfusao_UTI_DrAldenir.docx",
+      "relativePath": "Hemostasia_Transfusao_UTI_DrAldenir.docx",
+      "type": "word",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Hemostasia_Transfusao_UTI_DrAldenir.docx"
+    },
+    {
+      "id": "assincronias-paciente-ventilador",
+      "name": "Assincronias Paciente Ventilador.docx",
+      "path": "05_Biblioteca_IA/inbox/Assincronias Paciente Ventilador.docx",
+      "relativePath": "Assincronias Paciente Ventilador.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Assincronias Paciente Ventilador.docx"
+    },
+    {
+      "id": "ia-potente",
+      "name": "IA POTENTE.pdf",
+      "path": "05_Biblioteca_IA/inbox/IA POTENTE.pdf",
+      "relativePath": "IA POTENTE.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/IA POTENTE.pdf"
+    },
+    {
+      "id": "du-vidas-diretas-uti-cm-programa-dia-rio-de-artigos",
+      "name": "DÚVIDAS DIRETAS UTI:CM - Programa diário de artigos.pdf",
+      "path": "05_Biblioteca_IA/inbox/DÚVIDAS DIRETAS UTI:CM - Programa diário de artigos.pdf",
+      "relativePath": "DÚVIDAS DIRETAS UTI:CM - Programa diário de artigos.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/DÚVIDAS DIRETAS UTI:CM - Programa diário de artigos.pdf"
+    },
+    {
+      "id": "table-87e783ea-d03f-43a3-9d3c-dcab85915268",
+      "name": "table-87e783ea-d03f-43a3-9d3c-dcab85915268.csv",
+      "path": "05_Biblioteca_IA/inbox/table-87e783ea-d03f-43a3-9d3c-dcab85915268.csv",
+      "relativePath": "table-87e783ea-d03f-43a3-9d3c-dcab85915268.csv",
+      "type": "data",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "csv"
+      ],
+      "url": "05_Biblioteca_IA/inbox/table-87e783ea-d03f-43a3-9d3c-dcab85915268.csv"
+    },
+    {
+      "id": "ventila-cards",
+      "name": "VENTILA-CARDS.pdf",
+      "path": "05_Biblioteca_IA/inbox/VENTILA-CARDS.pdf",
+      "relativePath": "VENTILA-CARDS.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/VENTILA-CARDS.pdf"
+    },
+    {
+      "id": "nota-medica-dnar-lsv-prontuario",
+      "name": "NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
+      "path": "05_Biblioteca_IA/inbox/NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
+      "relativePath": "NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf"
+    },
+    {
+      "id": "protocolo-pneumonia-associada-vm-uti",
+      "name": "Protocolo_Pneumonia_Associada_VM_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Pneumonia_Associada_VM_UTI.docx",
+      "relativePath": "Protocolo_Pneumonia_Associada_VM_UTI.docx",
+      "type": "word",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Pneumonia_Associada_VM_UTI.docx"
+    },
+    {
+      "id": "protocolo-prona-santacasa-sobral",
+      "name": "Protocolo_Prona_SantaCasa_Sobral.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Prona_SantaCasa_Sobral.pdf",
+      "relativePath": "Protocolo_Prona_SantaCasa_Sobral.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Prona_SantaCasa_Sobral.pdf"
+    },
+    {
+      "id": "tce-temi-draldenir",
+      "name": "TCE_TEMI_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/TCE_TEMI_DrAldenir.pdf",
+      "relativePath": "TCE_TEMI_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/TCE_TEMI_DrAldenir.pdf"
+    },
+    {
+      "id": "ia",
+      "name": "IA.pdf",
+      "path": "05_Biblioteca_IA/inbox/IA.pdf",
+      "relativePath": "IA.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/IA.pdf"
+    },
+    {
+      "id": "pav-uti",
+      "name": "PAV UTI.pdf",
+      "path": "05_Biblioteca_IA/inbox/PAV UTI.pdf",
+      "relativePath": "PAV UTI.pdf",
+      "type": "pdf",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/PAV UTI.pdf"
+    },
+    {
+      "id": "parestesias-e-guillain-barre-protocolo-completo",
+      "name": "Parestesias e Guillain Barre Protocolo Completo.pages",
+      "path": "05_Biblioteca_IA/inbox/Parestesias e Guillain Barre Protocolo Completo.pages",
+      "relativePath": "Parestesias e Guillain Barre Protocolo Completo.pages",
+      "type": "pages",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pages"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Parestesias e Guillain Barre Protocolo Completo.pages"
+    },
+    {
+      "id": "multiple-organ-failure-what-you-need-to-know-1",
+      "name": "multiple_organ_failure__what_you_need_to_know.1.pdf",
+      "path": "05_Biblioteca_IA/inbox/multiple_organ_failure__what_you_need_to_know.1.pdf",
+      "relativePath": "multiple_organ_failure__what_you_need_to_know.1.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/multiple_organ_failure__what_you_need_to_know.1.pdf"
+    },
+    {
+      "id": "00-todos-protocolos-clinica-medica-santacasa-2026",
+      "name": "00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
+      "path": "05_Biblioteca_IA/inbox/00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
+      "relativePath": "00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
+      "type": "pdf",
+      "theme": "clinica-medica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "clinica-medica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf"
+    },
+    {
+      "id": "abordagem-alarmes-ventilador-mecanico-uti",
+      "name": "Abordagem_Alarmes_Ventilador_Mecanico_UTI.md",
+      "path": "05_Biblioteca_IA/inbox/Abordagem_Alarmes_Ventilador_Mecanico_UTI.md",
+      "relativePath": "Abordagem_Alarmes_Ventilador_Mecanico_UTI.md",
+      "type": "markdown",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "md"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Abordagem_Alarmes_Ventilador_Mecanico_UTI.md"
+    },
+    {
+      "id": "protocolo-emergencias-hematologicas-scms",
+      "name": "Protocolo_Emergencias_Hematologicas_SCMS.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Emergencias_Hematologicas_SCMS.pdf",
+      "relativePath": "Protocolo_Emergencias_Hematologicas_SCMS.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Emergencias_Hematologicas_SCMS.pdf"
+    },
+    {
+      "id": "protocolo-bradiarritmias-bav-marcapasso-externo-final",
+      "name": "Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx",
+      "relativePath": "Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx",
+      "type": "word",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx"
+    },
+    {
+      "id": "protocolo-reposicao-albumina-draldenir",
+      "name": "Protocolo Reposicao Albumina DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo Reposicao Albumina DrAldenir.docx",
+      "relativePath": "Protocolo Reposicao Albumina DrAldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo Reposicao Albumina DrAldenir.docx"
+    },
+    {
+      "id": "compendio-ecg-uti-santacasa-sobral",
+      "name": "Compendio_ECG_UTI_SantaCasa_Sobral.pdf",
+      "path": "05_Biblioteca_IA/inbox/Compendio_ECG_UTI_SantaCasa_Sobral.pdf",
+      "relativePath": "Compendio_ECG_UTI_SantaCasa_Sobral.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Compendio_ECG_UTI_SantaCasa_Sobral.pdf"
+    },
+    {
+      "id": "bav-bolso-plantao",
+      "name": "bav_bolso_plantao.pdf",
+      "path": "05_Biblioteca_IA/inbox/bav_bolso_plantao.pdf",
+      "relativePath": "bav_bolso_plantao.pdf",
+      "type": "pdf",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/bav_bolso_plantao.pdf"
+    },
+    {
+      "id": "pancreatite-aguda-grave-sara-grave",
+      "name": "PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf",
+      "path": "05_Biblioteca_IA/inbox/PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf",
+      "relativePath": "PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf"
+    },
+    {
+      "id": "protocolo-crioprecipitado-dr-aldenir",
+      "name": "Protocolo Crioprecipitado Dr Aldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo Crioprecipitado Dr Aldenir.docx",
+      "relativePath": "Protocolo Crioprecipitado Dr Aldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo Crioprecipitado Dr Aldenir.docx"
+    },
+    {
+      "id": "simulado-temi-2026-draldenir",
+      "name": "Simulado_TEMI_2026_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Simulado_TEMI_2026_DrAldenir.pdf",
+      "relativePath": "Simulado_TEMI_2026_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Simulado_TEMI_2026_DrAldenir.pdf"
+    },
+    {
+      "id": "protocolo-cuidados-paliativos-draldenir",
+      "name": "Protocolo_Cuidados_Paliativos_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Cuidados_Paliativos_DrAldenir.pdf",
+      "relativePath": "Protocolo_Cuidados_Paliativos_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Cuidados_Paliativos_DrAldenir.pdf"
+    },
+    {
+      "id": "desmame-da-vm",
+      "name": "Desmame da VM.docx",
+      "path": "05_Biblioteca_IA/inbox/Desmame da VM.docx",
+      "relativePath": "Desmame da VM.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Desmame da VM.docx"
+    },
+    {
+      "id": "protocolo-broncoespasmo-grave-uti-draldenir",
+      "name": "Protocolo Broncoespasmo Grave UTI DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo Broncoespasmo Grave UTI DrAldenir.docx",
+      "relativePath": "Protocolo Broncoespasmo Grave UTI DrAldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo Broncoespasmo Grave UTI DrAldenir.docx"
+    },
+    {
+      "id": "manual-claude-prompts-token-economia-aldenir",
+      "name": "manual_claude_prompts_token_economia_aldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/manual_claude_prompts_token_economia_aldenir.docx",
+      "relativePath": "manual_claude_prompts_token_economia_aldenir.docx",
+      "type": "word",
+      "theme": "ia-produtividade",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "ia-produtividade",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/manual_claude_prompts_token_economia_aldenir.docx"
+    },
+    {
+      "id": "dobutamina-uti-abordagem-completa",
+      "name": "Dobutamina_UTI_Abordagem_Completa.docx",
+      "path": "05_Biblioteca_IA/inbox/Dobutamina_UTI_Abordagem_Completa.docx",
+      "relativePath": "Dobutamina_UTI_Abordagem_Completa.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Dobutamina_UTI_Abordagem_Completa.docx"
+    },
+    {
+      "id": "simulador-suporte-respiratorio-vm-sara",
+      "name": "Simulador_Suporte_Respiratorio_VM_SARA.docx",
+      "path": "05_Biblioteca_IA/inbox/Simulador_Suporte_Respiratorio_VM_SARA.docx",
+      "relativePath": "Simulador_Suporte_Respiratorio_VM_SARA.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Simulador_Suporte_Respiratorio_VM_SARA.docx"
+    },
+    {
+      "id": "02-protocolo-controle-glicemico",
+      "name": "02_Protocolo_Controle_Glicemico.pdf",
+      "path": "05_Biblioteca_IA/inbox/02_Protocolo_Controle_Glicemico.pdf",
+      "relativePath": "02_Protocolo_Controle_Glicemico.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/02_Protocolo_Controle_Glicemico.pdf"
+    },
+    {
+      "id": "posicionamento-sobre-o-uso-do-ultrassom-point-of-care-pocus-na",
+      "name": "Posicionamento_sobre_o_Uso_do_Ultrassom_“Point_of_Care”_POCUS_na.pdf",
+      "path": "05_Biblioteca_IA/inbox/Posicionamento_sobre_o_Uso_do_Ultrassom_“Point_of_Care”_POCUS_na.pdf",
+      "relativePath": "Posicionamento_sobre_o_Uso_do_Ultrassom_“Point_of_Care”_POCUS_na.pdf",
+      "type": "pdf",
+      "theme": "pocus",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "pocus",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Posicionamento_sobre_o_Uso_do_Ultrassom_“Point_of_Care”_POCUS_na.pdf"
+    },
+    {
+      "id": "protocolo-esva-falencia-vascular-dialise",
+      "name": "Protocolo_ESVA_Falencia_Vascular_Dialise.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_ESVA_Falencia_Vascular_Dialise.docx",
+      "relativePath": "Protocolo_ESVA_Falencia_Vascular_Dialise.docx",
+      "type": "word",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_ESVA_Falencia_Vascular_Dialise.docx"
+    },
+    {
+      "id": "abordagem-alarmes-ventilador-mecanico-uti",
+      "name": "Abordagem_Alarmes_Ventilador_Mecanico_UTI.docx",
+      "path": "05_Biblioteca_IA/inbox/Abordagem_Alarmes_Ventilador_Mecanico_UTI.docx",
+      "relativePath": "Abordagem_Alarmes_Ventilador_Mecanico_UTI.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Abordagem_Alarmes_Ventilador_Mecanico_UTI.docx"
+    },
+    {
+      "id": "plano-revendedor-usg-sobral",
+      "name": "plano_revendedor_usg_sobral.pdf",
+      "path": "05_Biblioteca_IA/inbox/plano_revendedor_usg_sobral.pdf",
+      "relativePath": "plano_revendedor_usg_sobral.pdf",
+      "type": "pdf",
+      "theme": "pocus",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "pocus",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/plano_revendedor_usg_sobral.pdf"
+    },
+    {
+      "id": "limitacao-suporte-vida-pac",
+      "name": "LIMITACAO_SUPORTE_VIDA_PAC.pdf",
+      "path": "05_Biblioteca_IA/inbox/LIMITACAO_SUPORTE_VIDA_PAC.pdf",
+      "relativePath": "LIMITACAO_SUPORTE_VIDA_PAC.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/LIMITACAO_SUPORTE_VIDA_PAC.pdf"
+    },
+    {
+      "id": "simulado-temi-2026-draldenir",
+      "name": "Simulado_TEMI_2026_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Simulado_TEMI_2026_DrAldenir.docx",
+      "relativePath": "Simulado_TEMI_2026_DrAldenir.docx",
+      "type": "word",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Simulado_TEMI_2026_DrAldenir.docx"
+    },
+    {
+      "id": "sdra-vm-protetora-draldenir",
+      "name": "SDRA_VM_Protetora_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/SDRA_VM_Protetora_DrAldenir.pdf",
+      "relativePath": "SDRA_VM_Protetora_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/SDRA_VM_Protetora_DrAldenir.pdf"
+    },
+    {
+      "id": "fast-efast-em-trauma",
+      "name": "FAST eFAST em Trauma.docx",
+      "path": "05_Biblioteca_IA/inbox/FAST eFAST em Trauma.docx",
+      "relativePath": "FAST eFAST em Trauma.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/FAST eFAST em Trauma.docx"
+    },
+    {
+      "id": "vm-suporte-respiratorio-draldenir",
+      "name": "VM_Suporte_Respiratorio_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/VM_Suporte_Respiratorio_DrAldenir.pdf",
+      "relativePath": "VM_Suporte_Respiratorio_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/VM_Suporte_Respiratorio_DrAldenir.pdf"
+    },
+    {
+      "id": "hemodialise-uti-2",
+      "name": "hemodialise_uti 2.docx",
+      "path": "05_Biblioteca_IA/inbox/hemodialise_uti 2.docx",
+      "relativePath": "hemodialise_uti 2.docx",
+      "type": "word",
+      "theme": "nefro-aki-trs",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "nefro-aki-trs",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/hemodialise_uti 2.docx"
+    },
+    {
+      "id": "broncoscopia-uti-temi",
+      "name": "Broncoscopia_UTI_TEMI.docx",
+      "path": "05_Biblioteca_IA/inbox/Broncoscopia_UTI_TEMI.docx",
+      "relativePath": "Broncoscopia_UTI_TEMI.docx",
+      "type": "word",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Broncoscopia_UTI_TEMI.docx"
+    },
+    {
+      "id": "protocolo-hemorragia-digestiva-alta-uti-final",
+      "name": "Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx",
+      "relativePath": "Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx",
+      "type": "word",
+      "theme": "clinica-medica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "clinica-medica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx"
+    },
+    {
+      "id": "09-protocolo-ic-aguda",
+      "name": "09_Protocolo_IC_Aguda.pdf",
+      "path": "05_Biblioteca_IA/inbox/09_Protocolo_IC_Aguda.pdf",
+      "relativePath": "09_Protocolo_IC_Aguda.pdf",
+      "type": "pdf",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/09_Protocolo_IC_Aguda.pdf"
+    },
+    {
+      "id": "documento-irmao-4-loops-ventilatorios-pv-e-fv-em-profundidade",
+      "name": "Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx",
+      "path": "05_Biblioteca_IA/inbox/Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx",
+      "relativePath": "Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx"
+    },
+    {
+      "id": "sedacao-delirium-uti-draldenir",
+      "name": "Sedacao_Delirium_UTI_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Sedacao_Delirium_UTI_DrAldenir.docx",
+      "relativePath": "Sedacao_Delirium_UTI_DrAldenir.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Sedacao_Delirium_UTI_DrAldenir.docx"
+    },
+    {
+      "id": "s13054-025-05817-6-2",
+      "name": "s13054-025-05817-6 2.pdf",
+      "path": "05_Biblioteca_IA/inbox/s13054-025-05817-6 2.pdf",
+      "relativePath": "s13054-025-05817-6 2.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/s13054-025-05817-6 2.pdf"
+    },
+    {
+      "id": "protocolo-morte-cerebral-1",
+      "name": "protocolo_morte_cerebral_1.docx",
+      "path": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral_1.docx",
+      "relativePath": "protocolo_morte_cerebral_1.docx",
+      "type": "word",
+      "theme": "neuro-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "neuro-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/protocolo_morte_cerebral_1.docx"
+    },
+    {
+      "id": "hic-guia-temi",
+      "name": "HIC_Guia_TEMI.docx",
+      "path": "05_Biblioteca_IA/inbox/HIC_Guia_TEMI.docx",
+      "relativePath": "HIC_Guia_TEMI.docx",
+      "type": "word",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/HIC_Guia_TEMI.docx"
+    },
+    {
+      "id": "protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
+      "name": "Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx",
+      "relativePath": "Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx"
+    },
+    {
+      "id": "plano-investigacao-dor-abdominal-cronica",
+      "name": "Plano_Investigacao_Dor_Abdominal_Cronica.docx",
+      "path": "05_Biblioteca_IA/inbox/Plano_Investigacao_Dor_Abdominal_Cronica.docx",
+      "relativePath": "Plano_Investigacao_Dor_Abdominal_Cronica.docx",
+      "type": "word",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Plano_Investigacao_Dor_Abdominal_Cronica.docx"
+    },
+    {
+      "id": "infeccao-antibioticos-uti-draldenir",
+      "name": "Infeccao_Antibioticos_UTI_DrAldenir.docx",
+      "path": "05_Biblioteca_IA/inbox/Infeccao_Antibioticos_UTI_DrAldenir.docx",
+      "relativePath": "Infeccao_Antibioticos_UTI_DrAldenir.docx",
+      "type": "word",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Infeccao_Antibioticos_UTI_DrAldenir.docx"
+    },
+    {
+      "id": "icsac-cateter-uti-temi",
+      "name": "ICSAC Cateter UTI TEMI.docx",
+      "path": "05_Biblioteca_IA/inbox/ICSAC Cateter UTI TEMI.docx",
+      "relativePath": "ICSAC Cateter UTI TEMI.docx",
+      "type": "word",
+      "theme": "infectologia-uti",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "infectologia-uti",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/ICSAC Cateter UTI TEMI.docx"
+    },
+    {
+      "id": "10-banco-questoes-temi-2026",
+      "name": "10_Banco_Questoes_TEMI_2026.pdf",
+      "path": "05_Biblioteca_IA/inbox/10_Banco_Questoes_TEMI_2026.pdf",
+      "relativePath": "10_Banco_Questoes_TEMI_2026.pdf",
+      "type": "pdf",
+      "theme": "temi-r3",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "temi-r3",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/10_Banco_Questoes_TEMI_2026.pdf"
+    },
+    {
+      "id": "01-protocolo-sepse-bundle1hhora",
+      "name": "01_Protocolo_SEPSE_Bundle1hHora.pdf",
+      "path": "05_Biblioteca_IA/inbox/01_Protocolo_SEPSE_Bundle1hHora.pdf",
+      "relativePath": "01_Protocolo_SEPSE_Bundle1hHora.pdf",
+      "type": "pdf",
+      "theme": "sepse-choque",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "sepse-choque",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/01_Protocolo_SEPSE_Bundle1hHora.pdf"
+    },
+    {
+      "id": "versao-ultra-resumida-de-bolso-ventilacao-mecanica-plantao",
+      "name": "Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx",
+      "path": "05_Biblioteca_IA/inbox/Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx",
+      "relativePath": "Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx",
+      "type": "word",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx"
+    },
+    {
+      "id": "comparativo-ia-medicina-clinica-uti-2026",
+      "name": "Comparativo_IA_Medicina_Clinica_UTI_2026.docx",
+      "path": "05_Biblioteca_IA/inbox/Comparativo_IA_Medicina_Clinica_UTI_2026.docx",
+      "relativePath": "Comparativo_IA_Medicina_Clinica_UTI_2026.docx",
+      "type": "word",
+      "theme": "clinica-medica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "clinica-medica",
+        "docx"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Comparativo_IA_Medicina_Clinica_UTI_2026.docx"
+    },
+    {
+      "id": "protocolo-ic-uti-enfermaria-draldenir",
+      "name": "Protocolo_IC_UTI_Enfermaria_DrAldenir.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_IC_UTI_Enfermaria_DrAldenir.pdf",
+      "relativePath": "Protocolo_IC_UTI_Enfermaria_DrAldenir.pdf",
+      "type": "pdf",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_IC_UTI_Enfermaria_DrAldenir.pdf"
+    },
+    {
+      "id": "rotinas-em-uti-sanar",
+      "name": "Rotinas em UTI SANAR.pdf",
+      "path": "05_Biblioteca_IA/inbox/Rotinas em UTI SANAR.pdf",
+      "relativePath": "Rotinas em UTI SANAR.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Rotinas em UTI SANAR.pdf"
+    },
+    {
+      "id": "07-protocolo-dor-toracica",
+      "name": "07_Protocolo_Dor_Toracica.pdf",
+      "path": "05_Biblioteca_IA/inbox/07_Protocolo_Dor_Toracica.pdf",
+      "relativePath": "07_Protocolo_Dor_Toracica.pdf",
+      "type": "pdf",
+      "theme": "cardio-hemodinamica",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "cardio-hemodinamica",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/07_Protocolo_Dor_Toracica.pdf"
+    },
+    {
+      "id": "protocolo-vm-cnaf-vni-santacasa-sobral",
+      "name": "Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf",
+      "path": "05_Biblioteca_IA/inbox/Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf",
+      "relativePath": "Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf",
+      "type": "pdf",
+      "theme": "vm-sdra",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf"
+    },
+    {
+      "id": "nejmra2312086",
+      "name": "NEJMra2312086.pdf",
+      "path": "05_Biblioteca_IA/inbox/NEJMra2312086.pdf",
+      "relativePath": "NEJMra2312086.pdf",
+      "type": "pdf",
+      "theme": "biblioteca-geral",
+      "status": "inbox-a-classificar",
+      "tags": [
+        "biblioteca-geral",
+        "pdf"
+      ],
+      "url": "05_Biblioteca_IA/inbox/NEJMra2312086.pdf"
+    }
+  ]
+}

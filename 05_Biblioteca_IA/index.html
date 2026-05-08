@@ -281,24 +281,49 @@ let roadmap = [];
 let currentFilter = 'todos';
 let currentView = 'catalogo';
 
+// Lógica de URL base dinâmica
+const getBaseUrl = () => {
+    const loc = window.location;
+    return loc.origin + loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
+};
+
 // Carregar Dados
 async function init() {
   try {
-    const [resTax, resCat, resBrain, resRoad] = await Promise.all([
-      fetch('data/biblioteca_taxonomia_temas.json'),
-      fetch('data/biblioteca_catalogo.json'),
-      fetch('data/biblioteca_brain_connections.json'),
-      fetch('../data/roadmap_30_melhorias_biblioteca_ia.json').catch(() => null)
+    const [resTax, resCat, resBrain, resRoad, resAuto] = await Promise.all([
+      fetch('data/biblioteca_taxonomia_temas.json').then(r => r.ok ? r.json() : {themes:[]}),
+      fetch('data/biblioteca_catalogo.json').then(r => r.ok ? r.json() : {items:[]}),
+      fetch('data/biblioteca_brain_connections.json').then(r => r.ok ? r.json() : {nodes:[], edges:[]}),
+      fetch('../data/roadmap_30_melhorias_biblioteca_ia.json').then(r => r.ok ? r.json() : {roadmap:[]}).catch(() => ({roadmap:[]})),
+      fetch('data/biblioteca_inbox_manifest_auto.json').then(r => r.ok ? r.json() : {files:[]}).catch(() => ({files:[]}))
     ]);
     
-    taxonomy = await resTax.json();
-    catalog = await resCat.json();
-    brain = await resBrain.json();
-    if (resRoad) {
-      const roadData = await resRoad.json();
-      roadmap = roadData.roadmap || [];
-    }
+    taxonomy = resTax;
+    catalog = resCat;
+    brain = resBrain;
+    roadmap = resRoad.roadmap || [];
+    const autoManifest = resAuto.files || [];
     
+    // Sincronizar arquivos do manifesto automático que não estão no catálogo
+    autoManifest.forEach(autoFile => {
+        const exists = catalog.items.find(i => i.path === autoFile.path || i.filename === autoFile.name);
+        if (!exists) {
+            catalog.items.push({
+                id: 'auto-' + Math.random().toString(36).substr(2, 9),
+                title: autoFile.name.replace(/\.[^/.]+$/, "").replace(/_/g, " "),
+                filename: autoFile.name,
+                theme: 'inbox-revisar',
+                tipo: autoFile.extension === 'pdf' ? 'pdf' : (['docx', 'doc'].includes(autoFile.extension) ? 'word' : 'text'),
+                tags: ['auto-detectado', autoFile.extension],
+                status: 'revisar',
+                path: autoFile.path,
+                resumo: 'Arquivo detectado automaticamente no inbox. Aguardando classificação.',
+                data: autoFile.addedAt.substring(0, 7),
+                createdAt: new Date().toISOString()
+            });
+        }
+    });
+
     // Mesclar classificações locais (se houver)
     const localModifs = JSON.parse(localStorage.getItem('lib_classificacoes') || '[]');
     localModifs.forEach(mod => {
@@ -314,13 +339,14 @@ async function init() {
     renderRoadmap();
   } catch(e) {
     console.error("Erro ao carregar dados:", e);
-    alert("Erro ao carregar banco de dados da biblioteca.");
+    // Fallback visual se tudo falhar
+    document.getElementById('grid-arquivos').innerHTML = '<div class="empty">⚠️ Erro ao carregar o banco de dados. Verifique a conexão ou os arquivos JSON.</div>';
   }
 }
 
 function renderRoadmap() {
   const container = document.getElementById('roadmap-list');
-  if (!container || !roadmap.length) return;
+  if (!container || !roadmap || !roadmap.length) return;
   
   // Mostrar apenas as top 6 prioridades alta
   const items = roadmap.filter(r => r.priority === 'alta').slice(0, 6);
@@ -334,6 +360,7 @@ function renderRoadmap() {
 // Renderizar Filtros
 function renderFilters() {
   const container = document.getElementById('filtros-temas');
+  if (!taxonomy.themes) return;
   container.innerHTML = `<span class="filtro ativo" data-filter="todos" onclick="setFilter('todos')">📦 Todos</span>`;
   
   taxonomy.themes.forEach(t => {
@@ -342,22 +369,23 @@ function renderFilters() {
     span.className = 'filtro';
     span.dataset.filter = t.id;
     span.onclick = () => setFilter(t.id);
-    span.innerHTML = `${t.emoji} ${t.label}`;
+    span.innerHTML = `${t.emoji || '📂'} ${t.label}`;
     container.appendChild(span);
   });
 
   // Populate Select in Modal
   const sel = document.getElementById('clTheme');
-  sel.innerHTML = taxonomy.themes.map(t => `<option value="${t.id}">${t.emoji} ${t.label}</option>`).join('');
+  sel.innerHTML = taxonomy.themes.map(t => `<option value="${t.id}">${t.emoji || '📂'} ${t.label}</option>`).join('');
 }
 
 // Renderizar Stats
 function renderStats() {
+  if (!catalog.items) return;
   document.getElementById('stats-total').textContent = catalog.items.filter(i => i.theme !== 'inbox-revisar').length;
-  document.getElementById('stats-temas').textContent = taxonomy.themes.length - 1;
-  document.getElementById('stats-brain').textContent = brain.edges.length;
-  document.getElementById('count-nodes').textContent = brain.nodes.length;
-  document.getElementById('count-edges').textContent = brain.edges.length;
+  document.getElementById('stats-temas').textContent = (taxonomy.themes ? taxonomy.themes.length : 0) - 1;
+  document.getElementById('stats-brain').textContent = brain.edges ? brain.edges.length : 0;
+  document.getElementById('count-nodes').textContent = brain.nodes ? brain.nodes.length : 0;
+  document.getElementById('count-edges').textContent = brain.edges ? brain.edges.length : 0;
   document.getElementById('triagem-count').textContent = catalog.items.filter(i => i.theme === 'inbox-revisar').length;
 }
 
@@ -366,27 +394,29 @@ function renderGrid() {
   const grid = document.getElementById('grid-arquivos');
   const busca = document.getElementById('busca').value.toLowerCase();
   
+  if (!catalog.items) return;
+
   const items = catalog.items.filter(i => {
     if (i.theme === 'inbox-revisar') return false;
     const matchTheme = currentFilter === 'todos' || i.theme === currentFilter;
-    const matchBusca = !busca || i.title.toLowerCase().includes(busca) || (i.tags && i.tags.some(t => t.includes(busca)));
+    const matchBusca = !busca || i.title.toLowerCase().includes(busca) || (i.tags && i.tags.some(t => t.toLowerCase().includes(busca)));
     return matchTheme && matchBusca;
   });
 
   grid.innerHTML = items.map(i => {
-    const theme = taxonomy.themes.find(t => t.id === i.theme) || { emoji: '📄' };
+    const theme = (taxonomy.themes || []).find(t => t.id === i.theme) || { emoji: '📄' };
     return `
       <div class="card ${i.tipo}" onclick="abrirPreview('${encodeURIComponent(i.path)}', '${i.title.replace(/'/g,"\\'")}')">
         <span class="card-icon">${getIcon(i.tipo)}</span>
         <div class="card-title">${i.title}</div>
-        <div class="card-meta">📅 ${i.data} · ${theme.emoji} ${i.theme}</div>
+        <div class="card-meta">📅 ${i.data} · ${theme.emoji || '📂'} ${i.theme}</div>
         <div class="card-desc">${i.resumo || 'Clique para visualizar este material médico.'}</div>
         <div class="card-tags">
           ${(i.tags || []).map(t => `<span class="tag">#${t}</span>`).join('')}
         </div>
         <div class="card-actions">
           <button class="btn btn-primary">👁️ Visualizar</button>
-          <a href="${i.path}" download class="btn btn-secondary">⬇️ Baixar</a>
+          <a href="${i.path}" download class="btn btn-secondary" onclick="event.stopPropagation()">⬇️ Baixar</a>
         </div>
       </div>
     `;
@@ -398,6 +428,7 @@ function renderGrid() {
 // Renderizar Triagem
 function renderTriagem() {
   const grid = document.getElementById('grid-triagem');
+  if (!catalog.items) return;
   const items = catalog.items.filter(i => i.theme === 'inbox-revisar');
   
   grid.innerHTML = items.map(i => `
@@ -405,7 +436,7 @@ function renderTriagem() {
       <span class="inbox-badge">📥 INBOX</span>
       <span class="card-icon">📂</span>
       <div class="card-title">${i.title}</div>
-      <div class="card-meta" style="word-break:break-all">${i.filename}</div>
+      <div class="card-meta" style="word-break:break-all">${i.filename || i.path}</div>
       <div class="card-actions" style="margin-top:auto">
         <button class="btn btn-triagem" style="width:100%" onclick="abrirClassify('${i.id}')">📂 Classificar Item</button>
         <button class="btn btn-secondary" style="width:100%" onclick="abrirPreview('${encodeURIComponent(i.path)}', '${i.title}')">👁️ Pré-visualizar</button>
@@ -448,7 +479,7 @@ function abrirClassify(id) {
   if (!i) return;
   
   document.getElementById('clId').value = i.id;
-  document.getElementById('clFilename').textContent = i.filename;
+  document.getElementById('clFilename').textContent = i.filename || i.path;
   document.getElementById('clTitle').value = i.title;
   document.getElementById('clResumo').value = i.resumo || '';
   document.getElementById('clTheme').value = i.theme === 'inbox-revisar' ? 'uti-geral' : i.theme;
@@ -498,10 +529,10 @@ function salvarClassificacao() {
 }
 
 // Preview
-const BASE_URL = 'https://aldenirfilho.github.io/antigravity-consultas/05_Biblioteca_IA/';
 function abrirPreview(encodedPath, titulo) {
   const path = decodeURIComponent(encodedPath);
-  const fullUrl = path.startsWith('http') ? path : BASE_URL + path;
+  const baseUrl = getBaseUrl();
+  const fullUrl = path.startsWith('http') ? path : baseUrl + path;
   const ext = path.split('.').pop().toLowerCase();
   const frame = document.getElementById('previewFrame');
   

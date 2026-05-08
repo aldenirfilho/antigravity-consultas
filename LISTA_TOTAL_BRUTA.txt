@@ -1,0 +1,695 @@
+./questoes/index.html
+./connections.json
+./06_Card_Feed_Medico/scan_inbox.sh
+./06_Card_Feed_Medico/index.html
+./06_Card_Feed_Medico/manifest.webmanifest
+./06_Card_Feed_Medico/data/inbox.json
+./06_Card_Feed_Medico/data/cards.json
+./06_Card_Feed_Medico/data/cards_patch_biblioteca.json
+./06_Card_Feed_Medico/data/themes.json
+./06_Card_Feed_Medico/assets/cards/familia-paciente/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/vm-sdra/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_58.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_19.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_21.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_12.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_47_57.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_05.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_28.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_47_47.png
+./06_Card_Feed_Medico/assets/cards/inbox/README.md
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_21.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_37.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_05.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_12.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_48_47.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_49_28.png
+./06_Card_Feed_Medico/assets/cards/inbox/ChatGPT Image 8 de mai. de 2026, 01_47_39.png
+./06_Card_Feed_Medico/assets/cards/sepse-choque/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/pocus/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/neuro-uti/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/temi/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/infectologia/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/farmaco-doses/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/juridico-financeiro/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/uti-geral/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/nefro-aki-trs/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/endocrino-diabetes/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/ia-produtividade/README_upload_aqui.md
+./06_Card_Feed_Medico/assets/cards/cardio-hemodinamica/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/index.html
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/manifest.webmanifest
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/data/cards.json
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/data/themes.json
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/familia-paciente/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/vm-sdra/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/sepse-choque/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/pocus/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/neuro-uti/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/temi/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/infectologia/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/farmaco-doses/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/juridico-financeiro/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/uti-geral/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/nefro-aki-trs/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/endocrino-diabetes/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/ia-produtividade/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/assets/cards/cardio-hemodinamica/README_upload_aqui.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/06_Card_Feed_Medico/sw.js
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/PROMPT_ANTIGRAVITY_ORGANIZAR_CARD_FEED.txt
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/PATCH_INDEX_HOME.html
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/README.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/PATCH_MODO_FEED_CONTINUO.md
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/gpt-card-feed-medico-standalone-v2-feed-continuo.html
+./06_Card_Feed_Medico/Card_Feed_Medico_Antigravity_Repo_Pack_v2_Feed_Continuo/ANTIGRAVITY_INTEGRACAO_CARD_FEED.md
+./06_Card_Feed_Medico/sw.js
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/06_Card_Feed_Medico/data/cards_patch_sugerido.json
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/06_Card_Feed_Medico/data/inbox_classificacao_modelo.json
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/README_PACOTE.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/CATALOGO_PROJETO.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/scripts_opcionais/scan_inbox.sh
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/scripts_opcionais/validate_catalogo.js
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/08_Documentacao_Projeto/PADRAO_DE_MODULO.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/08_Documentacao_Projeto/README_PROJETO.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/08_Documentacao_Projeto/CHANGELOG.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/08_Documentacao_Projeto/RELATORIO_ORGANIZACAO.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/08_Documentacao_Projeto/PADRAO_DE_LEGENDA.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/08_Documentacao_Projeto/ROADMAP.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/08_Documentacao_Projeto/PADRAO_DE_CARD.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/SUPERCOMANDO_ANTIGRAVITY_RENDERIZAR_TUDO.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/prompts_antigravity/02_CLASSIFICAR_INBOX_CARDS.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/prompts_antigravity/04_ATUALIZAR_MAPA_VIVO.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/prompts_antigravity/00_SUPERCOMANDO_RENDERIZAR_TUDO.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/prompts_antigravity/03_ATUALIZAR_HOME_CATALOGO.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/prompts_antigravity/01_ORGANIZAR_REPOSITORIO.md
+./PACOTE_ANTIGRAVITY_ORGANIZACAO_ENCICLOPEDIA_2026_05_08/data/catalogo.json
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/01_RESTAURAR_ROTAS/mapa_de_rotas.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/01_RESTAURAR_ROTAS/index_resgate.html
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/04_IMAGENS/imagens_index_recovery.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/02_BIBLIOTECA/biblioteca_index_recovery.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/06_ANTIGRAVITY/PROMPT_RESGATE_ANTIGRAVITY.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/06_ANTIGRAVITY/CHECKLIST_NAO_QUEBRAR_LINKS.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/03_UPDOWN/updown_index_recovery.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/README.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/05_APPS/apps_index_recovery.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/manifest_resgate.json
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY/00_LEIA_PRIMEIRO/PLANO_DE_RESGATE.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY_COMPLETO - cópia.md
+./UPDOWN_RESGATE_SITE_ANTIGRAVITY/UPDOWN_RESGATE_SITE_ANTIGRAVITY_COMPLETO.md
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/scripts_opcionais/validate_mapa_vivo.js
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/README_MAPA_VIVO.md
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/08_Documentacao_Projeto/PROJETO_MAPA_VIVO_2_0.md
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/08_Documentacao_Projeto/CHECKLIST_MAPA_VIVO.md
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/prompts_antigravity/00_SUPERCOMANDO_ORGANIZAR_MAPA_VIVO.md
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/data/connections.json
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/data/topics.json
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/assets/css/graph-vivo.css
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/assets/js/graph.js
+./PACOTE_MAPA_VIVO_ORGANIZADO_ENCICLOPEDIA_2026_05_08/SUPERCOMANDO_ORGANIZAR_MAPA_VIVO_ANTIGRAVITY.md
+./index.html
+./PACOTE_INSTRUCOES_CORRIGIR_MAPA_VIVO_PUBLICADO/SUPERCOMANDO_CORRIGIR_MAPA_VIVO_PUBLICADO_ANTIGRAVITY.md
+./PACOTE_INSTRUCOES_CORRIGIR_MAPA_VIVO_PUBLICADO/scripts_opcionais/validate_mapa_vivo_publicado.js
+./PACOTE_INSTRUCOES_CORRIGIR_MAPA_VIVO_PUBLICADO/08_Documentacao_Projeto/PLANO_CORRECAO_MAPA_VIVO_PUBLICADO.md
+./PACOTE_INSTRUCOES_CORRIGIR_MAPA_VIVO_PUBLICADO/08_Documentacao_Projeto/CHECKLIST_CORRECAO_MAPA_VIVO.md
+./PACOTE_INSTRUCOES_CORRIGIR_MAPA_VIVO_PUBLICADO/08_Documentacao_Projeto/RELATORIO_CORRECAO_MAPA_VIVO_PUBLICADO.md
+./PACOTE_INSTRUCOES_CORRIGIR_MAPA_VIVO_PUBLICADO/prompts_antigravity/00_SUPERCOMANDO_CORRIGIR_MAPA_VIVO_PUBLICADO.md
+./PACOTE_INSTRUCOES_CORRIGIR_MAPA_VIVO_PUBLICADO/README_CORRIGIR_MAPA_VIVO.md
+./03_Calculadoras_UTI/index.html
+./03_Calculadoras_UTI/README.md
+./03_Calculadoras_UTI/manifest.json
+./mapa_vivo_admin_config.json
+./CATALOGO_PROJETO.md
+./antigravity.rules.md
+./css/graph-vivo.css
+./scripts_opcionais/scan_inbox.sh
+./scripts_opcionais/generate_temi_candidates.py
+./scripts_opcionais/classify_inbox.py
+./scripts_opcionais/classify_inbox.js
+./scripts_opcionais/check_duplicates.py
+./scripts_opcionais/generate_card_candidates.py
+./scripts_opcionais/generate_brain_patches.py
+./scripts_opcionais/validate_catalogo.js
+./js/graph.js
+./patch_mapa_antigravity_1778250974327.json
+./02_Banco_Questoes_TEMI/index.html
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/snippets/link-homepage-banco-questoes-temi.html
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/banco-questoes-padrao-temi-avc-agudo.html
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/docs/INTEGRAR_BANCO_QUESTOES_PADRAO_TEMI.md
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/README.md
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/components/qbank-card-avc.html
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/temas/avc-agudo/banco-questoes-padrao-temi/index.html
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/data/connections.qbank.avc-agudo.json
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/data/qbank.temi.avc-agudo.json
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/assets/css/qbank-temi.css
+./02_Banco_Questoes_TEMI/banco-questoes-padrao-temi-avc-agudo/assets/js/qbank-temi.js
+./02_Banco_Questoes_TEMI/data/hub_qbanks.js
+./02_Banco_Questoes_TEMI/data/qbank_avc_agudo.js
+./02_Banco_Questoes_TEMI/data/qbank_patch_biblioteca.js
+./02_Banco_Questoes_TEMI/avc_agudo_questoes.html
+./LISTA_TOTAL_BRUTA.txt
+./06_Feed_Instamed_IA/GPT_Card_Feed_Medico_Aldenir_Kit/gpt-card-feed-medico.html
+./06_Feed_Instamed_IA/GPT_Card_Feed_Medico_Aldenir_Kit/PROMPT_PARA_OUTRAS_IAS_GERAREM_CARDS.md
+./06_Feed_Instamed_IA/GPT_Card_Feed_Medico_Aldenir_Kit/README_GPT_Card_Feed_Medico.md
+./06_Feed_Instamed_IA/GPT_Card_Feed_Medico_Aldenir_Kit/cardfeed_schema_exemplo.json
+./06_Feed_Instamed_IA/Card_Feed_Medico_Antigravity_Repo_Pack/PROMPT_ANTIGRAVITY_ORGANIZAR_CARD_FEED.txt
+./06_Feed_Instamed_IA/Card_Feed_Medico_Antigravity_Repo_Pack/PATCH_INDEX_HOME.html
+./06_Feed_Instamed_IA/Card_Feed_Medico_Antigravity_Repo_Pack/README.md
+./06_Feed_Instamed_IA/Card_Feed_Medico_Antigravity_Repo_Pack/ANTIGRAVITY_INTEGRACAO_CARD_FEED.md
+./08_Documentacao_Projeto/PADRAO_DE_MODULO.md
+./08_Documentacao_Projeto/README_PROJETO.md
+./08_Documentacao_Projeto/CHANGELOG.md
+./08_Documentacao_Projeto/CHECKLIST_CLASSIFICACAO_BIBLIOTECA.md
+./08_Documentacao_Projeto/RELATORIO_ORGANIZACAO.md
+./08_Documentacao_Projeto/RELATORIO_FINAL_MELHORIAS_BIBLIOTECA.md
+./08_Documentacao_Projeto/PADRAO_DE_LEGENDA.md
+./08_Documentacao_Projeto/RELATORIO_MAPA_VIVO_2_0.md
+./08_Documentacao_Projeto/RELATORIO_VALIDACAO_BIBLIOTECA.md
+./08_Documentacao_Projeto/ROADMAP.md
+./08_Documentacao_Projeto/ROADMAP_30_MELHORIAS_BIBLIOTECA_IA.md
+./08_Documentacao_Projeto/RELATORIO_CLASSIFICACAO_186_BIBLIOTECA.md
+./08_Documentacao_Projeto/RELATORIO_REPADRONIZACAO_AVC.md
+./08_Documentacao_Projeto/PADRAO_DE_CARD.md
+./08_Documentacao_Projeto/WORKFLOW_MANUAL_186.md
+./08_Documentacao_Projeto/RELATORIO_DUPLICADOS_BIBLIOTECA.md
+./08_Documentacao_Projeto/CHECKLIST_PENDENCIAS_BIBLIOTECA.md
+./08_Documentacao_Projeto/PROJETO_CLASSIFICACAO_186_BIBLIOTECA_IA.md
+./08_Documentacao_Projeto/PLANO_EXECUCAO_PENDENCIAS_BIBLIOTECA.md
+./08_Documentacao_Projeto/RELATORIO_CORRECAO_MAPA_VIVO_PUBLICADO.md
+./05_Inputs_IA_Externa/META/avc_isquemico_agudo.md.md
+./05_Inputs_IA_Externa/META/Meu-artigo-sobre-AVC.html
+./05_Inputs_IA_Externa/QWEN/avc_isquemico_agudo.md.md
+./05_Inputs_IA_Externa/DEEPSEEK/avc_isquemico_agudo.md.md
+./05_Inputs_IA_Externa/CLAUDE OPUS 4.7/avc-isquemico-agudo-temi-completo.md.md
+./05_Inputs_IA_Externa/CLAUDE OPUS 4.7/ORIENTACOES_ANTIGRAVITY.md
+./05_Inputs_IA_Externa/GROK 4/avc_isquemico_agudo.md.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/07_REFERENCIAS.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/index.html
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/05_QUESTOES_TEMI.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/01_AVC_AGUDO_UTI.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/02_CHECKLISTS.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/04_FLASHCARDS.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/metadata.json
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/README.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/06_ESCALAS_ALGORITMOS.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/style.css
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/08_PROMPT_ANTIGRAVITY_RULES.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/03_PRESCRICAO_BUNDLE.md
+./05_Inputs_IA_Externa/GPT 5.5/enciclopedia_avc_agudo_antigravity/00_HOME.md
+./05_Inputs_IA_Externa/OPENEVIDENCE/avc_isquemico_agudo.md.md
+./admin/index.html
+./RELATORIO_MAPA_VIVO_EDITAVEL_3_1.md
+./PROMPT_ANTIGRAVITY_CORRIGIR_MAPA_VIVO_4_0.md
+./docs/arquitetura.md
+./docs/plano-editorial.md
+./docs/seguranca-curadoria.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY_COMPLETO.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/03_calculadoras/prescricoes_comuns_brasil_vasoativas.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/03_calculadoras/calculadora_drogas_vasoativas_v2.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/03_calculadoras/especificacao_formula_mlh_dose.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/01_pagina_updown/triangulo_updown_biblioteca_imagens.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/01_pagina_updown/updown_home_reorganizada.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/01_pagina_updown/cards_modulos_updown.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/README.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/05_data/vasoactive_drugs_brasil_presets.json
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/04_antigravity/instrucoes_antigravity.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/04_antigravity/checklist_implementacao.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/04_antigravity/prompt_universal_refatoracao_updown.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/02_aplicacoes_extras/roadmap_calculadoras_uti.md
+./UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/02_aplicacoes_extras/hub_aplicacoes_extras.md
+./biblioteca/index.html
+./README.md
+./enciclopedia_markdown_updown_upgrade_v3/index.html
+./enciclopedia_markdown_updown_upgrade_v3/docs/ANTIGRAVITY_GEMINI_FLASH_EXECUTAR.md
+./enciclopedia_markdown_updown_upgrade_v3/docs/NOVO_PADRAO_DIRETORIOS.md
+./enciclopedia_markdown_updown_upgrade_v3/docs/POLITICA_SEGURANCA_AUTORAL.md
+./enciclopedia_markdown_updown_upgrade_v3/docs/PIPELINE_ALIMENTACAO_CONTINUA.md
+./enciclopedia_markdown_updown_upgrade_v3/docs/PROMPT_TRANSFORMAR_ESTUDO_EM_MARKDOWN.md
+./enciclopedia_markdown_updown_upgrade_v3/07_Estudos_Markdown/registry.json
+./enciclopedia_markdown_updown_upgrade_v3/07_Estudos_Markdown/index.html
+./enciclopedia_markdown_updown_upgrade_v3/07_Estudos_Markdown/content/intensiva/vm_sdra_nota_didatica.md
+./enciclopedia_markdown_updown_upgrade_v3/07_Estudos_Markdown/content/modelos/template_estudo_seguro.md
+./enciclopedia_markdown_updown_upgrade_v3/07_Estudos_Markdown/viewer.html
+./enciclopedia_markdown_updown_upgrade_v3/07_Estudos_Markdown/assets/estudos.js
+./enciclopedia_markdown_updown_upgrade_v3/07_Estudos_Markdown/assets/estudos.css
+./enciclopedia_markdown_updown_upgrade_v3/07_Estudos_Markdown/assets/markdown-viewer.js
+./enciclopedia_markdown_updown_upgrade_v3/README_UPGRADE_V3.md
+./enciclopedia_markdown_updown_upgrade_v3/data/catalogo.json
+./components/topic-card.html
+./components/navbar.html
+./components/safety-banner.html
+./components/breadcrumb.html
+./components/footer.html
+./07_Estudos_Markdown/registry.json
+./07_Estudos_Markdown/index.html
+./07_Estudos_Markdown/registry_biblioteca.json
+./07_Estudos_Markdown/content/intensiva/vm_sdra_nota_didatica.md
+./07_Estudos_Markdown/content/modelos/template_estudo_seguro.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/index.html
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/public_content.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/UPDOWN_001_LES_index_reader.html
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/metadata.json
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/_private/antigravity_instructions.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/README.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/UPDOWN_001_LES_PUBLICO_sem_sugestoes.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/assets/style.css
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/assets/reader.js
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/flashcards_les.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/updown_001_les_manifestacoes_diagnostico.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/antigravity_instructions.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/metadata.json
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/fluxograma_mermaid_les.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/README.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/sugestoes_imagens_les.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/index.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/UPDOWN_001_LES_manifestacoes_diagnostico_COMPLETO.md
+./07_Estudos_Markdown/content/reumatologia/les-manifestacoes/questoes_temi_r3_les.md
+./07_Estudos_Markdown/content/reumatologia/les-manejo/UPDOWN_002_LES_index_reader_v2.html
+./07_Estudos_Markdown/content/reumatologia/les-manejo/index.html
+./07_Estudos_Markdown/content/reumatologia/les-manejo/public_content.md
+./07_Estudos_Markdown/content/reumatologia/les-manejo/metadata.json
+./07_Estudos_Markdown/content/reumatologia/les-manejo/README.md
+./07_Estudos_Markdown/content/reumatologia/les-manejo/UPDOWN_002_LES_PUBLICO_sem_sugestoes_v2.md
+./07_Estudos_Markdown/biblioteca/index.html
+./07_Estudos_Markdown/viewer.html
+./07_Estudos_Markdown/data/vasoactive_drugs_brasil_presets.json
+./07_Estudos_Markdown/assets/estudos.js
+./07_Estudos_Markdown/assets/biblioteca.js
+./07_Estudos_Markdown/assets/estudos.css
+./07_Estudos_Markdown/assets/markdown-viewer.js
+./07_Estudos_Markdown/imagens/index.html
+./07_Estudos_Markdown/apps/index.html
+./07_Estudos_Markdown/apps/vasoativas/index.html
+./LISTA_MESTRA_ANTIGRAVITY.txt
+./validate_mapa_vivo.py
+./PACOTE_CORRIGIR_LINHAS_MAPA_VIVO/patches/PATCH_JS_LINHAS_VISIVEIS.md
+./PACOTE_CORRIGIR_LINHAS_MAPA_VIVO/patches/PATCH_CSS_LINHAS_VISIVEIS.md
+./PACOTE_CORRIGIR_LINHAS_MAPA_VIVO/08_Documentacao_Projeto/RELATORIO_CORRECAO_LINHAS_MAPA_VIVO.md
+./PACOTE_CORRIGIR_LINHAS_MAPA_VIVO/SUPERCOMANDO_CORRIGIR_LINHAS_MAPA_VIVO.md
+./PACOTE_CORRIGIR_LINHAS_MAPA_VIVO/prompts_antigravity/00_CORRIGIR_LINHAS_MAPA_VIVO.md
+./PACOTE_CORRIGIR_LINHAS_MAPA_VIVO/README_CORRIGIR_LINHAS_MAPA_VIVO.md
+./updown/index.html
+./mapa_vivo_editavel_3_1_antigravity/index_demo_mapa_vivo.html
+./mapa_vivo_editavel_3_1_antigravity/HOMEPAGE_PATCH_MAPA_VIVO.md
+./mapa_vivo_editavel_3_1_antigravity/08_Documentacao_Projeto/RELATORIO_MAPA_VIVO_EDITAVEL_3_1.md
+./mapa_vivo_editavel_3_1_antigravity/scripts/validate_mapa_vivo.py
+./mapa_vivo_editavel_3_1_antigravity/templates/TEMPLATE_PATCH_MAPA_VIVO_ADMIN.json
+./mapa_vivo_editavel_3_1_antigravity/ANTIGRAVITY_PROMPT_APLICAR_MAPA_VIVO_3_1.md
+./mapa_vivo_editavel_3_1_antigravity/data/connections.json
+./mapa_vivo_editavel_3_1_antigravity/data/mapa_vivo_admin_config.json
+./mapa_vivo_editavel_3_1_antigravity/data/mapa_vivo_schema_v3.json
+./mapa_vivo_editavel_3_1_antigravity/assets/css/graph-vivo.css
+./mapa_vivo_editavel_3_1_antigravity/assets/js/graph.js
+./mapa_vivo_editavel_3_1_antigravity/README_APLICAR_ANTIGRAVITY.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/projeto/PROJETO_MELHORIA_AVC_INTERATIVO.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/projeto/MAPA_DE_MUDANCAS.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/projeto/CHECKLIST_VALIDACAO_AVC.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/SUPERCOMANDO_REPADRONIZAR_AVC_ANTIGRAVITY.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/scripts_opcionais/validate_avc_structure.js
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/README_PACOTE_REPADRONIZACAO_AVC.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/arquivos_prontos/08_Documentacao_Projeto/RELATORIO_REPADRONIZACAO_AVC.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/arquivos_prontos/01_Modulos_Clinicos/AVC_Agudo/avc-theme.css
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/arquivos_prontos/01_Modulos_Clinicos/AVC_Agudo/avc_repadronizado_template.html
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/prompts_antigravity/01_DIAGNOSTICO_E_META.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/prompts_antigravity/03_CRIAR_AVC_THEME_CSS.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/prompts_antigravity/05_VALIDAR_E_PUBLICAR.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/prompts_antigravity/02_REFATORAR_AVC_HTML.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/prompts_antigravity/00_SUPERCOMANDO_REPADRONIZAR_AVC.md
+./PACOTE_REPADRONIZACAO_AVC_INTERATIVO_2026_05_08/prompts_antigravity/04_COMPATIBILIZAR_AVC_JS.md
+./scripts/apply_mapa_patch.py
+./scripts/apply_mapa_vivo_patch.py
+./scripts/validate_mapa_vivo.py
+./mapa_vivo_schema_v3.json
+./01_Modulos_Clinicos/HSA_Projeto_Aprendizagem/index.html
+./01_Modulos_Clinicos/HSA_Projeto_Aprendizagem/styles.css
+./01_Modulos_Clinicos/HSA_Projeto_Aprendizagem/README.md
+./01_Modulos_Clinicos/HSA_Projeto_Aprendizagem/HSA_App_Unico.html
+./01_Modulos_Clinicos/HSA_Projeto_Aprendizagem/app.js
+./01_Modulos_Clinicos/GUIA_RAPIDO_ANTIGRAVITY.md
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/ANTIGRAVITY_PROMPT_PRONTO.md
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/index.html
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/module.manifest.json
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/styles.css
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/README_ANTIGRAVITY_UPGRADE.md
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/homepage-card.html
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/CHANGELOG_UPGRADE.md
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/HOMEPAGE_PATCH.md
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/homepage-registry-patch.js
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/icons/icon-192.png
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/icons/icon-512.png
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/manifest.webmanifest
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/README_ANTIGRAVITY.md
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/logo.svg
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/integration-snippet.html
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/app.js
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/sw.js
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/pwa.js
+./01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html
+./01_Modulos_Clinicos/AVC_Agudo/avc-theme.css
+./01_Modulos_Clinicos/AVC_Agudo/db_pesquisa.js
+./01_Modulos_Clinicos/AVC_Agudo/db_interativo.js
+./01_Modulos_Clinicos/AVC_Agudo/index.html
+./01_Modulos_Clinicos/AVC_Agudo/styles.css
+./01_Modulos_Clinicos/AVC_Agudo/merge_html.py
+./01_Modulos_Clinicos/AVC_Agudo/db_cross_ia.js
+./01_Modulos_Clinicos/AVC_Agudo/avc_31_blocos.html
+./01_Modulos_Clinicos/AVC_Agudo/db_fundamentos.js
+./01_Modulos_Clinicos/AVC_Agudo/codigo_avc_10_minutos_dashboard_html.html
+./01_Modulos_Clinicos/AVC_Agudo/README.md
+./01_Modulos_Clinicos/AVC_Agudo/avc.js
+./01_Modulos_Clinicos/AVC_Agudo/avc.html
+./01_Modulos_Clinicos/AVC_Agudo/db_pratica.js
+./01_Modulos_Clinicos/AVC_Agudo/AVC_App_Unico.html
+./01_Modulos_Clinicos/AVC_Agudo/Imagens/Prevenção Secundária.png
+./01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombectomia.png
+./01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombólise.png
+./01_Modulos_Clinicos/AVC_Agudo/Imagens/AVC na UTI.png
+./01_Modulos_Clinicos/AVC_Agudo/Imagens/Código 10 minutos.png
+./01_Modulos_Clinicos/AVC_Agudo/Imagens/Hipertensão Intracraniana.png
+./01_Modulos_Clinicos/AVC_Agudo/avc-agudo-31-blocos.md
+./01_Modulos_Clinicos/AVC_Agudo/app.js
+./01_Modulos_Clinicos/ATALHOS_E_CONFIGURACOES_ANTIGRAVITY.md
+./01_Modulos_Clinicos/atalhos_vscode_mac.md
+./prompts_antigravity/02_CLASSIFICAR_INBOX_CARDS.md
+./prompts_antigravity/04_ATUALIZAR_MAPA_VIVO.md
+./prompts_antigravity/00_SUPERCOMANDO_RENDERIZAR_TUDO.md
+./prompts_antigravity/03_ATUALIZAR_HOME_CATALOGO.md
+./prompts_antigravity/01_ORGANIZAR_REPOSITORIO.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/scripts_opcionais/scan_biblioteca_inbox.sh
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/scripts_opcionais/validate_biblioteca_json.js
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/README_PACOTE_CLASSIFICACAO_186.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/08_Documentacao_Projeto/CHECKLIST_CLASSIFICACAO_BIBLIOTECA.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/08_Documentacao_Projeto/RELATORIO_CLASSIFICACAO_186_BIBLIOTECA.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/08_Documentacao_Projeto/WORKFLOW_MANUAL_186.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/08_Documentacao_Projeto/PROJETO_CLASSIFICACAO_186_BIBLIOTECA_IA.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/SUPERCOMANDO_CLASSIFICAR_186_BIBLIOTECA_IA_ANTIGRAVITY.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/prompts_antigravity/04_CLASSIFICAR_LOTE_20.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/prompts_antigravity/02_CRIAR_PASTAS_TEMAS.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/prompts_antigravity/03_INTERFACE_MANUAL_CLASSIFICACAO.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/prompts_antigravity/00_SUPERCOMANDO_CLASSIFICAR_186_BIBLIOTECA.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/prompts_antigravity/05_CONEXAO_CEREBRAL.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/prompts_antigravity/06_VALIDAR_JSON_LINKS.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/prompts_antigravity/01_ESCANEAR_INBOX.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/templates/CONVENCAO_NOMES.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/templates/TEMPLATE_ITEM_CATALOGADO.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/templates/LEGENDAS_POR_TEMA.md
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/05_Biblioteca_IA/data/biblioteca_catalogo.json
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/05_Biblioteca_IA/data/biblioteca_inbox_manifest_186.json
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/05_Biblioteca_IA/data/biblioteca_taxonomia_temas.json
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/05_Biblioteca_IA/data/biblioteca_brain_connections.json
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/data/biblioteca_item_schema.json
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/data/biblioteca_inbox_manifest_186.json
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/data/biblioteca_catalogo_base.json
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/data/biblioteca_taxonomia_temas.json
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/data/matriz_classificacao_biblioteca.csv
+./PACOTE_BIBLIOTECA_IA_CLASSIFICAR_186_INBOX_2026_05_08/data/biblioteca_brain_connections.json
+./templates/checklist-insercao-novo-tema.md
+./templates/template-tema-medico.html
+./templates/template-tema-medico.md
+./TEMPLATE_PATCH_MAPA_VIVO_ADMIN.json
+./logo_concept_3_book_1778036997285.png
+./05_Biblioteca_IA/scan_inbox.sh
+./05_Biblioteca_IA/index.html
+./05_Biblioteca_IA/inbox/Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf
+./05_Biblioteca_IA/inbox/checkpoint_fatorXIII.pdf
+./05_Biblioteca_IA/inbox/POCUS_Protocolo_Completo_DrAldenir_v2.pdf
+./05_Biblioteca_IA/inbox/E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha 2.docx
+./05_Biblioteca_IA/inbox/Protocolo_IPCS_CVC_UTI_TEMI.docx
+./05_Biblioteca_IA/inbox/POCUS Cardiaco Focado.docx
+./05_Biblioteca_IA/inbox/protocolo_desmame_vm_sedoanalgesia.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Decanulacao_UTI.pdf
+./05_Biblioteca_IA/inbox/MapaProfilaxias UTI DrAldenir.docx
+./05_Biblioteca_IA/inbox/Tridil_Nipride_UTI_Abordagem_Completa.docx
+./05_Biblioteca_IA/inbox/resumo_executivo_aldenir.docx
+./05_Biblioteca_IA/inbox/ICSAC_Cateter_UTI_TEMI.docx
+./05_Biblioteca_IA/inbox/jetem-10-3-s25 2.pdf
+./05_Biblioteca_IA/inbox/Suporte_Respiratorio_Decisao_UTI_SARA_Grave.docx
+./05_Biblioteca_IA/inbox/Protocolo_Cetoacidose_Diabetica_UTI.docx
+./05_Biblioteca_IA/inbox/Simulador_Suporte_Respiratorio_VM_SARA.pdf
+./05_Biblioteca_IA/inbox/Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx
+./05_Biblioteca_IA/inbox/FA_Protocolo_Completo_DrAldenir.docx
+./05_Biblioteca_IA/inbox/Protocolo_SHR_DrAldenir.docx
+./05_Biblioteca_IA/inbox/guia ia medicos clinicos intensivistas.md
+./05_Biblioteca_IA/inbox/AcidoBase_Eletrolitos_DrAldenir.docx
+./05_Biblioteca_IA/inbox/Cards_POCUS_12_Protocolos.docx
+./05_Biblioteca_IA/inbox/guia ia medicos clinicos intensivistas.docx
+./05_Biblioteca_IA/inbox/Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx
+./05_Biblioteca_IA/inbox/Versao_TEMI_Prova_Titulo_VM_Pegadinhas_Interpretacao_Avancada.docx
+./05_Biblioteca_IA/inbox/protocolo_morte_cerebral_2.docx
+./05_Biblioteca_IA/inbox/Protocolo_Teste_Estresse_Furosemida_UTI_TEMI.docx
+./05_Biblioteca_IA/inbox/protocolo_morte_cerebral_3.docx
+./05_Biblioteca_IA/inbox/Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx
+./05_Biblioteca_IA/inbox/Protocolo_PTT_HFG_HPN_SCMS.pdf
+./05_Biblioteca_IA/inbox/Alarmes VM Manual Pratico.docx
+./05_Biblioteca_IA/inbox/BRONCOSCOPIA NA UTI.pdf
+./05_Biblioteca_IA/inbox/HIC_Guia_TEMI.pdf
+./05_Biblioteca_IA/inbox/Pneumonia_Aspirativa_Abordagem_Completa.docx
+./05_Biblioteca_IA/inbox/protocolo_morte_cerebral.docx
+./05_Biblioteca_IA/inbox/DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf
+./05_Biblioteca_IA/inbox/Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1.pdf
+./05_Biblioteca_IA/inbox/POCUS Pulmonar em VM.docx
+./05_Biblioteca_IA/inbox/TCE_TEMI_DrAldenir.docx
+./05_Biblioteca_IA/inbox/Prescricoes_UTI_DrAldenir.docx
+./05_Biblioteca_IA/inbox/MODELOS_PRONTUARIO_DNAR_PLANTAO.docx
+./05_Biblioteca_IA/inbox/Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Bradicardia_em_UTI_final.docx
+./05_Biblioteca_IA/inbox/Protocolo_Crise_Convulsiva_Estado_Mal_UTI_Adulto.docx
+./05_Biblioteca_IA/inbox/VENTILA-CARDS-VERSO.pdf
+./05_Biblioteca_IA/inbox/Perioperatorio GrandesSindromes DrAldenir.docx
+./05_Biblioteca_IA/inbox/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha.docx
+./05_Biblioteca_IA/inbox/Protocolo_TCE_Grave_UTI_Adulto.docx
+./05_Biblioteca_IA/inbox/Documento_Irmao_Assincronias_Paciente_Ventilador.docx
+./05_Biblioteca_IA/inbox/PAG_SARA_UTI_TEMI.docx
+./05_Biblioteca_IA/inbox/Parestesias e Guillain Barre Protocolo Completo.docx
+./05_Biblioteca_IA/inbox/04_Protocolo_Tromboprofilaxia.pdf
+./05_Biblioteca_IA/inbox/Protocolo NPT UTI DrAldenir.docx
+./05_Biblioteca_IA/inbox/06_Protocolo_PCR_ACLS_Enfermaria.pdf
+./05_Biblioteca_IA/inbox/KDIGO_2026_AKI_na_UTI_TEMI_Resumo_Mapa_MemoryCards_Aldenir_Rocha.docx
+./05_Biblioteca_IA/inbox/AcidoBase_Eletrolitos_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/Nutricao UTI DrAldenir.docx
+./05_Biblioteca_IA/inbox/POCUS_Protocolo_Completo_DrAldenir_v2.docx
+./05_Biblioteca_IA/inbox/protocolo_morte_cerebral_4.docx
+./05_Biblioteca_IA/inbox/Hemostasia_Transfusao_UTI_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/Protocolo_SARA_Grave_UTI_Adulto.docx
+./05_Biblioteca_IA/inbox/Plano_R3_Clinica_Medica_SantaCasa_HRN.docx
+./05_Biblioteca_IA/inbox/hemodialise_uti.docx
+./05_Biblioteca_IA/inbox/Guia_Antigravity_Comandos_Atalhos.docx
+./05_Biblioteca_IA/inbox/Monetizar dados médicos em renda passiva.pdf
+./05_Biblioteca_IA/inbox/Prescricoes_UTI_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/PAV_Pneumonia_Associada_Ventilacao_TEMI.docx
+./05_Biblioteca_IA/inbox/Protocolos_Assistenciais (1).pdf
+./05_Biblioteca_IA/inbox/VENTILA-CARDS-FRENTE.pdf
+./05_Biblioteca_IA/inbox/VENTILA-DECISION.docx
+./05_Biblioteca_IA/inbox/DesmameVM_BNM_Neurointensivismo_DrAldenir.docx
+./05_Biblioteca_IA/inbox/Avaliação e tratamento da hipertensão intracraniana em adultos.pdf
+./05_Biblioteca_IA/inbox/00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha.docx
+./05_Biblioteca_IA/inbox/QualidadeSeguranca UTI DrAldenir.docx
+./05_Biblioteca_IA/inbox/USG_PointOfCare_Protocolo_DrAldenir.docx
+./05_Biblioteca_IA/inbox/03_Checklist_Alta_Segura.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Afogamento_UTI_Adulto.docx
+./05_Biblioteca_IA/inbox/Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx
+./05_Biblioteca_IA/inbox/Infeccao_Antibioticos_UTI_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/08_Protocolo_Hiponatremia.pdf
+./05_Biblioteca_IA/inbox/bradiarritmias_bav_protocolo.docx
+./05_Biblioteca_IA/inbox/advpub_CJ-26-0119.pdf
+./05_Biblioteca_IA/inbox/s13054-026-06015-8_reference.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Intoxicacao_Exogena_na_UTI.docx
+./05_Biblioteca_IA/inbox/VM_Suporte_Respiratorio_DrAldenir.docx
+./05_Biblioteca_IA/inbox/protocolo_transfusao_crioprecipitado_UTI_pandoc.docx
+./05_Biblioteca_IA/inbox/HDA Protocolo Completo DrAldenir.docx
+./05_Biblioteca_IA/inbox/DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha 2.docx
+./05_Biblioteca_IA/inbox/Protocolo_Choque_Septico_Refratario_UTI.docx
+./05_Biblioteca_IA/inbox/Comparativo_IA_Medicina_2026.pdf
+./05_Biblioteca_IA/inbox/PROTOCOLO_ALBUMINA_PARACENTESE.pdf
+./05_Biblioteca_IA/inbox/Parecer Cuidados Paliativos PADRAO.pdf
+./05_Biblioteca_IA/inbox/TEMI_2026_Tema_02_Avaliacao_ABCDE_UTI_30_flashcards.csv
+./05_Biblioteca_IA/inbox/tabelas_DVA_mlh_peso_40a120.pdf
+./05_Biblioteca_IA/inbox/05_Formulario_Evolucao_SOAP_Diaria.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Crise_Tireotoxica_UTI.docx
+./05_Biblioteca_IA/inbox/KDIGO2026_AKI_UTI_DrAldenir.docx
+./05_Biblioteca_IA/inbox/Protocolo_Hipoglicemia_UTI.docx
+./05_Biblioteca_IA/inbox/Protocolo_Morte_Cerebral.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Hiponatremia_Grave_UTI.docx
+./05_Biblioteca_IA/inbox/Cardio_Critica_DrAldenir.docx
+./05_Biblioteca_IA/inbox/README.md
+./05_Biblioteca_IA/inbox/Modos Ventilatorios Comparativo.docx
+./05_Biblioteca_IA/inbox/Protocolo_Pneumonia_Aspirativa_UTI_Adulto.docx
+./05_Biblioteca_IA/inbox/Protocolo_Estado_Hiperglicemico_Hiperosmolar_UTI.docx
+./05_Biblioteca_IA/inbox/HRN_Sepsis_Intelligence 2.pdf
+./05_Biblioteca_IA/inbox/plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx
+./05_Biblioteca_IA/inbox/KDIGO_2026_AKI_na_UTI_MemoryCards_Anki_Obsidian.tsv
+./05_Biblioteca_IA/inbox/VENTILA-ATLAS.pdf
+./05_Biblioteca_IA/inbox/Cardio_Critica_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/SDRA_VM_Protetora_DrAldenir.docx
+./05_Biblioteca_IA/inbox/Choque_Septico_UTI_SSC2026.docx
+./05_Biblioteca_IA/inbox/FST_TEMI_Aldenir.docx
+./05_Biblioteca_IA/inbox/Protocolo_IC_VM_DrAldenir.docx
+./05_Biblioteca_IA/inbox/NOTA_EVOLUCAO_DNAR_LSV.docx
+./05_Biblioteca_IA/inbox/Trials Temi.docx
+./05_Biblioteca_IA/inbox/AVCH_HSA_Protocolo_Completo.docx
+./05_Biblioteca_IA/inbox/SHR.pdf
+./05_Biblioteca_IA/inbox/POCUS_Aula_Residentes_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/peticao_inicial_aldenir_rocha.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Morte_Encefalica_CFM2173.docx
+./05_Biblioteca_IA/inbox/Protocolo_Urgencias_Dialiticas.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Abdomen_Agudo_Obstrutivo_UTI.docx
+./05_Biblioteca_IA/inbox/Sedacao_Delirium_UTI_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/Protocolo_AzulMetileno_UTI_SantaCasa_Sobral.pdf
+./05_Biblioteca_IA/inbox/VENTILA-CARDS-GUIA.pdf
+./05_Biblioteca_IA/inbox/NEJMoa2511420.pdf
+./05_Biblioteca_IA/inbox/11_Pocket_Cards_Clinica_Medica.pdf
+./05_Biblioteca_IA/inbox/HRN_Sepsis_Intelligence.pdf
+./05_Biblioteca_IA/inbox/Px Aldenir.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx
+./05_Biblioteca_IA/inbox/protocolo morte cerebral.docx
+./05_Biblioteca_IA/inbox/Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/Hemostasia_Transfusao_UTI_DrAldenir.docx
+./05_Biblioteca_IA/inbox/Assincronias Paciente Ventilador.docx
+./05_Biblioteca_IA/inbox/IA POTENTE.pdf
+./05_Biblioteca_IA/inbox/DÚVIDAS DIRETAS UTI:CM - Programa diário de artigos.pdf
+./05_Biblioteca_IA/inbox/table-87e783ea-d03f-43a3-9d3c-dcab85915268.csv
+./05_Biblioteca_IA/inbox/VENTILA-CARDS.pdf
+./05_Biblioteca_IA/inbox/NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Pneumonia_Associada_VM_UTI.docx
+./05_Biblioteca_IA/inbox/Protocolo_Prona_SantaCasa_Sobral.pdf
+./05_Biblioteca_IA/inbox/TCE_TEMI_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/IA.pdf
+./05_Biblioteca_IA/inbox/PAV UTI.pdf
+./05_Biblioteca_IA/inbox/Parestesias e Guillain Barre Protocolo Completo.pages
+./05_Biblioteca_IA/inbox/multiple_organ_failure__what_you_need_to_know.1.pdf
+./05_Biblioteca_IA/inbox/00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf
+./05_Biblioteca_IA/inbox/Abordagem_Alarmes_Ventilador_Mecanico_UTI.md
+./05_Biblioteca_IA/inbox/Protocolo_Emergencias_Hematologicas_SCMS.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx
+./05_Biblioteca_IA/inbox/Protocolo Reposicao Albumina DrAldenir.docx
+./05_Biblioteca_IA/inbox/Compendio_ECG_UTI_SantaCasa_Sobral.pdf
+./05_Biblioteca_IA/inbox/bav_bolso_plantao.pdf
+./05_Biblioteca_IA/inbox/PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf
+./05_Biblioteca_IA/inbox/Protocolo Crioprecipitado Dr Aldenir.docx
+./05_Biblioteca_IA/inbox/Simulado_TEMI_2026_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/Protocolo_Cuidados_Paliativos_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/Desmame da VM.docx
+./05_Biblioteca_IA/inbox/Protocolo Broncoespasmo Grave UTI DrAldenir.docx
+./05_Biblioteca_IA/inbox/manual_claude_prompts_token_economia_aldenir.docx
+./05_Biblioteca_IA/inbox/Dobutamina_UTI_Abordagem_Completa.docx
+./05_Biblioteca_IA/inbox/Simulador_Suporte_Respiratorio_VM_SARA.docx
+./05_Biblioteca_IA/inbox/02_Protocolo_Controle_Glicemico.pdf
+./05_Biblioteca_IA/inbox/Posicionamento_sobre_o_Uso_do_Ultrassom_“Point_of_Care”_POCUS_na.pdf
+./05_Biblioteca_IA/inbox/Protocolo_ESVA_Falencia_Vascular_Dialise.docx
+./05_Biblioteca_IA/inbox/Abordagem_Alarmes_Ventilador_Mecanico_UTI.docx
+./05_Biblioteca_IA/inbox/plano_revendedor_usg_sobral.pdf
+./05_Biblioteca_IA/inbox/LIMITACAO_SUPORTE_VIDA_PAC.pdf
+./05_Biblioteca_IA/inbox/Simulado_TEMI_2026_DrAldenir.docx
+./05_Biblioteca_IA/inbox/SDRA_VM_Protetora_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/FAST eFAST em Trauma.docx
+./05_Biblioteca_IA/inbox/VM_Suporte_Respiratorio_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/hemodialise_uti 2.docx
+./05_Biblioteca_IA/inbox/Broncoscopia_UTI_TEMI.docx
+./05_Biblioteca_IA/inbox/Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx
+./05_Biblioteca_IA/inbox/09_Protocolo_IC_Aguda.pdf
+./05_Biblioteca_IA/inbox/Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx
+./05_Biblioteca_IA/inbox/Sedacao_Delirium_UTI_DrAldenir.docx
+./05_Biblioteca_IA/inbox/s13054-025-05817-6 2.pdf
+./05_Biblioteca_IA/inbox/protocolo_morte_cerebral_1.docx
+./05_Biblioteca_IA/inbox/HIC_Guia_TEMI.docx
+./05_Biblioteca_IA/inbox/Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx
+./05_Biblioteca_IA/inbox/Plano_Investigacao_Dor_Abdominal_Cronica.docx
+./05_Biblioteca_IA/inbox/Infeccao_Antibioticos_UTI_DrAldenir.docx
+./05_Biblioteca_IA/inbox/ICSAC Cateter UTI TEMI.docx
+./05_Biblioteca_IA/inbox/10_Banco_Questoes_TEMI_2026.pdf
+./05_Biblioteca_IA/inbox/01_Protocolo_SEPSE_Bundle1hHora.pdf
+./05_Biblioteca_IA/inbox/Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx
+./05_Biblioteca_IA/inbox/Comparativo_IA_Medicina_Clinica_UTI_2026.docx
+./05_Biblioteca_IA/inbox/Protocolo_IC_UTI_Enfermaria_DrAldenir.pdf
+./05_Biblioteca_IA/inbox/Rotinas em UTI SANAR.pdf
+./05_Biblioteca_IA/inbox/07_Protocolo_Dor_Toracica.pdf
+./05_Biblioteca_IA/inbox/Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf
+./05_Biblioteca_IA/inbox/NEJMra2312086.pdf
+./05_Biblioteca_IA/data/biblioteca_card_candidates.json
+./05_Biblioteca_IA/data/biblioteca_duplicados.json
+./05_Biblioteca_IA/data/biblioteca_catalogo.json
+./05_Biblioteca_IA/data/inbox.json
+./05_Biblioteca_IA/data/pendencias_biblioteca_ia.json
+./05_Biblioteca_IA/data/biblioteca_taxonomia_temas.json
+./05_Biblioteca_IA/data/biblioteca_brain_connections_patch.json
+./05_Biblioteca_IA/data/biblioteca_brain_connections.json
+./05_Biblioteca_IA/data/biblioteca_temi_question_candidates.json
+./data/navigation.json
+./data/connections.json
+./data/references.json
+./data/connections.json.20260508_132144.bak
+./data/catalogo.json
+./data/connections.json.20260508_142830.bak
+./data/patch_modulo_07.json
+./data/roadmap_30_melhorias_biblioteca_ia.json
+./data/patch_updown_les.json
+./data/connections.json.20260508_125453.bak
+./data/connections_patch_biblioteca.json
+./data/pendencias_biblioteca_ia.json
+./data/patch_updown_002.json
+./data/topics_patch_biblioteca.json
+./data/topics.json
+./assets/css/graph-vivo.css
+./assets/css/home.css
+./assets/css/avc-31.css
+./assets/css/tema.css
+./assets/css/base.css
+./assets/js/graph.js
+./assets/js/avc-31.js
+./assets/js/search.js
+./assets/js/app.js
+./assets/img/logo.png
+./assets/img/avc/01_timeline_codigo_avc.svg
+./assets/img/avc/06_edema_maligno.svg
+./assets/img/avc/07_ogv_angio.svg
+./assets/img/avc/09_uti_neuro.svg
+./assets/img/avc/10_mapa_conexoes.svg
+./assets/img/avc/08_prevencao_secundaria.svg
+./assets/img/avc/03_fluxo_reperfusao.svg
+./assets/img/avc/04_pa_avc.svg
+./assets/img/avc/05_disfagia_bundle.svg
+./assets/img/avc/02_core_penumbra.svg
+./imagens/index.html
+./apps/index.html
+./backups/mapa_vivo_v1/connections.json
+./backups/mapa_vivo_v1/graph.js
+./backups/mapa_vivo_v1/topics.json
+./backups/mapa_vivo_v4_pre_refactor/graph-vivo.css
+./backups/mapa_vivo_v4_pre_refactor/connections.json
+./backups/mapa_vivo_v4_pre_refactor/graph.js
+./backups/mapa_vivo_v4_pre_refactor/index.html
+./backups/mapa_vivo_3_1/graph-vivo.css
+./backups/mapa_vivo_3_1/connections.json
+./backups/mapa_vivo_3_1/graph.js
+./backups/mapa_vivo_3_1/index.html
+./backups/v3_upgrade_pre_refactor/catalogo.json
+./backups/v3_upgrade_pre_refactor/index.html
+./backups/mapa_vivo_final_fix/graph-vivo.css
+./backups/mapa_vivo_final_fix/connections.json
+./backups/mapa_vivo_final_fix/graph.js
+./backups/mapa_vivo_final_fix/index.html
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/SUPERCOMANDO_PENDENCIAS_BIBLIOTECA_IA_ANTIGRAVITY.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/scripts_opcionais/stats_biblioteca_por_tema.js
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/scripts_opcionais/detect_duplicates_biblioteca.js
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/scripts_opcionais/validate_pendencias_biblioteca.js
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/08_Documentacao_Projeto/ROADMAP_30_MELHORIAS_BIBLIOTECA_IA.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/08_Documentacao_Projeto/CHECKLIST_PENDENCIAS_BIBLIOTECA.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/08_Documentacao_Projeto/PLANO_EXECUCAO_PENDENCIAS_BIBLIOTECA.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/prompts_antigravity/01_REVISAR_DUPLICADOS.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/prompts_antigravity/03_GERAR_QUESTOES_TEMI.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/prompts_antigravity/04_CONECTAR_ARQUIVOS_CRITICOS_MODULOS.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/prompts_antigravity/00_SUPERCOMANDO_EXECUTAR_PENDENCIAS_BIBLIOTECA.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/prompts_antigravity/05_VALIDAR_PUBLICAR_BIBLIOTECA.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/prompts_antigravity/06_INSERIR_ROADMAP_30_MELHORIAS.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/prompts_antigravity/02_GERAR_CARDS_ALTO_RENDIMENTO.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/templates/TEMPLATE_BIBLIOTECA_DUPLICADOS.json
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/templates/TEMPLATE_BRAIN_CONNECTION_PATCH.json
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/templates/TEMPLATE_QBANK_PATCH_BIBLIOTECA.js
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/templates/TEMPLATE_CARDS_PATCH_BIBLIOTECA.json
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/README_PACOTE_PENDENCIAS_E_MELHORIAS.md
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/05_Biblioteca_IA/data/pendencias_biblioteca_ia.json
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/data/roadmap_30_melhorias_biblioteca_ia.json
+./PACOTE_PENDENCIAS_E_MELHORIAS_BIBLIOTECA_IA_2026_05_08/data/pendencias_biblioteca_ia.json
+./registry_resgate.json

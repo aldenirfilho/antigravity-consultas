@@ -1,0 +1,109 @@
+{
+  "updatedAt": "2026-05-08",
+  "project": "Enciclopédia Médica Intensiva & Medicina Interna",
+  "version": "resgate-manifest-first-1.0",
+  "repository": "aldenirfilho/antigravity-consultas",
+  "routes": [
+    {
+      "route": "/",
+      "file": "index.html",
+      "role": "Home pública",
+      "status": "manter",
+      "targetData": "data/site_manifest.json"
+    },
+    {
+      "route": "/updown/",
+      "file": "updown/index.html",
+      "role": "Atalho público estável para UpDown",
+      "status": "wrapper/redirect seguro",
+      "target": "07_Estudos_Markdown/index.html"
+    },
+    {
+      "route": "/07_Estudos_Markdown/",
+      "file": "07_Estudos_Markdown/index.html",
+      "role": "Hub UpDown canônico",
+      "status": "corrigir renderização 0 UpDowns",
+      "targetData": "07_Estudos_Markdown/registry.json"
+    },
+    {
+      "route": "/biblioteca/",
+      "file": "biblioteca/index.html",
+      "role": "Atalho público estável para Biblioteca",
+      "status": "wrapper dinâmico",
+      "targetData": "05_Biblioteca_IA/data/biblioteca_catalogo.json"
+    },
+    {
+      "route": "/05_Biblioteca_IA/",
+      "file": "05_Biblioteca_IA/index.html",
+      "role": "Biblioteca IA canônica/legado",
+      "status": "corrigir 0 arquivos",
+      "targetData": "05_Biblioteca_IA/data/biblioteca_catalogo.json"
+    },
+    {
+      "route": "/imagens/",
+      "file": "imagens/index.html",
+      "role": "Galeria pública",
+      "status": "wrapper",
+      "target": "07_Estudos_Markdown/imagens/index.html"
+    },
+    {
+      "route": "/apps/",
+      "file": "apps/index.html",
+      "role": "Apps públicos",
+      "status": "wrapper",
+      "target": "07_Estudos_Markdown/apps/index.html"
+    },
+    {
+      "route": "/03_Calculadoras_UTI/",
+      "file": "03_Calculadoras_UTI/index.html",
+      "role": "Calculadoras UTI clássicas",
+      "status": "manter e linkar",
+      "targetData": "03_Calculadoras_UTI/manifest.json"
+    },
+    {
+      "route": "/02_Banco_Questoes_TEMI/",
+      "file": "02_Banco_Questoes_TEMI/index.html",
+      "role": "Banco TEMI",
+      "status": "manter e linkar"
+    },
+    {
+      "route": "/questoes/",
+      "file": "questoes/index.html",
+      "role": "Atalho público para Banco TEMI",
+      "status": "wrapper/redirect seguro",
+      "target": "02_Banco_Questoes_TEMI/index.html"
+    },
+    {
+      "route": "/data/connections.json",
+      "file": "data/connections.json",
+      "role": "Mapa Vivo canônico",
+      "status": "preencher/corrigir",
+      "fallback": "connections.json"
+    },
+    {
+      "route": "/connections.json",
+      "file": "connections.json",
+      "role": "Mapa Vivo legado",
+      "status": "manter como compatibilidade, não usar como único canônico"
+    }
+  ],
+  "hubs": {
+    "home": "index.html",
+    "updown": "07_Estudos_Markdown/index.html",
+    "biblioteca": "biblioteca/index.html",
+    "bibliotecaLegado": "05_Biblioteca_IA/index.html",
+    "imagens": "imagens/index.html",
+    "apps": "apps/index.html",
+    "calculadoras": "03_Calculadoras_UTI/index.html",
+    "temi": "02_Banco_Questoes_TEMI/index.html",
+    "cardFeed": "06_Card_Feed_Medico/index.html",
+    "mapa": "data/connections.json"
+  },
+  "countsFromListing": {
+    "paths": 918,
+    "bibliotecaInbox": 198,
+    "indexHtml": 30,
+    "pdfInbox": 83,
+    "docxInbox": 108
+  }
+}
