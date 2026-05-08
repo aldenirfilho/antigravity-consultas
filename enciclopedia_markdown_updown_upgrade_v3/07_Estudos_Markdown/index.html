@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudos Markdown | Enciclopédia Médica</title>
+  <meta name="description" content="Mapa vivo de estudos médicos em Markdown: versões, análises, transcrições transformadas e produtos didáticos." />
+  <link rel="stylesheet" href="assets/estudos.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">🧠 <span>Enciclopédia Médica</span></a>
+    <nav>
+      <a href="../index.html">🏠 Home</a>
+      <a href="#updown">↕️ UPDOWN</a>
+      <a href="#catalogo">📚 Catálogo</a>
+      <a href="#workflow">⚙️ Fluxo</a>
+      <a href="../03_Calculadoras_UTI/index.html">🧮 Calculadoras</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">🧬 Novo padrão • Markdown • versões • mapa vivo</span>
+        <h1>Central de Estudos Markdown</h1>
+        <p>
+          A nova forma de alimentar a Enciclopédia: cada artigo, aula, diretriz ou capítulo estudado vira um arquivo
+          <strong>Markdown transformado</strong>, com versão, tags, conexões clínicas, produtos didáticos e status de revisão.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#catalogo">📚 Ver conteúdos</a>
+          <a class="btn" href="viewer.html?doc=content/modelos/template_estudo_seguro.md">🧩 Abrir template</a>
+          <a class="btn ghost" href="#workflow">⚙️ Como alimentar</a>
+        </div>
+      </div>
+      <aside class="panel">
+        <h2>📊 Painel vivo</h2>
+        <div class="metrics">
+          <div><strong id="metricDocs">0</strong><span>docs MD</span></div>
+          <div><strong id="metricThemes">0</strong><span>temas</span></div>
+          <div><strong>∞</strong><span>renovação</span></div>
+          <div><strong>v3</strong><span>modelo</span></div>
+        </div>
+        <p class="muted">Pensado para iPhone, plantão, revisão TEMI e alimentação contínua por IA.</p>
+      </aside>
+    </section>
+
+    <section id="updown" class="section block">
+      <h2>↕️ UPDOWN — da entrada ao produto didático</h2>
+      <p class="muted">
+        UPDOWN é o fluxo operacional do projeto: <strong>UP</strong> = material estudado entra; <strong>DOWN</strong> = saem produtos didáticos próprios, seguros e navegáveis.
+      </p>
+      <div class="grid four">
+        <article class="card"><h3>⬆️ UP: Entrada</h3><p>Artigos, PDFs, diretrizes, aulas, capítulos de referência e notas pessoais entram como insumo bruto.</p></article>
+        <article class="card"><h3>🧪 Transformação</h3><p>A IA reescreve, sintetiza, algoritmiza, remove trechos literais extensos e organiza o raciocínio clínico.</p></article>
+        <article class="card"><h3>⬇️ DOWN: Saída</h3><p>Markdown, flashcards, questões TEMI, checklists, mapas visuais, prescrições e links para módulos correlatos.</p></article>
+        <article class="card"><h3>🕓 Versão</h3><p>Cada documento recebe versão, data, status, tema, tags, conexões e pendências de revisão.</p></article>
+      </div>
+    </section>
+
+    <section id="catalogo" class="section block highlight">
+      <div class="section-title-row">
+        <div>
+          <h2>📚 Catálogo vivo de Markdown</h2>
+          <p class="muted">Lista organizada por tema, status, versão e tipo de produto.</p>
+        </div>
+        <div class="searchbox">
+          <input id="searchInput" placeholder="🔍 buscar: SARA, sepse, ventilação, TEMI..." />
+          <select id="themeFilter"><option value="">Todos os temas</option></select>
+          <select id="statusFilter"><option value="">Todos os status</option></select>
+        </div>
+      </div>
+      <div id="docsGrid" class="grid three"></div>
+    </section>
+
+    <section id="workflow" class="section block">
+      <h2>⚙️ Fluxo Gemini Flash / Antigravity</h2>
+      <div class="grid three">
+        <article class="card"><h3>1️⃣ Criar MD</h3><p>Usar o template seguro, colar notas próprias e gerar síntese transformada.</p></article>
+        <article class="card"><h3>2️⃣ Registrar</h3><p>Adicionar entrada no <code>registry.json</code> com id, título, caminho, versão, tema e tags.</p></article>
+        <article class="card"><h3>3️⃣ Conectar</h3><p>Relacionar o documento ao mapa vivo, banco TEMI, calculadoras e cards correlatos.</p></article>
+      </div>
+      <details class="card details" open>
+        <summary>🛡️ Regra de segurança autoral</summary>
+        <p>
+          Não armazenar texto integral de fontes proprietárias, capítulos pagos ou artigos completos. O padrão é produzir
+          <strong>análise própria, síntese transformada, algoritmos, tabelas originais e comentários clínicos</strong>, com referências rastreáveis quando possível.
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    🧠 Enciclopédia Médica — Markdown vivo, versão, mapa e didática para UTI/TEMI.
+  </footer>
+
+  <script src="assets/estudos.js"></script>
+</body>
+</html>

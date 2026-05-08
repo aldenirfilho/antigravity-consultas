@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-05-08T12:54:53.463111",
-  "version": "4.0",
+  "updatedAt": "2026-05-08",
+  "version": "2.0-mapa-vivo-organizado",
   "description": "Mapa vivo organizado da Enciclopédia: portal, Biblioteca IA, Card Feed, Banco TEMI, Calculadoras, AVC e macrotemas de UTI.",
   "legend": {
     "hub": "Nó central do projeto",
@@ -502,20 +502,6 @@
         "uti",
         "reumatologia",
         "temi"
-      ],
-      "visible": true
-    },
-    {
-      "id": "estudos-markdown",
-      "label": "📄 Estudos Markdown",
-      "type": "theme",
-      "status": "ativo",
-      "body": "Central viva de análises, versões, transcrições transformadas e produtos didáticos da Enciclopédia.",
-      "url": "07_Estudos_Markdown/index.html",
-      "tags": [
-        "workflow-ia",
-        "markdown",
-        "estudo"
       ],
       "visible": true
     }
@@ -1575,22 +1561,6 @@
       "visible": true,
       "reason": "LES pode cursar com nefrite, AKI e necessidade de TRS.",
       "createdBy": "curadoria-local"
-    },
-    {
-      "from": "estudos-markdown",
-      "to": "home",
-      "relation": "alimentacao-central",
-      "strength": "direct",
-      "status": "ativo",
-      "visible": true
-    },
-    {
-      "from": "estudos-markdown",
-      "to": "biblioteca-ia",
-      "relation": "transformacao-conteudo",
-      "strength": "suggested",
-      "status": "sugerido",
-      "visible": true
     }
   ]
 }
