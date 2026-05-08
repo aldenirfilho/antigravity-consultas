@@ -1,50 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Galeria — Resgate Antigravity</title>
-<style>
-:root{--bg:#f6f7fb;--paper:#fff;--text:#1b2433;--muted:#68758a;--line:#e5e8f0;--accent:#3557ff;}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;}
-main{max-width:1100px;margin:32px auto;padding:0 18px;}
-.topbar{background:var(--paper); padding: 1rem 18px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;}
-.brand{text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.2rem;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px;margin-top:22px;}
-.img-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:15px;text-decoration:none;color:var(--text);box-shadow:0 8px 24px rgba(20,30,60,.05);}
-.img-card:hover{border-color:var(--accent); transform: scale(1.02); transition: 0.2s;}
-.img-container{background: #eee; height: 180px; border-radius: 12px; margin-bottom: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center;}
-.img-container img{width: 100%; height: 100%; object-fit: cover;}
-.img-card h3{margin: 0; font-size: 1.1rem;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria Visual | Antigravity</title>
+  <link rel="stylesheet" href="../07_Estudos_Markdown/assets/estudos.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .img-card-premium {
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .img-card-premium:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+    }
+    .img-box {
+      height: 180px;
+      background: var(--bg2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .img-card-premium h3 { font-size: 1.1rem; margin: 0; color: var(--text); }
+    .img-card-premium p { font-size: 0.85rem; color: var(--muted); margin-top: 5px; }
+  </style>
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="../index.html">🚑 Resgate</a>
-  <nav><a href="../index.html" style="text-decoration:none; color:var(--muted);">🏠 Home</a></nav>
-</header>
-<main>
-  <h1>🖼️ Galeria Clínica</h1>
-  <p>Mapas mentais, algoritmos e fluxogramas visuais.</p>
+  <header class="topbar">
+    <a class="brand" href="../index.html">🖼️ <span>Galeria Visual</span></a>
+    <nav>
+      <a href="../index.html">🏠 Home</a>
+      <a href="../updown/index.html">↕️ UpDown</a>
+      <a href="../biblioteca/index.html">📚 Biblioteca</a>
+    </nav>
+  </header>
 
-  <div class="grid">
-    <a class="img-card" href="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombólise.png" target="_blank">
-      <div class="img-container"><img src="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombólise.png"></div>
-      <h3>Fluxo Trombolise AVC</h3>
-    </a>
-    <a class="img-card" href="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Código 10 minutos.png" target="_blank">
-      <div class="img-container"><img src="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Código 10 minutos.png"></div>
-      <h3>Código 10 minutos (AVC)</h3>
-    </a>
-    <a class="img-card" href="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Hipertensão Intracraniana.png" target="_blank">
-      <div class="img-container"><img src="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Hipertensão Intracraniana.png"></div>
-      <h3>Manejo HIC Visual</h3>
-    </a>
-    <a class="img-card" href="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombectomia.png" target="_blank">
-      <div class="img-container"><img src="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombectomia.png"></div>
-      <h3>Indicações Trombectomia</h3>
-    </a>
-  </div>
-</main>
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">🎨 Visual Think & Algoritmos</span>
+        <h1>Memória Visual</h1>
+        <p>Infográficos, mapas mentais e fluxogramas recuperados para consulta rápida.</p>
+      </div>
+    </section>
+
+    <div class="gallery-grid">
+      <article class="card img-card-premium" onclick="window.open('../01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombólise.png')">
+        <div class="img-box"><img src="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombólise.png"></div>
+        <h3>Fluxo Trombólise AVC</h3>
+        <p>Protocolo temporal de 0 a 60 min.</p>
+      </article>
+
+      <article class="card img-card-premium" onclick="window.open('../01_Modulos_Clinicos/AVC_Agudo/Imagens/Código 10 minutos.png')">
+        <div class="img-box"><img src="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Código 10 minutos.png"></div>
+        <h3>Código 10 minutos</h3>
+        <p>Prioridades na chegada do AVC.</p>
+      </article>
+
+      <article class="card img-card-premium" onclick="window.open('../01_Modulos_Clinicos/AVC_Agudo/Imagens/Hipertensão Intracraniana.png')">
+        <div class="img-box"><img src="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Hipertensão Intracraniana.png"></div>
+        <h3>Manejo HIC</h3>
+        <p>Medidas de 1ª e 2ª linha.</p>
+      </article>
+
+      <article class="card img-card-premium" onclick="window.open('../01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombectomia.png')">
+        <div class="img-box"><img src="../01_Modulos_Clinicos/AVC_Agudo/Imagens/Trombectomia.png"></div>
+        <h3>Critérios Trombectomia</h3>
+        <p>Indicações de acordo com DAWN/DEFUSE.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>🧠 <strong>Enciclomedia Antigravity</strong> — Dr. Aldenir Rocha</p>
+  </footer>
 </body>
 </html>

@@ -1,64 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UpDown — Estudos Transformados</title>
-<link rel="stylesheet" href="../07_Estudos_Markdown/assets/estudos.css">
-<style>
-:root{--bg:#f6f7fb;--paper:#fff;--text:#1b2433;--muted:#68758a;--line:#e5e8f0;--accent:#3557ff;}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;}
-main{max-width:1100px;margin:32px auto;padding:0 18px;}
-.topbar{background:var(--paper); padding: 1rem 18px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;}
-.brand{text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.2rem;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:16px;margin-top:22px;}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px;text-decoration:none;color:var(--text);box-shadow:0 8px 24px rgba(20,30,60,.05);}
-.card h3{margin: 0 0 10px 0; font-size: 1.3rem;}
-.pill{background: var(--bg); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; color: var(--muted); border: 1px solid var(--line); margin-right: 5px;}
-.actions{margin-top: 15px; display: flex; gap: 10px;}
-.btn{padding: 8px 16px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 0.9rem;}
-.btn.primary{background: var(--accent); color: #fff;}
-.btn.ghost{border: 1px solid var(--line); color: var(--muted);}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UpDown Hub | Antigravity</title>
+  <link rel="stylesheet" href="../07_Estudos_Markdown/assets/estudos.css" />
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="../index.html">🚑 Resgate</a>
-  <nav><a href="../index.html" style="text-decoration:none; color:var(--muted);">🏠 Voltar para Home</a></nav>
-</header>
-<main>
-  <h1>📖 Módulos UpDown</h1>
-  <p>Estudos clínicos dirimidos e transformados em modo leitor interativo.</p>
+  <header class="topbar">
+    <a class="brand" href="../index.html">↕️ <span>UpDown Hub</span></a>
+    <nav>
+      <a href="../index.html">🏠 Home</a>
+      <a href="../biblioteca/index.html">📚 Biblioteca</a>
+      <a href="../apps/index.html">📱 Apps</a>
+    </nav>
+  </header>
 
-  <div class="grid" id="docsGrid">
-    <!-- Seria ideal carregar do registry.json, mas para o resgate imediato vou colocar os principais -->
-    <article class="card">
-      <h3>🦋 Lúpus (LES) — Diagnóstico</h3>
-      <p>UPDOWN #001: Manifestações e critérios EULAR/ACR 2019.</p>
-      <div class="pill">Ativo</div><div class="pill">Reumatologia</div>
-      <div class="actions">
-        <a class="btn primary" href="../07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/index.html">Abrir Leitor PRO →</a>
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">🚀 Estudos Dirimidos e Transformados</span>
+        <h1>Módulos Ativos</h1>
+        <p>Conteúdo acadêmico transformado em páginas didáticas com flashcards, questões e algoritmos de memorização.</p>
       </div>
-    </article>
+    </section>
 
-    <article class="card">
-      <h3>💊 Lúpus (LES) — Manejo</h3>
-      <p>UPDOWN #002: Estratégias de tratamento e monitoramento.</p>
-      <div class="pill">Ativo</div><div class="pill">Reumatologia</div>
-      <div class="actions">
-        <a class="btn primary" href="../07_Estudos_Markdown/content/reumatologia/les-manejo/index.html">Abrir Leitor PRO →</a>
-      </div>
-    </article>
+    <div class="grid three">
+      <article class="card">
+        <h3>🦋 Lúpus (LES) — Diagnóstico</h3>
+        <p>Manifestações clínicas e critérios EULAR/ACR 2019.</p>
+        <div class="pillrow">
+          <span class="pill status">Ativo #001</span>
+          <span class="pill">Reumatologia</span>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="../07_Estudos_Markdown/content/reumatologia/les-manifestacoes/reader/index.html">Abrir Leitor PRO →</a>
+        </div>
+      </article>
 
-    <article class="card">
-      <h3>🫁 VM Protetora & SDRA</h3>
-      <p>Nota didática sobre ventilação mecânica e critérios de Berlim.</p>
-      <div class="pill">Exemplo</div><div class="pill">UTI</div>
-      <div class="actions">
-        <a class="btn primary" href="../07_Estudos_Markdown/viewer.html?doc=content/intensiva/vm_sdra_nota_didatica.md">Abrir MD →</a>
-      </div>
-    </article>
-  </div>
-</main>
+      <article class="card">
+        <h3>💊 Lúpus (LES) — Manejo</h3>
+        <p>Estratégias de tratamento, imunossupressão e prognóstico.</p>
+        <div class="pillrow">
+          <span class="pill status">Ativo #002</span>
+          <span class="pill">Reumatologia</span>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="../07_Estudos_Markdown/content/reumatologia/les-manejo/index.html">Abrir Leitor PRO →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>🫁 VM Protetora & SDRA</h3>
+        <p>Resumo didático sobre ventilação mecânica e critérios de Berlim.</p>
+        <div class="pillrow">
+          <span class="pill status">Exemplo</span>
+          <span class="pill">UTI</span>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="../07_Estudos_Markdown/viewer.html?doc=content/intensiva/vm_sdra_nota_didatica.md">Abrir MD →</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>🧠 <strong>Enciclomedia Antigravity</strong> — Dr. Aldenir Rocha</p>
+  </footer>
 </body>
 </html>

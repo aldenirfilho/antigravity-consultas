@@ -1,56 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UpDown — Página de Resgate</title>
-<style>
-:root{--bg:#f6f7fb;--paper:#fff;--text:#1b2433;--muted:#68758a;--line:#e5e8f0;--accent:#3557ff;}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;}
-main{max-width:1100px;margin:32px auto;padding:0 18px;}
-.hero{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 8px 30px rgba(20,30,60,.06);}
-h1{margin:0 0 8px;font-size:2.2rem;letter-spacing:-.04em;}
-p{color:var(--muted);}
-.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin-top:22px;}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px;text-decoration:none;color:var(--text);box-shadow:0 8px 24px rgba(20,30,60,.05); transition: transform 0.2s ease;}
-.card:hover{border-color:var(--accent); transform: translateY(-5px);}
-.card strong{font-size:1.2rem; display: block; margin-bottom: 5px;}
-.small{font-size:.92rem; color:var(--muted);}
-.section{margin-top:28px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px;}
-ul{padding-left:22px;}
-code{background:#eef2ff;padding:.15em .35em;border-radius:6px;}
-@media(max-width:800px){.grid{grid-template-columns:1fr;}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enciclopédia Médica Intensiva & Medicina Interna</title>
+  <meta name="description" content="Portal médico interativo para Medicina Intensiva, Medicina Interna, UTI, TEMI e prática clínica avançada." />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/graph-vivo.css" />
+  <meta property="og:title" content="Enciclopédia Médica Intensiva & Medicina Interna">
+  <meta property="og:description" content="Portal interativo UTI, TEMI, Clínica Médica — Dr. Aldenir Rocha">
+  <meta property="og:url" content="https://aldenirfilho.github.io/antigravity-consultas/">
+  <meta property="og:type" content="website">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-<main>
-<section class="hero">
-<h1>🚑 UpDown — Página de Resgate</h1>
-<p>Acesso rápido aos módulos, biblioteca, imagens e aplicações enquanto a estrutura definitiva é reorganizada.</p>
-<div class="grid">
-<a class="card" href="./updown/index.html"><strong>📖 UpDowns</strong><span class="small">Conteúdos em modo leitor transformados</span></a>
-<a class="card" href="./biblioteca/index.html"><strong>📚 Biblioteca</strong><span class="small">PDFs, Word, Markdown e fontes originais</span></a>
-<a class="card" href="./imagens/index.html"><strong>🖼️ Imagens</strong><span class="small">Cards, mapas mentais e fluxogramas</span></a>
-<a class="card" href="./apps/index.html"><strong>🧮 Aplicações</strong><span class="small">Calculadoras e escalas clínicas</span></a>
-<a class="card" href="./questoes/index.html"><strong>🏆 Questões</strong><span class="small">Banco de questões TEMI/R3</span></a>
-<a class="card" href="./06_ANTIGRAVITY/PROMPT_RESGATE_ANTIGRAVITY.md"><strong>🛠️ Protocolo</strong><span class="small">Documentação técnica do resgate</span></a>
-</div>
-</section>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="logo_concept_3_book_1778036997285.png" alt="Logo Enciclopédia" style="width: 44px; height: 44px; border-radius: 12px; object-fit: cover; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 4px 14px rgba(255, 173, 77, 0.25);" />
+      <span>
+        <strong>Enciclopédia Médica</strong>
+        <small>Intensiva & Medicina Interna</small>
+      </span>
+    </a>
 
-<section class="section">
-<h2>🔗 Triângulo de Conexão</h2>
-<p>Mantenha o fluxo: Estudo (UpDown) ↔ Fonte Original (Biblioteca) ↔ Apoio Visual (Imagens).</p>
-<ul>
-<li><strong>UpDown</strong>: Onde o conhecimento é dirimido.</li>
-<li><strong>Biblioteca</strong>: Onde a evidência é comprovada.</li>
-<li><strong>Imagens</strong>: Onde a conduta é memorizada.</li>
-</ul>
-</section>
+    <nav class="nav">
+      <a href="updown/index.html" style="color: #4ef0a1; font-weight: 800;">↕️ UpDown Hub</a>
+      <a href="06_Card_Feed_Medico/index.html" style="color: #38bdf8;">🖼️ Card Feed</a>
+      <a href="02_Banco_Questoes_TEMI/index.html" style="color: #ffc107;">🏆 Simulador TEMI</a>
+      <a href="03_Calculadoras_UTI/index.html" style="color: #4ef0a1;">🧮 Calculadoras UTI</a>
+      <a href="biblioteca/index.html">📚 Biblioteca IA</a>
+      <a href="#mapa">Mapa vivo</a>
+    </nav>
+  </header>
 
-<section class="section">
-<h2>⚠️ Aviso de Segurança</h2>
-<p>Se encontrar algum link quebrado, não apague nada. O sistema de resgate criará um card provisório automaticamente conforme o arquivo real for detectado.</p>
-</section>
-</main>
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-copy glass">
+        <span class="eyebrow">🚀 Projeto vivo • UTI • Clínica Médica • TEMI</span>
+        <h1>Uma central de comando para estudar, decidir e evoluir na medicina.</h1>
+        <p>
+          Plataforma médica interativa, continuamente atualizável e conectada por raciocínio clínico.
+          Agora com o novo sistema <strong>UpDown Hub</strong> para módulos dirimidos.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="updown/index.html">↕️ Abrir UpDown Hub</a>
+          <a class="btn" href="06_Card_Feed_Medico/index.html">🖼️ Abrir Card Feed</a>
+          <a class="btn" href="01_Modulos_Clinicos/AVC_Agudo/index.html">🧠 Abrir AVC Agudo</a>
+          <a class="btn" href="03_Calculadoras_UTI/index.html">🧮 Calculadoras UTI</a>
+        </div>
+      </div>
+
+      <aside class="status-card glass">
+        <h2>📊 Painel de Controle</h2>
+        <div class="metric-grid">
+          <div><strong>186+</strong><span>Arquivos IA</span></div>
+          <div><strong>v3.2</strong><span>Versão Hub</span></div>
+          <div><strong>05</strong><span>Módulos ativos</span></div>
+          <div><strong>∞</strong><span>📚 Biblioteca IA</span></div>
+        </div>
+        <p class="muted">Acesse a <strong>Biblioteca IA</strong> para fontes originais ou o <strong>UpDown Hub</strong> para revisões de alto rendimento.</p>
+      </aside>
+    </section>
+
+    <section id="biblioteca" style="padding:2rem 0; margin-top:20px;">
+      <div style="max-width:900px;margin:0 auto;padding:0 1.5rem">
+        <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1rem">
+          <span style="font-size:2rem">📚</span>
+          <div>
+            <h2 style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text)">Nova Biblioteca IA v2</h2>
+            <p style="font-size:.82rem;color:var(--muted)">Acesso direto a 186+ protocolos, PDFs e materiais originais Santa Casa.</p>
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
+          <div>
+            <p style="font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:.8rem">
+              📄 Acesse todos os seus arquivos originais mapeados dinamicamente na nova camada de resgate.
+            </p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:.5rem;justify-content:center">
+            <a href="biblioteca/index.html" class="btn primary">📚 Abrir Biblioteca IA →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mapa" class="section-shell section-block">
+      <h2>🕸️ Mapa vivo de conexões</h2>
+      <p class="muted">Cérebro visual interativo do projeto Antigravity.</p>
+      <div class="graph" id="graph" style="height: 600px; background: rgba(0,0,0,0.2); border-radius: 20px; border: 1px solid var(--border);"></div>
+      <div class="drawer" id="drawer" hidden>
+        <button id="drawerClose">×</button>
+        <h3 id="drawerTitle"></h3>
+        <p id="drawerBody"></p>
+      </div>
+    </section>
+
+    <section id="seguranca" class="section-shell section-block">
+      <h2>🛡️ Segurança e Curadoria</h2>
+      <div class="grid three">
+        <article class="card"><h3>✅ Segurança</h3><p>Protocolos revisados para plantão e round.</p></article>
+        <article class="card"><h3>🔎 Rastreabilidade</h3><p>Links diretos para fontes UpToDate e AMIB.</p></article>
+        <article class="card"><h3>🧑‍⚕️ Juízo Clínico</h3><p>Ferramenta de apoio, não substituta.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-shell">
+    <p>🧠 Enciclopédia Médica Antigravity — Dr. Aldenir Rocha • 2026</p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/graph.js"></script>
 </body>
 </html>

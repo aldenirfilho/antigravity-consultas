@@ -1,68 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Biblioteca — Resgate Antigravity</title>
-<style>
-:root{--bg:#f6f7fb;--paper:#fff;--text:#1b2433;--muted:#68758a;--line:#e5e8f0;--accent:#3557ff;}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;}
-main{max-width:1100px;margin:32px auto;padding:0 18px;}
-.topbar{background:var(--paper); padding: 1rem 18px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;}
-.brand{text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.2rem;}
-.lib-section{margin-top: 30px;}
-.lib-grid{display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 40px;}
-.file-card{background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);}
-.file-card:hover{border-color: var(--accent); transform: scale(1.02); transition: 0.2s;}
-.file-icon{font-size: 1.8rem;}
-.file-info strong{display: block; font-size: 1rem;}
-.file-info span{font-size: 0.8rem; color: var(--muted);}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca IA | Antigravity</title>
+  <link rel="stylesheet" href="../07_Estudos_Markdown/assets/estudos.css" />
+  <style>
+    .lib-grid-premium {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 3rem;
+    }
+    .category-title {
+      grid-column: 1 / -1;
+      margin: 2rem 0 1rem;
+      font-size: 1.5rem;
+      color: var(--accent);
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+    }
+    .file-card-premium {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s ease;
+    }
+    .file-card-premium:hover {
+      border-color: var(--accent2);
+      background: rgba(78,240,161,0.05);
+      transform: translateX(5px);
+    }
+    .file-icon-box {
+      font-size: 2rem;
+      min-width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+    }
+    .file-details strong { display: block; font-size: 0.95rem; margin-bottom: 2px; }
+    .file-details span { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; }
+  </style>
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="../index.html">🚑 Resgate</a>
-  <nav><a href="../index.html" style="text-decoration:none; color:var(--muted);">🏠 Home</a></nav>
-</header>
-<main>
-  <h1>📚 Biblioteca de Fontes</h1>
-  <p>Acesso direto aos arquivos originais e materiais de referência recuperados.</p>
-  
-  <div id="libContainer">
-    <p class="muted">Carregando arquivos...</p>
-  </div>
-</main>
+  <header class="topbar">
+    <a class="brand" href="../index.html">📚 <span>Biblioteca IA</span></a>
+    <nav>
+      <a href="../index.html">🏠 Home</a>
+      <a href="../updown/index.html">↕️ UpDown</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">📂 Repositório Central de Evidências</span>
+        <h1>Fontes Originais</h1>
+        <p>Acesso direto aos seus 186+ arquivos PDF e Word. Todos os protocolos da Santa Casa e diretrizes internacionais em um só lugar.</p>
+      </div>
+    </section>
+    
+    <div id="libContainer">
+      <p class="muted">📦 Sincronizando arquivos clínicos...</p>
+    </div>
+  </main>
 
 <script>
-async function loadLib() {
-  try {
-    const res = await fetch('../registry_resgate.json?t=' + Date.now());
-    const data = await res.json();
+const resgateData = {
+  "updatedAt": "2026-05-08",
+  "groups": [
+    {
+      "category": "Protocolos Santa Casa (SCMS)",
+      "files": [
+        {"name": "Master Protocolos 2026", "path": "05_Biblioteca_IA/inbox/00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf"},
+        {"name": "Todos Protocolos Clínica Médica", "path": "05_Biblioteca_IA/inbox/00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf"},
+        {"name": "SEPSE - Bundle 1h", "path": "05_Biblioteca_IA/inbox/01_Protocolo_SEPSE_Bundle1hHora.pdf"},
+        {"name": "Protocolo Hiponatremia", "path": "05_Biblioteca_IA/inbox/08_Protocolo_Hiponatremia.pdf"},
+        {"name": "Insuficiência Cardíaca Aguda", "path": "05_Biblioteca_IA/inbox/09_Protocolo_IC_Aguda.pdf"}
+      ]
+    },
+    {
+      "category": "Ventilação Mecânica & UTI",
+      "files": [
+        {"name": "Atlas de Ventilação", "path": "05_Biblioteca_IA/inbox/VENTILA-ATLAS.pdf"},
+        {"name": "Guia Ventila Cards", "path": "05_Biblioteca_IA/inbox/VENTILA-CARDS-GUIA.pdf"},
+        {"name": "VM Suporte Respiratório", "path": "05_Biblioteca_IA/inbox/VM_Suporte_Respiratorio_DrAldenir.pdf"},
+        {"name": "SDRA - VM Protetora", "path": "05_Biblioteca_IA/inbox/SDRA_VM_Protetora_DrAldenir.pdf"},
+        {"name": "Desmame da VM", "path": "05_Biblioteca_IA/inbox/Desmame da VM.docx"}
+      ]
+    },
+    {
+      "category": "TEMI & R3",
+      "files": [
+        {"name": "Simulado TEMI 2026", "path": "05_Biblioteca_IA/inbox/Simulado_TEMI_2026_DrAldenir.pdf"},
+        {"name": "Banco de Questões TEMI", "path": "05_Biblioteca_IA/inbox/10_Banco_Questoes_TEMI_2026.pdf"},
+        {"name": "Pocket Cards Clínica Médica", "path": "05_Biblioteca_IA/inbox/11_Pocket_Cards_Clinica_Medica.pdf"}
+      ]
+    }
+  ]
+};
+
+function loadLib() {
     const container = document.getElementById('libContainer');
-    
-    container.innerHTML = data.groups.map(group => `
-      <section class="lib-section">
-        <h2>${group.category}</h2>
-        <div class="lib-grid">
-          ${group.files.map(file => {
-            const ext = file.path.split('.').pop().toLowerCase();
-            const icon = ext === 'pdf' ? '📕' : (ext === 'docx' ? '📘' : '📄');
-            return `
-              <a class="file-card" href="../${file.path}" target="_blank">
-                <div class="file-icon">${icon}</div>
-                <div class="file-info">
-                  <strong>${file.name}</strong>
-                  <span>.${ext}</span>
-                </div>
-              </a>
-            `;
-          }).join('')}
-        </div>
-      </section>
+    container.innerHTML = resgateData.groups.map(group => `
+      <h2 class="category-title">${group.category}</h2>
+      <div class="lib-grid-premium">
+        ${group.files.map(file => {
+          const ext = file.path.split('.').pop().toLowerCase();
+          const icon = ext === 'pdf' ? '📕' : (ext === 'docx' ? '📘' : '📄');
+          return `
+            <a class="file-card-premium" href="../${file.path}" target="_blank">
+              <div class="file-icon-box">${icon}</div>
+              <div class="file-details">
+                <strong>${file.name}</strong>
+                <span>Formato: ${ext}</span>
+              </div>
+            </a>
+          `;
+        }).join('')}
+      </div>
     `).join('');
-  } catch (err) {
-    document.getElementById('libContainer').innerHTML = '<p>Erro ao carregar arquivos.</p>';
-  }
 }
 loadLib();
 </script>
