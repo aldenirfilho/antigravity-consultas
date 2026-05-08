@@ -1,0 +1,121 @@
+{
+  "updatedAt": "2026-05-08",
+  "description": "Conexão cerebral da Biblioteca IA: grafo semântico entre arquivos, temas, módulos, cards, banco TEMI e calculadoras.",
+  "nodes": [
+    {
+      "id": "biblioteca-ia",
+      "label": "📚 Biblioteca IA",
+      "type": "hub",
+      "theme": "gestao-ia-produtividade"
+    },
+    {
+      "id": "uti-geral",
+      "label": "🏥 UTI Geral",
+      "type": "theme"
+    },
+    {
+      "id": "sepse-choque",
+      "label": "🩸 Sepse / Choque",
+      "type": "theme"
+    },
+    {
+      "id": "vm-sdra",
+      "label": "🫁 VM / SDRA",
+      "type": "theme"
+    },
+    {
+      "id": "nefro-aki-trs",
+      "label": "🧪 Nefro / AKI / TRS",
+      "type": "theme"
+    },
+    {
+      "id": "infectologia",
+      "label": "🦠 Infectologia",
+      "type": "theme"
+    },
+    {
+      "id": "neuro-uti",
+      "label": "🧠 Neuro UTI",
+      "type": "theme"
+    },
+    {
+      "id": "temi-prova",
+      "label": "🏆 TEMI",
+      "type": "theme"
+    },
+    {
+      "id": "calculadoras-uti",
+      "label": "🧮 Calculadoras UTI",
+      "type": "module"
+    },
+    {
+      "id": "card-feed",
+      "label": "🖼️ Card Feed Médico",
+      "type": "module"
+    },
+    {
+      "id": "banco-temi",
+      "label": "🏆 Banco TEMI",
+      "type": "module"
+    }
+  ],
+  "edges": [
+    {
+      "from": "biblioteca-ia",
+      "to": "uti-geral",
+      "relation": "organiza"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "temi-prova",
+      "relation": "alimenta"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "card-feed",
+      "relation": "gera-cards"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "banco-temi",
+      "relation": "gera-questoes"
+    },
+    {
+      "from": "biblioteca-ia",
+      "to": "calculadoras-uti",
+      "relation": "apoia-ferramentas"
+    },
+    {
+      "from": "sepse-choque",
+      "to": "uti-geral",
+      "relation": "subtema-critico"
+    },
+    {
+      "from": "vm-sdra",
+      "to": "uti-geral",
+      "relation": "subtema-critico"
+    },
+    {
+      "from": "nefro-aki-trs",
+      "to": "uti-geral",
+      "relation": "subtema-critico"
+    },
+    {
+      "from": "infectologia",
+      "to": "sepse-choque",
+      "relation": "intersecao"
+    },
+    {
+      "from": "neuro-uti",
+      "to": "temi-prova",
+      "relation": "alto-rendimento"
+    }
+  ],
+  "rules": [
+    "Cada arquivo catalogado deve virar um node do tipo file.",
+    "Cada arquivo deve ter pelo menos 2 edges: file -> theme e file -> biblioteca-ia.",
+    "Arquivos TEMI devem conectar também a banco-temi.",
+    "Arquivos com imagem/card devem conectar também a card-feed.",
+    "Arquivos com cálculos/doses devem conectar a calculadoras-uti."
+  ]
+}

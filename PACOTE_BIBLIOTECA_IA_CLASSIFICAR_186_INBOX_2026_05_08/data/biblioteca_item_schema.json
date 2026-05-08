@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Biblioteca IA — Item catalogado",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "originalFilename",
+    "path",
+    "theme",
+    "type",
+    "status",
+    "tags",
+    "summary",
+    "createdAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Slug único"
+    },
+    "title": {
+      "type": "string"
+    },
+    "originalFilename": {
+      "type": "string"
+    },
+    "newFilename": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string"
+    },
+    "subtheme": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "clinicalUse": {
+      "type": "string"
+    },
+    "temiRelevance": {
+      "type": "string"
+    },
+    "safetyNotes": {
+      "type": "string"
+    },
+    "sourceAI": {
+      "type": "string"
+    },
+    "relatedTopics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "brainConnections": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "reviewedBy": {
+      "type": "string"
+    }
+  }
+}
