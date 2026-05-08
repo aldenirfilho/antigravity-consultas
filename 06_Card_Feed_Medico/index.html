@@ -569,6 +569,7 @@
     let reviewOnly = false;
     let activeTheme = "";
     let viewMode = localStorage.getItem('cardFeedViewMode') || 'grid';
+    let hiddenCards = JSON.parse(localStorage.getItem('cardFeedHidden') || '[]');
 
     const $ = id => document.getElementById(id);
     const nowISO = () => new Date().toISOString();
@@ -829,6 +830,8 @@
       let list = allCards().filter(c => {
         if (theme && c.theme !== theme) return false;
         if (reviewOnly && !["revisar", "aprendendo", "pendente-imagem"].includes(c.status)) return false;
+        if (hiddenCards.includes(c.id) && activeTheme !== '__hidden__') return false;
+        if (activeTheme === '__hidden__') return hiddenCards.includes(c.id);
         if (!q) return true;
         const blob = [c.title, c.theme, (c.tags || []).join(" "), c.explanation, c.notes, c.source, c.status, (c.related || []).join(" ")].join(" ").toLowerCase();
         return blob.includes(q);
@@ -860,7 +863,8 @@
       $("editTheme").innerHTML = themes.map(t => `<option value="${esc(t.id)}">${t.emoji} ${esc(t.label)}</option>`).join("");
       $("themeStrip").innerHTML = [
         `<button class="chip ${!activeTheme ? "active" : ""}" data-theme="">🌐 Todos</button>`,
-        ...themes.map(t => `<button class="chip ${activeTheme === t.id ? "active" : ""}" data-theme="${esc(t.id)}">${t.emoji} ${esc(t.label)}</button>`)
+        ...themes.map(t => `<button class="chip ${activeTheme === t.id ? "active" : ""}" data-theme="${esc(t.id)}">${t.emoji} ${esc(t.label)}</button>`),
+        `<button class="chip ${activeTheme === '__hidden__' ? "active" : ""}" data-theme="__hidden__" style="border-color:rgba(239,68,68,.4);color:#fca5a5">🚫 Ocultos (${hiddenCards.length})</button>`
       ].join("");
       document.querySelectorAll("[data-theme]").forEach(el => el.onclick = () => {
         activeTheme = el.dataset.theme;
@@ -903,6 +907,9 @@
               <button class="btn small gold" data-fav="${esc(c.id)}">${c.favorite ? "⭐" : "☆"}</button>
               <button class="btn small" data-review="${esc(c.id)}">🔁 Revisar</button>
               <button class="btn small green" data-status="${esc(c.id)}" data-value="dominado">✅ Dominei</button>
+              ${hiddenCards.includes(c.id)
+                ? `<button class="btn small" data-restore="${esc(c.id)}" style="border-color:#10b981;color:#6ee7b7">♻️ Restaurar</button>`
+                : `<button class="btn small" data-hide="${esc(c.id)}" style="border-color:#ef4444;color:#fca5a5">🚫 Ocultar</button>`}
               <a class="btn small" href="../index.html">🔗 Enciclopédia</a>
             </div>
             <div class="meta"><span>${esc(c.status || "novo")} • ${esc(sourceBadge)} • ${formatDate(c.createdAt)}</span><span>${c.nextReview ? "Próx.: " + formatDate(c.nextReview) : esc(c.source || "")}</span></div>
@@ -924,6 +931,23 @@
       document.querySelectorAll("[data-review]").forEach(b => b.onclick = () => markReview(b.dataset.review));
       document.querySelectorAll("[data-status]").forEach(b => b.onclick = () => quickStatus(b.dataset.status, b.dataset.value));
       document.querySelectorAll("[data-classify]").forEach(b => b.onclick = () => openClassify(b.dataset.classify));
+      document.querySelectorAll("[data-hide]").forEach(b => b.onclick = () => hideCard(b.dataset.hide));
+      document.querySelectorAll("[data-restore]").forEach(b => b.onclick = () => restoreCard(b.dataset.restore));
+    }
+
+    function hideCard(id) {
+      if (!confirm('🚫 Ocultar este card?\n\nVocê pode restaurar depois em 🚫 Ocultos.')) return;
+      hiddenCards.push(id);
+      localStorage.setItem('cardFeedHidden', JSON.stringify(hiddenCards));
+      render();
+      toast('🚫 Card ocultado. Veja em 🚫 Ocultos para restaurar.');
+    }
+
+    function restoreCard(id) {
+      hiddenCards = hiddenCards.filter(h => h !== id);
+      localStorage.setItem('cardFeedHidden', JSON.stringify(hiddenCards));
+      render();
+      toast('♻️ Card restaurado!');
     }
 
     function openClassify(id) {
