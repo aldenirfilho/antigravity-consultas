@@ -332,6 +332,62 @@
       .toolbar { grid-template-columns: 1fr; }
       .metrics { grid-template-columns: repeat(2, 1fr); }
     }
+    /* ===== MODO FEED CONTÍNUO: Instagram/X style ===== */
+    body.feed-continuous .wrap {
+      width: min(760px, calc(100% - 18px));
+    }
+    body.feed-continuous .feed {
+      columns: unset;
+      column-gap: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: min(680px, 100%);
+      margin: 0 auto;
+    }
+    body.feed-continuous .card {
+      width: 100%;
+      margin: 0 0 16px;
+      break-inside: auto;
+      border-radius: 26px;
+    }
+    body.feed-continuous .imgbox {
+      min-height: unset;
+      background: #020617;
+    }
+    body.feed-continuous .imgbox img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+    }
+    .view-mode-indicator {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      color: #bae6fd;
+      font-size: .86rem;
+      border: 1px solid rgba(56,189,248,.28);
+      background: rgba(56,189,248,.10);
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+    .help-box {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+      background: rgba(15,23,42,.64);
+      color: #d1d5db;
+      line-height: 1.45;
+      font-size: .92rem;
+      margin-bottom: 10px;
+    }
+    .help-box code {
+      background: rgba(15,23,42,.9);
+      padding: 2px 5px;
+      border-radius: 8px;
+      color: #bae6fd;
+    }
     @media print {
       .topbar, .toolbar, .theme-strip, .floating, dialog, .install-hint { display: none !important; }
       body { background: #fff; color: #111; padding: 0; }
@@ -379,6 +435,10 @@
           <button class="btn" id="btnBackup">📥 Importar backup</button>
           <button class="btn" id="btnExport">📤 Exportar backup</button>
           <button class="btn gold" id="btnReview">🔁 Modo revisão</button>
+          <button class="btn" id="btnFeedMode">📲 Feed contínuo</button>
+          <span class="view-mode-indicator" id="viewModeIndicator">▦ Grade</span>
+          <button class="btn" id="btnHelp">📘 Como usar</button>
+          <button class="btn" id="btnPrint">🖨️ Imprimir/PDF</button>
         </div>
       </div>
       <aside class="glass">
@@ -387,6 +447,7 @@
           <div class="metric"><b id="statRepo">0</b><span>cards do repo</span></div>
           <div class="metric"><b id="statLocal">0</b><span>cards locais</span></div>
           <div class="metric"><b id="statFav">0</b><span>favoritos</span></div>
+          <div class="metric"><b id="statReview">0</b><span>em revisão</span></div>
         </div>
       </aside>
     </section>
@@ -401,6 +462,7 @@
       <select id="themeFilter" class="select"></select>
       <select id="sortMode" class="select">
         <option value="newest">Mais recentes</option>
+        <option value="oldest">Mais antigos</option>
         <option value="theme">Tema A-Z</option>
         <option value="title">Título A-Z</option>
         <option value="review">Revisão primeiro</option>
@@ -458,6 +520,21 @@
     </div>
   </dialog>
 
+  <dialog id="helpDialog">
+    <div class="modal-head">
+      <strong>📘 Como usar e alimentar continuamente</strong>
+      <button class="btn small" onclick="document.getElementById('helpDialog').close()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="help-box"><b>1) Entrada pelo iCloud</b><br/>Crie no iCloud Drive uma pasta <code>GPT_Card_Feed_Medico</code>. Salve imagens do ChatGPT/Claude lá. Depois toque em <code>Importar imagens</code>.</div>
+      <div class="help-box"><b>2) Organização automática</b><br/>O app sugere tema pelo nome do arquivo: <code>AKI</code>, <code>KDIGO</code>, <code>VM</code>, <code>sepse</code>. Depois edite manualmente.</div>
+      <div class="help-box"><b>3) Comentários</b><br/>Em cada card, toque em <code>Editar</code>. Acrescente resumo, conduta, alerta TEMI, tags e status.</div>
+      <div class="help-box"><b>4) Backup e migração</b><br/>Use <code>Exportar backup</code> e salve no iCloud. Para restaurar, use <code>Importar backup</code>.</div>
+      <div class="help-box"><b>5) Modo Feed Contínuo</b><br/>Clique em <code>📲 Feed contínuo</code> para ver cards um abaixo do outro, estilo Instagram. Ideal para celular.</div>
+      <div class="help-box" style="border-color:rgba(251,191,36,.24);background:rgba(251,191,36,.08);color:#fde68a"><b>⚠️ Limitação</b><br/>Cards locais ficam neste navegador (IndexedDB). Para sincronizar, exporte backup JSON ou envie imagens para <code>assets/cards/</code> + cadastre em <code>data/cards.json</code>.</div>
+    </div>
+  </dialog>
+
   <div id="toast" class="toast"></div>
 
   <script>
@@ -469,6 +546,7 @@
     let themes = [];
     let reviewOnly = false;
     let activeTheme = "";
+    let viewMode = localStorage.getItem('cardFeedViewMode') || 'grid';
 
     const $ = id => document.getElementById(id);
     const nowISO = () => new Date().toISOString();
@@ -484,6 +562,46 @@
 
     function esc(s = "") {
       return String(s).replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[m]));
+    }
+
+    function formatDate(iso) {
+      if (!iso) return "";
+      try { return new Date(iso).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "2-digit" }); }
+      catch { return ""; }
+    }
+
+    function addDays(days) {
+      const d = new Date();
+      d.setDate(d.getDate() + days);
+      return d.toISOString();
+    }
+
+    function applyViewMode() {
+      const isContinuous = viewMode === "continuous";
+      document.body.classList.toggle("feed-continuous", isContinuous);
+      const btn = $("btnFeedMode");
+      const indicator = $("viewModeIndicator");
+      if (btn) btn.textContent = isContinuous ? "▦ Modo grade" : "📲 Feed contínuo";
+      if (indicator) indicator.textContent = isContinuous ? "📲 Feed contínuo" : "▦ Grade";
+      localStorage.setItem("cardFeedViewMode", viewMode);
+    }
+
+    function toggleViewMode() {
+      viewMode = viewMode === "continuous" ? "grid" : "continuous";
+      applyViewMode();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      toast(viewMode === "continuous" ? "📲 Modo Feed Contínuo ativado." : "▦ Modo Grade ativado.");
+    }
+
+    async function quickStatus(id, status) {
+      const c = getCard(id);
+      if (!c) return;
+      c.status = status;
+      if (status === "revisar") c.nextReview = addDays(1);
+      if (status === "aprendendo") c.nextReview = addDays(3);
+      if (status === "dominado") c.nextReview = addDays(14);
+      await saveCardAsLocal(c);
+      toast(status === "dominado" ? "✅ Marcado como dominado." : "🔁 Card enviado para revisão.");
     }
 
     function openDB() {
@@ -674,9 +792,14 @@
       });
       const sort = $("sortMode").value;
       list.sort((a,b) => {
+        if (sort === "oldest") return new Date(a.createdAt || 0) - new Date(b.createdAt || 0);
         if (sort === "theme") return String(a.theme).localeCompare(String(b.theme));
         if (sort === "title") return String(a.title).localeCompare(String(b.title));
-        if (sort === "review") return String(a.status).localeCompare(String(b.status));
+        if (sort === "review") {
+          const ar = a.nextReview ? new Date(a.nextReview).getTime() : Infinity;
+          const br = b.nextReview ? new Date(b.nextReview).getTime() : Infinity;
+          return ar - br;
+        }
         return new Date(b.createdAt || 0) - new Date(a.createdAt || 0);
       });
       return list;
@@ -704,6 +827,8 @@
       $("statRepo").textContent = repoCards.length;
       $("statLocal").textContent = localCards.length;
       $("statFav").textContent = list.filter(c => c.favorite).length;
+      const reviewCount = list.filter(c => c.status === "revisar" || c.status === "aprendendo" || (c.nextReview && new Date(c.nextReview) <= new Date())).length;
+      $("statReview").textContent = reviewCount;
     }
 
     function cardHTML(c) {
@@ -728,15 +853,17 @@
               <button class="btn small" data-edit="${esc(c.id)}">✍️ Editar local</button>
               <button class="btn small gold" data-fav="${esc(c.id)}">${c.favorite ? "⭐" : "☆"}</button>
               <button class="btn small" data-review="${esc(c.id)}">🔁 Revisar</button>
+              <button class="btn small green" data-status="${esc(c.id)}" data-value="dominado">✅ Dominei</button>
               <a class="btn small" href="../index.html">🔗 Enciclopédia</a>
             </div>
-            <div class="meta"><span>${esc(c.status || "novo")} • ${esc(sourceBadge)}</span><span>${esc(c.source || "")}</span></div>
+            <div class="meta"><span>${esc(c.status || "novo")} • ${esc(sourceBadge)} • ${formatDate(c.createdAt)}</span><span>${c.nextReview ? "Próx.: " + formatDate(c.nextReview) : esc(c.source || "")}</span></div>
           </div>
         </article>
       `;
     }
 
     function render() {
+      applyViewMode();
       updateControls();
       updateStats();
       const list = getFiltered();
@@ -746,6 +873,7 @@
       document.querySelectorAll("[data-view]").forEach(b => b.onclick = () => openViewer(b.dataset.view));
       document.querySelectorAll("[data-fav]").forEach(b => b.onclick = () => toggleFavorite(b.dataset.fav));
       document.querySelectorAll("[data-review]").forEach(b => b.onclick = () => markReview(b.dataset.review));
+      document.querySelectorAll("[data-status]").forEach(b => b.onclick = () => quickStatus(b.dataset.status, b.dataset.value));
     }
 
     function getCard(id) {
@@ -811,6 +939,7 @@
       const c = getCard(id);
       if (!c) return;
       c.status = "revisar";
+      c.nextReview = addDays(1);
       await saveCardAsLocal(c);
       toast("🔁 Card marcado para revisão.");
     }
@@ -856,6 +985,9 @@
       $("backupInput").onchange = e => importBackup(e.target.files[0]);
       $("btnExport").onclick = exportBackup;
       $("btnReview").onclick = () => { reviewOnly = !reviewOnly; $("btnReview").textContent = reviewOnly ? "🗂️ Ver todos" : "🔁 Modo revisão"; render(); };
+      $("btnFeedMode").onclick = toggleViewMode;
+      $("btnHelp").onclick = () => $("helpDialog").showModal();
+      $("btnPrint").onclick = () => window.print();
       ["search", "sortMode"].forEach(id => { $(id).oninput = render; $(id).onchange = render; });
       $("themeFilter").onchange = () => { activeTheme = $("themeFilter").value; render(); };
       $("editForm").onsubmit = async e => { e.preventDefault(); await saveEdit(); $("editDialog").close(); };
