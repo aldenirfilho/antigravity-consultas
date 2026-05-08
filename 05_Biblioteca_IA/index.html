@@ -101,6 +101,13 @@
 
   /* INBOX BADGE */
   .inbox-badge{background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;font-size:.65rem;padding:.15rem .5rem;border-radius:10px;font-weight:700;position:absolute;top:8px;right:8px;z-index:2}
+
+  /* PREVIEW OVERLAY */
+  .preview-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);z-index:200;flex-direction:column}
+  .preview-overlay.open{display:flex}
+  .preview-toolbar{display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.2rem;background:var(--bg2);border-bottom:1px solid var(--border)}
+  .preview-toolbar h3{font-family:'Syne',sans-serif;font-size:.95rem;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;margin-right:1rem}
+  .preview-iframe{flex:1;border:none;background:#fff}
 </style>
 </head>
 <body>
@@ -227,6 +234,19 @@
   </div>
 </div>
 
+<!-- PREVIEW OVERLAY -->
+<div class="preview-overlay" id="previewOverlay">
+  <div class="preview-toolbar">
+    <h3 id="previewTitle">Visualizando arquivo</h3>
+    <div style="display:flex;gap:.5rem">
+      <a id="previewDirect" href="#" target="_blank" class="btn btn-secondary" style="font-size:.75rem">🔗 Abrir direto</a>
+      <a id="previewDownload" href="#" download class="btn btn-secondary" style="font-size:.75rem">⬇️ Baixar</a>
+      <button class="btn btn-primary" onclick="fecharPreview()" style="font-size:.75rem">✕ Fechar</button>
+    </div>
+  </div>
+  <iframe class="preview-iframe" id="previewFrame"></iframe>
+</div>
+
 <script>
 // ============================================================
 //  ARRAY DE ARQUIVOS — ADICIONE SEUS PDFS/DOCS AQUI
@@ -341,7 +361,7 @@ function filtrarCards(){
       <div class="card-actions">
         ${a._inboxFile && !a._classified ? `<button class="btn btn-primary" style="background:linear-gradient(135deg,#f59e0b,#ef4444)" onclick="abrirClassify(${ARQUIVOS.indexOf(a)})">📂 Classificar</button>` : ''}
         ${isOculto(a) ? `<button class="btn btn-primary" style="background:#10b981" onclick="restaurarArquivo(${ARQUIVOS.indexOf(a)})">♻️ Restaurar</button>` : `<button class="btn btn-secondary" style="border-color:#ef4444;color:#fca5a5" onclick="ocultarArquivo(${ARQUIVOS.indexOf(a)})">🚫 Ocultar</button>`}
-        ${a.link_ver !== '#' ? `<a href="${a.link_ver}" target="_blank" class="btn btn-primary">🔍 Ver</a>` : `<button class="btn btn-primary" onclick="avisoEmBreve()">🔍 Ver</button>`}
+        ${a.link_ver !== '#' ? `<button class="btn btn-primary" onclick="abrirPreview('${encodeURIComponent(a.link_ver)}', '${a.titulo.replace(/'/g,"\\'")}')">👁️ Ver</button>` : `<button class="btn btn-primary" onclick="avisoEmBreve()">👁️ Ver</button>`}
         ${a.link_baixar !== '#' ? `<a href="${a.link_baixar}" download class="btn btn-secondary">⬇️ Baixar</a>` : `<button class="btn btn-secondary" onclick="avisoEmBreve()">⬇️ Baixar</button>`}
       </div>
     </div>
@@ -356,7 +376,40 @@ function iconeTipo(t){
 }
 
 function avisoEmBreve(){
-  alert('⚠️ Arquivo em breve!\n\nSuba o PDF/DOCX na pasta biblioteca_ia/arquivos/ no GitHub e atualize o link neste arquivo.');
+  alert('⚠️ Arquivo em breve!\n\nSuba o PDF/DOCX na pasta inbox/ no GitHub e rode scan_inbox.sh.');
+}
+
+const BASE_URL = 'https://aldenirfilho.github.io/antigravity-consultas/05_Biblioteca_IA/';
+
+function abrirPreview(encodedPath, titulo) {
+  const path = decodeURIComponent(encodedPath);
+  const fullUrl = path.startsWith('http') ? path : BASE_URL + path;
+  const ext = path.split('.').pop().toLowerCase();
+  const frame = document.getElementById('previewFrame');
+  
+  document.getElementById('previewTitle').textContent = titulo || 'Visualizando arquivo';
+  document.getElementById('previewDirect').href = path;
+  document.getElementById('previewDownload').href = path;
+  
+  if (ext === 'pdf') {
+    // PDFs: navegador abre nativamente
+    frame.src = path;
+  } else if (['docx', 'doc', 'xlsx', 'pptx'].includes(ext)) {
+    // Office: Google Docs Viewer
+    frame.src = 'https://docs.google.com/gview?url=' + encodeURIComponent(fullUrl) + '&embedded=true';
+  } else if (ext === 'html' || ext === 'htm') {
+    // HTML: abrir direto
+    frame.src = path;
+  } else {
+    frame.src = path;
+  }
+  
+  document.getElementById('previewOverlay').classList.add('open');
+}
+
+function fecharPreview() {
+  document.getElementById('previewFrame').src = '';
+  document.getElementById('previewOverlay').classList.remove('open');
 }
 
 function ocultarArquivo(idx) {
