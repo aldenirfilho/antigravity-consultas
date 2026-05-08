@@ -36,6 +36,17 @@
       "version": "v1.1",
       "summary": "Guia didático completo sobre Lúpus com modo escuro, sumário interativo e ferramentas de acessibilidade.",
       "tags": ["updown", "lupus", "reumatologia", "diagnostico", "temi", "r3"]
+    },
+    {
+      "id": "updown-002-les-manejo-prognostico",
+      "title": "UPDOWN #002 — Lúpus: Manejo e Prognóstico (Leitor PRO)",
+      "icon": "💊",
+      "path": "content/reumatologia/les-manejo/index.html",
+      "theme": "reumatologia",
+      "status": "ativo",
+      "version": "v1.0",
+      "summary": "Estratégias de tratamento, monitoramento clínico/laboratorial e fatores de prognóstico no LES.",
+      "tags": ["updown", "lupus", "reumatologia", "manejo", "temi", "r3"]
     }
   ]
 }

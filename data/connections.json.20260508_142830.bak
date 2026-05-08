@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-08T14:28:30.060514",
+  "updatedAt": "2026-05-08T13:21:44.645607",
   "version": "4.0",
   "description": "Mapa vivo organizado da Enciclopédia: portal, Biblioteca IA, Card Feed, Banco TEMI, Calculadoras, AVC e macrotemas de UTI.",
   "legend": {
@@ -544,21 +544,6 @@
         "lupus",
         "reumatologia",
         "updown"
-      ],
-      "visible": true
-    },
-    {
-      "id": "updown-002-les-manejo-prognostico",
-      "label": "💊 LES: Manejo",
-      "type": "theme",
-      "status": "ativo",
-      "body": "Estudo UPDOWN sobre manejo e prognóstico do Lúpus Eritematoso Sistêmico.",
-      "url": "07_Estudos_Markdown/content/reumatologia/les-manejo/index.html",
-      "tags": [
-        "lupus",
-        "reumatologia",
-        "updown",
-        "manejo"
       ],
       "visible": true
     }
@@ -1647,22 +1632,6 @@
       "from": "UPDOWN_001_LES_Manifestacoes_Diagnostico",
       "to": "updown",
       "relation": "produto-do-fluxo",
-      "strength": "direct",
-      "status": "ativo",
-      "visible": true
-    },
-    {
-      "from": "updown-002-les-manejo-prognostico",
-      "to": "updown",
-      "relation": "produto-do-fluxo",
-      "strength": "direct",
-      "status": "ativo",
-      "visible": true
-    },
-    {
-      "from": "updown-002-les-manejo-prognostico",
-      "to": "UPDOWN_001_LES_Manifestacoes_Diagnostico",
-      "relation": "seguimento-clinico",
       "strength": "direct",
       "status": "ativo",
       "visible": true
