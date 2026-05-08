@@ -1,105 +1,104 @@
 const fallbackNodes = [
-  { id: 'home', label: '🏠 Portal', body: 'Página-mãe da Enciclopédia.', x: 48, y: 8, type: 'hub', url: 'index.html' },
-  { id: 'biblioteca-ia', label: '📚 Biblioteca IA', body: 'Repositório de documentos e curadoria IA.', x: 18, y: 24, type: 'biblioteca', url: '05_Biblioteca_IA/index.html' },
-  { id: 'card-feed-medico', label: '🖼️ Card Feed', body: 'Feed visual de cards médicos.', x: 80, y: 24, type: 'feed', url: '06_Card_Feed_Medico/index.html' },
-  { id: 'banco-temi', label: '🏆 Banco TEMI', body: 'Questões comentadas e simulação TEMI.', x: 34, y: 38, type: 'qbank', url: '02_Banco_Questoes_TEMI/index.html' },
-  { id: 'calculadoras-uti', label: '🧮 Calculadoras UTI', body: 'Drogas, diluições, VM, eletrólitos e renal.', x: 64, y: 38, type: 'tool', url: '03_Calculadoras_UTI/index.html' },
-  { id: 'avc-agudo', label: '🧠 AVC Agudo', body: 'Módulo ativo: emergência, reperfusão e neuroimagem.', x: 49, y: 54, type: 'module', url: '01_Modulos_Clinicos/AVC_Agudo/avc.html' }
+  { id: 'home', label: '🏠 Portal', x: 50, y: 50, type: 'hub' },
+  { id: 'biblioteca-ia', label: '📚 Biblioteca', x: 20, y: 30, type: 'biblioteca' },
+  { id: 'card-feed-medico', label: '🖼️ Feed', x: 80, y: 30, type: 'feed' },
+  { id: 'banco-temi', label: '🏆 TEMI', x: 30, y: 70, type: 'qbank' },
+  { id: 'calculadoras-uti', label: '🧮 Calculadoras', x: 70, y: 70, type: 'tool' },
+  { id: 'avc-agudo', label: '🧠 AVC Agudo', x: 50, y: 80, type: 'module' }
 ];
 
 const fallbackEdges = [
-  { from: 'home', to: 'biblioteca-ia', relation: 'organiza' },
-  { from: 'home', to: 'card-feed-medico', relation: 'revisão visual' },
-  { from: 'home', to: 'banco-temi', relation: 'treino ativo' },
-  { from: 'home', to: 'calculadoras-uti', relation: 'ferramentas' },
-  { from: 'home', to: 'avc-agudo', relation: 'módulo ativo' },
-  { from: 'biblioteca-ia', to: 'banco-temi', relation: 'gera questões' },
-  { from: 'biblioteca-ia', to: 'card-feed-medico', relation: 'gera cards' }
+  { from: 'home', to: 'biblioteca-ia' },
+  { from: 'home', to: 'card-feed-medico' },
+  { from: 'home', to: 'banco-temi' },
+  { from: 'home', to: 'calculadoras-uti' },
+  { from: 'home', to: 'avc-agudo' }
 ];
 
-function graphNodeClass(type = '') {
-  const map = {
-    hub: 'node-hub',
-    biblioteca: 'node-library',
-    feed: 'node-feed',
-    qbank: 'node-qbank',
-    tool: 'node-tool',
-    module: 'node-module',
-    topic: 'node-topic',
-    theme: 'node-theme',
-    file: 'node-file'
-  };
-  return map[type] || 'node-theme';
-}
-
-function makeLine(edge, fromNode, toNode) {
-  const dx = toNode.x - fromNode.x;
-  const dy = toNode.y - fromNode.y;
-  const length = Math.sqrt(dx * dx + dy * dy);
-  const angle = Math.atan2(dy, dx) * 180 / Math.PI;
-  const midX = fromNode.x;
-  const midY = fromNode.y;
-
-  return `
-    <div class="edge" style="left:${midX}%; top:${midY}%; width:${length}%; transform:rotate(${angle}deg);" title="${edge.relation || ''}"></div>
-  `;
-}
-
 async function renderGraph() {
-  const graph = document.getElementById('graph');
-  if (!graph) return;
+  const container = document.getElementById('graph');
+  if (!container) return;
 
-  const data = await loadJSON('data/connections.json', { nodes: fallbackNodes, edges: fallbackEdges });
-  const nodes = data.nodes || [];
-  const edges = data.edges || [];
-  const nodeMap = new Map(nodes.map(node => [node.id, node]));
+  // 1. Carregar dados
+  let data = { nodes: fallbackNodes, edges: fallbackEdges };
+  try {
+    const res = await fetch('data/connections.json');
+    if (res.ok) data = await res.json();
+  } catch (e) { console.warn("Usando fallback para o mapa."); }
 
-  const edgeHTML = edges.map(edge => {
-    const fromNode = nodeMap.get(edge.from);
-    const toNode = nodeMap.get(edge.to);
-    if (!fromNode || !toNode) return '';
-    return makeLine(edge, fromNode, toNode);
+  // 2. Filtrar para não poluir a Home (Max 40 nós)
+  // Mostramos Hubs, Módulos e os arquivos mais prioritários
+  const priorityNodes = data.nodes.filter(n => 
+    n.type !== 'file' || 
+    (n.priority === 'alta' || n.priority === 'core' || n.status === 'ativo')
+  ).slice(0, 45);
+  
+  const nodeIds = new Set(priorityNodes.map(n => n.id));
+  const validEdges = data.edges.filter(e => nodeIds.has(e.from) && nodeIds.has(e.to));
+  const nodeMap = new Map(priorityNodes.map(n => [n.id, n]));
+
+  // 3. Preparar SVG
+  container.innerHTML = `
+    <svg id="graph-svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(255,255,255,0.2)" />
+        </marker>
+      </defs>
+      <g id="edges-group"></g>
+      <g id="nodes-group"></g>
+    </svg>
+  `;
+
+  const edgesGroup = document.getElementById('edges-group');
+  const nodesGroup = document.getElementById('nodes-group');
+
+  // 4. Renderizar Linhas (Edges)
+  edgesGroup.innerHTML = validEdges.map(edge => {
+    const from = nodeMap.get(edge.from);
+    const to = nodeMap.get(edge.to);
+    if (!from || !to) return '';
+    return `<line x1="${from.x}" y1="${from.y}" x2="${to.x}" y2="${to.y}" stroke="rgba(255,255,255,0.1)" stroke-width="0.3" marker-end="url(#arrow)" />`;
   }).join('');
 
-  const nodeHTML = nodes.map(node => `
-    <button
-      class="node ${graphNodeClass(node.type)}"
-      style="left:${node.x}%; top:${node.y}%;"
-      data-id="${node.id}"
-      data-title="${node.label}"
-      data-body="${node.body || node.description || ''}"
-      data-url="${node.url || ''}"
-      data-status="${node.status || ''}"
-      data-type="${node.type || ''}">
-      <span>${node.label}</span>
-      ${node.status ? `<small>${node.status}</small>` : ''}
-    </button>
-  `).join('');
+  // 5. Renderizar Nós (Nodes)
+  nodesGroup.innerHTML = priorityNodes.map(node => {
+    const color = getComputedStyle(document.documentElement).getPropertyValue(`--node-${node.type}`).trim() || '#64748b';
+    const radius = (node.type === 'hub' ? 3 : (node.type === 'module' || node.type === 'biblioteca' ? 2.5 : 2));
+    
+    return `
+      <g class="node-group" onclick="showNodeDetails('${node.id}')" style="cursor:pointer">
+        <circle cx="${node.x}" cy="${node.y}" r="${radius}" fill="${color}" opacity="0.8">
+          ${node.status === 'ativo' ? '<animate attributeName="r" values="'+radius+';'+(radius*1.3)+';'+radius+'" dur="3s" repeatCount="indefinite" />' : ''}
+        </circle>
+        <text x="${node.x}" y="${node.y + radius + 3}" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="2" font-family="Syne">${node.label}</text>
+      </g>
+    `;
+  }).join('');
 
-  graph.innerHTML = `<div class="edge-layer">${edgeHTML}</div><div class="node-layer">${nodeHTML}</div>`;
+  // 6. Detalhes (Drawer)
+  window.showNodeDetails = (id) => {
+    const node = nodeMap.get(id);
+    if (!node) return;
+    const drawer = document.getElementById('drawer');
+    const title = document.getElementById('drawerTitle');
+    const body = document.getElementById('drawerBody');
+    
+    title.textContent = node.label;
+    body.innerHTML = `
+      <p>${node.body || node.description || 'Nó de conexão clínica.'}</p>
+      <div class="drawer-meta">
+        <span>Tipo: ${node.type}</span>
+        <span>Status: ${node.status || 'planejado'}</span>
+      </div>
+      ${node.url && node.url !== '#' ? `<a class="btn primary" href="${node.url}">Abrir Módulo →</a>` : '<span class="btn ghost">Em desenvolvimento</span>'}
+    `;
+    drawer.hidden = false;
+  };
 
-  const drawer = document.getElementById('drawer');
-  const title = document.getElementById('drawerTitle');
-  const body = document.getElementById('drawerBody');
   const close = document.getElementById('drawerClose');
-
-  graph.querySelectorAll('.node').forEach(node => {
-    node.addEventListener('click', () => {
-      const url = node.dataset.url;
-      title.textContent = node.dataset.title;
-      body.innerHTML = `
-        <p>${node.dataset.body || ''}</p>
-        <div class="drawer-meta">
-          <span>Tipo: ${node.dataset.type || 'nó'}</span>
-          ${node.dataset.status ? `<span>Status: ${node.dataset.status}</span>` : ''}
-        </div>
-        ${url && url !== '#' ? `<a class="btn primary" href="${url}">Abrir →</a>` : `<span class="btn ghost">Módulo planejado</span>`}
-      `;
-      drawer.hidden = false;
-    });
-  });
-
-  if (close) close.addEventListener('click', () => drawer.hidden = true);
+  if (close) close.onclick = () => document.getElementById('drawer').hidden = true;
 }
 
+// Iniciar
 renderGraph();

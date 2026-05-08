@@ -17,8 +17,8 @@
       "id": "home",
       "label": "🏠 Portal",
       "body": "Página-mãe da Enciclopédia: entrada para módulos, Biblioteca, TEMI, Calculadoras e Card Feed.",
-      "x": 48,
-      "y": 8,
+      "x": 50,
+      "y": 50,
       "type": "hub",
       "url": "index.html",
       "status": "ativo"
@@ -27,8 +27,8 @@
       "id": "biblioteca-ia",
       "label": "📚 Biblioteca IA",
       "body": "Repositório de PDFs, Word, HTML e materiais gerados/curados com IA.",
-      "x": 18,
-      "y": 24,
+      "x": 25,
+      "y": 25,
       "type": "biblioteca",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo"
@@ -37,8 +37,8 @@
       "id": "card-feed-medico",
       "label": "🖼️ Card Feed",
       "body": "Feed visual de cards/wallpapers médicos para revisão rápida.",
-      "x": 80,
-      "y": 24,
+      "x": 75,
+      "y": 25,
       "type": "feed",
       "url": "06_Card_Feed_Medico/index.html",
       "status": "ativo"
@@ -47,8 +47,8 @@
       "id": "banco-temi",
       "label": "🏆 Banco TEMI",
       "body": "Questões comentadas, prova TEMI e revisão ativa.",
-      "x": 34,
-      "y": 38,
+      "x": 25,
+      "y": 75,
       "type": "qbank",
       "url": "02_Banco_Questoes_TEMI/index.html",
       "status": "ativo"
@@ -57,8 +57,8 @@
       "id": "calculadoras-uti",
       "label": "🧮 Calculadoras UTI",
       "body": "Drogas, diluições, ventilação, eletrólitos, renal e gasometria.",
-      "x": 64,
-      "y": 38,
+      "x": 75,
+      "y": 75,
       "type": "tool",
       "url": "03_Calculadoras_UTI/index.html",
       "status": "ativo"
@@ -67,8 +67,8 @@
       "id": "avc-agudo",
       "label": "🧠 AVC Agudo",
       "body": "Módulo ativo: emergência, reperfusão, neuroimagem, UTI e prevenção secundária.",
-      "x": 49,
-      "y": 54,
+      "x": 50,
+      "y": 20,
       "type": "module",
       "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html",
       "status": "ativo"
@@ -77,8 +77,8 @@
       "id": "neuroimagem-avc",
       "label": "🖥️ Neuroimagem",
       "body": "TC, ASPECTS, angioTC e perfusão para decisão de reperfusão.",
-      "x": 23,
-      "y": 58,
+      "x": 38.76251975251044,
+      "y": 15.790601267724561,
       "type": "topic",
       "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#neuroimagem",
       "status": "ativo"
@@ -87,8 +87,8 @@
       "id": "trombolise-avc",
       "label": "💉 Trombólise",
       "body": "Janela, contraindicações, PA e sangramento.",
-      "x": 36,
-      "y": 68,
+      "x": 40.19991389329811,
+      "y": 10.715156851016355,
       "type": "topic",
       "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#trombolise",
       "status": "ativo"
@@ -97,8 +97,8 @@
       "id": "trombectomia-avc",
       "label": "🧲 Trombectomia",
       "body": "OGV, angioTC, perfusão e regulação.",
-      "x": 61,
-      "y": 68,
+      "x": 43.988012418800366,
+      "y": 10,
       "type": "topic",
       "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#trombectomia",
       "status": "ativo"
@@ -107,8 +107,8 @@
       "id": "pa-avc",
       "label": "🎚️ PA no AVC",
       "body": "Metas pressóricas conforme cenário e reperfusão.",
-      "x": 18,
-      "y": 74,
+      "x": 49.7955870528623,
+      "y": 10,
       "type": "topic",
       "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#pressao",
       "status": "ativo"
@@ -117,8 +117,8 @@
       "id": "fa-avc",
       "label": "❤️ FA / prevenção",
       "body": "AVC cardioembólico, anticoagulação e prevenção secundária.",
-      "x": 80,
-      "y": 74,
+      "x": 56.803599368833645,
+      "y": 10,
       "type": "topic",
       "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#prevencao-secundaria",
       "status": "ativo"
@@ -127,8 +127,8 @@
       "id": "edema-cerebral-avc",
       "label": "🌊 Edema cerebral",
       "body": "Neuro UTI, osmoterapia e craniectomia descompressiva.",
-      "x": 50,
-      "y": 82,
+      "x": 63.81906059867957,
+      "y": 10,
       "type": "topic",
       "url": "01_Modulos_Clinicos/AVC_Agudo/avc.html#edema",
       "status": "ativo"
@@ -137,8 +137,8 @@
       "id": "vm-sdra",
       "label": "🫁 VM/SDRA",
       "body": "Ventilação protetora, driving pressure, PEEP, prona e resgate.",
-      "x": 86,
-      "y": 50,
+      "x": 13.762519752510444,
+      "y": 20.79060126772456,
       "type": "theme",
       "url": "01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html",
       "status": "ativo/parcial"
@@ -147,8 +147,8 @@
       "id": "sepse-choque",
       "label": "🩸 Sepse/Choque",
       "body": "Bundle, lactato, antibiótico, fluidos, vasopressores e choque refratário.",
-      "x": 78,
-      "y": 58,
+      "x": 15.199913893298108,
+      "y": 15.715156851016355,
       "type": "theme",
       "url": "#",
       "status": "planejado"
@@ -157,8 +157,8 @@
       "id": "nefro-aki-trs",
       "label": "🧪 AKI/TRS",
       "body": "KDIGO, hemodiálise, CRRT e complicações intradialíticas.",
-      "x": 14,
-      "y": 50,
+      "x": 18.988012418800366,
+      "y": 11.257510948758176,
       "type": "theme",
       "url": "#",
       "status": "planejado"
@@ -167,8 +167,8 @@
       "id": "infectologia-uti",
       "label": "🦠 Infectologia",
       "body": "CVC, PAV, pneumonia aspirativa, antimicrobianos e culturas.",
-      "x": 10,
-      "y": 64,
+      "x": 24.795587052862306,
+      "y": 10,
       "type": "theme",
       "url": "#",
       "status": "planejado"
@@ -177,8 +177,8 @@
       "id": "endocrino-metabolico",
       "label": "🍬 Endócrino",
       "body": "CAD, EHH, hipoglicemia, crise tireotóxica e diabetes.",
-      "x": 10,
-      "y": 86,
+      "x": 31.803599368833645,
+      "y": 10,
       "type": "theme",
       "url": "#",
       "status": "planejado"
@@ -187,8 +187,8 @@
       "id": "farmaco-doses",
       "label": "💊 Doses",
       "body": "Doses, diluições, bomba, DVA, sedação e alto risco.",
-      "x": 90,
-      "y": 84,
+      "x": 85.53099074268448,
+      "y": 80.75310646325043,
       "type": "theme",
       "url": "03_Calculadoras_UTI/index.html",
       "status": "ativo/parcial"
@@ -197,8 +197,8 @@
       "id": "pocus-usg",
       "label": "🔊 POCUS",
       "body": "USG beira-leito para choque, pulmão, volume e procedimentos.",
-      "x": 68,
-      "y": 88,
+      "x": 38.76251975251044,
+      "y": 45.79060126772456,
       "type": "theme",
       "url": "#",
       "status": "planejado"
@@ -207,8 +207,8 @@
       "id": "familia-paciente",
       "label": "👨‍👩‍👧 Família",
       "body": "Orientações visuais para pacientes, cuidadores e segurança domiciliar.",
-      "x": 88,
-      "y": 14,
+      "x": 85.53099074268448,
+      "y": 30.753106463250436,
       "type": "theme",
       "url": "06_Card_Feed_Medico/index.html",
       "status": "ativo/parcial"
@@ -217,8 +217,8 @@
       "id": "ia-produtividade",
       "label": "⚙️ IA/Produtividade",
       "body": "Obsidian, Antigravity, GitHub, prompts e organização médica.",
-      "x": 8,
-      "y": 12,
+      "x": 40.19991389329811,
+      "y": 40.71515685101635,
       "type": "theme",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo/parcial"
@@ -230,8 +230,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 25.909666078954373,
-      "y": 25.198825474970636
+      "x": 43.988012418800366,
+      "y": 36.257510948758174
     },
     {
       "id": "brain-protocolo-desmame-vm-sedoanalgesia",
@@ -240,8 +240,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 23.612642302236566,
-      "y": 29.70072332139919
+      "x": 49.7955870528623,
+      "y": 33.50126625019234
     },
     {
       "id": "brain-suporte-respiratorio-decisao-uti-sara-grave",
@@ -250,8 +250,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 15.212902977056523,
-      "y": 31.498805917257734
+      "x": 56.803599368833645,
+      "y": 33.335335718100815
     },
     {
       "id": "brain-simulador-suporte-respiratorio-vm-sara",
@@ -260,8 +260,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 10.658390072156656,
-      "y": 27.178169861318313
+      "x": 63.81906059867957,
+      "y": 36.24196365137736
     },
     {
       "id": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
@@ -270,8 +270,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 10.288326993497293,
-      "y": 21.871596974072464
+      "x": 69.47704704562476,
+      "y": 42.14859003856505
     },
     {
       "id": "brain-protocolo-teste-estresse-furosemida-uti-temi",
@@ -280,8 +280,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 12.934869108945694,
-      "y": 17.807710515771454
+      "x": 72.49681931862685,
+      "y": 50.37831276089789
     },
     {
       "id": "brain-hic-guia-temi",
@@ -290,8 +290,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 19.2254772882019,
-      "y": 16.094419349845243
+      "x": 71.94519555764766,
+      "y": 59.71639809479836
     },
     {
       "id": "brain-guia-de-suporte-respirato-rio-e-simulador-de-tomada-de-decisa-o-me-dica-v1",
@@ -300,8 +300,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 24.849711637616902,
-      "y": 19.867028855472668
+      "x": 67.45593999429157,
+      "y": 68.58871052320984
     },
     {
       "id": "brain-tce-temi-draldenir",
@@ -310,8 +310,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 30.899855569341703,
-      "y": 25.610504979850667
+      "x": 59.3591535815457,
+      "y": 75.32599937291795
     },
     {
       "id": "brain-pag-sara-uti-temi",
@@ -320,8 +320,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 23.597453857371338,
-      "y": 35.73322250341306
+      "x": 48.6889394192732,
+      "y": 78.46982824243351
     },
     {
       "id": "brain-kdigo-2026-aki-na-uti-temi-resumo-mapa-memorycards-aldenir-rocha",
@@ -330,8 +330,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 16.452843922588276,
-      "y": 36.90760659735677
+      "x": 37.05869465088138,
+      "y": 77.0651550126888
     },
     {
       "id": "brain-protocolo-sara-grave-uti-adulto",
@@ -340,8 +340,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 7.079118283479865,
-      "y": 31.052257974136808
+      "x": 26.41763066368194,
+      "y": 70.88353074758878
     },
     {
       "id": "brain-desmamevm-bnm-neurointensivismo-draldenir",
@@ -350,8 +350,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 5.41209987782943,
-      "y": 20.75272875874864
+      "x": 18.72518712967329,
+      "y": 60.530245957528564
     },
     {
       "id": "brain-vm-suporte-respiratorio-draldenir",
@@ -360,8 +360,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 10.386672742347091,
-      "y": 13.46257868034692
+      "x": 15.597560611224942,
+      "y": 47.40728634406758
     },
     {
       "id": "brain-desmamevm-bnm-neurointensivismo-draldenir",
@@ -370,8 +370,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 18.316532023950884,
-      "y": 11.003854129865518
+      "x": 17.989118505487006,
+      "y": 33.52870782408843
     },
     {
       "id": "brain-temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
@@ -380,8 +380,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 30.352951211867783,
-      "y": 19.949741198736277
+      "x": 25.969009340187753,
+      "y": 21.211782133865658
     },
     {
       "id": "brain-kdigo2026-aki-uti-draldenir",
@@ -390,8 +390,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 35.91289836418752,
-      "y": 25.76863568727086
+      "x": 38.639718012867526,
+      "y": 12.69123436546267
     },
     {
       "id": "brain-sdra-vm-protetora-draldenir",
@@ -400,8 +400,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 30.29031298577418,
-      "y": 37.15097740518592
+      "x": 54.22155908806079,
+      "y": 10
     },
     {
       "id": "brain-fst-temi-aldenir",
@@ -410,8 +410,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 12.950720148382308,
-      "y": 41.27729067244189
+      "x": 70.29879986762624,
+      "y": 13.231008663086001
     },
     {
       "id": "brain-trials-temi",
@@ -420,8 +420,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 5,
-      "y": 30.77274872305904
+      "x": 84.19405788213521,
+      "y": 23.11103561768905
     },
     {
       "id": "brain-avch-hsa-protocolo-completo",
@@ -430,8 +430,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 5,
-      "y": 21.213021564259172
+      "x": 90,
+      "y": 38.15456938853896
     },
     {
       "id": "brain-tce-temi-draldenir",
@@ -440,8 +440,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 9.338581748777683,
-      "y": 8.220905162925442
+      "x": 90,
+      "y": 56.19528992602739
     },
     {
       "id": "brain-pancreatite-aguda-grave-sara-grave",
@@ -450,8 +450,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 23.905394218109716,
-      "y": 6.9962851373967005
+      "x": 90,
+      "y": 74.41575028987401
     },
     {
       "id": "brain-simulado-temi-2026-draldenir",
@@ -460,8 +460,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 32.34482258655607,
-      "y": 13.12681900453088
+      "x": 79.44857283383965,
+      "y": 89.78732911430524
     },
     {
       "id": "brain-desmame-da-vm",
@@ -470,8 +470,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 40.40397661861614,
-      "y": 29.202098775734775
+      "x": 61.98244074553098,
+      "y": 90
     },
     {
       "id": "brain-simulador-suporte-respiratorio-vm-sara",
@@ -480,8 +480,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 31.40993890262677,
-      "y": 42.68618576991616
+      "x": 41.48899208376479,
+      "y": 90
     },
     {
       "id": "brain-simulado-temi-2026-draldenir",
@@ -490,8 +490,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 10.871703617372557,
-      "y": 45.86749621427704
+      "x": 21.186443124187562,
+      "y": 90
     },
     {
       "id": "brain-sdra-vm-protetora-draldenir",
@@ -500,8 +500,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 5,
-      "y": 34.3410116916282
+      "x": 10,
+      "y": 81.70142626612929
     },
     {
       "id": "brain-vm-suporte-respiratorio-draldenir",
@@ -510,8 +510,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 5,
-      "y": 15.396938933928283
+      "x": 10,
+      "y": 61.76864647045441
     },
     {
       "id": "brain-broncoscopia-uti-temi",
@@ -520,8 +520,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 7.128116985119757,
-      "y": 5
+      "x": 10,
+      "y": 38.834772989609924
     },
     {
       "id": "brain-hic-guia-temi",
@@ -530,8 +530,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 23.069129458121466,
-      "y": 5
+      "x": 10,
+      "y": 16.51686372279324
     },
     {
       "id": "brain-protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
@@ -540,8 +540,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 39.94098988761077,
-      "y": 17.10123469367438
+      "x": 16.360363288154687,
+      "y": 10
     },
     {
       "id": "brain-01-protocolo-sepse-bundle1hhora",
@@ -550,8 +550,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 45.99978971636905,
-      "y": 24.108516538436437
+      "x": 38.798028519243715,
+      "y": 10
     }
   ],
   "edges": [
