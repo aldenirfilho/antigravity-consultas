@@ -87,6 +87,20 @@
   /* empty state */
   .empty{text-align:center;color:var(--muted);padding:3rem 1rem;font-size:.9rem}
   .empty .em{font-size:3rem;display:block;margin-bottom:1rem}
+
+  /* CLASSIFY DIALOG */
+  .classify-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);z-index:100;place-items:center}
+  .classify-overlay.open{display:grid}
+  .classify-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;width:min(500px,calc(100% - 2rem));max-height:80vh;overflow:auto}
+  .classify-box h3{font-family:'Syne',sans-serif;color:var(--accent);margin-bottom:1rem}
+  .classify-box label{display:block;color:var(--muted);font-size:.85rem;margin-bottom:.8rem}
+  .classify-box select,.classify-box input,.classify-box textarea{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:.6rem .8rem;color:var(--text);font-size:.9rem;outline:none;margin-top:.3rem}
+  .classify-box textarea{min-height:80px;resize:vertical}
+  .classify-box select:focus,.classify-box input:focus,.classify-box textarea:focus{border-color:var(--accent)}
+  .classify-actions{display:flex;gap:.5rem;justify-content:flex-end;margin-top:1rem}
+
+  /* INBOX BADGE */
+  .inbox-badge{background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;font-size:.65rem;padding:.15rem .5rem;border-radius:10px;font-weight:700;position:absolute;top:8px;right:8px;z-index:2}
 </style>
 </head>
 <body>
@@ -143,6 +157,7 @@
   <span class="filtro" onclick="setFiltro('farmacologia',this)">💊 Farmacologia</span>
   <span class="filtro" onclick="setFiltro('neurologia',this)">🧠 Neurologia</span>
   <span class="filtro" onclick="setFiltro('sepse',this)">🦠 Sepse</span>
+  <span class="filtro" onclick="setFiltro('inbox',this)" style="border-color:#f59e0b;color:#f59e0b">📥 Inbox</span>
 </div>
 
 <!-- COMO ADICIONAR ARQUIVOS -->
@@ -183,6 +198,31 @@
     <span class="big-icon">☁️</span>
     <strong>Adicionar novos arquivos</strong><br/>
     <small>Suba seus PDFs e DOCXs na pasta <code>biblioteca_ia/arquivos/</code> no GitHub e atualize o array <code>ARQUIVOS</code> nesta página.<br/>Veja as instruções acima.</small>
+  </div>
+</div>
+
+<!-- CLASSIFY DIALOG -->
+<div class="classify-overlay" id="classifyOverlay" onclick="if(event.target===this)fecharClassify()">
+  <div class="classify-box">
+    <h3>📂 Classificar arquivo do Inbox</h3>
+    <input type="hidden" id="classifyIdx" />
+    <label>Título <input id="clTitle" placeholder="Nome do material" /></label>
+    <label>Descrição <textarea id="clDesc" placeholder="Resumo, conteúdo, aplicação clínica..."></textarea></label>
+    <label>Tipo
+      <select id="clTipo">
+        <option value="pdf">📄 PDF</option>
+        <option value="word">📝 Word</option>
+        <option value="html">🌐 HTML</option>
+      </select>
+    </label>
+    <label>Categoria / Tags (separadas por vírgula)
+      <input id="clTags" placeholder="uti, temi, sepse, farmacologia..." />
+    </label>
+    <label>IA de origem <input id="clIA" placeholder="Claude, GPT, Gemini..." value="IA" /></label>
+    <div class="classify-actions">
+      <button class="btn btn-secondary" onclick="fecharClassify()">Cancelar</button>
+      <button class="btn btn-primary" onclick="salvarClassify()">📂 Classificar</button>
+    </div>
   </div>
 </div>
 
@@ -282,6 +322,7 @@ function filtrarCards(){
 
   grid.innerHTML = filtrados.map(a => `
     <div class="card ${a.tipo}" data-tags="${a.tags.join(' ')}">
+      ${a._inboxFile && !a._classified ? '<span class="inbox-badge">📥 INBOX</span>' : ''}
       <span class="card-icon">${iconeTipo(a.tipo)}</span>
       <div class="card-title">${a.titulo}</div>
       <div class="card-meta">📅 ${a.data} · 🤖 ${a.ia_origem}</div>
@@ -290,6 +331,7 @@ function filtrarCards(){
         ${a.tags.map(t=>`<span class="tag">#${t}</span>`).join('')}
       </div>
       <div class="card-actions">
+        ${a._inboxFile && !a._classified ? `<button class="btn btn-primary" style="background:linear-gradient(135deg,#f59e0b,#ef4444)" onclick="abrirClassify(${ARQUIVOS.indexOf(a)})">📂 Classificar</button>` : ''}
         ${a.link_ver !== '#' ? `<a href="${a.link_ver}" target="_blank" class="btn btn-primary">🔍 Ver</a>` : `<button class="btn btn-primary" onclick="avisoEmBreve()">🔍 Ver</button>`}
         ${a.link_baixar !== '#' ? `<a href="${a.link_baixar}" download class="btn btn-secondary">⬇️ Baixar</a>` : `<button class="btn btn-secondary" onclick="avisoEmBreve()">⬇️ Baixar</button>`}
       </div>
@@ -318,8 +360,115 @@ function atualizarStats(){
   document.getElementById('total-all').textContent = ARQUIVOS.length;
 }
 
+// ── INBOX & CLASSIFICAÇÃO ──
+let inboxFiles = [];
+let classificados = JSON.parse(localStorage.getItem('biblioteca_classificados') || '[]');
+
+async function loadInbox() {
+  try {
+    const res = await fetch('data/inbox.json', { cache: 'no-store' });
+    if (!res.ok) return;
+    const data = await res.json();
+    inboxFiles = data.files || [];
+  } catch(e) {
+    console.warn('Inbox não carregado:', e);
+  }
+  
+  // Adicionar inbox files ao ARQUIVOS (se não classificados)
+  const classIds = new Set(classificados.map(c => c.filename));
+  for (const f of inboxFiles) {
+    if (classIds.has(f.filename)) {
+      // Já classificado — usa dados do classificado
+      const cl = classificados.find(c => c.filename === f.filename);
+      if (!ARQUIVOS.find(a => a._inboxFile === f.filename)) {
+        ARQUIVOS.push({
+          titulo: cl.titulo,
+          descricao: cl.descricao,
+          tipo: cl.tipo || f.tipo,
+          tags: cl.tags,
+          link_ver: 'inbox/' + f.filename,
+          link_baixar: 'inbox/' + f.filename,
+          data: cl.data || new Date().toISOString().slice(0,7),
+          ia_origem: cl.ia_origem || 'IA',
+          _inboxFile: f.filename,
+          _classified: true
+        });
+      }
+    } else {
+      // Não classificado — mostra como inbox
+      if (!ARQUIVOS.find(a => a._inboxFile === f.filename)) {
+        const title = f.filename.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        ARQUIVOS.push({
+          titulo: '📥 ' + title,
+          descricao: 'Arquivo no inbox aguardando classificação. Clique em Classificar para categorizar.',
+          tipo: f.tipo || 'pdf',
+          tags: ['inbox'],
+          link_ver: 'inbox/' + f.filename,
+          link_baixar: 'inbox/' + f.filename,
+          data: new Date().toISOString().slice(0,7),
+          ia_origem: 'Inbox',
+          _inboxFile: f.filename,
+          _classified: false
+        });
+      }
+    }
+  }
+  
+  filtrarCards();
+}
+
+function abrirClassify(idx) {
+  const a = ARQUIVOS[idx];
+  if (!a) return;
+  document.getElementById('classifyIdx').value = idx;
+  document.getElementById('clTitle').value = a.titulo.replace('📥 ', '');
+  document.getElementById('clDesc').value = a.descricao === 'Arquivo no inbox aguardando classificação. Clique em Classificar para categorizar.' ? '' : a.descricao;
+  document.getElementById('clTipo').value = a.tipo;
+  document.getElementById('clTags').value = a.tags.filter(t => t !== 'inbox').join(', ');
+  document.getElementById('clIA').value = a.ia_origem === 'Inbox' ? '' : a.ia_origem;
+  document.getElementById('classifyOverlay').classList.add('open');
+}
+
+function fecharClassify() {
+  document.getElementById('classifyOverlay').classList.remove('open');
+}
+
+function salvarClassify() {
+  const idx = parseInt(document.getElementById('classifyIdx').value);
+  const a = ARQUIVOS[idx];
+  if (!a || !a._inboxFile) return;
+  
+  const cl = {
+    filename: a._inboxFile,
+    titulo: document.getElementById('clTitle').value.trim() || a.titulo,
+    descricao: document.getElementById('clDesc').value.trim(),
+    tipo: document.getElementById('clTipo').value,
+    tags: document.getElementById('clTags').value.split(',').map(t => t.trim().toLowerCase()).filter(Boolean),
+    ia_origem: document.getElementById('clIA').value.trim() || 'IA',
+    data: new Date().toISOString().slice(0,7)
+  };
+  
+  // Salvar na lista de classificados
+  classificados = classificados.filter(c => c.filename !== cl.filename);
+  classificados.push(cl);
+  localStorage.setItem('biblioteca_classificados', JSON.stringify(classificados));
+  
+  // Atualizar o item no array
+  a.titulo = cl.titulo;
+  a.descricao = cl.descricao;
+  a.tipo = cl.tipo;
+  a.tags = cl.tags;
+  a.ia_origem = cl.ia_origem;
+  a.data = cl.data;
+  a._classified = true;
+  
+  fecharClassify();
+  filtrarCards();
+  alert('✅ Arquivo classificado com sucesso!\n\nTema: ' + cl.tags.join(', '));
+}
+
 // inicializar
-filtrarCards();
+loadInbox();
 </script>
 </body>
 </html>
