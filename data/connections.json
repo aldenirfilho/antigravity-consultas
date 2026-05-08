@@ -264,7 +264,7 @@
       "y": 36.24196365137736
     },
     {
-      "id": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
+      "id": "brain-versao-banco-temi-titulo-vm-pegadinhas-interpretacao-avancada",
       "label": "Versao Temi Prova Titulo Vm Pegadinhas I...",
       "body": "Arquivo da Biblioteca IA",
       "type": "file",
@@ -811,17 +811,17 @@
       "relation": "complementa-modulo"
     },
     {
-      "from": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
+      "from": "brain-versao-banco-temi-titulo-vm-pegadinhas-interpretacao-avancada",
       "to": "biblioteca-ia",
       "relation": "pertence-a"
     },
     {
-      "from": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
+      "from": "brain-versao-banco-temi-titulo-vm-pegadinhas-interpretacao-avancada",
       "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
-      "from": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
+      "from": "brain-versao-banco-temi-titulo-vm-pegadinhas-interpretacao-avancada",
       "to": "banco-temi",
       "relation": "complementa-modulo"
     },

@@ -20,7 +20,7 @@ async function initGraph() {
   try {
     if (typeof d3 === 'undefined') throw new Error("D3.js não carregado.");
 
-    const res = await fetch('data/connections.json');
+    const res = await fetch('data/connections.json?t=' + Date.now());
     if (!res.ok) throw new Error("Não foi possível carregar data/connections.json");
     const data = await res.json();
 
