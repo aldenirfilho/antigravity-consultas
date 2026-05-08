@@ -1,83 +1,87 @@
 #!/usr/bin/env python3
-"""Validador simples do Mapa Vivo 3.1.
-Uso no terminal do Antigravity:
-python3 scripts/validate_mapa_vivo.py data/connections.json
-"""
-from __future__ import annotations
-
 import json
 import sys
-from pathlib import Path
+import os
 
-ALLOWED_NODE_TYPES = {"hub", "biblioteca", "feed", "qbank", "tool", "module", "topic", "theme", "file"}
-ALLOWED_EDGE_STRENGTHS = {"direct", "suggested"}
-HIDDEN_STATUSES = {"oculto", "rejeitado"}
+"""
+VALIDADOR MAPA VIVO 4.0 — ANTIGRAVITY ENGINE
+Verifica integridade de nós, conexões e conformidade com o Modo Curadoria.
+"""
 
+def validate_mapa(file_path):
+    print(f"🧠 Validando Mapa Vivo 4.0: {file_path}")
+    
+    if not os.path.exists(file_path):
+        print(f"❌ Arquivo não encontrado.")
+        return False
 
-def main() -> int:
-    path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("data/connections.json")
-    if not path.exists():
-        print(f"❌ Arquivo não encontrado: {path}")
-        return 2
+    with open(file_path, 'r', encoding='utf-8') as f:
+        try:
+            data = json.load(f)
+        except Exception as e:
+            print(f"❌ Erro de sintaxe JSON: {e}")
+            return False
 
-    data = json.loads(path.read_text(encoding="utf-8"))
-    nodes = data.get("nodes") or data.get("topics") or []
-    edges = data.get("edges") or data.get("connections") or []
+    nodes = data.get('nodes', [])
+    edges = data.get('edges', [])
+    
+    node_ids = set()
+    errors = []
+    warnings = []
 
-    errors: list[str] = []
-    warnings: list[str] = []
-    ids: set[str] = set()
-
-    for i, node in enumerate(nodes):
-        node_id = str(node.get("id") or "").strip()
-        if not node_id:
-            errors.append(f"node[{i}] sem id")
+    # 1. Validar Nós
+    for n in nodes:
+        nid = n.get('id')
+        if not nid:
+            errors.append(f"Nó sem ID encontrado.")
             continue
-        if node_id in ids:
-            errors.append(f"id duplicado: {node_id}")
-        ids.add(node_id)
-        if not node.get("label"):
-            warnings.append(f"node {node_id} sem label")
-        if not node.get("body"):
-            warnings.append(f"node {node_id} sem body")
-        node_type = node.get("type", "theme")
-        if node_type not in ALLOWED_NODE_TYPES:
-            warnings.append(f"node {node_id} com type inesperado: {node_type}")
+        
+        if nid in node_ids:
+            errors.append(f"ID duplicado: {nid}")
+        node_ids.add(nid)
 
-    for i, edge in enumerate(edges):
-        from_id = edge.get("from") or edge.get("source")
-        to_id = edge.get("to") or edge.get("target")
-        if not from_id or not to_id:
-            errors.append(f"edge[{i}] sem from/to")
+        if not n.get('label'):
+            warnings.append(f"Nó {nid} sem label (usará ID).")
+        
+        if not n.get('type'):
+            warnings.append(f"Nó {nid} sem tipo (default: theme).")
+
+    # 2. Validar Conexões
+    for i, e in enumerate(edges):
+        source = e.get('from')
+        target = e.get('to')
+
+        if not source or not target:
+            errors.append(f"Conexão #{i} incompleta (from/to ausente).")
             continue
-        if from_id not in ids:
-            errors.append(f"edge órfã: from={from_id} não existe")
-        if to_id not in ids:
-            errors.append(f"edge órfã: to={to_id} não existe")
-        if not edge.get("relation"):
-            warnings.append(f"edge {from_id}->{to_id} sem relation; use 'conecta'")
-        strength = edge.get("strength", "direct")
-        if strength not in ALLOWED_EDGE_STRENGTHS:
-            warnings.append(f"edge {from_id}->{to_id} com strength inesperado: {strength}")
-        if strength == "suggested" and edge.get("status", "sugerido") == "ativo":
-            warnings.append(f"edge suggested {from_id}->{to_id} deveria ter status 'sugerido' até aprovação")
-        if edge.get("status") in HIDDEN_STATUSES and edge.get("visible", True) is not False:
-            warnings.append(f"edge {from_id}->{to_id} oculto/rejeitado deveria ter visible=false")
 
-    print("🧠 Validação do Mapa Vivo 3.1")
-    print(f"Nós: {len(nodes)} | Edges: {len(edges)}")
+        if source not in node_ids:
+            errors.append(f"Conexão #{i} aponta para origem inexistente: {source}")
+        
+        if target not in node_ids:
+            errors.append(f"Conexão #{i} aponta para destino inexistente: {target}")
+
+        strength = e.get('strength') or e.get('status') or e.get('style')
+        if not strength:
+            warnings.append(f"Conexão {source}->{target} sem definição de força/estilo.")
+
+    # 3. Resultado
+    print(f"📊 Estatísticas: {len(nodes)} nós, {len(edges)} conexões.")
+    
     if warnings:
-        print("\n⚠️ Avisos:")
-        for warning in warnings:
-            print(f"- {warning}")
-    if errors:
-        print("\n❌ Erros:")
-        for error in errors:
-            print(f"- {error}")
-        return 1
-    print("\n✅ Sem erros críticos. Pronto para renderização.")
-    return 0
+        print(f"\n⚠️ Avisos ({len(warnings)}):")
+        for w in warnings[:10]: print(f"  - {w}")
+        if len(warnings) > 10: print(f"  ... e mais {len(warnings)-10} avisos.")
 
+    if errors:
+        print(f"\n❌ ERROS ({len(errors)}):")
+        for e in errors: print(f"  - {e}")
+        return False
+    
+    print("\n✅ Validação concluída com sucesso!")
+    return True
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    path = sys.argv[1] if len(sys.argv) > 1 else "data/connections.json"
+    if not validate_mapa(path):
+        sys.exit(1)

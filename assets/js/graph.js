@@ -1,13 +1,14 @@
 /**
- * MAPA VIVO 5.0 CURADORIA — ANTIGRAVITY ENGINE
- * Modo Editável, Criação de Conexões e Exportação.
+ * MAPA VIVO 4.0 PERSISTENTE — ANTIGRAVITY ENGINE
+ * Curadoria Profissional, Persistência Local e Busca Contextual.
  */
 
-const MAP_CONFIG = {
+const CONFIG_V4 = {
   HEIGHT: 760,
-  FORCE: -2000,
+  FORCE: -2200,
   DISTANCE: 180,
-  COLLISION: 100,
+  COLLISION: 110,
+  STORAGE_KEY: 'antigravity.mapa.overlay.v4',
   MODES: {
     CORE: ['hub', 'biblioteca', 'feed', 'qbank', 'tool'],
     CLINICAL: ['hub', 'module', 'topic', 'theme'],
@@ -16,125 +17,256 @@ const MAP_CONFIG = {
   }
 };
 
-let currentMode = 'CORE';
-let isEditMode = false;
-let selectedNodes = [];
-let fullData = { nodes: [], edges: [] };
-let simulation, svg, g, zoom;
+let state = {
+  fullData: { nodes: [], edges: [] },
+  filteredNodes: [],
+  filteredLinks: [],
+  currentMode: 'CORE',
+  isEditMode: false,
+  selectedNodes: [],
+  searchTerm: '',
+  overlay: {
+    addedNodes: [],
+    updatedNodes: {},
+    hiddenNodeIds: [],
+    addedEdges: [],
+    hiddenEdgeKeys: [],
+    positions: {}
+  },
+  simulation: null,
+  svg: null,
+  g: null,
+  zoom: null
+};
+
+// ── INICIALIZAÇÃO ──
 
 async function initGraph() {
   const container = document.getElementById('graph');
   if (!container) return;
 
-  container.innerHTML = '<div style="padding:40px; color:#64748b; font-family:Syne;">🧠 Abrindo interface de curadoria...</div>';
+  container.innerHTML = '<div style="padding:40px; color:#64748b; font-family:Syne;">🧠 Carregando Cérebro Clínico v4.0...</div>';
 
   try {
-    const res = await fetch('data/connections.json?t=' + Date.now());
-    fullData = await res.json();
+    const dataUrl = container.getAttribute('data-graph-src') || 'data/connections.json';
+    const res = await fetch(dataUrl + '?t=' + Date.now());
+    if (!res.ok) throw new Error("JSON não encontrado.");
+    const rawData = await res.json();
     
-    fullData.nodes.forEach(n => {
-      n.label = n.label || n.title || n.id;
-      n.type = n.type || "theme";
-      n.status = n.status || "ativo";
-      n.body = n.body || n.description || "Tópico da Enciclopédia.";
-    });
+    state.fullData = rawData;
+    loadOverlay();
+    applyOverlay();
 
     renderInterface(container);
     updateGraph();
+    updateDebug();
   } catch (err) {
-    container.innerHTML = `<div class="graph-fallback"><h3>⚠️ Erro: ${err.message}</h3></div>`;
+    console.error("Mapa Vivo Error:", err);
+    renderFallback(container, err.message);
   }
 }
+
+// ── GESTÃO DE DADOS & OVERLAY ──
+
+function loadOverlay() {
+  const saved = localStorage.getItem(CONFIG_V4.STORAGE_KEY);
+  if (saved) {
+    try {
+      state.overlay = JSON.parse(saved);
+    } catch (e) {
+      console.warn("Falha ao ler overlay local.");
+    }
+  }
+}
+
+function saveOverlay() {
+  localStorage.setItem(CONFIG_V4.STORAGE_KEY, JSON.stringify(state.overlay));
+  updateDebug();
+}
+
+function applyOverlay() {
+  // 1. Ocultar Nós
+  state.fullData.nodes.forEach(n => {
+    if (state.overlay.hiddenNodeIds.includes(n.id)) n.visible = false;
+    if (state.overlay.updatedNodes[n.id]) Object.assign(n, state.overlay.updatedNodes[n.id]);
+    if (state.overlay.positions[n.id]) {
+      n.fx = state.overlay.positions[n.id].x;
+      n.fy = state.overlay.positions[n.id].y;
+    }
+  });
+
+  // 2. Adicionar Nós
+  state.overlay.addedNodes.forEach(n => {
+    if (!state.fullData.nodes.find(orig => orig.id === n.id)) {
+      state.fullData.nodes.push(n);
+    }
+  });
+
+  // 3. Ocultar Edges
+  state.fullData.edges.forEach(e => {
+    const key = `${e.from}->${e.to}`;
+    if (state.overlay.hiddenEdgeKeys.includes(key)) e.visible = false;
+  });
+
+  // 4. Adicionar Edges
+  state.overlay.addedEdges.forEach(e => {
+    const key = `${e.from}->${e.to}`;
+    if (!state.fullData.edges.find(orig => `${orig.from}->${orig.to}` === key)) {
+      state.fullData.edges.push(e);
+    }
+  });
+}
+
+// ── INTERFACE & RENDER ──
 
 function renderInterface(container) {
   const width = container.clientWidth || 1000;
   container.innerHTML = `
     <div class="graph-toolbar">
-      <input type="text" class="graph-search" placeholder="🔍 Buscar tema..." oninput="searchNode(this.value)">
+      <div class="graph-search-wrap">
+        <input type="text" class="graph-search" placeholder="🔍 Buscar tema (mostra vizinhos)..." oninput="handleSearch(this.value)">
+      </div>
       <div class="graph-actions">
         <button class="btn primary" onclick="setMode('CORE')">🧠 Núcleo</button>
         <button class="btn primary" onclick="setMode('CLINICAL')">🏥 Clínico</button>
+        <button class="btn primary" onclick="setMode('FILES')">📄 Arquivos</button>
         <button class="btn ghost" onclick="setMode('ALL')">🌐 Tudo</button>
       </div>
       <div class="graph-actions" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:10px;">
-        <button id="btnEdit" class="btn-curadoria btn ghost" onclick="toggleEditMode()">🛠️ Modo Curadoria</button>
+        <button id="btnEdit" class="btn-curadoria btn ghost" onclick="toggleEditMode()">🛠️ Curadoria</button>
         <button id="btnExport" class="btn ghost" onclick="exportPatch()" style="display:none">💾 Exportar Patch</button>
+        <button id="btnReset" class="btn ghost" onclick="clearLocalChanges()" style="display:none">🧹 Limpar Local</button>
       </div>
     </div>
-    <div id="graph-canvas-wrap" style="width:100%; height:${MAP_CONFIG.HEIGHT}px"></div>
+    <div id="debugPanel" class="debug-panel" hidden></div>
+    <div id="graph-canvas-wrap" style="width:100%; height:${CONFIG_V4.HEIGHT}px"></div>
   `;
 
-  svg = d3.select("#graph-canvas-wrap").append("svg").attr("width", "100%").attr("height", "100%").attr("viewBox", `0 0 ${width} ${MAP_CONFIG.HEIGHT}`);
-  g = svg.append("g");
-  zoom = d3.zoom().scaleExtent([0.05, 5]).on("zoom", (event) => g.attr("transform", event.transform));
-  svg.call(zoom);
+  state.svg = d3.select("#graph-canvas-wrap").append("svg").attr("width", "100%").attr("height", "100%").attr("viewBox", `0 0 ${width} ${CONFIG_V4.HEIGHT}`);
+  state.g = state.svg.append("g");
+  state.zoom = d3.zoom().scaleExtent([0.05, 8]).on("zoom", (event) => state.g.attr("transform", event.transform));
+  state.svg.call(state.zoom);
 }
 
 function updateGraph() {
   const width = document.getElementById('graph-canvas-wrap').clientWidth || 1000;
-  const typesToMatch = MAP_CONFIG.MODES[currentMode];
-  let filteredNodes = fullData.nodes.filter(n => typesToMatch.includes(n.type));
-  if (currentMode === 'FILES') filteredNodes = filteredNodes.slice(0, 40);
+  
+  // 1. Filtrar Nós
+  const typesToMatch = CONFIG_V4.MODES[state.currentMode];
+  let nodes = state.fullData.nodes.filter(n => n.visible !== false && (typesToMatch.includes(n.type) || isNodeInMatch(n)));
+  
+  if (state.currentMode === 'FILES' && !state.searchTerm) nodes = nodes.slice(0, 50);
 
-  const nodeIds = new Set(filteredNodes.map(n => n.id));
-  const filteredLinks = fullData.edges
-    .filter(e => nodeIds.has(e.from) && nodeIds.has(e.to))
-    .map(e => ({ source: e.from, target: e.to, relation: e.relation || "conecta", style: e.style || "solid" }));
+  const nodeIds = new Set(nodes.map(n => n.id));
+  let links = state.fullData.edges.filter(e => e.visible !== false && nodeIds.has(e.from) && nodeIds.has(e.to));
 
-  g.selectAll("*").remove();
+  state.filteredNodes = nodes;
+  state.filteredLinks = links.map(e => ({
+    source: e.from, target: e.to, 
+    relation: e.relation || "conecta", 
+    style: (e.strength === 'suggested' || e.status === 'sugerido' || e.style === 'dashed') ? 'dashed' : 'solid'
+  }));
 
-  const link = g.append("g")
-    .attr("class", "graph-links")
-    .selectAll("line")
-    .data(filteredLinks)
-    .join("line")
-    .attr("class", d => `graph-link ${d.style === 'dashed' ? 'graph-link-suggested' : ''}`)
-    .attr("stroke", d => getLinkColor(d))
-    .attr("stroke-width", d => getLinkWidth(d))
-    .attr("stroke-opacity", 0.85);
+  state.g.selectAll("*").remove();
 
-  const node = g.append("g")
+  // 2. Renderizar Links (Paths Curvos)
+  const link = state.g.append("g")
+    .attr("class", "edges-layer")
+    .selectAll("path")
+    .data(state.filteredLinks)
+    .join("path")
+    .attr("class", d => `edge ${d.style === 'dashed' ? 'edge--suggested' : 'edge--direct'}`)
+    .attr("fill", "none");
+
+  // 3. Renderizar Nós
+  const node = state.g.append("g")
+    .attr("class", "nodes-layer")
     .selectAll(".node-group")
-    .data(filteredNodes)
+    .data(state.filteredNodes)
     .join("g")
-    .attr("class", d => `node-group node-${d.type} ${selectedNodes.includes(d.id) ? 'is-selected' : ''}`)
-    .call(d3.drag().on("start", dragStarted).on("drag", dragged).on("end", dragEnded))
+    .attr("class", d => `node-group node-${d.type} ${state.selectedNodes.includes(d.id) ? 'is-selected' : ''} ${isExactMatch(d) ? 'is-match' : ''}`)
+    .style("color", d => getNodeColor(d.type))
+    .call(d3.drag()
+      .on("start", dragStarted)
+      .on("drag", dragged)
+      .on("end", dragEnded))
     .on("click", (event, d) => handleNodeClick(event, d));
 
-  node.append("rect")
-    .attr("class", "node-card")
-    .attr("rx", 12).attr("ry", 12)
-    .attr("x", d => -(d.label.length * 4 + 20))
-    .attr("y", -18)
-    .attr("width", d => d.label.length * 8 + 40)
-    .attr("height", 36)
-    .attr("stroke", d => getNodeColor(d.type));
+  node.append("rect").attr("class", "node-card").attr("rx", 14).attr("ry", 14)
+    .attr("x", d => -(calculateNodeWidth(d)/2)).attr("y", -20)
+    .attr("width", d => calculateNodeWidth(d)).attr("height", 40);
 
-  node.append("text").attr("class", "node-label").attr("text-anchor", "middle").attr("dy", 5).text(d => d.label);
-  node.append("text").attr("class", "node-sub").attr("text-anchor", "middle").attr("dy", 26).text(d => d.type.toUpperCase());
+  node.append("text").attr("class", "node-label").attr("text-anchor", "middle").attr("dy", 6).text(d => d.label);
+  node.append("text").attr("class", "node-sub").attr("text-anchor", "middle").attr("dy", 28).text(d => d.type.toUpperCase());
 
-  if (simulation) simulation.stop();
-  simulation = d3.forceSimulation(filteredNodes)
-    .force("link", d3.forceLink(filteredLinks).id(d => d.id).distance(MAP_CONFIG.DISTANCE))
-    .force("charge", d3.forceManyBody().strength(MAP_CONFIG.FORCE))
-    .force("center", d3.forceCenter(width / 2, MAP_CONFIG.HEIGHT / 2))
-    .force("collision", d3.forceCollide().radius(MAP_CONFIG.COLLISION));
+  // 4. Simulação
+  if (state.simulation) state.simulation.stop();
+  state.simulation = d3.forceSimulation(state.filteredNodes)
+    .force("link", d3.forceLink(state.filteredLinks).id(d => d.id).distance(CONFIG_V4.DISTANCE))
+    .force("charge", d3.forceManyBody().strength(CONFIG_V4.FORCE))
+    .force("center", d3.forceCenter(width / 2, CONFIG_V4.HEIGHT / 2))
+    .force("collision", d3.forceCollide().radius(CONFIG_V4.COLLISION));
 
-  simulation.on("tick", () => {
-    link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+  state.simulation.on("tick", () => {
+    link.attr("d", d => {
+      const dx = d.target.x - d.source.x;
+      const dy = d.target.y - d.source.y;
+      const dr = Math.sqrt(dx * dx + dy * dy) * 1.5; // Curva leve
+      return `M${d.source.x},${d.source.y}A${dr},${dr} 0 0,1 ${d.target.x},${d.target.y}`;
+    });
     node.attr("transform", d => `translate(${d.x},${d.y})`);
   });
 }
 
+// ── LÓGICA DE BUSCA VIZINHOS ──
+
+function handleSearch(val) {
+  state.searchTerm = val.toLowerCase();
+  updateGraph();
+}
+
+function isExactMatch(d) {
+  if (!state.searchTerm) return false;
+  return d.label.toLowerCase().includes(state.searchTerm) || d.id.toLowerCase().includes(state.searchTerm);
+}
+
+function isNodeInMatch(d) {
+  if (!state.searchTerm) return false;
+  if (isExactMatch(d)) return true;
+  if (d.id === 'portal') return true; // Sempre mostrar hub central na busca
+
+  // Mostrar vizinhos
+  const links = state.fullData.edges.filter(e => e.visible !== false);
+  const matchedNodeIds = state.fullData.nodes
+    .filter(n => n.label.toLowerCase().includes(state.searchTerm) || n.id.toLowerCase().includes(state.searchTerm))
+    .map(n => n.id);
+  
+  return links.some(e => 
+    (matchedNodeIds.includes(e.from) && e.to === d.id) || 
+    (matchedNodeIds.includes(e.to) && e.from === d.id)
+  );
+}
+
+// ── MODO CURADORIA ──
+
+function toggleEditMode() {
+  state.isEditMode = !state.isEditMode;
+  document.getElementById('btnEdit').classList.toggle('active');
+  document.getElementById('btnExport').style.display = state.isEditMode ? 'block' : 'none';
+  document.getElementById('btnReset').style.display = state.isEditMode ? 'block' : 'none';
+  document.getElementById('debugPanel').hidden = !state.isEditMode;
+  document.body.classList.toggle('is-editing');
+  state.selectedNodes = [];
+  updateGraph();
+}
+
 function handleNodeClick(event, d) {
-  if (isEditMode) {
-    if (selectedNodes.includes(d.id)) {
-      selectedNodes = selectedNodes.filter(id => id !== d.id);
+  if (state.isEditMode) {
+    if (state.selectedNodes.includes(d.id)) {
+      state.selectedNodes = state.selectedNodes.filter(id => id !== d.id);
     } else {
-      selectedNodes.push(d.id);
-      if (selectedNodes.length === 2) {
-        createNewConnection();
-      }
+      state.selectedNodes.push(d.id);
+      if (state.selectedNodes.length === 2) createQuickEdge();
     }
     updateGraph();
   } else {
@@ -142,63 +274,60 @@ function handleNodeClick(event, d) {
   }
 }
 
-function toggleEditMode() {
-  isEditMode = !isEditMode;
-  document.getElementById('btnEdit').classList.toggle('active');
-  document.getElementById('btnExport').style.display = isEditMode ? 'block' : 'none';
-  document.body.classList.toggle('is-editing');
-  selectedNodes = [];
+function createQuickEdge() {
+  const from = state.selectedNodes[0];
+  const to = state.selectedNodes[1];
+  const newEdge = { from, to, relation: "sugestao-clinica", strength: "suggested", status: "sugerido", visible: true };
+  
+  state.overlay.addedEdges.push(newEdge);
+  applyOverlay();
+  saveOverlay();
+  state.selectedNodes = [];
   updateGraph();
-  if (isEditMode) alert("MODO CURADORIA ATIVO: Clique em dois nós para criar uma conexão sugerida.");
 }
 
-function createNewConnection() {
-  const from = selectedNodes[0];
-  const to = selectedNodes[1];
-  
-  const exists = fullData.edges.some(e => (e.from === from && e.to === to) || (e.from === to && e.to === from));
-  
-  if (!exists) {
-    fullData.edges.push({
-      from: from,
-      to: to,
-      relation: "sugestao-clinica",
-      style: "dashed"
-    });
-    console.log(`🔗 Nova conexão sugerida criada: ${from} -> ${to}`);
+function clearLocalChanges() {
+  if (confirm("Limpar todas as alterações locais (nós novos, conexões e posições)?")) {
+    state.overlay = { addedNodes: [], updatedNodes: {}, hiddenNodeIds: [], addedEdges: [], hiddenEdgeKeys: [], positions: {} };
+    saveOverlay();
+    location.reload();
   }
-  selectedNodes = [];
-  updateGraph();
 }
 
 function exportPatch() {
-  const patch = {
-    timestamp: new Date().toISOString(),
-    new_edges: fullData.edges.filter(e => e.relation === "sugestao-clinica")
-  };
-  const blob = new Blob([jsonStringify(patch)], {type: 'application/json'});
+  const blob = new Blob([JSON.stringify(state.overlay, null, 2)], {type: 'application/json'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `patch_mapa_antigravity_${Date.now()}.json`;
+  a.download = `patch_antigravity_v4_${Date.now()}.json`;
   a.click();
-  alert("Patch de Curadoria exportado! Envie este arquivo para o Antigravity para aplicar permanentemente.");
 }
 
-function jsonStringify(obj) { return JSON.stringify(obj, null, 2); }
+// ── UTILS ──
 
-function getLinkColor(d) {
-  if (d.style === 'dashed') return "rgba(56, 189, 248, 0.6)"; // Azul claro para sugestão
-  const rel = d.relation || "";
-  if (rel.includes("subtema")) return "rgba(62,232,255,0.85)";
-  if (rel.includes("gera")) return "rgba(255,209,102,0.85)";
-  return "rgba(62,232,255,0.65)";
-}
-
-function getLinkWidth(d) { return d.style === 'dashed' ? 2 : 1.8; }
+function calculateNodeWidth(d) { return d.label.length * 9 + 44; }
 function getNodeColor(type) {
-  const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#64748b", file: "#94a3b8" };
-  return colors[type] || "#64748b";
+  const c = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#64748b", file: "#94a3b8" };
+  return c[type] || "#64748b";
+}
+
+function dragStarted(event, d) { if (!event.active) state.simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; }
+function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
+function dragEnded(event, d) { 
+  if (!event.active) state.simulation.alphaTarget(0); 
+  state.overlay.positions[d.id] = { x: event.x, y: event.y };
+  saveOverlay();
+}
+
+function updateDebug() {
+  const panel = document.getElementById('debugPanel');
+  if (!panel) return;
+  panel.innerHTML = `
+    <div>Nós: ${state.filteredNodes.length}/${state.fullData.nodes.length}</div>
+    <div>Links: ${state.filteredLinks.length}</div>
+    <div>Overlay: ${JSON.stringify(state.overlay).length} bytes</div>
+    <div>Modo: ${state.currentMode}</div>
+  `;
 }
 
 function showDrawer(d) {
@@ -208,22 +337,27 @@ function showDrawer(d) {
     <p style="margin-bottom:1.5rem">${d.body}</p>
     <div class="drawer-meta"><span>TIPO: ${d.type.toUpperCase()}</span><span>ID: ${d.id}</span></div>
     <div class="drawer-actions">${d.url && d.url !== '#' ? `<a href="${d.url}" class="btn primary">Abrir Conteúdo →</a>` : ''}</div>
+    ${state.isEditMode ? `<button class="btn danger" onclick="hideNodeDirect('${d.id}')" style="margin-top:20px; width:100%">🚫 Ocultar Tema</button>` : ''}
   `;
   drawer.hidden = false;
+  document.getElementById('drawerClose').onclick = () => drawer.hidden = true;
 }
 
-function searchNode(val) {
-  if (!val) { g.selectAll(".node-group").style("opacity", 1); return; }
-  const term = val.toLowerCase();
-  g.selectAll(".node-group").style("opacity", d => (d.label.toLowerCase().includes(term) || d.id.toLowerCase().includes(term)) ? 1 : 0.1);
-}
+window.hideNodeDirect = (id) => {
+  if (confirm(`Ocultar permanentemente (local) o nó ${id}?`)) {
+    state.overlay.hiddenNodeIds.push(id);
+    saveOverlay();
+    location.reload();
+  }
+};
 
-function setMode(mode) { currentMode = mode; updateGraph(); }
-function zoomIn() { svg.transition().call(zoom.scaleBy, 1.4); }
-function zoomOut() { svg.transition().call(zoom.scaleBy, 0.7); }
-function resetZoom() { svg.transition().call(zoom.transform, d3.zoomIdentity); }
-function dragStarted(event, d) { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; }
-function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
-function dragEnded(event, d) { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }
+function setMode(m) { state.currentMode = m; updateGraph(); }
+function renderFallback(container, msg) {
+  container.innerHTML = `<div class="graph-fallback"><h3>⚠️ Modo Seguro</h3><p>${msg}</p><ul style="text-align:left;max-height:300px;overflow:auto">${state.fullData.nodes.map(n => `<li><a href="${n.url}">${n.label}</a></li>`).join('')}</ul></div>`;
+}
 
 document.addEventListener('DOMContentLoaded', initGraph);
+window.MapaVivoDebug = { 
+  getState: () => state, 
+  clearOverlay: () => { localStorage.removeItem(CONFIG_V4.STORAGE_KEY); location.reload(); } 
+};
