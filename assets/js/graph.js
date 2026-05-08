@@ -1,13 +1,12 @@
 /**
- * MAPA VIVO 5.0 — EXPERIÊNCIA "CLEAR BRAIN"
- * Sem círculos obstrutivos, foco em rótulos e zoom infinito.
+ * MAPA VIVO 6.0 — "TEXT BRAIN" (SEM BOLAS)
+ * Foco absoluto em texto e conexões limpas.
  */
 
 async function renderGraph() {
   const container = document.getElementById('graph');
   if (!container) return;
 
-  // Garantir que o container tenha altura
   container.style.height = "900px";
   const width = container.clientWidth || 1200;
   const height = 900;
@@ -23,9 +22,9 @@ async function renderGraph() {
 
   container.innerHTML = `
     <div id="graph-ui" style="position:absolute; top:20px; left:20px; z-index:100; display:flex; gap:10px;">
-      <button class="btn primary" onclick="zoomIn()">➕</button>
-      <button class="btn primary" onclick="zoomOut()">➖</button>
-      <button class="btn ghost" onclick="resetZoom()">🔄 Reset</button>
+      <button class="btn primary" onclick="zoomIn()" style="padding:10px 15px; font-size:1.2rem;">➕ Aumentar Mapa</button>
+      <button class="btn primary" onclick="zoomOut()" style="padding:10px 15px; font-size:1.2rem;">➖ Diminuir Mapa</button>
+      <button class="btn ghost" onclick="resetZoom()">🔄 Resetar Vista</button>
     </div>
   `;
 
@@ -40,31 +39,31 @@ async function renderGraph() {
 
   // Zoom Handler
   const zoom = d3.zoom()
-    .scaleExtent([0.1, 8])
+    .scaleExtent([0.05, 10])
     .on("zoom", (event) => g.attr("transform", event.transform));
 
   svg.call(zoom);
 
-  window.zoomIn = () => svg.transition().call(zoom.scaleBy, 1.5);
-  window.zoomOut = () => svg.transition().call(zoom.scaleBy, 0.7);
-  window.resetZoom = () => svg.transition().call(zoom.transform, d3.zoomIdentity);
+  window.zoomIn = () => svg.transition().duration(500).call(zoom.scaleBy, 1.5);
+  window.zoomOut = () => svg.transition().duration(500).call(zoom.scaleBy, 0.7);
+  window.resetZoom = () => svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
 
-  // Simulação de Força
+  // Simulação de Força - Distância e Repulsão Máxima
   const simulation = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id(d => d.id).distance(200))
-    .force("charge", d3.forceManyBody().strength(-2000))
+    .force("link", d3.forceLink(links).id(d => d.id).distance(250))
+    .force("charge", d3.forceManyBody().strength(-3000))
     .force("center", d3.forceCenter(width / 2, height / 2))
-    .force("collision", d3.forceCollide().radius(100));
+    .force("collision", d3.forceCollide().radius(120));
 
-  // Linhas (Arestas) — Mais discretas
+  // Linhas (Conexões)
   const link = g.append("g")
-    .attr("stroke", "rgba(255,255,255,0.05)")
+    .attr("stroke", "rgba(255,255,255,0.1)")
     .attr("stroke-width", 1)
     .selectAll("line")
     .data(links)
     .join("line");
 
-  // Nós como CARDS (sem bolas em cima do texto)
+  // Nós - APENAS TEXTO (Sem círculos, sem bolas)
   const node = g.append("g")
     .selectAll(".node-group")
     .data(nodes)
@@ -76,26 +75,14 @@ async function renderGraph() {
       .on("end", dragended))
     .on("click", (event, d) => showDetails(d));
 
-  // Retângulo tipo "Tag" ou "Card"
-  node.append("rect")
-    .attr("rx", 15)
-    .attr("ry", 15)
-    .attr("x", -70)
-    .attr("y", -20)
-    .attr("width", 140)
-    .attr("height", 40)
-    .attr("fill", "rgba(15, 31, 56, 0.9)")
-    .attr("stroke", d => getNodeColor(d.type))
-    .attr("stroke-width", 2);
-
-  // Texto Centralizado
+  // Rótulo de Texto (Único elemento visível)
   node.append("text")
-    .attr("dy", 5)
     .attr("text-anchor", "middle")
-    .attr("fill", "#fff")
-    .attr("font-size", "13px")
-    .attr("font-weight", "600")
-    .style("pointer-events", "none")
+    .attr("fill", d => getNodeColor(d.type))
+    .attr("font-size", d => (d.type === 'hub' || d.type === 'module') ? "18px" : "14px")
+    .attr("font-weight", "800")
+    .attr("cursor", "pointer")
+    .style("text-shadow", "0 0 10px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,0.2)")
     .text(d => d.label);
 
   simulation.on("tick", () => {
@@ -104,8 +91,8 @@ async function renderGraph() {
   });
 
   function getNodeColor(type) {
-    const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#64748b", file: "#94a3b8" };
-    return colors[type] || "#64748b";
+    const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#a78bfa", file: "#94a3b8" };
+    return colors[type] || "#fff";
   }
 
   function showDetails(d) {
