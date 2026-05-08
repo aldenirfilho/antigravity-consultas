@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-08T13:21:44.645607",
+  "updatedAt": "2026-05-08T12:54:53.463111",
   "version": "4.0",
   "description": "Mapa vivo organizado da Enciclopédia: portal, Biblioteca IA, Card Feed, Banco TEMI, Calculadoras, AVC e macrotemas de UTI.",
   "legend": {
@@ -516,34 +516,6 @@
         "workflow-ia",
         "markdown",
         "estudo"
-      ],
-      "visible": true
-    },
-    {
-      "id": "updown",
-      "label": "↕️ Fluxo UPDOWN",
-      "type": "tool",
-      "status": "ativo",
-      "body": "Motor editorial da Enciclopédia: Entrada (UP) de material bruto e Saída (DOWN) de produtos didáticos.",
-      "url": "07_Estudos_Markdown/index.html#updown",
-      "tags": [
-        "workflow-ia",
-        "estudo",
-        "produtividade"
-      ],
-      "visible": true
-    },
-    {
-      "id": "UPDOWN_001_LES_Manifestacoes_Diagnostico",
-      "label": "🦋 LES: Manifestações",
-      "type": "theme",
-      "status": "ativo",
-      "body": "Estudo UPDOWN sobre Lúpus Eritematoso Sistêmico.",
-      "url": "07_Estudos_Markdown/viewer.html?doc=content/reumatologia/les-manifestacoes/updown_001_les_manifestacoes_diagnostico.md",
-      "tags": [
-        "lupus",
-        "reumatologia",
-        "updown"
       ],
       "visible": true
     }
@@ -1618,22 +1590,6 @@
       "relation": "transformacao-conteudo",
       "strength": "suggested",
       "status": "sugerido",
-      "visible": true
-    },
-    {
-      "from": "updown",
-      "to": "estudos-markdown",
-      "relation": "operacionaliza",
-      "strength": "direct",
-      "status": "ativo",
-      "visible": true
-    },
-    {
-      "from": "UPDOWN_001_LES_Manifestacoes_Diagnostico",
-      "to": "updown",
-      "relation": "produto-do-fluxo",
-      "strength": "direct",
-      "status": "ativo",
       "visible": true
     }
   ]

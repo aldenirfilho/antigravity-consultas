@@ -25,6 +25,17 @@
       "summary": "Documento demonstrativo em Markdown para mostrar como um estudo vira resumo clínico, algoritmo e produtos didáticos.",
       "tags": ["uti", "ventilacao", "sdra", "temi"],
       "relatedUrl": "../01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html"
+    },
+    {
+      "id": "UPDOWN_001_LES_Manifestacoes_Diagnostico",
+      "title": "UPDOWN #001 — Lúpus: Manifestações e Diagnóstico",
+      "icon": "🦋",
+      "path": "content/reumatologia/les-manifestacoes/updown_001_les_manifestacoes_diagnostico.md",
+      "theme": "reumatologia",
+      "status": "ativo",
+      "version": "v1.0",
+      "summary": "Estudo completo transformado sobre Lúpus Eritematoso Sistêmico: critérios, manifestações e fluxograma diagnóstico.",
+      "tags": ["updown", "lupus", "reumatologia", "diagnostico", "temi", "r3"]
     }
   ]
 }
