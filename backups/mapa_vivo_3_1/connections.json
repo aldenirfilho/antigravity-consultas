@@ -364,6 +364,16 @@
       "y": 47.40728634406758
     },
     {
+      "id": "brain-desmamevm-bnm-neurointensivismo-draldenir",
+      "label": "Desmamevm Bnm Neurointensivismo Draldeni...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 17.989118505487006,
+      "y": 33.52870782408843
+    },
+    {
       "id": "brain-temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
       "label": "Temi 2026 Tema 02 Avaliacao Abcde Uti 30...",
       "body": "Arquivo da Biblioteca IA",
@@ -424,6 +434,16 @@
       "y": 38.15456938853896
     },
     {
+      "id": "brain-tce-temi-draldenir",
+      "label": "Tce Temi Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 90,
+      "y": 56.19528992602739
+    },
+    {
       "id": "brain-pancreatite-aguda-grave-sara-grave",
       "label": "Pancreatite Aguda Grave + Sara Grave...",
       "body": "Arquivo da Biblioteca IA",
@@ -454,6 +474,46 @@
       "y": 90
     },
     {
+      "id": "brain-simulador-suporte-respiratorio-vm-sara",
+      "label": "Simulador Suporte Respiratorio Vm Sara...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 41.48899208376479,
+      "y": 90
+    },
+    {
+      "id": "brain-simulado-temi-2026-draldenir",
+      "label": "Simulado Temi 2026 Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 21.186443124187562,
+      "y": 90
+    },
+    {
+      "id": "brain-sdra-vm-protetora-draldenir",
+      "label": "Sdra Vm Protetora Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 10,
+      "y": 81.70142626612929
+    },
+    {
+      "id": "brain-vm-suporte-respiratorio-draldenir",
+      "label": "Vm Suporte Respiratorio Draldenir...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 10,
+      "y": 61.76864647045441
+    },
+    {
       "id": "brain-broncoscopia-uti-temi",
       "label": "Broncoscopia Uti Temi...",
       "body": "Arquivo da Biblioteca IA",
@@ -462,6 +522,16 @@
       "status": "ativo",
       "x": 10,
       "y": 38.834772989609924
+    },
+    {
+      "id": "brain-hic-guia-temi",
+      "label": "Hic Guia Temi...",
+      "body": "Arquivo da Biblioteca IA",
+      "type": "file",
+      "url": "05_Biblioteca_IA/index.html",
+      "status": "ativo",
+      "x": 10,
+      "y": 16.51686372279324
     },
     {
       "id": "brain-protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
