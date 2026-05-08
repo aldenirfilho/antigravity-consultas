@@ -1,6 +1,6 @@
 /**
- * MAPA VIVO 4.6 PRO — ANTIGRAVITY ENGINE
- * Conexões visíveis e legibilidade aprimorada.
+ * MAPA VIVO 5.0 CURADORIA — ANTIGRAVITY ENGINE
+ * Modo Editável, Criação de Conexões e Exportação.
  */
 
 const MAP_CONFIG = {
@@ -17,6 +17,8 @@ const MAP_CONFIG = {
 };
 
 let currentMode = 'CORE';
+let isEditMode = false;
+let selectedNodes = [];
 let fullData = { nodes: [], edges: [] };
 let simulation, svg, g, zoom;
 
@@ -24,32 +26,23 @@ async function initGraph() {
   const container = document.getElementById('graph');
   if (!container) return;
 
-  container.innerHTML = '<div style="padding:40px; color:#64748b; font-family:Syne;">🧠 Conectando neurais...</div>';
-
-  if (typeof d3 === 'undefined') {
-    renderFallback(container, "D3.js não carregado.");
-    return;
-  }
+  container.innerHTML = '<div style="padding:40px; color:#64748b; font-family:Syne;">🧠 Abrindo interface de curadoria...</div>';
 
   try {
     const res = await fetch('data/connections.json?t=' + Date.now());
-    if (!res.ok) throw new Error("Erro ao ler conexões.");
     fullData = await res.json();
     
-    // Normalizar Dados
     fullData.nodes.forEach(n => {
       n.label = n.label || n.title || n.id;
       n.type = n.type || "theme";
       n.status = n.status || "ativo";
       n.body = n.body || n.description || "Tópico da Enciclopédia.";
-      if (n.x === undefined) n.x = Math.random() * 800;
-      if (n.y === undefined) n.y = Math.random() * 600;
     });
 
     renderInterface(container);
     updateGraph();
   } catch (err) {
-    renderFallback(container, err.message);
+    container.innerHTML = `<div class="graph-fallback"><h3>⚠️ Erro: ${err.message}</h3></div>`;
   }
 }
 
@@ -57,28 +50,21 @@ function renderInterface(container) {
   const width = container.clientWidth || 1000;
   container.innerHTML = `
     <div class="graph-toolbar">
-      <input type="text" class="graph-search" placeholder="🔍 Buscar tema ou arquivo..." oninput="searchNode(this.value)">
+      <input type="text" class="graph-search" placeholder="🔍 Buscar tema..." oninput="searchNode(this.value)">
       <div class="graph-actions">
         <button class="btn primary" onclick="setMode('CORE')">🧠 Núcleo</button>
         <button class="btn primary" onclick="setMode('CLINICAL')">🏥 Clínico</button>
-        <button class="btn primary" onclick="setMode('FILES')">📄 Arquivos</button>
         <button class="btn ghost" onclick="setMode('ALL')">🌐 Tudo</button>
       </div>
-      <div class="graph-actions">
-        <button class="btn ghost" onclick="zoomIn()">➕</button>
-        <button class="btn ghost" onclick="zoomOut()">➖</button>
-        <button class="btn ghost" onclick="resetZoom()">🔄 Reset</button>
+      <div class="graph-actions" style="border-top:1px solid rgba(255,255,255,0.1); padding-top:10px;">
+        <button id="btnEdit" class="btn-curadoria btn ghost" onclick="toggleEditMode()">🛠️ Modo Curadoria</button>
+        <button id="btnExport" class="btn ghost" onclick="exportPatch()" style="display:none">💾 Exportar Patch</button>
       </div>
     </div>
     <div id="graph-canvas-wrap" style="width:100%; height:${MAP_CONFIG.HEIGHT}px"></div>
   `;
 
-  svg = d3.select("#graph-canvas-wrap")
-    .append("svg")
-    .attr("width", "100%")
-    .attr("height", "100%")
-    .attr("viewBox", `0 0 ${width} ${MAP_CONFIG.HEIGHT}`);
-
+  svg = d3.select("#graph-canvas-wrap").append("svg").attr("width", "100%").attr("height", "100%").attr("viewBox", `0 0 ${width} ${MAP_CONFIG.HEIGHT}`);
   g = svg.append("g");
   zoom = d3.zoom().scaleExtent([0.05, 5]).on("zoom", (event) => g.attr("transform", event.transform));
   svg.call(zoom);
@@ -88,35 +74,32 @@ function updateGraph() {
   const width = document.getElementById('graph-canvas-wrap').clientWidth || 1000;
   const typesToMatch = MAP_CONFIG.MODES[currentMode];
   let filteredNodes = fullData.nodes.filter(n => typesToMatch.includes(n.type));
-  
   if (currentMode === 'FILES') filteredNodes = filteredNodes.slice(0, 40);
 
   const nodeIds = new Set(filteredNodes.map(n => n.id));
   const filteredLinks = fullData.edges
     .filter(e => nodeIds.has(e.from) && nodeIds.has(e.to))
-    .map(e => ({ source: e.from, target: e.to, relation: e.relation || "conecta" }));
+    .map(e => ({ source: e.from, target: e.to, relation: e.relation || "conecta", style: e.style || "solid" }));
 
   g.selectAll("*").remove();
 
-  // Links Robustos
   const link = g.append("g")
     .attr("class", "graph-links")
     .selectAll("line")
     .data(filteredLinks)
     .join("line")
-    .attr("class", "graph-link")
+    .attr("class", d => `graph-link ${d.style === 'dashed' ? 'graph-link-suggested' : ''}`)
     .attr("stroke", d => getLinkColor(d))
     .attr("stroke-width", d => getLinkWidth(d))
     .attr("stroke-opacity", 0.85);
 
-  // Nodes como Cards
   const node = g.append("g")
     .selectAll(".node-group")
     .data(filteredNodes)
     .join("g")
-    .attr("class", d => `node-group node-${d.type}`)
+    .attr("class", d => `node-group node-${d.type} ${selectedNodes.includes(d.id) ? 'is-selected' : ''}`)
     .call(d3.drag().on("start", dragStarted).on("drag", dragged).on("end", dragEnded))
-    .on("click", (event, d) => showDrawer(d));
+    .on("click", (event, d) => handleNodeClick(event, d));
 
   node.append("rect")
     .attr("class", "node-card")
@@ -127,17 +110,8 @@ function updateGraph() {
     .attr("height", 36)
     .attr("stroke", d => getNodeColor(d.type));
 
-  node.append("text")
-    .attr("class", "node-label")
-    .attr("text-anchor", "middle")
-    .attr("dy", 5)
-    .text(d => d.label);
-
-  node.append("text")
-    .attr("class", "node-sub")
-    .attr("text-anchor", "middle")
-    .attr("dy", 26)
-    .text(d => d.type.toUpperCase());
+  node.append("text").attr("class", "node-label").attr("text-anchor", "middle").attr("dy", 5).text(d => d.label);
+  node.append("text").attr("class", "node-sub").attr("text-anchor", "middle").attr("dy", 26).text(d => d.type.toUpperCase());
 
   if (simulation) simulation.stop();
   simulation = d3.forceSimulation(filteredNodes)
@@ -152,20 +126,76 @@ function updateGraph() {
   });
 }
 
+function handleNodeClick(event, d) {
+  if (isEditMode) {
+    if (selectedNodes.includes(d.id)) {
+      selectedNodes = selectedNodes.filter(id => id !== d.id);
+    } else {
+      selectedNodes.push(d.id);
+      if (selectedNodes.length === 2) {
+        createNewConnection();
+      }
+    }
+    updateGraph();
+  } else {
+    showDrawer(d);
+  }
+}
+
+function toggleEditMode() {
+  isEditMode = !isEditMode;
+  document.getElementById('btnEdit').classList.toggle('active');
+  document.getElementById('btnExport').style.display = isEditMode ? 'block' : 'none';
+  document.body.classList.toggle('is-editing');
+  selectedNodes = [];
+  updateGraph();
+  if (isEditMode) alert("MODO CURADORIA ATIVO: Clique em dois nós para criar uma conexão sugerida.");
+}
+
+function createNewConnection() {
+  const from = selectedNodes[0];
+  const to = selectedNodes[1];
+  
+  const exists = fullData.edges.some(e => (e.from === from && e.to === to) || (e.from === to && e.to === from));
+  
+  if (!exists) {
+    fullData.edges.push({
+      from: from,
+      to: to,
+      relation: "sugestao-clinica",
+      style: "dashed"
+    });
+    console.log(`🔗 Nova conexão sugerida criada: ${from} -> ${to}`);
+  }
+  selectedNodes = [];
+  updateGraph();
+}
+
+function exportPatch() {
+  const patch = {
+    timestamp: new Date().toISOString(),
+    new_edges: fullData.edges.filter(e => e.relation === "sugestao-clinica")
+  };
+  const blob = new Blob([jsonStringify(patch)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `patch_mapa_antigravity_${Date.now()}.json`;
+  a.click();
+  alert("Patch de Curadoria exportado! Envie este arquivo para o Antigravity para aplicar permanentemente.");
+}
+
+function jsonStringify(obj) { return JSON.stringify(obj, null, 2); }
+
 function getLinkColor(d) {
+  if (d.style === 'dashed') return "rgba(56, 189, 248, 0.6)"; // Azul claro para sugestão
   const rel = d.relation || "";
   if (rel.includes("subtema")) return "rgba(62,232,255,0.85)";
   if (rel.includes("gera")) return "rgba(255,209,102,0.85)";
-  if (rel.includes("alimenta")) return "rgba(78,240,161,0.85)";
   return "rgba(62,232,255,0.65)";
 }
 
-function getLinkWidth(d) {
-  const rel = d.relation || "";
-  if (rel.includes("subtema") || rel.includes("gera")) return 2.5;
-  return 1.8;
-}
-
+function getLinkWidth(d) { return d.style === 'dashed' ? 2 : 1.8; }
 function getNodeColor(type) {
   const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#64748b", file: "#94a3b8" };
   return colors[type] || "#64748b";
@@ -176,17 +206,10 @@ function showDrawer(d) {
   document.getElementById('drawerTitle').textContent = d.label;
   document.getElementById('drawerBody').innerHTML = `
     <p style="margin-bottom:1.5rem">${d.body}</p>
-    <div class="drawer-meta">
-      <span>TIPO: ${d.type.toUpperCase()}</span>
-      <span>STATUS: ${d.status || 'ativo'}</span>
-      <span>ID: ${d.id}</span>
-    </div>
-    <div class="drawer-actions">
-      ${d.url && d.url !== '#' ? `<a href="${d.url}" class="btn primary" style="display:block;text-align:center">Abrir Conteúdo →</a>` : '<span class="muted">Conteúdo interno da Enciclopédia</span>'}
-    </div>
+    <div class="drawer-meta"><span>TIPO: ${d.type.toUpperCase()}</span><span>ID: ${d.id}</span></div>
+    <div class="drawer-actions">${d.url && d.url !== '#' ? `<a href="${d.url}" class="btn primary">Abrir Conteúdo →</a>` : ''}</div>
   `;
   drawer.hidden = false;
-  document.getElementById('drawerClose').onclick = () => drawer.hidden = true;
 }
 
 function searchNode(val) {
@@ -202,8 +225,5 @@ function resetZoom() { svg.transition().call(zoom.transform, d3.zoomIdentity); }
 function dragStarted(event, d) { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; }
 function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
 function dragEnded(event, d) { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }
-function renderFallback(container, msg) {
-  container.innerHTML = `<div class="graph-fallback"><h3>⚠️ Modo Seguro</h3><p>${msg}</p></div>`;
-}
 
 document.addEventListener('DOMContentLoaded', initGraph);

@@ -94,13 +94,36 @@
   filter: drop-shadow(0 0 5px rgba(62, 232, 255, 0.3));
 }
 
+.graph-link-suggested {
+  stroke-dasharray: 6, 4 !important;
+  stroke-opacity: 0.6 !important;
+}
+
 #graph line {
-  opacity: 1 !important; /* Força visibilidade total */
+  opacity: 1 !important;
 }
 
 .graph-link:hover {
   stroke-opacity: 1 !important;
   stroke-width: 4px !important;
+}
+
+/* 🛠️ MODO CURADORIA */
+.is-editing #graph {
+  border: 2px solid var(--node-feed);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+}
+
+.node-group.is-selected .node-card {
+  stroke: #fff;
+  stroke-width: 4px;
+  filter: drop-shadow(0 0 15px #38bdf8);
+}
+
+.btn-curadoria.active {
+  background: var(--node-feed) !important;
+  color: #000 !important;
+  box-shadow: 0 0 15px var(--node-feed);
 }
 
 /* Drawer */
