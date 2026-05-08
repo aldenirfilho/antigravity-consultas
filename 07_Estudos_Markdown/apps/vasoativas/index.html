@@ -102,7 +102,7 @@
     async function init() {
       // Tentativa de carregar do JSON se estiver no servidor, senão fallback
       try {
-        const res = await fetch('../../../UPDOWN_HUB_REDESIGN_ANTIGRAVITY/UPDOWN_HUB_REDESIGN_ANTIGRAVITY/05_data/vasoactive_drugs_brasil_presets.json');
+        const res = await fetch('../../data/vasoactive_drugs_brasil_presets.json');
         const data = await res.json();
         drugs = data.drugs;
       } catch(e) {

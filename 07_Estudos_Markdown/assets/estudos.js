@@ -20,10 +20,21 @@ async function loadRegistry(){
 function hydrateFilters(){
   const themes = [...new Set(registry.documents.map(d => d.theme).filter(Boolean))].sort();
   const statuses = [...new Set(registry.documents.map(d => d.status).filter(Boolean))].sort();
-  themes.forEach(t => themeFilter.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`));
-  statuses.forEach(s => statusFilter.insertAdjacentHTML('beforeend', `<option value="${s}">${s}</option>`));
-  document.getElementById('metricDocs').textContent = registry.documents.length;
-  document.getElementById('metricThemes').textContent = themes.length;
+  
+  if(themeFilter) {
+    themeFilter.innerHTML = '<option value="">Todos os temas</option>';
+    themes.forEach(t => themeFilter.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`));
+  }
+  
+  if(statusFilter) {
+    statusFilter.innerHTML = '<option value="">Status (Todos)</option>';
+    statuses.forEach(s => statusFilter.insertAdjacentHTML('beforeend', `<option value="${s}">${s}</option>`));
+  }
+  
+  const metricDocs = document.getElementById('metricDocs');
+  const metricThemes = document.getElementById('metricThemes');
+  if(metricDocs) metricDocs.textContent = registry.documents.length;
+  if(metricThemes) metricThemes.textContent = themes.length;
 }
 
 function renderDocs(){
