@@ -103,17 +103,13 @@
 }
 
 .graph-link {
-  stroke: var(--edge);
-  stroke-width: 1.5;
-  stroke-dasharray: 4;
-  animation: graph-dash 20s linear infinite;
-  opacity: 0.6;
+  stroke: #3ee8ff;
+  stroke-width: 2.5;
+  stroke-opacity: 0.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 5px rgba(62, 232, 255, 0.4));
 }
 
-@keyframes graph-dash {
-  from { stroke-dashoffset: 200; }
-  to { stroke-dashoffset: 0; }
-}
 
 /* Drawer Fixo para Mobile/Desktop */
 #drawer {
