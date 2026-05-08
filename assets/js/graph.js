@@ -1,13 +1,13 @@
 /**
- * MAPA VIVO 4.5 PRO — ANTIGRAVITY ENGINE
- * Estável, Filtrável e Responsivo.
+ * MAPA VIVO 4.6 PRO — ANTIGRAVITY ENGINE
+ * Conexões visíveis e legibilidade aprimorada.
  */
 
 const MAP_CONFIG = {
   HEIGHT: 760,
   FORCE: -2000,
   DISTANCE: 180,
-  COLLISION: 90,
+  COLLISION: 100,
   MODES: {
     CORE: ['hub', 'biblioteca', 'feed', 'qbank', 'tool'],
     CLINICAL: ['hub', 'module', 'topic', 'theme'],
@@ -42,8 +42,6 @@ async function initGraph() {
       n.type = n.type || "theme";
       n.status = n.status || "ativo";
       n.body = n.body || n.description || "Tópico da Enciclopédia.";
-      
-      // Coordenadas Fallback se necessário
       if (n.x === undefined) n.x = Math.random() * 800;
       if (n.y === undefined) n.y = Math.random() * 600;
     });
@@ -57,7 +55,6 @@ async function initGraph() {
 
 function renderInterface(container) {
   const width = container.clientWidth || 1000;
-  
   container.innerHTML = `
     <div class="graph-toolbar">
       <input type="text" class="graph-search" placeholder="🔍 Buscar tema ou arquivo..." oninput="searchNode(this.value)">
@@ -83,96 +80,95 @@ function renderInterface(container) {
     .attr("viewBox", `0 0 ${width} ${MAP_CONFIG.HEIGHT}`);
 
   g = svg.append("g");
-
-  zoom = d3.zoom()
-    .scaleExtent([0.05, 5])
-    .on("zoom", (event) => g.attr("transform", event.transform));
-
+  zoom = d3.zoom().scaleExtent([0.05, 5]).on("zoom", (event) => g.attr("transform", event.transform));
   svg.call(zoom);
 }
 
 function updateGraph() {
   const width = document.getElementById('graph-canvas-wrap').clientWidth || 1000;
-  const height = MAP_CONFIG.HEIGHT;
-
-  // Filtrar nós pelo modo
   const typesToMatch = MAP_CONFIG.MODES[currentMode];
   let filteredNodes = fullData.nodes.filter(n => typesToMatch.includes(n.type));
   
-  // Limite de arquivos para não explodir a home
-  if (currentMode === 'FILES') {
-    filteredNodes = filteredNodes.slice(0, 30);
-  }
+  if (currentMode === 'FILES') filteredNodes = filteredNodes.slice(0, 40);
 
   const nodeIds = new Set(filteredNodes.map(n => n.id));
-  const filteredLinks = fullData.edges.filter(e => nodeIds.has(e.from) && nodeIds.has(e.to));
+  const filteredLinks = fullData.edges
+    .filter(e => nodeIds.has(e.from) && nodeIds.has(e.to))
+    .map(e => ({ source: e.from, target: e.to, relation: e.relation || "conecta" }));
 
-  // Limpar anterior
   g.selectAll("*").remove();
 
-  // Links
+  // Links Robustos
   const link = g.append("g")
+    .attr("class", "graph-links")
     .selectAll("line")
     .data(filteredLinks)
     .join("line")
-    .attr("class", "graph-link");
+    .attr("class", "graph-link")
+    .attr("stroke", d => getLinkColor(d))
+    .attr("stroke-width", d => getLinkWidth(d))
+    .attr("stroke-opacity", 0.85);
 
-  // Nodes
+  // Nodes como Cards
   const node = g.append("g")
     .selectAll(".node-group")
     .data(filteredNodes)
     .join("g")
     .attr("class", d => `node-group node-${d.type}`)
-    .style("color", d => getNodeColor(d.type))
-    .call(d3.drag()
-      .on("start", dragStarted)
-      .on("drag", dragged)
-      .on("end", dragEnded))
+    .call(d3.drag().on("start", dragStarted).on("drag", dragged).on("end", dragEnded))
     .on("click", (event, d) => showDrawer(d));
 
-  // Card (Retângulo)
   node.append("rect")
     .attr("class", "node-card")
-    .attr("rx", 12)
-    .attr("ry", 12)
+    .attr("rx", 12).attr("ry", 12)
     .attr("x", d => -(d.label.length * 4 + 20))
     .attr("y", -18)
     .attr("width", d => d.label.length * 8 + 40)
-    .attr("height", 36);
+    .attr("height", 36)
+    .attr("stroke", d => getNodeColor(d.type));
 
-  // Label
   node.append("text")
     .attr("class", "node-label")
     .attr("text-anchor", "middle")
     .attr("dy", 5)
-    .attr("font-size", "12px")
     .text(d => d.label);
 
-  // Sub-label (ID ou tipo)
   node.append("text")
     .attr("class", "node-sub")
     .attr("text-anchor", "middle")
     .attr("dy", 26)
     .text(d => d.type.toUpperCase());
 
-  // Simulação
   if (simulation) simulation.stop();
   simulation = d3.forceSimulation(filteredNodes)
     .force("link", d3.forceLink(filteredLinks).id(d => d.id).distance(MAP_CONFIG.DISTANCE))
     .force("charge", d3.forceManyBody().strength(MAP_CONFIG.FORCE))
-    .force("center", d3.forceCenter(width / 2, height / 2))
+    .force("center", d3.forceCenter(width / 2, MAP_CONFIG.HEIGHT / 2))
     .force("collision", d3.forceCollide().radius(MAP_CONFIG.COLLISION));
 
   simulation.on("tick", () => {
-    link
-      .attr("x1", d => d.source.x)
-      .attr("y1", d => d.source.y)
-      .attr("x2", d => d.target.x)
-      .attr("y2", d => d.target.y);
-
-    node
-      .attr("transform", d => `translate(${d.x},${d.y})`);
+    link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+    node.attr("transform", d => `translate(${d.x},${d.y})`);
   });
+}
+
+function getLinkColor(d) {
+  const rel = d.relation || "";
+  if (rel.includes("subtema")) return "rgba(62,232,255,0.85)";
+  if (rel.includes("gera")) return "rgba(255,209,102,0.85)";
+  if (rel.includes("alimenta")) return "rgba(78,240,161,0.85)";
+  return "rgba(62,232,255,0.65)";
+}
+
+function getLinkWidth(d) {
+  const rel = d.relation || "";
+  if (rel.includes("subtema") || rel.includes("gera")) return 2.5;
+  return 1.8;
+}
+
+function getNodeColor(type) {
+  const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#64748b", file: "#94a3b8" };
+  return colors[type] || "#64748b";
 }
 
 function showDrawer(d) {
@@ -190,60 +186,24 @@ function showDrawer(d) {
     </div>
   `;
   drawer.hidden = false;
-  
-  const close = document.getElementById('drawerClose');
-  if (close) close.onclick = () => drawer.hidden = true;
+  document.getElementById('drawerClose').onclick = () => drawer.hidden = true;
 }
 
 function searchNode(val) {
-  if (!val) {
-    g.selectAll(".node-group").style("opacity", 1);
-    return;
-  }
+  if (!val) { g.selectAll(".node-group").style("opacity", 1); return; }
   const term = val.toLowerCase();
-  g.selectAll(".node-group").style("opacity", d => 
-    d.label.toLowerCase().includes(term) || d.id.toLowerCase().includes(term) ? 1 : 0.1
-  );
+  g.selectAll(".node-group").style("opacity", d => (d.label.toLowerCase().includes(term) || d.id.toLowerCase().includes(term)) ? 1 : 0.1);
 }
 
-function setMode(mode) {
-  currentMode = mode;
-  updateGraph();
-}
-
+function setMode(mode) { currentMode = mode; updateGraph(); }
 function zoomIn() { svg.transition().call(zoom.scaleBy, 1.4); }
 function zoomOut() { svg.transition().call(zoom.scaleBy, 0.7); }
 function resetZoom() { svg.transition().call(zoom.transform, d3.zoomIdentity); }
-
-function getNodeColor(type) {
-  const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#64748b", file: "#94a3b8" };
-  return colors[type] || "#64748b";
-}
-
-function dragStarted(event, d) {
-  if (!event.active) simulation.alphaTarget(0.3).restart();
-  d.fx = d.x; d.fy = d.y;
-}
-function dragged(event, d) {
-  d.fx = event.x; d.fy = event.y;
-}
-function dragEnded(event, d) {
-  if (!event.active) simulation.alphaTarget(0);
-  d.fx = null; d.fy = null;
-}
-
+function dragStarted(event, d) { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; }
+function dragged(event, d) { d.fx = event.x; d.fy = event.y; }
+function dragEnded(event, d) { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }
 function renderFallback(container, msg) {
-  container.innerHTML = `
-    <div class="graph-fallback">
-      <h3>⚠️ Mapa Vivo: Modo de Segurança</h3>
-      <p>${msg}</p>
-      <div class="graph-fallback-grid">
-        <a href="01_Modulos_Clinicos/AVC_Agudo/avc.html" class="card">🧠 AVC Agudo</a>
-        <a href="05_Biblioteca_IA/index.html" class="card">📚 Biblioteca IA</a>
-        <a href="02_Banco_Questoes_TEMI/index.html" class="card">🏆 Banco TEMI</a>
-      </div>
-    </div>
-  `;
+  container.innerHTML = `<div class="graph-fallback"><h3>⚠️ Modo Seguro</h3><p>${msg}</p></div>`;
 }
 
 document.addEventListener('DOMContentLoaded', initGraph);
