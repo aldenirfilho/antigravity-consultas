@@ -103,6 +103,7 @@
     {"filename": "Documento_Irmao_Assincronias_Paciente_Ventilador.docx", "tipo": "word"},
     {"filename": "FAST eFAST em Trauma.docx", "tipo": "word"},
     {"filename": "FA_Protocolo_Completo_DrAldenir.docx", "tipo": "word"},
+    {"filename": "FST_TEMI_Aldenir.docx", "tipo": "word"},
     {"filename": "Guia_Antigravity_Comandos_Atalhos.docx", "tipo": "word"},
     {"filename": "HDA Protocolo Completo DrAldenir.docx", "tipo": "word"},
     {"filename": "HIC_Guia_TEMI.docx", "tipo": "word"},
@@ -136,6 +137,7 @@
     {"filename": "Protocolo_Abdomen_Agudo_Obstrutivo_UTI.docx", "tipo": "word"},
     {"filename": "Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx", "tipo": "word"},
     {"filename": "Protocolo_Afogamento_UTI_Adulto.docx", "tipo": "word"},
+    {"filename": "Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx", "tipo": "word"},
     {"filename": "Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx", "tipo": "word"},
     {"filename": "Protocolo_Bradicardia_em_UTI_final.docx", "tipo": "word"},
     {"filename": "Protocolo_Cetoacidose_Diabetica_UTI.docx", "tipo": "word"},
@@ -152,6 +154,7 @@
     {"filename": "Protocolo_Hipoglicemia_UTI.docx", "tipo": "word"},
     {"filename": "Protocolo_Hiponatremia_Grave_UTI.docx", "tipo": "word"},
     {"filename": "Protocolo_IC_VM_DrAldenir.docx", "tipo": "word"},
+    {"filename": "Protocolo_IPCS_CVC_UTI_TEMI.docx", "tipo": "word"},
     {"filename": "Protocolo_Intoxicacao_Exogena_na_UTI.docx", "tipo": "word"},
     {"filename": "Protocolo_Morte_Encefalica_CFM2173.docx", "tipo": "word"},
     {"filename": "Protocolo_Pneumonia_Aspirativa_UTI_Adulto.docx", "tipo": "word"},
@@ -159,6 +162,7 @@
     {"filename": "Protocolo_SARA_Grave_UTI_Adulto.docx", "tipo": "word"},
     {"filename": "Protocolo_SHR_DrAldenir.docx", "tipo": "word"},
     {"filename": "Protocolo_TCE_Grave_UTI_Adulto.docx", "tipo": "word"},
+    {"filename": "Protocolo_Teste_Estresse_Furosemida_UTI_TEMI.docx", "tipo": "word"},
     {"filename": "Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx", "tipo": "word"},
     {"filename": "Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx", "tipo": "word"},
     {"filename": "QualidadeSeguranca UTI DrAldenir.docx", "tipo": "word"},
@@ -187,6 +191,7 @@
     {"filename": "protocolo_morte_cerebral_2.docx", "tipo": "word"},
     {"filename": "protocolo_morte_cerebral_3.docx", "tipo": "word"},
     {"filename": "protocolo_morte_cerebral_4.docx", "tipo": "word"},
-    {"filename": "protocolo_transfusao_crioprecipitado_UTI_pandoc.docx", "tipo": "word"}
+    {"filename": "protocolo_transfusao_crioprecipitado_UTI_pandoc.docx", "tipo": "word"},
+    {"filename": "resumo_executivo_aldenir.docx", "tipo": "word"}
   ]
 }
