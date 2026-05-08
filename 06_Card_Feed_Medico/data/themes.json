@@ -1,6 +1,12 @@
 {
   "themes": [
     {
+      "id": "inbox",
+      "label": "📥 Inbox (não classificado)",
+      "emoji": "📥",
+      "folder": "assets/cards/inbox/"
+    },
+    {
       "id": "uti-geral",
       "label": "UTI Geral",
       "emoji": "🏥",

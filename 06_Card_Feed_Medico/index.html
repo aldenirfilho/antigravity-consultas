@@ -463,6 +463,7 @@
       <select id="sortMode" class="select">
         <option value="newest">Mais recentes</option>
         <option value="oldest">Mais antigos</option>
+        <option value="inbox">📥 Inbox primeiro</option>
         <option value="theme">Tema A-Z</option>
         <option value="title">Título A-Z</option>
         <option value="review">Revisão primeiro</option>
@@ -493,6 +494,7 @@
         <label>Status
           <select id="editStatus" class="select">
             <option value="novo">Novo</option>
+            <option value="inbox">📥 Inbox</option>
             <option value="revisar">Revisar</option>
             <option value="aprendendo">Aprendendo</option>
             <option value="dominado">Dominado</option>
@@ -506,6 +508,26 @@
         <button type="button" class="btn gold" id="btnFavorite">⭐ Favorito</button>
         <button type="button" class="btn" id="btnMarkReview">🔁 Revisar</button>
         <button type="submit" class="btn primary">💾 Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="classifyDialog">
+    <form method="dialog" id="classifyForm">
+      <div class="modal-head">
+        <strong>📂 Classificar card do Inbox</strong>
+        <button class="btn small" value="cancel">✕</button>
+      </div>
+      <div class="modal-body">
+        <input id="classifyId" type="hidden" />
+        <p style="color:#cbd5e1;margin:0 0 8px">Escolha o tema correto para este card:</p>
+        <label>Tema <select id="classifyTheme" class="select"></select></label>
+        <label>Título <input id="classifyTitle" class="field" /></label>
+        <label>Tags <input id="classifyTags" class="field" placeholder="separadas por vírgula" /></label>
+        <label>Explicação <textarea id="classifyExplanation" placeholder="Resumo, conduta, nota TEMI..."></textarea></label>
+      </div>
+      <div class="modal-actions">
+        <button type="submit" class="btn primary">📂 Classificar e salvar</button>
       </div>
     </form>
   </dialog>
@@ -654,6 +676,27 @@
       themes = themeData.themes || [];
       const cardData = await fetchJSON("data/cards.json", { cards: [] });
       repoCards = (cardData.cards || []).map(c => ({ ...c, origin: "repo" }));
+      // Auto-scan inbox
+      const inboxData = await fetchJSON("data/inbox.json", { files: [] });
+      const inboxFiles = inboxData.files || [];
+      const existingIds = new Set(repoCards.map(c => c.id));
+      for (const file of inboxFiles) {
+        const id = "inbox-" + file.replace(/\.[^.]+$/, "").replace(/[^a-zA-Z0-9]/g, "-").toLowerCase();
+        if (existingIds.has(id)) continue;
+        const theme = inferTheme(file);
+        repoCards.push({
+          id,
+          title: cleanTitle(file),
+          theme: theme === "uti-geral" ? "inbox" : theme,
+          tags: inferTags(file, theme),
+          explanation: "",
+          source: "Inbox — aguardando classificação",
+          status: "novo",
+          imageUrl: "assets/cards/inbox/" + file,
+          createdAt: nowISO(),
+          origin: "repo"
+        });
+      }
     }
 
     async function loadLocalData() {
@@ -793,6 +836,11 @@
       const sort = $("sortMode").value;
       list.sort((a,b) => {
         if (sort === "oldest") return new Date(a.createdAt || 0) - new Date(b.createdAt || 0);
+        if (sort === "inbox") {
+          const ai = a.theme === "inbox" ? 0 : 1;
+          const bi = b.theme === "inbox" ? 0 : 1;
+          return ai - bi || new Date(b.createdAt || 0) - new Date(a.createdAt || 0);
+        }
         if (sort === "theme") return String(a.theme).localeCompare(String(b.theme));
         if (sort === "title") return String(a.title).localeCompare(String(b.title));
         if (sort === "review") {
@@ -850,6 +898,7 @@
             <div class="tags">${tags}</div>
             <div class="explain">${esc(c.explanation || "Sem comentário ainda. Edite este card para adicionar explicação clínica ou nota TEMI.")}</div>
             <div class="actions">
+              ${c.theme === "inbox" ? `<button class="btn small primary" data-classify="${esc(c.id)}" style="background:linear-gradient(135deg,#f59e0b,#ef4444);border:none">📂 Classificar</button>` : ""}
               <button class="btn small" data-edit="${esc(c.id)}">✍️ Editar local</button>
               <button class="btn small gold" data-fav="${esc(c.id)}">${c.favorite ? "⭐" : "☆"}</button>
               <button class="btn small" data-review="${esc(c.id)}">🔁 Revisar</button>
@@ -874,6 +923,40 @@
       document.querySelectorAll("[data-fav]").forEach(b => b.onclick = () => toggleFavorite(b.dataset.fav));
       document.querySelectorAll("[data-review]").forEach(b => b.onclick = () => markReview(b.dataset.review));
       document.querySelectorAll("[data-status]").forEach(b => b.onclick = () => quickStatus(b.dataset.status, b.dataset.value));
+      document.querySelectorAll("[data-classify]").forEach(b => b.onclick = () => openClassify(b.dataset.classify));
+    }
+
+    function openClassify(id) {
+      const c = getCard(id);
+      if (!c) return;
+      $("classifyId").value = c.id;
+      $("classifyTitle").value = c.title || "";
+      $("classifyTags").value = (c.tags || []).join(", ");
+      $("classifyExplanation").value = c.explanation || "";
+      // Populate theme select excluding inbox
+      $("classifyTheme").innerHTML = themes.filter(t => t.id !== "inbox").map(t => `<option value="${esc(t.id)}">${t.emoji} ${esc(t.label)}</option>`).join("");
+      $("classifyTheme").value = inferTheme(c.title || "") !== "uti-geral" ? inferTheme(c.title || "") : "uti-geral";
+      $("classifyDialog").showModal();
+    }
+
+    async function saveClassify() {
+      const id = $("classifyId").value;
+      const c = getCard(id);
+      if (!c) return;
+      const updated = {
+        ...c,
+        title: $("classifyTitle").value.trim() || c.title,
+        theme: $("classifyTheme").value,
+        tags: $("classifyTags").value.split(",").map(x => x.trim()).filter(Boolean),
+        explanation: $("classifyExplanation").value.trim(),
+        status: "novo",
+        updatedAt: nowISO(),
+        origin: "local"
+      };
+      await putLocal(updated);
+      $("classifyDialog").close();
+      await refresh();
+      toast("📂 Card classificado como: " + $("classifyTheme").value);
     }
 
     function getCard(id) {
@@ -988,6 +1071,7 @@
       $("btnFeedMode").onclick = toggleViewMode;
       $("btnHelp").onclick = () => $("helpDialog").showModal();
       $("btnPrint").onclick = () => window.print();
+      $("classifyForm").onsubmit = async e => { e.preventDefault(); await saveClassify(); };
       ["search", "sortMode"].forEach(id => { $(id).oninput = render; $(id).onchange = render; });
       $("themeFilter").onchange = () => { activeTheme = $("themeFilter").value; render(); };
       $("editForm").onsubmit = async e => { e.preventDefault(); await saveEdit(); $("editDialog").close(); };
