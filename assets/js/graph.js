@@ -67,8 +67,14 @@ function render(data, container) {
   window.gZoom = (scale) => svg.transition().duration(500).call(zoom.scaleBy, scale);
   window.gReset = () => svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
 
+  // Validação de links (Fail-safe para não crashar se um nó sumir)
+  const nodeIds = new Set(data.nodes.map(d => d.id));
+  const validLinks = data.edges
+    .filter(e => nodeIds.has(e.from) && nodeIds.has(e.to))
+    .map(e => ({ source: e.from, target: e.to }));
+
   const simulation = d3.forceSimulation(data.nodes)
-    .force("link", d3.forceLink(data.edges.map(e => ({ source: e.from, target: e.to }))).id(d => d.id).distance(CONFIG.LINK_DIST))
+    .force("link", d3.forceLink(validLinks).id(d => d.id).distance(CONFIG.LINK_DIST))
     .force("charge", d3.forceManyBody().strength(CONFIG.FORCE_STRENGTH))
     .force("center", d3.forceCenter(width / 2, height / 2))
     .force("collision", d3.forceCollide().radius(CONFIG.COLLIDE_RAD));
@@ -78,7 +84,7 @@ function render(data, container) {
     .attr("stroke", "rgba(255,255,255,0.06)")
     .attr("stroke-width", 1)
     .selectAll("line")
-    .data(data.edges)
+    .data(validLinks)
     .join("line");
 
   // Rótulos (Apenas Texto - Sem Bolas!)

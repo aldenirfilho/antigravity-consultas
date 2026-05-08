@@ -757,7 +757,7 @@
     },
     {
       "from": "brain-protocolo-ipcs-cvc-uti-temi",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -777,7 +777,7 @@
     },
     {
       "from": "brain-protocolo-desmame-vm-sedoanalgesia",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -792,7 +792,7 @@
     },
     {
       "from": "brain-suporte-respiratorio-decisao-uti-sara-grave",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -802,7 +802,7 @@
     },
     {
       "from": "brain-simulador-suporte-respiratorio-vm-sara",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -817,7 +817,7 @@
     },
     {
       "from": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -847,7 +847,7 @@
     },
     {
       "from": "brain-hic-guia-temi",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -862,7 +862,7 @@
     },
     {
       "from": "brain-guia-de-suporte-respirato-rio-e-simulador-de-tomada-de-decisa-o-me-dica-v1",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -877,7 +877,7 @@
     },
     {
       "from": "brain-tce-temi-draldenir",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -897,7 +897,7 @@
     },
     {
       "from": "brain-pag-sara-uti-temi",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -927,7 +927,7 @@
     },
     {
       "from": "brain-protocolo-sara-grave-uti-adulto",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -942,7 +942,7 @@
     },
     {
       "from": "brain-desmamevm-bnm-neurointensivismo-draldenir",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -972,7 +972,7 @@
     },
     {
       "from": "brain-desmamevm-bnm-neurointensivismo-draldenir",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -982,7 +982,7 @@
     },
     {
       "from": "brain-temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -1017,7 +1017,7 @@
     },
     {
       "from": "brain-sdra-vm-protetora-draldenir",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -1027,7 +1027,7 @@
     },
     {
       "from": "brain-fst-temi-aldenir",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -1042,7 +1042,7 @@
     },
     {
       "from": "brain-trials-temi",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -1057,7 +1057,7 @@
     },
     {
       "from": "brain-avch-hsa-protocolo-completo",
-      "to": "neuro-uti",
+      "to": "avc-agudo",
       "relation": "vinculado-a"
     },
     {
@@ -1072,7 +1072,7 @@
     },
     {
       "from": "brain-tce-temi-draldenir",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -1092,7 +1092,7 @@
     },
     {
       "from": "brain-pancreatite-aguda-grave-sara-grave",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -1102,7 +1102,7 @@
     },
     {
       "from": "brain-simulado-temi-2026-draldenir",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -1122,7 +1122,7 @@
     },
     {
       "from": "brain-desmame-da-vm",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -1132,7 +1132,7 @@
     },
     {
       "from": "brain-simulador-suporte-respiratorio-vm-sara",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -1147,7 +1147,7 @@
     },
     {
       "from": "brain-simulado-temi-2026-draldenir",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -1167,7 +1167,7 @@
     },
     {
       "from": "brain-sdra-vm-protetora-draldenir",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -1192,7 +1192,7 @@
     },
     {
       "from": "brain-broncoscopia-uti-temi",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -1207,7 +1207,7 @@
     },
     {
       "from": "brain-hic-guia-temi",
-      "to": "temi-prova",
+      "to": "banco-temi",
       "relation": "vinculado-a"
     },
     {
@@ -1227,7 +1227,7 @@
     },
     {
       "from": "brain-protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
-      "to": "ventilacao-mecanica",
+      "to": "vm-sdra",
       "relation": "complementa-modulo"
     },
     {
@@ -1242,7 +1242,7 @@
     },
     {
       "from": "brain-01-protocolo-sepse-bundle1hhora",
-      "to": "card-feed",
+      "to": "card-feed-medico",
       "relation": "complementa-modulo"
     }
   ]
