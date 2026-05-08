@@ -490,6 +490,20 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo"
+    },
+    {
+      "id": "lupus-uti",
+      "label": "🦋 Lúpus na UTI",
+      "body": "Abordagem do paciente com LES crítico na UTI.",
+      "type": "theme",
+      "status": "ativo",
+      "url": "temas/lupus-uti/index.html",
+      "tags": [
+        "uti",
+        "reumatologia",
+        "temi"
+      ],
+      "visible": true
     }
   ],
   "edges": [
@@ -1537,6 +1551,16 @@
       "from": "brain-01-protocolo-sepse-bundle1hhora",
       "to": "sepse-choque",
       "relation": "vinculado-a"
+    },
+    {
+      "from": "lupus-uti",
+      "to": "nefro-aki-trs",
+      "relation": "tags-compartilhadas:uti,nefrologia",
+      "strength": "suggested",
+      "status": "sugerido",
+      "visible": true,
+      "reason": "LES pode cursar com nefrite, AKI e necessidade de TRS.",
+      "createdBy": "curadoria-local"
     }
   ]
 }
