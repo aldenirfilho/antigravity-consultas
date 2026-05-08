@@ -1,85 +1,99 @@
 /**
- * MAPA VIVO 7.0 — "ROBUST TEXT BRAIN"
- * Estabilidade total e foco em texto.
+ * MAPA VIVO 8.0 — "ULTIMATE TEXT BRAIN"
+ * Estabilização Final e Foco Absoluto em Texto.
  */
 
-function initGraph() {
+const CONFIG = {
+  HEIGHT: 800,
+  FORCE_STRENGTH: -3000,
+  LINK_DIST: 250,
+  COLLIDE_RAD: 130
+};
+
+async function initGraph() {
   const container = document.getElementById('graph');
   if (!container) return;
 
-  // Garantir altura mínima
-  container.style.minHeight = "600px";
-  container.style.height = "85vh"; // Altura dinâmica baseada na tela
-  
-  const width = container.clientWidth || 1200;
-  const height = container.clientHeight || 800;
+  // Limpar e mostrar loading
+  container.innerHTML = '<div id="graph-loading" style="color:#64748b; padding:40px; font-family:Syne; text-align:center;">🧠 Sincronizando Mapa Vivo...</div>';
 
-  container.innerHTML = `<div style="color:#fff; padding:20px; font-family:Syne;">🧠 Carregando conexões neurais...</div>`;
+  try {
+    if (typeof d3 === 'undefined') throw new Error("D3.js não carregado.");
 
-  if (typeof d3 === 'undefined') {
-    container.innerHTML = `<div style="color:#ff4b4b; padding:20px;">⚠️ Erro: Biblioteca D3 não carregada. Verifique sua conexão ou o link no index.html.</div>`;
-    return;
+    const res = await fetch('data/connections.json');
+    if (!res.ok) throw new Error("Não foi possível carregar data/connections.json");
+    const data = await res.json();
+
+    render(data, container);
+  } catch (err) {
+    container.innerHTML = `
+      <div style="color:#ff4b4b; padding:40px; text-align:center; font-family:Syne;">
+        <p>⚠️ Erro ao carregar o Mapa: ${err.message}</p>
+        <button class="btn ghost" onclick="location.reload()" style="margin-top:20px">Tentar Novamente 🔄</button>
+      </div>
+    `;
   }
-
-  fetch('data/connections.json')
-    .then(res => res.json())
-    .then(data => {
-      render(data, container, width, height);
-    })
-    .catch(err => {
-      container.innerHTML = `<div style="color:#ff4b4b; padding:20px;">⚠️ Erro ao carregar conexões: ${err.message}</div>`;
-    });
 }
 
-function render(data, container, width, height) {
-  const nodes = data.nodes;
-  const links = data.edges.map(e => ({ source: e.from, target: e.to, relation: e.relation }));
+function render(data, container) {
+  const width = container.clientWidth || 1000;
+  const height = CONFIG.HEIGHT;
 
+  // Remover loading
   container.innerHTML = `
     <div id="graph-ui" style="position:absolute; top:20px; left:20px; z-index:100; display:flex; gap:10px; pointer-events:none;">
-      <button class="btn primary" onclick="g_zoomIn()" style="pointer-events:auto; font-size:14px; padding:8px 15px;">➕ Aumentar</button>
-      <button class="btn primary" onclick="g_zoomOut()" style="pointer-events:auto; font-size:14px; padding:8px 15px;">➖ Diminuir</button>
-      <button class="btn ghost" onclick="g_reset()" style="pointer-events:auto; font-size:14px; padding:8px 15px;">🔄 Reset</button>
+      <button class="btn primary" onclick="gZoom(1.5)" style="pointer-events:auto; font-size:16px;">➕ Ampliar</button>
+      <button class="btn primary" onclick="gZoom(0.6)" style="pointer-events:auto; font-size:16px;">➖ Reduzir</button>
+      <button class="btn ghost" onclick="gReset()" style="pointer-events:auto; font-size:16px;">🔄 Reset</button>
     </div>
   `;
 
   const svg = d3.select(container)
     .append("svg")
     .attr("width", "100%")
-    .attr("height", "100%")
+    .attr("height", height)
     .attr("viewBox", `0 0 ${width} ${height}`)
     .style("background", "#050d1a");
 
   const g = svg.append("g");
 
   const zoom = d3.zoom()
-    .scaleExtent([0.02, 10])
+    .scaleExtent([0.01, 10])
     .on("zoom", (event) => g.attr("transform", event.transform));
 
   svg.call(zoom);
 
-  // Expor funções de zoom globalmente
-  window.g_zoomIn = () => svg.transition().duration(500).call(zoom.scaleBy, 1.6);
-  window.g_zoomOut = () => svg.transition().duration(500).call(zoom.scaleBy, 0.6);
-  window.g_reset = () => svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  // Globais para os botões
+  window.gZoom = (scale) => svg.transition().duration(500).call(zoom.scaleBy, scale);
+  window.gReset = () => svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
 
-  const simulation = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id(d => d.id).distance(220))
-    .force("charge", d3.forceManyBody().strength(-2500))
+  const simulation = d3.forceSimulation(data.nodes)
+    .force("link", d3.forceLink(data.edges.map(e => ({ source: e.from, target: e.to }))).id(d => d.id).distance(CONFIG.LINK_DIST))
+    .force("charge", d3.forceManyBody().strength(CONFIG.FORCE_STRENGTH))
     .force("center", d3.forceCenter(width / 2, height / 2))
-    .force("collision", d3.forceCollide().radius(100));
+    .force("collision", d3.forceCollide().radius(CONFIG.COLLIDE_RAD));
 
+  // Conexões (Linhas finas)
   const link = g.append("g")
-    .attr("stroke", "rgba(255,255,255,0.1)")
+    .attr("stroke", "rgba(255,255,255,0.06)")
+    .attr("stroke-width", 1)
     .selectAll("line")
-    .data(links)
+    .data(data.edges)
     .join("line");
 
+  // Rótulos (Apenas Texto - Sem Bolas!)
   const node = g.append("g")
-    .selectAll(".node-group")
-    .data(nodes)
-    .join("g")
-    .attr("class", d => `node-group node-${d.type}`)
+    .selectAll(".node-text")
+    .data(data.nodes)
+    .join("text")
+    .attr("class", "node-text")
+    .attr("text-anchor", "middle")
+    .attr("fill", d => getNodeColor(d.type))
+    .attr("font-size", d => (d.type === 'hub' || d.type === 'module') ? "24px" : "16px")
+    .attr("font-weight", "800")
+    .attr("cursor", "pointer")
+    .style("text-shadow", "0 0 10px #000")
+    .text(d => d.label)
     .call(d3.drag()
       .on("start", (event, d) => {
         if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -96,38 +110,37 @@ function render(data, container, width, height) {
       const drawer = document.getElementById('drawer');
       document.getElementById('drawerTitle').textContent = d.label;
       document.getElementById('drawerBody').innerHTML = `
-        <p>${d.body || d.description || 'Conexão ativa.'}</p>
+        <p>${d.body || d.description || 'Tópico clínico da Enciclopédia.'}</p>
         <div class="drawer-meta">
-          <span>Tipo: ${d.type}</span>
+          <span>TIPO: ${d.type.toUpperCase()}</span>
           <span>ID: ${d.id}</span>
         </div>
-        ${d.url && d.url !== '#' ? `<a class="btn primary" href="${d.url}">Abrir →</a>` : ''}
+        ${d.url && d.url !== '#' ? `<a class="btn primary" href="${d.url}">Abrir Conteúdo →</a>` : ''}
       `;
       drawer.hidden = false;
     });
 
-  // TEXTO É O ÚNICO ELEMENTO (Fim das bolas!)
-  node.append("text")
-    .attr("text-anchor", "middle")
-    .attr("fill", d => getNodeColor(d.type))
-    .attr("font-size", d => (d.type === 'hub' || d.type === 'module') ? "22px" : "16px")
-    .attr("font-weight", "800")
-    .style("text-shadow", "0 2px 10px rgba(0,0,0,1)")
-    .text(d => d.label);
-
   simulation.on("tick", () => {
-    link.attr("x1", d => d.source.x).attr("y1", d => d.source.y).attr("x2", d => d.target.x).attr("y2", d => d.target.y);
-    node.attr("transform", d => `translate(${d.x},${d.y})`);
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+
+    node
+      .attr("x", d => d.x)
+      .attr("y", d => d.y);
   });
 
   function getNodeColor(type) {
-    const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#64748b", file: "#94a3b8" };
+    const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#a78bfa", file: "#94a3b8" };
     return colors[type] || "#fff";
   }
 }
 
-// Inicializar quando o DOM e D3 estiverem prontos
-document.addEventListener('DOMContentLoaded', () => {
-  // Pequeno delay para garantir que d3 injetado no final do body seja lido
-  setTimeout(initGraph, 500);
-});
+// Iniciar após carregar tudo
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGraph);
+} else {
+  initGraph();
+}
