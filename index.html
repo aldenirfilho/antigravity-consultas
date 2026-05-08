@@ -1,138 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enciclopédia Médica Intensiva & Medicina Interna</title>
-  <meta name="description" content="Portal médico interativo para Medicina Intensiva, Medicina Interna, UTI, TEMI e prática clínica avançada em Markdown vivo." />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/home.css" />
-  <link rel="stylesheet" href="assets/css/graph-vivo.css" />
-  <meta property="og:title" content="Enciclopédia Médica Intensiva & Medicina Interna">
-  <meta property="og:description" content="Portal interativo UTI, TEMI, Clínica Médica — Dr. Aldenir Rocha">
-  <meta property="og:url" content="https://aldenirfilho.github.io/antigravity-consultas/">
-  <meta property="og:type" content="website">
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UpDown — Página de Resgate</title>
+<style>
+:root{--bg:#f6f7fb;--paper:#fff;--text:#1b2433;--muted:#68758a;--line:#e5e8f0;--accent:#3557ff;}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;}
+main{max-width:1100px;margin:32px auto;padding:0 18px;}
+.hero{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:0 8px 30px rgba(20,30,60,.06);}
+h1{margin:0 0 8px;font-size:2.2rem;letter-spacing:-.04em;}
+p{color:var(--muted);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;margin-top:22px;}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px;text-decoration:none;color:var(--text);box-shadow:0 8px 24px rgba(20,30,60,.05); transition: transform 0.2s ease;}
+.card:hover{border-color:var(--accent); transform: translateY(-5px);}
+.card strong{font-size:1.2rem; display: block; margin-bottom: 5px;}
+.small{font-size:.92rem; color:var(--muted);}
+.section{margin-top:28px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px;}
+ul{padding-left:22px;}
+code{background:#eef2ff;padding:.15em .35em;border-radius:6px;}
+@media(max-width:800px){.grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="index.html">
-      <img src="assets/img/logo.png" alt="Logo Enciclopédia" style="width:44px;height:44px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,0.15);box-shadow:0 4px 14px rgba(255,173,77,0.25);" />
-      <span><strong>Enciclopédia Médica</strong><small>Intensiva & Medicina Interna</small></span>
-    </a>
-    <nav class="nav">
-      <a href="07_Estudos_Markdown/index.html" style="color:#4ef0a1;">📄 Estudos MD</a>
-      <a href="#updown">↕️ UPDOWN</a>
-      <a href="06_Card_Feed_Medico/index.html" style="color:#38bdf8;">🖼️ Card Feed</a>
-      <a href="02_Banco_Questoes_TEMI/index.html" style="color:#ffc107;">🏆 TEMI</a>
-      <a href="03_Calculadoras_UTI/index.html" style="color:#4ef0a1;">🧮 Calculadoras</a>
-      <a href="#mapa">Mapa vivo</a>
-      <a href="#seguranca">Segurança</a>
-      <a href="05_Biblioteca_IA/index.html">📚 Biblioteca IA</a>
-    </nav>
-  </header>
+<main>
+<section class="hero">
+<h1>🚑 UpDown — Página de Resgate</h1>
+<p>Acesso rápido aos módulos, biblioteca, imagens e aplicações enquanto a estrutura definitiva é reorganizada.</p>
+<div class="grid">
+<a class="card" href="./updown/index.html"><strong>📖 UpDowns</strong><span class="small">Conteúdos em modo leitor transformados</span></a>
+<a class="card" href="./biblioteca/index.html"><strong>📚 Biblioteca</strong><span class="small">PDFs, Word, Markdown e fontes originais</span></a>
+<a class="card" href="./imagens/index.html"><strong>🖼️ Imagens</strong><span class="small">Cards, mapas mentais e fluxogramas</span></a>
+<a class="card" href="./apps/index.html"><strong>🧮 Aplicações</strong><span class="small">Calculadoras e escalas clínicas</span></a>
+<a class="card" href="./questoes/index.html"><strong>🏆 Questões</strong><span class="small">Banco de questões TEMI/R3</span></a>
+<a class="card" href="./06_ANTIGRAVITY/PROMPT_RESGATE_ANTIGRAVITY.md"><strong>🛠️ Protocolo</strong><span class="small">Documentação técnica do resgate</span></a>
+</div>
+</section>
 
-  <main>
-    <section class="hero section-shell">
-      <div class="hero-copy glass">
-        <span class="eyebrow">🚀 Projeto vivo • Markdown • UTI • Clínica Médica • TEMI</span>
-        <h1>Uma central de comando para estudar, decidir e evoluir na medicina.</h1>
-        <p>
-          Novo padrão da Enciclopédia: conteúdos em <strong>Markdown vivo</strong>, versões, mapa de conexões,
-          análise clínica própria e produtos didáticos gerados a partir de estudos de artigos, diretrizes, aulas e capítulos de referência.
-        </p>
-        <div class="actions">
-          <a class="btn primary" href="07_Estudos_Markdown/index.html">📄 Abrir Estudos Markdown</a>
-          <a class="btn" href="#updown">↕️ Entender UPDOWN</a>
-          <a class="btn" href="03_Calculadoras_UTI/index.html">🧮 Calculadoras UTI</a>
-          <a class="btn" href="02_Banco_Questoes_TEMI/index.html">🏆 Banco TEMI</a>
-          <a class="btn ghost" href="#catalogo">📦 Catálogo</a>
-        </div>
-      </div>
-      <aside class="status-card glass">
-        <h2>📊 Painel inicial</h2>
-        <div class="metric-grid">
-          <div><strong>MD</strong><span>formato-base</span></div>
-          <div><strong>v3</strong><span>modelo vivo</span></div>
-          <div><strong>∞</strong><span>alimentação</span></div>
-          <div><strong>↕️</strong><span>UPDOWN</span></div>
-        </div>
-        <p class="muted">Agora o projeto cresce por documentos Markdown curtos, versionados e conectados ao mapa vivo.</p>
-      </aside>
-    </section>
+<section class="section">
+<h2>🔗 Triângulo de Conexão</h2>
+<p>Mantenha o fluxo: Estudo (UpDown) ↔ Fonte Original (Biblioteca) ↔ Apoio Visual (Imagens).</p>
+<ul>
+<li><strong>UpDown</strong>: Onde o conhecimento é dirimido.</li>
+<li><strong>Biblioteca</strong>: Onde a evidência é comprovada.</li>
+<li><strong>Imagens</strong>: Onde a conduta é memorizada.</li>
+</ul>
+</section>
 
-    <section id="manifesto" class="section-shell section-block">
-      <h2>📜 Manifesto editorial v3</h2>
-      <div class="grid two">
-        <article class="card"><h3>O que muda?</h3><p>Saímos do modelo de páginas gigantes feitas manualmente para um fluxo de Markdown modular, pesquisável, versionado e mais fácil de atualizar.</p></article>
-        <article class="card"><h3>Por que isso é melhor?</h3><p>Cada estudo vira um bloco reutilizável: resumo, algoritmo, questões, cards, checklist, conexão com calculadoras e mapa vivo.</p></article>
-      </div>
-    </section>
-
-    <section id="updown" class="section-shell section-block highlight">
-      <h2>↕️ UPDOWN — novo diretório operacional</h2>
-      <p class="muted">UPDOWN é o motor editorial: o conhecimento entra como estudo bruto e sai como produto didático próprio, seguro e plugável.</p>
-      <div class="grid four" style="margin-top:18px;">
-        <article class="card"><h3>⬆️ UP: Entrada</h3><p>Artigos, PDFs, aulas, diretrizes, notas de estudo e capítulos de referência entram como insumo.</p></article>
-        <article class="card"><h3>🧠 Análise</h3><p>A IA transforma o material em síntese própria, raciocínio clínico, algoritmo e pontos de prova.</p></article>
-        <article class="card"><h3>⬇️ DOWN: Produto</h3><p>Markdown, cards, flashcards, questões TEMI, checklists, mapas e dashboards.</p></article>
-        <article class="card"><h3>🕓 Versão</h3><p>Cada conteúdo recebe versão, status, tema, tags, revisão e conexões.</p></article>
-      </div>
-      <div class="actions" style="margin-top:18px;">
-        <a class="btn primary" href="07_Estudos_Markdown/index.html">Abrir central Markdown →</a>
-        <a class="btn ghost" href="07_Estudos_Markdown/viewer.html?doc=content/modelos/template_estudo_seguro.md">Template seguro →</a>
-      </div>
-    </section>
-
-    <section id="vias" class="section-shell section-block">
-      <h2>🛣️ Vias principais</h2>
-      <div class="grid two">
-        <article class="path-card card urgent"><h3>🚑 Medicina Intensiva</h3><p>Choque, sepse, VM, neuro UTI, sedação, delirium, IRA, TRS, POCUS, bundles e segurança.</p><ul><li>Conduta beira-leito.</li><li>Checklist de round.</li><li>Prescrição sugerida.</li><li>Pontos TEMI.</li></ul></article>
-        <article class="path-card card calm"><h3>🏥 Medicina Interna Avançada</h3><p>Diagnóstico diferencial, enfermaria, emergência clínica, multimorbidade, farmacologia, exames e seguimento.</p><ul><li>Síndromes clínicas.</li><li>Raciocínio diagnóstico.</li><li>Condutas longitudinais.</li><li>Casos complexos.</li></ul></article>
-      </div>
-    </section>
-
-    <section id="modulos" class="section-shell section-block highlight">
-      <h2>🧩 Módulos ativos e hubs</h2>
-      <div class="grid three" style="margin-top:18px;">
-        <article class="card" style="border-color:rgba(78,240,161,.42)"><h3>📄 Estudos Markdown</h3><p>Central viva de análises, versões, transcrições transformadas e produtos didáticos.</p><a class="btn primary" href="07_Estudos_Markdown/index.html">Abrir →</a></article>
-        <article class="card" style="border-color:rgba(255,193,7,.4)"><h3>🏆 Banco TEMI</h3><p>Questões comentadas e treino ativo conectado aos temas.</p><a class="btn primary" href="02_Banco_Questoes_TEMI/index.html">Abrir →</a></article>
-        <article class="card" style="border-color:rgba(78,240,161,.42)"><h3>🧮 Calculadoras UTI</h3><p>Contas rápidas para plantão, bomba, VM, eletrólitos e gasometria.</p><a class="btn primary" href="03_Calculadoras_UTI/index.html">Abrir →</a></article>
-        <article class="card" style="border-color:rgba(56,189,248,.42)"><h3>🖼️ Card Feed Médico</h3><p>Banco visual de cards e wallpapers médicos.</p><a class="btn primary" href="06_Card_Feed_Medico/index.html">Abrir →</a></article>
-        <article class="card"><h3>🧠 AVC Agudo</h3><p>Módulo inaugural com dashboard e material extenso.</p><a class="btn primary" href="01_Modulos_Clinicos/AVC_Agudo/avc.html">Abrir →</a></article>
-        <article class="card"><h3>🫁 Ventilação / RespiraCrit</h3><p>Calculadoras e parâmetros ventilatórios à beira-leito.</p><a class="btn primary" href="01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html">Abrir →</a></article>
-      </div>
-    </section>
-
-    <section id="mapa" class="section-shell section-block">
-      <h2>🕸️ Mapa vivo de conexões</h2>
-      <p class="muted">Clique em um nó para visualizar a conexão clínica. O novo hub Markdown entra como nó central de alimentação contínua.</p>
-      <div class="graph" id="graph"></div>
-      <div class="drawer" id="drawer" hidden><button id="drawerClose">×</button><h3 id="drawerTitle"></h3><p id="drawerBody"></p></div>
-    </section>
-
-    <section id="seguranca" class="section-shell section-block">
-      <h2>🛡️ Segurança, curadoria e responsabilidade</h2>
-      <div class="grid three">
-        <article class="card"><h3>✅ Segurança clínica</h3><p>Todo tema deve separar indicação, contraindicação, monitorização, riscos e individualização.</p></article>
-        <article class="card"><h3>⚖️ Segurança autoral</h3><p>Não publicar texto integral de fontes protegidas; usar síntese transformada, análise própria, algoritmos e tabelas originais.</p></article>
-        <article class="card"><h3>🧑‍⚕️ Decisão médica</h3><p>O conteúdo apoia o raciocínio, mas não substitui julgamento clínico, equipe e protocolos locais.</p></article>
-      </div>
-    </section>
-
-    <section id="catalogo" class="section-shell section-block">
-      <h2>📦 Catálogo do Projeto</h2>
-      <p class="muted">Mapa central de todos os módulos, cards e recursos da Enciclopédia.</p>
-      <div class="grid three" id="catalogoGrid" style="margin-top:18px;"></div>
-    </section>
-  </main>
-
-  <footer class="footer section-shell"><p>🧠 Enciclopédia Médica Intensiva & Medicina Interna — Markdown vivo, seguro, didático e continuamente atualizável.</p></footer>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/search.js"></script>
-  <script src="assets/js/graph.js"></script>
-  <script>
-    (async()=>{try{const res=await fetch('data/catalogo.json?t='+Date.now());if(!res.ok)return;const data=await res.json();const grid=document.getElementById('catalogoGrid');if(!grid||!data.items)return;const statusColor={ativo:'#4ef0a1',novo:'#38bdf8','pendente-imagem':'#f59e0b',planejado:'#a78bfa',inbox:'#fbbf24',template:'#93c5fd'};const typeIcon={portal:'🏠','hub clínico':'🧠',calculadora:'🧮','banco de questões':'🏆','questões comentadas':'📝',biblioteca:'📚','feed visual':'🖼️','card visual':'🃏','central markdown':'📄',workflow:'↕️'};grid.innerHTML=data.items.map(it=>`<article class="card" style="border-left:3px solid ${statusColor[it.status]||'#64748b'}"><h3>${typeIcon[it.type]||'📄'} ${it.title}</h3><p style="font-size:.82rem;margin:.4rem 0">${it.caption||''}</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin:.5rem 0"><span style="font-size:.7rem;padding:2px 8px;border-radius:10px;background:${statusColor[it.status]||'#334155'};color:#000;font-weight:600">${it.status}</span><span style="font-size:.7rem;padding:2px 8px;border-radius:10px;border:1px solid rgba(255,255,255,.15);color:#94a3b8">${it.type}</span></div>${it.path?`<a class="btn" href="${it.path}" style="margin-top:6px;font-size:.8rem">Abrir →</a>`:''}</article>`).join('');}catch(e){console.warn('Catálogo:',e)}})();
-  </script>
+<section class="section">
+<h2>⚠️ Aviso de Segurança</h2>
+<p>Se encontrar algum link quebrado, não apague nada. O sistema de resgate criará um card provisório automaticamente conforme o arquivo real for detectado.</p>
+</section>
+</main>
 </body>
 </html>

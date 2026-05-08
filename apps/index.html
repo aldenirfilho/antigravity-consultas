@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aplicações — Resgate Antigravity</title>
+<style>
+:root{--bg:#f6f7fb;--paper:#fff;--text:#1b2433;--muted:#68758a;--line:#e5e8f0;--accent:#3557ff;}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;}
+main{max-width:1100px;margin:32px auto;padding:0 18px;}
+.topbar{background:var(--paper); padding: 1rem 18px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;}
+.brand{text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.2rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:20px;margin-top:22px;}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:25px;text-decoration:none;color:var(--text);box-shadow:0 8px 24px rgba(20,30,60,.05); display: block;}
+.card:hover{border-color:var(--accent); transform: translateY(-3px); transition: 0.2s;}
+.card h3{margin: 0 0 10px 0; font-size: 1.4rem;}
+.status{font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--accent); background: rgba(53,87,255,0.1); padding: 4px 8px; border-radius: 6px;}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">🚑 Resgate</a>
+  <nav><a href="../index.html" style="text-decoration:none; color:var(--muted);">🏠 Home</a></nav>
+</header>
+<main>
+  <h1>🧮 Aplicações Clínicas</h1>
+  <p>Ferramentas de suporte à decisão e calculadoras de plantão.</p>
+
+  <div class="grid">
+    <a class="card" href="../07_Estudos_Markdown/apps/vasoativas/index.html">
+      <span class="status">Ativo v2</span>
+      <h3>💊 Calculadora de Vasoativas</h3>
+      <p>Cálculo de doses (mcg/kg/min), vazão (mL/h) e geração de prescrição padrão UTI.</p>
+    </a>
+
+    <div class="card" style="opacity: 0.6; cursor: not-allowed;">
+      <span class="status" style="background:#eee; color:#999;">Em breve</span>
+      <h3>🧠 CAM-ICU / RASS</h3>
+      <p>Escala interativa de sedação e rastreio de delirium.</p>
+    </div>
+
+    <div class="card" style="opacity: 0.6; cursor: not-allowed;">
+      <span class="status" style="background:#eee; color:#999;">Em breve</span>
+      <h3>🫁 SOFA / SAPS 3</h3>
+      <p>Calculadora de escores de gravidade e falência orgânica.</p>
+    </div>
+  </div>
+</main>
+</body>
+</html>

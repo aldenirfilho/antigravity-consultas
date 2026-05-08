@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biblioteca — Resgate Antigravity</title>
+<style>
+:root{--bg:#f6f7fb;--paper:#fff;--text:#1b2433;--muted:#68758a;--line:#e5e8f0;--accent:#3557ff;}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;}
+main{max-width:1100px;margin:32px auto;padding:0 18px;}
+.topbar{background:var(--paper); padding: 1rem 18px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;}
+.brand{text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.2rem;}
+.lib-section{margin-top: 30px;}
+.lib-grid{display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 40px;}
+.file-card{background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);}
+.file-card:hover{border-color: var(--accent); transform: scale(1.02); transition: 0.2s;}
+.file-icon{font-size: 1.8rem;}
+.file-info strong{display: block; font-size: 1rem;}
+.file-info span{font-size: 0.8rem; color: var(--muted);}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="../index.html">🚑 Resgate</a>
+  <nav><a href="../index.html" style="text-decoration:none; color:var(--muted);">🏠 Home</a></nav>
+</header>
+<main>
+  <h1>📚 Biblioteca de Fontes</h1>
+  <p>Acesso direto aos arquivos originais e materiais de referência recuperados.</p>
+  
+  <div id="libContainer">
+    <p class="muted">Carregando arquivos...</p>
+  </div>
+</main>
+
+<script>
+async function loadLib() {
+  try {
+    const res = await fetch('../registry_resgate.json?t=' + Date.now());
+    const data = await res.json();
+    const container = document.getElementById('libContainer');
+    
+    container.innerHTML = data.groups.map(group => `
+      <section class="lib-section">
+        <h2>${group.category}</h2>
+        <div class="lib-grid">
+          ${group.files.map(file => {
+            const ext = file.path.split('.').pop().toLowerCase();
+            const icon = ext === 'pdf' ? '📕' : (ext === 'docx' ? '📘' : '📄');
+            return `
+              <a class="file-card" href="../${file.path}" target="_blank">
+                <div class="file-icon">${icon}</div>
+                <div class="file-info">
+                  <strong>${file.name}</strong>
+                  <span>.${ext}</span>
+                </div>
+              </a>
+            `;
+          }).join('')}
+        </div>
+      </section>
+    `).join('');
+  } catch (err) {
+    document.getElementById('libContainer').innerHTML = '<p>Erro ao carregar arquivos.</p>';
+  }
+}
+loadLib();
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "project": "UPDOWN_RESGATE_SITE_ANTIGRAVITY",
+  "purpose": "Restaurar navegação e acesso a arquivos perdidos após reorganização do site.",
+  "required_routes": [
+    "/index.html",
+    "/updown/index.html",
+    "/biblioteca/index.html",
+    "/imagens/index.html",
+    "/apps/index.html"
+  ],
+  "do_not_delete_extensions": [
+    ".pdf",
+    ".docx",
+    ".md",
+    ".html",
+    ".zip",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".webp"
+  ],
+  "updowns": [
+    {
+      "id": "001",
+      "title": "LES manifestações clínicas e diagnóstico"
+    },
+    {
+      "id": "002",
+      "title": "LES manejo, monitoramento e prognóstico"
+    },
+    {
+      "id": "003",
+      "title": "Autoanticorpos anti-dsDNA, anti-Sm e anti-U1 RNP"
+    }
+  ],
+  "navigation_model": "UPDOWN <-> BIBLIOTECA <-> IMAGENS",
+  "apps_placeholders": [
+    "vasoativas",
+    "fan",
+    "delirium/cam-icu",
+    "sepse/sofa/qsofa",
+    "wells",
+    "glasgow",
+    "saps3",
+    "adrogué-madias",
+    "nacl-meq-ml"
+  ]
+}
