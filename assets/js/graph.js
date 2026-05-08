@@ -26,7 +26,8 @@ function graphNodeClass(type = '') {
     tool: 'node-tool',
     module: 'node-module',
     topic: 'node-topic',
-    theme: 'node-theme'
+    theme: 'node-theme',
+    file: 'node-file'
   };
   return map[type] || 'node-theme';
 }

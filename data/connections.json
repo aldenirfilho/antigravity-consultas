@@ -230,8 +230,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 25.909666078954373,
+      "y": 25.198825474970636
     },
     {
       "id": "brain-protocolo-desmame-vm-sedoanalgesia",
@@ -240,8 +240,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 23.612642302236566,
+      "y": 29.70072332139919
     },
     {
       "id": "brain-suporte-respiratorio-decisao-uti-sara-grave",
@@ -250,8 +250,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 15.212902977056523,
+      "y": 31.498805917257734
     },
     {
       "id": "brain-simulador-suporte-respiratorio-vm-sara",
@@ -260,8 +260,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 10.658390072156656,
+      "y": 27.178169861318313
     },
     {
       "id": "brain-versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
@@ -270,8 +270,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 10.288326993497293,
+      "y": 21.871596974072464
     },
     {
       "id": "brain-protocolo-teste-estresse-furosemida-uti-temi",
@@ -280,8 +280,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 12.934869108945694,
+      "y": 17.807710515771454
     },
     {
       "id": "brain-hic-guia-temi",
@@ -290,8 +290,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 19.2254772882019,
+      "y": 16.094419349845243
     },
     {
       "id": "brain-guia-de-suporte-respirato-rio-e-simulador-de-tomada-de-decisa-o-me-dica-v1",
@@ -300,8 +300,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 24.849711637616902,
+      "y": 19.867028855472668
     },
     {
       "id": "brain-tce-temi-draldenir",
@@ -310,8 +310,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 30.899855569341703,
+      "y": 25.610504979850667
     },
     {
       "id": "brain-pag-sara-uti-temi",
@@ -320,8 +320,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 23.597453857371338,
+      "y": 35.73322250341306
     },
     {
       "id": "brain-kdigo-2026-aki-na-uti-temi-resumo-mapa-memorycards-aldenir-rocha",
@@ -330,8 +330,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 16.452843922588276,
+      "y": 36.90760659735677
     },
     {
       "id": "brain-protocolo-sara-grave-uti-adulto",
@@ -340,8 +340,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 7.079118283479865,
+      "y": 31.052257974136808
     },
     {
       "id": "brain-desmamevm-bnm-neurointensivismo-draldenir",
@@ -350,8 +350,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 5.41209987782943,
+      "y": 20.75272875874864
     },
     {
       "id": "brain-vm-suporte-respiratorio-draldenir",
@@ -360,8 +360,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 10.386672742347091,
+      "y": 13.46257868034692
     },
     {
       "id": "brain-desmamevm-bnm-neurointensivismo-draldenir",
@@ -370,8 +370,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 18.316532023950884,
+      "y": 11.003854129865518
     },
     {
       "id": "brain-temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
@@ -380,8 +380,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 30.352951211867783,
+      "y": 19.949741198736277
     },
     {
       "id": "brain-kdigo2026-aki-uti-draldenir",
@@ -390,8 +390,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 35.91289836418752,
+      "y": 25.76863568727086
     },
     {
       "id": "brain-sdra-vm-protetora-draldenir",
@@ -400,8 +400,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 30.29031298577418,
+      "y": 37.15097740518592
     },
     {
       "id": "brain-fst-temi-aldenir",
@@ -410,8 +410,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 12.950720148382308,
+      "y": 41.27729067244189
     },
     {
       "id": "brain-trials-temi",
@@ -420,8 +420,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 5,
+      "y": 30.77274872305904
     },
     {
       "id": "brain-avch-hsa-protocolo-completo",
@@ -430,8 +430,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 5,
+      "y": 21.213021564259172
     },
     {
       "id": "brain-tce-temi-draldenir",
@@ -440,8 +440,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 9.338581748777683,
+      "y": 8.220905162925442
     },
     {
       "id": "brain-pancreatite-aguda-grave-sara-grave",
@@ -450,8 +450,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 23.905394218109716,
+      "y": 6.9962851373967005
     },
     {
       "id": "brain-simulado-temi-2026-draldenir",
@@ -460,8 +460,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 32.34482258655607,
+      "y": 13.12681900453088
     },
     {
       "id": "brain-desmame-da-vm",
@@ -470,8 +470,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 40.40397661861614,
+      "y": 29.202098775734775
     },
     {
       "id": "brain-simulador-suporte-respiratorio-vm-sara",
@@ -480,8 +480,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 31.40993890262677,
+      "y": 42.68618576991616
     },
     {
       "id": "brain-simulado-temi-2026-draldenir",
@@ -490,8 +490,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 10.871703617372557,
+      "y": 45.86749621427704
     },
     {
       "id": "brain-sdra-vm-protetora-draldenir",
@@ -500,8 +500,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 5,
+      "y": 34.3410116916282
     },
     {
       "id": "brain-vm-suporte-respiratorio-draldenir",
@@ -510,8 +510,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 5,
+      "y": 15.396938933928283
     },
     {
       "id": "brain-broncoscopia-uti-temi",
@@ -520,8 +520,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 7.128116985119757,
+      "y": 5
     },
     {
       "id": "brain-hic-guia-temi",
@@ -530,8 +530,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 23.069129458121466,
+      "y": 5
     },
     {
       "id": "brain-protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
@@ -540,8 +540,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 39.94098988761077,
+      "y": 17.10123469367438
     },
     {
       "id": "brain-01-protocolo-sepse-bundle1hhora",
@@ -550,8 +550,8 @@
       "type": "file",
       "url": "05_Biblioteca_IA/index.html",
       "status": "ativo",
-      "x": 50,
-      "y": 50
+      "x": 45.99978971636905,
+      "y": 24.108516538436437
     }
   ],
   "edges": [
