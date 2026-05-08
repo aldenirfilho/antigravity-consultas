@@ -1,83 +1,164 @@
-/* ── MAPA VIVO 6.0 "TEXT BRAIN" ── */
+/* ── MAPA VIVO 4.5 PRO — ANTIGRAVITY ── */
+:root {
+  --node-hub: #ffad4d;
+  --node-library: #00d4ff;
+  --node-feed: #38bdf8;
+  --node-qbank: #ffc107;
+  --node-tool: #4ef0a1;
+  --node-module: #7c3aed;
+  --node-topic: #64748b;
+  --node-theme: #1e3a5f;
+  --node-file: #94a3b8;
+  --edge: rgba(62, 232, 255, 0.26);
+}
+
 #mapa {
-  background: #050d1a;
   position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  height: 85vh; /* Altura robusta */
-  min-height: 600px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+  overflow: visible;
   margin-top: 2rem;
-  display: block !important;
+  background: transparent;
 }
 
 #graph {
-  width: 100%;
-  height: 100%;
-  cursor: grab;
+  min-height: 760px;
+  background: radial-gradient(circle at center, #0a1628 0%, #050d1a 100%);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
 }
-#graph:active { cursor: grabbing; }
 
-#graph-ui {
+/* Toolbar e UI */
+.graph-toolbar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 280px;
   pointer-events: none;
 }
-#graph-ui button {
+
+.graph-search {
   pointer-events: auto;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,255,255,0.15);
+  width: 100%;
+  padding: 10px 16px;
+  background: rgba(15, 31, 56, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
 }
 
+.graph-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  pointer-events: auto;
+}
+
+.graph-actions button {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Nós e Conexões */
 .node-group {
   cursor: pointer;
-  transition: transform 0.2s, filter 0.3s;
 }
 
-.node-group text {
-  font-family: 'Syne', sans-serif;
-  letter-spacing: 0.02em;
+.node-card {
+  fill: rgba(15, 31, 56, 0.95);
+  stroke: var(--muted);
+  stroke-width: 1.5;
   transition: 0.3s;
 }
 
-.node-group:hover {
-  transform: scale(1.3);
-  filter: brightness(1.5) drop-shadow(0 0 10px currentColor);
+.node-group:hover .node-card {
+  stroke: #fff;
+  stroke-width: 2.5;
+  filter: brightness(1.2) drop-shadow(0 0 10px currentColor);
 }
 
-.node-group:hover text {
-  font-weight: 900;
+.node-label {
+  fill: #fff;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
-/* Linhas de conexão discretas */
-line {
+.node-sub {
+  fill: rgba(255, 255, 255, 0.5);
+  font-size: 9px;
+  font-family: 'JetBrains Mono', monospace;
+  pointer-events: none;
+}
+
+.graph-link {
+  stroke: var(--edge);
+  stroke-width: 1.5;
   stroke-dasharray: 4;
-  animation: dash 20s linear infinite;
-  opacity: 0.4;
+  animation: graph-dash 20s linear infinite;
+  opacity: 0.6;
 }
 
-@keyframes dash {
+@keyframes graph-dash {
   from { stroke-dashoffset: 200; }
   to { stroke-dashoffset: 0; }
 }
 
-/* Drawer */
+/* Drawer Fixo para Mobile/Desktop */
 #drawer {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  bottom: 1rem;
-  width: 400px;
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: min(460px, calc(100vw - 36px));
+  max-height: min(680px, calc(100vh - 36px));
   background: rgba(10, 22, 40, 0.95);
-  backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 24px;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
   z-index: 1000;
-  box-shadow: -20px 0 80px rgba(0,0,0,0.9);
-  transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 20px 80px rgba(0,0,0,0.8);
+  overflow: auto;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
 }
 
 #drawer[hidden] {
-  transform: translateX(120%);
-  display: block !important;
+  display: none !important;
+}
+
+#drawerClose {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* Fallback */
+.graph-fallback {
+  padding: 60px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.graph-fallback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 2rem;
 }

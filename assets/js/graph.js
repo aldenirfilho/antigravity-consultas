@@ -1,130 +1,167 @@
 /**
- * MAPA VIVO 8.0 — "ULTIMATE TEXT BRAIN"
- * Estabilização Final e Foco Absoluto em Texto.
+ * MAPA VIVO 4.5 PRO — ANTIGRAVITY ENGINE
+ * Estável, Filtrável e Responsivo.
  */
 
-const CONFIG = {
-  HEIGHT: 800,
-  FORCE_STRENGTH: -3000,
-  LINK_DIST: 250,
-  COLLIDE_RAD: 130
+const MAP_CONFIG = {
+  HEIGHT: 760,
+  FORCE: -2000,
+  DISTANCE: 180,
+  COLLISION: 90,
+  MODES: {
+    CORE: ['hub', 'biblioteca', 'feed', 'qbank', 'tool'],
+    CLINICAL: ['hub', 'module', 'topic', 'theme'],
+    FILES: ['hub', 'biblioteca', 'file'],
+    ALL: ['hub', 'biblioteca', 'feed', 'qbank', 'tool', 'module', 'topic', 'theme', 'file']
+  }
 };
+
+let currentMode = 'CORE';
+let fullData = { nodes: [], edges: [] };
+let simulation, svg, g, zoom;
 
 async function initGraph() {
   const container = document.getElementById('graph');
   if (!container) return;
 
-  // Limpar e mostrar loading
-  container.innerHTML = '<div id="graph-loading" style="color:#64748b; padding:40px; font-family:Syne; text-align:center;">🧠 Sincronizando Mapa Vivo...</div>';
+  container.innerHTML = '<div style="padding:40px; color:#64748b; font-family:Syne;">🧠 Conectando neurais...</div>';
+
+  if (typeof d3 === 'undefined') {
+    renderFallback(container, "D3.js não carregado.");
+    return;
+  }
 
   try {
-    if (typeof d3 === 'undefined') throw new Error("D3.js não carregado.");
-
     const res = await fetch('data/connections.json?t=' + Date.now());
-    if (!res.ok) throw new Error("Não foi possível carregar data/connections.json");
-    const data = await res.json();
+    if (!res.ok) throw new Error("Erro ao ler conexões.");
+    fullData = await res.json();
+    
+    // Normalizar Dados
+    fullData.nodes.forEach(n => {
+      n.label = n.label || n.title || n.id;
+      n.type = n.type || "theme";
+      n.status = n.status || "ativo";
+      n.body = n.body || n.description || "Tópico da Enciclopédia.";
+      
+      // Coordenadas Fallback se necessário
+      if (n.x === undefined) n.x = Math.random() * 800;
+      if (n.y === undefined) n.y = Math.random() * 600;
+    });
 
-    render(data, container);
+    renderInterface(container);
+    updateGraph();
   } catch (err) {
-    container.innerHTML = `
-      <div style="color:#ff4b4b; padding:40px; text-align:center; font-family:Syne;">
-        <p>⚠️ Erro ao carregar o Mapa: ${err.message}</p>
-        <button class="btn ghost" onclick="location.reload()" style="margin-top:20px">Tentar Novamente 🔄</button>
-      </div>
-    `;
+    renderFallback(container, err.message);
   }
 }
 
-function render(data, container) {
+function renderInterface(container) {
   const width = container.clientWidth || 1000;
-  const height = CONFIG.HEIGHT;
-
-  // Remover loading
+  
   container.innerHTML = `
-    <div id="graph-ui" style="position:absolute; top:20px; left:20px; z-index:100; display:flex; gap:10px; pointer-events:none;">
-      <button class="btn primary" onclick="gZoom(1.5)" style="pointer-events:auto; font-size:16px;">➕ Ampliar</button>
-      <button class="btn primary" onclick="gZoom(0.6)" style="pointer-events:auto; font-size:16px;">➖ Reduzir</button>
-      <button class="btn ghost" onclick="gReset()" style="pointer-events:auto; font-size:16px;">🔄 Reset</button>
+    <div class="graph-toolbar">
+      <input type="text" class="graph-search" placeholder="🔍 Buscar tema ou arquivo..." oninput="searchNode(this.value)">
+      <div class="graph-actions">
+        <button class="btn primary" onclick="setMode('CORE')">🧠 Núcleo</button>
+        <button class="btn primary" onclick="setMode('CLINICAL')">🏥 Clínico</button>
+        <button class="btn primary" onclick="setMode('FILES')">📄 Arquivos</button>
+        <button class="btn ghost" onclick="setMode('ALL')">🌐 Tudo</button>
+      </div>
+      <div class="graph-actions">
+        <button class="btn ghost" onclick="zoomIn()">➕</button>
+        <button class="btn ghost" onclick="zoomOut()">➖</button>
+        <button class="btn ghost" onclick="resetZoom()">🔄 Reset</button>
+      </div>
     </div>
+    <div id="graph-canvas-wrap" style="width:100%; height:${MAP_CONFIG.HEIGHT}px"></div>
   `;
 
-  const svg = d3.select(container)
+  svg = d3.select("#graph-canvas-wrap")
     .append("svg")
     .attr("width", "100%")
-    .attr("height", height)
-    .attr("viewBox", `0 0 ${width} ${height}`)
-    .style("background", "#050d1a");
+    .attr("height", "100%")
+    .attr("viewBox", `0 0 ${width} ${MAP_CONFIG.HEIGHT}`);
 
-  const g = svg.append("g");
+  g = svg.append("g");
 
-  const zoom = d3.zoom()
-    .scaleExtent([0.01, 10])
+  zoom = d3.zoom()
+    .scaleExtent([0.05, 5])
     .on("zoom", (event) => g.attr("transform", event.transform));
 
   svg.call(zoom);
+}
 
-  // Globais para os botões
-  window.gZoom = (scale) => svg.transition().duration(500).call(zoom.scaleBy, scale);
-  window.gReset = () => svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+function updateGraph() {
+  const width = document.getElementById('graph-canvas-wrap').clientWidth || 1000;
+  const height = MAP_CONFIG.HEIGHT;
 
-  // Validação de links (Fail-safe para não crashar se um nó sumir)
-  const nodeIds = new Set(data.nodes.map(d => d.id));
-  const validLinks = data.edges
-    .filter(e => nodeIds.has(e.from) && nodeIds.has(e.to))
-    .map(e => ({ source: e.from, target: e.to }));
+  // Filtrar nós pelo modo
+  const typesToMatch = MAP_CONFIG.MODES[currentMode];
+  let filteredNodes = fullData.nodes.filter(n => typesToMatch.includes(n.type));
+  
+  // Limite de arquivos para não explodir a home
+  if (currentMode === 'FILES') {
+    filteredNodes = filteredNodes.slice(0, 30);
+  }
 
-  const simulation = d3.forceSimulation(data.nodes)
-    .force("link", d3.forceLink(validLinks).id(d => d.id).distance(CONFIG.LINK_DIST))
-    .force("charge", d3.forceManyBody().strength(CONFIG.FORCE_STRENGTH))
-    .force("center", d3.forceCenter(width / 2, height / 2))
-    .force("collision", d3.forceCollide().radius(CONFIG.COLLIDE_RAD));
+  const nodeIds = new Set(filteredNodes.map(n => n.id));
+  const filteredLinks = fullData.edges.filter(e => nodeIds.has(e.from) && nodeIds.has(e.to));
 
-  // Conexões (Linhas finas)
+  // Limpar anterior
+  g.selectAll("*").remove();
+
+  // Links
   const link = g.append("g")
-    .attr("stroke", "rgba(255,255,255,0.06)")
-    .attr("stroke-width", 1)
     .selectAll("line")
-    .data(validLinks)
-    .join("line");
+    .data(filteredLinks)
+    .join("line")
+    .attr("class", "graph-link");
 
-  // Rótulos (Apenas Texto - Sem Bolas!)
+  // Nodes
   const node = g.append("g")
-    .selectAll(".node-text")
-    .data(data.nodes)
-    .join("text")
-    .attr("class", "node-text")
-    .attr("text-anchor", "middle")
-    .attr("fill", d => getNodeColor(d.type))
-    .attr("font-size", d => (d.type === 'hub' || d.type === 'module') ? "24px" : "16px")
-    .attr("font-weight", "800")
-    .attr("cursor", "pointer")
-    .style("text-shadow", "0 0 10px #000")
-    .text(d => d.label)
+    .selectAll(".node-group")
+    .data(filteredNodes)
+    .join("g")
+    .attr("class", d => `node-group node-${d.type}`)
+    .style("color", d => getNodeColor(d.type))
     .call(d3.drag()
-      .on("start", (event, d) => {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
-        d.fx = d.x; d.fy = d.y;
-      })
-      .on("drag", (event, d) => {
-        d.fx = event.x; d.fy = event.y;
-      })
-      .on("end", (event, d) => {
-        if (!event.active) simulation.alphaTarget(0);
-        d.fx = null; d.fy = null;
-      }))
-    .on("click", (event, d) => {
-      const drawer = document.getElementById('drawer');
-      document.getElementById('drawerTitle').textContent = d.label;
-      document.getElementById('drawerBody').innerHTML = `
-        <p>${d.body || d.description || 'Tópico clínico da Enciclopédia.'}</p>
-        <div class="drawer-meta">
-          <span>TIPO: ${d.type.toUpperCase()}</span>
-          <span>ID: ${d.id}</span>
-        </div>
-        ${d.url && d.url !== '#' ? `<a class="btn primary" href="${d.url}">Abrir Conteúdo →</a>` : ''}
-      `;
-      drawer.hidden = false;
-    });
+      .on("start", dragStarted)
+      .on("drag", dragged)
+      .on("end", dragEnded))
+    .on("click", (event, d) => showDrawer(d));
+
+  // Card (Retângulo)
+  node.append("rect")
+    .attr("class", "node-card")
+    .attr("rx", 12)
+    .attr("ry", 12)
+    .attr("x", d => -(d.label.length * 4 + 20))
+    .attr("y", -18)
+    .attr("width", d => d.label.length * 8 + 40)
+    .attr("height", 36);
+
+  // Label
+  node.append("text")
+    .attr("class", "node-label")
+    .attr("text-anchor", "middle")
+    .attr("dy", 5)
+    .attr("font-size", "12px")
+    .text(d => d.label);
+
+  // Sub-label (ID ou tipo)
+  node.append("text")
+    .attr("class", "node-sub")
+    .attr("text-anchor", "middle")
+    .attr("dy", 26)
+    .text(d => d.type.toUpperCase());
+
+  // Simulação
+  if (simulation) simulation.stop();
+  simulation = d3.forceSimulation(filteredNodes)
+    .force("link", d3.forceLink(filteredLinks).id(d => d.id).distance(MAP_CONFIG.DISTANCE))
+    .force("charge", d3.forceManyBody().strength(MAP_CONFIG.FORCE))
+    .force("center", d3.forceCenter(width / 2, height / 2))
+    .force("collision", d3.forceCollide().radius(MAP_CONFIG.COLLISION));
 
   simulation.on("tick", () => {
     link
@@ -134,19 +171,79 @@ function render(data, container) {
       .attr("y2", d => d.target.y);
 
     node
-      .attr("x", d => d.x)
-      .attr("y", d => d.y);
+      .attr("transform", d => `translate(${d.x},${d.y})`);
   });
+}
 
-  function getNodeColor(type) {
-    const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#a78bfa", file: "#94a3b8" };
-    return colors[type] || "#fff";
+function showDrawer(d) {
+  const drawer = document.getElementById('drawer');
+  document.getElementById('drawerTitle').textContent = d.label;
+  document.getElementById('drawerBody').innerHTML = `
+    <p style="margin-bottom:1.5rem">${d.body}</p>
+    <div class="drawer-meta">
+      <span>TIPO: ${d.type.toUpperCase()}</span>
+      <span>STATUS: ${d.status || 'ativo'}</span>
+      <span>ID: ${d.id}</span>
+    </div>
+    <div class="drawer-actions">
+      ${d.url && d.url !== '#' ? `<a href="${d.url}" class="btn primary" style="display:block;text-align:center">Abrir Conteúdo →</a>` : '<span class="muted">Conteúdo interno da Enciclopédia</span>'}
+    </div>
+  `;
+  drawer.hidden = false;
+  
+  const close = document.getElementById('drawerClose');
+  if (close) close.onclick = () => drawer.hidden = true;
+}
+
+function searchNode(val) {
+  if (!val) {
+    g.selectAll(".node-group").style("opacity", 1);
+    return;
   }
+  const term = val.toLowerCase();
+  g.selectAll(".node-group").style("opacity", d => 
+    d.label.toLowerCase().includes(term) || d.id.toLowerCase().includes(term) ? 1 : 0.1
+  );
 }
 
-// Iniciar após carregar tudo
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initGraph);
-} else {
-  initGraph();
+function setMode(mode) {
+  currentMode = mode;
+  updateGraph();
 }
+
+function zoomIn() { svg.transition().call(zoom.scaleBy, 1.4); }
+function zoomOut() { svg.transition().call(zoom.scaleBy, 0.7); }
+function resetZoom() { svg.transition().call(zoom.transform, d3.zoomIdentity); }
+
+function getNodeColor(type) {
+  const colors = { hub: "#ffad4d", biblioteca: "#00d4ff", feed: "#38bdf8", qbank: "#ffc107", tool: "#4ef0a1", module: "#7c3aed", theme: "#64748b", file: "#94a3b8" };
+  return colors[type] || "#64748b";
+}
+
+function dragStarted(event, d) {
+  if (!event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x; d.fy = d.y;
+}
+function dragged(event, d) {
+  d.fx = event.x; d.fy = event.y;
+}
+function dragEnded(event, d) {
+  if (!event.active) simulation.alphaTarget(0);
+  d.fx = null; d.fy = null;
+}
+
+function renderFallback(container, msg) {
+  container.innerHTML = `
+    <div class="graph-fallback">
+      <h3>⚠️ Mapa Vivo: Modo de Segurança</h3>
+      <p>${msg}</p>
+      <div class="graph-fallback-grid">
+        <a href="01_Modulos_Clinicos/AVC_Agudo/avc.html" class="card">🧠 AVC Agudo</a>
+        <a href="05_Biblioteca_IA/index.html" class="card">📚 Biblioteca IA</a>
+        <a href="02_Banco_Questoes_TEMI/index.html" class="card">🏆 Banco TEMI</a>
+      </div>
+    </div>
+  `;
+}
+
+document.addEventListener('DOMContentLoaded', initGraph);
