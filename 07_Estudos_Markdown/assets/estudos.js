@@ -45,7 +45,9 @@ function renderDocs(){
         ${(d.tags||[]).slice(0,4).map(t => badge('#'+t)).join('')}
       </div>
       <div class="actions">
-        <a class="btn primary" href="viewer.html?doc=${encodeURIComponent(d.path)}">Abrir MD →</a>
+        <a class="btn primary" href="${d.path.endsWith('.html') ? d.path : `viewer.html?doc=${encodeURIComponent(d.path)}`}">
+          ${d.path.endsWith('.html') ? 'Abrir Leitor PRO →' : 'Abrir MD →'}
+        </a>
         ${d.relatedUrl ? `<a class="btn ghost" href="${d.relatedUrl}">Conectar →</a>` : ''}
       </div>
     </article>

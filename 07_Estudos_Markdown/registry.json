@@ -28,13 +28,13 @@
     },
     {
       "id": "UPDOWN_001_LES_Manifestacoes_Diagnostico",
-      "title": "UPDOWN #001 — Lúpus: Manifestações e Diagnóstico",
+      "title": "UPDOWN #001 — Lúpus: Manifestações e Diagnóstico (Leitor PRO)",
       "icon": "🦋",
-      "path": "content/reumatologia/les-manifestacoes/updown_001_les_manifestacoes_diagnostico.md",
+      "path": "content/reumatologia/les-manifestacoes/reader/index.html",
       "theme": "reumatologia",
       "status": "ativo",
-      "version": "v1.0",
-      "summary": "Estudo completo transformado sobre Lúpus Eritematoso Sistêmico: critérios, manifestações e fluxograma diagnóstico.",
+      "version": "v1.1",
+      "summary": "Guia didático completo sobre Lúpus com modo escuro, sumário interativo e ferramentas de acessibilidade.",
       "tags": ["updown", "lupus", "reumatologia", "diagnostico", "temi", "r3"]
     }
   ]
