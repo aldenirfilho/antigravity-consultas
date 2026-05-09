@@ -1,6 +1,6 @@
 {
   "description": "Arquivos no inbox aguardando classificação",
-  "updatedAt": "2026-05-08",
+  "updatedAt": "2026-05-09",
   "files": [
     {"filename": "00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf", "tipo": "pdf"},
     {"filename": "00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf", "tipo": "pdf"},
@@ -92,6 +92,7 @@
     {"filename": "Assincronias Paciente Ventilador.docx", "tipo": "word"},
     {"filename": "Broncoscopia_UTI_TEMI.docx", "tipo": "word"},
     {"filename": "Cardio_Critica_DrAldenir.docx", "tipo": "word"},
+    {"filename": "Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx", "tipo": "word"},
     {"filename": "Cards_POCUS_12_Protocolos.docx", "tipo": "word"},
     {"filename": "Choque_Septico_UTI_SSC2026.docx", "tipo": "word"},
     {"filename": "Comparativo_IA_Medicina_Clinica_UTI_2026.docx", "tipo": "word"},
@@ -113,6 +114,7 @@
     {"filename": "Infeccao_Antibioticos_UTI_DrAldenir.docx", "tipo": "word"},
     {"filename": "KDIGO2026_AKI_UTI_DrAldenir.docx", "tipo": "word"},
     {"filename": "KDIGO_2026_AKI_na_UTI_TEMI_Resumo_Mapa_MemoryCards_Aldenir_Rocha.docx", "tipo": "word"},
+    {"filename": "Lupus_na_UTI_abordagem_completa_atualizada_2026.docx", "tipo": "word"},
     {"filename": "MODELOS_PRONTUARIO_DNAR_PLANTAO.docx", "tipo": "word"},
     {"filename": "Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx", "tipo": "word"},
     {"filename": "MapaProfilaxias UTI DrAldenir.docx", "tipo": "word"},
@@ -166,6 +168,7 @@
     {"filename": "Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx", "tipo": "word"},
     {"filename": "Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx", "tipo": "word"},
     {"filename": "QualidadeSeguranca UTI DrAldenir.docx", "tipo": "word"},
+    {"filename": "SAAF_medicina_interna_UTI_abordagem_completa_atualizada_2026.docx", "tipo": "word"},
     {"filename": "SDRA_VM_Protetora_DrAldenir.docx", "tipo": "word"},
     {"filename": "Sedacao_Delirium_UTI_DrAldenir.docx", "tipo": "word"},
     {"filename": "Simulado_TEMI_2026_DrAldenir.docx", "tipo": "word"},
