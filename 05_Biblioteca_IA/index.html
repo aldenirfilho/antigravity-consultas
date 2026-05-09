@@ -180,6 +180,7 @@
   <!-- FILTROS POR TEMA -->
   <div class="filtros" id="filtros-temas">
     <span class="filtro ativo" data-filter="todos" onclick="setFilter('todos')">📦 Todos</span>
+    <span class="filtro" onclick="abrirNovoTema()" style="border-style:dashed; opacity:0.7">➕ Novo Tema</span>
     <!-- Populado via JSON -->
   </div>
 
@@ -228,6 +229,32 @@
 
   <div class="grid" id="grid-triagem">
     <!-- Populado via JS -->
+  </div>
+</div>
+
+<!-- DIALOG: NOVO TEMA -->
+<div class="classify-overlay" id="newThemeOverlay" onclick="if(event.target===this)fecharNovoTema()">
+  <div class="classify-box">
+    <h3>➕ Adicionar Novo Tema Médico</h3>
+    <p style="font-size:.8rem; color:var(--muted)">Crie uma nova especialidade ou categoria para organizar seus documentos.</p>
+    
+    <label>Nome do Tema
+      <input id="ntLabel" placeholder="Ex: Psiquiatria / Psicologia" />
+    </label>
+
+    <div class="classify-grid">
+      <label>ID único (minúsculas)
+        <input id="ntId" placeholder="ex: psiquiatria" />
+      </label>
+      <label>Emoji
+        <input id="ntEmoji" placeholder="🧘" style="text-align:center" />
+      </label>
+    </div>
+
+    <div class="classify-actions" style="margin-top:2rem">
+      <button class="btn btn-secondary" onclick="fecharNovoTema()">Cancelar</button>
+      <button class="btn btn-primary" onclick="salvarNovoTema()">✅ Criar Tema</button>
+    </div>
   </div>
 </div>
 
@@ -348,6 +375,12 @@ async function init() {
     ]);
     
     taxonomy = resTax;
+    
+    // Mesclar temas do localStorage
+    const customThemes = JSON.parse(localStorage.getItem('lib_temas_custom') || '[]');
+    if (!taxonomy.themes) taxonomy.themes = [];
+    taxonomy.themes = [...taxonomy.themes, ...customThemes];
+
     catalog = resCat;
     brain = resBrain;
     roadmap = resRoad.roadmap || [];
@@ -381,7 +414,8 @@ async function init() {
       else catalog.items.push(mod);
     });
 
-    renderFilters();
+    popularFiltros();
+    popularSelects();
     renderStats();
     renderGrid();
     renderTriagem();
@@ -407,18 +441,22 @@ function renderRoadmap() {
 }
 
 // Renderizar Filtros
-function renderFilters() {
+function popularFiltros() {
   const container = document.getElementById('filtros-temas');
-  if (!taxonomy.themes) return;
-  container.innerHTML = `<span class="filtro ativo" data-filter="todos" onclick="setFilter('todos')">📦 Todos</span>`;
+  const items = taxonomy.themes || [];
   
-  taxonomy.themes.forEach(t => {
-    if (t.id === 'inbox-revisar') return;
+  // Manter o botão 'Todos' e 'Novo Tema'
+  container.innerHTML = `
+    <span class="filtro ${currentFilter==='todos'?'ativo':''}" data-filter="todos" onclick="setFilter('todos')">📦 Todos</span>
+    <span class="filtro" onclick="abrirNovoTema()" style="border-style:dashed; opacity:0.7">➕ Novo Tema</span>
+  `;
+
+  items.forEach(t => {
     const span = document.createElement('span');
-    span.className = 'filtro';
+    span.className = `filtro ${currentFilter===t.id?'ativo':''}`;
     span.dataset.filter = t.id;
     span.onclick = () => setFilter(t.id);
-    span.innerHTML = `${t.emoji || '📂'} ${t.label}`;
+    span.innerHTML = `${t.emoji} ${t.label}`;
     container.appendChild(span);
   });
 
@@ -586,6 +624,49 @@ function salvarClassificacao() {
   renderTriagem();
   alert("✅ Alterações salvas localmente!\n\nDocumento realocado e tags atualizadas.");
 }
+
+// Lógica de Novo Tema
+function abrirNovoTema() {
+  document.getElementById('newThemeOverlay').classList.add('open');
+}
+function fecharNovoTema() {
+  document.getElementById('newThemeOverlay').classList.remove('open');
+}
+function salvarNovoTema() {
+  const label = document.getElementById('ntLabel').value.trim();
+  const id = document.getElementById('ntId').value.trim().toLowerCase().replace(/\s+/g, '-');
+  const emoji = document.getElementById('ntEmoji').value.trim() || '📂';
+
+  if (!label || !id) {
+    alert("Preencha nome e ID do tema.");
+    return;
+  }
+
+  const novoTema = {
+    id: id,
+    label: label,
+    emoji: emoji,
+    folder: `05_Biblioteca_IA/acervo/${id}/`,
+    keywords: label.toLowerCase().split(' '),
+    priority: 3
+  };
+
+  // Salvar no localStorage
+  let customThemes = JSON.parse(localStorage.getItem('lib_temas_custom') || '[]');
+  customThemes.push(novoTema);
+  localStorage.setItem('lib_temas_custom', JSON.stringify(customThemes));
+
+  // Atualizar memória e UI
+  if (!taxonomy.themes) taxonomy.themes = [];
+  taxonomy.themes.push(novoTema);
+  
+  fecharNovoTema();
+  popularFiltros();
+  popularSelects();
+  alert(`✅ Tema "${label}" criado com sucesso!\n\nAgora você já pode classificar arquivos nele.`);
+}
+
+
 
 function sincronizarConexoesBrain(docId, tags) {
   // Simulação de geração de conexões no Mapa Vivo baseado em tags
