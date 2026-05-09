@@ -3,21 +3,23 @@
 Olá Dr. Aldenir! Esta é a sua nova central de comando para alimentar o projeto.
 
 ### 🚀 Como usar este espaço:
-1. **Novos Documentos**: Arraste para cá qualquer PDF, DOCX ou material que você recebeu de outras IAs ou fontes.
-2. **Novas Ordens**: Crie um arquivo `.txt` ou `.md` com as instruções do que você quer que eu faça (ex: "Atualize o UpDown de Sepse com este novo consenso").
-3. **Novas Imagens**: Coloque aqui as artes para o Card Feed.
+Distribua seus arquivos nas subpastas correspondentes:
 
-### 🤖 Meu Fluxo de Trabalho:
-Sempre que eu iniciar uma sessão, eu olharei **primeiro** para esta pasta. 
-Eu analisarei o conteúdo, classificarei na Biblioteca IA, gerarei o UpDown correspondente e organizarei tudo nos seus devidos lugares.
+1. **01_Documentos_Biblioteca**: PDFs, DOCX e protocolos originais.
+2. **02_Imagens_Feed**: Artes e imagens médicas para o Card Feed.
+3. **03_Conteudos_UpDown_MD**: Arquivos Markdown (`.md`) gerados por outras IAs para o Hub UpDown.
+4. **04_Novos_Projetos**: Ideias e estruturas de novos apps ou módulos.
+5. **05_Questoes_TEMI**: Bancos de questões e simulados.
+6. **06_Ordens_E_Comandos**: Suas ordens diretas em `.txt` ou `.md` para eu executar.
 
-### 📁 Onde as coisas estão agora:
-- **01_UpDown_Hub**: Revisões de alto rendimento.
-- **02_Biblioteca_IA_Engine**: O motor e o acervo completo.
-- **03_Calculadoras_E_Apps**: RespiraCrit, RespiraSense e ferramentas UTI.
-- **04_Simulados_TEMI**: Banco de questões.
-- **05_Midia_E_Feed**: Card Feed e galeria de imagens.
-- **99_ARQUIVO_HISTORICO**: Onde guardei todos os logs e pacotes antigos para limpar sua visão.
+### 🤖 Meu Papel (Agente Executor):
+- **Remasterizar e Integrar**: Eu pego o que você coloca aqui e coloco "no devido lugar" com o melhor acabamento visual e funcional.
+- **Organização Inteligente**: Eu classifico e organizo para que o site fique fluído, mas também para que sua consulta offline no Obsidian seja imediata.
+- **Foco em Execução**: Você provê o conteúdo (via GPT/Claude), e eu garanto a integração perfeita no ecossistema Antigravity.
+
+### 📂 Acesso Rápido Offline (Na Raiz):
+- **📂_ACERVO_BIBLIOTECA_OFFLINE**: Atalho direto para todos os seus PDFs/Docs organizados por especialidade.
+- **↕️_REVISOES_UPDOWN_OFFLINE**: Atalho direto para seus Markdowns de estudo.
 
 ---
 *Antigravity Engine v3.5 — Organização e Eficiência.*
