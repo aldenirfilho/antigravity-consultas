@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-08",
+  "updatedAt": "2026-05-09",
   "project": "Biblioteca IA — Enciclopédia Médica Intensiva",
   "description": "Taxonomia oficial sugerida para classificar 186 arquivos do inbox da Biblioteca IA.",
   "themes": [
@@ -235,6 +235,56 @@
         "vasoativo"
       ],
       "priority": 1
+    },
+    {
+      "id": "morte-cerebral-doacao",
+      "emoji": "🕊️",
+      "label": "Morte Cerebral / Doação",
+      "folder": "05_Biblioteca_IA/acervo/morte-cerebral-doacao/",
+      "keywords": [
+        "morte encefálica",
+        "protocolo",
+        "cfm",
+        "doação",
+        "órgãos",
+        "manutenção do doador",
+        "neuro"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "sedacao-analgesia",
+      "emoji": "😴",
+      "label": "Sedação / Analgesia / Delirium",
+      "folder": "05_Biblioteca_IA/acervo/sedacao-analgesia/",
+      "keywords": [
+        "sedação",
+        "analgesia",
+        "delirium",
+        "agitação",
+        "bnm",
+        "bloqueio neuromuscular",
+        "precedex",
+        "fentanil",
+        "midazolam"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "psiquiatria",
+      "emoji": "🧘",
+      "label": "Psiquiatria na UTI",
+      "folder": "05_Biblioteca_IA/acervo/psiquiatria/",
+      "keywords": [
+        "psiquiatria",
+        "crise",
+        "depressão",
+        "ansiedade",
+        "psicose",
+        "contenção",
+        "psicotrópico"
+      ],
+      "priority": 3
     },
     {
       "id": "procedimentos-dispositivos",

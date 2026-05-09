@@ -18,14 +18,6 @@
       ]
     },
     {
-      "name": "Reumatologia & Hematologia",
-      "icon": "💉",
-      "files": [
-        {"name": "Lupus na UTI (2026)", "path": "Lupus_na_UTI_abordagem_completa_atualizada_2026.docx", "type": "word"},
-        {"name": "SAAF na UTI (2026)", "path": "SAAF_medicina_interna_UTI_abordagem_completa_atualizada_2026.docx", "type": "word"}
-      ]
-    },
-    {
       "name": "Ventilação Mecânica (VM)",
       "icon": "🫁",
       "files": [
