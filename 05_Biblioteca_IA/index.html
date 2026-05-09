@@ -488,9 +488,10 @@ function renderTriagem() {
       <span class="card-icon">📂</span>
       <div class="card-title">${i.title}</div>
       <div class="card-meta" style="word-break:break-all">${i.filename || i.path}</div>
-      <div class="card-actions" style="margin-top:auto">
-        <button class="btn btn-triagem" style="width:100%" onclick="abrirClassify('${i.id}')">📂 Classificar Item</button>
-        <button class="btn btn-secondary" style="width:100%" onclick="abrirPreview('${encodeURIComponent(i.path)}', '${i.title}')">👁️ Pré-visualizar</button>
+      <div class="card-actions" style="margin-top:auto; display:flex; gap:5px">
+        <button class="btn btn-triagem" style="flex:1" onclick="abrirClassify('${i.id}')">📂 Classificar</button>
+        <button class="btn btn-secondary" style="padding:0.5rem" onclick="abrirPreview('${encodeURIComponent(i.path)}', '${i.title}')">👁️</button>
+        <button class="btn btn-delete" style="padding:0.5rem" onclick="marcarParaExcluir('${i.id}', event)">🗑️</button>
       </div>
     </div>
   `).join('');
