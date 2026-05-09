@@ -14,9 +14,15 @@
         {"name": "Checklist Alta Segura", "path": "03_Checklist_Alta_Segura.pdf", "type": "pdf"},
         {"name": "Protocolo Dor Torácica", "path": "07_Protocolo_Dor_Toracica.pdf", "type": "pdf"},
         {"name": "Hiponatremia Protocolo", "path": "08_Protocolo_Hiponatremia.pdf", "type": "pdf"},
-        {"name": "Insuficiência Cardíaca Aguda", "path": "09_Protocolo_IC_Aguda.pdf", "type": "pdf"},
-        {"name": "Lupus na UTI (Atualizado 2026)", "path": "Lupus_na_UTI_abordagem_completa_atualizada_2026.docx", "type": "word"},
-        {"name": "SAAF na UTI (Atualizado 2026)", "path": "SAAF_medicina_interna_UTI_abordagem_completa_atualizada_2026.docx", "type": "word"}
+        {"name": "Insuficiência Cardíaca Aguda", "path": "09_Protocolo_IC_Aguda.pdf", "type": "pdf"}
+      ]
+    },
+    {
+      "name": "Reumatologia & Hematologia",
+      "icon": "💉",
+      "files": [
+        {"name": "Lupus na UTI (2026)", "path": "Lupus_na_UTI_abordagem_completa_atualizada_2026.docx", "type": "word"},
+        {"name": "SAAF na UTI (2026)", "path": "SAAF_medicina_interna_UTI_abordagem_completa_atualizada_2026.docx", "type": "word"}
       ]
     },
     {

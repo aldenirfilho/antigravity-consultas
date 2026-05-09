@@ -170,6 +170,39 @@
       "priority": 2
     },
     {
+      "id": "reumatologia",
+      "emoji": "🦋",
+      "label": "Reumatologia",
+      "folder": "05_Biblioteca_IA/acervo/reumatologia/",
+      "keywords": [
+        "lupus",
+        "artrite",
+        "vasculite",
+        "reuma",
+        "autoimune",
+        "pulsoterapia",
+        "les"
+      ],
+      "priority": 2
+    },
+    {
+      "id": "hematologia",
+      "emoji": "💉",
+      "label": "Hematologia",
+      "folder": "05_Biblioteca_IA/acervo/hematologia/",
+      "keywords": [
+        "saaf",
+        "coagulação",
+        "anemia",
+        "plaquetopenia",
+        "trombose",
+        "hemostasia",
+        "linfoma",
+        "leucemia"
+      ],
+      "priority": 2
+    },
+    {
       "id": "emergencias-clinicas",
       "emoji": "🚨",
       "label": "Emergências Clínicas",
