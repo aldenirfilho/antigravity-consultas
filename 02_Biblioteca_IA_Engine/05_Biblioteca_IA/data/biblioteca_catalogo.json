@@ -22,9 +22,30 @@
     "gastro-hepatologia": 3,
     "neuro-uti": 1,
     "juridico-financeiro": 1,
-    "sepse-choque": 1
+    "sepse-choque": 1,
+    "reumatologia": 1
   },
   "items": [
+    {
+      "id": "updown-autoanticorpos-les-dsdna-sm-u1rnp",
+      "title": "Autoanticorpos no LES (dsDNA, Sm, U1 RNP)",
+      "filename": "UPDOWN_autoanticorpos_LES_dsDNA_Sm_U1RNP.md",
+      "theme": "reumatologia",
+      "tipo": "text",
+      "tags": [
+        "les",
+        "lupus",
+        "autoanticorpos",
+        "nefrite-lupica",
+        "reumatologia"
+      ],
+      "status": "catalogado",
+      "path": "../01_UpDown_Hub/07_Estudos_Markdown/content/UPDOWN_autoanticorpos_LES_dsDNA_Sm_U1RNP.md",
+      "resumo": "Guia didático para interpretar anti-dsDNA, anti-Sm e anti-U1 RNP: diagnóstico, atividade, nefrite lúpica, DMTC e armadilhas laboratoriais.",
+      "ia_origem": "Antigravity",
+      "data": "2026-05",
+      "createdAt": "2026-05-09T17:40:00Z"
+    },
     {
       "id": "lupus-na-uti-2026",
       "title": "Lupus na UTI (Manejo e Complicações)",
