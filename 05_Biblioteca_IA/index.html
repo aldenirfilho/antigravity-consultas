@@ -509,8 +509,8 @@ function renderGrid() {
           ${(i.tags || []).map(t => `<span class="tag">#${t}</span>`).join('')}
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary" onclick="abrirPreview('${encodeURIComponent(i.path)}', '${i.title.replace(/'/g,"\\'")}')">👁️</button>
-          <button class="btn btn-secondary" style="padding:0.5rem" onclick="abrirClassify('${i.id}')">📂</button>
+          <button class="btn btn-primary" onclick="event.stopPropagation(); abrirPreview('${encodeURIComponent(i.path)}', '${i.title.replace(/'/g,"\\'")}')">👁️</button>
+          <button class="btn btn-secondary" style="padding:0.5rem" onclick="event.stopPropagation(); abrirClassify('${i.id}')">📂</button>
           <a href="${i.path}" download class="btn btn-secondary" onclick="event.stopPropagation()">⬇️</a>
           <button class="btn btn-delete" onclick="marcarParaExcluir('${i.id}', event)">🗑️</button>
         </div>
@@ -534,8 +534,8 @@ function renderTriagem() {
       <div class="card-title">${i.title}</div>
       <div class="card-meta" style="word-break:break-all">${i.filename || i.path}</div>
       <div class="card-actions" style="margin-top:auto; display:flex; gap:5px">
-        <button class="btn btn-triagem" style="flex:1" onclick="abrirClassify('${i.id}')">📂 Classificar</button>
-        <button class="btn btn-secondary" style="padding:0.5rem" onclick="abrirPreview('${encodeURIComponent(i.path)}', '${i.title}')">👁️</button>
+        <button class="btn btn-triagem" style="flex:1" onclick="event.stopPropagation(); abrirClassify('${i.id}')">📂 Classificar</button>
+        <button class="btn btn-secondary" style="padding:0.5rem" onclick="event.stopPropagation(); abrirPreview('${encodeURIComponent(i.path)}', '${i.title}')">👁️</button>
         <button class="btn btn-delete" style="padding:0.5rem" onclick="marcarParaExcluir('${i.id}', event)">🗑️</button>
       </div>
     </div>
