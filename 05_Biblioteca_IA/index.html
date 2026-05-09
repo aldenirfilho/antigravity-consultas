@@ -440,6 +440,12 @@ function renderRoadmap() {
   `).join('');
 }
 
+function popularSelects() {
+  const select = document.getElementById('clTheme');
+  if (!taxonomy.themes) return;
+  select.innerHTML = taxonomy.themes.map(t => `<option value="${t.id}">${t.emoji} ${t.label}</option>`).join('');
+}
+
 // Renderizar Filtros
 function popularFiltros() {
   const container = document.getElementById('filtros-temas');
