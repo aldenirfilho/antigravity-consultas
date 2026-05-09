@@ -4,27 +4,15 @@
   "purpose": "Registro central dos estudos em Markdown transformado, com versões, temas, status e conexões.",
   "documents": [
     {
-      "id": "template-estudo-seguro",
-      "title": "Template seguro para estudo de artigo/capítulo",
-      "icon": "🧩",
-      "path": "content/modelos/template_estudo_seguro.md",
-      "theme": "workflow-ia",
-      "status": "template",
+      "id": "updown-003-les-autoanticorpos",
+      "title": "UPDOWN #003 — LES: Autoanticorpos (dsDNA, Sm, U1 RNP)",
+      "icon": "🧬",
+      "path": "../autoanticorpos-les-dsdna-sm-u1rnp/index.html",
+      "theme": "reumatologia",
+      "status": "ativo",
       "version": "v1.0",
-      "summary": "Modelo padrão para transformar material estudado em análise própria, didática, navegável e com menor risco autoral.",
-      "tags": ["template", "direitos-autorais", "gemini-flash", "markdown"]
-    },
-    {
-      "id": "exemplo-vm-sdra-markdown",
-      "title": "Exemplo: VM protetora e SDRA — nota didática",
-      "icon": "🫁",
-      "path": "content/intensiva/vm_sdra_nota_didatica.md",
-      "theme": "vm-sdra",
-      "status": "exemplo",
-      "version": "v0.1",
-      "summary": "Documento demonstrativo em Markdown para mostrar como um estudo vira resumo clínico, algoritmo e produtos didáticos.",
-      "tags": ["uti", "ventilacao", "sdra", "temi"],
-      "relatedUrl": "../01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html"
+      "summary": "Interpretação de anti-dsDNA, anti-Sm e anti-U1 RNP: diagnóstico, atividade, nefrite lúpica e armadilhas.",
+      "tags": ["updown", "lupus", "autoanticorpos", "nefrite", "reumatologia", "temi"]
     },
     {
       "id": "UPDOWN_001_LES_Manifestacoes_Diagnostico",
@@ -49,15 +37,27 @@
       "tags": ["updown", "lupus", "reumatologia", "manejo", "temi", "r3"]
     },
     {
-      "id": "updown-003-les-autoanticorpos",
-      "title": "UPDOWN #003 — LES: Autoanticorpos (dsDNA, Sm, U1 RNP)",
-      "icon": "🧪",
-      "path": "../autoanticorpos-les-dsdna-sm-u1rnp/index.html",
-      "theme": "reumatologia",
-      "status": "ativo",
+      "id": "template-estudo-seguro",
+      "title": "Template seguro para estudo de artigo/capítulo",
+      "icon": "🧩",
+      "path": "content/modelos/template_estudo_seguro.md",
+      "theme": "workflow-ia",
+      "status": "template",
       "version": "v1.0",
-      "summary": "Interpretação de anti-dsDNA, anti-Sm e anti-U1 RNP: diagnóstico, atividade, nefrite lúpica e armadilhas.",
-      "tags": ["updown", "lupus", "autoanticorpos", "nefrite", "reumatologia", "temi"]
+      "summary": "Modelo padrão para transformar material estudado em análise própria, didática, navegável e com menor risco autoral.",
+      "tags": ["template", "direitos-autorais", "gemini-flash", "markdown"]
+    },
+    {
+      "id": "exemplo-vm-sdra-markdown",
+      "title": "Exemplo: VM protetora e SDRA — nota didática",
+      "icon": "🫁",
+      "path": "content/intensiva/vm_sdra_nota_didatica.md",
+      "theme": "vm-sdra",
+      "status": "exemplo",
+      "version": "v0.1",
+      "summary": "Documento demonstrativo em Markdown para mostrar como um estudo vira resumo clínico, algoritmo e produtos didáticos.",
+      "tags": ["uti", "ventilacao", "sdra", "temi"],
+      "relatedUrl": "../01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html"
     }
   ]
 }
