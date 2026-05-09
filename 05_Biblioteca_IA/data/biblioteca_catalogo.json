@@ -31,7 +31,14 @@
       "filename": "Lupus_na_UTI_abordagem_completa_atualizada_2026.docx",
       "theme": "reumatologia",
       "tipo": "word",
-      "tags": ["lupus", "les", "autoimune", "reumatologia", "uti", "pulsoterapia"],
+      "tags": [
+        "lupus",
+        "les",
+        "autoimune",
+        "reumatologia",
+        "uti",
+        "pulsoterapia"
+      ],
       "status": "catalogado",
       "path": "inbox/Lupus_na_UTI_abordagem_completa_atualizada_2026.docx",
       "resumo": "Protocolo completo sobre manejo de Lupus Eritematoso Sistêmico em ambiente crítico, incluindo pulsoterapia e triagem de complicações.",
@@ -45,7 +52,14 @@
       "filename": "SAAF_medicina_interna_UTI_abordagem_completa_atualizada_2026.docx",
       "theme": "hematologia",
       "tipo": "word",
-      "tags": ["saaf", "antifosfolípide", "anticoagulação", "hematologia", "uti", "trombose"],
+      "tags": [
+        "saaf",
+        "antifosfolípide",
+        "anticoagulação",
+        "hematologia",
+        "uti",
+        "trombose"
+      ],
       "status": "catalogado",
       "path": "inbox/SAAF_medicina_interna_UTI_abordagem_completa_atualizada_2026.docx",
       "resumo": "Guia de manejo da Síndrome do Anticorpo Antifosfolípide na UTI, focando em profilaxia, tratamento e manejo da SAAF catastrófica.",
@@ -59,7 +73,14 @@
       "filename": "Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
       "theme": "emergencias-clinicas",
       "tipo": "word",
-      "tags": ["cardioversão", "amiodarona", "arritmia", "acls", "emergência", "medicina-interna"],
+      "tags": [
+        "cardioversão",
+        "amiodarona",
+        "arritmia",
+        "acls",
+        "emergência",
+        "medicina-interna"
+      ],
       "status": "catalogado",
       "path": "inbox/Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
       "resumo": "Protocolo prático para cardioversão elétrica sincronizada e uso de Amiodarona em ambiente de enfermaria e UTI.",
@@ -71,11 +92,10 @@
       "id": "grandes-sindromes-clinicas-mariana-lima-montenegro",
       "title": "Grandes Sindromes Clinicas   Mariana Lima Montenegro",
       "filename": "Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
@@ -88,11 +108,10 @@
       "id": "checkpoint-fatorxiii",
       "title": "Checkpoint Fatorxiii",
       "filename": "checkpoint_fatorXIII.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/checkpoint_fatorXIII.pdf",
@@ -192,7 +211,12 @@
       "filename": "protocolo_desmame_vm_sedoanalgesia.pdf",
       "theme": "sedacao-analgesia",
       "tipo": "pdf",
-      "tags": ["sedação", "analgesia", "desmame", "uti"],
+      "tags": [
+        "sedação",
+        "analgesia",
+        "desmame",
+        "uti"
+      ],
       "status": "catalogado",
       "path": "inbox/protocolo_desmame_vm_sedoanalgesia.pdf",
       "resumo": "",
@@ -289,11 +313,10 @@
       "id": "jetem-10-3-s25-2",
       "title": "Jetem 10 3 S25 2",
       "filename": "jetem-10-3-s25 2.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/jetem-10-3-s25 2.pdf",
@@ -357,11 +380,10 @@
       "id": "documento-irmao-3-curvas-ventilatorias-normais-e-patologicas-refeito",
       "title": "Documento Irmao 3 Curvas Ventilatorias Normais E Patologicas Refeito",
       "filename": "Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx",
@@ -374,11 +396,10 @@
       "id": "fa-protocolo-completo-draldenir",
       "title": "Fa Protocolo Completo Draldenir",
       "filename": "FA_Protocolo_Completo_DrAldenir.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/FA_Protocolo_Completo_DrAldenir.docx",
@@ -391,11 +412,10 @@
       "id": "protocolo-shr-draldenir",
       "title": "Protocolo Shr Draldenir",
       "filename": "Protocolo_SHR_DrAldenir.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_SHR_DrAldenir.docx",
@@ -408,11 +428,10 @@
       "id": "guia-ia-medicos-clinicos-intensivistas",
       "title": "Guia Ia Medicos Clinicos Intensivistas",
       "filename": "guia ia medicos clinicos intensivistas.md",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "text",
       "tags": [
-        "inbox-revisar",
-        "text"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/guia ia medicos clinicos intensivistas.md",
@@ -425,11 +444,10 @@
       "id": "acidobase-eletrolitos-draldenir",
       "title": "Acidobase Eletrolitos Draldenir",
       "filename": "AcidoBase_Eletrolitos_DrAldenir.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/AcidoBase_Eletrolitos_DrAldenir.docx",
@@ -459,11 +477,10 @@
       "id": "guia-ia-medicos-clinicos-intensivistas",
       "title": "Guia Ia Medicos Clinicos Intensivistas",
       "filename": "guia ia medicos clinicos intensivistas.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/guia ia medicos clinicos intensivistas.docx",
@@ -476,11 +493,10 @@
       "id": "quadro-comparativo-unico-alarmes-assincronias-curvas-patologicas",
       "title": "Quadro Comparativo Unico Alarmes Assincronias Curvas Patologicas",
       "filename": "Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx",
@@ -578,11 +594,10 @@
       "id": "protocolo-ptt-hfg-hpn-scms",
       "title": "Protocolo Ptt Hfg Hpn Scms",
       "filename": "Protocolo_PTT_HFG_HPN_SCMS.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_PTT_HFG_HPN_SCMS.pdf",
@@ -595,11 +610,10 @@
       "id": "alarmes-vm-manual-pratico",
       "title": "Alarmes Vm Manual Pratico",
       "filename": "Alarmes VM Manual Pratico.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Alarmes VM Manual Pratico.docx",
@@ -765,11 +779,10 @@
       "id": "modelos-prontuario-dnar-plantao",
       "title": "Modelos Prontuario Dnar Plantao",
       "filename": "MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
@@ -782,11 +795,10 @@
       "id": "protocolo-shr-sindrome-hepatorrenal-draldenir",
       "title": "Protocolo Shr Sindrome Hepatorrenal Draldenir",
       "filename": "Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf",
@@ -833,11 +845,10 @@
       "id": "ventila-cards-verso",
       "title": "Ventila Cards Verso",
       "filename": "VENTILA-CARDS-VERSO.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/VENTILA-CARDS-VERSO.pdf",
@@ -850,11 +861,10 @@
       "id": "perioperatorio-grandessindromes-draldenir",
       "title": "Perioperatorio Grandessindromes Draldenir",
       "filename": "Perioperatorio GrandesSindromes DrAldenir.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Perioperatorio GrandesSindromes DrAldenir.docx",
@@ -935,11 +945,10 @@
       "id": "parestesias-e-guillain-barre-protocolo-completo",
       "title": "Parestesias E Guillain Barre Protocolo Completo",
       "filename": "Parestesias e Guillain Barre Protocolo Completo.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Parestesias e Guillain Barre Protocolo Completo.docx",
@@ -952,11 +961,10 @@
       "id": "04-protocolo-tromboprofilaxia",
       "title": "04 Protocolo Tromboprofilaxia",
       "filename": "04_Protocolo_Tromboprofilaxia.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/04_Protocolo_Tromboprofilaxia.pdf",
@@ -1020,11 +1028,10 @@
       "id": "acidobase-eletrolitos-draldenir",
       "title": "Acidobase Eletrolitos Draldenir",
       "filename": "AcidoBase_Eletrolitos_DrAldenir.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/AcidoBase_Eletrolitos_DrAldenir.pdf",
@@ -1122,11 +1129,10 @@
       "id": "plano-r3-clinica-medica-santacasa-hrn",
       "title": "Plano R3 Clinica Medica Santacasa Hrn",
       "filename": "Plano_R3_Clinica_Medica_SantaCasa_HRN.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Plano_R3_Clinica_Medica_SantaCasa_HRN.docx",
@@ -1173,11 +1179,10 @@
       "id": "monetizar-dados-me-dicos-em-renda-passiva",
       "title": "Monetizar Dados MéDicos Em Renda Passiva",
       "filename": "Monetizar dados médicos em renda passiva.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Monetizar dados médicos em renda passiva.pdf",
@@ -1224,11 +1229,10 @@
       "id": "protocolos-assistenciais-1",
       "title": "Protocolos Assistenciais (1)",
       "filename": "Protocolos_Assistenciais (1).pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolos_Assistenciais (1).pdf",
@@ -1241,11 +1245,10 @@
       "id": "ventila-cards-frente",
       "title": "Ventila Cards Frente",
       "filename": "VENTILA-CARDS-FRENTE.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/VENTILA-CARDS-FRENTE.pdf",
@@ -1258,11 +1261,10 @@
       "id": "ventila-decision",
       "title": "Ventila Decision",
       "filename": "VENTILA-DECISION.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/VENTILA-DECISION.docx",
@@ -1309,11 +1311,10 @@
       "id": "00-master-completo-11-protocolos-santacasa-2026",
       "title": "00 Master Completo 11 Protocolos Santacasa 2026",
       "filename": "00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
@@ -1411,11 +1412,10 @@
       "id": "manual-fa-aguda-cronica-cardioversao-controle-fc",
       "title": "Manual Fa Aguda Cronica Cardioversao Controle Fc",
       "filename": "Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx",
@@ -1462,11 +1462,10 @@
       "id": "bradiarritmias-bav-protocolo",
       "title": "Bradiarritmias Bav Protocolo",
       "filename": "bradiarritmias_bav_protocolo.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/bradiarritmias_bav_protocolo.docx",
@@ -1479,11 +1478,10 @@
       "id": "advpub-cj-26-0119",
       "title": "Advpub Cj 26 0119",
       "filename": "advpub_CJ-26-0119.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/advpub_CJ-26-0119.pdf",
@@ -1496,11 +1494,10 @@
       "id": "s13054-026-06015-8-reference",
       "title": "S13054 026 06015 8 Reference",
       "filename": "s13054-026-06015-8_reference.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/s13054-026-06015-8_reference.pdf",
@@ -1583,7 +1580,12 @@
       "filename": "DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf",
       "theme": "sedacao-analgesia",
       "tipo": "pdf",
-      "tags": ["sedação", "analgesia", "desmame", "uti"],
+      "tags": [
+        "sedação",
+        "analgesia",
+        "desmame",
+        "uti"
+      ],
       "status": "catalogado",
       "path": "inbox/DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf",
       "resumo": "",
@@ -1629,11 +1631,10 @@
       "id": "comparativo-ia-medicina-2026",
       "title": "Comparativo Ia Medicina 2026",
       "filename": "Comparativo_IA_Medicina_2026.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Comparativo_IA_Medicina_2026.pdf",
@@ -1646,11 +1647,10 @@
       "id": "protocolo-albumina-paracentese",
       "title": "Protocolo Albumina Paracentese",
       "filename": "PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
@@ -1663,11 +1663,10 @@
       "id": "parecer-cuidados-paliativos-padrao",
       "title": "Parecer Cuidados Paliativos Padrao",
       "filename": "Parecer Cuidados Paliativos PADRAO.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Parecer Cuidados Paliativos PADRAO.pdf",
@@ -1714,11 +1713,10 @@
       "id": "05-formulario-evolucao-soap-diaria",
       "title": "05 Formulario Evolucao Soap Diaria",
       "filename": "05_Formulario_Evolucao_SOAP_Diaria.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/05_Formulario_Evolucao_SOAP_Diaria.pdf",
@@ -1816,11 +1814,10 @@
       "id": "cardio-critica-draldenir",
       "title": "Cardio Critica Draldenir",
       "filename": "Cardio_Critica_DrAldenir.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Cardio_Critica_DrAldenir.docx",
@@ -1833,11 +1830,10 @@
       "id": "modos-ventilatorios-comparativo",
       "title": "Modos Ventilatorios Comparativo",
       "filename": "Modos Ventilatorios Comparativo.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Modos Ventilatorios Comparativo.docx",
@@ -1884,11 +1880,10 @@
       "id": "hrn-sepsis-intelligence-2",
       "title": "Hrn Sepsis Intelligence 2",
       "filename": "HRN_Sepsis_Intelligence 2.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/HRN_Sepsis_Intelligence 2.pdf",
@@ -1935,11 +1930,10 @@
       "id": "ventila-atlas",
       "title": "Ventila Atlas",
       "filename": "VENTILA-ATLAS.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/VENTILA-ATLAS.pdf",
@@ -1952,11 +1946,10 @@
       "id": "cardio-critica-draldenir",
       "title": "Cardio Critica Draldenir",
       "filename": "Cardio_Critica_DrAldenir.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Cardio_Critica_DrAldenir.pdf",
@@ -2020,11 +2013,10 @@
       "id": "protocolo-ic-vm-draldenir",
       "title": "Protocolo Ic Vm Draldenir",
       "filename": "Protocolo_IC_VM_DrAldenir.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_IC_VM_DrAldenir.docx",
@@ -2037,11 +2029,10 @@
       "id": "nota-evolucao-dnar-lsv",
       "title": "Nota Evolucao Dnar Lsv",
       "filename": "NOTA_EVOLUCAO_DNAR_LSV.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/NOTA_EVOLUCAO_DNAR_LSV.docx",
@@ -2088,11 +2079,10 @@
       "id": "shr",
       "title": "Shr",
       "filename": "SHR.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/SHR.pdf",
@@ -2122,11 +2112,10 @@
       "id": "peticao-inicial-aldenir-rocha",
       "title": "Peticao Inicial Aldenir Rocha",
       "filename": "peticao_inicial_aldenir_rocha.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/peticao_inicial_aldenir_rocha.pdf",
@@ -2156,11 +2145,10 @@
       "id": "protocolo-urgencias-dialiticas",
       "title": "Protocolo Urgencias Dialiticas",
       "filename": "Protocolo_Urgencias_Dialiticas.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_Urgencias_Dialiticas.pdf",
@@ -2224,11 +2212,10 @@
       "id": "ventila-cards-guia",
       "title": "Ventila Cards Guia",
       "filename": "VENTILA-CARDS-GUIA.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/VENTILA-CARDS-GUIA.pdf",
@@ -2241,11 +2228,10 @@
       "id": "nejmoa2511420",
       "title": "Nejmoa2511420",
       "filename": "NEJMoa2511420.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/NEJMoa2511420.pdf",
@@ -2258,11 +2244,10 @@
       "id": "11-pocket-cards-clinica-medica",
       "title": "11 Pocket Cards Clinica Medica",
       "filename": "11_Pocket_Cards_Clinica_Medica.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/11_Pocket_Cards_Clinica_Medica.pdf",
@@ -2275,11 +2260,10 @@
       "id": "hrn-sepsis-intelligence",
       "title": "Hrn Sepsis Intelligence",
       "filename": "HRN_Sepsis_Intelligence.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/HRN_Sepsis_Intelligence.pdf",
@@ -2292,11 +2276,10 @@
       "id": "px-aldenir",
       "title": "Px Aldenir",
       "filename": "Px Aldenir.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Px Aldenir.pdf",
@@ -2309,11 +2292,10 @@
       "id": "protocolo-admissao-clinica-medica-santacasa-sobral-2026",
       "title": "Protocolo Admissao Clinica Medica Santacasa Sobral 2026",
       "filename": "Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx",
@@ -2343,11 +2325,10 @@
       "id": "protocolo-scr-sindrome-cardiorrenal-draldenir",
       "title": "Protocolo Scr Sindrome Cardiorrenal Draldenir",
       "filename": "Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf",
@@ -2394,11 +2375,10 @@
       "id": "ia-potente",
       "title": "Ia Potente",
       "filename": "IA POTENTE.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/IA POTENTE.pdf",
@@ -2428,11 +2408,10 @@
       "id": "table-87e783ea-d03f-43a3-9d3c-dcab85915268",
       "title": "Table 87E783Ea D03F 43A3 9D3C Dcab85915268",
       "filename": "table-87e783ea-d03f-43a3-9d3c-dcab85915268.csv",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "data",
       "tags": [
-        "inbox-revisar",
-        "data"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/table-87e783ea-d03f-43a3-9d3c-dcab85915268.csv",
@@ -2445,11 +2424,10 @@
       "id": "ventila-cards",
       "title": "Ventila Cards",
       "filename": "VENTILA-CARDS.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/VENTILA-CARDS.pdf",
@@ -2462,11 +2440,10 @@
       "id": "nota-medica-dnar-lsv-prontuario",
       "title": "Nota Medica Dnar Lsv Prontuario",
       "filename": "NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
@@ -2496,11 +2473,10 @@
       "id": "protocolo-prona-santacasa-sobral",
       "title": "Protocolo Prona Santacasa Sobral",
       "filename": "Protocolo_Prona_SantaCasa_Sobral.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_Prona_SantaCasa_Sobral.pdf",
@@ -2530,11 +2506,10 @@
       "id": "ia",
       "title": "Ia",
       "filename": "IA.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/IA.pdf",
@@ -2564,11 +2539,10 @@
       "id": "parestesias-e-guillain-barre-protocolo-completo",
       "title": "Parestesias E Guillain Barre Protocolo Completo",
       "filename": "Parestesias e Guillain Barre Protocolo Completo.pages",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "outro",
       "tags": [
-        "inbox-revisar",
-        "outro"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Parestesias e Guillain Barre Protocolo Completo.pages",
@@ -2581,11 +2555,10 @@
       "id": "multiple-organ-failure-what-you-need-to-know-1",
       "title": "Multiple Organ Failure What You Need To Know 1",
       "filename": "multiple_organ_failure__what_you_need_to_know.1.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/multiple_organ_failure__what_you_need_to_know.1.pdf",
@@ -2598,11 +2571,10 @@
       "id": "00-todos-protocolos-clinica-medica-santacasa-2026",
       "title": "00 Todos Protocolos Clinica Medica Santacasa 2026",
       "filename": "00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
@@ -2632,11 +2604,10 @@
       "id": "protocolo-emergencias-hematologicas-scms",
       "title": "Protocolo Emergencias Hematologicas Scms",
       "filename": "Protocolo_Emergencias_Hematologicas_SCMS.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_Emergencias_Hematologicas_SCMS.pdf",
@@ -2649,11 +2620,10 @@
       "id": "protocolo-bradiarritmias-bav-marcapasso-externo-final",
       "title": "Protocolo Bradiarritmias Bav Marcapasso Externo Final",
       "filename": "Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx",
@@ -2666,11 +2636,10 @@
       "id": "protocolo-reposicao-albumina-draldenir",
       "title": "Protocolo Reposicao Albumina Draldenir",
       "filename": "Protocolo Reposicao Albumina DrAldenir.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo Reposicao Albumina DrAldenir.docx",
@@ -2700,11 +2669,10 @@
       "id": "bav-bolso-plantao",
       "title": "Bav Bolso Plantao",
       "filename": "bav_bolso_plantao.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/bav_bolso_plantao.pdf",
@@ -2719,7 +2687,12 @@
       "filename": "PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf",
       "theme": "sedacao-analgesia",
       "tipo": "pdf",
-      "tags": ["sedação", "analgesia", "desmame", "uti"],
+      "tags": [
+        "sedação",
+        "analgesia",
+        "desmame",
+        "uti"
+      ],
       "status": "catalogado",
       "path": "inbox/PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf",
       "resumo": "",
@@ -2731,11 +2704,10 @@
       "id": "protocolo-crioprecipitado-dr-aldenir",
       "title": "Protocolo Crioprecipitado Dr Aldenir",
       "filename": "Protocolo Crioprecipitado Dr Aldenir.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo Crioprecipitado Dr Aldenir.docx",
@@ -2765,11 +2737,10 @@
       "id": "protocolo-cuidados-paliativos-draldenir",
       "title": "Protocolo Cuidados Paliativos Draldenir",
       "filename": "Protocolo_Cuidados_Paliativos_DrAldenir.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_Cuidados_Paliativos_DrAldenir.pdf",
@@ -2867,11 +2838,10 @@
       "id": "02-protocolo-controle-glicemico",
       "title": "02 Protocolo Controle Glicemico",
       "filename": "02_Protocolo_Controle_Glicemico.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/02_Protocolo_Controle_Glicemico.pdf",
@@ -2901,11 +2871,10 @@
       "id": "protocolo-esva-falencia-vascular-dialise",
       "title": "Protocolo Esva Falencia Vascular Dialise",
       "filename": "Protocolo_ESVA_Falencia_Vascular_Dialise.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_ESVA_Falencia_Vascular_Dialise.docx",
@@ -2952,11 +2921,10 @@
       "id": "limitacao-suporte-vida-pac",
       "title": "Limitacao Suporte Vida Pac",
       "filename": "LIMITACAO_SUPORTE_VIDA_PAC.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/LIMITACAO_SUPORTE_VIDA_PAC.pdf",
@@ -2988,7 +2956,10 @@
       "filename": "SDRA_VM_Protetora_DrAldenir.pdf",
       "theme": "vm-sdra",
       "tipo": "pdf",
-      "tags": ["vm-sdra", "pdf"],
+      "tags": [
+        "vm-sdra",
+        "pdf"
+      ],
       "status": "catalogado",
       "path": "inbox/SDRA_VM_Protetora_DrAldenir.pdf",
       "resumo": "",
@@ -3002,7 +2973,11 @@
       "filename": "FAST eFAST em Trauma.docx",
       "theme": "pocus-usg",
       "tipo": "word",
-      "tags": ["pocus", "fast", "trauma"],
+      "tags": [
+        "pocus",
+        "fast",
+        "trauma"
+      ],
       "status": "revisar",
       "path": "inbox/FAST eFAST em Trauma.docx",
       "resumo": "",
@@ -3082,11 +3057,10 @@
       "id": "09-protocolo-ic-aguda",
       "title": "09 Protocolo Ic Aguda",
       "filename": "09_Protocolo_IC_Aguda.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/09_Protocolo_IC_Aguda.pdf",
@@ -3099,11 +3073,10 @@
       "id": "documento-irmao-4-loops-ventilatorios-pv-e-fv-em-profundidade",
       "title": "Documento Irmao 4 Loops Ventilatorios Pv E Fv Em Profundidade",
       "filename": "Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx",
@@ -3133,11 +3106,10 @@
       "id": "s13054-025-05817-6-2",
       "title": "S13054 025 05817 6 2",
       "filename": "s13054-025-05817-6 2.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/s13054-025-05817-6 2.pdf",
@@ -3201,11 +3173,10 @@
       "id": "plano-investigacao-dor-abdominal-cronica",
       "title": "Plano Investigacao Dor Abdominal Cronica",
       "filename": "Plano_Investigacao_Dor_Abdominal_Cronica.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Plano_Investigacao_Dor_Abdominal_Cronica.docx",
@@ -3286,11 +3257,10 @@
       "id": "versao-ultra-resumida-de-bolso-ventilacao-mecanica-plantao",
       "title": "Versao Ultra Resumida De Bolso Ventilacao Mecanica Plantao",
       "filename": "Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "word",
       "tags": [
-        "inbox-revisar",
-        "word"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx",
@@ -3354,11 +3324,10 @@
       "id": "07-protocolo-dor-toracica",
       "title": "07 Protocolo Dor Toracica",
       "filename": "07_Protocolo_Dor_Toracica.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/07_Protocolo_Dor_Toracica.pdf",
@@ -3371,11 +3340,10 @@
       "id": "protocolo-vm-cnaf-vni-santacasa-sobral",
       "title": "Protocolo Vm Cnaf Vni Santacasa Sobral",
       "filename": "Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf",
@@ -3388,11 +3356,10 @@
       "id": "nejmra2312086",
       "title": "Nejmra2312086",
       "filename": "NEJMra2312086.pdf",
-      "theme": "morte-cerebral-doacao",
+      "theme": "inbox-revisar",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar",
-        "pdf"
+        "inbox-revisar"
       ],
       "status": "revisar",
       "path": "inbox/NEJMra2312086.pdf",

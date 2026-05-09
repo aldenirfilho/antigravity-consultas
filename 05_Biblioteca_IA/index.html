@@ -117,6 +117,32 @@
 
   [data-view]{display:none}
   [data-view].active{display:block}
+
+  .btn-delete {
+    background: rgba(255, 80, 80, 0.1);
+    color: #ff5050;
+    border: 1px solid rgba(255, 80, 80, 0.3);
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .btn-delete:hover {
+    background: #ff5050;
+    color: white;
+  }
+
+  .inbox-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary);
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 </style>
 </head>
 <body>
@@ -287,6 +313,29 @@ const getBaseUrl = () => {
     return loc.origin + loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
 };
 
+// Lógica de Exclusão
+function marcarParaExcluir(id, event) {
+  if (event) event.stopPropagation();
+  if (!confirm("Deseja marcar este arquivo para exclusão definitiva?")) return;
+  
+  const item = catalog.items.find(i => i.id === id);
+  if (!item) return;
+
+  // Adicionar ao log de exclusão no localStorage
+  let deleted = JSON.parse(localStorage.getItem('biblioteca_deleted_files') || '[]');
+  deleted.push(item.path);
+  localStorage.setItem('biblioteca_deleted_files', JSON.stringify(deleted));
+
+  // Remover do catálogo atual na memória (para sumir da tela)
+  catalog.items = catalog.items.filter(i => i.id !== id);
+  
+  renderGrid();
+  renderStats();
+  renderTriagem();
+
+  alert("Arquivo removido da visualização. \nPara apagar fisicamente do HD, você precisará rodar o comando de limpeza que eu vou te passar.");
+}
+
 // Carregar Dados
 async function init() {
   try {
@@ -397,7 +446,8 @@ function renderGrid() {
   if (!catalog.items) return;
 
   const items = catalog.items.filter(i => {
-    if (i.theme === 'inbox-revisar') return false;
+    // Se o filtro for 'todos', esconde o inbox. Se o filtro for 'inbox-revisar', mostra só o inbox.
+    if (currentFilter === 'todos' && i.theme === 'inbox-revisar') return false;
     const matchTheme = currentFilter === 'todos' || i.theme === currentFilter;
     const matchBusca = !busca || i.title.toLowerCase().includes(busca) || (i.tags && i.tags.some(t => t.toLowerCase().includes(busca)));
     return matchTheme && matchBusca;
@@ -415,8 +465,9 @@ function renderGrid() {
           ${(i.tags || []).map(t => `<span class="tag">#${t}</span>`).join('')}
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary">👁️ Visualizar</button>
-          <a href="${i.path}" download class="btn btn-secondary" onclick="event.stopPropagation()">⬇️ Baixar</a>
+          <button class="btn btn-primary">👁️ Ver</button>
+          <a href="${i.path}" download class="btn btn-secondary" onclick="event.stopPropagation()">⬇️</a>
+          <button class="btn btn-delete" onclick="marcarParaExcluir('${i.id}', event)">🗑️</button>
         </div>
       </div>
     `;
