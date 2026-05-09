@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-08",
+  "updatedAt": "2026-05-09",
   "basePath": "../../05_Biblioteca_IA/inbox/",
   "categories": [
     {
@@ -14,7 +14,9 @@
         {"name": "Checklist Alta Segura", "path": "03_Checklist_Alta_Segura.pdf", "type": "pdf"},
         {"name": "Protocolo Dor Torácica", "path": "07_Protocolo_Dor_Toracica.pdf", "type": "pdf"},
         {"name": "Hiponatremia Protocolo", "path": "08_Protocolo_Hiponatremia.pdf", "type": "pdf"},
-        {"name": "Insuficiência Cardíaca Aguda", "path": "09_Protocolo_IC_Aguda.pdf", "type": "pdf"}
+        {"name": "Insuficiência Cardíaca Aguda", "path": "09_Protocolo_IC_Aguda.pdf", "type": "pdf"},
+        {"name": "Lupus na UTI (Atualizado 2026)", "path": "Lupus_na_UTI_abordagem_completa_atualizada_2026.docx", "type": "word"},
+        {"name": "SAAF na UTI (Atualizado 2026)", "path": "SAAF_medicina_interna_UTI_abordagem_completa_atualizada_2026.docx", "type": "word"}
       ]
     },
     {
@@ -37,7 +39,8 @@
         {"name": "Hemorragia Digestiva Alta (HDA)", "path": "Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx", "type": "word"},
         {"name": "POCUS Point of Care Protocolo", "path": "Posicionamento_sobre_o_Uso_do_Ultrassom_“Point_of_Care”_POCUS_na.pdf", "type": "pdf"},
         {"name": "Morte Encefálica CFM 2173", "path": "Protocolo_Morte_Encefalica_CFM2173.docx", "type": "word"},
-        {"name": "Afogamento UTI Adulto", "path": "Protocolo_Afogamento_UTI_Adulto.docx", "type": "word"}
+        {"name": "Afogamento UTI Adulto", "path": "Protocolo_Afogamento_UTI_Adulto.docx", "type": "word"},
+        {"name": "Cardioversão & Amiodarona (2026)", "path": "Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx", "type": "word"}
       ]
     },
     {

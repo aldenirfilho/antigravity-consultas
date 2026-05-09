@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-05-08",
+  "updatedAt": "2026-05-09",
   "project": "Biblioteca IA — Enciclopédia Médica Intensiva",
-  "totalFiles": 197,
+  "totalFiles": 200,
   "stats": {
     "inbox-revisar": 85,
     "pocus-usg": 9,
@@ -25,6 +25,48 @@
     "sepse-choque": 1
   },
   "items": [
+    {
+      "id": "lupus-na-uti-2026",
+      "title": "Lupus na UTI (Manejo e Complicações)",
+      "filename": "Lupus_na_UTI_abordagem_completa_atualizada_2026.docx",
+      "theme": "clinica-medica",
+      "tipo": "word",
+      "tags": ["lupus", "autoimune", "uti", "2026"],
+      "status": "catalogado",
+      "path": "inbox/Lupus_na_UTI_abordagem_completa_atualizada_2026.docx",
+      "resumo": "Protocolo completo sobre manejo de Lupus Eritematoso Sistêmico em ambiente crítico, incluindo pulsoterapia e triagem de complicações.",
+      "ia_origem": "Antigravity",
+      "data": "2026-05",
+      "createdAt": "2026-05-09T15:15:00Z"
+    },
+    {
+      "id": "saaf-uti-2026",
+      "title": "SAAF na UTI (Anticoagulação e Catástrofe)",
+      "filename": "SAAF_medicina_interna_UTI_abordagem_completa_atualizada_2026.docx",
+      "theme": "clinica-medica",
+      "tipo": "word",
+      "tags": ["saaf", "anticoagulação", "uti", "2026"],
+      "status": "catalogado",
+      "path": "inbox/SAAF_medicina_interna_UTI_abordagem_completa_atualizada_2026.docx",
+      "resumo": "Guia de manejo da Síndrome do Anticorpo Antifosfolípide na UTI, focando em profilaxia, tratamento e manejo da SAAF catastrófica.",
+      "ia_origem": "Antigravity",
+      "data": "2026-05",
+      "createdAt": "2026-05-09T15:15:00Z"
+    },
+    {
+      "id": "cardioversao-amiodarona-2026",
+      "title": "Cardioversão & Manejo de Taquiarritmias",
+      "filename": "Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
+      "theme": "emergencias-clinicas",
+      "tipo": "word",
+      "tags": ["cardioversão", "amiodarona", "arritmia", "2026"],
+      "status": "catalogado",
+      "path": "inbox/Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
+      "resumo": "Protocolo prático para cardioversão elétrica sincronizada e uso de Amiodarona em ambiente de enfermaria e UTI.",
+      "ia_origem": "Antigravity",
+      "data": "2026-05",
+      "createdAt": "2026-05-09T15:15:00Z"
+    },
     {
       "id": "grandes-sindromes-clinicas-mariana-lima-montenegro",
       "title": "Grandes Sindromes Clinicas   Mariana Lima Montenegro",
