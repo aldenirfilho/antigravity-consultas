@@ -465,7 +465,8 @@ function renderGrid() {
           ${(i.tags || []).map(t => `<span class="tag">#${t}</span>`).join('')}
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary">👁️ Ver</button>
+          <button class="btn btn-primary" onclick="abrirPreview('${encodeURIComponent(i.path)}', '${i.title.replace(/'/g,"\\'")}')">👁️</button>
+          <button class="btn btn-secondary" style="padding:0.5rem" onclick="abrirClassify('${i.id}')">📂</button>
           <a href="${i.path}" download class="btn btn-secondary" onclick="event.stopPropagation()">⬇️</a>
           <button class="btn btn-delete" onclick="marcarParaExcluir('${i.id}', event)">🗑️</button>
         </div>
@@ -574,10 +575,25 @@ function salvarClassificacao() {
   localStorage.setItem('lib_classificacoes', JSON.stringify(local));
   
   fecharClassify();
+  
+  // Lógica de Conexão: Adicionar ao Mapa Vivo se houver novas tags
+  if (modif.tags.length > 0) {
+    sincronizarConexoesBrain(i.id, modif.tags);
+  }
+
   renderStats();
   renderGrid();
   renderTriagem();
-  alert("✅ Classificação salva localmente!\n\nLembre-se de pedir ao Antigravity para exportar o catálogo final quando terminar a triagem.");
+  alert("✅ Alterações salvas localmente!\n\nDocumento realocado e tags atualizadas.");
+}
+
+function sincronizarConexoesBrain(docId, tags) {
+  // Simulação de geração de conexões no Mapa Vivo baseado em tags
+  // Isso será lido pelo script de geração de brain.json futuramente
+  let brainChanges = JSON.parse(localStorage.getItem('biblioteca_brain_sync') || '[]');
+  brainChanges.push({ docId, tags, timestamp: new Date().toISOString() });
+  localStorage.setItem('biblioteca_brain_sync', JSON.stringify(brainChanges));
+  console.log("Conexões sugeridas para o Brain:", tags);
 }
 
 // Preview
