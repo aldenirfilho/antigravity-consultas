@@ -15,6 +15,39 @@
       "tags": ["cad", "diabetes", "endocrino", "uti", "emergencia", "temi"]
     },
     {
+      "id": "app-cad-dashboard",
+      "title": "APP — Dashboard UTI: Manejo de CAD",
+      "icon": "📊",
+      "path": "content/intensiva/cad-dashboard.html",
+      "theme": "endocrino-metabolico",
+      "status": "ativo",
+      "version": "v1.0",
+      "summary": "Painel interativo com simulador de protocolo de insulina e monitoramento clínico em tempo real.",
+      "tags": ["app", "simulador", "cad", "insulina", "uti"]
+    },
+    {
+      "id": "app-cad-checklist",
+      "title": "CHECKLIST — CAD: Beira-Leito e Segurança",
+      "icon": "✅",
+      "path": "content/intensiva/cad-checklist-beira-leito.html",
+      "theme": "endocrino-metabolico",
+      "status": "ativo",
+      "version": "v1.0",
+      "summary": "Checklist rápido para garantir que nenhum passo do protocolo foi esquecido durante a fase crítica.",
+      "tags": ["checklist", "seguranca", "cad", "uti"]
+    },
+    {
+      "id": "app-cad-transicao",
+      "title": "GUIA — Transição Insulina EV para SC",
+      "icon": "📉",
+      "path": "content/intensiva/cad-transicao-ev-sc-infografico.html",
+      "theme": "endocrino-metabolico",
+      "status": "ativo",
+      "version": "v1.0",
+      "summary": "Infográfico interativo com os critérios de resolução e o esquema de transição segura para enfermaria.",
+      "tags": ["transicao", "insulina", "diabetes", "alta"]
+    },
+    {
       "id": "updown-004-avc-agudo",
       "title": "UPDOWN #004 — AVC Agudo: Manejo (2026)",
       "icon": "🧠",
