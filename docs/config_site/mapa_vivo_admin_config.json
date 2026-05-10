@@ -1,0 +1,13 @@
+{
+  "version": "3.1",
+  "adminMode": true,
+  "safeDelete": true,
+  "defaultMode": "core",
+  "edgeStyles": {
+    "direct": { "line": "continuous", "cssClass": "graph-link direct", "meaning": "conexão confirmada" },
+    "suggested": { "line": "dashed", "cssClass": "graph-link suggested", "meaning": "sugestão de curadoria" }
+  },
+  "allowedNodeTypes": ["hub", "biblioteca", "feed", "qbank", "tool", "module", "topic", "theme", "file"],
+  "allowedRelations": ["organiza", "alimenta", "gera-card", "gera-questao", "complementa-modulo", "subtema", "apoia-calculo", "revisao-visual", "alto-rendimento-temi", "tags-compartilhadas"],
+  "patchOperations": ["addNode", "updateNode", "hideNode", "hideEdge", "addDirectEdge", "addSuggestedEdge", "approveSuggestedEdge", "rejectSuggestedEdge"]
+}
