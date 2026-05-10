@@ -5,34 +5,25 @@
   "stats": {
     "emergencias-clinicas": 0,
     "familia-paciente": 0,
-    "vm-sdra": 0,
-    "temi_estudos": 12,
-    "ventilacao": 34,
-    "nefro": 2,
+    "vm-sdra": 34,
+    "protocolos-institucionais": 38,
     "clinica-medica": 0,
-    "cardio": 9,
-    "sepse-choque": 0,
+    "sepse-choque": 6,
     "endocrino-metabolico": 0,
-    "procedimentos_especiais": 0,
-    "pocus": 8,
+    "artigos-cientificos": 6,
     "gastro-hepatologia": 0,
-    "artigos_cientificos": 6,
-    "neuro-uti": 0,
+    "neuro-uti": 11,
     "infectologia": 0,
     "farmaco-doses": 0,
     "juridico-financeiro": 0,
-    "neuro": 11,
     "uti-geral": 0,
-    "protocolos_institucionais": 38,
-    "pocus-usg": 0,
-    "temi-prova": 0,
-    "gestao-ia-produtividade": 0,
+    "pocus-usg": 8,
+    "temi-prova": 12,
+    "gestao-ia-produtividade": 9,
     "procedimentos-dispositivos": 0,
-    "sepse_choque": 6,
-    "nefro-aki-trs": 0,
+    "nefro-aki-trs": 2,
     "disturbios-eletroliticos": 0,
-    "cardio-hemodinamica": 0,
-    "gestao_pessoal": 9,
+    "cardio-hemodinamica": 9,
     "inbox-revisar": 65
   },
   "items": [
@@ -40,13 +31,13 @@
       "id": "jetem-10-3-s25-2",
       "title": "Jetem 10 3 S25 2",
       "filename": "jetem-10-3-s25 2.pdf",
-      "theme": "artigos_cientificos",
+      "theme": "artigos-cientificos",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/artigos_cientificos/jetem-10-3-s25 2.pdf",
+      "path": "acervo/artigos-cientificos/jetem-10-3-s25 2.pdf",
       "resumo": "Documento sobre artigos-cientificos catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -56,13 +47,13 @@
       "id": "advpub-cj-26-0119",
       "title": "Advpub Cj 26 0119",
       "filename": "advpub_CJ-26-0119.pdf",
-      "theme": "artigos_cientificos",
+      "theme": "artigos-cientificos",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/artigos_cientificos/advpub_CJ-26-0119.pdf",
+      "path": "acervo/artigos-cientificos/advpub_CJ-26-0119.pdf",
       "resumo": "Documento sobre artigos-cientificos catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -72,13 +63,13 @@
       "id": "s13054-026-06015-8-reference",
       "title": "S13054 026 06015 8 Reference",
       "filename": "s13054-026-06015-8_reference.pdf",
-      "theme": "artigos_cientificos",
+      "theme": "artigos-cientificos",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/artigos_cientificos/s13054-026-06015-8_reference.pdf",
+      "path": "acervo/artigos-cientificos/s13054-026-06015-8_reference.pdf",
       "resumo": "Documento sobre artigos-cientificos catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -88,13 +79,13 @@
       "id": "nejmoa2511420",
       "title": "Nejmoa2511420",
       "filename": "NEJMoa2511420.pdf",
-      "theme": "artigos_cientificos",
+      "theme": "artigos-cientificos",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/artigos_cientificos/NEJMoa2511420.pdf",
+      "path": "acervo/artigos-cientificos/NEJMoa2511420.pdf",
       "resumo": "Documento sobre artigos-cientificos catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -104,13 +95,13 @@
       "id": "s13054-025-05817-6-2",
       "title": "S13054 025 05817 6 2",
       "filename": "s13054-025-05817-6 2.pdf",
-      "theme": "artigos_cientificos",
+      "theme": "artigos-cientificos",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/artigos_cientificos/s13054-025-05817-6 2.pdf",
+      "path": "acervo/artigos-cientificos/s13054-025-05817-6 2.pdf",
       "resumo": "Documento sobre artigos-cientificos catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -120,13 +111,13 @@
       "id": "nejmra2312086",
       "title": "Nejmra2312086",
       "filename": "NEJMra2312086.pdf",
-      "theme": "artigos_cientificos",
+      "theme": "artigos-cientificos",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/artigos_cientificos/NEJMra2312086.pdf",
+      "path": "acervo/artigos-cientificos/NEJMra2312086.pdf",
       "resumo": "Documento sobre artigos-cientificos catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -136,14 +127,14 @@
       "id": "protocolo-bradicardia-em-uti-final",
       "title": "Protocolo Bradicardia Em Uti Final",
       "filename": "Protocolo_Bradicardia_em_UTI_final.docx",
-      "theme": "cardio",
+      "theme": "cardio-hemodinamica",
       "tipo": "word",
       "tags": [
         "cardio-hemodinamica",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/cardio/Protocolo_Bradicardia_em_UTI_final.docx",
+      "path": "acervo/cardio-hemodinamica/Protocolo_Bradicardia_em_UTI_final.docx",
       "resumo": "Documento sobre cardio-hemodinamica catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -153,13 +144,13 @@
       "id": "manual-fa-aguda-cronica-cardioversao-controle-fc",
       "title": "Manual Fa Aguda Cronica Cardioversao Controle Fc",
       "filename": "Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx",
-      "theme": "cardio",
+      "theme": "cardio-hemodinamica",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/cardio/Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx",
+      "path": "acervo/cardio-hemodinamica/Manual_FA_Aguda_Cronica_Cardioversao_Controle_FC.docx",
       "resumo": "Documento sobre cardio-hemodinamica catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -169,14 +160,14 @@
       "id": "tabelas-dva-mlh-peso-40a120",
       "title": "Tabelas Dva Mlh Peso 40A120",
       "filename": "tabelas_DVA_mlh_peso_40a120.pdf",
-      "theme": "cardio",
+      "theme": "cardio-hemodinamica",
       "tipo": "pdf",
       "tags": [
         "cardio-hemodinamica",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/cardio/tabelas_DVA_mlh_peso_40a120.pdf",
+      "path": "acervo/cardio-hemodinamica/tabelas_DVA_mlh_peso_40a120.pdf",
       "resumo": "Documento sobre cardio-hemodinamica catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -186,13 +177,13 @@
       "id": "cardio-critica-draldenir",
       "title": "Cardio Critica Draldenir",
       "filename": "Cardio_Critica_DrAldenir.docx",
-      "theme": "cardio",
+      "theme": "cardio-hemodinamica",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/cardio/Cardio_Critica_DrAldenir.docx",
+      "path": "acervo/cardio-hemodinamica/Cardio_Critica_DrAldenir.docx",
       "resumo": "Documento sobre cardio-hemodinamica catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -202,7 +193,7 @@
       "id": "cardioversao-amiodarona-2026",
       "title": "Cardioversão & Manejo de Taquiarritmias",
       "filename": "Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
-      "theme": "cardio",
+      "theme": "cardio-hemodinamica",
       "tipo": "word",
       "tags": [
         "cardioversão",
@@ -213,7 +204,7 @@
         "medicina-interna"
       ],
       "status": "catalogado",
-      "path": "acervo/cardio/Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
+      "path": "acervo/cardio-hemodinamica/Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
       "resumo": "Protocolo prático para cardioversão elétrica sincronizada e uso de Amiodarona em ambiente de enfermaria e UTI.",
       "ia_origem": "Antigravity",
       "data": "2026-05",
@@ -223,13 +214,13 @@
       "id": "cardio-critica-draldenir",
       "title": "Cardio Critica Draldenir",
       "filename": "Cardio_Critica_DrAldenir.pdf",
-      "theme": "cardio",
+      "theme": "cardio-hemodinamica",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/cardio/Cardio_Critica_DrAldenir.pdf",
+      "path": "acervo/cardio-hemodinamica/Cardio_Critica_DrAldenir.pdf",
       "resumo": "Documento sobre cardio-hemodinamica catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -239,13 +230,13 @@
       "id": "protocolo-scr-sindrome-cardiorrenal-draldenir",
       "title": "Protocolo Scr Sindrome Cardiorrenal Draldenir",
       "filename": "Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf",
-      "theme": "cardio",
+      "theme": "cardio-hemodinamica",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/cardio/Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf",
+      "path": "acervo/cardio-hemodinamica/Protocolo_SCR_Sindrome_Cardiorrenal_DrAldenir.pdf",
       "resumo": "Documento sobre cardio-hemodinamica catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -255,13 +246,13 @@
       "id": "protocolo-bradiarritmias-bav-marcapasso-externo-final",
       "title": "Protocolo Bradiarritmias Bav Marcapasso Externo Final",
       "filename": "Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx",
-      "theme": "cardio",
+      "theme": "cardio-hemodinamica",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/cardio/Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx",
+      "path": "acervo/cardio-hemodinamica/Protocolo_Bradiarritmias_BAV_Marcapasso_Externo_final.docx",
       "resumo": "Documento sobre cardio-hemodinamica catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -271,14 +262,14 @@
       "id": "compendio-ecg-uti-santacasa-sobral",
       "title": "Compendio Ecg Uti Santacasa Sobral",
       "filename": "Compendio_ECG_UTI_SantaCasa_Sobral.pdf",
-      "theme": "cardio",
+      "theme": "cardio-hemodinamica",
       "tipo": "pdf",
       "tags": [
         "uti-geral",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/cardio/Compendio_ECG_UTI_SantaCasa_Sobral.pdf",
+      "path": "acervo/cardio-hemodinamica/Compendio_ECG_UTI_SantaCasa_Sobral.pdf",
       "resumo": "Documento sobre cardio-hemodinamica catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -288,14 +279,14 @@
       "id": "broncoscopia-na-uti",
       "title": "Broncoscopia Na Uti",
       "filename": "BRONCOSCOPIA NA UTI.pdf",
-      "theme": "gestao_pessoal",
+      "theme": "gestao-ia-produtividade",
       "tipo": "pdf",
       "tags": [
         "uti-geral",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/gestao_pessoal/BRONCOSCOPIA NA UTI.pdf",
+      "path": "acervo/gestao-ia-produtividade/BRONCOSCOPIA NA UTI.pdf",
       "resumo": "Documento sobre gestao-ia-produtividade catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -305,45 +296,46 @@
       "id": "plano-r3-clinica-medica-santacasa-hrn",
       "title": "Plano R3 Clinica Medica Santacasa Hrn",
       "filename": "Plano_R3_Clinica_Medica_SantaCasa_HRN.docx",
-      "theme": "gestao_pessoal",
+      "theme": "gestao-ia-produtividade",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/gestao_pessoal/Plano_R3_Clinica_Medica_SantaCasa_HRN.docx",
+      "path": "acervo/gestao-ia-produtividade/Plano_R3_Clinica_Medica_SantaCasa_HRN.docx",
       "resumo": "Documento sobre gestao-ia-produtividade catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.579678"
     },
     {
-      "id": "monetizar-dados-me-dicos-em-renda-passiva",
-      "title": "Monetizar Dados MéDicos Em Renda Passiva",
-      "filename": "Monetizar dados médicos em renda passiva.pdf",
-      "theme": "gestao_pessoal",
+      "id": "monetizar-dados-médicos-em-renda-passiva",
+      "title": "Monetizar dados médicos em renda passiva",
+      "filename": "Monetizar dados médicos em renda passiva.pdf",
+      "theme": "gestao-ia-produtividade",
       "tipo": "pdf",
       "tags": [
-        "inbox-revisar"
+        "gestao-ia-produtividade",
+        "automático"
       ],
       "status": "catalogado",
-      "path": "acervo/gestao_pessoal/Monetizar dados médicos em renda passiva.pdf",
+      "path": "acervo/gestao-ia-produtividade/Monetizar dados médicos em renda passiva.pdf",
       "resumo": "Documento sobre gestao-ia-produtividade catalogado automaticamente.",
-      "ia_origem": "Auto-classificado",
+      "ia_origem": "Antigravity",
       "data": "2026-05",
-      "createdAt": "2026-05-08T03:57:01.579802"
+      "createdAt": "2026-05-10T01:48:36.209907Z"
     },
     {
       "id": "comparativo-ia-medicina-2026",
       "title": "Comparativo Ia Medicina 2026",
       "filename": "Comparativo_IA_Medicina_2026.pdf",
-      "theme": "gestao_pessoal",
+      "theme": "gestao-ia-produtividade",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/gestao_pessoal/Comparativo_IA_Medicina_2026.pdf",
+      "path": "acervo/gestao-ia-produtividade/Comparativo_IA_Medicina_2026.pdf",
       "resumo": "Documento sobre gestao-ia-produtividade catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -353,13 +345,13 @@
       "id": "ventila-cards-guia",
       "title": "Ventila Cards Guia",
       "filename": "VENTILA-CARDS-GUIA.pdf",
-      "theme": "gestao_pessoal",
+      "theme": "gestao-ia-produtividade",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/gestao_pessoal/VENTILA-CARDS-GUIA.pdf",
+      "path": "acervo/gestao-ia-produtividade/VENTILA-CARDS-GUIA.pdf",
       "resumo": "Documento sobre gestao-ia-produtividade catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -369,13 +361,13 @@
       "id": "ia-potente",
       "title": "Ia Potente",
       "filename": "IA POTENTE.pdf",
-      "theme": "gestao_pessoal",
+      "theme": "gestao-ia-produtividade",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/gestao_pessoal/IA POTENTE.pdf",
+      "path": "acervo/gestao-ia-produtividade/IA POTENTE.pdf",
       "resumo": "Documento sobre gestao-ia-produtividade catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -385,13 +377,13 @@
       "id": "ia",
       "title": "Ia",
       "filename": "IA.pdf",
-      "theme": "gestao_pessoal",
+      "theme": "gestao-ia-produtividade",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/gestao_pessoal/IA.pdf",
+      "path": "acervo/gestao-ia-produtividade/IA.pdf",
       "resumo": "Documento sobre gestao-ia-produtividade catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -401,13 +393,13 @@
       "id": "plano-investigacao-dor-abdominal-cronica",
       "title": "Plano Investigacao Dor Abdominal Cronica",
       "filename": "Plano_Investigacao_Dor_Abdominal_Cronica.docx",
-      "theme": "gestao_pessoal",
+      "theme": "gestao-ia-produtividade",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/gestao_pessoal/Plano_Investigacao_Dor_Abdominal_Cronica.docx",
+      "path": "acervo/gestao-ia-produtividade/Plano_Investigacao_Dor_Abdominal_Cronica.docx",
       "resumo": "Documento sobre gestao-ia-produtividade catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -417,14 +409,14 @@
       "id": "comparativo-ia-medicina-clinica-uti-2026",
       "title": "Comparativo Ia Medicina Clinica Uti 2026",
       "filename": "Comparativo_IA_Medicina_Clinica_UTI_2026.docx",
-      "theme": "gestao_pessoal",
+      "theme": "gestao-ia-produtividade",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/gestao_pessoal/Comparativo_IA_Medicina_Clinica_UTI_2026.docx",
+      "path": "acervo/gestao-ia-produtividade/Comparativo_IA_Medicina_Clinica_UTI_2026.docx",
       "resumo": "Documento sobre gestao-ia-produtividade catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -444,7 +436,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.523991Z"
+      "createdAt": "2026-05-10T01:48:36.210368Z"
     },
     {
       "id": "checkpoint-fatorxiii",
@@ -460,7 +452,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524003Z"
+      "createdAt": "2026-05-10T01:48:36.210378Z"
     },
     {
       "id": "e-book-fundamentos-basicos-pra-plantao-em-uti",
@@ -476,7 +468,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524009Z"
+      "createdAt": "2026-05-10T01:48:36.210386Z"
     },
     {
       "id": "protocolo-desmame-vm-sedoanalgesia",
@@ -492,7 +484,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524015Z"
+      "createdAt": "2026-05-10T01:48:36.210394Z"
     },
     {
       "id": "mapaprofilaxias-uti-draldenir",
@@ -508,7 +500,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524020Z"
+      "createdAt": "2026-05-10T01:48:36.210402Z"
     },
     {
       "id": "tridil-nipride-uti-abordagem-completa",
@@ -524,7 +516,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524025Z"
+      "createdAt": "2026-05-10T01:48:36.210409Z"
     },
     {
       "id": "resumo-executivo-aldenir",
@@ -540,7 +532,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524030Z"
+      "createdAt": "2026-05-10T01:48:36.210416Z"
     },
     {
       "id": "fa-protocolo-completo-draldenir",
@@ -556,7 +548,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524036Z"
+      "createdAt": "2026-05-10T01:48:36.210423Z"
     },
     {
       "id": "guia-ia-medicos-clinicos-intensivistas",
@@ -572,7 +564,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524043Z"
+      "createdAt": "2026-05-10T01:48:36.210434Z"
     },
     {
       "id": "acidobase-eletrolitos-draldenir",
@@ -588,7 +580,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524048Z"
+      "createdAt": "2026-05-10T01:48:36.210442Z"
     },
     {
       "id": "guia-ia-medicos-clinicos-intensivistas",
@@ -604,7 +596,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524053Z"
+      "createdAt": "2026-05-10T01:48:36.210449Z"
     },
     {
       "id": "protocolo-morte-cerebral-2",
@@ -620,7 +612,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524059Z"
+      "createdAt": "2026-05-10T01:48:36.210456Z"
     },
     {
       "id": "protocolo-morte-cerebral-3",
@@ -636,7 +628,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524064Z"
+      "createdAt": "2026-05-10T01:48:36.279579Z"
     },
     {
       "id": "pneumonia-aspirativa-abordagem-completa",
@@ -652,7 +644,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524069Z"
+      "createdAt": "2026-05-10T01:48:36.279610Z"
     },
     {
       "id": "protocolo-morte-cerebral",
@@ -668,7 +660,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524075Z"
+      "createdAt": "2026-05-10T01:48:36.279623Z"
     },
     {
       "id": "dúvidas-diretas-uti:cm---hemocultura-positiva-candida",
@@ -684,7 +676,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524082Z"
+      "createdAt": "2026-05-10T01:48:36.279637Z"
     },
     {
       "id": "prescricoes-uti-draldenir",
@@ -700,7 +692,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524087Z"
+      "createdAt": "2026-05-10T01:48:36.279646Z"
     },
     {
       "id": "modelos-prontuario-dnar-plantao",
@@ -716,7 +708,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524092Z"
+      "createdAt": "2026-05-10T01:48:36.279654Z"
     },
     {
       "id": "perioperatorio-grandessindromes-draldenir",
@@ -732,7 +724,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524097Z"
+      "createdAt": "2026-05-10T01:48:36.279661Z"
     },
     {
       "id": "protocolo-npt-uti-draldenir",
@@ -748,7 +740,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524103Z"
+      "createdAt": "2026-05-10T01:48:36.279669Z"
     },
     {
       "id": "acidobase-eletrolitos-draldenir",
@@ -764,7 +756,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524108Z"
+      "createdAt": "2026-05-10T01:48:36.279677Z"
     },
     {
       "id": "nutricao-uti-draldenir",
@@ -780,7 +772,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524113Z"
+      "createdAt": "2026-05-10T01:48:36.279684Z"
     },
     {
       "id": "protocolo-morte-cerebral-4",
@@ -796,7 +788,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524118Z"
+      "createdAt": "2026-05-10T01:48:36.279692Z"
     },
     {
       "id": "hemostasia-transfusao-uti-draldenir",
@@ -812,7 +804,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524123Z"
+      "createdAt": "2026-05-10T01:48:36.279700Z"
     },
     {
       "id": "hemodialise-uti",
@@ -828,7 +820,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524128Z"
+      "createdAt": "2026-05-10T01:48:36.279707Z"
     },
     {
       "id": "guia-antigravity-comandos-atalhos",
@@ -844,7 +836,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524133Z"
+      "createdAt": "2026-05-10T01:48:36.279715Z"
     },
     {
       "id": "prescricoes-uti-draldenir",
@@ -860,7 +852,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524138Z"
+      "createdAt": "2026-05-10T01:48:36.279723Z"
     },
     {
       "id": "protocolos-assistenciais-(1)",
@@ -876,7 +868,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524143Z"
+      "createdAt": "2026-05-10T01:48:36.279730Z"
     },
     {
       "id": "avaliação-e-tratamento-da-hipertensão-intracraniana-em-adultos",
@@ -892,7 +884,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524150Z"
+      "createdAt": "2026-05-10T01:48:36.279740Z"
     },
     {
       "id": "00-master-completo-11-protocolos-santacasa-2026",
@@ -908,7 +900,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524155Z"
+      "createdAt": "2026-05-10T01:48:36.279749Z"
     },
     {
       "id": "qualidadeseguranca-uti-draldenir",
@@ -924,7 +916,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524160Z"
+      "createdAt": "2026-05-10T01:48:36.279756Z"
     },
     {
       "id": "bradiarritmias-bav-protocolo",
@@ -940,7 +932,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524165Z"
+      "createdAt": "2026-05-10T01:48:36.279763Z"
     },
     {
       "id": "protocolo-transfusao-crioprecipitado-uti-pandoc",
@@ -956,7 +948,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524170Z"
+      "createdAt": "2026-05-10T01:48:36.279771Z"
     },
     {
       "id": "hda-protocolo-completo-draldenir",
@@ -972,7 +964,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524177Z"
+      "createdAt": "2026-05-10T01:48:36.279788Z"
     },
     {
       "id": "protocolo-albumina-paracentese",
@@ -988,7 +980,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524182Z"
+      "createdAt": "2026-05-10T01:48:36.279797Z"
     },
     {
       "id": "parecer-cuidados-paliativos-padrao",
@@ -1004,7 +996,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524187Z"
+      "createdAt": "2026-05-10T01:48:36.279805Z"
     },
     {
       "id": "plano-investigacao-dor-abdominal-cronica-paciente-jovem",
@@ -1020,7 +1012,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524192Z"
+      "createdAt": "2026-05-10T01:48:36.279813Z"
     },
     {
       "id": "lupus-na-uti-abordagem-completa-atualizada-2026",
@@ -1036,7 +1028,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524197Z"
+      "createdAt": "2026-05-10T01:48:36.279820Z"
     },
     {
       "id": "nota-evolucao-dnar-lsv",
@@ -1052,7 +1044,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524203Z"
+      "createdAt": "2026-05-10T01:48:36.279829Z"
     },
     {
       "id": "trials-temi",
@@ -1068,7 +1060,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524208Z"
+      "createdAt": "2026-05-10T01:48:36.279837Z"
     },
     {
       "id": "shr",
@@ -1084,7 +1076,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524213Z"
+      "createdAt": "2026-05-10T01:48:36.279850Z"
     },
     {
       "id": "saaf-medicina-interna-uti-abordagem-completa-atualizada-2026",
@@ -1100,7 +1092,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524218Z"
+      "createdAt": "2026-05-10T01:48:36.279859Z"
     },
     {
       "id": "peticao-inicial-aldenir-rocha",
@@ -1116,7 +1108,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524223Z"
+      "createdAt": "2026-05-10T01:48:36.279866Z"
     },
     {
       "id": "sedacao-delirium-uti-draldenir",
@@ -1132,7 +1124,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524228Z"
+      "createdAt": "2026-05-10T01:48:36.279874Z"
     },
     {
       "id": "px-aldenir",
@@ -1148,7 +1140,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524233Z"
+      "createdAt": "2026-05-10T01:48:36.279881Z"
     },
     {
       "id": "protocolo-morte-cerebral",
@@ -1164,7 +1156,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524240Z"
+      "createdAt": "2026-05-10T01:48:36.279888Z"
     },
     {
       "id": "hemostasia-transfusao-uti-draldenir",
@@ -1180,7 +1172,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524245Z"
+      "createdAt": "2026-05-10T01:48:36.279896Z"
     },
     {
       "id": "dúvidas-diretas-uti:cm---programa-diário-de-artigos",
@@ -1196,7 +1188,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524252Z"
+      "createdAt": "2026-05-10T01:48:36.279905Z"
     },
     {
       "id": "table-87e783ea-d03f-43a3-9d3c-dcab85915268",
@@ -1212,7 +1204,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524257Z"
+      "createdAt": "2026-05-10T01:48:36.279914Z"
     },
     {
       "id": "nota-medica-dnar-lsv-prontuario",
@@ -1228,7 +1220,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524262Z"
+      "createdAt": "2026-05-10T01:48:36.279921Z"
     },
     {
       "id": "pav-uti",
@@ -1244,7 +1236,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524267Z"
+      "createdAt": "2026-05-10T01:48:36.279928Z"
     },
     {
       "id": "multiple-organ-failure--what-you-need-to-know.1",
@@ -1260,7 +1252,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524272Z"
+      "createdAt": "2026-05-10T01:48:36.279936Z"
     },
     {
       "id": "00-todos-protocolos-clinica-medica-santacasa-2026",
@@ -1276,7 +1268,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524277Z"
+      "createdAt": "2026-05-10T01:48:36.279943Z"
     },
     {
       "id": "protocolo-reposicao-albumina-draldenir",
@@ -1292,7 +1284,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524282Z"
+      "createdAt": "2026-05-10T01:48:36.279950Z"
     },
     {
       "id": "bav-bolso-plantao",
@@ -1308,7 +1300,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524287Z"
+      "createdAt": "2026-05-10T01:48:36.279958Z"
     },
     {
       "id": "protocolo-crioprecipitado-dr-aldenir",
@@ -1324,7 +1316,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524292Z"
+      "createdAt": "2026-05-10T01:48:36.279965Z"
     },
     {
       "id": "protocolo-broncoespasmo-grave-uti-draldenir",
@@ -1340,7 +1332,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524297Z"
+      "createdAt": "2026-05-10T01:48:36.279972Z"
     },
     {
       "id": "manual-claude-prompts-token-economia-aldenir",
@@ -1356,7 +1348,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524302Z"
+      "createdAt": "2026-05-10T01:48:36.279980Z"
     },
     {
       "id": "dobutamina-uti-abordagem-completa",
@@ -1372,7 +1364,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524309Z"
+      "createdAt": "2026-05-10T01:48:36.279993Z"
     },
     {
       "id": "plano-revendedor-usg-sobral",
@@ -1388,7 +1380,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524314Z"
+      "createdAt": "2026-05-10T01:48:36.280001Z"
     },
     {
       "id": "limitacao-suporte-vida-pac",
@@ -1404,7 +1396,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524319Z"
+      "createdAt": "2026-05-10T01:48:36.280008Z"
     },
     {
       "id": "hemodialise-uti-2",
@@ -1420,7 +1412,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524324Z"
+      "createdAt": "2026-05-10T01:48:36.280016Z"
     },
     {
       "id": "sedacao-delirium-uti-draldenir",
@@ -1436,7 +1428,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524329Z"
+      "createdAt": "2026-05-10T01:48:36.280023Z"
     },
     {
       "id": "protocolo-morte-cerebral-1",
@@ -1452,7 +1444,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524334Z"
+      "createdAt": "2026-05-10T01:48:36.280030Z"
     },
     {
       "id": "rotinas-em-uti-sanar",
@@ -1468,20 +1460,20 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T01:38:00.524339Z"
+      "createdAt": "2026-05-10T01:48:36.280037Z"
     },
     {
       "id": "kdigo2026-aki-uti-draldenir",
       "title": "Kdigo2026 Aki Uti Draldenir",
       "filename": "KDIGO2026_AKI_UTI_DrAldenir.docx",
-      "theme": "nefro",
+      "theme": "nefro-aki-trs",
       "tipo": "word",
       "tags": [
         "nefro-aki-trs",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/nefro/KDIGO2026_AKI_UTI_DrAldenir.docx",
+      "path": "acervo/nefro-aki-trs/KDIGO2026_AKI_UTI_DrAldenir.docx",
       "resumo": "Documento sobre nefro-aki-trs catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1491,14 +1483,14 @@
       "id": "kdigo-2026-aki-na-uti-memorycards-anki-obsidian",
       "title": "Kdigo 2026 Aki Na Uti Memorycards Anki Obsidian",
       "filename": "KDIGO_2026_AKI_na_UTI_MemoryCards_Anki_Obsidian.tsv",
-      "theme": "nefro",
+      "theme": "nefro-aki-trs",
       "tipo": "data",
       "tags": [
         "gestao-ia-produtividade",
         "outro"
       ],
       "status": "catalogado",
-      "path": "acervo/nefro/KDIGO_2026_AKI_na_UTI_MemoryCards_Anki_Obsidian.tsv",
+      "path": "acervo/nefro-aki-trs/KDIGO_2026_AKI_na_UTI_MemoryCards_Anki_Obsidian.tsv",
       "resumo": "Documento sobre nefro-aki-trs catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1508,14 +1500,14 @@
       "id": "hic-guia-temi",
       "title": "Hic Guia Temi",
       "filename": "HIC_Guia_TEMI.pdf",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "pdf",
       "tags": [
         "temi-prova",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/HIC_Guia_TEMI.pdf",
+      "path": "acervo/neuro-uti/HIC_Guia_TEMI.pdf",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1525,14 +1517,14 @@
       "id": "tce-temi-draldenir",
       "title": "Tce Temi Draldenir",
       "filename": "TCE_TEMI_DrAldenir.docx",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "word",
       "tags": [
         "temi-prova",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/TCE_TEMI_DrAldenir.docx",
+      "path": "acervo/neuro-uti/TCE_TEMI_DrAldenir.docx",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1542,14 +1534,14 @@
       "id": "protocolo-tce-grave-uti-adulto",
       "title": "Protocolo Tce Grave Uti Adulto",
       "filename": "Protocolo_TCE_Grave_UTI_Adulto.docx",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/Protocolo_TCE_Grave_UTI_Adulto.docx",
+      "path": "acervo/neuro-uti/Protocolo_TCE_Grave_UTI_Adulto.docx",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1559,13 +1551,13 @@
       "id": "parestesias-e-guillain-barre-protocolo-completo",
       "title": "Parestesias E Guillain Barre Protocolo Completo",
       "filename": "Parestesias e Guillain Barre Protocolo Completo.docx",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/Parestesias e Guillain Barre Protocolo Completo.docx",
+      "path": "acervo/neuro-uti/Parestesias e Guillain Barre Protocolo Completo.docx",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1575,14 +1567,14 @@
       "id": "protocolo-morte-cerebral",
       "title": "Protocolo Morte Cerebral",
       "filename": "Protocolo_Morte_Cerebral.pdf",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/Protocolo_Morte_Cerebral.pdf",
+      "path": "acervo/neuro-uti/Protocolo_Morte_Cerebral.pdf",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1592,14 +1584,14 @@
       "id": "avch-hsa-protocolo-completo",
       "title": "Avch Hsa Protocolo Completo",
       "filename": "AVCH_HSA_Protocolo_Completo.docx",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "word",
       "tags": [
         "neuro-uti",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/AVCH_HSA_Protocolo_Completo.docx",
+      "path": "acervo/neuro-uti/AVCH_HSA_Protocolo_Completo.docx",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1609,14 +1601,14 @@
       "id": "protocolo-morte-encefalica-cfm2173",
       "title": "Protocolo Morte Encefalica Cfm2173",
       "filename": "Protocolo_Morte_Encefalica_CFM2173.docx",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "word",
       "tags": [
         "inbox-revisar",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/Protocolo_Morte_Encefalica_CFM2173.docx",
+      "path": "acervo/neuro-uti/Protocolo_Morte_Encefalica_CFM2173.docx",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1626,14 +1618,14 @@
       "id": "tce-temi-draldenir",
       "title": "Tce Temi Draldenir",
       "filename": "TCE_TEMI_DrAldenir.pdf",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "pdf",
       "tags": [
         "temi-prova",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/TCE_TEMI_DrAldenir.pdf",
+      "path": "acervo/neuro-uti/TCE_TEMI_DrAldenir.pdf",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1643,13 +1635,13 @@
       "id": "parestesias-e-guillain-barre-protocolo-completo",
       "title": "Parestesias E Guillain Barre Protocolo Completo",
       "filename": "Parestesias e Guillain Barre Protocolo Completo.pages",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "file",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/Parestesias e Guillain Barre Protocolo Completo.pages",
+      "path": "acervo/neuro-uti/Parestesias e Guillain Barre Protocolo Completo.pages",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1659,14 +1651,14 @@
       "id": "hic-guia-temi",
       "title": "Hic Guia Temi",
       "filename": "HIC_Guia_TEMI.docx",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "word",
       "tags": [
         "temi-prova",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/HIC_Guia_TEMI.docx",
+      "path": "acervo/neuro-uti/HIC_Guia_TEMI.docx",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1676,14 +1668,14 @@
       "id": "protocolo-uti-sedacao-desmame-delirium-bnm-neurointensivismo",
       "title": "Protocolo Uti Sedacao Desmame Delirium Bnm Neurointensivismo",
       "filename": "Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx",
-      "theme": "neuro",
+      "theme": "neuro-uti",
       "tipo": "word",
       "tags": [
         "vm-sdra",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/neuro/Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx",
+      "path": "acervo/neuro-uti/Protocolo_UTI_Sedacao_Desmame_Delirium_BNM_Neurointensivismo.docx",
       "resumo": "Documento sobre neuro-uti catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1693,14 +1685,14 @@
       "id": "pocus-protocolo-completo-draldenir-v2",
       "title": "Pocus Protocolo Completo Draldenir V2",
       "filename": "POCUS_Protocolo_Completo_DrAldenir_v2.pdf",
-      "theme": "pocus",
+      "theme": "pocus-usg",
       "tipo": "pdf",
       "tags": [
         "pocus-usg",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/pocus/POCUS_Protocolo_Completo_DrAldenir_v2.pdf",
+      "path": "acervo/pocus-usg/POCUS_Protocolo_Completo_DrAldenir_v2.pdf",
       "resumo": "Documento sobre pocus-usg catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1710,14 +1702,14 @@
       "id": "pocus-cardiaco-focado",
       "title": "Pocus Cardiaco Focado",
       "filename": "POCUS Cardiaco Focado.docx",
-      "theme": "pocus",
+      "theme": "pocus-usg",
       "tipo": "word",
       "tags": [
         "pocus-usg",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/pocus/POCUS Cardiaco Focado.docx",
+      "path": "acervo/pocus-usg/POCUS Cardiaco Focado.docx",
       "resumo": "Documento sobre pocus-usg catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1727,14 +1719,14 @@
       "id": "cards-pocus-12-protocolos",
       "title": "Cards Pocus 12 Protocolos",
       "filename": "Cards_POCUS_12_Protocolos.docx",
-      "theme": "pocus",
+      "theme": "pocus-usg",
       "tipo": "word",
       "tags": [
         "pocus-usg",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/pocus/Cards_POCUS_12_Protocolos.docx",
+      "path": "acervo/pocus-usg/Cards_POCUS_12_Protocolos.docx",
       "resumo": "Documento sobre pocus-usg catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1744,14 +1736,14 @@
       "id": "pocus-protocolo-completo-draldenir-v2",
       "title": "Pocus Protocolo Completo Draldenir V2",
       "filename": "POCUS_Protocolo_Completo_DrAldenir_v2.docx",
-      "theme": "pocus",
+      "theme": "pocus-usg",
       "tipo": "word",
       "tags": [
         "pocus-usg",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/pocus/POCUS_Protocolo_Completo_DrAldenir_v2.docx",
+      "path": "acervo/pocus-usg/POCUS_Protocolo_Completo_DrAldenir_v2.docx",
       "resumo": "Documento sobre pocus-usg catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1761,14 +1753,14 @@
       "id": "usg-pointofcare-protocolo-draldenir",
       "title": "Usg Pointofcare Protocolo Draldenir",
       "filename": "USG_PointOfCare_Protocolo_DrAldenir.docx",
-      "theme": "pocus",
+      "theme": "pocus-usg",
       "tipo": "word",
       "tags": [
         "pocus-usg",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/pocus/USG_PointOfCare_Protocolo_DrAldenir.docx",
+      "path": "acervo/pocus-usg/USG_PointOfCare_Protocolo_DrAldenir.docx",
       "resumo": "Documento sobre pocus-usg catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1778,14 +1770,14 @@
       "id": "pocus-aula-residentes-draldenir",
       "title": "Pocus Aula Residentes Draldenir",
       "filename": "POCUS_Aula_Residentes_DrAldenir.pdf",
-      "theme": "pocus",
+      "theme": "pocus-usg",
       "tipo": "pdf",
       "tags": [
         "pocus-usg",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/pocus/POCUS_Aula_Residentes_DrAldenir.pdf",
+      "path": "acervo/pocus-usg/POCUS_Aula_Residentes_DrAldenir.pdf",
       "resumo": "Documento sobre pocus-usg catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1795,14 +1787,14 @@
       "id": "posicionamento-sobre-o-uso-do-ultrassom-point-of-care-pocus-na",
       "title": "Posicionamento Sobre O Uso Do Ultrassom “Point Of Care” Pocus Na",
       "filename": "Posicionamento_sobre_o_Uso_do_Ultrassom_“Point_of_Care”_POCUS_na.pdf",
-      "theme": "pocus",
+      "theme": "pocus-usg",
       "tipo": "pdf",
       "tags": [
         "pocus-usg",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/pocus/Posicionamento_sobre_o_Uso_do_Ultrassom_“Point_of_Care”_POCUS_na.pdf",
+      "path": "acervo/pocus-usg/Posicionamento_sobre_o_Uso_do_Ultrassom_“Point_of_Care”_POCUS_na.pdf",
       "resumo": "Documento sobre pocus-usg catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1812,7 +1804,7 @@
       "id": "fast-efast-em-trauma",
       "title": "Fast Efast Em Trauma",
       "filename": "FAST eFAST em Trauma.docx",
-      "theme": "pocus",
+      "theme": "pocus-usg",
       "tipo": "word",
       "tags": [
         "pocus",
@@ -1820,7 +1812,7 @@
         "trauma"
       ],
       "status": "catalogado",
-      "path": "acervo/pocus/FAST eFAST em Trauma.docx",
+      "path": "acervo/pocus-usg/FAST eFAST em Trauma.docx",
       "resumo": "Documento sobre pocus-usg catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1830,14 +1822,14 @@
       "id": "protocolo-hemodialise-na-uti-aldenir-rocha-2",
       "title": "Protocolo Hemodialise Na Uti Aldenir Rocha 2",
       "filename": "Protocolo_Hemodialise_na_UTI_Aldenir_Rocha 2.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha 2.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha 2.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1847,14 +1839,14 @@
       "id": "protocolo-decanulacao-uti",
       "title": "Protocolo Decanulacao Uti",
       "filename": "Protocolo_Decanulacao_UTI.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "uti-geral",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Decanulacao_UTI.pdf",
+      "path": "acervo/protocolos-institucionais/Protocolo_Decanulacao_UTI.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1864,14 +1856,14 @@
       "id": "protocolo-cetoacidose-diabetica-uti",
       "title": "Protocolo Cetoacidose Diabetica Uti",
       "filename": "Protocolo_Cetoacidose_Diabetica_UTI.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "endocrino-metabolico",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Cetoacidose_Diabetica_UTI.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Cetoacidose_Diabetica_UTI.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1881,13 +1873,13 @@
       "id": "protocolo-shr-draldenir",
       "title": "Protocolo Shr Draldenir",
       "filename": "Protocolo_SHR_DrAldenir.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_SHR_DrAldenir.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_SHR_DrAldenir.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1897,14 +1889,14 @@
       "id": "protocolo-azul-de-metileno-uti-atualizado-2026",
       "title": "Protocolo Azul De Metileno Uti Atualizado 2026",
       "filename": "Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "farmaco-doses",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1914,13 +1906,13 @@
       "id": "protocolo-ptt-hfg-hpn-scms",
       "title": "Protocolo Ptt Hfg Hpn Scms",
       "filename": "Protocolo_PTT_HFG_HPN_SCMS.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_PTT_HFG_HPN_SCMS.pdf",
+      "path": "acervo/protocolos-institucionais/Protocolo_PTT_HFG_HPN_SCMS.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1930,13 +1922,13 @@
       "id": "protocolo-shr-sindrome-hepatorrenal-draldenir",
       "title": "Protocolo Shr Sindrome Hepatorrenal Draldenir",
       "filename": "Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf",
+      "path": "acervo/protocolos-institucionais/Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1946,14 +1938,14 @@
       "id": "protocolo-crise-convulsiva-estado-mal-uti-adulto",
       "title": "Protocolo Crise Convulsiva Estado Mal Uti Adulto",
       "filename": "Protocolo_Crise_Convulsiva_Estado_Mal_UTI_Adulto.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "emergencias-clinicas",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Crise_Convulsiva_Estado_Mal_UTI_Adulto.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Crise_Convulsiva_Estado_Mal_UTI_Adulto.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1963,14 +1955,14 @@
       "id": "protocolo-hemodialise-na-uti-aldenir-rocha",
       "title": "Protocolo Hemodialise Na Uti Aldenir Rocha",
       "filename": "Protocolo_Hemodialise_na_UTI_Aldenir_Rocha.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Hemodialise_na_UTI_Aldenir_Rocha.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1980,13 +1972,13 @@
       "id": "04-protocolo-tromboprofilaxia",
       "title": "04 Protocolo Tromboprofilaxia",
       "filename": "04_Protocolo_Tromboprofilaxia.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/04_Protocolo_Tromboprofilaxia.pdf",
+      "path": "acervo/protocolos-institucionais/04_Protocolo_Tromboprofilaxia.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -1996,14 +1988,14 @@
       "id": "06-protocolo-pcr-acls-enfermaria",
       "title": "06 Protocolo Pcr Acls Enfermaria",
       "filename": "06_Protocolo_PCR_ACLS_Enfermaria.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "clinica-medica",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/06_Protocolo_PCR_ACLS_Enfermaria.pdf",
+      "path": "acervo/protocolos-institucionais/06_Protocolo_PCR_ACLS_Enfermaria.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2013,14 +2005,14 @@
       "id": "protocolo-complicacoes-intradialiticas-uti-aldenir-rocha",
       "title": "Protocolo Complicacoes Intradialiticas Uti Aldenir Rocha",
       "filename": "Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2030,14 +2022,14 @@
       "id": "03-checklist-alta-segura",
       "title": "03 Checklist Alta Segura",
       "filename": "03_Checklist_Alta_Segura.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "uti-geral",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/03_Checklist_Alta_Segura.pdf",
+      "path": "acervo/protocolos-institucionais/03_Checklist_Alta_Segura.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2047,14 +2039,14 @@
       "id": "protocolo-afogamento-uti-adulto",
       "title": "Protocolo Afogamento Uti Adulto",
       "filename": "Protocolo_Afogamento_UTI_Adulto.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "emergencias-clinicas",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Afogamento_UTI_Adulto.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Afogamento_UTI_Adulto.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2064,14 +2056,14 @@
       "id": "08-protocolo-hiponatremia",
       "title": "08 Protocolo Hiponatremia",
       "filename": "08_Protocolo_Hiponatremia.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "disturbios-eletroliticos",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/08_Protocolo_Hiponatremia.pdf",
+      "path": "acervo/protocolos-institucionais/08_Protocolo_Hiponatremia.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2081,14 +2073,14 @@
       "id": "protocolo-intoxicacao-exogena-na-uti",
       "title": "Protocolo Intoxicacao Exogena Na Uti",
       "filename": "Protocolo_Intoxicacao_Exogena_na_UTI.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Intoxicacao_Exogena_na_UTI.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Intoxicacao_Exogena_na_UTI.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2098,14 +2090,14 @@
       "id": "protocolo-complicacoes-intradialiticas-uti-aldenir-rocha-2",
       "title": "Protocolo Complicacoes Intradialiticas Uti Aldenir Rocha 2",
       "filename": "Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha 2.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha 2.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Complicacoes_Intradialiticas_UTI_Aldenir_Rocha 2.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2115,14 +2107,14 @@
       "id": "protocolo-choque-septico-refratario-uti",
       "title": "Protocolo Choque Septico Refratario Uti",
       "filename": "Protocolo_Choque_Septico_Refratario_UTI.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Choque_Septico_Refratario_UTI.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Choque_Septico_Refratario_UTI.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2132,13 +2124,13 @@
       "id": "05-formulario-evolucao-soap-diaria",
       "title": "05 Formulario Evolucao Soap Diaria",
       "filename": "05_Formulario_Evolucao_SOAP_Diaria.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/05_Formulario_Evolucao_SOAP_Diaria.pdf",
+      "path": "acervo/protocolos-institucionais/05_Formulario_Evolucao_SOAP_Diaria.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2148,14 +2140,14 @@
       "id": "protocolo-crise-tireotoxica-uti",
       "title": "Protocolo Crise Tireotoxica Uti",
       "filename": "Protocolo_Crise_Tireotoxica_UTI.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "emergencias-clinicas",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Crise_Tireotoxica_UTI.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Crise_Tireotoxica_UTI.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2165,14 +2157,14 @@
       "id": "protocolo-hipoglicemia-uti",
       "title": "Protocolo Hipoglicemia Uti",
       "filename": "Protocolo_Hipoglicemia_UTI.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "endocrino-metabolico",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Hipoglicemia_UTI.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Hipoglicemia_UTI.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2182,14 +2174,14 @@
       "id": "protocolo-hiponatremia-grave-uti",
       "title": "Protocolo Hiponatremia Grave Uti",
       "filename": "Protocolo_Hiponatremia_Grave_UTI.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "disturbios-eletroliticos",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Hiponatremia_Grave_UTI.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Hiponatremia_Grave_UTI.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2199,14 +2191,14 @@
       "id": "protocolo-pneumonia-aspirativa-uti-adulto",
       "title": "Protocolo Pneumonia Aspirativa Uti Adulto",
       "filename": "Protocolo_Pneumonia_Aspirativa_UTI_Adulto.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "infectologia",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Pneumonia_Aspirativa_UTI_Adulto.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Pneumonia_Aspirativa_UTI_Adulto.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2216,14 +2208,14 @@
       "id": "protocolo-estado-hiperglicemico-hiperosmolar-uti",
       "title": "Protocolo Estado Hiperglicemico Hiperosmolar Uti",
       "filename": "Protocolo_Estado_Hiperglicemico_Hiperosmolar_UTI.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Estado_Hiperglicemico_Hiperosmolar_UTI.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Estado_Hiperglicemico_Hiperosmolar_UTI.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2233,13 +2225,13 @@
       "id": "protocolo-urgencias-dialiticas",
       "title": "Protocolo Urgencias Dialiticas",
       "filename": "Protocolo_Urgencias_Dialiticas.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Urgencias_Dialiticas.pdf",
+      "path": "acervo/protocolos-institucionais/Protocolo_Urgencias_Dialiticas.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2249,14 +2241,14 @@
       "id": "protocolo-abdomen-agudo-obstrutivo-uti",
       "title": "Protocolo Abdomen Agudo Obstrutivo Uti",
       "filename": "Protocolo_Abdomen_Agudo_Obstrutivo_UTI.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "gastro-hepatologia",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Abdomen_Agudo_Obstrutivo_UTI.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Abdomen_Agudo_Obstrutivo_UTI.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2266,14 +2258,14 @@
       "id": "protocolo-azulmetileno-uti-santacasa-sobral",
       "title": "Protocolo Azulmetileno Uti Santacasa Sobral",
       "filename": "Protocolo_AzulMetileno_UTI_SantaCasa_Sobral.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "uti-geral",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_AzulMetileno_UTI_SantaCasa_Sobral.pdf",
+      "path": "acervo/protocolos-institucionais/Protocolo_AzulMetileno_UTI_SantaCasa_Sobral.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2283,13 +2275,13 @@
       "id": "11-pocket-cards-clinica-medica",
       "title": "11 Pocket Cards Clinica Medica",
       "filename": "11_Pocket_Cards_Clinica_Medica.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/11_Pocket_Cards_Clinica_Medica.pdf",
+      "path": "acervo/protocolos-institucionais/11_Pocket_Cards_Clinica_Medica.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2299,13 +2291,13 @@
       "id": "protocolo-admissao-clinica-medica-santacasa-sobral-2026",
       "title": "Protocolo Admissao Clinica Medica Santacasa Sobral 2026",
       "filename": "Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Admissao_Clinica_Medica_SantaCasa_Sobral_2026.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2315,13 +2307,13 @@
       "id": "protocolo-prona-santacasa-sobral",
       "title": "Protocolo Prona Santacasa Sobral",
       "filename": "Protocolo_Prona_SantaCasa_Sobral.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Prona_SantaCasa_Sobral.pdf",
+      "path": "acervo/protocolos-institucionais/Protocolo_Prona_SantaCasa_Sobral.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2331,13 +2323,13 @@
       "id": "protocolo-emergencias-hematologicas-scms",
       "title": "Protocolo Emergencias Hematologicas Scms",
       "filename": "Protocolo_Emergencias_Hematologicas_SCMS.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Emergencias_Hematologicas_SCMS.pdf",
+      "path": "acervo/protocolos-institucionais/Protocolo_Emergencias_Hematologicas_SCMS.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2347,13 +2339,13 @@
       "id": "protocolo-cuidados-paliativos-draldenir",
       "title": "Protocolo Cuidados Paliativos Draldenir",
       "filename": "Protocolo_Cuidados_Paliativos_DrAldenir.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Cuidados_Paliativos_DrAldenir.pdf",
+      "path": "acervo/protocolos-institucionais/Protocolo_Cuidados_Paliativos_DrAldenir.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2363,13 +2355,13 @@
       "id": "02-protocolo-controle-glicemico",
       "title": "02 Protocolo Controle Glicemico",
       "filename": "02_Protocolo_Controle_Glicemico.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/02_Protocolo_Controle_Glicemico.pdf",
+      "path": "acervo/protocolos-institucionais/02_Protocolo_Controle_Glicemico.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2379,13 +2371,13 @@
       "id": "protocolo-esva-falencia-vascular-dialise",
       "title": "Protocolo Esva Falencia Vascular Dialise",
       "filename": "Protocolo_ESVA_Falencia_Vascular_Dialise.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_ESVA_Falencia_Vascular_Dialise.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_ESVA_Falencia_Vascular_Dialise.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2395,14 +2387,14 @@
       "id": "protocolo-hemorragia-digestiva-alta-uti-final",
       "title": "Protocolo Hemorragia Digestiva Alta Uti Final",
       "filename": "Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "word",
       "tags": [
         "gastro-hepatologia",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx",
+      "path": "acervo/protocolos-institucionais/Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2412,13 +2404,13 @@
       "id": "09-protocolo-ic-aguda",
       "title": "09 Protocolo Ic Aguda",
       "filename": "09_Protocolo_IC_Aguda.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/09_Protocolo_IC_Aguda.pdf",
+      "path": "acervo/protocolos-institucionais/09_Protocolo_IC_Aguda.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2428,14 +2420,14 @@
       "id": "protocolo-ic-uti-enfermaria-draldenir",
       "title": "Protocolo Ic Uti Enfermaria Draldenir",
       "filename": "Protocolo_IC_UTI_Enfermaria_DrAldenir.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "clinica-medica",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/Protocolo_IC_UTI_Enfermaria_DrAldenir.pdf",
+      "path": "acervo/protocolos-institucionais/Protocolo_IC_UTI_Enfermaria_DrAldenir.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2445,13 +2437,13 @@
       "id": "07-protocolo-dor-toracica",
       "title": "07 Protocolo Dor Toracica",
       "filename": "07_Protocolo_Dor_Toracica.pdf",
-      "theme": "protocolos_institucionais",
+      "theme": "protocolos-institucionais",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/protocolos_institucionais/07_Protocolo_Dor_Toracica.pdf",
+      "path": "acervo/protocolos-institucionais/07_Protocolo_Dor_Toracica.pdf",
       "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2461,14 +2453,14 @@
       "id": "infeccao-antibioticos-uti-draldenir",
       "title": "Infeccao Antibioticos Uti Draldenir",
       "filename": "Infeccao_Antibioticos_UTI_DrAldenir.pdf",
-      "theme": "sepse_choque",
+      "theme": "sepse-choque",
       "tipo": "pdf",
       "tags": [
         "uti-geral",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/sepse_choque/Infeccao_Antibioticos_UTI_DrAldenir.pdf",
+      "path": "acervo/sepse-choque/Infeccao_Antibioticos_UTI_DrAldenir.pdf",
       "resumo": "Documento sobre sepse-choque catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2478,13 +2470,13 @@
       "id": "hrn-sepsis-intelligence-2",
       "title": "Hrn Sepsis Intelligence 2",
       "filename": "HRN_Sepsis_Intelligence 2.pdf",
-      "theme": "sepse_choque",
+      "theme": "sepse-choque",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/sepse_choque/HRN_Sepsis_Intelligence 2.pdf",
+      "path": "acervo/sepse-choque/HRN_Sepsis_Intelligence 2.pdf",
       "resumo": "Documento sobre sepse-choque catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2494,14 +2486,14 @@
       "id": "choque-septico-uti-ssc2026",
       "title": "Choque Septico Uti Ssc2026",
       "filename": "Choque_Septico_UTI_SSC2026.docx",
-      "theme": "sepse_choque",
+      "theme": "sepse-choque",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/sepse_choque/Choque_Septico_UTI_SSC2026.docx",
+      "path": "acervo/sepse-choque/Choque_Septico_UTI_SSC2026.docx",
       "resumo": "Documento sobre sepse-choque catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2511,13 +2503,13 @@
       "id": "hrn-sepsis-intelligence",
       "title": "Hrn Sepsis Intelligence",
       "filename": "HRN_Sepsis_Intelligence.pdf",
-      "theme": "sepse_choque",
+      "theme": "sepse-choque",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/sepse_choque/HRN_Sepsis_Intelligence.pdf",
+      "path": "acervo/sepse-choque/HRN_Sepsis_Intelligence.pdf",
       "resumo": "Documento sobre sepse-choque catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2527,14 +2519,14 @@
       "id": "infeccao-antibioticos-uti-draldenir",
       "title": "Infeccao Antibioticos Uti Draldenir",
       "filename": "Infeccao_Antibioticos_UTI_DrAldenir.docx",
-      "theme": "sepse_choque",
+      "theme": "sepse-choque",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/sepse_choque/Infeccao_Antibioticos_UTI_DrAldenir.docx",
+      "path": "acervo/sepse-choque/Infeccao_Antibioticos_UTI_DrAldenir.docx",
       "resumo": "Documento sobre sepse-choque catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2544,14 +2536,14 @@
       "id": "01-protocolo-sepse-bundle1hhora",
       "title": "01 Protocolo Sepse Bundle1Hhora",
       "filename": "01_Protocolo_SEPSE_Bundle1hHora.pdf",
-      "theme": "sepse_choque",
+      "theme": "sepse-choque",
       "tipo": "pdf",
       "tags": [
         "sepse-choque",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/sepse_choque/01_Protocolo_SEPSE_Bundle1hHora.pdf",
+      "path": "acervo/sepse-choque/01_Protocolo_SEPSE_Bundle1hHora.pdf",
       "resumo": "Documento sobre sepse-choque catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2561,14 +2553,14 @@
       "id": "protocolo-ipcs-cvc-uti-temi",
       "title": "Protocolo Ipcs Cvc Uti Temi",
       "filename": "Protocolo_IPCS_CVC_UTI_TEMI.docx",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "word",
       "tags": [
         "temi-prova",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/Protocolo_IPCS_CVC_UTI_TEMI.docx",
+      "path": "acervo/temi-prova/Protocolo_IPCS_CVC_UTI_TEMI.docx",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2578,14 +2570,14 @@
       "id": "icsac-cateter-uti-temi",
       "title": "Icsac Cateter Uti Temi",
       "filename": "ICSAC_Cateter_UTI_TEMI.docx",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "word",
       "tags": [
         "procedimentos-dispositivos",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/ICSAC_Cateter_UTI_TEMI.docx",
+      "path": "acervo/temi-prova/ICSAC_Cateter_UTI_TEMI.docx",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2595,48 +2587,48 @@
       "id": "protocolo-teste-estresse-furosemida-uti-temi",
       "title": "Protocolo Teste Estresse Furosemida Uti Temi",
       "filename": "Protocolo_Teste_Estresse_Furosemida_UTI_TEMI.docx",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "word",
       "tags": [
         "nefro-aki-trs",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/Protocolo_Teste_Estresse_Furosemida_UTI_TEMI.docx",
+      "path": "acervo/temi-prova/Protocolo_Teste_Estresse_Furosemida_UTI_TEMI.docx",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.578028"
     },
     {
-      "id": "guia-de-suporte-respirato-rio-e-simulador-de-tomada-de-decisa-o-me-dica-v1",
-      "title": "Guia De Suporte RespiratóRio E Simulador De Tomada De DecisãO MéDica V1",
-      "filename": "Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1.pdf",
-      "theme": "temi_estudos",
+      "id": "guia-de-suporte-respiratório-e-simulador-de-tomada-de-decisão-médica-v1",
+      "title": "Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1",
+      "filename": "Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1.pdf",
+      "theme": "temi-prova",
       "tipo": "pdf",
       "tags": [
         "temi-prova",
-        "pdf"
+        "automático"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1.pdf",
+      "path": "acervo/temi-prova/Guia de Suporte Respiratório e Simulador de Tomada de Decisão Médica V1.pdf",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
-      "ia_origem": "Auto-classificado",
+      "ia_origem": "Antigravity",
       "data": "2026-05",
-      "createdAt": "2026-05-08T03:57:01.578566"
+      "createdAt": "2026-05-10T01:48:36.209772Z"
     },
     {
       "id": "kdigo-2026-aki-na-uti-temi-resumo-mapa-memorycards-aldenir-rocha",
       "title": "Kdigo 2026 Aki Na Uti Temi Resumo Mapa Memorycards Aldenir Rocha",
       "filename": "KDIGO_2026_AKI_na_UTI_TEMI_Resumo_Mapa_MemoryCards_Aldenir_Rocha.docx",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "word",
       "tags": [
         "nefro-aki-trs",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/KDIGO_2026_AKI_na_UTI_TEMI_Resumo_Mapa_MemoryCards_Aldenir_Rocha.docx",
+      "path": "acervo/temi-prova/KDIGO_2026_AKI_na_UTI_TEMI_Resumo_Mapa_MemoryCards_Aldenir_Rocha.docx",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2646,14 +2638,14 @@
       "id": "temi-2026-tema-02-avaliacao-abcde-uti-30-flashcards",
       "title": "Temi 2026 Tema 02 Avaliacao Abcde Uti 30 Flashcards",
       "filename": "TEMI_2026_Tema_02_Avaliacao_ABCDE_UTI_30_flashcards.csv",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "data",
       "tags": [
         "temi-prova",
         "data"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/TEMI_2026_Tema_02_Avaliacao_ABCDE_UTI_30_flashcards.csv",
+      "path": "acervo/temi-prova/TEMI_2026_Tema_02_Avaliacao_ABCDE_UTI_30_flashcards.csv",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2663,14 +2655,14 @@
       "id": "fst-temi-aldenir",
       "title": "Fst Temi Aldenir",
       "filename": "FST_TEMI_Aldenir.docx",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "word",
       "tags": [
         "temi-prova",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/FST_TEMI_Aldenir.docx",
+      "path": "acervo/temi-prova/FST_TEMI_Aldenir.docx",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2680,14 +2672,14 @@
       "id": "simulado-temi-2026-draldenir",
       "title": "Simulado Temi 2026 Draldenir",
       "filename": "Simulado_TEMI_2026_DrAldenir.pdf",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "pdf",
       "tags": [
         "temi-prova",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/Simulado_TEMI_2026_DrAldenir.pdf",
+      "path": "acervo/temi-prova/Simulado_TEMI_2026_DrAldenir.pdf",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2697,14 +2689,14 @@
       "id": "simulado-temi-2026-draldenir",
       "title": "Simulado Temi 2026 Draldenir",
       "filename": "Simulado_TEMI_2026_DrAldenir.docx",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "word",
       "tags": [
         "temi-prova",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/Simulado_TEMI_2026_DrAldenir.docx",
+      "path": "acervo/temi-prova/Simulado_TEMI_2026_DrAldenir.docx",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2714,14 +2706,14 @@
       "id": "broncoscopia-uti-temi",
       "title": "Broncoscopia Uti Temi",
       "filename": "Broncoscopia_UTI_TEMI.docx",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "word",
       "tags": [
         "temi-prova",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/Broncoscopia_UTI_TEMI.docx",
+      "path": "acervo/temi-prova/Broncoscopia_UTI_TEMI.docx",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2731,14 +2723,14 @@
       "id": "icsac-cateter-uti-temi",
       "title": "Icsac Cateter Uti Temi",
       "filename": "ICSAC Cateter UTI TEMI.docx",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "word",
       "tags": [
         "procedimentos-dispositivos",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/ICSAC Cateter UTI TEMI.docx",
+      "path": "acervo/temi-prova/ICSAC Cateter UTI TEMI.docx",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2748,14 +2740,14 @@
       "id": "10-banco-questoes-temi-2026",
       "title": "10 Banco Questoes Temi 2026",
       "filename": "10_Banco_Questoes_TEMI_2026.pdf",
-      "theme": "temi_estudos",
+      "theme": "temi-prova",
       "tipo": "pdf",
       "tags": [
         "juridico-financeiro",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/temi_estudos/10_Banco_Questoes_TEMI_2026.pdf",
+      "path": "acervo/temi-prova/10_Banco_Questoes_TEMI_2026.pdf",
       "resumo": "Documento sobre temi-prova catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2765,14 +2757,14 @@
       "id": "suporte-respiratorio-decisao-uti-sara-grave",
       "title": "Suporte Respiratorio Decisao Uti Sara Grave",
       "filename": "Suporte_Respiratorio_Decisao_UTI_SARA_Grave.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "vm-sdra",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Suporte_Respiratorio_Decisao_UTI_SARA_Grave.docx",
+      "path": "acervo/vm-sdra/Suporte_Respiratorio_Decisao_UTI_SARA_Grave.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2782,14 +2774,14 @@
       "id": "simulador-suporte-respiratorio-vm-sara",
       "title": "Simulador Suporte Respiratorio Vm Sara",
       "filename": "Simulador_Suporte_Respiratorio_VM_SARA.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "temi-prova",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Simulador_Suporte_Respiratorio_VM_SARA.pdf",
+      "path": "acervo/vm-sdra/Simulador_Suporte_Respiratorio_VM_SARA.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2799,13 +2791,13 @@
       "id": "documento-irmao-3-curvas-ventilatorias-normais-e-patologicas-refeito",
       "title": "Documento Irmao 3 Curvas Ventilatorias Normais E Patologicas Refeito",
       "filename": "Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx",
+      "path": "acervo/vm-sdra/Documento_Irmao_3_Curvas_Ventilatorias_Normais_e_Patologicas_REFEITO.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2815,13 +2807,13 @@
       "id": "quadro-comparativo-unico-alarmes-assincronias-curvas-patologicas",
       "title": "Quadro Comparativo Unico Alarmes Assincronias Curvas Patologicas",
       "filename": "Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx",
+      "path": "acervo/vm-sdra/Quadro_Comparativo_Unico_Alarmes_Assincronias_Curvas_Patologicas.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2831,14 +2823,14 @@
       "id": "versao-temi-prova-titulo-vm-pegadinhas-interpretacao-avancada",
       "title": "Versao Temi Prova Titulo Vm Pegadinhas Interpretacao Avancada",
       "filename": "Versao_TEMI_Prova_Titulo_VM_Pegadinhas_Interpretacao_Avancada.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "temi-prova",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Versao_TEMI_Prova_Titulo_VM_Pegadinhas_Interpretacao_Avancada.docx",
+      "path": "acervo/vm-sdra/Versao_TEMI_Prova_Titulo_VM_Pegadinhas_Interpretacao_Avancada.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2848,13 +2840,13 @@
       "id": "alarmes-vm-manual-pratico",
       "title": "Alarmes Vm Manual Pratico",
       "filename": "Alarmes VM Manual Pratico.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Alarmes VM Manual Pratico.docx",
+      "path": "acervo/vm-sdra/Alarmes VM Manual Pratico.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2864,14 +2856,14 @@
       "id": "pocus-pulmonar-em-vm",
       "title": "Pocus Pulmonar Em Vm",
       "filename": "POCUS Pulmonar em VM.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "pocus-usg",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/POCUS Pulmonar em VM.docx",
+      "path": "acervo/vm-sdra/POCUS Pulmonar em VM.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2881,13 +2873,13 @@
       "id": "ventila-cards-verso",
       "title": "Ventila Cards Verso",
       "filename": "VENTILA-CARDS-VERSO.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/VENTILA-CARDS-VERSO.pdf",
+      "path": "acervo/vm-sdra/VENTILA-CARDS-VERSO.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2897,14 +2889,14 @@
       "id": "documento-irmao-assincronias-paciente-ventilador",
       "title": "Documento Irmao Assincronias Paciente Ventilador",
       "filename": "Documento_Irmao_Assincronias_Paciente_Ventilador.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "familia-paciente",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Documento_Irmao_Assincronias_Paciente_Ventilador.docx",
+      "path": "acervo/vm-sdra/Documento_Irmao_Assincronias_Paciente_Ventilador.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2914,14 +2906,14 @@
       "id": "pag-sara-uti-temi",
       "title": "Pag Sara Uti Temi",
       "filename": "PAG_SARA_UTI_TEMI.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "vm-sdra",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/PAG_SARA_UTI_TEMI.docx",
+      "path": "acervo/vm-sdra/PAG_SARA_UTI_TEMI.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2931,14 +2923,14 @@
       "id": "protocolo-sara-grave-uti-adulto",
       "title": "Protocolo Sara Grave Uti Adulto",
       "filename": "Protocolo_SARA_Grave_UTI_Adulto.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "vm-sdra",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Protocolo_SARA_Grave_UTI_Adulto.docx",
+      "path": "acervo/vm-sdra/Protocolo_SARA_Grave_UTI_Adulto.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2948,14 +2940,14 @@
       "id": "pav-pneumonia-associada-ventilacao-temi",
       "title": "Pav Pneumonia Associada Ventilacao Temi",
       "filename": "PAV_Pneumonia_Associada_Ventilacao_TEMI.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "infectologia",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/PAV_Pneumonia_Associada_Ventilacao_TEMI.docx",
+      "path": "acervo/vm-sdra/PAV_Pneumonia_Associada_Ventilacao_TEMI.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2965,13 +2957,13 @@
       "id": "ventila-cards-frente",
       "title": "Ventila Cards Frente",
       "filename": "VENTILA-CARDS-FRENTE.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/VENTILA-CARDS-FRENTE.pdf",
+      "path": "acervo/vm-sdra/VENTILA-CARDS-FRENTE.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2981,13 +2973,13 @@
       "id": "ventila-decision",
       "title": "Ventila Decision",
       "filename": "VENTILA-DECISION.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/VENTILA-DECISION.docx",
+      "path": "acervo/vm-sdra/VENTILA-DECISION.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -2997,14 +2989,14 @@
       "id": "desmamevm-bnm-neurointensivismo-draldenir",
       "title": "Desmamevm Bnm Neurointensivismo Draldenir",
       "filename": "DesmameVM_BNM_Neurointensivismo_DrAldenir.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "vm-sdra",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/DesmameVM_BNM_Neurointensivismo_DrAldenir.docx",
+      "path": "acervo/vm-sdra/DesmameVM_BNM_Neurointensivismo_DrAldenir.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3014,14 +3006,14 @@
       "id": "vm-suporte-respiratorio-draldenir",
       "title": "Vm Suporte Respiratorio Draldenir",
       "filename": "VM_Suporte_Respiratorio_DrAldenir.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "nefro-aki-trs",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/VM_Suporte_Respiratorio_DrAldenir.docx",
+      "path": "acervo/vm-sdra/VM_Suporte_Respiratorio_DrAldenir.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3031,7 +3023,7 @@
       "id": "desmamevm-bnm-neurointensivismo-draldenir",
       "title": "Desmamevm Bnm Neurointensivismo Draldenir",
       "filename": "DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "sedação",
@@ -3040,7 +3032,7 @@
         "uti"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf",
+      "path": "acervo/vm-sdra/DesmameVM_BNM_Neurointensivismo_DrAldenir.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3050,13 +3042,13 @@
       "id": "modos-ventilatorios-comparativo",
       "title": "Modos Ventilatorios Comparativo",
       "filename": "Modos Ventilatorios Comparativo.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Modos Ventilatorios Comparativo.docx",
+      "path": "acervo/vm-sdra/Modos Ventilatorios Comparativo.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3066,13 +3058,13 @@
       "id": "ventila-atlas",
       "title": "Ventila Atlas",
       "filename": "VENTILA-ATLAS.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/VENTILA-ATLAS.pdf",
+      "path": "acervo/vm-sdra/VENTILA-ATLAS.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3082,14 +3074,14 @@
       "id": "sdra-vm-protetora-draldenir",
       "title": "Sdra Vm Protetora Draldenir",
       "filename": "SDRA_VM_Protetora_DrAldenir.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "vm-sdra",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/SDRA_VM_Protetora_DrAldenir.docx",
+      "path": "acervo/vm-sdra/SDRA_VM_Protetora_DrAldenir.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3099,13 +3091,13 @@
       "id": "protocolo-ic-vm-draldenir",
       "title": "Protocolo Ic Vm Draldenir",
       "filename": "Protocolo_IC_VM_DrAldenir.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Protocolo_IC_VM_DrAldenir.docx",
+      "path": "acervo/vm-sdra/Protocolo_IC_VM_DrAldenir.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3115,14 +3107,14 @@
       "id": "assincronias-paciente-ventilador",
       "title": "Assincronias Paciente Ventilador",
       "filename": "Assincronias Paciente Ventilador.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "familia-paciente",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Assincronias Paciente Ventilador.docx",
+      "path": "acervo/vm-sdra/Assincronias Paciente Ventilador.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3132,13 +3124,13 @@
       "id": "ventila-cards",
       "title": "Ventila Cards",
       "filename": "VENTILA-CARDS.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/VENTILA-CARDS.pdf",
+      "path": "acervo/vm-sdra/VENTILA-CARDS.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3148,14 +3140,14 @@
       "id": "protocolo-pneumonia-associada-vm-uti",
       "title": "Protocolo Pneumonia Associada Vm Uti",
       "filename": "Protocolo_Pneumonia_Associada_VM_UTI.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "infectologia",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Protocolo_Pneumonia_Associada_VM_UTI.docx",
+      "path": "acervo/vm-sdra/Protocolo_Pneumonia_Associada_VM_UTI.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3165,14 +3157,14 @@
       "id": "abordagem-alarmes-ventilador-mecanico-uti",
       "title": "Abordagem Alarmes Ventilador Mecanico Uti",
       "filename": "Abordagem_Alarmes_Ventilador_Mecanico_UTI.md",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "text",
       "tags": [
         "uti-geral",
         "text"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Abordagem_Alarmes_Ventilador_Mecanico_UTI.md",
+      "path": "acervo/vm-sdra/Abordagem_Alarmes_Ventilador_Mecanico_UTI.md",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3182,7 +3174,7 @@
       "id": "pancreatite-aguda-grave-sara-grave",
       "title": "Pancreatite Aguda Grave + Sara Grave",
       "filename": "PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "sedação",
@@ -3191,7 +3183,7 @@
         "uti"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf",
+      "path": "acervo/vm-sdra/PANCREATITE AGUDA GRAVE + SARA GRAVE.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3201,14 +3193,14 @@
       "id": "desmame-da-vm",
       "title": "Desmame Da Vm",
       "filename": "Desmame da VM.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "vm-sdra",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Desmame da VM.docx",
+      "path": "acervo/vm-sdra/Desmame da VM.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3218,14 +3210,14 @@
       "id": "simulador-suporte-respiratorio-vm-sara",
       "title": "Simulador Suporte Respiratorio Vm Sara",
       "filename": "Simulador_Suporte_Respiratorio_VM_SARA.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "temi-prova",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Simulador_Suporte_Respiratorio_VM_SARA.docx",
+      "path": "acervo/vm-sdra/Simulador_Suporte_Respiratorio_VM_SARA.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3235,14 +3227,14 @@
       "id": "abordagem-alarmes-ventilador-mecanico-uti",
       "title": "Abordagem Alarmes Ventilador Mecanico Uti",
       "filename": "Abordagem_Alarmes_Ventilador_Mecanico_UTI.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "uti-geral",
         "word"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Abordagem_Alarmes_Ventilador_Mecanico_UTI.docx",
+      "path": "acervo/vm-sdra/Abordagem_Alarmes_Ventilador_Mecanico_UTI.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3252,14 +3244,14 @@
       "id": "sdra-vm-protetora-draldenir",
       "title": "Sdra Vm Protetora Draldenir",
       "filename": "SDRA_VM_Protetora_DrAldenir.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "vm-sdra",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/SDRA_VM_Protetora_DrAldenir.pdf",
+      "path": "acervo/vm-sdra/SDRA_VM_Protetora_DrAldenir.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3269,14 +3261,14 @@
       "id": "vm-suporte-respiratorio-draldenir",
       "title": "Vm Suporte Respiratorio Draldenir",
       "filename": "VM_Suporte_Respiratorio_DrAldenir.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "nefro-aki-trs",
         "pdf"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/VM_Suporte_Respiratorio_DrAldenir.pdf",
+      "path": "acervo/vm-sdra/VM_Suporte_Respiratorio_DrAldenir.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3286,13 +3278,13 @@
       "id": "documento-irmao-4-loops-ventilatorios-pv-e-fv-em-profundidade",
       "title": "Documento Irmao 4 Loops Ventilatorios Pv E Fv Em Profundidade",
       "filename": "Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx",
+      "path": "acervo/vm-sdra/Documento_Irmao_4_Loops_Ventilatorios_PV_e_FV_em_Profundidade.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3302,13 +3294,13 @@
       "id": "versao-ultra-resumida-de-bolso-ventilacao-mecanica-plantao",
       "title": "Versao Ultra Resumida De Bolso Ventilacao Mecanica Plantao",
       "filename": "Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "word",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx",
+      "path": "acervo/vm-sdra/Versao_Ultra_Resumida_de_Bolso_Ventilacao_Mecanica_Plantao.docx",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
@@ -3318,13 +3310,13 @@
       "id": "protocolo-vm-cnaf-vni-santacasa-sobral",
       "title": "Protocolo Vm Cnaf Vni Santacasa Sobral",
       "filename": "Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf",
-      "theme": "ventilacao",
+      "theme": "vm-sdra",
       "tipo": "pdf",
       "tags": [
         "inbox-revisar"
       ],
       "status": "catalogado",
-      "path": "acervo/ventilacao/Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf",
+      "path": "acervo/vm-sdra/Protocolo_VM_CNAf_VNI_SantaCasa_Sobral.pdf",
       "resumo": "Documento sobre vm-sdra catalogado automaticamente.",
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
