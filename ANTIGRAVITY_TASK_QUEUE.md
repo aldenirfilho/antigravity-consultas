@@ -51,11 +51,13 @@
   - [✅] **Biblioteca IA**: Link para Roadmap corrigido.
 
 ### ETAPA 4 — Compatibilidade de rotas antigas
-- [/] Propor aliases/redirecionamentos HTML estáticos para rotas históricas críticas.
-- [ ] Atualizar referências em manifests (`data/site_manifest.json`, etc.) sem quebrar URL antiga.
+- [x] Propor aliases/redirecionamentos HTML estáticos para rotas históricas críticas.
+  - [✅] Criado redirecionamento `02_Banco_Questoes_TEMI/` -> `questoes/`.
+  - [✅] Criado redirecionamento `updown/` -> `07_Estudos_Markdown/`.
+- [x] Atualizar referências em manifests (`data/site_manifest.json`, etc.) sem quebrar URL antiga.
 
 ### ETAPA 5 — Higiene GitHub Pages estático
-- [ ] Verificar workflow `.github/workflows/pages-static.yml`.
+- [/] Verificar workflow `.github/workflows/pages-static.yml`.
 - [ ] Garantir que apenas `public_site/` seja publicado.
 
 ### ETAPA 6 — PRs pequenos e auditáveis
