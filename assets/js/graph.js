@@ -49,11 +49,13 @@ async function initGraph() {
 
   try {
     const dataUrl = container.getAttribute('data-graph-src') || 'data/connections.json';
-    const res = await fetch(dataUrl + '?t=' + Date.now());
-    if (!res.ok) throw new Error("JSON não encontrado.");
-    const rawData = await res.json();
     
-    state.fullData = rawData;
+    // Carregamento robusto com suporte a Patch
+    const rawData = await loadConnectionsData(dataUrl);
+    
+    // Normalização de Schema (compatibilidade legada)
+    state.fullData = normalizeGraphData(rawData);
+    
     loadOverlay();
     applyOverlay();
 
@@ -64,6 +66,60 @@ async function initGraph() {
     console.error("Mapa Vivo Error:", err);
     renderFallback(container, err.message);
   }
+}
+
+/**
+ * Carrega o JSON principal e tenta mesclar com um patch opcional da Biblioteca IA
+ */
+async function loadConnectionsData(dataUrl) {
+  try {
+    // 1. Buscar base com cache-buster
+    const res = await fetch(dataUrl + '?t=' + Date.now());
+    if (!res.ok) throw new Error("JSON principal do mapa não encontrado.");
+    let baseData = await res.json();
+
+    // 2. Tentar buscar patch opcional da Biblioteca IA
+    // Caminho relativo ao index da biblioteca ou da home
+    const patchPaths = ['data/connections_patch_biblioteca.json', '05_Biblioteca_IA/data/connections_patch_biblioteca.json'];
+    
+    for (const path of patchPaths) {
+      try {
+        const patchRes = await fetch(path + '?t=' + Date.now());
+        if (patchRes.ok) {
+          const patchData = await patchRes.json();
+          console.log("🧩 Patch de conexões aplicado:", path);
+          
+          if (patchData.nodes) baseData.nodes = [...(baseData.nodes || []), ...patchData.nodes];
+          if (patchData.edges) baseData.edges = [...(baseData.edges || []), ...patchData.edges];
+          if (patchData.links) baseData.links = [...(baseData.links || []), ...patchData.links];
+          break; // Sucesso no patch
+        }
+      } catch(e) { /* patch opcional falhou silenciosamente */ }
+    }
+
+    return baseData;
+  } catch (err) {
+    throw err;
+  }
+}
+
+/**
+ * Garante que o objeto tenha arrays de nodes e edges, tratando fallbacks legados
+ */
+function normalizeGraphData(data) {
+  const normalized = {
+    nodes: Array.isArray(data.nodes) ? data.nodes : [],
+    edges: Array.isArray(data.edges) ? data.edges : (Array.isArray(data.links) ? data.links : [])
+  };
+  
+  // Garantir campos mínimos nos links normalizados (from/to)
+  normalized.edges = normalized.edges.map(e => ({
+    ...e,
+    from: e.from || e.source,
+    to: e.to || e.target
+  }));
+
+  return normalized;
 }
 
 // ── GESTÃO DE DADOS & OVERLAY ──
