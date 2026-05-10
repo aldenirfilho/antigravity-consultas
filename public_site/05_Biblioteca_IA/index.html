@@ -340,6 +340,13 @@ const getBaseUrl = () => {
     return loc.origin + loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
 };
 
+// Normalização de caminhos para evitar redundância de pasta pai (Fix 404)
+const normalizePath = (p) => {
+    if (!p) return p;
+    return p.startsWith('05_Biblioteca_IA/') ? p.replace('05_Biblioteca_IA/', '') : p;
+};
+
+
 // Lógica de Exclusão
 function marcarParaExcluir(id, event) {
   if (event) event.stopPropagation();
@@ -387,7 +394,7 @@ async function init() {
     const autoManifest = resAuto.files || [];
     
     // Resolver caminhos quebrados do catálogo usando o manifesto real do inbox (GitHub Pages)
-    const inboxByName = new Map(autoManifest.map(f => [f.name, f.path]));
+    const inboxByName = new Map(autoManifest.map(f => [f.name, normalizePath(f.path)]));
     (catalog.items || []).forEach(item => {
       const fileName = item.filename || (item.path || '').split('/').pop();
       if (fileName && inboxByName.has(fileName) && (item.path || '').startsWith('acervo/')) {
@@ -407,7 +414,7 @@ async function init() {
                 tipo: autoFile.extension === 'pdf' ? 'pdf' : (['docx', 'doc'].includes(autoFile.extension) ? 'word' : 'text'),
                 tags: ['auto-detectado', autoFile.extension],
                 status: 'revisar',
-                path: autoFile.path,
+                path: normalizePath(autoFile.path),
                 resumo: 'Arquivo detectado automaticamente no inbox. Aguardando classificação.',
                 data: autoFile.addedAt.substring(0, 7),
                 createdAt: new Date().toISOString()
@@ -703,10 +710,10 @@ function abrirPreview(encodedPath, titulo) {
   document.getElementById('previewTitle').textContent = titulo || 'Visualizando arquivo';
   document.getElementById('previewDirect').href = path;
   
-  if (ext === 'pdf') frame.src = path;
+  if (ext === 'pdf') frame.src = encodeURI(path);
   else if (['docx', 'doc', 'xlsx', 'pptx'].includes(ext)) {
     frame.src = 'https://docs.google.com/gview?url=' + encodeURIComponent(fullUrl) + '&embedded=true';
-  } else frame.src = path;
+  } else frame.src = encodeURI(path);
   
   document.getElementById('previewOverlay').classList.add('open');
 }
