@@ -7,19 +7,34 @@ BASE_DIR = os.getcwd()
 ACERVO_DIR = os.path.join(BASE_DIR, "05_Biblioteca_IA", "acervo")
 CATALOGO_PATH = os.path.join(BASE_DIR, "05_Biblioteca_IA", "data", "biblioteca_catalogo.json")
 
-# Mapeamento de Pastas para Temas
+# Mapeamento de Pastas para Temas (Taxonomia Oficial)
 THEME_MAP = {
-    "ventilacao": "vm-sdra",
-    "neuro": "neuro-uti",
-    "cardio": "cardio-hemodinamica",
-    "sepse_choque": "sepse-choque",
-    "nefro": "nefro-aki-trs",
-    "pocus": "pocus-usg",
-    "temi_estudos": "temi-prova",
-    "gestao_pessoal": "gestao-ia-produtividade",
-    "protocolos_institucionais": "protocolos-institucionais",
-    "artigos_cientificos": "artigos-cientificos",
-    "procedimentos_especiais": "procedimentos-dispositivos"
+    "vm-sdra": "vm-sdra",
+    "neuro-uti": "neuro-uti",
+    "cardio-hemodinamica": "cardio-hemodinamica",
+    "sepse-choque": "sepse-choque",
+    "nefro-aki-trs": "nefro-aki-trs",
+    "pocus-usg": "pocus-usg",
+    "temi-prova": "temi-prova",
+    "gestao-ia-produtividade": "gestao-ia-produtividade",
+    "protocolos-institucionais": "protocolos-institucionais",
+    "artigos-cientificos": "artigos-cientificos",
+    "procedimentos-dispositivos": "procedimentos-dispositivos",
+    "uti-geral": "uti-geral",
+    "infectologia": "infectologia",
+    "endocrino-metabolico": "endocrino-metabolico",
+    "disturbios-eletroliticos": "disturbios-eletroliticos",
+    "gastro-hepatologia": "gastro-hepatologia",
+    "reumatologia": "reumatologia",
+    "hematologia": "hematologia",
+    "emergencias-clinicas": "emergencias-clinicas",
+    "farmaco-doses": "farmaco-doses",
+    "morte-cerebral-doacao": "morte-cerebral-doacao",
+    "sedacao-analgesia": "sedacao-analgesia",
+    "psiquiatria": "psiquiatria",
+    "clinica-medica": "clinica-medica",
+    "juridico-financeiro": "juridico-financeiro",
+    "familia-paciente": "familia-paciente"
 }
 
 def get_tipo(filename):
