@@ -1,30 +1,30 @@
 {
   "updatedAt": "2026-05-10",
   "project": "Biblioteca IA — Enciclopédia Médica Intensiva",
-  "totalFiles": 204,
+  "totalFiles": 203,
   "stats": {
     "emergencias-clinicas": 0,
     "familia-paciente": 0,
-    "vm-sdra": 34,
-    "protocolos-institucionais": 38,
-    "clinica-medica": 0,
+    "vm-sdra": 36,
+    "protocolos-institucionais": 48,
+    "clinica-medica": 3,
     "sepse-choque": 6,
-    "endocrino-metabolico": 0,
+    "endocrino-metabolico": 2,
     "artigos-cientificos": 6,
-    "gastro-hepatologia": 0,
-    "neuro-uti": 11,
-    "infectologia": 0,
+    "gastro-hepatologia": 2,
+    "neuro-uti": 18,
+    "infectologia": 3,
     "farmaco-doses": 0,
-    "juridico-financeiro": 0,
-    "uti-geral": 0,
+    "juridico-financeiro": 4,
+    "uti-geral": 7,
     "pocus-usg": 8,
-    "temi-prova": 12,
-    "gestao-ia-produtividade": 9,
+    "temi-prova": 13,
+    "gestao-ia-produtividade": 13,
     "procedimentos-dispositivos": 0,
-    "nefro-aki-trs": 2,
-    "disturbios-eletroliticos": 0,
-    "cardio-hemodinamica": 9,
-    "inbox-revisar": 69
+    "nefro-aki-trs": 4,
+    "disturbios-eletroliticos": 4,
+    "cardio-hemodinamica": 15,
+    "inbox-revisar": 11
   },
   "items": [
     {
@@ -124,6 +124,55 @@
       "createdAt": "2026-05-08T03:57:01.585685"
     },
     {
+      "id": "tridil-nipride-uti-abordagem-completa",
+      "title": "Tridil_Nipride_UTI_Abordagem_Completa.docx",
+      "filename": "Tridil_Nipride_UTI_Abordagem_Completa.docx",
+      "theme": "cardio-hemodinamica",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/cardio-hemodinamica/Tridil_Nipride_UTI_Abordagem_Completa.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284538Z"
+    },
+    {
+      "id": "fa-protocolo-completo-draldenir",
+      "title": "FA_Protocolo_Completo_DrAldenir.docx",
+      "filename": "FA_Protocolo_Completo_DrAldenir.docx",
+      "theme": "cardio-hemodinamica",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/cardio-hemodinamica/FA_Protocolo_Completo_DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773708Z"
+    },
+    {
+      "id": "protocolo-azul-de-metileno-uti-atualizado-2026",
+      "title": "Protocolo Azul De Metileno Uti Atualizado 2026",
+      "filename": "Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
+      "theme": "cardio-hemodinamica",
+      "tipo": "word",
+      "tags": [
+        "farmaco-doses",
+        "word"
+      ],
+      "status": "catalogado",
+      "path": "acervo/cardio-hemodinamica/Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
+      "resumo": "Documento sobre protocolos-institucionais catalogado automaticamente.",
+      "ia_origem": "Auto-classificado",
+      "data": "2026-05",
+      "createdAt": "2026-05-08T03:57:01.578107"
+    },
+    {
       "id": "protocolo-bradicardia-em-uti-final",
       "title": "Protocolo Bradicardia Em Uti Final",
       "filename": "Protocolo_Bradicardia_em_UTI_final.docx",
@@ -155,6 +204,22 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.580376"
+    },
+    {
+      "id": "bradiarritmias-bav-protocolo",
+      "title": "bradiarritmias_bav_protocolo.docx",
+      "filename": "bradiarritmias_bav_protocolo.docx",
+      "theme": "cardio-hemodinamica",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/cardio-hemodinamica/bradiarritmias_bav_protocolo.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284689Z"
     },
     {
       "id": "tabelas-dva-mlh-peso-40a120",
@@ -190,25 +255,20 @@
       "createdAt": "2026-05-08T03:57:01.581366"
     },
     {
-      "id": "cardioversao-amiodarona-2026",
-      "title": "Cardioversão & Manejo de Taquiarritmias",
+      "id": "cardioversao-taquiarritmias-amiodarona-enfermaria-uti-atualizado-2026",
+      "title": "Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
       "filename": "Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
       "theme": "cardio-hemodinamica",
       "tipo": "word",
       "tags": [
-        "cardioversão",
-        "amiodarona",
-        "arritmia",
-        "acls",
-        "emergência",
-        "medicina-interna"
+        "revisar"
       ],
       "status": "catalogado",
       "path": "acervo/cardio-hemodinamica/Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
-      "resumo": "Protocolo prático para cardioversão elétrica sincronizada e uso de Amiodarona em ambiente de enfermaria e UTI.",
-      "ia_origem": "Antigravity",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-09T15:15:00Z"
+      "createdAt": "2026-05-10T17:03:21.284720Z"
     },
     {
       "id": "cardio-critica-draldenir",
@@ -276,6 +336,246 @@
       "createdAt": "2026-05-08T03:57:01.583801"
     },
     {
+      "id": "bav-bolso-plantao",
+      "title": "bav_bolso_plantao.pdf",
+      "filename": "bav_bolso_plantao.pdf",
+      "theme": "cardio-hemodinamica",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/cardio-hemodinamica/bav_bolso_plantao.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284820Z"
+    },
+    {
+      "id": "dobutamina-uti-abordagem-completa",
+      "title": "Dobutamina_UTI_Abordagem_Completa.docx",
+      "filename": "Dobutamina_UTI_Abordagem_Completa.docx",
+      "theme": "cardio-hemodinamica",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/cardio-hemodinamica/Dobutamina_UTI_Abordagem_Completa.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284840Z"
+    },
+    {
+      "id": "grandes-sindromes-clinicas---mariana-lima-montenegro",
+      "title": "Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
+      "filename": "Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
+      "theme": "clinica-medica",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/clinica-medica/Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602497Z"
+    },
+    {
+      "id": "perioperatorio-grandessindromes-draldenir",
+      "title": "Perioperatorio GrandesSindromes DrAldenir.docx",
+      "filename": "Perioperatorio GrandesSindromes DrAldenir.docx",
+      "theme": "clinica-medica",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/clinica-medica/Perioperatorio GrandesSindromes DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602575Z"
+    },
+    {
+      "id": "plano-investigacao-dor-abdominal-cronica-paciente-jovem",
+      "title": "plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx",
+      "filename": "plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx",
+      "theme": "clinica-medica",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/clinica-medica/plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602635Z"
+    },
+    {
+      "id": "acidobase-eletrolitos-draldenir",
+      "title": "AcidoBase_Eletrolitos_DrAldenir.docx",
+      "filename": "AcidoBase_Eletrolitos_DrAldenir.docx",
+      "theme": "disturbios-eletroliticos",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/disturbios-eletroliticos/AcidoBase_Eletrolitos_DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284562Z"
+    },
+    {
+      "id": "acidobase-eletrolitos-draldenir",
+      "title": "AcidoBase_Eletrolitos_DrAldenir.pdf",
+      "filename": "AcidoBase_Eletrolitos_DrAldenir.pdf",
+      "theme": "disturbios-eletroliticos",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/disturbios-eletroliticos/AcidoBase_Eletrolitos_DrAldenir.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284626Z"
+    },
+    {
+      "id": "protocolo-albumina-paracentese",
+      "title": "PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
+      "filename": "PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
+      "theme": "disturbios-eletroliticos",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/disturbios-eletroliticos/PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773730Z"
+    },
+    {
+      "id": "protocolo-reposicao-albumina-draldenir",
+      "title": "Protocolo Reposicao Albumina DrAldenir.docx",
+      "filename": "Protocolo Reposicao Albumina DrAldenir.docx",
+      "theme": "disturbios-eletroliticos",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/disturbios-eletroliticos/Protocolo Reposicao Albumina DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284813Z"
+    },
+    {
+      "id": "protocolo-cad-uti-dr-aldenir-rocha",
+      "title": "Protocolo_CAD_UTI_Dr_Aldenir_Rocha.docx",
+      "filename": "Protocolo_CAD_UTI_Dr_Aldenir_Rocha.docx",
+      "theme": "endocrino-metabolico",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/endocrino-metabolico/Protocolo_CAD_UTI_Dr_Aldenir_Rocha.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284655Z"
+    },
+    {
+      "id": "cad-uti-protocolo-draldenir",
+      "title": "CAD UTI Protocolo DrAldenir.docx",
+      "filename": "CAD UTI Protocolo DrAldenir.docx",
+      "theme": "endocrino-metabolico",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/endocrino-metabolico/CAD UTI Protocolo DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284715Z"
+    },
+    {
+      "id": "hda-protocolo-completo-draldenir",
+      "title": "HDA Protocolo Completo DrAldenir.docx",
+      "filename": "HDA Protocolo Completo DrAldenir.docx",
+      "theme": "gastro-hepatologia",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/gastro-hepatologia/HDA Protocolo Completo DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602619Z"
+    },
+    {
+      "id": "shr",
+      "title": "SHR.pdf",
+      "filename": "SHR.pdf",
+      "theme": "gastro-hepatologia",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/gastro-hepatologia/SHR.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602650Z"
+    },
+    {
+      "id": "guia-ia-medicos-clinicos-intensivistas",
+      "title": "guia ia medicos clinicos intensivistas.md",
+      "filename": "guia ia medicos clinicos intensivistas.md",
+      "theme": "gestao-ia-produtividade",
+      "tipo": "text",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/gestao-ia-produtividade/guia ia medicos clinicos intensivistas.md",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602546Z"
+    },
+    {
+      "id": "guia-ia-medicos-clinicos-intensivistas",
+      "title": "guia ia medicos clinicos intensivistas.docx",
+      "filename": "guia ia medicos clinicos intensivistas.docx",
+      "theme": "gestao-ia-produtividade",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/gestao-ia-produtividade/guia ia medicos clinicos intensivistas.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602551Z"
+    },
+    {
       "id": "broncoscopia-na-uti",
       "title": "Broncoscopia Na Uti",
       "filename": "BRONCOSCOPIA NA UTI.pdf",
@@ -307,6 +607,22 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.579678"
+    },
+    {
+      "id": "guia-antigravity-comandos-atalhos",
+      "title": "Guia_Antigravity_Comandos_Atalhos.docx",
+      "filename": "Guia_Antigravity_Comandos_Atalhos.docx",
+      "theme": "gestao-ia-produtividade",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/gestao-ia-produtividade/Guia_Antigravity_Comandos_Atalhos.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602604Z"
     },
     {
       "id": "monetizar-dados-médicos-em-renda-passiva",
@@ -390,6 +706,22 @@
       "createdAt": "2026-05-08T03:57:01.583384"
     },
     {
+      "id": "manual-claude-prompts-token-economia-aldenir",
+      "title": "manual_claude_prompts_token_economia_aldenir.docx",
+      "filename": "manual_claude_prompts_token_economia_aldenir.docx",
+      "theme": "gestao-ia-produtividade",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/gestao-ia-produtividade/manual_claude_prompts_token_economia_aldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602716Z"
+    },
+    {
       "id": "plano-investigacao-dor-abdominal-cronica",
       "title": "Plano Investigacao Dor Abdominal Cronica",
       "filename": "Plano_Investigacao_Dor_Abdominal_Cronica.docx",
@@ -423,22 +755,6 @@
       "createdAt": "2026-05-08T03:57:01.585499"
     },
     {
-      "id": "grandes-sindromes-clinicas---mariana-lima-montenegro",
-      "title": "Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
-      "filename": "Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Grandes Sindromes Clinicas - Mariana Lima Montenegro.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284504Z"
-    },
-    {
       "id": "checkpoint-fatorxiii",
       "title": "checkpoint_fatorXIII.pdf",
       "filename": "checkpoint_fatorXIII.pdf",
@@ -452,359 +768,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284516Z"
-    },
-    {
-      "id": "e-book-fundamentos-basicos-pra-plantao-em-uti",
-      "title": "E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf",
-      "filename": "E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284522Z"
-    },
-    {
-      "id": "protocolo-desmame-vm-sedoanalgesia",
-      "title": "protocolo_desmame_vm_sedoanalgesia.pdf",
-      "filename": "protocolo_desmame_vm_sedoanalgesia.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/protocolo_desmame_vm_sedoanalgesia.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284528Z"
-    },
-    {
-      "id": "mapaprofilaxias-uti-draldenir",
-      "title": "MapaProfilaxias UTI DrAldenir.docx",
-      "filename": "MapaProfilaxias UTI DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/MapaProfilaxias UTI DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284533Z"
-    },
-    {
-      "id": "tridil-nipride-uti-abordagem-completa",
-      "title": "Tridil_Nipride_UTI_Abordagem_Completa.docx",
-      "filename": "Tridil_Nipride_UTI_Abordagem_Completa.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Tridil_Nipride_UTI_Abordagem_Completa.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284538Z"
-    },
-    {
-      "id": "resumo-executivo-aldenir",
-      "title": "resumo_executivo_aldenir.docx",
-      "filename": "resumo_executivo_aldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/resumo_executivo_aldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284543Z"
-    },
-    {
-      "id": "fa-protocolo-completo-draldenir",
-      "title": "FA_Protocolo_Completo_DrAldenir.docx",
-      "filename": "FA_Protocolo_Completo_DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/FA_Protocolo_Completo_DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284549Z"
-    },
-    {
-      "id": "guia-ia-medicos-clinicos-intensivistas",
-      "title": "guia ia medicos clinicos intensivistas.md",
-      "filename": "guia ia medicos clinicos intensivistas.md",
-      "theme": "inbox-revisar",
-      "tipo": "text",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/guia ia medicos clinicos intensivistas.md",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284556Z"
-    },
-    {
-      "id": "acidobase-eletrolitos-draldenir",
-      "title": "AcidoBase_Eletrolitos_DrAldenir.docx",
-      "filename": "AcidoBase_Eletrolitos_DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/AcidoBase_Eletrolitos_DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284562Z"
-    },
-    {
-      "id": "guia-ia-medicos-clinicos-intensivistas",
-      "title": "guia ia medicos clinicos intensivistas.docx",
-      "filename": "guia ia medicos clinicos intensivistas.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/guia ia medicos clinicos intensivistas.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284567Z"
-    },
-    {
-      "id": "protocolo-morte-cerebral-2",
-      "title": "protocolo_morte_cerebral_2.docx",
-      "filename": "protocolo_morte_cerebral_2.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/protocolo_morte_cerebral_2.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284572Z"
-    },
-    {
-      "id": "protocolo-morte-cerebral-3",
-      "title": "protocolo_morte_cerebral_3.docx",
-      "filename": "protocolo_morte_cerebral_3.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/protocolo_morte_cerebral_3.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284577Z"
-    },
-    {
-      "id": "protocolo-azul-de-metileno-uti-atualizado-2026",
-      "title": "Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
-      "filename": "Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Protocolo_Azul_de_Metileno_UTI_Atualizado_2026.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284582Z"
-    },
-    {
-      "id": "pneumonia-aspirativa-abordagem-completa",
-      "title": "Pneumonia_Aspirativa_Abordagem_Completa.docx",
-      "filename": "Pneumonia_Aspirativa_Abordagem_Completa.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Pneumonia_Aspirativa_Abordagem_Completa.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284587Z"
-    },
-    {
-      "id": "protocolo-morte-cerebral",
-      "title": "protocolo_morte_cerebral.docx",
-      "filename": "protocolo_morte_cerebral.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/protocolo_morte_cerebral.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284592Z"
-    },
-    {
-      "id": "dúvidas-diretas-uti:cm---hemocultura-positiva-candida",
-      "title": "DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf",
-      "filename": "DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284600Z"
-    },
-    {
-      "id": "prescricoes-uti-draldenir",
-      "title": "Prescricoes_UTI_DrAldenir.docx",
-      "filename": "Prescricoes_UTI_DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Prescricoes_UTI_DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284605Z"
-    },
-    {
-      "id": "modelos-prontuario-dnar-plantao",
-      "title": "MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
-      "filename": "MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284610Z"
-    },
-    {
-      "id": "perioperatorio-grandessindromes-draldenir",
-      "title": "Perioperatorio GrandesSindromes DrAldenir.docx",
-      "filename": "Perioperatorio GrandesSindromes DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Perioperatorio GrandesSindromes DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284616Z"
-    },
-    {
-      "id": "protocolo-npt-uti-draldenir",
-      "title": "Protocolo NPT UTI DrAldenir.docx",
-      "filename": "Protocolo NPT UTI DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Protocolo NPT UTI DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284621Z"
-    },
-    {
-      "id": "acidobase-eletrolitos-draldenir",
-      "title": "AcidoBase_Eletrolitos_DrAldenir.pdf",
-      "filename": "AcidoBase_Eletrolitos_DrAldenir.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/AcidoBase_Eletrolitos_DrAldenir.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284626Z"
-    },
-    {
-      "id": "nutricao-uti-draldenir",
-      "title": "Nutricao UTI DrAldenir.docx",
-      "filename": "Nutricao UTI DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Nutricao UTI DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284631Z"
-    },
-    {
-      "id": "protocolo-morte-cerebral-4",
-      "title": "protocolo_morte_cerebral_4.docx",
-      "filename": "protocolo_morte_cerebral_4.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/protocolo_morte_cerebral_4.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284635Z"
+      "createdAt": "2026-05-10T17:06:41.105906Z"
     },
     {
       "id": "hemostasia-transfusao-uti-draldenir",
@@ -820,151 +784,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284640Z"
-    },
-    {
-      "id": "hemodialise-uti",
-      "title": "hemodialise_uti.docx",
-      "filename": "hemodialise_uti.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/hemodialise_uti.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284646Z"
-    },
-    {
-      "id": "guia-antigravity-comandos-atalhos",
-      "title": "Guia_Antigravity_Comandos_Atalhos.docx",
-      "filename": "Guia_Antigravity_Comandos_Atalhos.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Guia_Antigravity_Comandos_Atalhos.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284650Z"
-    },
-    {
-      "id": "protocolo-cad-uti-dr-aldenir-rocha",
-      "title": "Protocolo_CAD_UTI_Dr_Aldenir_Rocha.docx",
-      "filename": "Protocolo_CAD_UTI_Dr_Aldenir_Rocha.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Protocolo_CAD_UTI_Dr_Aldenir_Rocha.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284655Z"
-    },
-    {
-      "id": "prescricoes-uti-draldenir",
-      "title": "Prescricoes_UTI_DrAldenir.pdf",
-      "filename": "Prescricoes_UTI_DrAldenir.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Prescricoes_UTI_DrAldenir.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284660Z"
-    },
-    {
-      "id": "protocolos-assistenciais-(1)",
-      "title": "Protocolos_Assistenciais (1).pdf",
-      "filename": "Protocolos_Assistenciais (1).pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Protocolos_Assistenciais (1).pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284665Z"
-    },
-    {
-      "id": "avaliação-e-tratamento-da-hipertensão-intracraniana-em-adultos",
-      "title": "Avaliação e tratamento da hipertensão intracraniana em adultos.pdf",
-      "filename": "Avaliação e tratamento da hipertensão intracraniana em adultos.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Avaliação e tratamento da hipertensão intracraniana em adultos.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284672Z"
-    },
-    {
-      "id": "00-master-completo-11-protocolos-santacasa-2026",
-      "title": "00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
-      "filename": "00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284677Z"
-    },
-    {
-      "id": "qualidadeseguranca-uti-draldenir",
-      "title": "QualidadeSeguranca UTI DrAldenir.docx",
-      "filename": "QualidadeSeguranca UTI DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/QualidadeSeguranca UTI DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284682Z"
-    },
-    {
-      "id": "bradiarritmias-bav-protocolo",
-      "title": "bradiarritmias_bav_protocolo.docx",
-      "filename": "bradiarritmias_bav_protocolo.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/bradiarritmias_bav_protocolo.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284689Z"
+      "createdAt": "2026-05-10T17:06:41.105921Z"
     },
     {
       "id": "protocolo-transfusao-crioprecipitado-uti-pandoc",
@@ -980,103 +800,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284694Z"
-    },
-    {
-      "id": "hda-protocolo-completo-draldenir",
-      "title": "HDA Protocolo Completo DrAldenir.docx",
-      "filename": "HDA Protocolo Completo DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/HDA Protocolo Completo DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284699Z"
-    },
-    {
-      "id": "protocolo-albumina-paracentese",
-      "title": "PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
-      "filename": "PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/PROTOCOLO_ALBUMINA_PARACENTESE.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284704Z"
-    },
-    {
-      "id": "parecer-cuidados-paliativos-padrao",
-      "title": "Parecer Cuidados Paliativos PADRAO.pdf",
-      "filename": "Parecer Cuidados Paliativos PADRAO.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Parecer Cuidados Paliativos PADRAO.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284709Z"
-    },
-    {
-      "id": "cad-uti-protocolo-draldenir",
-      "title": "CAD UTI Protocolo DrAldenir.docx",
-      "filename": "CAD UTI Protocolo DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/CAD UTI Protocolo DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284715Z"
-    },
-    {
-      "id": "cardioversao-taquiarritmias-amiodarona-enfermaria-uti-atualizado-2026",
-      "title": "Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
-      "filename": "Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Cardioversao_Taquiarritmias_Amiodarona_Enfermaria_UTI_atualizado_2026.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284720Z"
-    },
-    {
-      "id": "plano-investigacao-dor-abdominal-cronica-paciente-jovem",
-      "title": "plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx",
-      "filename": "plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/plano_investigacao_dor_abdominal_cronica_paciente_jovem.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284725Z"
+      "createdAt": "2026-05-10T17:06:41.105927Z"
     },
     {
       "id": "lupus-na-uti-abordagem-completa-atualizada-2026",
@@ -1092,55 +816,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284730Z"
-    },
-    {
-      "id": "nota-evolucao-dnar-lsv",
-      "title": "NOTA_EVOLUCAO_DNAR_LSV.docx",
-      "filename": "NOTA_EVOLUCAO_DNAR_LSV.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/NOTA_EVOLUCAO_DNAR_LSV.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284735Z"
-    },
-    {
-      "id": "trials-temi",
-      "title": "Trials Temi.docx",
-      "filename": "Trials Temi.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Trials Temi.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284740Z"
-    },
-    {
-      "id": "shr",
-      "title": "SHR.pdf",
-      "filename": "SHR.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/SHR.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284745Z"
+      "createdAt": "2026-05-10T17:06:41.105933Z"
     },
     {
       "id": "saaf-medicina-interna-uti-abordagem-completa-atualizada-2026",
@@ -1156,23 +832,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284752Z"
-    },
-    {
-      "id": "peticao-inicial-aldenir-rocha",
-      "title": "peticao_inicial_aldenir_rocha.pdf",
-      "filename": "peticao_inicial_aldenir_rocha.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/peticao_inicial_aldenir_rocha.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284757Z"
+      "createdAt": "2026-05-10T17:06:41.105938Z"
     },
     {
       "id": "sedacao-delirium-uti-draldenir",
@@ -1188,39 +848,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284762Z"
-    },
-    {
-      "id": "px-aldenir",
-      "title": "Px Aldenir.pdf",
-      "filename": "Px Aldenir.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Px Aldenir.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284767Z"
-    },
-    {
-      "id": "protocolo-morte-cerebral",
-      "title": "protocolo morte cerebral.docx",
-      "filename": "protocolo morte cerebral.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/protocolo morte cerebral.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284772Z"
+      "createdAt": "2026-05-10T17:06:41.105944Z"
     },
     {
       "id": "hemostasia-transfusao-uti-draldenir",
@@ -1236,7 +864,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284777Z"
+      "createdAt": "2026-05-10T17:06:41.105949Z"
     },
     {
       "id": "dúvidas-diretas-uti:cm---programa-diário-de-artigos",
@@ -1252,7 +880,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284783Z"
+      "createdAt": "2026-05-10T17:06:41.105956Z"
     },
     {
       "id": "table-87e783ea-d03f-43a3-9d3c-dcab85915268",
@@ -1268,103 +896,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284788Z"
-    },
-    {
-      "id": "nota-medica-dnar-lsv-prontuario",
-      "title": "NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
-      "filename": "NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284793Z"
-    },
-    {
-      "id": "pav-uti",
-      "title": "PAV UTI.pdf",
-      "filename": "PAV UTI.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/PAV UTI.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284798Z"
-    },
-    {
-      "id": "multiple-organ-failure--what-you-need-to-know.1",
-      "title": "multiple_organ_failure__what_you_need_to_know.1.pdf",
-      "filename": "multiple_organ_failure__what_you_need_to_know.1.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/multiple_organ_failure__what_you_need_to_know.1.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284803Z"
-    },
-    {
-      "id": "00-todos-protocolos-clinica-medica-santacasa-2026",
-      "title": "00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
-      "filename": "00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284808Z"
-    },
-    {
-      "id": "protocolo-reposicao-albumina-draldenir",
-      "title": "Protocolo Reposicao Albumina DrAldenir.docx",
-      "filename": "Protocolo Reposicao Albumina DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Protocolo Reposicao Albumina DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284813Z"
-    },
-    {
-      "id": "bav-bolso-plantao",
-      "title": "bav_bolso_plantao.pdf",
-      "filename": "bav_bolso_plantao.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/bav_bolso_plantao.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284820Z"
+      "createdAt": "2026-05-10T17:06:41.105961Z"
     },
     {
       "id": "protocolo-crioprecipitado-dr-aldenir",
@@ -1380,103 +912,7 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284825Z"
-    },
-    {
-      "id": "protocolo-broncoespasmo-grave-uti-draldenir",
-      "title": "Protocolo Broncoespasmo Grave UTI DrAldenir.docx",
-      "filename": "Protocolo Broncoespasmo Grave UTI DrAldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Protocolo Broncoespasmo Grave UTI DrAldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284830Z"
-    },
-    {
-      "id": "manual-claude-prompts-token-economia-aldenir",
-      "title": "manual_claude_prompts_token_economia_aldenir.docx",
-      "filename": "manual_claude_prompts_token_economia_aldenir.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/manual_claude_prompts_token_economia_aldenir.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284835Z"
-    },
-    {
-      "id": "dobutamina-uti-abordagem-completa",
-      "title": "Dobutamina_UTI_Abordagem_Completa.docx",
-      "filename": "Dobutamina_UTI_Abordagem_Completa.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/Dobutamina_UTI_Abordagem_Completa.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284840Z"
-    },
-    {
-      "id": "plano-revendedor-usg-sobral",
-      "title": "plano_revendedor_usg_sobral.pdf",
-      "filename": "plano_revendedor_usg_sobral.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/plano_revendedor_usg_sobral.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284845Z"
-    },
-    {
-      "id": "limitacao-suporte-vida-pac",
-      "title": "LIMITACAO_SUPORTE_VIDA_PAC.pdf",
-      "filename": "LIMITACAO_SUPORTE_VIDA_PAC.pdf",
-      "theme": "inbox-revisar",
-      "tipo": "pdf",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/LIMITACAO_SUPORTE_VIDA_PAC.pdf",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284850Z"
-    },
-    {
-      "id": "hemodialise-uti-2",
-      "title": "hemodialise_uti 2.docx",
-      "filename": "hemodialise_uti 2.docx",
-      "theme": "inbox-revisar",
-      "tipo": "word",
-      "tags": [
-        "revisar"
-      ],
-      "status": "pendente",
-      "path": "inbox/hemodialise_uti 2.docx",
-      "resumo": "Aguardando classificação manual.",
-      "ia_origem": "Sistema",
-      "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284855Z"
+      "createdAt": "2026-05-10T17:06:41.105967Z"
     },
     {
       "id": "sedacao-delirium-uti-draldenir",
@@ -1492,39 +928,135 @@
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284861Z"
+      "createdAt": "2026-05-10T17:06:41.105972Z"
     },
     {
-      "id": "protocolo-morte-cerebral-1",
-      "title": "protocolo_morte_cerebral_1.docx",
-      "filename": "protocolo_morte_cerebral_1.docx",
-      "theme": "inbox-revisar",
+      "id": "pneumonia-aspirativa-abordagem-completa",
+      "title": "Pneumonia_Aspirativa_Abordagem_Completa.docx",
+      "filename": "Pneumonia_Aspirativa_Abordagem_Completa.docx",
+      "theme": "infectologia",
       "tipo": "word",
       "tags": [
         "revisar"
       ],
-      "status": "pendente",
-      "path": "inbox/protocolo_morte_cerebral_1.docx",
+      "status": "catalogado",
+      "path": "acervo/infectologia/Pneumonia_Aspirativa_Abordagem_Completa.docx",
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284866Z"
+      "createdAt": "2026-05-10T17:05:30.602557Z"
     },
     {
-      "id": "rotinas-em-uti-sanar",
-      "title": "Rotinas em UTI SANAR.pdf",
-      "filename": "Rotinas em UTI SANAR.pdf",
-      "theme": "inbox-revisar",
+      "id": "dúvidas-diretas-uti:cm---hemocultura-positiva-candida",
+      "title": "DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf",
+      "filename": "DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf",
+      "theme": "infectologia",
       "tipo": "pdf",
       "tags": [
         "revisar"
       ],
-      "status": "pendente",
-      "path": "inbox/Rotinas em UTI SANAR.pdf",
+      "status": "catalogado",
+      "path": "acervo/infectologia/DÚVIDAS DIRETAS UTI:CM - Hemocultura Positiva Candida.pdf",
       "resumo": "Aguardando classificação manual.",
       "ia_origem": "Sistema",
       "data": "2026-05",
-      "createdAt": "2026-05-10T17:03:21.284871Z"
+      "createdAt": "2026-05-10T17:05:30.602564Z"
+    },
+    {
+      "id": "pav-uti",
+      "title": "PAV UTI.pdf",
+      "filename": "PAV UTI.pdf",
+      "theme": "infectologia",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/infectologia/PAV UTI.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602695Z"
+    },
+    {
+      "id": "resumo-executivo-aldenir",
+      "title": "resumo_executivo_aldenir.docx",
+      "filename": "resumo_executivo_aldenir.docx",
+      "theme": "juridico-financeiro",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/juridico-financeiro/resumo_executivo_aldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773701Z"
+    },
+    {
+      "id": "peticao-inicial-aldenir-rocha",
+      "title": "peticao_inicial_aldenir_rocha.pdf",
+      "filename": "peticao_inicial_aldenir_rocha.pdf",
+      "theme": "juridico-financeiro",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/juridico-financeiro/peticao_inicial_aldenir_rocha.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284757Z"
+    },
+    {
+      "id": "px-aldenir",
+      "title": "Px Aldenir.pdf",
+      "filename": "Px Aldenir.pdf",
+      "theme": "juridico-financeiro",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/juridico-financeiro/Px Aldenir.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773758Z"
+    },
+    {
+      "id": "plano-revendedor-usg-sobral",
+      "title": "plano_revendedor_usg_sobral.pdf",
+      "filename": "plano_revendedor_usg_sobral.pdf",
+      "theme": "juridico-financeiro",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/juridico-financeiro/plano_revendedor_usg_sobral.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602721Z"
+    },
+    {
+      "id": "hemodialise-uti",
+      "title": "hemodialise_uti.docx",
+      "filename": "hemodialise_uti.docx",
+      "theme": "nefro-aki-trs",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/nefro-aki-trs/hemodialise_uti.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602599Z"
     },
     {
       "id": "kdigo2026-aki-uti-draldenir",
@@ -1561,6 +1093,54 @@
       "createdAt": "2026-05-08T03:57:01.581712"
     },
     {
+      "id": "hemodialise-uti-2",
+      "title": "hemodialise_uti 2.docx",
+      "filename": "hemodialise_uti 2.docx",
+      "theme": "nefro-aki-trs",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/nefro-aki-trs/hemodialise_uti 2.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602731Z"
+    },
+    {
+      "id": "protocolo-morte-cerebral-2",
+      "title": "protocolo_morte_cerebral_2.docx",
+      "filename": "protocolo_morte_cerebral_2.docx",
+      "theme": "neuro-uti",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/neuro-uti/protocolo_morte_cerebral_2.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284572Z"
+    },
+    {
+      "id": "protocolo-morte-cerebral-3",
+      "title": "protocolo_morte_cerebral_3.docx",
+      "filename": "protocolo_morte_cerebral_3.docx",
+      "theme": "neuro-uti",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/neuro-uti/protocolo_morte_cerebral_3.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284577Z"
+    },
+    {
       "id": "hic-guia-temi",
       "title": "Hic Guia Temi",
       "filename": "HIC_Guia_TEMI.pdf",
@@ -1576,6 +1156,22 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.578252"
+    },
+    {
+      "id": "protocolo-morte-cerebral",
+      "title": "protocolo_morte_cerebral.docx",
+      "filename": "protocolo_morte_cerebral.docx",
+      "theme": "neuro-uti",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/neuro-uti/protocolo_morte_cerebral.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284592Z"
     },
     {
       "id": "tce-temi-draldenir",
@@ -1626,6 +1222,38 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.579233"
+    },
+    {
+      "id": "protocolo-morte-cerebral-4",
+      "title": "protocolo_morte_cerebral_4.docx",
+      "filename": "protocolo_morte_cerebral_4.docx",
+      "theme": "neuro-uti",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/neuro-uti/protocolo_morte_cerebral_4.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284635Z"
+    },
+    {
+      "id": "avaliação-e-tratamento-da-hipertensão-intracraniana-em-adultos",
+      "title": "Avaliação e tratamento da hipertensão intracraniana em adultos.pdf",
+      "filename": "Avaliação e tratamento da hipertensão intracraniana em adultos.pdf",
+      "theme": "neuro-uti",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/neuro-uti/Avaliação e tratamento da hipertensão intracraniana em adultos.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284672Z"
     },
     {
       "id": "protocolo-morte-cerebral",
@@ -1679,6 +1307,22 @@
       "createdAt": "2026-05-08T03:57:01.582479"
     },
     {
+      "id": "protocolo-morte-cerebral",
+      "title": "protocolo morte cerebral.docx",
+      "filename": "protocolo morte cerebral.docx",
+      "theme": "neuro-uti",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/neuro-uti/protocolo morte cerebral.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284772Z"
+    },
+    {
       "id": "tce-temi-draldenir",
       "title": "Tce Temi Draldenir",
       "filename": "TCE_TEMI_DrAldenir.pdf",
@@ -1710,6 +1354,22 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.583462"
+    },
+    {
+      "id": "protocolo-morte-cerebral-1",
+      "title": "protocolo_morte_cerebral_1.docx",
+      "filename": "protocolo_morte_cerebral_1.docx",
+      "theme": "neuro-uti",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/neuro-uti/protocolo_morte_cerebral_1.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284866Z"
     },
     {
       "id": "hic-guia-temi",
@@ -1983,6 +1643,38 @@
       "createdAt": "2026-05-08T03:57:01.578146"
     },
     {
+      "id": "prescricoes-uti-draldenir",
+      "title": "Prescricoes_UTI_DrAldenir.docx",
+      "filename": "Prescricoes_UTI_DrAldenir.docx",
+      "theme": "protocolos-institucionais",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/Prescricoes_UTI_DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284605Z"
+    },
+    {
+      "id": "modelos-prontuario-dnar-plantao",
+      "title": "MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
+      "filename": "MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
+      "theme": "protocolos-institucionais",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/MODELOS_PRONTUARIO_DNAR_PLANTAO.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773714Z"
+    },
+    {
       "id": "protocolo-shr-sindrome-hepatorrenal-draldenir",
       "title": "Protocolo Shr Sindrome Hepatorrenal Draldenir",
       "filename": "Protocolo_SHR_Sindrome_Hepatorrenal_DrAldenir.pdf",
@@ -2064,6 +1756,54 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.579354"
+    },
+    {
+      "id": "prescricoes-uti-draldenir",
+      "title": "Prescricoes_UTI_DrAldenir.pdf",
+      "filename": "Prescricoes_UTI_DrAldenir.pdf",
+      "theme": "protocolos-institucionais",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/Prescricoes_UTI_DrAldenir.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284660Z"
+    },
+    {
+      "id": "protocolos-assistenciais-(1)",
+      "title": "Protocolos_Assistenciais (1).pdf",
+      "filename": "Protocolos_Assistenciais (1).pdf",
+      "theme": "protocolos-institucionais",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/Protocolos_Assistenciais (1).pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284665Z"
+    },
+    {
+      "id": "00-master-completo-11-protocolos-santacasa-2026",
+      "title": "00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
+      "filename": "00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
+      "theme": "protocolos-institucionais",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/00_MASTER_COMPLETO_11_Protocolos_SantaCasa_2026.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284677Z"
     },
     {
       "id": "protocolo-complicacoes-intradialiticas-uti-aldenir-rocha",
@@ -2286,6 +2026,22 @@
       "createdAt": "2026-05-08T03:57:01.581495"
     },
     {
+      "id": "nota-evolucao-dnar-lsv",
+      "title": "NOTA_EVOLUCAO_DNAR_LSV.docx",
+      "filename": "NOTA_EVOLUCAO_DNAR_LSV.docx",
+      "theme": "protocolos-institucionais",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/NOTA_EVOLUCAO_DNAR_LSV.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773742Z"
+    },
+    {
       "id": "protocolo-urgencias-dialiticas",
       "title": "Protocolo Urgencias Dialiticas",
       "filename": "Protocolo_Urgencias_Dialiticas.pdf",
@@ -2368,6 +2124,22 @@
       "createdAt": "2026-05-08T03:57:01.582863"
     },
     {
+      "id": "nota-medica-dnar-lsv-prontuario",
+      "title": "NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
+      "filename": "NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
+      "theme": "protocolos-institucionais",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/NOTA_MEDICA_DNAR_LSV_PRONTUARIO.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773780Z"
+    },
+    {
       "id": "protocolo-prona-santacasa-sobral",
       "title": "Protocolo Prona Santacasa Sobral",
       "filename": "Protocolo_Prona_SantaCasa_Sobral.pdf",
@@ -2382,6 +2154,22 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.583320"
+    },
+    {
+      "id": "00-todos-protocolos-clinica-medica-santacasa-2026",
+      "title": "00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
+      "filename": "00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
+      "theme": "protocolos-institucionais",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/00_TODOS_Protocolos_Clinica_Medica_SantaCasa_2026.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284808Z"
     },
     {
       "id": "protocolo-emergencias-hematologicas-scms",
@@ -2448,6 +2236,22 @@
       "createdAt": "2026-05-08T03:57:01.584525"
     },
     {
+      "id": "limitacao-suporte-vida-pac",
+      "title": "LIMITACAO_SUPORTE_VIDA_PAC.pdf",
+      "filename": "LIMITACAO_SUPORTE_VIDA_PAC.pdf",
+      "theme": "protocolos-institucionais",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/LIMITACAO_SUPORTE_VIDA_PAC.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773796Z"
+    },
+    {
       "id": "protocolo-hemorragia-digestiva-alta-uti-final",
       "title": "Protocolo Hemorragia Digestiva Alta Uti Final",
       "filename": "Protocolo_Hemorragia_Digestiva_Alta_UTI_final.docx",
@@ -2496,6 +2300,22 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.585540"
+    },
+    {
+      "id": "rotinas-em-uti-sanar",
+      "title": "Rotinas em UTI SANAR.pdf",
+      "filename": "Rotinas em UTI SANAR.pdf",
+      "theme": "protocolos-institucionais",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/protocolos-institucionais/Rotinas em UTI SANAR.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602742Z"
     },
     {
       "id": "07-protocolo-dor-toracica",
@@ -2733,6 +2553,22 @@
       "createdAt": "2026-05-08T03:57:01.582000"
     },
     {
+      "id": "trials-temi",
+      "title": "Trials Temi.docx",
+      "filename": "Trials Temi.docx",
+      "theme": "temi-prova",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/temi-prova/Trials Temi.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:03:21.284740Z"
+    },
+    {
       "id": "simulado-temi-2026-draldenir",
       "title": "Simulado Temi 2026 Draldenir",
       "filename": "Simulado_TEMI_2026_DrAldenir.pdf",
@@ -2816,6 +2652,134 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.585370"
+    },
+    {
+      "id": "e-book-fundamentos-basicos-pra-plantao-em-uti",
+      "title": "E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf",
+      "filename": "E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf",
+      "theme": "uti-geral",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/uti-geral/E-BOOK_Fundamentos_Basicos_pra_Plantao_em_UTI.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773689Z"
+    },
+    {
+      "id": "mapaprofilaxias-uti-draldenir",
+      "title": "MapaProfilaxias UTI DrAldenir.docx",
+      "filename": "MapaProfilaxias UTI DrAldenir.docx",
+      "theme": "uti-geral",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/uti-geral/MapaProfilaxias UTI DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773695Z"
+    },
+    {
+      "id": "protocolo-npt-uti-draldenir",
+      "title": "Protocolo NPT UTI DrAldenir.docx",
+      "filename": "Protocolo NPT UTI DrAldenir.docx",
+      "theme": "uti-geral",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/uti-geral/Protocolo NPT UTI DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602580Z"
+    },
+    {
+      "id": "nutricao-uti-draldenir",
+      "title": "Nutricao UTI DrAldenir.docx",
+      "filename": "Nutricao UTI DrAldenir.docx",
+      "theme": "uti-geral",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/uti-geral/Nutricao UTI DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602586Z"
+    },
+    {
+      "id": "qualidadeseguranca-uti-draldenir",
+      "title": "QualidadeSeguranca UTI DrAldenir.docx",
+      "filename": "QualidadeSeguranca UTI DrAldenir.docx",
+      "theme": "uti-geral",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/uti-geral/QualidadeSeguranca UTI DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602609Z"
+    },
+    {
+      "id": "parecer-cuidados-paliativos-padrao",
+      "title": "Parecer Cuidados Paliativos PADRAO.pdf",
+      "filename": "Parecer Cuidados Paliativos PADRAO.pdf",
+      "theme": "uti-geral",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/uti-geral/Parecer Cuidados Paliativos PADRAO.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602629Z"
+    },
+    {
+      "id": "multiple-organ-failure--what-you-need-to-know.1",
+      "title": "multiple_organ_failure__what_you_need_to_know.1.pdf",
+      "filename": "multiple_organ_failure__what_you_need_to_know.1.pdf",
+      "theme": "uti-geral",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/uti-geral/multiple_organ_failure__what_you_need_to_know.1.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:06:07.773785Z"
+    },
+    {
+      "id": "protocolo-desmame-vm-sedoanalgesia",
+      "title": "protocolo_desmame_vm_sedoanalgesia.pdf",
+      "filename": "protocolo_desmame_vm_sedoanalgesia.pdf",
+      "theme": "vm-sdra",
+      "tipo": "pdf",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/vm-sdra/protocolo_desmame_vm_sedoanalgesia.pdf",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602521Z"
     },
     {
       "id": "suporte-respiratorio-decisao-uti-sara-grave",
@@ -3269,6 +3233,22 @@
       "ia_origem": "Auto-classificado",
       "data": "2026-05",
       "createdAt": "2026-05-08T03:57:01.584027"
+    },
+    {
+      "id": "protocolo-broncoespasmo-grave-uti-draldenir",
+      "title": "Protocolo Broncoespasmo Grave UTI DrAldenir.docx",
+      "filename": "Protocolo Broncoespasmo Grave UTI DrAldenir.docx",
+      "theme": "vm-sdra",
+      "tipo": "word",
+      "tags": [
+        "revisar"
+      ],
+      "status": "catalogado",
+      "path": "acervo/vm-sdra/Protocolo Broncoespasmo Grave UTI DrAldenir.docx",
+      "resumo": "Aguardando classificação manual.",
+      "ia_origem": "Sistema",
+      "data": "2026-05",
+      "createdAt": "2026-05-10T17:05:30.602711Z"
     },
     {
       "id": "simulador-suporte-respiratorio-vm-sara",
