@@ -386,6 +386,15 @@ async function init() {
     roadmap = resRoad.roadmap || [];
     const autoManifest = resAuto.files || [];
     
+    // Resolver caminhos quebrados do catálogo usando o manifesto real do inbox (GitHub Pages)
+    const inboxByName = new Map(autoManifest.map(f => [f.name, f.path]));
+    (catalog.items || []).forEach(item => {
+      const fileName = item.filename || (item.path || '').split('/').pop();
+      if (fileName && inboxByName.has(fileName) && (item.path || '').startsWith('acervo/')) {
+        item.path = inboxByName.get(fileName);
+      }
+    });
+    
     // Sincronizar arquivos do manifesto automático que não estão no catálogo
     autoManifest.forEach(autoFile => {
         const exists = catalog.items.find(i => i.path === autoFile.path || i.filename === autoFile.name);
