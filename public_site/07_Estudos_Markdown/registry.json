@@ -4,6 +4,17 @@
   "purpose": "Registro central dos estudos em Markdown transformado, com versões, temas, status e conexões.",
   "documents": [
     {
+      "id": "updown-005-cad-uti",
+      "title": "UPDOWN #005 — Cetoacidose Diabética (CAD) na UTI (2026)",
+      "icon": "🧪",
+      "path": "content/intensiva/cetoacidose-diabetica-uti.md",
+      "theme": "endocrino-metabolico",
+      "status": "ativo",
+      "version": "v1.0",
+      "summary": "Protocolo completo de CAD: manejo de insulina, reposição de potássio, correção de acidose e critérios de resolução.",
+      "tags": ["cad", "diabetes", "endocrino", "uti", "emergencia", "temi"]
+    },
+    {
       "id": "updown-004-avc-agudo",
       "title": "UPDOWN #004 — AVC Agudo: Manejo (2026)",
       "icon": "🧠",
