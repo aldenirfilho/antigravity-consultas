@@ -1,0 +1,23 @@
+{
+  "updown_id": "updown-YYYYMMDD-slug",
+  "connections": {
+    "biblioteca_refs": [
+      {
+        "id": "biblioteca-item-id",
+        "reason": "Referência principal do tema"
+      }
+    ],
+    "imagens_refs": [
+      {
+        "path": "imagens/caminho-da-imagem.png",
+        "reason": "Figura explicativa"
+      }
+    ],
+    "questoes_refs": [
+      {
+        "id": "questao-item-id",
+        "reason": "Treino relacionado"
+      }
+    ]
+  }
+}
