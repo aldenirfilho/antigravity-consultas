@@ -4,6 +4,17 @@
   "purpose": "Registro central dos estudos em Markdown transformado, com versões, temas, status e conexões.",
   "documents": [
     {
+      "id": "updown-004-avc-agudo",
+      "title": "UPDOWN #004 — AVC Agudo: Manejo (2026)",
+      "icon": "🧠",
+      "path": "content/avc-agudo-isquemico/index.html",
+      "theme": "neuro-uti",
+      "status": "ativo",
+      "version": "v1.0",
+      "summary": "Protocolo completo de AVC Agudo: trombólise (tenecteplase/alteplase), trombectomia, checklists de segurança e questões TEMI.",
+      "tags": ["avc", "neuro", "trombólise", "temi", "uti", "emergencia"]
+    },
+    {
       "id": "updown-003-les-autoanticorpos",
       "title": "UPDOWN #003 — LES: Autoanticorpos (dsDNA, Sm, U1 RNP)",
       "icon": "🧬",
