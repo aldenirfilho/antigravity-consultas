@@ -134,7 +134,11 @@ Se a publicação apresentar regressão, reverter o commit da release por um nov
 
 ## 9. Publicação e produção
 
-Esta seção deve ser preenchida com o commit, a pull request, o workflow e a URL de produção após a conclusão dos gates remotos.
+- Commit principal da recuperação: `75ea417b1092d74eb2f61bd18a0e763065c10326`.
+- Pull request: [#8 — Restore and upgrade the medical card feed](https://github.com/aldenirfilho/antigravity-consultas/pull/8).
+- Branch remota: `codex/card-feed-recovery-upgrade`.
+- URL alvo de produção: [Card Feed — Antigravity Consultas](https://aldenirfilho.github.io/antigravity-consultas/05_Midia_E_Feed/index.html).
+- Estado deste registro: PR em modo rascunho, aguardando os gates remotos, merge e teste automatizado no GitHub Pages. O resultado final permanece verificável no histórico da PR e do workflow de deploy.
 
 ## 10. Próximos upgrades recomendados
 
