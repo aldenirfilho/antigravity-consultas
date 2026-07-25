@@ -110,7 +110,15 @@ class AccessiblePwaTests(unittest.TestCase):
         self.assertIn("assets/icons/ios/apple-touch-icon-120.png", home)
         self.assertIn('name="apple-mobile-web-app-capable" content="yes"', home)
         self.assertIn('name="apple-mobile-web-app-title" content="Antigravity"', home)
-        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v5`', worker)
+        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v6`', worker)
+        self.assertIn("await self.skipWaiting()", worker)
+        self.assertIn("await self.clients.claim()", worker)
+        range_guard = 'if (request.headers.has("range")) return fetch(request);'
+        self.assertIn(range_guard, worker)
+        self.assertLess(
+            worker.index(range_guard),
+            worker.index("const cached = await caches.match(request);"),
+        )
         self.assertIn('new URL("./downloads/", self.registration.scope)', worker)
         self.assertIn('cache: "no-store"', worker)
         self.assertIn("networkOnlyDownload(request)", worker)
@@ -263,6 +271,70 @@ class AccessiblePwaTests(unittest.TestCase):
             self.assertIn(foreground, home)
             self.assertGreaterEqual(
                 contrast_ratio(foreground, light_background),
+                4.5,
+                foreground,
+            )
+
+    def test_clarity_mode_reaches_offline_and_not_found_surfaces(self) -> None:
+        for relative in ("404.html", "offline.html"):
+            page = (ROOT / relative).read_text(encoding="utf-8")
+            with self.subTest(relative=relative):
+                self.assertIn("antigravity:a11y:v1", page)
+                self.assertIn("Visualização clara", page)
+                self.assertIn("a11y-light", page)
+                self.assertIn("a11y-contrast", page)
+                self.assertIn("#ffffff", page)
+                self.assertIn("#000000", page)
+                self.assertIn("@media print", page)
+                self.assertIn("event.newValue", page)
+                self.assertIn("matchMedia", page)
+                self.assertIn("addListener", page)
+                self.assertIn("theme", page)
+                self.assertIn("system", page)
+                self.assertIn("persist", page)
+        not_found = (ROOT / "404.html").read_text(encoding="utf-8")
+        self.assertIn(
+            "html.a11y-contrast .btn-404.primary",
+            not_found,
+        )
+        self.assertIn("border: 2px solid #fff", not_found)
+
+    def test_clarity_palette_and_initialization_contracts(self) -> None:
+        home = (ROOT / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn("--bg:#fff", home)
+        self.assertIn("--brd:#d3e0ea;--brd-h:#71869a;", home)
+        self.assertGreaterEqual(contrast_ratio("#71869a", "#ffffff"), 3)
+        self.assertIn("@media print", home)
+        self.assertIn(
+            ".hero h1 .hl,.metric-cell .val,.temi-stat-big{",
+            home,
+        )
+        self.assertIn("-webkit-text-fill-color:currentColor!important;", home)
+        self.assertIn(".module-card p,.dsf-excerpt{", home)
+        self.assertIn("-webkit-line-clamp:unset!important", home)
+        self.assertIn("overflow:visible!important", home)
+        self.assertIn("document.documentElement.style.colorScheme", home)
+        self.assertIn("a11yPrefs.clarity=resolvedTheme==='light';", home)
+        self.assertIn("window.addEventListener('storage',event=>{", home)
+        self.assertIn("event.newValue", home)
+        self.assertGreaterEqual(home.count("applyA11y({persist:false})"), 3)
+        self.assertIn("themeColorMeta?.setAttribute(", home)
+        self.assertIn("appleStatusMeta?.setAttribute(", home)
+
+        for foreground in (
+            "#10263b",
+            "#334f67",
+            "#536b7d",
+            "#006f7d",
+            "#6548b8",
+            "#087a4e",
+            "#865800",
+            "#b42335",
+            "#175cd3",
+        ):
+            self.assertGreaterEqual(
+                contrast_ratio(foreground, "#ffffff"),
                 4.5,
                 foreground,
             )
