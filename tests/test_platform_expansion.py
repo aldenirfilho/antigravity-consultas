@@ -111,7 +111,7 @@ class AccessiblePwaTests(unittest.TestCase):
         self.assertIn("assets/icons/ios/apple-touch-icon-120.png", home)
         self.assertIn('name="apple-mobile-web-app-capable" content="yes"', home)
         self.assertIn('name="apple-mobile-web-app-title" content="Antigravity"', home)
-        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v6`', worker)
+        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v7`', worker)
         self.assertIn("await self.skipWaiting()", worker)
         self.assertIn("await self.clients.claim()", worker)
         range_guard = 'if (request.headers.has("range")) return fetch(request);'
@@ -129,6 +129,7 @@ class AccessiblePwaTests(unittest.TestCase):
         self.assertIn("Antigravity-Consultas-iPhone-Icones.zip", home)
         self.assertIn('href="docs_usuario/ACESSO_DOCK_MAC/"', home)
         self.assertIn('href="docs_usuario/OPERACAO_CONTINUA/"', home)
+        self.assertIn('href="docs_usuario/ALIMENTAR_CONTEUDO_SITE/"', home)
         self.assertIn("Baixar atalho opcional", home)
         self.assertIn("não contém .app, script ou instalador", home)
 
@@ -464,6 +465,9 @@ class OperationalPackageTests(unittest.TestCase):
         operation = (ROOT / "docs_usuario/OPERACAO_CONTINUA.md").read_text(
             encoding="utf-8"
         )
+        feeding = (ROOT / "docs_usuario/ALIMENTAR_CONTEUDO_SITE.md").read_text(
+            encoding="utf-8"
+        )
         dock = (ROOT / "docs_usuario/ACESSO_DOCK_MAC.md").read_text(encoding="utf-8")
         windows = (ROOT / "docs_usuario/ACESSO_WINDOWS.md").read_text(encoding="utf-8")
         iphone = (ROOT / "docs_usuario/ACESSO_IPHONE.md").read_text(encoding="utf-8")
@@ -476,6 +480,25 @@ class OperationalPackageTests(unittest.TestCase):
             "zero dados identificáveis",
         ):
             self.assertIn(expected, operation)
+        for expected in (
+            "Os 16 cartões",
+            "01_UpDown_Hub/content/",
+            "update_library_publication_baseline.py --approve",
+            "scan_card_feed.py",
+            "scan_content_module.py",
+            "Banco TEMI estruturado",
+            "AVC Agudo e LES Autoanticorpos",
+            "Hematologia e Reumatologia Crítica",
+            "RespiraSense e RespiraCrit",
+            "Apps e calculadoras",
+            "admin/desafios.html",
+            "build_desafios.py",
+            "build_mnemonicos.py",
+            "02_Biblioteca_IA_Engine/data/biblioteca_catalogo.json",
+            "publication_guard.py",
+            "Publicação definitiva",
+        ):
+            self.assertIn(expected, feeding)
         self.assertIn("Safari", dock)
         self.assertIn("Dock", dock)
         self.assertIn("Gatekeeper", dock)
@@ -491,9 +514,11 @@ class OperationalPackageTests(unittest.TestCase):
         guide_root = ROOT / "docs_usuario"
         hub = (guide_root / "index.html").read_text(encoding="utf-8")
         reader = (guide_root / "guide-reader.js").read_text(encoding="utf-8")
+        reader_css = (guide_root / "guide-reader.css").read_text(encoding="utf-8")
         worker = (ROOT / "sw.js").read_text(encoding="utf-8")
 
         expected = {
+            "ALIMENTAR_CONTEUDO_SITE": "ALIMENTAR_CONTEUDO_SITE.md",
             "OPERACAO_CONTINUA": "OPERACAO_CONTINUA.md",
             "ACESSO_DOCK_MAC": "ACESSO_DOCK_MAC.md",
             "ACESSO_WINDOWS": "ACESSO_WINDOWS.md",
@@ -508,11 +533,21 @@ class OperationalPackageTests(unittest.TestCase):
             self.assertIn(f"./{route}/", hub)
             self.assertIn(f"./docs_usuario/{route}/index.html", worker)
 
+        feeding_page = (
+            guide_root / "ALIMENTAR_CONTEUDO_SITE" / "index.html"
+        ).read_text(encoding="utf-8")
+        self.assertIn('data-toc-levels="2"', feeding_page)
         self.assertIn("escapeHtml", reader)
         self.assertIn("safeUrl", reader)
+        self.assertIn("safeGuideSourceUrl", reader)
+        self.assertIn("resolved.origin !== window.location.origin", reader)
+        self.assertIn("link.href = safeGuideSourceUrl(source)", reader)
         self.assertIn('article.setAttribute("aria-busy", "false")', reader)
         self.assertNotIn("eval(", reader)
         self.assertNotIn("cdn.", hub)
+        self.assertIn(".guide :not(pre)>code{overflow-wrap:anywhere", reader_css)
+        self.assertIn("max-height:min(65vh,34rem)", reader_css)
+        self.assertIn('script?.dataset.tocLevels || "2,3"', reader)
 
     def test_corrected_canonical_routes_exist(self) -> None:
         connections = load_json("data/connections.json")

@@ -1,7 +1,7 @@
 "use strict";
 
 const CACHE_PREFIX = "antigravity-root-";
-const CACHE_NAME = `${CACHE_PREFIX}v6`;
+const CACHE_NAME = `${CACHE_PREFIX}v7`;
 const SHELL_ASSETS = [
   "./",
   "./index.html",
@@ -25,6 +25,8 @@ const WARM_ASSETS = [
   "./docs_usuario/guide-reader.js",
   "./docs_usuario/OPERACAO_CONTINUA/index.html",
   "./docs_usuario/OPERACAO_CONTINUA.md",
+  "./docs_usuario/ALIMENTAR_CONTEUDO_SITE/index.html",
+  "./docs_usuario/ALIMENTAR_CONTEUDO_SITE.md",
   "./docs_usuario/ACESSO_DOCK_MAC/index.html",
   "./docs_usuario/ACESSO_DOCK_MAC.md",
   "./docs_usuario/ACESSO_WINDOWS/index.html",

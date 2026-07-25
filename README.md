@@ -12,6 +12,7 @@
 - [📘 Instalar no Windows sem privilégios administrativos](docs_usuario/ACESSO_WINDOWS/)
 - [📱 Baixar os ícones para iPhone](downloads/Antigravity-Consultas-iPhone-Icones.zip)
 - [📘 Adicionar o Antigravity à Tela de Início do iPhone](docs_usuario/ACESSO_IPHONE/)
+- [🧭 Alimentar cada seção e bloco do site, passo a passo](docs_usuario/ALIMENTAR_CONTEUDO_SITE/)
 - [🔄 Alimentar Feed, Biblioteca, módulos e apps com segurança](docs_usuario/OPERACAO_CONTINUA/)
 - [📚 Abrir a central HTML de guias](docs_usuario/)
 - [🩸 Abrir Hematologia Crítica](01_Modulos_Clinicos/Hematologia_Critica/index.html)
