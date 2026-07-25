@@ -148,11 +148,24 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-        with:
-          sparse-checkout: downloads
-          sparse-checkout-cone-mode: true
+      - name: Baixar pacote e checksum do commit
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $commit = '${{ github.event.pull_request.head.sha || github.sha }}'
+          $baseUrl = "https://raw.githubusercontent.com/${{ github.repository }}/$commit/downloads"
+          New-Item -ItemType Directory -Path 'downloads' -Force | Out-Null
+          foreach ($filename in @(
+            'Antigravity-Consultas-Windows.zip',
+            'SHA256SUMS.txt'
+          )) {
+            & curl.exe --fail --location --retry 3 `
+              --output (Join-Path 'downloads' $filename) `
+              "$baseUrl/$filename"
+            if ($LASTEXITCODE -ne 0) {
+              throw "Falha ao baixar $filename do commit $commit."
+            }
+          }
 
       - name: Instalar, conferir e desinstalar em perfil padrão
         shell: pwsh
