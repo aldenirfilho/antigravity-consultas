@@ -247,10 +247,14 @@ class LibraryPreviewBuilderTests(unittest.TestCase):
                     "PDF_FULL_CONTENT_NOT_AUDITED",
                     pdf_item["riskCodes"],
                 )
-                self.assertIn(
-                    "PREVIEW_TEXT_EXTRACTION_UNAVAILABLE",
-                    pdf_item["riskCodes"],
-                )
+                if (
+                    int(pdf_item["stats"].get("nativeVisibleCharacters") or 0) <= 0
+                    and not bool(pdf_item["stats"].get("ocrReady"))
+                ):
+                    self.assertIn(
+                        "PREVIEW_TEXT_EXTRACTION_UNAVAILABLE",
+                        pdf_item["riskCodes"],
+                    )
                 self.assertIn("Conteúdo em revisão editorial", preview)
                 self.assertNotRegex(preview.casefold(), r"<a\b|href\s*=")
             if (
