@@ -97,6 +97,12 @@ EDITORIAL_DATA_PREFIX = "data/editorial/"
 EDITORIAL_PUBLIC_FILES = {
     "data/editorial/editorial-provenance.json",
 }
+PUBLIC_BUILD_EXCLUSIONS = frozenset(
+    {
+        "01_UpDown_Hub/content/reumatologia/les-manifestacoes/metadata.json",
+        "05_Midia_E_Feed/data/recovery_manifest.json",
+    }
+)
 PUBLIC_DOWNLOADS = (
     "downloads/Antigravity-Consultas-macOS.zip",
     "downloads/Antigravity-Consultas-Windows.zip",
@@ -415,6 +421,10 @@ def copy_entry(
     library_allowlist: set[str],
     card_allowlist: set[str],
 ) -> None:
+    canonical = canonical_relative(relative)
+    if canonical in PUBLIC_BUILD_EXCLUSIONS:
+        return
+
     source = root / relative
     destination = site / relative
     if should_skip(root, source):
@@ -432,7 +442,6 @@ def copy_entry(
                     card_allowlist,
                 )
     elif source.is_file():
-        canonical = canonical_relative(relative)
         if canonical.startswith(LIBRARY_ACERVO_PREFIX) and canonical not in library_allowlist:
             raise ValueError(f"Arquivo da Biblioteca fora da allowlist: {relative}")
         if canonical.startswith(CARD_PUBLIC_PREFIX) and canonical not in card_allowlist:
