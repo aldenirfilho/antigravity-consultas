@@ -63,6 +63,8 @@ const WARM_ASSETS = [
   "./docs_usuario/index.html",
   "./docs_usuario/guide-reader.css",
   "./docs_usuario/guide-reader.js",
+  "./docs_usuario/SINCRONIZACAO_MACS_WEB/index.html",
+  "./docs_usuario/SINCRONIZACAO_MACS_WEB.md",
   "./docs_usuario/OPERACAO_CONTINUA/index.html",
   "./docs_usuario/OPERACAO_CONTINUA.md",
   "./docs_usuario/ALIMENTAR_CONTEUDO_SITE/index.html",

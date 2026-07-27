@@ -192,6 +192,7 @@ jobs:
           test -s site/docs_usuario/PORTAL_VIVO_PUBLICACAO.md
           test -s site/docs_usuario/CENTRO_TRIPULACAO.md
           test -s site/docs_usuario/PROXIMAS_ETAPAS.md
+          test -s site/docs_usuario/SINCRONIZACAO_MACS_WEB.md
           test -s site/docs_usuario/OPERACAO_CONTINUA.md
           test -s site/docs_usuario/ACESSO_DOCK_MAC.md
           test -s site/docs_usuario/ACESSO_WINDOWS.md
@@ -204,6 +205,7 @@ jobs:
           test -s site/docs_usuario/PORTAL_VIVO_PUBLICACAO/index.html
           test -s site/docs_usuario/CENTRO_TRIPULACAO/index.html
           test -s site/docs_usuario/PROXIMAS_ETAPAS/index.html
+          test -s site/docs_usuario/SINCRONIZACAO_MACS_WEB/index.html
           test -s site/docs_usuario/OPERACAO_CONTINUA/index.html
           test -s site/docs_usuario/ACESSO_DOCK_MAC/index.html
           test -s site/docs_usuario/ACESSO_WINDOWS/index.html

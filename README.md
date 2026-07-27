@@ -14,6 +14,7 @@
 - [📘 Adicionar o Antigravity à Tela de Início do iPhone](docs_usuario/ACESSO_IPHONE/)
 - [🧭 Alimentar cada seção e bloco do site, passo a passo](docs_usuario/ALIMENTAR_CONTEUDO_SITE/)
 - [🔄 Alimentar Feed, Biblioteca, módulos e apps com segurança](docs_usuario/OPERACAO_CONTINUA/)
+- [🔄 Sincronizar Mac Air, Mac Pro e web com segurança](docs_usuario/SINCRONIZACAO_MACS_WEB/)
 - [📚 Abrir a central HTML de guias](docs_usuario/)
 - [🩸 Abrir Hematologia Crítica](01_Modulos_Clinicos/Hematologia_Critica/index.html)
 - [🧬 Abrir Reumatologia Crítica](01_Modulos_Clinicos/Reumatologia_Critica/index.html)
