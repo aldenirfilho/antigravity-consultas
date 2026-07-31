@@ -615,6 +615,52 @@
           "accessedAt": "2026-07-30"
         }
       ]
+    },
+    {
+      "id": "release-biblioteca-visual-central-bvc-001-2026-07-31",
+      "classification": "public-cited",
+      "paths": [
+        "05_Midia_E_Feed/biblioteca-visual/assets/cards/acra-cognitivo.jpg",
+        "05_Midia_E_Feed/biblioteca-visual/assets/cards/loop-aprendizagem.jpg",
+        "05_Midia_E_Feed/biblioteca-visual/assets/cards/orquestracao-pacote.jpg",
+        "05_Midia_E_Feed/biblioteca-visual/data/catalog.v1.json",
+        "05_Midia_E_Feed/biblioteca-visual/data/graph.v1.json",
+        "05_Midia_E_Feed/biblioteca-visual/index.html",
+        "05_Midia_E_Feed/biblioteca-visual/module.manifest.json"
+      ],
+      "publishTargets": [
+        "github-pages"
+      ],
+      "ownerApproval": true,
+      "reviewer": "Codex — criação e exposição do lote piloto solicitadas explicitamente pelo proprietário; registro limitado à branch e ao PR rascunho #50, sem autorização de merge ou deploy",
+      "reviewedAt": "2026-07-31T02:03:17.503Z",
+      "rights": {
+        "basis": "owned",
+        "statement": "Código, catálogo, grafo, legendas e derivados das três imagens GPT fornecidas pelo proprietário foram produzidos para a Biblioteca Visual NEXUS e autorizados para este lote piloto. O registro não concede direitos sobre material de terceiros nem autoriza reutilização fora do projeto."
+      },
+      "professionalClaims": [],
+      "personalData": {
+        "contains": false
+      },
+      "medical": true,
+      "clinicalReviewer": "Revisão clínica humana final pendente; o piloto contém apenas metodologia educacional ACRA/Turbo TEMI, não inclui dados de pacientes, prescrição, diagnóstico ou protocolo assistencial e permanece em revisão editorial.",
+      "sources": [
+        {
+          "title": "Test-enhanced learning: taking memory tests improves long-term retention",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16507066/",
+          "accessedAt": "2026-07-31"
+        },
+        {
+          "title": "Distributed practice in verbal recall tasks: a review and quantitative synthesis",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16719566/",
+          "accessedAt": "2026-07-31"
+        },
+        {
+          "title": "Microlearning in health professions education: a scoping review",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31339105/",
+          "accessedAt": "2026-07-31"
+        }
+      ]
     }
   ],
   "exampleTemplates": [
