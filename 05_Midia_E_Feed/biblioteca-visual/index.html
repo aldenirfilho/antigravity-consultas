@@ -1,0 +1,1131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071422">
+  <meta name="color-scheme" content="dark light">
+  <meta
+    name="description"
+    content="Biblioteca Visual Central NEXUS: imagens GPT organizadas como micropartículas de estudo Turbo TEMI."
+  >
+  <title>Biblioteca Visual Central · Antigravity</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #040b16;
+      --surface: #0a1727;
+      --surface-2: #10243a;
+      --line: rgba(176, 214, 244, 0.18);
+      --text: #eef7ff;
+      --muted: #9cb5c9;
+      --cyan: #64e9ff;
+      --violet: #b799ff;
+      --green: #5cf2ad;
+      --orange: #ffbd66;
+      --red: #ff7f8f;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+      --radius: 22px;
+      --radius-small: 14px;
+      --page: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100dvh;
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 16% 0, rgba(100, 233, 255, 0.11), transparent 32rem),
+        radial-gradient(circle at 92% 12%, rgba(183, 153, 255, 0.12), transparent 30rem),
+        var(--bg);
+      font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button,
+    .button {
+      min-height: 44px;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 10px;
+      left: 10px;
+      padding: 10px 14px;
+      color: #06121f;
+      border-radius: 10px;
+      background: #fff;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus {
+      transform: none;
+    }
+
+    .topbar {
+      position: sticky;
+      z-index: 30;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar-inner,
+    main,
+    footer {
+      width: min(var(--page), calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .topbar-inner {
+      display: flex;
+      min-height: 70px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding:
+        max(10px, env(safe-area-inset-top))
+        max(0px, env(safe-area-inset-right))
+        10px
+        max(0px, env(safe-area-inset-left));
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid rgba(100, 233, 255, 0.34);
+      border-radius: 11px;
+      background: rgba(100, 233, 255, 0.09);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      color: var(--cyan);
+      border-color: var(--cyan);
+    }
+
+    main {
+      padding: 54px 0 80px;
+    }
+
+    .hero {
+      display: grid;
+      overflow: hidden;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: 30px;
+      padding: clamp(24px, 5vw, 56px);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(100, 233, 255, 0.08), transparent 44%),
+        linear-gradient(315deg, rgba(183, 153, 255, 0.09), transparent 48%),
+        var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 12px;
+      color: var(--cyan);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 13ch;
+      margin-bottom: 16px;
+      font-size: clamp(2.25rem, 6vw, 5.2rem);
+      line-height: 0.97;
+      letter-spacing: -0.055em;
+    }
+
+    h1 span {
+      color: var(--violet);
+    }
+
+    .hero-copy {
+      max-width: 66ch;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.8vw, 1.18rem);
+    }
+
+    .hero-panel {
+      display: grid;
+      align-content: start;
+      gap: 12px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(3, 10, 20, 0.5);
+    }
+
+    .status {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      color: var(--orange);
+      border: 1px solid rgba(255, 189, 102, 0.32);
+      border-radius: 999px;
+      background: rgba(255, 189, 102, 0.08);
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .hero-panel strong {
+      font-size: 1.1rem;
+    }
+
+    .hero-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .metric {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--surface-2);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--green);
+      font-size: 1.35rem;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.72rem;
+    }
+
+    .section {
+      padding-top: 72px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      margin-bottom: 5px;
+      font-size: clamp(1.7rem, 4vw, 2.65rem);
+      letter-spacing: -0.035em;
+    }
+
+    .section-head p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .search {
+      min-height: 48px;
+      width: 100%;
+      padding: 11px 15px;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--surface);
+    }
+
+    .search::placeholder {
+      color: #7892a8;
+    }
+
+    .filters {
+      display: flex;
+      overflow-x: auto;
+      gap: 8px;
+      padding-bottom: 3px;
+    }
+
+    .filter {
+      flex: 0 0 auto;
+      min-height: 48px;
+      padding: 10px 14px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .filter[aria-pressed="true"] {
+      color: #06121f;
+      border-color: var(--cyan);
+      background: var(--cyan);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      display: flex;
+      min-width: 0;
+      overflow: hidden;
+      flex-direction: column;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.21);
+    }
+
+    .card[hidden] {
+      display: none;
+    }
+
+    .card-figure {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      background: #02060b;
+      aspect-ratio: 16 / 9;
+    }
+
+    .card-figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 180ms ease;
+    }
+
+    .card:hover .card-figure img {
+      transform: scale(1.018);
+    }
+
+    .ai-label {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      padding: 5px 8px;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 8px;
+      background: rgba(3, 10, 20, 0.82);
+      font-size: 0.64rem;
+      font-weight: 900;
+      backdrop-filter: blur(8px);
+    }
+
+    .card-body {
+      display: flex;
+      min-height: 100%;
+      flex: 1;
+      flex-direction: column;
+      padding: 19px;
+    }
+
+    .card-kicker {
+      margin-bottom: 6px;
+      color: var(--cyan);
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      margin-bottom: 9px;
+      font-size: 1.25rem;
+      line-height: 1.18;
+    }
+
+    .card-copy {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: auto 0 17px;
+      padding-top: 14px;
+    }
+
+    .tag {
+      padding: 5px 8px;
+      color: #c7dbeb;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface-2);
+      font-size: 0.66rem;
+      font-weight: 800;
+    }
+
+    .card-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .study-button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      color: #06121f;
+      border: 0;
+      border-radius: 11px;
+      background: var(--green);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .studied {
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 850;
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      padding: 28px;
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .graph {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+      gap: 20px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .graph-copy p {
+      color: var(--muted);
+    }
+
+    .graph-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .graph-list li {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-2);
+      font-size: 0.8rem;
+    }
+
+    .edge {
+      color: var(--violet);
+      font-size: 0.7rem;
+      font-weight: 900;
+    }
+
+    dialog {
+      width: min(980px, calc(100% - 24px));
+      max-height: calc(100dvh - 24px);
+      padding: 0;
+      overflow: hidden;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    dialog::backdrop {
+      background: rgba(1, 6, 12, 0.82);
+      backdrop-filter: blur(6px);
+    }
+
+    .dialog-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      max-height: calc(100dvh - 26px);
+      overflow: auto;
+    }
+
+    .dialog-media {
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      background: #010509;
+    }
+
+    .dialog-media img {
+      width: 100%;
+      height: auto;
+      max-height: 78dvh;
+      object-fit: contain;
+    }
+
+    .dialog-body {
+      position: relative;
+      padding: 26px;
+    }
+
+    .dialog-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--surface-2);
+      cursor: pointer;
+    }
+
+    .dialog-body h2 {
+      padding-right: 48px;
+      font-size: 1.7rem;
+      line-height: 1.12;
+    }
+
+    .recall {
+      margin-top: 20px;
+      padding: 16px;
+      border: 1px solid rgba(183, 153, 255, 0.34);
+      border-radius: var(--radius-small);
+      background: rgba(183, 153, 255, 0.07);
+    }
+
+    .recall strong {
+      color: var(--violet);
+    }
+
+    details {
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-2);
+    }
+
+    summary {
+      min-height: 44px;
+      padding: 11px 13px;
+      color: var(--green);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    details p {
+      padding: 0 13px 13px;
+      color: var(--muted);
+    }
+
+    footer {
+      padding: 28px 0 max(34px, env(safe-area-inset-bottom));
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .graph,
+      .dialog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .dialog-media img {
+        max-height: 52dvh;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        align-items: flex-start;
+      }
+
+      .brand {
+        max-width: 18ch;
+      }
+
+      .topbar .button {
+        padding-inline: 11px;
+      }
+
+      main {
+        padding-top: 28px;
+      }
+
+      .hero {
+        padding: 23px;
+        border-radius: 22px;
+      }
+
+      h1 {
+        font-size: clamp(2.15rem, 15vw, 3.55rem);
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .controls,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding-top: 54px;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .dialog-body {
+        padding: 22px;
+      }
+
+      .graph-list li {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#atlas">Pular para o atlas</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="../index.html">
+        <span aria-hidden="true">🌌</span>
+        Antigravity · Biblioteca Visual
+      </a>
+      <a class="button" href="../index.html">← Card Feed</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">NEXUS360X · Turbo TEMI · TDAH-friendly</p>
+        <h1 id="hero-title">Biblioteca <span>Visual Central</span></h1>
+        <p class="hero-copy">
+          Cada imagem é uma micropartícula ativa: observe, recupere a ideia sem
+          consultar, confira a resposta e avance pelo grafo.
+        </p>
+      </div>
+      <aside class="hero-panel" aria-label="Estado do lote">
+        <span class="status">Prévia editorial</span>
+        <strong>Lote BVC-ANTIGRAVITY-001</strong>
+        <p>
+          Piloto reversível com derivados P0, sem dados de pacientes, links privados
+          ou geração de imagem em tempo de execução.
+        </p>
+        <div class="metrics" aria-label="Métricas do lote">
+          <div class="metric">
+            <strong id="metric-cards">3</strong>
+            <span>imagens estudáveis</span>
+          </div>
+          <div class="metric">
+            <strong id="metric-tags">15</strong>
+            <span>hashtags</span>
+          </div>
+          <div class="metric">
+            <strong id="metric-studied">0</strong>
+            <span>estudadas aqui</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="atlas" aria-labelledby="atlas-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Atlas inicial</p>
+          <h2 id="atlas-title">Estudar agora</h2>
+          <p>Comece por uma imagem. A resposta fica escondida até você tentar recordar.</p>
+        </div>
+        <span id="result-count" aria-live="polite">Carregando…</span>
+      </div>
+
+      <div class="controls">
+        <label>
+          <span class="skip-link">Buscar no atlas</span>
+          <input
+            class="search"
+            id="search"
+            type="search"
+            placeholder="Buscar tema, legenda ou hashtag…"
+            autocomplete="off"
+          >
+        </label>
+        <div class="filters" aria-label="Filtrar por tema">
+          <button class="filter" type="button" data-theme="all" aria-pressed="true">Todos</button>
+          <button class="filter" type="button" data-theme="acra" aria-pressed="false">ACRA</button>
+          <button class="filter" type="button" data-theme="turbo-temi" aria-pressed="false">
+            Turbo TEMI
+          </button>
+        </div>
+      </div>
+
+      <div class="grid" id="card-grid" aria-live="polite">
+        <p class="empty">Carregando o lote visual…</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="graph-title">
+      <div class="graph">
+        <div class="graph-copy">
+          <p class="eyebrow">Grafo inicial</p>
+          <h2 id="graph-title">Conexões que orientam a próxima imagem</h2>
+          <p>
+            As arestas preservam sequência, pertencimento e suporte. O atlas cresce
+            por relações úteis, não por acúmulo de arquivos.
+          </p>
+        </div>
+        <ul class="graph-list" id="graph-list">
+          <li>Carregando relações…</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="study-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-grid">
+      <div class="dialog-media">
+        <img id="dialog-image" alt="">
+      </div>
+      <div class="dialog-body">
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="Fechar">×</button>
+        <p class="eyebrow" id="dialog-theme"></p>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-caption"></p>
+        <div class="recall">
+          <strong>Pergunta de recuperação</strong>
+          <p id="dialog-question"></p>
+          <details>
+            <summary>Mostrar resposta essencial</summary>
+            <p id="dialog-answer"></p>
+          </details>
+        </div>
+        <p id="dialog-resume"></p>
+        <button class="study-button" id="mark-studied" type="button">Marcar como estudada</button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer>
+    Biblioteca Visual Central · imagem conceitual criada por IA e rotulada como
+    não diagnóstica · conteúdo educacional em revisão editorial.
+  </footer>
+
+  <script>
+    "use strict";
+
+    const catalogUrl = "data/catalog.v1.json";
+    const graphUrl = "data/graph.v1.json";
+    const progressKey = "antigravity:bvc:studied:v1";
+    const state = {
+      cards: [],
+      graph: null,
+      theme: "all",
+      query: "",
+      selected: null,
+      studied: new Set()
+    };
+
+    const grid = document.getElementById("card-grid");
+    const resultCount = document.getElementById("result-count");
+    const search = document.getElementById("search");
+    const dialog = document.getElementById("study-dialog");
+    const dialogImage = document.getElementById("dialog-image");
+    const dialogTitle = document.getElementById("dialog-title");
+    const dialogTheme = document.getElementById("dialog-theme");
+    const dialogCaption = document.getElementById("dialog-caption");
+    const dialogQuestion = document.getElementById("dialog-question");
+    const dialogAnswer = document.getElementById("dialog-answer");
+    const dialogResume = document.getElementById("dialog-resume");
+    const markStudied = document.getElementById("mark-studied");
+    let returnFocus = null;
+
+    function loadStudied() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(progressKey) || "[]");
+        if (Array.isArray(saved)) state.studied = new Set(saved.filter(Boolean));
+      } catch (_) {
+        state.studied = new Set();
+      }
+    }
+
+    function persistStudied() {
+      try {
+        localStorage.setItem(progressKey, JSON.stringify([...state.studied]));
+      } catch (_) {
+        // O estudo continua funcional sem persistência local.
+      }
+    }
+
+    function assertCatalog(payload) {
+      if (
+        !payload ||
+        payload.schemaVersion !== "bvc-antigravity-v1" ||
+        !Array.isArray(payload.cards)
+      ) {
+        throw new Error("Catálogo visual incompatível.");
+      }
+      const ids = new Set();
+      const hashes = new Set();
+      for (const card of payload.cards) {
+        const required = [
+          "id",
+          "assetId",
+          "sha256",
+          "title",
+          "caption",
+          "alt",
+          "theme",
+          "imageUrl",
+          "recallQuestion",
+          "essentialAnswer"
+        ];
+        if (required.some((key) => !card[key])) {
+          throw new Error(`Card incompleto: ${card.id || "sem id"}.`);
+        }
+        if (!Array.isArray(card.hashtags) || card.hashtags.length < 3) {
+          throw new Error(`Card sem três hashtags: ${card.id}.`);
+        }
+        if (ids.has(card.id) || hashes.has(card.sha256)) {
+          throw new Error(`ID ou SHA-256 duplicado: ${card.id}.`);
+        }
+        ids.add(card.id);
+        hashes.add(card.sha256);
+      }
+      return payload.cards;
+    }
+
+    function textFor(card) {
+      return [
+        card.title,
+        card.caption,
+        card.theme,
+        card.series,
+        ...card.hashtags
+      ]
+        .join(" ")
+        .toLocaleLowerCase("pt-BR");
+    }
+
+    function cardMatches(card) {
+      const themeMatches = state.theme === "all" || card.theme === state.theme;
+      const queryMatches = !state.query || textFor(card).includes(state.query);
+      return themeMatches && queryMatches;
+    }
+
+    function createTag(value) {
+      const tag = document.createElement("span");
+      tag.className = "tag";
+      tag.textContent = value;
+      return tag;
+    }
+
+    function openStudy(card, trigger) {
+      state.selected = card;
+      returnFocus = trigger;
+      dialogImage.src = card.imageUrl;
+      dialogImage.alt = card.alt;
+      dialogTitle.textContent = card.title;
+      dialogTheme.textContent = `${card.track} · ${card.difficulty}`;
+      dialogCaption.textContent = card.caption;
+      dialogQuestion.textContent = card.recallQuestion;
+      dialogAnswer.textContent = card.essentialAnswer;
+      dialogResume.textContent = `Alça de retomada: ${card.resumeLoop}`;
+      markStudied.textContent = state.studied.has(card.id)
+        ? "Estudada ✓"
+        : "Marcar como estudada";
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      else dialog.setAttribute("open", "");
+      document.getElementById("dialog-close").focus();
+    }
+
+    function renderCards() {
+      const visible = state.cards.filter(cardMatches);
+      grid.replaceChildren();
+
+      if (!visible.length) {
+        const empty = document.createElement("p");
+        empty.className = "empty";
+        empty.textContent = "Nenhuma imagem corresponde ao filtro atual.";
+        grid.append(empty);
+      }
+
+      for (const card of visible) {
+        const article = document.createElement("article");
+        article.className = "card";
+
+        const figure = document.createElement("figure");
+        figure.className = "card-figure";
+        const image = document.createElement("img");
+        image.src = card.imageUrl;
+        image.alt = card.alt;
+        image.loading = "lazy";
+        image.decoding = "async";
+        const label = document.createElement("span");
+        label.className = "ai-label";
+        label.textContent = "IA · não diagnóstica";
+        figure.append(image, label);
+
+        const body = document.createElement("div");
+        body.className = "card-body";
+        const kicker = document.createElement("p");
+        kicker.className = "card-kicker";
+        kicker.textContent = card.track;
+        const title = document.createElement("h3");
+        title.textContent = card.title;
+        const copy = document.createElement("p");
+        copy.className = "card-copy";
+        copy.textContent = card.caption;
+        const tags = document.createElement("div");
+        tags.className = "tags";
+        card.hashtags.forEach((tag) => tags.append(createTag(tag)));
+
+        const actions = document.createElement("div");
+        actions.className = "card-actions";
+        const button = document.createElement("button");
+        button.className = "study-button";
+        button.type = "button";
+        button.textContent = "Estudar";
+        button.addEventListener("click", () => openStudy(card, button));
+        const status = document.createElement("span");
+        status.className = "studied";
+        status.textContent = state.studied.has(card.id) ? "Estudada ✓" : "Nova";
+        status.dataset.studyStatus = card.id;
+        actions.append(button, status);
+        body.append(kicker, title, copy, tags, actions);
+        article.append(figure, body);
+        grid.append(article);
+      }
+
+      resultCount.textContent = `${visible.length} de ${state.cards.length} imagens`;
+      document.getElementById("metric-studied").textContent = String(
+        state.cards.filter((card) => state.studied.has(card.id)).length
+      );
+    }
+
+    function renderGraph() {
+      const list = document.getElementById("graph-list");
+      list.replaceChildren();
+      const titles = new Map(state.graph.nodes.map((node) => [node.id, node.label]));
+      for (const edge of state.graph.edges) {
+        const item = document.createElement("li");
+        const from = document.createElement("span");
+        from.textContent = titles.get(edge.from) || edge.from;
+        const relation = document.createElement("span");
+        relation.className = "edge";
+        relation.textContent = edge.relation;
+        const to = document.createElement("span");
+        to.textContent = titles.get(edge.to) || edge.to;
+        item.append(from, relation, to);
+        list.append(item);
+      }
+    }
+
+    function configureControls() {
+      search.addEventListener("input", () => {
+        state.query = search.value.trim().toLocaleLowerCase("pt-BR");
+        renderCards();
+      });
+
+      document.querySelectorAll("[data-theme]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.theme = button.dataset.theme;
+          document.querySelectorAll("[data-theme]").forEach((candidate) => {
+            candidate.setAttribute(
+              "aria-pressed",
+              String(candidate === button)
+            );
+          });
+          renderCards();
+        });
+      });
+
+      document.getElementById("dialog-close").addEventListener("click", () => {
+        dialog.close();
+      });
+      dialog.addEventListener("cancel", (event) => {
+        event.preventDefault();
+        dialog.close();
+      });
+      dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      dialog.addEventListener("close", () => {
+        dialogImage.removeAttribute("src");
+        dialog.querySelector("details")?.removeAttribute("open");
+        returnFocus?.focus();
+      });
+
+      markStudied.addEventListener("click", () => {
+        if (!state.selected) return;
+        state.studied.add(state.selected.id);
+        persistStudied();
+        markStudied.textContent = "Estudada ✓";
+        document
+          .querySelectorAll(`[data-study-status="${state.selected.id}"]`)
+          .forEach((status) => {
+            status.textContent = "Estudada ✓";
+          });
+        document.getElementById("metric-studied").textContent = String(
+          state.cards.filter((card) => state.studied.has(card.id)).length
+        );
+      });
+    }
+
+    async function start() {
+      loadStudied();
+      configureControls();
+      try {
+        const [catalogResponse, graphResponse] = await Promise.all([
+          fetch(catalogUrl, { cache: "no-store" }),
+          fetch(graphUrl, { cache: "no-store" })
+        ]);
+        if (!catalogResponse.ok || !graphResponse.ok) {
+          throw new Error("Falha ao carregar dados do lote.");
+        }
+        const [catalog, graph] = await Promise.all([
+          catalogResponse.json(),
+          graphResponse.json()
+        ]);
+        state.cards = assertCatalog(catalog);
+        state.graph = graph;
+        const uniqueTags = new Set(state.cards.flatMap((card) => card.hashtags));
+        document.getElementById("metric-cards").textContent = String(state.cards.length);
+        document.getElementById("metric-tags").textContent = String(uniqueTags.size);
+        renderCards();
+        renderGraph();
+      } catch (error) {
+        grid.innerHTML = "";
+        const message = document.createElement("p");
+        message.className = "empty";
+        message.textContent =
+          "O catálogo visual não pôde ser carregado. Reabra a página ou retorne ao Card Feed.";
+        grid.append(message);
+        resultCount.textContent = "Indisponível";
+        console.error(error);
+      }
+    }
+
+    start();
+  </script>
+</body>
+</html>

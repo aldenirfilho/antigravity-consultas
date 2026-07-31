@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "bvc-graph-v1",
+  "lot": "BVC-ANTIGRAVITY-001",
+  "nodes": [
+    {
+      "id": "biblioteca-visual-central",
+      "label": "Biblioteca Visual Central",
+      "type": "collection"
+    },
+    {
+      "id": "bvc-11c59eea30f7",
+      "label": "ACRA Cognitivo",
+      "type": "visual-card"
+    },
+    {
+      "id": "bvc-3031c800195a",
+      "label": "Pacote Turbo TEMI 360X",
+      "type": "visual-card"
+    },
+    {
+      "id": "bvc-179d9ab11ffe",
+      "label": "Loop de aprendizagem ativa",
+      "type": "visual-card"
+    }
+  ],
+  "edges": [
+    {
+      "from": "bvc-11c59eea30f7",
+      "relation": "PERTENCE_A",
+      "to": "biblioteca-visual-central",
+      "status": "validated"
+    },
+    {
+      "from": "bvc-3031c800195a",
+      "relation": "PERTENCE_A",
+      "to": "biblioteca-visual-central",
+      "status": "validated"
+    },
+    {
+      "from": "bvc-179d9ab11ffe",
+      "relation": "PERTENCE_A",
+      "to": "biblioteca-visual-central",
+      "status": "validated"
+    },
+    {
+      "from": "bvc-11c59eea30f7",
+      "relation": "PREREQUISITO_DE",
+      "to": "bvc-3031c800195a",
+      "status": "validated"
+    },
+    {
+      "from": "bvc-3031c800195a",
+      "relation": "SUPORTA",
+      "to": "bvc-179d9ab11ffe",
+      "status": "validated"
+    }
+  ]
+}

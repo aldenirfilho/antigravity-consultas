@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "bvc-antigravity-module-v1",
+  "moduleId": "biblioteca-visual-central",
+  "title": "Biblioteca Visual Central NEXUS",
+  "version": "0.1.0-pilot",
+  "lot": "BVC-ANTIGRAVITY-001",
+  "updatedAt": "2026-07-31",
+  "status": "editorial-review-required",
+  "entrypoint": "index.html",
+  "catalog": "data/catalog.v1.json",
+  "graph": "data/graph.v1.json",
+  "publication": {
+    "mode": "branch-preview",
+    "publicPreview": false,
+    "mergeAuthorized": false,
+    "deployAuthorized": false,
+    "purpose": "estudo-visual-turbo-temi"
+  },
+  "pilot": {
+    "cards": 3,
+    "assets": 3,
+    "themes": [
+      "ACRA",
+      "Turbo TEMI"
+    ],
+    "minimumHashtagsPerCard": 3
+  },
+  "privacy": {
+    "classification": "P0",
+    "patientData": false,
+    "privateDriveUrls": false,
+    "credentials": false,
+    "runtimeApi": false,
+    "telemetry": false,
+    "localStorage": [
+      "progresso de estudo dos três cards"
+    ]
+  },
+  "accessibility": {
+    "language": "pt-BR",
+    "minimumTouchTargetPx": 44,
+    "altTextRequired": true,
+    "keyboardNavigation": true,
+    "reducedMotion": true,
+    "mobileFirst": true
+  },
+  "deduplication": {
+    "identity": [
+      "id",
+      "assetId",
+      "sha256"
+    ],
+    "exactDuplicatePolicy": "reject",
+    "versionPolicy": "preserve-lineage"
+  },
+  "reviewGate": {
+    "requiredBeforeMerge": [
+      "validar JSON e unicidade de id/SHA-256",
+      "validar caminhos e carregamento das três imagens",
+      "homologar em 390 x 844 px e desktop",
+      "executar portões editorial e de privacidade",
+      "obter autorização explícita do proprietário para publicar o lote"
+    ]
+  }
+}
