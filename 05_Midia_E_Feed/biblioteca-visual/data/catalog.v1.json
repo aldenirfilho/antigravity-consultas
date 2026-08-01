@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "bvc-antigravity-v1",
+  "lot": "BVC-ANTIGRAVITY-001",
+  "generatedAt": "2026-07-31",
+  "status": "editorial-review-required",
+  "cards": [
+    {
+      "id": "bvc-11c59eea30f7",
+      "assetId": "asset-acra-cognitivo-v1",
+      "sha256": "11c59eea30f76ff78594014ec691e38e3d3bab5d4d90eae37082e25245bf770e",
+      "derivativeSha256": "11c653f206562b1b00fcf70360deaf205d00940b372d601e9813e441109ac0ae",
+      "version": "1.0",
+      "title": "ACRA Cognitivo — decisão e renderização",
+      "caption": "O ACRA só é acionado quando a forma visual produz ganho clínico ou cognitivo real de aprendizagem.",
+      "alt": "Fluxograma ACRA que parte da necessidade clínica, verifica ganho real, seleciona card, passos, comparação, checklist ou quiz e valida a renderização.",
+      "theme": "acra",
+      "track": "ACRA Visual",
+      "series": "Turbo TEMI — Mecanismos de Entrega Premium 16:9",
+      "difficulty": "E2 Fundamentos",
+      "cognitiveDomain": "D1 Reconhece",
+      "imageUrl": "assets/cards/acra-cognitivo.jpg",
+      "sourceType": "gpt-didactic",
+      "generatedByGPT": true,
+      "diagnosticUse": false,
+      "status": "editorial-review-required",
+      "clinicalReviewStatus": "educational-methodology-no-patient-data",
+      "hashtags": [
+        "#ACRA",
+        "#AprendizagemAtiva",
+        "#DesignCognitivo",
+        "#TurboTEMI",
+        "#NEXUS360X"
+      ],
+      "recallQuestion": "Quando o ACRA deve substituir o texto simples?",
+      "essentialAnswer": "Quando houver ganho clínico ou cognitivo real e o artefato puder ser semanticamente validado.",
+      "resumeLoop": "Defina primeiro a necessidade e o ganho esperado; só então escolha o formato.",
+      "prerequisites": [],
+      "related": [
+        "bvc-3031c800195a",
+        "bvc-179d9ab11ffe"
+      ],
+      "next": "bvc-3031c800195a"
+    },
+    {
+      "id": "bvc-3031c800195a",
+      "assetId": "asset-pacote-turbo-temi-v1",
+      "sha256": "3031c800195acce1f4fb36da1c154e9535fc58f90577f4e53bd3de612bc7bc02",
+      "derivativeSha256": "73f92b0f6970ed0fc3094d4909529bcb3ccc997f6eeffb66e19516c863b402e2",
+      "version": "1.0",
+      "title": "Pacote Turbo TEMI 360X — orquestração e validação",
+      "caption": "O pacote final só é liberado depois de catalogação, versionamento, validação e manifesto completos.",
+      "alt": "Dez tipos de ativos entram em um fluxo de normalização, validação e manifesto antes de formar uma pasta e arquivo ZIP verificados.",
+      "theme": "turbo-temi",
+      "track": "Turbo TEMI",
+      "series": "Turbo TEMI — Mecanismos de Entrega Premium 16:9",
+      "difficulty": "E2 Fundamentos",
+      "cognitiveDomain": "D2 Explica",
+      "imageUrl": "assets/cards/orquestracao-pacote.jpg",
+      "sourceType": "gpt-didactic",
+      "generatedByGPT": true,
+      "diagnosticUse": false,
+      "status": "editorial-review-required",
+      "clinicalReviewStatus": "educational-methodology-no-patient-data",
+      "hashtags": [
+        "#NEXUS360X",
+        "#PacoteDidatico",
+        "#Versionamento",
+        "#ControleDeQualidade",
+        "#TurboTEMI"
+      ],
+      "recallQuestion": "Quais são os quatro gates do pacote Turbo TEMI 360X?",
+      "essentialAnswer": "Catalogar, versionar, validar e registrar no manifesto; incompletude bloqueia a entrega.",
+      "resumeLoop": "Recomece pelo gate mais simples: localize versão e manifesto antes de revisar os demais.",
+      "prerequisites": [
+        "bvc-11c59eea30f7"
+      ],
+      "related": [
+        "bvc-11c59eea30f7",
+        "bvc-179d9ab11ffe"
+      ],
+      "next": "bvc-179d9ab11ffe"
+    },
+    {
+      "id": "bvc-179d9ab11ffe",
+      "assetId": "asset-loop-aprendizagem-v1",
+      "sha256": "179d9ab11ffe4cc7ef03957eecf3805faa30a47f6f984d4ab0c24a3ea8f6f112",
+      "derivativeSha256": "2f30f0424094be809832d58fab6659344929d7ed66e08a7484ad00b679b77731",
+      "version": "1.0",
+      "title": "Turbo TEMI — loop de aprendizagem ativa",
+      "caption": "Ciclo contínuo de recuperar, decidir, executar, integrar e revisar com retomadas espaçadas.",
+      "alt": "Fluxo visual do ciclo Turbo TEMI com recuperação, decisão, execução, integração e revisão em intervalos progressivos.",
+      "theme": "turbo-temi",
+      "track": "Turbo TEMI",
+      "series": "Turbo TEMI — Mecanismos de Entrega Premium 16:9",
+      "difficulty": "E2 Fundamentos",
+      "cognitiveDomain": "D2 Explica",
+      "imageUrl": "assets/cards/loop-aprendizagem.jpg",
+      "sourceType": "gpt-didactic",
+      "generatedByGPT": true,
+      "diagnosticUse": false,
+      "status": "editorial-review-required",
+      "clinicalReviewStatus": "educational-methodology-no-patient-data",
+      "hashtags": [
+        "#TurboTEMI",
+        "#AprendizagemAtiva",
+        "#RevisaoEspacada",
+        "#AtlasVisual",
+        "#TDAHFriendly"
+      ],
+      "recallQuestion": "Qual é a sequência do loop Turbo TEMI e quando ocorre a retomada?",
+      "essentialAnswer": "Recuperar, decidir, executar, integrar e revisar; repetir hoje, em 24 horas, 7 dias e 30 dias.",
+      "resumeLoop": "Diga o ciclo em voz alta e continue do primeiro verbo ausente.",
+      "prerequisites": [
+        "bvc-11c59eea30f7"
+      ],
+      "related": [
+        "bvc-11c59eea30f7",
+        "bvc-3031c800195a"
+      ],
+      "next": "bvc-11c59eea30f7"
+    }
+  ]
+}
