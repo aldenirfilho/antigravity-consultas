@@ -856,6 +856,124 @@ class NexusReleasePreparationTests(unittest.TestCase):
             with self.assertRaisesRegex(self.bus.ContractError, "bytes finais"):
                 self.bus.validate_release_state(root, public_root=public_root)
 
+    def test_post_build_release_can_be_superseded_again_append_only(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = Path(temporary)
+            (
+                root,
+                public_root,
+                product_code,
+                evidence,
+                paths,
+                old_release,
+                _,
+            ) = self.make_supersession_fixture(workspace)
+            first = self.bus.supersede_release(
+                product_code,
+                old_release["tafCode"],
+                evidence,
+                "2026-08-01",
+                10,
+                reason=self.bus.SUPERSESSION_REASON,
+                public_root=public_root,
+                root=root,
+            )
+
+            previous_public_root = workspace / "site-v1"
+            shutil.copytree(public_root, previous_public_root)
+            paths["public_page"].write_text(
+                paths["public_page"].read_text(encoding="utf-8")
+                + "<p data-release-v2>Atribuição revisada</p>\n",
+                encoding="utf-8",
+            )
+            inventory = self.bus.supersession_inventory(
+                product_code,
+                first["tafCode"],
+                root=root,
+                public_root=public_root,
+                previous_public_root=previous_public_root,
+            )
+            self.assertEqual(
+                inventory["previousArtifactProfile"],
+                self.bus.POST_BUILD_POST_SANITIZE,
+            )
+            self.assertEqual(
+                inventory["previousArtifactRootSha256"],
+                first["artifactRootSha256"],
+            )
+            self.bind_evidence_to_inventory(evidence, inventory)
+
+            tombstones_before = json.loads(
+                paths["tombstones"].read_text(encoding="utf-8")
+            )["items"]
+            reports_before = json.loads(
+                paths["reports"].read_text(encoding="utf-8")
+            )["items"]
+            ledger_before = json.loads(
+                paths["ledger"].read_text(encoding="utf-8")
+            )["events"]
+            second = self.bus.supersede_release(
+                product_code,
+                first["tafCode"],
+                evidence,
+                "2026-08-01",
+                11,
+                reason=self.bus.SUPERSESSION_REASON,
+                public_root=public_root,
+                previous_public_root=previous_public_root,
+                root=root,
+            )
+            self.assertNotEqual(second["tafCode"], first["tafCode"])
+            self.assertEqual(second["publication"], "LOCKED")
+
+            catalog = json.loads(paths["catalog"].read_text(encoding="utf-8"))
+            history = catalog["items"][0]["supersededReleases"]
+            self.assertEqual(len(history), 2)
+            self.assertEqual(
+                [record["tafCode"] for record in history],
+                [old_release["tafCode"], first["tafCode"]],
+            )
+            self.assertEqual(history[0]["supersededByTafCode"], first["tafCode"])
+            self.assertEqual(history[1]["supersededByTafCode"], second["tafCode"])
+            self.assertEqual(history[0]["artifactProfile"], self.bus.SOURCE_BOUND)
+            self.assertEqual(
+                history[1]["artifactProfile"],
+                self.bus.POST_BUILD_POST_SANITIZE,
+            )
+            tombstones_after = json.loads(
+                paths["tombstones"].read_text(encoding="utf-8")
+            )["items"]
+            reports_after = json.loads(
+                paths["reports"].read_text(encoding="utf-8")
+            )["items"]
+            ledger_after = json.loads(
+                paths["ledger"].read_text(encoding="utf-8")
+            )["events"]
+            self.assertEqual(
+                tombstones_after[: len(tombstones_before)], tombstones_before
+            )
+            self.assertEqual(reports_after[: len(reports_before)], reports_before)
+            self.assertEqual(ledger_after[: len(ledger_before)], ledger_before)
+
+            state = self.bus.validate_release_state(root, public_root=public_root)
+            self.assertEqual(state["preparedReleases"], 1)
+            self.assertEqual(state["ledgerEvents"], 15)
+            self.assertEqual(state["publication"], "LOCKED")
+            with self.assertRaisesRegex(self.bus.ContractError, "superseded"):
+                self.bus._reject_superseded_taf(first["tafCode"], root)
+            self.bus._reject_superseded_taf(second["tafCode"], root)
+
+            with self.assertRaisesRegex(
+                self.bus.ContractError,
+                "--previous-public-root",
+            ):
+                self.bus.supersession_inventory(
+                    product_code,
+                    second["tafCode"],
+                    root=root,
+                    public_root=public_root,
+                )
+
     def test_supersede_release_blocks_wrong_taf_published_and_rolls_back(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             (
@@ -1078,7 +1196,8 @@ class NexusReleasePreparationTests(unittest.TestCase):
 
     def test_umbrella_child_tafs_resolve_superseded_codes_to_active_chains(self) -> None:
         old_a = "TAF###-MUX-PROD-20260801-0001-AAAAAAAA"
-        new_a = "TAF###-MUX-PROD-20260801-0004-BBBBBBBB"
+        mid_a = "TAF###-MUX-PROD-20260801-0004-BBBBBBBB"
+        new_a = "TAF###-MUX-PROD-20260801-0007-DDDDDDDD"
         active_b = "TAF###-U3-IMGT-20260801-0005-CCCCCCCC"
         catalog = {
             "items": [
@@ -1087,6 +1206,11 @@ class NexusReleasePreparationTests(unittest.TestCase):
                     "supersededReleases": [
                         {
                             "tafCode": old_a,
+                            "supersededByTafCode": mid_a,
+                            "publication": "VOID_PREPUBLICATION",
+                        },
+                        {
+                            "tafCode": mid_a,
                             "supersededByTafCode": new_a,
                             "publication": "VOID_PREPUBLICATION",
                         }

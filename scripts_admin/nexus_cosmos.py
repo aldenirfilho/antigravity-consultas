@@ -1808,7 +1808,11 @@ def _validate_superseded_release_history(
     reports: list[dict],
     ledger: dict,
 ) -> None:
-    """Valida o índice append-only de cadeias pré-publicação substituídas."""
+    """Valida a cadeia append-only de releases pré-publicação substituídas.
+
+    O histórico é fechado pelos snapshots de TOM/HOM/ledger. Arquivos-fonte
+    atuais podem evoluir e não são usados como substitutos dos bytes antigos.
+    """
 
     catalog_history = product.get("supersededReleases", [])
     manifest_history = manifest.get("supersededReleases", [])
@@ -1816,9 +1820,18 @@ def _validate_superseded_release_history(
         not isinstance(catalog_history, list)
         or not isinstance(manifest_history, list)
         or catalog_history != manifest_history
-        or len(catalog_history) > 1
     ):
         raise ContractError("índice de releases superseded é inválido ou divergente")
+    history_tafs = [
+        record.get("tafCode") if isinstance(record, dict) else None
+        for record in catalog_history
+    ]
+    if len(history_tafs) != len(set(history_tafs)):
+        raise ContractError("índice de releases superseded possui TAF### duplicado")
+
+    # Mantidos na assinatura para compatibilidade com validadores existentes;
+    # o snapshot histórico confiável é o TOM###, não o diretório-fonte mutável.
+    _ = source_members, source_artifact_root
 
     active_release = product.get("releasePreparation", {})
     supersession_code = active_release.get("supersessionProcedureCode")
@@ -1857,6 +1870,14 @@ def _validate_superseded_release_history(
             if index + 1 < len(catalog_history)
             else active_taf_code
         )
+        expected_successor_root = (
+            catalog_history[index + 1].get("artifactRootSha256")
+            if index + 1 < len(catalog_history)
+            else active_artifact_root
+        )
+        historical_profile = record.get("artifactProfile")
+        historical_root = record.get("artifactRootSha256", "")
+        historical_count = record.get("memberCount")
         if (
             not TAF.fullmatch(old_taf)
             or not HOM.fullmatch(old_hom)
@@ -1867,9 +1888,10 @@ def _validate_superseded_release_history(
             or old_taf == active_taf_code
             or old_taf in seen_taf
             or supersession in seen_supersession_codes
-            or record.get("artifactProfile") != SOURCE_BOUND
-            or record.get("artifactRootSha256") != source_artifact_root
-            or record.get("memberCount") != len(source_members)
+            or historical_profile not in RELEASE_ARTIFACT_PROFILES
+            or not HEX64.fullmatch(historical_root)
+            or not isinstance(historical_count, int)
+            or historical_count < 1
             or record.get("supersededByTafCode") != expected_successor
             or record.get("reason") != SUPERSESSION_REASON
             or record.get("publication") != "VOID_PREPUBLICATION"
@@ -1887,18 +1909,45 @@ def _validate_superseded_release_history(
         if len(old_tombstones) != 1:
             raise ContractError("TOM### superseded não resolve registro histórico único")
         old_tombstone = old_tombstones[0]
+        old_members = old_tombstone.get("members")
+        if not isinstance(old_members, list) or len(old_members) != historical_count:
+            raise ContractError("TOM### superseded perdeu o inventário histórico")
+        member_paths = [
+            member.get("path") if isinstance(member, dict) else None
+            for member in old_members
+        ]
+        if (
+            any(
+                not isinstance(member, dict)
+                or not isinstance(member.get("path"), str)
+                or not HEX64.fullmatch(member.get("sha256", ""))
+                or not isinstance(member.get("bytes"), int)
+                or member.get("bytes", -1) < 0
+                for member in old_members
+            )
+            or member_paths != sorted(member_paths)
+            or len(member_paths) != len(set(member_paths))
+        ):
+            raise ContractError("TOM### superseded possui membros históricos inválidos")
+        recomputed_historical_root = hashlib.sha256(
+            "".join(
+                f"{member['path']}\t{member['sha256']}\t{member['bytes']}\n"
+                for member in old_members
+            ).encode("utf-8")
+        ).hexdigest()
         if (
             old_tombstone.get("productCode") != product.get("productCode")
             or old_tombstone.get("auditCode") != old_audit
             or old_tombstone.get("homologationCode") != old_hom
             or old_tombstone.get("tafCode") != old_taf
-            or old_tombstone.get("artifactProfile") not in {None, SOURCE_BOUND}
-            or old_tombstone.get("artifactRootSha256") != source_artifact_root
-            or old_tombstone.get("memberCount") != len(source_members)
-            or old_tombstone.get("members") != source_members
+            or (old_tombstone.get("artifactProfile") or SOURCE_BOUND)
+            != historical_profile
+            or old_tombstone.get("artifactRootSha256") != historical_root
+            or recomputed_historical_root != historical_root
+            or old_tombstone.get("memberCount") != historical_count
             or old_tombstone.get("publication") != "LOCKED"
         ):
-            raise ContractError("TOM### superseded foi alterado ou não é source-bound")
+            raise ContractError("TOM### superseded foi alterado ou perdeu seu snapshot")
 
         old_reports = [
             item for item in reports if item.get("homologationCode") == old_hom
@@ -1915,12 +1964,13 @@ def _validate_superseded_release_history(
             or old_report.get("tafCode") != old_taf
             or old_core.get("productCode") != product.get("productCode")
             or old_core.get("auditCode") != old_audit
-            or old_core.get("artifactProfile") not in {None, SOURCE_BOUND}
-            or old_core.get("artifactRootSha256") != source_artifact_root
-            or old_core.get("memberCount") != len(source_members)
+            or (old_core.get("artifactProfile") or SOURCE_BOUND)
+            != historical_profile
+            or old_core.get("artifactRootSha256") != historical_root
+            or old_core.get("memberCount") != historical_count
             or old_core.get("auditBinding") != {
                 "auditCode": old_audit,
-                "artifactRootSha256": source_artifact_root,
+                "artifactRootSha256": historical_root,
                 "status": "PASS",
             }
             or old_report.get("publication", {}).get("status") != "LOCKED"
@@ -1937,16 +1987,16 @@ def _validate_superseded_release_history(
         tom_scope, tom_date, tom_sequence, _ = _release_code_parts(old_tom, "TOM###")
         if old_tom != (
             f"TOM###-{tom_scope}-{tom_date}-{tom_sequence:04d}-"
-            f"{digest8(tom_scope, source_artifact_root, str(len(source_members)), old_tombstone['frozenAt'])}"
+            f"{digest8(tom_scope, historical_root, str(historical_count), old_tombstone['frozenAt'])}"
         ):
-            raise ContractError("TOM### superseded diverge dos bytes source-bound")
+            raise ContractError("TOM### superseded diverge do snapshot histórico")
         if not old_taf.endswith(
             digest8(
                 product["productCode"],
                 old_audit,
                 old_hom,
                 old_tom,
-                source_artifact_root,
+                historical_root,
             )
         ):
             raise ContractError("TAF### superseded diverge da cadeia histórica")
@@ -1957,27 +2007,36 @@ def _validate_superseded_release_history(
         old_audit_event = ledger_by_code[old_audit]
         if (
             old_audit_event.get("subjectCode") != product.get("productCode")
-            or old_audit_event.get("inputHash") != source_artifact_root
             or old_audit_event.get("result")
             != "PASS_BOUND_TO_CURRENT_ARTIFACT_ROOT"
+            or (
+                historical_profile == SOURCE_BOUND
+                and old_audit_event.get("inputHash") != historical_root
+            )
         ):
-            raise ContractError("AUD### histórico não permanece source-bound")
+            raise ContractError("AUD### histórico não permanece vinculado ao produto")
         supersession_event = ledger_by_code.get(supersession)
         if (
             not isinstance(supersession_event, dict)
             or supersession_event.get("type")
             != "RELEASE_SUPERSEDED_PREPUBLICATION"
             or supersession_event.get("subjectCode") != product.get("productCode")
-            or supersession_event.get("inputHash") != source_artifact_root
-            or supersession_event.get("outputHash") != active_artifact_root
+            or supersession_event.get("inputHash") != historical_root
+            or supersession_event.get("outputHash") != expected_successor_root
             or supersession_event.get("result") != SUPERSESSION_REASON
             or supersession_event.get("evidence", {}).get("previousTafCode")
             != old_taf
             or supersession_event.get("evidence", {}).get("replacementTafCode")
             != expected_successor
+            or supersession_event.get("evidence", {}).get(
+                "previousArtifactRootSha256"
+            )
+            != historical_root
+            or supersession_event.get("evidence", {}).get("artifactRootSha256")
+            != expected_successor_root
             or supersession_event.get("evidence", {}).get("auditBinding") != {
                 "auditCode": old_audit,
-                "artifactRootSha256": active_artifact_root,
+                "artifactRootSha256": expected_successor_root,
                 "status": "PASS",
             }
             or supersession_event.get("evidence", {}).get("publication") != "LOCKED"
@@ -2314,12 +2373,18 @@ def supersession_inventory(
     supersedes_taf: str,
     *,
     public_root: Path,
+    previous_public_root: Path | None = None,
     root: Path = ROOT,
 ) -> dict:
-    """Calcula, sem gravar, os bytes públicos que substituirão uma cadeia legada."""
+    """Calcula, sem gravar, uma substituição pré-publicação append-only."""
 
     root = root.resolve(strict=True)
     public_root = _resolve_public_root(public_root, root)
+    previous_public_root = (
+        _resolve_public_root(previous_public_root, root)
+        if previous_public_root is not None
+        else None
+    )
     if not AGX.fullmatch(product_code):
         raise ContractError("product-code ####AGX válido é obrigatório")
     if not TAF.fullmatch(supersedes_taf):
@@ -2343,11 +2408,15 @@ def supersession_inventory(
     if sha256_file(manifest_path) != product["source"].get("sha256"):
         raise ContractError("hash do manifesto preparado diverge do catálogo")
     manifest = _load_json_path(manifest_path, "manifesto preparado")
-    if _release_artifact_profile(product, manifest) != SOURCE_BOUND:
-        raise ContractError("somente cadeia legado/SOURCE_BOUND pode ser superseded")
-    if product.get("supersededReleases") or manifest.get("supersededReleases"):
-        raise ContractError("produto já possui histórico superseded")
-    validate_release_state(root, public_root=public_root)
+    old_profile = _release_artifact_profile(product, manifest)
+    if old_profile == POST_BUILD_POST_SANITIZE and previous_public_root is None:
+        raise ContractError(
+            "--previous-public-root é obrigatório ao substituir cadeia POST_BUILD"
+        )
+    validate_release_state(
+        root,
+        public_root=previous_public_root or public_root,
+    )
     publication = manifest.get("publication", {})
     if (
         publication.get("officialPublication") is not False
@@ -2357,18 +2426,35 @@ def supersession_inventory(
         or product.get("gates", {}).get("ownerUnlock") != "AUSENTE"
     ):
         raise ContractError("cadeia ativa não está LOCKED e inequivocamente não publicada")
+    old_members, old_artifact_root = _release_inventory_for_profile(
+        root,
+        manifest_path,
+        manifest,
+        old_profile,
+        previous_public_root,
+    )
+    old_release = product.get("releasePreparation", {})
+    if (
+        old_release.get("artifactRootSha256") != old_artifact_root
+        or old_release.get("memberCount") != len(old_members)
+    ):
+        raise ContractError("snapshot público anterior diverge da cadeia ativa")
     members, artifact_root = _release_public_artifact_inventory(
         root,
         public_root,
         manifest_path,
         manifest,
     )
+    if artifact_root == old_artifact_root:
+        raise ContractError("novo artefato é idêntico à cadeia ativa")
     return {
         "schemaVersion": "antigravity-release-inventory-v1",
         "productCode": product_code,
         "auditCode": product.get("auditCode"),
         "artifactProfile": POST_BUILD_POST_SANITIZE,
         "supersedesTafCode": supersedes_taf,
+        "previousArtifactProfile": old_profile,
+        "previousArtifactRootSha256": old_artifact_root,
         "artifactRootSha256": artifact_root,
         "memberCount": len(members),
         "members": members,
@@ -2416,7 +2502,6 @@ def _active_child_taf_codes(catalog: dict, child_taf_codes: list[str]) -> list[s
                 if (
                     record.get("tafCode") == child_taf
                     and record.get("publication") == "VOID_PREPUBLICATION"
-                    and record.get("supersededByTafCode") == active_taf
                 ):
                     matches.append(active_taf)
         if len(matches) != 1:
@@ -2848,10 +2933,11 @@ def supersede_release(
     *,
     reason: str,
     public_root: Path,
+    previous_public_root: Path | None = None,
     root: Path = ROOT,
     fail_after: int | None = None,
 ) -> dict:
-    """Substitui uma cadeia source-bound pré-publicação sem apagar o histórico."""
+    """Substitui uma cadeia LOCKED pré-publicação sem apagar o histórico."""
 
     root = root.resolve(strict=True)
     if not AGX.fullmatch(product_code):
@@ -2865,6 +2951,11 @@ def supersede_release(
         raise ContractError("sequence deve estar entre 1 e 9999")
     sequence_code = f"{sequence:04d}"
     public_root = _resolve_public_root(public_root, root)
+    previous_public_root = (
+        _resolve_public_root(previous_public_root, root)
+        if previous_public_root is not None
+        else None
+    )
 
     data = root / "23_Cosmos_NEXUS/data"
     private_locks = root / ".nexus-sync-private/release-locks"
@@ -2875,8 +2966,6 @@ def supersede_release(
     os.chmod(lock_path, 0o600)
     fcntl.flock(lock_fd, fcntl.LOCK_EX)
     try:
-        # O snapshot anterior precisa fechar integralmente antes da nova cadeia.
-        validate_release_state(root, public_root=public_root)
         catalog_path = data / "product-catalog.json"
         ledger_path = data / "execution-ledger.json"
         module_path = root / "23_Cosmos_NEXUS/module.manifest.json"
@@ -2902,22 +2991,25 @@ def supersede_release(
             raise ContractError("TAF### informado não é a cadeia ativa exata")
         if product.get("published") is not False:
             raise ContractError("release publicada não pode ser superseded")
-        if product.get("supersededReleases"):
-            raise ContractError("cadeia ativa já possui supersessão; TAF antigo não pode ser reutilizado")
         old_release = product.get("releasePreparation")
         if not isinstance(old_release, dict):
             raise ContractError("cadeia ativa não possui releasePreparation válida")
-        if old_release.get("supersessionProcedureCode") is not None:
-            raise ContractError("cadeia ativa já é substituta e não pode reutilizar o TAF antigo")
 
         manifest_path = _relative_regular_file(root, product["source"]["path"], root)
         if sha256_file(manifest_path) != product["source"].get("sha256"):
             raise ContractError("hash do manifesto preparado diverge do catálogo")
         manifest = _load_json_path(manifest_path, "manifesto preparado")
-        if manifest.get("supersededReleases"):
-            raise ContractError("manifesto já registra cadeia superseded")
-        if _release_artifact_profile(product, manifest) != SOURCE_BOUND:
-            raise ContractError("somente cadeia legado/SOURCE_BOUND pode ser superseded")
+        old_profile = _release_artifact_profile(product, manifest)
+        if old_profile == POST_BUILD_POST_SANITIZE and previous_public_root is None:
+            raise ContractError(
+                "--previous-public-root é obrigatório ao substituir cadeia POST_BUILD"
+            )
+        # O snapshot anterior fecha contra o build antigo; a nova cadeia fecha
+        # somente depois contra ``public_root`` dentro da transação.
+        validate_release_state(
+            root,
+            public_root=previous_public_root or public_root,
+        )
         publication = manifest.get("publication", {})
         if (
             publication.get("officialPublication") is not False
@@ -2928,22 +3020,26 @@ def supersede_release(
         ):
             raise ContractError("cadeia ativa não está LOCKED e inequivocamente não publicada")
 
-        old_members, old_artifact_root = _release_artifact_inventory(
+        old_members, old_artifact_root = _release_inventory_for_profile(
             root,
             manifest_path,
             manifest,
+            old_profile,
+            previous_public_root,
         )
         if (
             old_release.get("artifactRootSha256") != old_artifact_root
             or old_release.get("memberCount") != len(old_members)
         ):
-            raise ContractError("índice ativo não fecha a cadeia source-bound anterior")
+            raise ContractError("índice ativo não fecha o snapshot público anterior")
         members, artifact_root = _release_public_artifact_inventory(
             root,
             public_root,
             manifest_path,
             manifest,
         )
+        if artifact_root == old_artifact_root:
+            raise ContractError("novo artefato é idêntico à cadeia ativa")
         evidence, evidence_hash = _validate_release_evidence(
             evidence_path,
             product_code,
@@ -3090,7 +3186,7 @@ def supersede_release(
             "homologationCode": product["homologationCode"],
             "tombstoneCode": product["tombstoneCode"],
             "tafCode": supersedes_taf,
-            "artifactProfile": SOURCE_BOUND,
+            "artifactProfile": old_profile,
             "artifactRootSha256": old_artifact_root,
             "memberCount": len(old_members),
             "supersededAt": now,
@@ -3099,7 +3195,8 @@ def supersede_release(
             "reason": reason,
             "publication": "VOID_PREPUBLICATION",
         }
-        superseded_history = [superseded_record]
+        superseded_history = copy.deepcopy(product.get("supersededReleases", []))
+        superseded_history.append(superseded_record)
 
         manifest_next = copy.deepcopy(manifest)
         if manifest_next.get("schemaVersion") == UMBRELLA_RELEASE_SCHEMA:
@@ -3812,14 +3909,18 @@ def parser() -> argparse.ArgumentParser:
     )
     supersede_inventory_parser = sub.add_parser(
         "supersede-inventory",
-        help="calcular root público para substituir TAF source-bound sem gravar",
+        help="calcular root público para substituir TAF LOCKED sem gravar",
     )
     supersede_inventory_parser.add_argument("--product-code", required=True)
     supersede_inventory_parser.add_argument("--supersedes-taf", required=True)
     supersede_inventory_parser.add_argument("--public-root", required=True)
+    supersede_inventory_parser.add_argument(
+        "--previous-public-root",
+        help="snapshot público anterior; obrigatório para cadeia POST_BUILD",
+    )
     supersede = sub.add_parser(
         "supersede-release",
-        help="substituir cadeia source-bound pré-publicação sem apagar histórico",
+        help="substituir cadeia LOCKED pré-publicação sem apagar histórico",
     )
     supersede.add_argument("--product-code", required=True)
     supersede.add_argument("--supersedes-taf", required=True)
@@ -3827,6 +3928,10 @@ def parser() -> argparse.ArgumentParser:
     supersede.add_argument("--date", default=date.today().isoformat())
     supersede.add_argument("--sequence", required=True, type=int)
     supersede.add_argument("--public-root", required=True)
+    supersede.add_argument(
+        "--previous-public-root",
+        help="snapshot público anterior; obrigatório para cadeia POST_BUILD",
+    )
     supersede.add_argument(
         "--reason",
         required=True,
@@ -3928,6 +4033,11 @@ def main() -> int:
                         args.product_code,
                         args.supersedes_taf,
                         public_root=Path(args.public_root).expanduser(),
+                        previous_public_root=(
+                            Path(args.previous_public_root).expanduser()
+                            if args.previous_public_root
+                            else None
+                        ),
                     ),
                     ensure_ascii=False,
                     indent=2,
@@ -3944,6 +4054,11 @@ def main() -> int:
                         args.sequence,
                         reason=args.reason,
                         public_root=Path(args.public_root).expanduser(),
+                        previous_public_root=(
+                            Path(args.previous_public_root).expanduser()
+                            if args.previous_public_root
+                            else None
+                        ),
                     ),
                     ensure_ascii=False,
                     indent=2,
