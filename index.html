@@ -4680,28 +4680,36 @@ function escHtml(s){
     hub:'var(--cyan)', module:'var(--cyan)', biblioteca:'var(--violet)',
     feed:'var(--violet)', qbank:'var(--yellow)', tool:'var(--green)',
     topic:'var(--violet)', theme:'var(--green)', desafio:'var(--yellow)',
-    mnemonico:'var(--violet)', file:'var(--soft)'
+    mnemonico:'var(--violet)', file:'var(--soft)', channel:'var(--soft)',
+    'source-project':'var(--cyan)', 'canonical-lot':'var(--yellow)',
+    'product-release':'var(--green)'
   };
+  const TYPE_ALIASES = {"project-source":"source-project","collection":"canonical-lot","product-candidate":"product-release"};
   const GROUPS = [
-    {id:'estrutura', label:'🏛️ Estrutura', types:['hub','module','biblioteca','feed','qbank','tool'], color:'var(--cyan)'},
-    {id:'topicos',   label:'🎯 Tópicos',    types:['topic'],      color:'var(--violet)'},
-    {id:'desafios',  label:'🏋️ Desafios',   types:['desafio'],    color:'var(--yellow)'},
-    {id:'mnemonicos',label:'🧩 Mnemônicos', types:['mnemonico'],  color:'var(--violet)'},
-    {id:'temas',     label:'🗂️ Temas',      types:['theme'],      color:'var(--green)'},
-    {id:'arquivos',  label:'📄 Arquivos',    types:['file'],       color:'var(--soft)'}
+    {"id":"estrutura","label":"🏛️ Estrutura","types":["hub","module","biblioteca","feed","qbank","tool","channel"],"color":"var(--cyan)"},
+    {"id":"nexus","label":"🌌 NEXUS","types":["source-project","canonical-lot","product-release"],"idPrefixes":["nexus-"],"color":"var(--violet)"},
+    {"id":"topicos","label":"🎯 Tópicos","types":["topic"],"color":"var(--violet)"},
+    {"id":"desafios","label":"🏋️ Desafios","types":["desafio"],"color":"var(--yellow)"},
+    {"id":"mnemonicos","label":"🧩 Mnemônicos","types":["mnemonico"],"color":"var(--violet)"},
+    {"id":"temas","label":"🗂️ Temas","types":["theme"],"color":"var(--green)"},
+    {"id":"arquivos","label":"📄 Arquivos","types":["file"],"color":"var(--soft)"}
   ];
   const typeToGroup = {};
   GROUPS.forEach(g=>g.types.forEach(t=>typeToGroup[t]=g.id));
+  const canonicalTypeOf = n => TYPE_ALIASES[n.type] || n.type;
   const active = new Set(['estrutura']);
   let query = '';
 
   // registra todos os nós no drawer (com link p/ a página real)
   allNodes.forEach(n=>{
-    TOPICS[n.id] = { title:n.label||n.id, text:n.body||'', tags:[n.type||'nó'], url:n.url||'' };
+    TOPICS[n.id] = { title:n.label||n.id, text:n.body||'', tags:[canonicalTypeOf(n)||'nó'], url:n.url||'' };
   });
 
-  const colorOf = n => TYPE_COLOR[n.type] || 'var(--cyan)';
-  const groupOf = n => typeToGroup[n.type] || 'outros';
+  const colorOf = n => TYPE_COLOR[canonicalTypeOf(n)] || 'var(--cyan)';
+  const groupOf = n => {
+    const contextual = GROUPS.find(g=>(g.idPrefixes||[]).some(prefix=>n.id.startsWith(prefix)));
+    return contextual?.id || typeToGroup[canonicalTypeOf(n)] || 'outros';
+  };
 
   function visibleSet(){
     let vis = query ? allNodes : allNodes.filter(n=>active.has(groupOf(n)));

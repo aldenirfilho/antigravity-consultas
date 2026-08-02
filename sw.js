@@ -1,7 +1,7 @@
 "use strict";
 
 const CACHE_PREFIX = "antigravity-root-";
-const CACHE_NAME = `${CACHE_PREFIX}v22`;
+const CACHE_NAME = `${CACHE_PREFIX}v23`;
 const SHELL_ASSETS = [
   "./",
   "./index.html",
@@ -66,26 +66,9 @@ const WARM_ASSETS = [
   "./23_Cosmos_NEXUS/assets/theme-bootstrap.js",
   "./23_Cosmos_NEXUS/assets/styles.css",
   "./23_Cosmos_NEXUS/assets/app.js",
+  // Mantém apenas a capa essencial. Atlas e produtos visuais entram no cache
+  // sob demanda para não bloquear a instalação em Safari/iPhone.
   "./23_Cosmos_NEXUS/assets/atlas/01-maquina-turbo-temi-360x.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/02-entrada-multifonte.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/03-curadoria-80-20.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/04-microparticulas-m0-m9.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/05-orquestra-de-motores.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/06-aprendizagem-ativa.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/07-decisao-clinica-em-camadas.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/08-uma-fonte-muitos-formatos.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/09-continuidade-sem-loop.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/10-do-conteudo-ao-dominio.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/11-fonte-canonica-markdown.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/12-apostila-word.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/13-pdf-final.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/14-apresentacao-pptx.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/15-imagens-premium-16-9.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/16-acra-cognitivo.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/17-html-antigravity.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/18-questoes-temi-n1-n5.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/19-aprendizagem-ativa-loop.jpg",
-  "./23_Cosmos_NEXUS/assets/atlas/20-pacote-turbo-temi-360x.jpg",
   "./23_Cosmos_NEXUS/data/cosmos.json",
   "./23_Cosmos_NEXUS/data/atlas.json",
   "./23_Cosmos_NEXUS/data/ecosystem-history.json",
@@ -134,20 +117,10 @@ const WARM_ASSETS = [
   "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/styles.css",
   "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/product.manifest.json",
   "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/references.json",
-  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/assets/12-apostila-word.png",
-  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/assets/13-pdf-final.png",
-  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/assets/15-imagens-premium-16-9.png",
-  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/assets/16-acra-cognitivo.png",
-  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/assets/17-html-antigravity.png",
-  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/assets/18-questoes-temi-n1-n5.png",
-  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/assets/19-aprendizagem-ativa.png",
-  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/assets/20-pacote-turbo-temi-360x.png",
   "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/index.html",
   "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/styles.css",
   "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/product.manifest.json",
   "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/references.json",
-  "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/assets/constelacao-conhecimento-terapia-intensiva.png",
-  "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/assets/atlas-visual-cerebro-conectado.png",
   "./assets/editorial-attribution.css",
   "./data/editorial/editorial-provenance.json",
   "./data/theme-catalog.json",
@@ -199,6 +172,22 @@ const WARM_ASSETS = [
   "./docs_usuario/ACESSO_IPHONE/index.html",
   "./docs_usuario/ACESSO_IPHONE.md"
 ];
+
+const MUTABLE_DATA_PREFIXES = [
+  new URL("./15_Radar_Cientifico/data/", self.registration.scope).pathname,
+  new URL("./23_Cosmos_NEXUS/", self.registration.scope).pathname
+];
+const MUTABLE_DATA_PATHS = new Set([
+  new URL("./data/connections.json", self.registration.scope).pathname,
+  new URL("./data/site_manifest.json", self.registration.scope).pathname
+]);
+
+function isMutableDataPath(pathname) {
+  if (MUTABLE_DATA_PATHS.has(pathname)) return true;
+  const [radarPrefix, nexusPrefix] = MUTABLE_DATA_PREFIXES;
+  if (pathname.startsWith(radarPrefix)) return true;
+  return pathname.startsWith(nexusPrefix) && pathname.endsWith(".json");
+}
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -273,7 +262,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  if (request.mode === "navigate") {
+  if (request.mode === "navigate" || request.cache === "no-store" || isMutableDataPath(url.pathname)) {
     event.respondWith(networkFirst(request));
     return;
   }

@@ -63,6 +63,7 @@ REQUIRED = (
     "questoes",
     "apps",
     "desafios",
+    "mnemonicos",
 )
 
 OPTIONAL = (
@@ -904,6 +905,7 @@ def normalize_permissions(site: Path) -> None:
 
 
 EDITORIAL_ATTRIBUTION_MARKER = "antigravity-editorial-attribution:v1"
+NEXUS_MOBILE_POSTBUILD_MARKER = "antigravity-nexus-mobile-postbuild:v1"
 
 
 def inject_editorial_attribution(site: Path) -> int:
@@ -962,6 +964,34 @@ def inject_editorial_attribution(site: Path) -> int:
         html_path.write_text(html, encoding="utf-8")
         updated += 1
     return updated
+
+
+def apply_nexus_mobile_postbuild_patch(site: Path) -> bool:
+    """Corrige o overflow móvel somente nos bytes do artefato público.
+
+    O CSS-fonte continua idêntico ao lote ``SOURCE_BOUND`` já tombado. A
+    correção integra o perfil ``POST_BUILD_POST_SANITIZE`` e, por isso, é
+    aplicada de forma determinística depois da cópia para ``site/``.
+    """
+
+    css_path = site / "23_Cosmos_NEXUS/assets/styles.css"
+    try:
+        css = css_path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as exc:
+        raise ValueError("CSS público do NEXUS ausente ou inválido.") from exc
+    if NEXUS_MOBILE_POSTBUILD_MARKER in css:
+        return False
+
+    patch = f"""
+
+/* {NEXUS_MOBILE_POSTBUILD_MARKER} */
+@media (max-width: 700px) {{
+  .lab-header {{ align-items: flex-start; flex-direction: column; }}
+  .safety-badge {{ max-width: 100%; white-space: normal; }}
+}}
+"""
+    css_path.write_text(css.rstrip() + patch, encoding="utf-8")
+    return True
 
 
 def build(root: Path, site: Path) -> int:
@@ -1033,11 +1063,16 @@ def build(root: Path, site: Path) -> int:
     write_public_library_metadata(root, site, library_plan)
     (site / ".nojekyll").touch(exist_ok=True)
     attributed = inject_editorial_attribution(site)
+    mobile_patch_applied = apply_nexus_mobile_postbuild_patch(site)
     normalize_permissions(site)
     total = sum(path.stat().st_size for path in site.rglob("*") if path.is_file())
     count = sum(1 for path in site.rglob("*") if path.is_file())
     print(f"✅ Artefato montado: {count} arquivo(s), {total / 1024 / 1024:.1f} MiB.")
     print(f"🛡️ Atribuição editorial aplicada a {attributed} página(s) HTML.")
+    print(
+        "📱 Correção móvel pós-build do NEXUS: "
+        + ("aplicada." if mobile_patch_applied else "já presente.")
+    )
     if card_conflicts:
         print(
             f"🛡️ Cópias de conflito preservadas localmente e excluídas do site: "

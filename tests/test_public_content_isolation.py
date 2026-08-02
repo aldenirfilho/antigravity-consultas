@@ -70,6 +70,27 @@ class PublicContentIsolationTests(unittest.TestCase):
                     (root / relative).read_bytes(),
                 )
 
+    def test_nexus_mobile_fix_is_postbuild_idempotent_and_preserves_source(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "23_Cosmos_NEXUS/assets/styles.css"
+            public = root / "site/23_Cosmos_NEXUS/assets/styles.css"
+            source.parent.mkdir(parents=True)
+            public.parent.mkdir(parents=True)
+            original = ".lab-header { display: flex; }\n.safety-badge { white-space: nowrap; }\n"
+            source.write_text(original, encoding="utf-8")
+            public.write_text(original, encoding="utf-8")
+
+            self.assertTrue(self.builder.apply_nexus_mobile_postbuild_patch(root / "site"))
+            first = public.read_bytes()
+            self.assertFalse(self.builder.apply_nexus_mobile_postbuild_patch(root / "site"))
+            self.assertEqual(public.read_bytes(), first)
+            self.assertEqual(source.read_text(encoding="utf-8"), original)
+            rendered = first.decode("utf-8")
+            self.assertIn(self.builder.NEXUS_MOBILE_POSTBUILD_MARKER, rendered)
+            self.assertIn(".lab-header { align-items: flex-start; flex-direction: column; }", rendered)
+            self.assertIn(".safety-badge { max-width: 100%; white-space: normal; }", rendered)
+
     def test_preview_metadata_quarantines_source_and_all_public_indexes(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -628,7 +649,7 @@ class PublicContentIsolationTests(unittest.TestCase):
 
     def test_service_worker_revokes_the_previous_public_cache(self) -> None:
         worker = (ROOT / "sw.js").read_text(encoding="utf-8")
-        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v22`', worker)
+        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v23`', worker)
         self.assertNotIn('const CACHE_NAME = `${CACHE_PREFIX}v20`', worker)
         self.assertIn(
             "key.startsWith(CACHE_PREFIX) && key !== CACHE_NAME",
