@@ -1,7 +1,7 @@
 {
   "schemaVersion": "antigravity-cosmos-product-catalog-v1",
   "version": "1.1.0",
-  "updatedAt": "2026-08-02T00:16:48Z",
+  "updatedAt": "2026-08-02T00:43:33Z",
   "codeContract": "product-code-contract.json",
   "privacy": "Este catálogo contém somente metadados P0; ponteiros privados permanecem nas superfícies autorizadas.",
   "items": [
@@ -17,13 +17,13 @@
       "status": "TAF_PREPARED",
       "source": {
         "path": "23_Cosmos_NEXUS/releases/nexus-cosmos-20260801.release.json",
-        "sha256": "d56c34afac77ba10218926981a0143e072f1f8689fa373768eea15115eb59141"
+        "sha256": "9a469908538ec276e12a4f72967959c3f709521827aa4f853fc0adfbd8626686"
       },
       "graphNode": "nexus-cosmos",
       "auditCode": "AUD###-EXT-20260801-0001-74C31336",
-      "homologationCode": "HOM###-MUX-EXT-20260801-0006-8EA2244D",
-      "tombstoneCode": "TOM###-MUX-EXT-20260801-0006-E6A2DC89",
-      "tafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
+      "homologationCode": "HOM###-MUX-EXT-20260801-0009-9B489508",
+      "tombstoneCode": "TOM###-MUX-EXT-20260801-0009-E8C6384E",
+      "tafCode": "TAF###-MUX-EXT-20260801-0009-20D1A0CF",
       "published": false,
       "gates": {
         "automatedTechnical": "APROVADO",
@@ -33,15 +33,15 @@
         "ownerUnlock": "AUSENTE"
       },
       "releasePreparation": {
-        "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0006-F0F3C3FB",
+        "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0009-07BB8BC4",
         "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
-        "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+        "artifactRootSha256": "82a875f405e5e3d95242c997796d8712019cffa25587ed991e1ce74f7d894ee9",
         "artifactProfile": "POST_BUILD_POST_SANITIZE",
         "memberCount": 30,
-        "sourceEvidenceSha256": "f64800cfddb270978ff7fc85d7b0b26a39e5026dc508a4e730ec63f40a819842",
-        "preparedAt": "2026-08-02T00:16:48Z",
-        "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0006-1876AD82",
-        "supersedesTafCode": "TAF###-MUX-EXT-20260801-0003-6445E9A3",
+        "sourceEvidenceSha256": "b40d869b7b97f52cd29f8a217092e7c3ee41e9cac55d9e7b2ab113e2c295b50f",
+        "preparedAt": "2026-08-02T00:43:33Z",
+        "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0009-4B577E8E",
+        "supersedesTafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
         "supersessionReason": "VOID_PREPUBLICATION_SOURCE_SCOPE"
       },
       "artifactProfile": "POST_BUILD_POST_SANITIZE",
@@ -60,6 +60,21 @@
           "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0006-1876AD82",
           "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
           "publication": "VOID_PREPUBLICATION"
+        },
+        {
+          "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0006-F0F3C3FB",
+          "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+          "homologationCode": "HOM###-MUX-EXT-20260801-0006-8EA2244D",
+          "tombstoneCode": "TOM###-MUX-EXT-20260801-0006-E6A2DC89",
+          "tafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
+          "artifactProfile": "POST_BUILD_POST_SANITIZE",
+          "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+          "memberCount": 30,
+          "supersededAt": "2026-08-02T00:43:33Z",
+          "supersededByTafCode": "TAF###-MUX-EXT-20260801-0009-20D1A0CF",
+          "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0009-4B577E8E",
+          "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+          "publication": "VOID_PREPUBLICATION"
         }
       ]
     },
@@ -75,13 +90,13 @@
       "status": "TAF_PREPARED",
       "source": {
         "path": "23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/product.manifest.json",
-        "sha256": "ad7490e6ca19bc7f5952e9df473de33abc7605a442f225a8f0c867654f0953e0"
+        "sha256": "d8aa0936b410db8807c5414c3dc43bd6acf72462c4b02407091bdb9a5b8ec319"
       },
       "graphNode": "maquina-turbo-temi-360x",
       "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
-      "homologationCode": "HOM###-MUX-PROD-20260801-0004-5C0FAEF7",
-      "tombstoneCode": "TOM###-MUX-PROD-20260801-0004-DF465110",
-      "tafCode": "TAF###-MUX-PROD-20260801-0004-F3D57535",
+      "homologationCode": "HOM###-MUX-PROD-20260801-0007-52A05BC4",
+      "tombstoneCode": "TOM###-MUX-PROD-20260801-0007-5885E85F",
+      "tafCode": "TAF###-MUX-PROD-20260801-0007-0BD8C1C2",
       "published": false,
       "gates": {
         "automatedTechnical": "APROVADO",
@@ -91,15 +106,15 @@
         "ownerUnlock": "AUSENTE"
       },
       "releasePreparation": {
-        "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0004-CD0A61CB",
+        "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0007-C2A356E9",
         "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
-        "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+        "artifactRootSha256": "5c8f00861574943bcfc3baf79788a7c3e9aa9893a7676b693284696feaa8f93b",
         "artifactProfile": "POST_BUILD_POST_SANITIZE",
         "memberCount": 11,
-        "sourceEvidenceSha256": "0a4ba4134420542767be793011cab545e455ebd841d090cff84623348c433f45",
-        "preparedAt": "2026-08-02T00:16:31Z",
-        "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0004-AA0422FB",
-        "supersedesTafCode": "TAF###-MUX-PROD-20260801-0001-3B26350F",
+        "sourceEvidenceSha256": "8fb68cf43aafd4193bd0ad4acd929965e4fe16f80a771d8b89560b1d36e849df",
+        "preparedAt": "2026-08-02T00:42:59Z",
+        "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0007-78BF7E7A",
+        "supersedesTafCode": "TAF###-MUX-PROD-20260801-0004-F3D57535",
         "supersessionReason": "VOID_PREPUBLICATION_SOURCE_SCOPE"
       },
       "artifactProfile": "POST_BUILD_POST_SANITIZE",
@@ -118,6 +133,21 @@
           "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0004-AA0422FB",
           "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
           "publication": "VOID_PREPUBLICATION"
+        },
+        {
+          "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0004-CD0A61CB",
+          "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+          "homologationCode": "HOM###-MUX-PROD-20260801-0004-5C0FAEF7",
+          "tombstoneCode": "TOM###-MUX-PROD-20260801-0004-DF465110",
+          "tafCode": "TAF###-MUX-PROD-20260801-0004-F3D57535",
+          "artifactProfile": "POST_BUILD_POST_SANITIZE",
+          "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+          "memberCount": 11,
+          "supersededAt": "2026-08-02T00:42:59Z",
+          "supersededByTafCode": "TAF###-MUX-PROD-20260801-0007-0BD8C1C2",
+          "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0007-78BF7E7A",
+          "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+          "publication": "VOID_PREPUBLICATION"
         }
       ]
     },
@@ -133,13 +163,13 @@
       "status": "TAF_PREPARED",
       "source": {
         "path": "23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/product.manifest.json",
-        "sha256": "417c7cade2d2f4027b7a515c748846a8e1d5b06a081063b2870fc7e63bd5ef85"
+        "sha256": "d2dfcc74ebd96cd2c2693968a33d4a5bbc06e18dad7e4f9ddc39032a1d966fdc"
       },
       "graphNode": "biblioteca-visual-cosmica",
       "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
-      "homologationCode": "HOM###-U3-IMGT-20260801-0005-67364B28",
-      "tombstoneCode": "TOM###-U3-IMGT-20260801-0005-DAD0842F",
-      "tafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
+      "homologationCode": "HOM###-U3-IMGT-20260801-0008-F76EBBDB",
+      "tombstoneCode": "TOM###-U3-IMGT-20260801-0008-B38903DF",
+      "tafCode": "TAF###-U3-IMGT-20260801-0008-3D96DA86",
       "published": false,
       "gates": {
         "automatedTechnical": "APROVADO",
@@ -149,15 +179,15 @@
         "ownerUnlock": "AUSENTE"
       },
       "releasePreparation": {
-        "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0005-BF11D9C7",
+        "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0008-9C0153F5",
         "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
-        "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+        "artifactRootSha256": "bf41f9983322ec914146fc826229468f48f930203974a650c756336b6cdb6d0b",
         "artifactProfile": "POST_BUILD_POST_SANITIZE",
         "memberCount": 5,
-        "sourceEvidenceSha256": "62fc57370df63166e276f863ef02307aeee8384d780de406b8ba69c2fd580458",
-        "preparedAt": "2026-08-02T00:16:39Z",
-        "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0005-8BA8D8A5",
-        "supersedesTafCode": "TAF###-U3-IMGT-20260801-0002-23F72FD1",
+        "sourceEvidenceSha256": "95b1dd755cff93501f5d5bb281e1b1d27014a4e22ad0b6a17677820b6e21c6c6",
+        "preparedAt": "2026-08-02T00:43:16Z",
+        "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0008-5533FBF4",
+        "supersedesTafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
         "supersessionReason": "VOID_PREPUBLICATION_SOURCE_SCOPE"
       },
       "artifactProfile": "POST_BUILD_POST_SANITIZE",
@@ -174,6 +204,21 @@
           "supersededAt": "2026-08-02T00:16:39Z",
           "supersededByTafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
           "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0005-8BA8D8A5",
+          "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+          "publication": "VOID_PREPUBLICATION"
+        },
+        {
+          "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0005-BF11D9C7",
+          "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+          "homologationCode": "HOM###-U3-IMGT-20260801-0005-67364B28",
+          "tombstoneCode": "TOM###-U3-IMGT-20260801-0005-DAD0842F",
+          "tafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
+          "artifactProfile": "POST_BUILD_POST_SANITIZE",
+          "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+          "memberCount": 5,
+          "supersededAt": "2026-08-02T00:43:16Z",
+          "supersededByTafCode": "TAF###-U3-IMGT-20260801-0008-3D96DA86",
+          "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0008-5533FBF4",
           "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
           "publication": "VOID_PREPUBLICATION"
         }

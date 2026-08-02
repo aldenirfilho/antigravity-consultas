@@ -9,8 +9,8 @@
     "productUid": "847d3013ff48527624cefd9403053d5bf5b4c9e58bde7eb657d65668001dce24",
     "auditCode": "AUD###-EXT-20260801-0001-74C31336",
     "childTafCodes": [
-      "TAF###-MUX-PROD-20260801-0004-F3D57535",
-      "TAF###-U3-IMGT-20260801-0005-BF1AC3E6"
+      "TAF###-MUX-PROD-20260801-0007-0BD8C1C2",
+      "TAF###-U3-IMGT-20260801-0008-3D96DA86"
     ]
   },
   "classification": {
@@ -23,12 +23,12 @@
   "publication": {
     "status": "release-prepared",
     "officialPublication": false,
-    "finalAcceptanceCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
+    "finalAcceptanceCode": "TAF###-MUX-EXT-20260801-0009-20D1A0CF",
     "officialPublicationCode": null,
     "authorizationMode": "LITERAL_OWNER_COMMAND",
     "releaseBoundary": "HOM/TOM/TAF podem ser preparados; merge, main, Pages e publicação oficial permanecem bloqueados até o comando literal do TAF exato.",
     "ownerPublicationAuthorization": false,
-    "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0006-351C123E"
+    "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0009-20D1A0CF"
   },
   "memberRoot": ".",
   "members": [
@@ -267,18 +267,18 @@
     "outcome": "PASS"
   },
   "releasePreparation": {
-    "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0006-F0F3C3FB",
-    "homologationCode": "HOM###-MUX-EXT-20260801-0006-8EA2244D",
+    "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0009-07BB8BC4",
+    "homologationCode": "HOM###-MUX-EXT-20260801-0009-9B489508",
     "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
-    "tombstoneCode": "TOM###-MUX-EXT-20260801-0006-E6A2DC89",
-    "tafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
-    "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+    "tombstoneCode": "TOM###-MUX-EXT-20260801-0009-E8C6384E",
+    "tafCode": "TAF###-MUX-EXT-20260801-0009-20D1A0CF",
+    "artifactRootSha256": "82a875f405e5e3d95242c997796d8712019cffa25587ed991e1ce74f7d894ee9",
     "artifactProfile": "POST_BUILD_POST_SANITIZE",
     "memberCount": 30,
-    "sourceEvidenceSha256": "f64800cfddb270978ff7fc85d7b0b26a39e5026dc508a4e730ec63f40a819842",
-    "preparedAt": "2026-08-02T00:16:48Z",
-    "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0006-1876AD82",
-    "supersedesTafCode": "TAF###-MUX-EXT-20260801-0003-6445E9A3",
+    "sourceEvidenceSha256": "b40d869b7b97f52cd29f8a217092e7c3ee41e9cac55d9e7b2ab113e2c295b50f",
+    "preparedAt": "2026-08-02T00:43:33Z",
+    "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0009-4B577E8E",
+    "supersedesTafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
     "supersessionReason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
     "publication": "LOCKED"
   },
@@ -296,6 +296,21 @@
       "supersededAt": "2026-08-02T00:16:48Z",
       "supersededByTafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
       "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0006-1876AD82",
+      "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+      "publication": "VOID_PREPUBLICATION"
+    },
+    {
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0006-F0F3C3FB",
+      "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+      "homologationCode": "HOM###-MUX-EXT-20260801-0006-8EA2244D",
+      "tombstoneCode": "TOM###-MUX-EXT-20260801-0006-E6A2DC89",
+      "tafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
+      "artifactProfile": "POST_BUILD_POST_SANITIZE",
+      "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+      "memberCount": 30,
+      "supersededAt": "2026-08-02T00:43:33Z",
+      "supersededByTafCode": "TAF###-MUX-EXT-20260801-0009-20D1A0CF",
+      "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0009-4B577E8E",
       "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
       "publication": "VOID_PREPUBLICATION"
     }

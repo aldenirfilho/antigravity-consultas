@@ -1,7 +1,7 @@
 {
   "schemaVersion": "antigravity-homologation-reports-v1",
   "version": "1.0.0",
-  "updatedAt": "2026-08-02T00:16:48Z",
+  "updatedAt": "2026-08-02T00:43:33Z",
   "items": [
     {
       "schemaVersion": "antigravity-homologation-record-v1",
@@ -398,6 +398,234 @@
         "status": "LOCKED",
         "officialPublication": false,
         "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0006-351C123E"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-MUX-PROD-20260801-0001-D0394A79",
+        "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+        "reviewer": "Aldenir Rocha de Oliveira Filho e Codex segunda auditoria tecnica",
+        "reviewedAt": "2026-08-01T21:41:15-03:00",
+        "sourceEvidenceSha256": "8fb68cf43aafd4193bd0ad4acd929965e4fe16f80a771d8b89560b1d36e849df",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+          "artifactRootSha256": "5c8f00861574943bcfc3baf79788a7c3e9aa9893a7676b693284696feaa8f93b",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "FULL-SUITE-PREVIOUS-",
+            "command": "ANTIGRAVITY_PUBLIC_ROOT=site_previous python3 -m unittest discover -s tests -p test_*.py -q",
+            "status": "PASS",
+            "summary": "529 testes validaram o snapshot anterior e o mecanismo append-only",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "NEW-PUBLIC-ROOT-INVE",
+            "command": "python3 scripts_admin/nexus_cosmos.py supersede-inventory --product-code ####AGX-MUX-PROD --public-root site --previous-public-root site_previous",
+            "status": "PASS",
+            "summary": "Onze membros finais vinculados ao novo root pos-build",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "PUBLIC-PRIVACY-EDITO",
+            "command": "publication_guard check-site site e editorial_gate --public-root site",
+            "status": "PASS",
+            "summary": "Artefato de 154.6 MiB aprovado em privacidade; 546 textos sem problema editorial",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "BROWSER-RESPONSIVE-3",
+            "command": "Browser local viewport 390x844 home mapa NEXUS produtos e Radar",
+            "status": "PASS",
+            "summary": "Sem overflow e sem imagens visiveis quebradas",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          }
+        ],
+        "notes": [
+          "Segunda auditoria P0 sem dado de paciente ou identificador clinico.",
+          "O proprietario declarou que todas as imagens deste lote NEXUS foram geradas por GPT conforme suas ideias direcao criativa e curadoria com credito publico Aldenir ALD 360 GPT.",
+          "Figuras POCUS de terceiro pertencem a outro modulo preservam sua atribuicao CC BY e nao foram relabeladas nem incluidas neste lote.",
+          "Conteudo educacional nao prescritivo com referencias preservadas e sem falha cientifica bloqueadora identificada.",
+          "Homologacoes Safari macOS e Safari iPhone foram confirmadas pelo proprietario; a tentativa tecnica atual no Safari macOS ficou indisponivel porque o Mac estava bloqueado.",
+          "Publicacao oficial permanece LOCKED; nenhum merge main Pages ou deploy NEXUS foi autorizado nesta reemissao."
+        ],
+        "artifactRootSha256": "5c8f00861574943bcfc3baf79788a7c3e9aa9893a7676b693284696feaa8f93b",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "memberCount": 11,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "617c786a605c0eaef7619e6398ca63dc9a8e87427a7c135598c35ce879668742",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0007-C2A356E9",
+      "homologationCode": "HOM###-MUX-PROD-20260801-0007-52A05BC4",
+      "tombstoneCode": "TOM###-MUX-PROD-20260801-0007-5885E85F",
+      "tafCode": "TAF###-MUX-PROD-20260801-0007-0BD8C1C2",
+      "preparedAt": "2026-08-02T00:42:59Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-MUX-PROD-20260801-0007-0BD8C1C2"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+        "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+        "reviewer": "Aldenir Rocha de Oliveira Filho e Codex segunda auditoria tecnica",
+        "reviewedAt": "2026-08-01T21:41:15-03:00",
+        "sourceEvidenceSha256": "95b1dd755cff93501f5d5bb281e1b1d27014a4e22ad0b6a17677820b6e21c6c6",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+          "artifactRootSha256": "bf41f9983322ec914146fc826229468f48f930203974a650c756336b6cdb6d0b",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "FULL-SUITE-PREVIOUS-",
+            "command": "ANTIGRAVITY_PUBLIC_ROOT=site_previous python3 -m unittest discover -s tests -p test_*.py -q",
+            "status": "PASS",
+            "summary": "529 testes validaram o snapshot anterior e o mecanismo append-only",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "NEW-PUBLIC-ROOT-INVE",
+            "command": "python3 scripts_admin/nexus_cosmos.py supersede-inventory --product-code ####AGX-U3-IMGT --public-root site --previous-public-root site_previous",
+            "status": "PASS",
+            "summary": "Cinco membros finais vinculados ao novo root pos-build",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "PUBLIC-PRIVACY-EDITO",
+            "command": "publication_guard check-site site e editorial_gate --public-root site",
+            "status": "PASS",
+            "summary": "Artefato de 154.6 MiB aprovado em privacidade; 546 textos sem problema editorial",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "BROWSER-RESPONSIVE-3",
+            "command": "Browser local viewport 390x844 Biblioteca Visual e produtos NEXUS",
+            "status": "PASS",
+            "summary": "Sem overflow e sem imagens visiveis quebradas",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          }
+        ],
+        "notes": [
+          "Segunda auditoria P0 sem pessoa paciente prontuario ou identificador clinico.",
+          "O proprietario declarou que todas as imagens deste lote NEXUS foram geradas por GPT conforme suas ideias direcao criativa e curadoria com credito publico Aldenir ALD 360 GPT.",
+          "Imagens 13 e 15 permanecem corrigidas e vinculadas aos codigos catalogados; nenhum binario de imagem foi alterado nesta reemissao.",
+          "Figuras POCUS de terceiro pertencem a outro modulo preservam sua atribuicao CC BY e nao foram relabeladas nem incluidas neste lote.",
+          "Homologacoes Safari macOS e Safari iPhone foram confirmadas pelo proprietario; a tentativa tecnica atual no Safari macOS ficou indisponivel porque o Mac estava bloqueado.",
+          "Publicacao oficial permanece LOCKED; nenhum merge main Pages ou deploy NEXUS foi autorizado nesta reemissao."
+        ],
+        "artifactRootSha256": "bf41f9983322ec914146fc826229468f48f930203974a650c756336b6cdb6d0b",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "memberCount": 5,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "00804c387ca4c6fbeedce7f3c2586e9bb66d0be04b098fa34b9758ea103a7d97",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0008-9C0153F5",
+      "homologationCode": "HOM###-U3-IMGT-20260801-0008-F76EBBDB",
+      "tombstoneCode": "TOM###-U3-IMGT-20260801-0008-B38903DF",
+      "tafCode": "TAF###-U3-IMGT-20260801-0008-3D96DA86",
+      "preparedAt": "2026-08-02T00:43:16Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-U3-IMGT-20260801-0008-3D96DA86"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-MUX-EXT-20260731-0001-847D3013",
+        "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+        "reviewer": "Aldenir Rocha de Oliveira Filho e Codex segunda auditoria tecnica",
+        "reviewedAt": "2026-08-01T21:41:15-03:00",
+        "sourceEvidenceSha256": "b40d869b7b97f52cd29f8a217092e7c3ee41e9cac55d9e7b2ab113e2c295b50f",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+          "artifactRootSha256": "82a875f405e5e3d95242c997796d8712019cffa25587ed991e1ce74f7d894ee9",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "FULL-SUITE-PREVIOUS-",
+            "command": "ANTIGRAVITY_PUBLIC_ROOT=site_previous python3 -m unittest discover -s tests -p test_*.py -q",
+            "status": "PASS",
+            "summary": "529 testes validaram o snapshot anterior e o mecanismo append-only",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "NEW-PUBLIC-ROOT-INVE",
+            "command": "python3 scripts_admin/nexus_cosmos.py supersede-inventory --product-code ####AGX-MUX-EXT --public-root site --previous-public-root site_previous",
+            "status": "PASS",
+            "summary": "Trinta membros finais vinculados ao novo root pos-build",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "PUBLIC-PRIVACY-EDITO",
+            "command": "publication_guard check-site site e editorial_gate --public-root site",
+            "status": "PASS",
+            "summary": "Artefato de 154.6 MiB aprovado em privacidade; 546 textos sem problema editorial",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "BROWSER-RESPONSIVE-3",
+            "command": "Browser local viewport 390x844 home mapa NEXUS produtos e Radar",
+            "status": "PASS",
+            "summary": "Mapa com vinte e quatro nos iniciais e filtro NEXUS funcional sem overflow",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          }
+        ],
+        "notes": [
+          "Segunda auditoria P0 sem dado de paciente ou identificador clinico em todo o lote.",
+          "O proprietario declarou que todas as imagens deste lote NEXUS foram geradas por GPT conforme suas ideias direcao criativa e curadoria com credito publico Aldenir ALD 360 GPT.",
+          "Figuras POCUS de terceiro pertencem a outro modulo preservam sua atribuicao CC BY e nao foram relabeladas nem incluidas neste lote.",
+          "Radar 2026-08-01 foi revisado clinicamente pelo proprietario e preserva referencias principais; nenhum bloqueio cientifico foi identificado.",
+          "Homologacoes Safari macOS e Safari iPhone foram confirmadas pelo proprietario; a tentativa tecnica atual no Safari macOS ficou indisponivel porque o Mac estava bloqueado.",
+          "Publicacao oficial permanece LOCKED; nenhum merge main Pages ou deploy NEXUS foi autorizado nesta reemissao."
+        ],
+        "artifactRootSha256": "82a875f405e5e3d95242c997796d8712019cffa25587ed991e1ce74f7d894ee9",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "memberCount": 30,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "b6151846bdfbd5b619ef6d932f8cd9934944c1a5a76e67cf74773e11fe7069da",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0009-07BB8BC4",
+      "homologationCode": "HOM###-MUX-EXT-20260801-0009-9B489508",
+      "tombstoneCode": "TOM###-MUX-EXT-20260801-0009-E8C6384E",
+      "tafCode": "TAF###-MUX-EXT-20260801-0009-20D1A0CF",
+      "preparedAt": "2026-08-02T00:43:33Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0009-20D1A0CF"
       }
     }
   ],
