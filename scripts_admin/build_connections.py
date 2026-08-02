@@ -19,8 +19,10 @@ O que faz:
 Schema de nó: {id,label,body,type,url,status}. Aresta: {from,to,relation}.
 """
 
+import copy
 import os
 import json
+import tempfile
 from datetime import datetime
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -80,6 +82,7 @@ def main():
             "edges": [],
             "links": [],
         }
+    original = copy.deepcopy(conn)
 
     nodes = conn.get("nodes", [])
     edges = conn.get("edges", [])
@@ -183,11 +186,36 @@ def main():
             seen_edges.add(key)
             deduplicated_edges.append(edge)
     conn["edges"] = deduplicated_edges
-    conn["updatedAt"] = datetime.now().isoformat(timespec="seconds")
+    comparable_original = {
+        key: value for key, value in original.items() if key != "updatedAt"
+    }
+    comparable_next = {
+        key: value for key, value in conn.items() if key != "updatedAt"
+    }
+    changed = comparable_next != comparable_original
+    if not changed:
+        print(
+            f"✅  Mapa Vivo já estava atual — {len(conn['nodes'])} nós, "
+            f"{len(conn['edges'])} arestas."
+        )
+        return
+
+    conn["updatedAt"] = datetime.now().astimezone().isoformat(timespec="seconds")
 
     os.makedirs(os.path.dirname(CONN_JSON), exist_ok=True)
-    with open(CONN_JSON, "w", encoding="utf-8") as f:
-        json.dump(conn, f, ensure_ascii=False, indent=2)
+    descriptor, temporary_path = tempfile.mkstemp(
+        prefix=".connections.", suffix=".json.tmp", dir=os.path.dirname(CONN_JSON)
+    )
+    try:
+        with os.fdopen(descriptor, "w", encoding="utf-8") as f:
+            json.dump(conn, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(temporary_path, CONN_JSON)
+    finally:
+        if os.path.exists(temporary_path):
+            os.unlink(temporary_path)
 
     print(f"   Desafios: {n_dsf} | Mnemônicos: {n_mnem} | podados: {removed}")
     print(f"✅  Mapa Vivo atualizado — {len(conn['nodes'])} nós, {len(conn['edges'])} arestas.")

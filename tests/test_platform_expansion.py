@@ -118,7 +118,7 @@ class AccessiblePwaTests(unittest.TestCase):
         self.assertIn("assets/icons/ios/apple-touch-icon-120.png", home)
         self.assertIn('name="apple-mobile-web-app-capable" content="yes"', home)
         self.assertIn('name="apple-mobile-web-app-title" content="Antigravity"', home)
-        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v17`', worker)
+        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v23`', worker)
         self.assertIn("await self.skipWaiting()", worker)
         self.assertIn("await self.clients.claim()", worker)
         range_guard = 'if (request.headers.has("range")) return fetch(request);'
@@ -292,12 +292,20 @@ class AccessiblePwaTests(unittest.TestCase):
         self.assertLess(home.index('id="temi"'), home.index('id="pipeline"'))
 
         self.assertIn(
-            "{id:'arquivos',  label:'📄 Arquivos',    types:['file']",
+            '{"id":"arquivos","label":"📄 Arquivos","types":["file"]',
             home,
         )
         self.assertIn("const active = new Set(['estrutura']);", home)
         self.assertIn("let vis = query ? allNodes", home)
-        self.assertIn("typeToGroup[n.type] || 'outros'", home)
+        self.assertIn(
+            "typeToGroup[canonicalTypeOf(n)] || 'outros'",
+            home,
+        )
+        self.assertIn(
+            'const TYPE_ALIASES = {"project-source":"source-project",'
+            '"collection":"canonical-lot","product-candidate":"product-release"};',
+            home,
+        )
 
     def test_portal_stations_and_modules_have_distinct_visual_taxonomy(self) -> None:
         home = (ROOT / "index.html").read_text(encoding="utf-8")
@@ -325,7 +333,7 @@ class AccessiblePwaTests(unittest.TestCase):
             home[modules_start:home.index("<!-- ── DECK DE MISSÕES CRÍTICAS")].count(
                 'class="module-card'
             ),
-            20,  # 19 módulos/apps + Mapa Vivo
+            21,  # 20 módulos/apps/operações + Mapa Vivo
         )
 
         for marker in (

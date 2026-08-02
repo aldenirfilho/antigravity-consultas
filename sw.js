@@ -1,7 +1,7 @@
 "use strict";
 
 const CACHE_PREFIX = "antigravity-root-";
-const CACHE_NAME = `${CACHE_PREFIX}v17`;
+const CACHE_NAME = `${CACHE_PREFIX}v23`;
 const SHELL_ASSETS = [
   "./",
   "./index.html",
@@ -13,9 +13,11 @@ const SHELL_ASSETS = [
 ];
 const WARM_ASSETS = [
   "./data/site_manifest.json",
+  "./data/connections.json",
   "./15_Radar_Cientifico/index.html",
   "./15_Radar_Cientifico/data/radar.js",
   "./15_Radar_Cientifico/data/radar-history.json",
+  "./15_Radar_Cientifico/data/radar-widget-feed.json",
   "./16_Diretorio_Medico/index.html",
   "./16_Diretorio_Medico/data/sites.js",
   "./17_Portal_Vivo/index.html",
@@ -60,6 +62,65 @@ const WARM_ASSETS = [
   "./22_Microparticulas_Ativas_ACRA/data/ios-widget-formats.json",
   "./22_Microparticulas_Ativas_ACRA/data/visual-assets.json",
   "./22_Microparticulas_Ativas_ACRA/module.manifest.json",
+  "./23_Cosmos_NEXUS/index.html",
+  "./23_Cosmos_NEXUS/assets/theme-bootstrap.js",
+  "./23_Cosmos_NEXUS/assets/styles.css",
+  "./23_Cosmos_NEXUS/assets/app.js",
+  // Mantém apenas a capa essencial. Atlas e produtos visuais entram no cache
+  // sob demanda para não bloquear a instalação em Safari/iPhone.
+  "./23_Cosmos_NEXUS/assets/atlas/01-maquina-turbo-temi-360x.jpg",
+  "./23_Cosmos_NEXUS/data/cosmos.json",
+  "./23_Cosmos_NEXUS/data/atlas.json",
+  "./23_Cosmos_NEXUS/data/ecosystem-history.json",
+  "./23_Cosmos_NEXUS/data/block-registry.json",
+  "./23_Cosmos_NEXUS/data/command-contract.json",
+  "./23_Cosmos_NEXUS/data/tag-topology.json",
+  "./23_Cosmos_NEXUS/data/tag-catalog.json",
+  "./23_Cosmos_NEXUS/data/render-recipes.json",
+  "./23_Cosmos_NEXUS/data/render-demo.json",
+  "./23_Cosmos_NEXUS/data/product-lifecycle.json",
+  "./23_Cosmos_NEXUS/data/product-catalog.json",
+  "./23_Cosmos_NEXUS/data/product-code-contract.json",
+  "./23_Cosmos_NEXUS/data/entity-code-contract.json",
+  "./23_Cosmos_NEXUS/data/sync-contract.json",
+  "./23_Cosmos_NEXUS/data/project-sync-contract.json",
+  "./23_Cosmos_NEXUS/data/project-domain-routing.json",
+  "./23_Cosmos_NEXUS/data/surface-routing.json",
+  "./23_Cosmos_NEXUS/data/content-routing.json",
+  "./23_Cosmos_NEXUS/data/document-sync-contract.json",
+  "./23_Cosmos_NEXUS/data/living-organism-contract.json",
+  "./23_Cosmos_NEXUS/data/governance-code-contract.json",
+  "./23_Cosmos_NEXUS/data/execution-ledger.json",
+  "./23_Cosmos_NEXUS/data/homologation-reports.json",
+  "./23_Cosmos_NEXUS/data/tombstone-manifest.json",
+  "./23_Cosmos_NEXUS/data/daily-update-contract.json",
+  "./23_Cosmos_NEXUS/data/editorial-audit-contract.json",
+  "./23_Cosmos_NEXUS/blocks/01_evolucao/items.json",
+  "./23_Cosmos_NEXUS/blocks/02_plano_terapeutico/items.json",
+  "./23_Cosmos_NEXUS/blocks/03_motor_visual/items.json",
+  "./23_Cosmos_NEXUS/blocks/04_organizador_estudos/items.json",
+  "./23_Cosmos_NEXUS/blocks/05_turbo_temi/items.json",
+  "./23_Cosmos_NEXUS/blocks/06_refinaria_temi/items.json",
+  "./23_Cosmos_NEXUS/blocks/07_tutor/items.json",
+  "./23_Cosmos_NEXUS/blocks/08_estudo_microparticulado/items.json",
+  "./23_Cosmos_NEXUS/blocks/09_imagens_turbo_temi/items.json",
+  "./23_Cosmos_NEXUS/blocks/10_produtos_turbo_temi/items.json",
+  "./23_Cosmos_NEXUS/blocks/11_referencias_evidencias/items.json",
+  "./23_Cosmos_NEXUS/blocks/12_auditoria_publicacao/items.json",
+  "./23_Cosmos_NEXUS/blocks/90_extensoes/items.json",
+  "./23_Cosmos_NEXUS/blocks/_schemas/block-item.schema.json",
+  "./23_Cosmos_NEXUS/blocks/_schemas/private-intake.schema.json",
+  "./23_Cosmos_NEXUS/blocks/_templates/item.template.json",
+  "./23_Cosmos_NEXUS/module.manifest.json",
+  "./23_Cosmos_NEXUS/releases/nexus-cosmos-20260801.release.json",
+  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/index.html",
+  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/styles.css",
+  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/product.manifest.json",
+  "./23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/references.json",
+  "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/index.html",
+  "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/styles.css",
+  "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/product.manifest.json",
+  "./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/references.json",
   "./assets/editorial-attribution.css",
   "./data/editorial/editorial-provenance.json",
   "./data/theme-catalog.json",
@@ -111,6 +172,22 @@ const WARM_ASSETS = [
   "./docs_usuario/ACESSO_IPHONE/index.html",
   "./docs_usuario/ACESSO_IPHONE.md"
 ];
+
+const MUTABLE_DATA_PREFIXES = [
+  new URL("./15_Radar_Cientifico/data/", self.registration.scope).pathname,
+  new URL("./23_Cosmos_NEXUS/", self.registration.scope).pathname
+];
+const MUTABLE_DATA_PATHS = new Set([
+  new URL("./data/connections.json", self.registration.scope).pathname,
+  new URL("./data/site_manifest.json", self.registration.scope).pathname
+]);
+
+function isMutableDataPath(pathname) {
+  if (MUTABLE_DATA_PATHS.has(pathname)) return true;
+  const [radarPrefix, nexusPrefix] = MUTABLE_DATA_PREFIXES;
+  if (pathname.startsWith(radarPrefix)) return true;
+  return pathname.startsWith(nexusPrefix) && pathname.endsWith(".json");
+}
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -185,7 +262,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  if (request.mode === "navigate") {
+  if (request.mode === "navigate" || request.cache === "no-store" || isMutableDataPath(url.pathname)) {
     event.respondWith(networkFirst(request));
     return;
   }

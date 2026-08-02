@@ -1,0 +1,636 @@
+{
+  "schemaVersion": "antigravity-homologation-reports-v1",
+  "version": "1.0.0",
+  "updatedAt": "2026-08-02T00:43:33Z",
+  "items": [
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-MUX-PROD-20260801-0001-D0394A79",
+        "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+        "reviewer": "Proprietário — homologação humana; Codex — segunda checagem técnica",
+        "reviewedAt": "2026-08-01T15:49:20-03:00",
+        "sourceEvidenceSha256": "3ef83b394e76f8312b1ca9d5db7502fcd9aff6bb8296ff1dc55eaf34ed80fe6a",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+          "artifactRootSha256": "6e41a807793da96074bdae3d0f9cff2c3b923a2425f3b3b380b57b8f1df22db3",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "UNITTEST-COMPLETA-50",
+            "command": "python3 -m unittest discover -s tests -v",
+            "status": "PASS",
+            "summary": "502 testes aprovados; 1 teste ignorado.",
+            "executedAt": "2026-08-01T15:49:20-03:00"
+          },
+          {
+            "id": "NEXUS-VALIDACAO-INTE",
+            "command": "python3 scripts_admin/nexus_cosmos.py validate",
+            "status": "PASS",
+            "summary": "NEXUS validado com 20 imagens e publicação LOCKED.",
+            "executedAt": "2026-08-01T15:49:20-03:00"
+          }
+        ],
+        "notes": [
+          "Homologação visual em Safari macOS e Safari iPhone confirmada pelo proprietário em 2026-08-01.",
+          "Produto não clínico; o campo clinicalReview registra a verificação de que esta versão não apresenta alegação nem conduta clínica.",
+          "Slots 13 e 15 foram corrigidos e rechecados; direitos das 20 imagens do atlas foram confirmados pelo proprietário.",
+          "Esta evidência prepara HOM, TOM e TAF, mas não autoriza merge, Pages ou publicação oficial."
+        ],
+        "artifactRootSha256": "6e41a807793da96074bdae3d0f9cff2c3b923a2425f3b3b380b57b8f1df22db3",
+        "memberCount": 11,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "1827d505b4e1c1b7fc9e438278fdf59df24d030ed50e06deeb950a57089cd5a9",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0001-DB995238",
+      "homologationCode": "HOM###-MUX-PROD-20260801-0001-539A45F1",
+      "tombstoneCode": "TOM###-MUX-PROD-20260801-0001-4496BFAB",
+      "tafCode": "TAF###-MUX-PROD-20260801-0001-3B26350F",
+      "preparedAt": "2026-08-01T18:49:59Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-MUX-PROD-20260801-0001-3B26350F"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+        "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+        "reviewer": "Proprietário — homologação humana; Codex — segunda checagem técnica",
+        "reviewedAt": "2026-08-01T15:49:20-03:00",
+        "sourceEvidenceSha256": "4424342d039156a23a31ca9eeccaab0546a2b2c181b16458f8b4a49fd88a733c",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+          "artifactRootSha256": "804a993e26a11ef2f483d1bb29f378fcdc1455ff23e57858ebcb1335db53cb5f",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "UNITTEST-COMPLETA-50",
+            "command": "python3 -m unittest discover -s tests -v",
+            "status": "PASS",
+            "summary": "502 testes aprovados; 1 teste ignorado.",
+            "executedAt": "2026-08-01T15:49:20-03:00"
+          },
+          {
+            "id": "NEXUS-VALIDACAO-INTE",
+            "command": "python3 scripts_admin/nexus_cosmos.py validate",
+            "status": "PASS",
+            "summary": "NEXUS validado com 20 imagens e publicação LOCKED.",
+            "executedAt": "2026-08-01T15:49:20-03:00"
+          }
+        ],
+        "notes": [
+          "Homologação visual em Safari macOS e Safari iPhone confirmada pelo proprietário em 2026-08-01.",
+          "Produto visual sintético e não clínico; o campo clinicalReview registra a ausência validada de alegação diagnóstica.",
+          "Direitos de publicação dos produtos visuais já autorizados pelo proprietário e segunda checagem concluída.",
+          "Esta evidência prepara HOM, TOM e TAF, mas não autoriza merge, Pages ou publicação oficial."
+        ],
+        "artifactRootSha256": "804a993e26a11ef2f483d1bb29f378fcdc1455ff23e57858ebcb1335db53cb5f",
+        "memberCount": 5,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "be908b34ad13f7c59f999adedb59f0acaece01e89882deae070d0b66c047181c",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0002-DC6F26B1",
+      "homologationCode": "HOM###-U3-IMGT-20260801-0002-51C88925",
+      "tombstoneCode": "TOM###-U3-IMGT-20260801-0002-655E4DE1",
+      "tafCode": "TAF###-U3-IMGT-20260801-0002-23F72FD1",
+      "preparedAt": "2026-08-01T18:50:05Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-U3-IMGT-20260801-0002-23F72FD1"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-MUX-EXT-20260731-0001-847D3013",
+        "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+        "reviewer": "Proprietário — homologação humana; Codex — segunda checagem técnica",
+        "reviewedAt": "2026-08-01T16:01:47-03:00",
+        "sourceEvidenceSha256": "fa698b3419eaf3359ea7b70bc520fb9901ca9fa6e2335d9086449cd9f9480980",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+          "artifactRootSha256": "92ea526fe834d494cd4807a448fec1941b4a947b6bce26fe02759a9c703cfb56",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "RELEASE-RADAR-FOCADO",
+            "command": "python3 -m unittest tests.test_nexus_release_preparation tests.test_radar_widgetkit -v",
+            "status": "PASS",
+            "summary": "23 testes aprovados: cadeia transacional, guarda-chuva e Radar WidgetKit.",
+            "executedAt": "2026-08-01T16:01:47-03:00"
+          },
+          {
+            "id": "RADAR-WIDGET-FEED-CH",
+            "command": "node scripts_admin/build_radar_widget_feed.mjs --check",
+            "status": "PASS",
+            "summary": "Feed WidgetKit sincronizado com a edição atual do Radar.",
+            "executedAt": "2026-08-01T16:01:47-03:00"
+          },
+          {
+            "id": "INVENTARIO-GUARDA-CH",
+            "command": "python3 scripts_admin/nexus_cosmos.py release-inventory --product-code ####AGX-MUX-EXT-20260731-0001-847D3013",
+            "status": "PASS",
+            "summary": "30 membros físicos, incluindo 20 imagens do atlas e Radar 01/08; publicação LOCKED.",
+            "executedAt": "2026-08-01T16:01:47-03:00"
+          }
+        ],
+        "notes": [
+          "Homologação visual em Safari macOS e Safari iPhone confirmada pelo proprietário em 2026-08-01.",
+          "Revisão clínica limitada à edição Radar 2026-08-01, confirmada pelo proprietário; edições anteriores permanecem pendentes.",
+          "Direitos para publicação das 20 imagens do atlas confirmados pelo proprietário; slots 13 e 15 foram corrigidos e rechecados.",
+          "Os TAFs filhos da Máquina Turbo TEMI e da Biblioteca Visual estão registrados no manifesto guarda-chuva.",
+          "Esta evidência prepara HOM, TOM e TAF, mas não autoriza merge, main, Pages ou publicação oficial."
+        ],
+        "artifactRootSha256": "92ea526fe834d494cd4807a448fec1941b4a947b6bce26fe02759a9c703cfb56",
+        "memberCount": 30,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "13d528842cfe2d53af382cd584678f69c22b62ba9e5320c8b09f4b34bf2b92b8",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0003-1C1868C2",
+      "homologationCode": "HOM###-MUX-EXT-20260801-0003-312DC945",
+      "tombstoneCode": "TOM###-MUX-EXT-20260801-0003-247E8454",
+      "tafCode": "TAF###-MUX-EXT-20260801-0003-6445E9A3",
+      "preparedAt": "2026-08-01T19:02:27Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0003-6445E9A3"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-MUX-PROD-20260801-0001-D0394A79",
+        "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+        "reviewer": "Aldenir Rocha de Oliveira Filho e Codex segunda auditoria tecnica",
+        "reviewedAt": "2026-08-01T21:15:53-03:00",
+        "sourceEvidenceSha256": "0a4ba4134420542767be793011cab545e455ebd841d090cff84623348c433f45",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+          "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "FULL-SUITE-526",
+            "command": "ANTIGRAVITY_PUBLIC_ROOT=site python3 -m unittest discover -s tests -p test_*.py -q",
+            "status": "PASS",
+            "summary": "526 testes executados sem falha",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          },
+          {
+            "id": "NEXUS-PUBLIC-VALIDAT",
+            "command": "python3 scripts_admin/nexus_cosmos.py validate-release --public-root site",
+            "status": "PASS",
+            "summary": "Tres releases e quinze eventos validados com publicacao LOCKED",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          },
+          {
+            "id": "BROWSER-RESPONSIVE-3",
+            "command": "Browser local viewport 390x844 home mapa NEXUS produtos e Radar",
+            "status": "PASS",
+            "summary": "Sem overflow apos correcao pos-build e sem imagens visiveis quebradas",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          }
+        ],
+        "notes": [
+          "Segunda auditoria P0 sem dado de paciente ou identificador clinico.",
+          "Direitos das imagens foram confirmados pelo proprietario em 2026-08-01; nenhuma figura de terceiro foi reproduzida.",
+          "Conteudo educacional nao prescritivo com referencias preservadas e sem falha cientifica bloqueadora identificada.",
+          "Homologacoes Safari macOS e Safari iPhone foram confirmadas pelo proprietario; a tentativa tecnica atual no Safari macOS ficou indisponivel porque o Mac estava bloqueado.",
+          "Publicacao oficial permanece LOCKED; nenhum merge main Pages ou deploy NEXUS foi autorizado nesta reemissao."
+        ],
+        "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "memberCount": 11,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "d0edb4b7edad56a00415eb9d7b559b5610dfded3d3fac5068262264f8762dd79",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0004-CD0A61CB",
+      "homologationCode": "HOM###-MUX-PROD-20260801-0004-5C0FAEF7",
+      "tombstoneCode": "TOM###-MUX-PROD-20260801-0004-DF465110",
+      "tafCode": "TAF###-MUX-PROD-20260801-0004-F3D57535",
+      "preparedAt": "2026-08-02T00:16:31Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-MUX-PROD-20260801-0004-F3D57535"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+        "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+        "reviewer": "Aldenir Rocha de Oliveira Filho e Codex segunda auditoria tecnica",
+        "reviewedAt": "2026-08-01T21:15:53-03:00",
+        "sourceEvidenceSha256": "62fc57370df63166e276f863ef02307aeee8384d780de406b8ba69c2fd580458",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+          "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "FULL-SUITE-526",
+            "command": "ANTIGRAVITY_PUBLIC_ROOT=site python3 -m unittest discover -s tests -p test_*.py -q",
+            "status": "PASS",
+            "summary": "526 testes executados sem falha",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          },
+          {
+            "id": "NEXUS-PUBLIC-VALIDAT",
+            "command": "python3 scripts_admin/nexus_cosmos.py validate-release --public-root site",
+            "status": "PASS",
+            "summary": "Tres releases e quinze eventos validados com publicacao LOCKED",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          },
+          {
+            "id": "BROWSER-RESPONSIVE-3",
+            "command": "Browser local viewport 390x844 home mapa NEXUS produtos e Radar",
+            "status": "PASS",
+            "summary": "Sem overflow apos correcao pos-build e sem imagens visiveis quebradas",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          }
+        ],
+        "notes": [
+          "Segunda auditoria P0 sem pessoa paciente prontuario ou identificador clinico.",
+          "Direitos das vinte imagens do atlas foram confirmados pelo proprietario em 2026-08-01.",
+          "Imagens 13 e 15 corrigidas e vinculadas aos codigos catalogados; nenhuma obra de terceiro foi identificada.",
+          "Homologacoes Safari macOS e Safari iPhone foram confirmadas pelo proprietario; a tentativa tecnica atual no Safari macOS ficou indisponivel porque o Mac estava bloqueado.",
+          "Publicacao oficial permanece LOCKED; nenhum merge main Pages ou deploy NEXUS foi autorizado nesta reemissao."
+        ],
+        "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "memberCount": 5,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "63968c822aaba77033401a5cee51c014cc55c953ea9f6668fa36b53b92abf715",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0005-BF11D9C7",
+      "homologationCode": "HOM###-U3-IMGT-20260801-0005-67364B28",
+      "tombstoneCode": "TOM###-U3-IMGT-20260801-0005-DAD0842F",
+      "tafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
+      "preparedAt": "2026-08-02T00:16:39Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-U3-IMGT-20260801-0005-BF1AC3E6"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-MUX-EXT-20260731-0001-847D3013",
+        "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+        "reviewer": "Aldenir Rocha de Oliveira Filho e Codex segunda auditoria tecnica",
+        "reviewedAt": "2026-08-01T21:15:53-03:00",
+        "sourceEvidenceSha256": "f64800cfddb270978ff7fc85d7b0b26a39e5026dc508a4e730ec63f40a819842",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+          "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "FULL-SUITE-526",
+            "command": "ANTIGRAVITY_PUBLIC_ROOT=site python3 -m unittest discover -s tests -p test_*.py -q",
+            "status": "PASS",
+            "summary": "526 testes executados sem falha",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          },
+          {
+            "id": "NEXUS-PUBLIC-VALIDAT",
+            "command": "python3 scripts_admin/nexus_cosmos.py validate-release --public-root site",
+            "status": "PASS",
+            "summary": "Tres releases e quinze eventos validados com publicacao LOCKED",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          },
+          {
+            "id": "BROWSER-RESPONSIVE-3",
+            "command": "Browser local viewport 390x844 home mapa NEXUS produtos e Radar",
+            "status": "PASS",
+            "summary": "Mapa com vinte e quatro nos iniciais e filtro NEXUS funcional sem overflow",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          },
+          {
+            "id": "PUBLIC-PRIVACY-EDITO",
+            "command": "python3 scripts_admin/publication_guard.py check-site site e editorial_gate public-root",
+            "status": "PASS",
+            "summary": "Artefato de 154.6 MiB aprovado em privacidade e 546 textos sem problema editorial",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          }
+        ],
+        "notes": [
+          "Segunda auditoria P0 sem dado de paciente ou identificador clinico em todo o lote.",
+          "Direitos das vinte imagens do atlas foram confirmados pelo proprietario em 2026-08-01; nenhuma figura de terceiro foi reproduzida.",
+          "Radar 2026-08-01 foi revisado clinicamente pelo proprietario e preserva referencias principais; nenhum bloqueio cientifico foi identificado.",
+          "Homologacoes Safari macOS e Safari iPhone foram confirmadas pelo proprietario; a tentativa tecnica atual no Safari macOS ficou indisponivel porque o Mac estava bloqueado.",
+          "Correcao de overflow foi aplicada apenas no artefato publico pos-build para preservar o tombamento source-bound anterior.",
+          "Publicacao oficial permanece LOCKED; nenhum merge main Pages ou deploy NEXUS foi autorizado nesta reemissao."
+        ],
+        "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "memberCount": 30,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "6ef77a68c4187b8b95f66871b7b1f582edfc236d8363e0c2f9ea22511b62def4",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0006-F0F3C3FB",
+      "homologationCode": "HOM###-MUX-EXT-20260801-0006-8EA2244D",
+      "tombstoneCode": "TOM###-MUX-EXT-20260801-0006-E6A2DC89",
+      "tafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
+      "preparedAt": "2026-08-02T00:16:48Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0006-351C123E"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-MUX-PROD-20260801-0001-D0394A79",
+        "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+        "reviewer": "Aldenir Rocha de Oliveira Filho e Codex segunda auditoria tecnica",
+        "reviewedAt": "2026-08-01T21:41:15-03:00",
+        "sourceEvidenceSha256": "8fb68cf43aafd4193bd0ad4acd929965e4fe16f80a771d8b89560b1d36e849df",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+          "artifactRootSha256": "5c8f00861574943bcfc3baf79788a7c3e9aa9893a7676b693284696feaa8f93b",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "FULL-SUITE-PREVIOUS-",
+            "command": "ANTIGRAVITY_PUBLIC_ROOT=site_previous python3 -m unittest discover -s tests -p test_*.py -q",
+            "status": "PASS",
+            "summary": "529 testes validaram o snapshot anterior e o mecanismo append-only",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "NEW-PUBLIC-ROOT-INVE",
+            "command": "python3 scripts_admin/nexus_cosmos.py supersede-inventory --product-code ####AGX-MUX-PROD --public-root site --previous-public-root site_previous",
+            "status": "PASS",
+            "summary": "Onze membros finais vinculados ao novo root pos-build",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "PUBLIC-PRIVACY-EDITO",
+            "command": "publication_guard check-site site e editorial_gate --public-root site",
+            "status": "PASS",
+            "summary": "Artefato de 154.6 MiB aprovado em privacidade; 546 textos sem problema editorial",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "BROWSER-RESPONSIVE-3",
+            "command": "Browser local viewport 390x844 home mapa NEXUS produtos e Radar",
+            "status": "PASS",
+            "summary": "Sem overflow e sem imagens visiveis quebradas",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          }
+        ],
+        "notes": [
+          "Segunda auditoria P0 sem dado de paciente ou identificador clinico.",
+          "O proprietario declarou que todas as imagens deste lote NEXUS foram geradas por GPT conforme suas ideias direcao criativa e curadoria com credito publico Aldenir ALD 360 GPT.",
+          "Figuras POCUS de terceiro pertencem a outro modulo preservam sua atribuicao CC BY e nao foram relabeladas nem incluidas neste lote.",
+          "Conteudo educacional nao prescritivo com referencias preservadas e sem falha cientifica bloqueadora identificada.",
+          "Homologacoes Safari macOS e Safari iPhone foram confirmadas pelo proprietario; a tentativa tecnica atual no Safari macOS ficou indisponivel porque o Mac estava bloqueado.",
+          "Publicacao oficial permanece LOCKED; nenhum merge main Pages ou deploy NEXUS foi autorizado nesta reemissao."
+        ],
+        "artifactRootSha256": "5c8f00861574943bcfc3baf79788a7c3e9aa9893a7676b693284696feaa8f93b",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "memberCount": 11,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "617c786a605c0eaef7619e6398ca63dc9a8e87427a7c135598c35ce879668742",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0007-C2A356E9",
+      "homologationCode": "HOM###-MUX-PROD-20260801-0007-52A05BC4",
+      "tombstoneCode": "TOM###-MUX-PROD-20260801-0007-5885E85F",
+      "tafCode": "TAF###-MUX-PROD-20260801-0007-0BD8C1C2",
+      "preparedAt": "2026-08-02T00:42:59Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-MUX-PROD-20260801-0007-0BD8C1C2"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+        "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+        "reviewer": "Aldenir Rocha de Oliveira Filho e Codex segunda auditoria tecnica",
+        "reviewedAt": "2026-08-01T21:41:15-03:00",
+        "sourceEvidenceSha256": "95b1dd755cff93501f5d5bb281e1b1d27014a4e22ad0b6a17677820b6e21c6c6",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+          "artifactRootSha256": "bf41f9983322ec914146fc826229468f48f930203974a650c756336b6cdb6d0b",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "FULL-SUITE-PREVIOUS-",
+            "command": "ANTIGRAVITY_PUBLIC_ROOT=site_previous python3 -m unittest discover -s tests -p test_*.py -q",
+            "status": "PASS",
+            "summary": "529 testes validaram o snapshot anterior e o mecanismo append-only",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "NEW-PUBLIC-ROOT-INVE",
+            "command": "python3 scripts_admin/nexus_cosmos.py supersede-inventory --product-code ####AGX-U3-IMGT --public-root site --previous-public-root site_previous",
+            "status": "PASS",
+            "summary": "Cinco membros finais vinculados ao novo root pos-build",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "PUBLIC-PRIVACY-EDITO",
+            "command": "publication_guard check-site site e editorial_gate --public-root site",
+            "status": "PASS",
+            "summary": "Artefato de 154.6 MiB aprovado em privacidade; 546 textos sem problema editorial",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "BROWSER-RESPONSIVE-3",
+            "command": "Browser local viewport 390x844 Biblioteca Visual e produtos NEXUS",
+            "status": "PASS",
+            "summary": "Sem overflow e sem imagens visiveis quebradas",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          }
+        ],
+        "notes": [
+          "Segunda auditoria P0 sem pessoa paciente prontuario ou identificador clinico.",
+          "O proprietario declarou que todas as imagens deste lote NEXUS foram geradas por GPT conforme suas ideias direcao criativa e curadoria com credito publico Aldenir ALD 360 GPT.",
+          "Imagens 13 e 15 permanecem corrigidas e vinculadas aos codigos catalogados; nenhum binario de imagem foi alterado nesta reemissao.",
+          "Figuras POCUS de terceiro pertencem a outro modulo preservam sua atribuicao CC BY e nao foram relabeladas nem incluidas neste lote.",
+          "Homologacoes Safari macOS e Safari iPhone foram confirmadas pelo proprietario; a tentativa tecnica atual no Safari macOS ficou indisponivel porque o Mac estava bloqueado.",
+          "Publicacao oficial permanece LOCKED; nenhum merge main Pages ou deploy NEXUS foi autorizado nesta reemissao."
+        ],
+        "artifactRootSha256": "bf41f9983322ec914146fc826229468f48f930203974a650c756336b6cdb6d0b",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "memberCount": 5,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "00804c387ca4c6fbeedce7f3c2586e9bb66d0be04b098fa34b9758ea103a7d97",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0008-9C0153F5",
+      "homologationCode": "HOM###-U3-IMGT-20260801-0008-F76EBBDB",
+      "tombstoneCode": "TOM###-U3-IMGT-20260801-0008-B38903DF",
+      "tafCode": "TAF###-U3-IMGT-20260801-0008-3D96DA86",
+      "preparedAt": "2026-08-02T00:43:16Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-U3-IMGT-20260801-0008-3D96DA86"
+      }
+    },
+    {
+      "schemaVersion": "antigravity-homologation-record-v1",
+      "report": {
+        "schemaVersion": "antigravity-homologation-report-v1",
+        "productCode": "####AGX-MUX-EXT-20260731-0001-847D3013",
+        "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+        "reviewer": "Aldenir Rocha de Oliveira Filho e Codex segunda auditoria tecnica",
+        "reviewedAt": "2026-08-01T21:41:15-03:00",
+        "sourceEvidenceSha256": "b40d869b7b97f52cd29f8a217092e7c3ee41e9cac55d9e7b2ab113e2c295b50f",
+        "confirmations": {
+          "safariMacOS": "PASS",
+          "safariIPhone": "PASS",
+          "clinicalReview": "PASS",
+          "rightsReview": "PASS"
+        },
+        "auditBinding": {
+          "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+          "artifactRootSha256": "82a875f405e5e3d95242c997796d8712019cffa25587ed991e1ce74f7d894ee9",
+          "status": "PASS"
+        },
+        "testRuns": [
+          {
+            "id": "FULL-SUITE-PREVIOUS-",
+            "command": "ANTIGRAVITY_PUBLIC_ROOT=site_previous python3 -m unittest discover -s tests -p test_*.py -q",
+            "status": "PASS",
+            "summary": "529 testes validaram o snapshot anterior e o mecanismo append-only",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "NEW-PUBLIC-ROOT-INVE",
+            "command": "python3 scripts_admin/nexus_cosmos.py supersede-inventory --product-code ####AGX-MUX-EXT --public-root site --previous-public-root site_previous",
+            "status": "PASS",
+            "summary": "Trinta membros finais vinculados ao novo root pos-build",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "PUBLIC-PRIVACY-EDITO",
+            "command": "publication_guard check-site site e editorial_gate --public-root site",
+            "status": "PASS",
+            "summary": "Artefato de 154.6 MiB aprovado em privacidade; 546 textos sem problema editorial",
+            "executedAt": "2026-08-01T21:41:15-03:00"
+          },
+          {
+            "id": "BROWSER-RESPONSIVE-3",
+            "command": "Browser local viewport 390x844 home mapa NEXUS produtos e Radar",
+            "status": "PASS",
+            "summary": "Mapa com vinte e quatro nos iniciais e filtro NEXUS funcional sem overflow",
+            "executedAt": "2026-08-01T21:15:53-03:00"
+          }
+        ],
+        "notes": [
+          "Segunda auditoria P0 sem dado de paciente ou identificador clinico em todo o lote.",
+          "O proprietario declarou que todas as imagens deste lote NEXUS foram geradas por GPT conforme suas ideias direcao criativa e curadoria com credito publico Aldenir ALD 360 GPT.",
+          "Figuras POCUS de terceiro pertencem a outro modulo preservam sua atribuicao CC BY e nao foram relabeladas nem incluidas neste lote.",
+          "Radar 2026-08-01 foi revisado clinicamente pelo proprietario e preserva referencias principais; nenhum bloqueio cientifico foi identificado.",
+          "Homologacoes Safari macOS e Safari iPhone foram confirmadas pelo proprietario; a tentativa tecnica atual no Safari macOS ficou indisponivel porque o Mac estava bloqueado.",
+          "Publicacao oficial permanece LOCKED; nenhum merge main Pages ou deploy NEXUS foi autorizado nesta reemissao."
+        ],
+        "artifactRootSha256": "82a875f405e5e3d95242c997796d8712019cffa25587ed991e1ce74f7d894ee9",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "memberCount": 30,
+        "auditOutcome": "PASS",
+        "outcome": "PASS"
+      },
+      "reportSha256": "b6151846bdfbd5b619ef6d932f8cd9934944c1a5a76e67cf74773e11fe7069da",
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0009-07BB8BC4",
+      "homologationCode": "HOM###-MUX-EXT-20260801-0009-9B489508",
+      "tombstoneCode": "TOM###-MUX-EXT-20260801-0009-E8C6384E",
+      "tafCode": "TAF###-MUX-EXT-20260801-0009-20D1A0CF",
+      "preparedAt": "2026-08-02T00:43:33Z",
+      "publication": {
+        "status": "LOCKED",
+        "officialPublication": false,
+        "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0009-20D1A0CF"
+      }
+    }
+  ],
+  "rules": [
+    "Relatórios aprovados são acrescentados; registros anteriores não são editados.",
+    "HOM### registra homologação, mas não autoriza merge, Pages ou publicação."
+  ]
+}

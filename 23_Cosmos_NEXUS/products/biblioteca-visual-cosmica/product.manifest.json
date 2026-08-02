@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "antigravity-candidate-product-manifest-v1",
+  "identity": {
+    "id": "biblioteca-visual-cosmica",
+    "semanticKey": "biblioteca-visual-cosmica",
+    "title": "Biblioteca Visual Cósmica",
+    "version": "1.0.0",
+    "createdAt": "2026-08-01",
+    "productCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+    "productUid": "2c0470e6eab937234f792b0632c8e2dbf75d0dc7e9901fc037f59bb994ba8cb9",
+    "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A"
+  },
+  "classification": {
+    "contentClass": "non-clinical",
+    "privacy": "P0",
+    "synthetic": true,
+    "patientData": false,
+    "publicEligible": true
+  },
+  "publication": {
+    "status": "release-prepared",
+    "officialPublication": false,
+    "finalAcceptanceCode": "TAF###-U3-IMGT-20260801-0008-3D96DA86",
+    "officialPublicationCode": null,
+    "authorizationMode": "LITERAL_OWNER_COMMAND",
+    "releaseBoundary": "Publicação oficial bloqueada. Consulte product.manifest.json para HOM/TOM/TAF. Exige o comando literal correspondente.",
+    "ownerPublicationAuthorization": false,
+    "requiredCommand": "PUBLICAR TAF###-U3-IMGT-20260801-0008-3D96DA86"
+  },
+  "provenance": {
+    "sourceProjects": [
+      "@BIBLIOTECAVISUAL",
+      "@TEMI360XINFINIT"
+    ],
+    "sourceRoles": {
+      "@TEMI360XINFINIT": "gerador e metodologia",
+      "@BIBLIOTECAVISUAL": "curadoria e apresentação"
+    },
+    "creationWindow": "2026-07-31",
+    "generatorEvidence": {
+      "format": "C2PA incorporado aos PNGs",
+      "claimGenerator": "OpenAI Media Service API",
+      "softwareAgent": "gpt-image 2.0",
+      "digitalSourceType": "trainedAlgorithmicMedia",
+      "preserved": true,
+      "verificationBoundary": "Campos e cadeia declarada foram inspecionados nos bytes; este registro não substitui uma validação criptográfica externa completa."
+    },
+    "sourceUrlsPublished": false,
+    "note": "URLs assinadas temporárias, IDs internos do ChatGPT e conteúdo das conversas não integram o produto público."
+  },
+  "bundle": {
+    "assetRootAlgorithm": "SHA256 dos dois SHA-256 ordenados lexicalmente e unidos por barra vertical",
+    "aggregateSha256": "2789ab8c80bc8e108c59caa996dbd966114ea4300160f861e426cbae2e3c293c",
+    "productUidAlgorithm": "SHA256(NFC(aggregate_sha256|imagens-turbo-temi|biblioteca-visual-cosmica|P0))",
+    "assetCount": 2,
+    "totalBytes": 3999509
+  },
+  "assets": [
+    {
+      "slot": 21,
+      "catalogCode": "####IMG-20260731-0021-B1FCCCBF",
+      "publicationStatus": "candidate-public",
+      "path": "assets/constelacao-conhecimento-terapia-intensiva.png",
+      "title": "Constelação do conhecimento em terapia intensiva",
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1973582,
+      "sha256": "b1fcccbfb88f6f14a92a63e1e5f3d9dc2eadb934cbd454d6a800f96cab2994ba",
+      "alt": "Ilustração sintética em azul e violeta com cérebro sobre livro aberto conectado a pulmões, coração, ultrassom, farmacologia, algoritmo e aprendizagem."
+    },
+    {
+      "slot": 22,
+      "catalogCode": "####IMG-20260731-0022-F6C484CB",
+      "publicationStatus": "candidate-public",
+      "path": "assets/atlas-visual-cerebro-conectado.png",
+      "title": "Atlas visual do cérebro conectado",
+      "mime": "image/png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2025927,
+      "sha256": "f6c484cba8787ae67469768ae407e46508dadb49944da4179afabd14223f809e",
+      "alt": "Ilustração sintética escura com cérebro sobre livro conectado a pulmões, coração, ultrassom, medicamentos, mapa molecular e ciclo de decisão."
+    }
+  ],
+  "audit": {
+    "reviewer": "Codex — segunda checagem técnica e editorial",
+    "reviewedAt": "2026-08-01T06:10:00-03:00",
+    "patientExposure": {
+      "status": "passed",
+      "evidence": "Inspeção visual sem pessoa, rosto, prontuário, instituição, nome, voz, tela clínica identificável ou outro dado de paciente."
+    },
+    "rightsReview": {
+      "status": "passed",
+      "evidence": "Proveniência C2PA de geração algorítmica preservada; nenhuma obra ou figura de terceiro foi identificada visualmente. O registro não afirma exclusividade sobre resultados semelhantes.",
+      "reuseBoundary": "Uso autorizado no projeto do proprietário. O manifesto não concede licença geral de reutilização externa."
+    },
+    "scientificGrounding": {
+      "status": "passed",
+      "scope": "Somente comunicação visual, aprendizagem e acessibilidade; não há alegação clínica.",
+      "evidenceIds": [
+        "ref-pubmed-16507066",
+        "ref-pubmed-16719566",
+        "ref-pubmed-31339105",
+        "ref-w3c-wcag22"
+      ],
+      "clinicalClaims": false
+    },
+    "technicalReview": {
+      "status": "passed",
+      "checks": [
+        "assinatura PNG",
+        "dimensões",
+        "bytes",
+        "SHA-256",
+        "C2PA preservado",
+        "CSP local",
+        "HTML semântico",
+        "layout responsivo",
+        "alternativas textuais"
+      ]
+    },
+    "linkCheck": {
+      "status": "passed",
+      "checkedAt": "2026-08-01",
+      "scope": "Referências oficiais já verificadas no pacote Turbo TEMI."
+    },
+    "editorialCorrections": [
+      "Motivos anatômicos e ultrassonográficos foram rotulados como sintéticos e não diagnósticos.",
+      "O produto foi separado das conversas privadas e não publica IDs, prompts ou URLs assinadas.",
+      "Os dois projetos web foram modelados como papéis complementares do mesmo lote, sem recodificação duplicada."
+    ],
+    "outcome": "PASS"
+  },
+  "graph": {
+    "universeIds": [
+      "u3"
+    ],
+    "constellationIds": [
+      "imagens",
+      "acra",
+      "questoes"
+    ],
+    "blockId": "imagens-turbo-temi",
+    "relations": [
+      {
+        "from": "source-temi360xinfinit",
+        "relation": "DERIVA",
+        "to": "biblioteca-visual-cosmica"
+      },
+      {
+        "from": "source-biblioteca-visual",
+        "relation": "REPRESENTA",
+        "to": "biblioteca-visual-cosmica"
+      },
+      {
+        "from": "biblioteca-visual-cosmica",
+        "relation": "FUNDE_EM",
+        "to": "nexus"
+      }
+    ],
+    "structuralTags": [
+      "###UNIVERSO:U3",
+      "###CONSTELACAO:IMAGENS",
+      "###BLOCO:IMAGENS_TURBO_TEMI",
+      "###STATUS:RELEASE_LOCKED",
+      "###PRIVACIDADE:P0",
+      "###MATURIDADE:AUDITADA",
+      "###DOMINIO:MED"
+    ],
+    "topicTags": [
+      "#BibliotecaVisual",
+      "#TEMI360XINFINIT",
+      "#AtlasVisual",
+      "#Imagem",
+      "#TDAHFriendly",
+      "#EngenhariaCognitiva"
+    ]
+  },
+  "entrypoints": {
+    "page": "index.html",
+    "styles": "styles.css",
+    "references": "references.json"
+  },
+  "releasePreparation": {
+    "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0008-9C0153F5",
+    "homologationCode": "HOM###-U3-IMGT-20260801-0008-F76EBBDB",
+    "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+    "tombstoneCode": "TOM###-U3-IMGT-20260801-0008-B38903DF",
+    "tafCode": "TAF###-U3-IMGT-20260801-0008-3D96DA86",
+    "artifactRootSha256": "bf41f9983322ec914146fc826229468f48f930203974a650c756336b6cdb6d0b",
+    "artifactProfile": "POST_BUILD_POST_SANITIZE",
+    "memberCount": 5,
+    "sourceEvidenceSha256": "95b1dd755cff93501f5d5bb281e1b1d27014a4e22ad0b6a17677820b6e21c6c6",
+    "preparedAt": "2026-08-02T00:43:16Z",
+    "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0008-5533FBF4",
+    "supersedesTafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
+    "supersessionReason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+    "publication": "LOCKED"
+  },
+  "artifactProfile": "POST_BUILD_POST_SANITIZE",
+  "supersededReleases": [
+    {
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0002-DC6F26B1",
+      "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+      "homologationCode": "HOM###-U3-IMGT-20260801-0002-51C88925",
+      "tombstoneCode": "TOM###-U3-IMGT-20260801-0002-655E4DE1",
+      "tafCode": "TAF###-U3-IMGT-20260801-0002-23F72FD1",
+      "artifactProfile": "SOURCE_BOUND",
+      "artifactRootSha256": "804a993e26a11ef2f483d1bb29f378fcdc1455ff23e57858ebcb1335db53cb5f",
+      "memberCount": 5,
+      "supersededAt": "2026-08-02T00:16:39Z",
+      "supersededByTafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
+      "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0005-8BA8D8A5",
+      "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+      "publication": "VOID_PREPUBLICATION"
+    },
+    {
+      "procedureCode": "PRC###-PREPARAR-RELEASE-20260801-0005-BF11D9C7",
+      "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+      "homologationCode": "HOM###-U3-IMGT-20260801-0005-67364B28",
+      "tombstoneCode": "TOM###-U3-IMGT-20260801-0005-DAD0842F",
+      "tafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
+      "artifactProfile": "POST_BUILD_POST_SANITIZE",
+      "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+      "memberCount": 5,
+      "supersededAt": "2026-08-02T00:43:16Z",
+      "supersededByTafCode": "TAF###-U3-IMGT-20260801-0008-3D96DA86",
+      "supersessionProcedureCode": "PRC###-SUPERSEDE-RELEASE-20260801-0008-5533FBF4",
+      "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+      "publication": "VOID_PREPUBLICATION"
+    }
+  ]
+}
