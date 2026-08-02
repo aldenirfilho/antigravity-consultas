@@ -907,6 +907,7 @@ def normalize_permissions(site: Path) -> None:
 EDITORIAL_ATTRIBUTION_MARKER = "antigravity-editorial-attribution:v1"
 NEXUS_MOBILE_POSTBUILD_MARKER = "antigravity-nexus-mobile-postbuild:v1"
 RADAR_MOBILE_POSTBUILD_MARKER = "antigravity-radar-mobile-postbuild:v1"
+NEXUS_IMAGE_CREDIT = "Aldenir · ALD 360 GPT"
 
 
 def inject_editorial_attribution(site: Path) -> int:
@@ -964,6 +965,126 @@ def inject_editorial_attribution(site: Path) -> int:
             html = html.rstrip() + "\n" + block + "\n"
         html_path.write_text(html, encoding="utf-8")
         updated += 1
+    return updated
+
+
+def apply_nexus_image_attribution(site: Path) -> int:
+    """Materializa o crédito autoral do lote GPT sem relabelar obras externas.
+
+    O C2PA continua descrevendo o gerador técnico. O crédito humano declarado
+    pelo proprietário fica em HTML/JSON públicos e se limita ao lote NEXUS;
+    figuras de terceiros em outros módulos não são tocadas.
+    """
+
+    updated = 0
+
+    def update_json(relative: str, mutate) -> None:
+        nonlocal updated
+        path = site / relative
+        try:
+            original = path.read_bytes()
+            payload = json.loads(original.decode("utf-8"))
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise ValueError(f"JSON público de atribuição ausente ou inválido: {relative}") from exc
+        mutate(payload)
+        rendered = (json.dumps(payload, ensure_ascii=False, indent=2) + "\n").encode(
+            "utf-8"
+        )
+        if rendered != original:
+            path.write_bytes(rendered)
+            updated += 1
+
+    def update_html(relative: str, old: str, new: str) -> None:
+        nonlocal updated
+        path = site / relative
+        try:
+            html = path.read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError) as exc:
+            raise ValueError(f"HTML público de atribuição ausente ou inválido: {relative}") from exc
+        if NEXUS_IMAGE_CREDIT in html:
+            return
+        if old not in html:
+            raise ValueError(f"Âncora de atribuição não encontrada: {relative}")
+        path.write_text(html.replace(old, new, 1), encoding="utf-8")
+        updated += 1
+
+    def atlas_attribution(payload: dict) -> None:
+        rights = payload.setdefault("rights", {})
+        rights.update(
+            {
+                "origin": (
+                    "imagens geradas por GPT a partir das ideias, direção criativa "
+                    "e curadoria de Aldenir / ALD 360"
+                ),
+                "declaredSource": NEXUS_IMAGE_CREDIT,
+                "creativeDirection": "Aldenir / ALD 360",
+                "generationMethod": "GPT",
+                "thirdPartyArtwork": False,
+                "evidence": (
+                    "O proprietário declarou em 2026-08-01 que todas as imagens deste "
+                    "lote foram geradas por GPT conforme suas ideias, direção criativa e "
+                    f"curadoria, com fonte autoral pública {NEXUS_IMAGE_CREDIT}; nenhuma "
+                    "figura de terceiro foi identificada. A publicação oficial continua "
+                    "submetida ao comando literal do TAF correspondente."
+                ),
+            }
+        )
+
+    def product_attribution(payload: dict) -> None:
+        provenance = payload.setdefault("provenance", {})
+        provenance.update(
+            {
+                "declaredImageSource": NEXUS_IMAGE_CREDIT,
+                "creativeDirection": "Aldenir / ALD 360",
+                "generationMethod": "GPT a partir das ideias e direção criativa de Aldenir",
+            }
+        )
+        if "sourceRoles" in provenance:
+            provenance["sourceRoles"]["@TEMI360XINFINIT"] = "direção e metodologia"
+        rights = payload.setdefault("audit", {}).setdefault("rightsReview", {})
+        prior = str(rights.get("evidence", ""))
+        statement = (
+            f"Fonte autoral pública declarada: {NEXUS_IMAGE_CREDIT}. Todas as imagens "
+            "deste lote foram geradas por GPT conforme as ideias, direção criativa e "
+            "curadoria de Aldenir. "
+        )
+        if not prior.startswith(statement):
+            rights["evidence"] = statement + prior
+
+    def umbrella_attribution(payload: dict) -> None:
+        rights = payload.setdefault("audit", {}).setdefault("rightsReview", {})
+        rights["evidence"] = (
+            "O proprietário declarou em 2026-08-01 que todas as imagens deste lote foram "
+            "geradas por GPT conforme suas ideias, direção criativa e curadoria, sob a "
+            f"fonte autoral pública {NEXUS_IMAGE_CREDIT}; fontes científicas externas "
+            "permanecem citadas, sem reprodução de figuras de terceiros."
+        )
+
+    update_json("23_Cosmos_NEXUS/data/atlas.json", atlas_attribution)
+    update_json(
+        "23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/product.manifest.json",
+        product_attribution,
+    )
+    update_json(
+        "23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/product.manifest.json",
+        product_attribution,
+    )
+    update_json(
+        "23_Cosmos_NEXUS/releases/nexus-cosmos-20260801.release.json",
+        umbrella_attribution,
+    )
+    update_html(
+        "23_Cosmos_NEXUS/index.html",
+        (
+            "Vinte derivados JPEG sanitizados, com proporção preservada e integridade "
+            "física distinta da fonte PNG declarada."
+        ),
+        (
+            "Vinte derivados JPEG sanitizados, com proporção preservada e integridade "
+            "física distinta da fonte PNG declarada. Fonte autoral das imagens: "
+            f"<strong>{NEXUS_IMAGE_CREDIT}</strong>."
+        ),
+    )
     return updated
 
 
@@ -1092,6 +1213,7 @@ def build(root: Path, site: Path) -> int:
     write_public_library_metadata(root, site, library_plan)
     (site / ".nojekyll").touch(exist_ok=True)
     attributed = inject_editorial_attribution(site)
+    nexus_image_attribution_updates = apply_nexus_image_attribution(site)
     mobile_patch_applied = apply_nexus_mobile_postbuild_patch(site)
     radar_mobile_patch_applied = apply_radar_mobile_postbuild_patch(site)
     normalize_permissions(site)
@@ -1099,6 +1221,10 @@ def build(root: Path, site: Path) -> int:
     count = sum(1 for path in site.rglob("*") if path.is_file())
     print(f"✅ Artefato montado: {count} arquivo(s), {total / 1024 / 1024:.1f} MiB.")
     print(f"🛡️ Atribuição editorial aplicada a {attributed} página(s) HTML.")
+    print(
+        "🖼️ Crédito Aldenir · ALD 360 GPT materializado em "
+        f"{nexus_image_attribution_updates} artefato(s) NEXUS."
+    )
     print(
         "📱 Correção móvel pós-build do NEXUS: "
         + ("aplicada." if mobile_patch_applied else "já presente.")

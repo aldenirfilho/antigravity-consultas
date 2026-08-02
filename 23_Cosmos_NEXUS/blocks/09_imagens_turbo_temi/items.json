@@ -8,7 +8,7 @@
       "productCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
       "version": "1.0.0",
       "title": "Biblioteca Visual Cósmica",
-      "summary": "Sessão visual que preserva duas imagens sintéticas geradas no projeto web, atribui identidade física própria, separa os papéis gerador e curador e funde o produto ao universo didático-cognitivo sem duplicar o atlas canônico.",
+      "summary": "Sessão visual que preserva duas imagens sintéticas geradas por GPT conforme ideias, direção criativa e curadoria de Aldenir, atribui identidade física própria, separa metodologia e apresentação e funde o produto ao universo didático-cognitivo sem duplicar o atlas canônico.",
       "contentClass": "non-clinical",
       "blockId": "imagens-turbo-temi",
       "universeIds": ["u3"],
@@ -38,6 +38,9 @@
       },
       "provenance": {
         "sourceIds": ["@BIBLIOTECAVISUAL", "@TEMI360XINFINIT"],
+        "declaredImageSource": "Aldenir · ALD 360 GPT",
+        "creativeDirection": "Aldenir / ALD 360",
+        "generationMethod": "GPT",
         "reviewStatus": "reviewed",
         "reviewer": "Codex — segunda checagem técnica e editorial",
         "reviewedAt": "2026-08-01T06:10:00-03:00"
@@ -79,7 +82,7 @@
         {"title": "WCAG 2.2 — W3C", "url": "https://www.w3.org/TR/WCAG22/", "reason": "Orientar alternativas textuais, foco e reflow.", "status": "reviewed", "verifiedAt": "2026-08-01"}
       ],
       "internalConnections": [
-        {"targetId": "source-temi360xinfinit", "relation": "DERIVA", "reason": "Registra o papel gerador sem criar uma cópia semântica do acervo."},
+        {"targetId": "source-temi360xinfinit", "relation": "DERIVA", "reason": "Registra briefing, direção e metodologia; a geração técnica das imagens é executada por GPT."},
         {"targetId": "source-biblioteca-visual", "relation": "REPRESENTA", "reason": "Registra o papel de curadoria e apresentação dos mesmos nós visuais."},
         {"targetId": "block-imgt", "relation": "REPRESENTA", "reason": "Mantém identidade, hash, alt, origem e estado de cada imagem."},
         {"targetId": "block-refs", "relation": "REFERENCIA", "reason": "Ancora o método e explicita seus limites."},

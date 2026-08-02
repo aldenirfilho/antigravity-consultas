@@ -39,6 +39,16 @@ def load_bus():
     return module
 
 
+def load_builder():
+    spec = importlib.util.spec_from_file_location(
+        "nexus_public_builder_test", ROOT / "scripts_admin/build_public_site.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
+
+
 class NexusCosmosTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -291,6 +301,76 @@ class NexusCosmosTests(unittest.TestCase):
             self.assertNotEqual(item["source"]["sha256"], item["asset"]["sha256"])
             self.assertRegex(item["source"]["sha256"], r"^[a-f0-9]{64}$")
             self.assertRegex(item["asset"]["sha256"], r"^[a-f0-9]{64}$")
+
+    def test_image_provenance_uses_the_owner_declared_public_credit(self) -> None:
+        expected = "Aldenir · ALD 360 GPT"
+        image_block = load(
+            "23_Cosmos_NEXUS/blocks/09_imagens_turbo_temi/items.json"
+        )["items"][0]
+        product_block = load(
+            "23_Cosmos_NEXUS/blocks/10_produtos_turbo_temi/items.json"
+        )["items"][0]
+
+        self.assertEqual(image_block["provenance"]["declaredImageSource"], expected)
+        self.assertEqual(product_block["provenance"]["declaredImageSource"], expected)
+        self.assertIn(
+            expected,
+            read("23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/index.html"),
+        )
+        self.assertIn(
+            expected,
+            read("23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/index.html"),
+        )
+
+    def test_builder_materializes_image_credit_without_touching_external_modules(self) -> None:
+        builder = load_builder()
+        relatives = (
+            "23_Cosmos_NEXUS/data/atlas.json",
+            "23_Cosmos_NEXUS/index.html",
+            "23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/product.manifest.json",
+            "23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/product.manifest.json",
+            "23_Cosmos_NEXUS/releases/nexus-cosmos-20260801.release.json",
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            site = Path(temporary)
+            for relative in relatives:
+                destination = site / relative
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_bytes((ROOT / relative).read_bytes())
+
+            first = builder.apply_nexus_image_attribution(site)
+            second = builder.apply_nexus_image_attribution(site)
+            self.assertEqual(first, 5)
+            self.assertEqual(second, 0)
+
+            expected = "Aldenir · ALD 360 GPT"
+            atlas = json.loads(
+                (site / "23_Cosmos_NEXUS/data/atlas.json").read_text(encoding="utf-8")
+            )
+            machine = json.loads(
+                (
+                    site
+                    / "23_Cosmos_NEXUS/products/maquina-turbo-temi-360x/product.manifest.json"
+                ).read_text(encoding="utf-8")
+            )
+            visual = json.loads(
+                (
+                    site
+                    / "23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/product.manifest.json"
+                ).read_text(encoding="utf-8")
+            )
+            self.assertEqual(atlas["rights"]["declaredSource"], expected)
+            self.assertFalse(atlas["rights"]["thirdPartyArtwork"])
+            self.assertEqual(machine["provenance"]["declaredImageSource"], expected)
+            self.assertEqual(visual["provenance"]["declaredImageSource"], expected)
+            self.assertEqual(
+                visual["provenance"]["sourceRoles"]["@TEMI360XINFINIT"],
+                "direção e metodologia",
+            )
+            self.assertIn(
+                expected,
+                (site / "23_Cosmos_NEXUS/index.html").read_text(encoding="utf-8"),
+            )
 
     def test_all_thirteen_coupling_directories_are_registered(self) -> None:
         expected_blocks = {
