@@ -91,6 +91,26 @@ class PublicContentIsolationTests(unittest.TestCase):
             self.assertIn(".lab-header { align-items: flex-start; flex-direction: column; }", rendered)
             self.assertIn(".safety-badge { max-width: 100%; white-space: normal; }", rendered)
 
+    def test_radar_mobile_fix_is_postbuild_idempotent_and_preserves_source(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "15_Radar_Cientifico/index.html"
+            public = root / "site/15_Radar_Cientifico/index.html"
+            source.parent.mkdir(parents=True)
+            public.parent.mkdir(parents=True)
+            original = "<!doctype html><html><head><title>Radar</title></head><body></body></html>\n"
+            source.write_text(original, encoding="utf-8")
+            public.write_text(original, encoding="utf-8")
+
+            self.assertTrue(self.builder.apply_radar_mobile_postbuild_patch(root / "site"))
+            first = public.read_bytes()
+            self.assertFalse(self.builder.apply_radar_mobile_postbuild_patch(root / "site"))
+            self.assertEqual(public.read_bytes(), first)
+            self.assertEqual(source.read_text(encoding="utf-8"), original)
+            rendered = first.decode("utf-8")
+            self.assertIn(self.builder.RADAR_MOBILE_POSTBUILD_MARKER, rendered)
+            self.assertIn(".rail-card { min-width: 0; max-width: 100%; width: 100%; }", rendered)
+
     def test_preview_metadata_quarantines_source_and_all_public_indexes(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

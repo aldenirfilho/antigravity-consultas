@@ -906,6 +906,7 @@ def normalize_permissions(site: Path) -> None:
 
 EDITORIAL_ATTRIBUTION_MARKER = "antigravity-editorial-attribution:v1"
 NEXUS_MOBILE_POSTBUILD_MARKER = "antigravity-nexus-mobile-postbuild:v1"
+RADAR_MOBILE_POSTBUILD_MARKER = "antigravity-radar-mobile-postbuild:v1"
 
 
 def inject_editorial_attribution(site: Path) -> int:
@@ -994,6 +995,34 @@ def apply_nexus_mobile_postbuild_patch(site: Path) -> bool:
     return True
 
 
+def apply_radar_mobile_postbuild_patch(site: Path) -> bool:
+    """Impede que trilhos em grid ampliem o Radar além da viewport móvel."""
+
+    html_path = site / "15_Radar_Cientifico/index.html"
+    try:
+        html = html_path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as exc:
+        raise ValueError("HTML público do Radar ausente ou inválido.") from exc
+    if RADAR_MOBILE_POSTBUILD_MARKER in html:
+        return False
+
+    closing_head = re.search(r"</head\s*>", html, flags=re.IGNORECASE)
+    if closing_head is None:
+        raise ValueError("HTML público do Radar não possui fechamento de head.")
+    patch = f"""
+<!-- {RADAR_MOBILE_POSTBUILD_MARKER} -->
+<style>
+@media (max-width: 920px) {{
+  .date-rail {{ min-width: 0; }}
+  .rail-card {{ min-width: 0; max-width: 100%; width: 100%; }}
+}}
+</style>
+"""
+    html = html[: closing_head.start()] + patch + html[closing_head.start() :]
+    html_path.write_text(html, encoding="utf-8")
+    return True
+
+
 def build(root: Path, site: Path) -> int:
     root = root.resolve()
     site = site.resolve()
@@ -1064,6 +1093,7 @@ def build(root: Path, site: Path) -> int:
     (site / ".nojekyll").touch(exist_ok=True)
     attributed = inject_editorial_attribution(site)
     mobile_patch_applied = apply_nexus_mobile_postbuild_patch(site)
+    radar_mobile_patch_applied = apply_radar_mobile_postbuild_patch(site)
     normalize_permissions(site)
     total = sum(path.stat().st_size for path in site.rglob("*") if path.is_file())
     count = sum(1 for path in site.rglob("*") if path.is_file())
@@ -1072,6 +1102,10 @@ def build(root: Path, site: Path) -> int:
     print(
         "📱 Correção móvel pós-build do NEXUS: "
         + ("aplicada." if mobile_patch_applied else "já presente.")
+    )
+    print(
+        "📡 Correção móvel pós-build do Radar: "
+        + ("aplicada." if radar_mobile_patch_applied else "já presente.")
     )
     if card_conflicts:
         print(
