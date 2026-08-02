@@ -40,6 +40,26 @@ class DeployWorkflowPolicyTests(unittest.TestCase):
         ):
             self.assertIn(marker, WORKFLOW)
 
+    def test_release_validation_uses_the_final_sanitized_public_bytes(self) -> None:
+        sanitize = "python3 scripts_admin/publication_guard.py sanitize-site site"
+        tests = (
+            "ANTIGRAVITY_PUBLIC_ROOT=site python3 -m unittest discover "
+            "-s tests -p 'test_*.py' -v"
+        )
+        validate = (
+            "python3 scripts_admin/nexus_cosmos.py validate-release "
+            "--public-root site"
+        )
+        upload = "uses: actions/upload-pages-artifact@v5"
+        self.assertEqual(WORKFLOW.count(validate), 1)
+        self.assertNotIn(
+            "python3 -m unittest discover -s tests -p 'test_*.py' -v\n",
+            WORKFLOW.split("Montar pasta publica limpa", 1)[0],
+        )
+        self.assertLess(WORKFLOW.index(sanitize), WORKFLOW.index(tests))
+        self.assertLess(WORKFLOW.index(tests), WORKFLOW.index(validate))
+        self.assertLess(WORKFLOW.index(validate), WORKFLOW.index(upload))
+
 
 if __name__ == "__main__":
     unittest.main()

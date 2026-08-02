@@ -7,6 +7,7 @@ import base64
 import hashlib
 import importlib.util
 import json
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -171,6 +172,7 @@ class NexusReleasePreparationTests(unittest.TestCase):
                     "universe": "MUX",
                     "block": "PROD",
                     "privacy": "P0",
+                    "artifactProfile": self.bus.SOURCE_BOUND,
                     "status": "CANDIDATE_PUBLIC",
                     "source": {
                         "path": manifest_path.relative_to(root).as_posix(),
@@ -433,6 +435,66 @@ class NexusReleasePreparationTests(unittest.TestCase):
         ).hexdigest()
         write_json(paths["catalog"], catalog)
 
+    def set_artifact_profile(
+        self,
+        paths: dict[str, Path],
+        artifact_profile: str,
+    ) -> None:
+        catalog = json.loads(paths["catalog"].read_text(encoding="utf-8"))
+        catalog["items"][0]["artifactProfile"] = artifact_profile
+        write_json(paths["catalog"], catalog)
+
+    def bind_evidence_to_inventory(self, evidence: Path, inventory: dict) -> None:
+        payload = json.loads(evidence.read_text(encoding="utf-8"))
+        payload["auditBinding"]["artifactRootSha256"] = inventory[
+            "artifactRootSha256"
+        ]
+        write_json(evidence, payload)
+
+    def make_supersession_fixture(
+        self,
+        workspace: Path,
+    ) -> tuple[Path, Path, str, Path, dict[str, Path], dict, dict]:
+        root = workspace / "source"
+        public_root = workspace / "site"
+        product_code, evidence, paths = self.make_fixture(root)
+        old_release = self.prepare(root, product_code, evidence)
+        shutil.copytree(root, public_root)
+        public_product = public_root / paths["manifest"].parent.relative_to(root)
+        public_page = public_product / "index.html"
+        public_page.write_text(
+            public_page.read_text(encoding="utf-8")
+            + "<footer data-editorial-attribution>Antigravity</footer>\n",
+            encoding="utf-8",
+        )
+        public_references = public_product / "references.json"
+        references = json.loads(public_references.read_text(encoding="utf-8"))
+        references["totalFiles"] = len(references["items"])
+        write_json(public_references, references)
+        inventory = self.bus.supersession_inventory(
+            product_code,
+            old_release["tafCode"],
+            root=root,
+            public_root=public_root,
+        )
+        self.bind_evidence_to_inventory(evidence, inventory)
+        paths.update(
+            {
+                "tombstones": root / "23_Cosmos_NEXUS/data/tombstone-manifest.json",
+                "reports": root / "23_Cosmos_NEXUS/data/homologation-reports.json",
+                "public_page": public_page,
+            }
+        )
+        return (
+            root,
+            public_root,
+            product_code,
+            evidence,
+            paths,
+            old_release,
+            inventory,
+        )
+
     def test_prepares_real_members_and_keeps_publication_locked(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -513,6 +575,534 @@ class NexusReleasePreparationTests(unittest.TestCase):
                 self.bus.validate_release_state(root)["publication"],
                 "LOCKED",
             )
+
+    def test_post_build_profile_tombstones_public_bytes_and_fails_closed(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = Path(temporary)
+            root = workspace / "source"
+            public_root = workspace / "site"
+            product_code, evidence, paths = self.make_fixture(root)
+            self.set_artifact_profile(
+                paths,
+                self.bus.POST_BUILD_POST_SANITIZE,
+            )
+            shutil.copytree(root, public_root)
+            public_page = public_root / paths["manifest"].parent.relative_to(root) / "index.html"
+            public_page.write_text(
+                public_page.read_text(encoding="utf-8")
+                + "<footer data-editorial-attribution>Antigravity</footer>\n",
+                encoding="utf-8",
+            )
+            public_references = public_page.parent / "references.json"
+            references = json.loads(public_references.read_text(encoding="utf-8"))
+            references["totalFiles"] = len(references["items"])
+            write_json(public_references, references)
+
+            with self.assertRaisesRegex(self.bus.ContractError, "--public-root"):
+                self.bus.release_inventory(product_code, root)
+            with self.assertRaisesRegex(self.bus.ContractError, "saída dedicada"):
+                self.bus.release_inventory(
+                    product_code,
+                    root,
+                    public_root=root,
+                )
+            public_link = workspace / "site-link"
+            public_link.symlink_to(public_root, target_is_directory=True)
+            with self.assertRaisesRegex(self.bus.ContractError, "não symlink"):
+                self.bus.release_inventory(
+                    product_code,
+                    root,
+                    public_root=public_link,
+                )
+
+            inventory = self.bus.release_inventory(
+                product_code,
+                root,
+                public_root=public_root,
+            )
+            self.assertEqual(
+                inventory["artifactProfile"],
+                self.bus.POST_BUILD_POST_SANITIZE,
+            )
+            self.bind_evidence_to_inventory(evidence, inventory)
+            source_page = paths["manifest"].parent / "index.html"
+            public_member = next(
+                member
+                for member in inventory["members"]
+                if member["path"].endswith("/index.html")
+            )
+            self.assertEqual(
+                public_member["sha256"],
+                hashlib.sha256(public_page.read_bytes()).hexdigest(),
+            )
+            self.assertNotEqual(
+                public_member["sha256"],
+                hashlib.sha256(source_page.read_bytes()).hexdigest(),
+            )
+
+            result = self.prepare(
+                root,
+                product_code,
+                evidence,
+                public_root=public_root,
+            )
+            self.assertEqual(
+                result["artifactProfile"],
+                self.bus.POST_BUILD_POST_SANITIZE,
+            )
+            tombstones = json.loads(
+                (root / "23_Cosmos_NEXUS/data/tombstone-manifest.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            tombstone = tombstones["items"][0]
+            self.assertEqual(
+                tombstone["artifactProfile"],
+                self.bus.POST_BUILD_POST_SANITIZE,
+            )
+            self.assertEqual(tombstone["members"], inventory["members"])
+            with self.assertRaisesRegex(self.bus.ContractError, "--public-root"):
+                self.bus.validate_release_state(root)
+            self.assertEqual(
+                self.bus.validate_release_state(
+                    root,
+                    public_root=public_root,
+                )["publication"],
+                "LOCKED",
+            )
+            repeated = self.prepare(
+                root,
+                product_code,
+                evidence,
+                public_root=public_root,
+            )
+            self.assertEqual(repeated["status"], "ALREADY_PREPARED")
+            self.assertEqual(repeated["tafCode"], result["tafCode"])
+
+            public_page.write_bytes(public_page.read_bytes() + b"tamper")
+            with self.assertRaisesRegex(
+                self.bus.ContractError,
+                "bytes finais",
+            ):
+                self.bus.validate_release_state(
+                    root,
+                    public_root=public_root,
+                )
+
+    def test_post_build_umbrella_preserves_allowlist_and_public_hashes(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = Path(temporary)
+            root = workspace / "source"
+            public_root = workspace / "site"
+            product_code, evidence, paths = self.make_umbrella_fixture(root)
+            self.set_artifact_profile(
+                paths,
+                self.bus.POST_BUILD_POST_SANITIZE,
+            )
+            source_manifest_before = paths["manifest"].read_bytes()
+            shutil.copytree(root, public_root)
+            public_page = public_root / paths["page"].relative_to(root)
+            public_page.write_text(
+                public_page.read_text(encoding="utf-8")
+                + "<footer data-editorial-attribution>Antigravity</footer>\n",
+                encoding="utf-8",
+            )
+            public_station = public_root / paths["station"].relative_to(root)
+            station = json.loads(public_station.read_text(encoding="utf-8"))
+            station["totalFiles"] = 1
+            write_json(public_station, station)
+
+            inventory = self.bus.release_inventory(
+                product_code,
+                root,
+                public_root=public_root,
+            )
+            self.bind_evidence_to_inventory(evidence, inventory)
+            image_member = next(
+                member for member in inventory["members"] if member["kind"] == "image"
+            )
+            station_member = next(
+                member
+                for member in inventory["members"]
+                if member["path"] == paths["station"].relative_to(root).as_posix()
+            )
+            self.assertRegex(image_member["catalogCode"], r"^####IMG-")
+            self.assertEqual(
+                station_member["sha256"],
+                hashlib.sha256(public_station.read_bytes()).hexdigest(),
+            )
+            self.assertNotEqual(
+                station_member["sha256"],
+                hashlib.sha256(paths["station"].read_bytes()).hexdigest(),
+            )
+            self.assertEqual(paths["manifest"].read_bytes(), source_manifest_before)
+
+            self.prepare(
+                root,
+                product_code,
+                evidence,
+                public_root=public_root,
+            )
+            self.assertEqual(
+                self.bus.validate_release_state(
+                    root,
+                    public_root=public_root,
+                )["preparedReleases"],
+                1,
+            )
+
+    def test_supersede_release_preserves_history_and_activates_one_public_chain(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            (
+                root,
+                public_root,
+                product_code,
+                evidence,
+                paths,
+                old_release,
+                inventory,
+            ) = self.make_supersession_fixture(Path(temporary))
+            old_tombstones = json.loads(
+                paths["tombstones"].read_text(encoding="utf-8")
+            )["items"]
+            old_reports = json.loads(
+                paths["reports"].read_text(encoding="utf-8")
+            )["items"]
+            old_events = json.loads(paths["ledger"].read_text(encoding="utf-8"))[
+                "events"
+            ]
+
+            result = self.bus.supersede_release(
+                product_code,
+                old_release["tafCode"],
+                evidence,
+                "2026-08-01",
+                10,
+                reason=self.bus.SUPERSESSION_REASON,
+                public_root=public_root,
+                root=root,
+            )
+            self.assertEqual(result["status"], "SUPERSEDED_PREPUBLICATION")
+            self.assertEqual(result["publication"], "LOCKED")
+            self.assertEqual(
+                result["artifactProfile"],
+                self.bus.POST_BUILD_POST_SANITIZE,
+            )
+            self.assertEqual(
+                result["artifactRootSha256"],
+                inventory["artifactRootSha256"],
+            )
+            self.assertNotEqual(result["tafCode"], old_release["tafCode"])
+            self.assertEqual(
+                result["requiredCommand"],
+                f"PUBLICAR {result['tafCode']}",
+            )
+
+            catalog = json.loads(paths["catalog"].read_text(encoding="utf-8"))
+            product = catalog["items"][0]
+            manifest = json.loads(paths["manifest"].read_text(encoding="utf-8"))
+            self.assertEqual(product["tafCode"], result["tafCode"])
+            self.assertEqual(manifest["publication"]["finalAcceptanceCode"], result["tafCode"])
+            self.assertEqual(product["supersededReleases"], manifest["supersededReleases"])
+            self.assertEqual(len(product["supersededReleases"]), 1)
+            self.assertEqual(
+                product["supersededReleases"][0]["tafCode"],
+                old_release["tafCode"],
+            )
+            self.assertEqual(
+                product["supersededReleases"][0]["publication"],
+                "VOID_PREPUBLICATION",
+            )
+
+            tombstones = json.loads(
+                paths["tombstones"].read_text(encoding="utf-8")
+            )["items"]
+            reports = json.loads(
+                paths["reports"].read_text(encoding="utf-8")
+            )["items"]
+            events = json.loads(paths["ledger"].read_text(encoding="utf-8"))[
+                "events"
+            ]
+            self.assertEqual(tombstones[: len(old_tombstones)], old_tombstones)
+            self.assertEqual(reports[: len(old_reports)], old_reports)
+            self.assertEqual(events[: len(old_events)], old_events)
+            self.assertEqual(len(tombstones), 2)
+            self.assertEqual(len(reports), 2)
+            self.assertEqual(len(events), 10)
+            self.assertTrue(
+                any(
+                    event["type"] == "RELEASE_SUPERSEDED_PREPUBLICATION"
+                    for event in events
+                )
+            )
+            self.assertFalse(
+                any("CLINICAL" in event["type"] for event in events[len(old_events):])
+            )
+            state = self.bus.validate_release_state(
+                root,
+                public_root=public_root,
+            )
+            self.assertEqual(state["preparedReleases"], 1)
+            self.assertEqual(state["publication"], "LOCKED")
+            with self.assertRaisesRegex(self.bus.ContractError, "superseded"):
+                self.bus._reject_superseded_taf(old_release["tafCode"], root)
+            self.bus._reject_superseded_taf(result["tafCode"], root)
+
+            with self.assertRaisesRegex(self.bus.ContractError, "--public-root"):
+                self.bus.validate_release_state(root)
+            paths["public_page"].write_bytes(
+                paths["public_page"].read_bytes() + b"tamper"
+            )
+            with self.assertRaisesRegex(self.bus.ContractError, "bytes finais"):
+                self.bus.validate_release_state(root, public_root=public_root)
+
+    def test_supersede_release_blocks_wrong_taf_published_and_rolls_back(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            (
+                root,
+                public_root,
+                product_code,
+                evidence,
+                paths,
+                old_release,
+                _,
+            ) = self.make_supersession_fixture(Path(temporary))
+            protected = {
+                name: path.read_bytes()
+                for name, path in paths.items()
+                if name in {
+                    "catalog",
+                    "ledger",
+                    "module",
+                    "manifest",
+                    "tombstones",
+                    "reports",
+                }
+            }
+            with self.assertRaisesRegex(self.bus.ContractError, "cadeia ativa exata"):
+                self.bus.supersede_release(
+                    product_code,
+                    "TAF###-MUX-PROD-20260801-0009-DEADBEEF",
+                    evidence,
+                    "2026-08-01",
+                    10,
+                    reason=self.bus.SUPERSESSION_REASON,
+                    public_root=public_root,
+                    root=root,
+                )
+            with self.assertRaisesRegex(self.bus.ContractError, "--reason"):
+                self.bus.supersede_release(
+                    product_code,
+                    old_release["tafCode"],
+                    evidence,
+                    "2026-08-01",
+                    10,
+                    reason="OUTRA_RAZAO",
+                    public_root=public_root,
+                    root=root,
+                )
+            with self.assertRaisesRegex(self.bus.ContractError, "colisão"):
+                self.bus.supersede_release(
+                    product_code,
+                    old_release["tafCode"],
+                    evidence,
+                    "2026-08-01",
+                    9,
+                    reason=self.bus.SUPERSESSION_REASON,
+                    public_root=public_root,
+                    root=root,
+                )
+            with self.assertRaisesRegex(OSError, "falha transacional injetada"):
+                self.bus.supersede_release(
+                    product_code,
+                    old_release["tafCode"],
+                    evidence,
+                    "2026-08-01",
+                    10,
+                    reason=self.bus.SUPERSESSION_REASON,
+                    public_root=public_root,
+                    root=root,
+                    fail_after=3,
+                )
+            self.assertEqual(
+                {
+                    name: path.read_bytes()
+                    for name, path in paths.items()
+                    if name in protected
+                },
+                protected,
+            )
+            self.assertEqual(self.bus.validate_release_state(root)["preparedReleases"], 1)
+
+        with tempfile.TemporaryDirectory() as temporary:
+            (
+                root,
+                public_root,
+                product_code,
+                evidence,
+                paths,
+                old_release,
+                _,
+            ) = self.make_supersession_fixture(Path(temporary))
+            catalog = json.loads(paths["catalog"].read_text(encoding="utf-8"))
+            catalog["items"][0]["published"] = True
+            write_json(paths["catalog"], catalog)
+            with self.assertRaises(self.bus.ContractError):
+                self.bus.supersede_release(
+                    product_code,
+                    old_release["tafCode"],
+                    evidence,
+                    "2026-08-01",
+                    10,
+                    reason=self.bus.SUPERSESSION_REASON,
+                    public_root=public_root,
+                    root=root,
+                )
+
+    def test_superseded_taf_reuse_and_history_collision_fail_validation(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            (
+                root,
+                public_root,
+                product_code,
+                evidence,
+                paths,
+                old_release,
+                _,
+            ) = self.make_supersession_fixture(Path(temporary))
+            result = self.bus.supersede_release(
+                product_code,
+                old_release["tafCode"],
+                evidence,
+                "2026-08-01",
+                10,
+                reason=self.bus.SUPERSESSION_REASON,
+                public_root=public_root,
+                root=root,
+            )
+            catalog = json.loads(paths["catalog"].read_text(encoding="utf-8"))
+            catalog["items"][0]["tafCode"] = old_release["tafCode"]
+            write_json(paths["catalog"], catalog)
+            with self.assertRaises(self.bus.ContractError):
+                self.bus.validate_release_state(root, public_root=public_root)
+
+        with tempfile.TemporaryDirectory() as temporary:
+            (
+                root,
+                public_root,
+                product_code,
+                evidence,
+                paths,
+                old_release,
+                _,
+            ) = self.make_supersession_fixture(Path(temporary))
+            self.bus.supersede_release(
+                product_code,
+                old_release["tafCode"],
+                evidence,
+                "2026-08-01",
+                10,
+                reason=self.bus.SUPERSESSION_REASON,
+                public_root=public_root,
+                root=root,
+            )
+            manifest = json.loads(paths["manifest"].read_text(encoding="utf-8"))
+            manifest["supersededReleases"].append(
+                dict(manifest["supersededReleases"][0])
+            )
+            write_json(paths["manifest"], manifest)
+            catalog = json.loads(paths["catalog"].read_text(encoding="utf-8"))
+            catalog["items"][0]["supersededReleases"] = manifest[
+                "supersededReleases"
+            ]
+            catalog["items"][0]["source"]["sha256"] = hashlib.sha256(
+                paths["manifest"].read_bytes()
+            ).hexdigest()
+            write_json(paths["catalog"], catalog)
+            with self.assertRaisesRegex(self.bus.ContractError, "índice"):
+                self.bus.validate_release_state(root, public_root=public_root)
+
+    def test_supersede_release_supports_umbrella_public_allowlist(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = Path(temporary)
+            root = workspace / "source"
+            public_root = workspace / "site"
+            product_code, evidence, paths = self.make_umbrella_fixture(root)
+            old_release = self.prepare(root, product_code, evidence)
+            shutil.copytree(root, public_root)
+            public_page = public_root / paths["page"].relative_to(root)
+            public_page.write_text(
+                public_page.read_text(encoding="utf-8")
+                + "<footer data-editorial-attribution>Antigravity</footer>\n",
+                encoding="utf-8",
+            )
+            public_station = public_root / paths["station"].relative_to(root)
+            station = json.loads(public_station.read_text(encoding="utf-8"))
+            station["totalFiles"] = 1
+            write_json(public_station, station)
+            inventory = self.bus.supersession_inventory(
+                product_code,
+                old_release["tafCode"],
+                root=root,
+                public_root=public_root,
+            )
+            self.bind_evidence_to_inventory(evidence, inventory)
+            result = self.bus.supersede_release(
+                product_code,
+                old_release["tafCode"],
+                evidence,
+                "2026-08-01",
+                10,
+                reason=self.bus.SUPERSESSION_REASON,
+                public_root=public_root,
+                root=root,
+            )
+            self.assertNotEqual(result["tafCode"], old_release["tafCode"])
+            self.assertEqual(result["memberCount"], 3)
+            module = json.loads(paths["module"].read_text(encoding="utf-8"))
+            self.assertEqual(
+                module["publication"]["stationTafCode"],
+                result["tafCode"],
+            )
+            self.assertEqual(
+                module["publication"]["requiredCommand"],
+                f"PUBLICAR {result['tafCode']}",
+            )
+            self.assertEqual(
+                self.bus.validate_release_state(
+                    root,
+                    public_root=public_root,
+                )["publication"],
+                "LOCKED",
+            )
+
+    def test_umbrella_child_tafs_resolve_superseded_codes_to_active_chains(self) -> None:
+        old_a = "TAF###-MUX-PROD-20260801-0001-AAAAAAAA"
+        new_a = "TAF###-MUX-PROD-20260801-0004-BBBBBBBB"
+        active_b = "TAF###-U3-IMGT-20260801-0005-CCCCCCCC"
+        catalog = {
+            "items": [
+                {
+                    "tafCode": new_a,
+                    "supersededReleases": [
+                        {
+                            "tafCode": old_a,
+                            "supersededByTafCode": new_a,
+                            "publication": "VOID_PREPUBLICATION",
+                        }
+                    ],
+                },
+                {"tafCode": active_b, "supersededReleases": []},
+            ]
+        }
+        self.assertEqual(
+            self.bus._active_child_taf_codes(catalog, [old_a, active_b]),
+            [new_a, active_b],
+        )
+        with self.assertRaisesRegex(self.bus.ContractError, "única cadeia ativa"):
+            self.bus._active_child_taf_codes(catalog, [
+                "TAF###-MUX-EXT-20260801-0006-DDDDDDDD"
+            ])
 
     def test_umbrella_can_explicitly_scope_members_to_repository_root(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -634,6 +1224,162 @@ class NexusReleasePreparationTests(unittest.TestCase):
             manifest["members"].sort(key=lambda item: item["path"])
             with self.assertRaisesRegex(self.bus.ContractError, "governança mutável"):
                 self.bus._release_artifact_inventory(root, paths["manifest"], manifest)
+
+    def test_two_products_are_superseded_sequentially_with_public_root(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = Path(temporary)
+            root = workspace / "source"
+            public_root = workspace / "site"
+            product_a, evidence_a, paths = self.make_fixture(root)
+
+            product_b = "####AGX-U3-IMGT-20260801-0010-BBBBBBBB"
+            product_b_dir = root / "23_Cosmos_NEXUS/products/produto-fixture-b"
+            shutil.copytree(paths["manifest"].parent, product_b_dir)
+            manifest_b_path = product_b_dir / "product.manifest.json"
+            manifest_b = json.loads(manifest_b_path.read_text(encoding="utf-8"))
+            manifest_b["identity"].update(
+                {
+                    "id": "produto-fixture-b",
+                    "semanticKey": "produto-fixture-b",
+                    "title": "Produto fixture B",
+                    "productCode": product_b,
+                    "productUid": "b" * 64,
+                }
+            )
+            audit_input = "|".join(
+                [
+                    product_b,
+                    manifest_b["bundle"]["aggregateSha256"],
+                    "patient:passed",
+                    "rights:passed",
+                    "science:passed",
+                    "technical:passed",
+                    "links:passed",
+                ]
+            )
+            audit_hash = hashlib.sha256(audit_input.encode("utf-8")).hexdigest()
+            audit_b = f"AUD###-IMGT-20260801-0010-{audit_hash[:8].upper()}"
+            manifest_b["identity"]["auditCode"] = audit_b
+            manifest_b["audit"]["auditEvidenceSha256"] = audit_hash
+            write_json(manifest_b_path, manifest_b)
+            _, artifact_root_b = self.bus._release_artifact_inventory(
+                root,
+                manifest_b_path,
+                manifest_b,
+            )
+
+            catalog = json.loads(paths["catalog"].read_text(encoding="utf-8"))
+            item_b = json.loads(json.dumps(catalog["items"][0]))
+            item_b.update(
+                {
+                    "productCode": product_b,
+                    "productUid": "b" * 64,
+                    "title": "Produto fixture B",
+                    "semanticKey": "produto-fixture-b",
+                    "universe": "U3",
+                    "block": "IMGT",
+                    "graphNode": "produto-fixture-b",
+                    "auditCode": audit_b,
+                }
+            )
+            item_b["source"] = {
+                "path": manifest_b_path.relative_to(root).as_posix(),
+                "sha256": hashlib.sha256(manifest_b_path.read_bytes()).hexdigest(),
+            }
+            catalog["items"].append(item_b)
+            write_json(paths["catalog"], catalog)
+
+            module = json.loads(paths["module"].read_text(encoding="utf-8"))
+            module["candidateProducts"].append(
+                {
+                    "id": "produto-fixture-b",
+                    "productCode": product_b,
+                    "status": "candidate-public",
+                    "officialPublication": False,
+                }
+            )
+            write_json(paths["module"], module)
+
+            evidence_b_payload = json.loads(evidence_a.read_text(encoding="utf-8"))
+            evidence_b_payload["productCode"] = product_b
+            evidence_b_payload["auditBinding"] = {
+                "auditCode": audit_b,
+                "artifactRootSha256": artifact_root_b,
+                "status": "PASS",
+            }
+            evidence_b = root / "evidence-b.json"
+            write_json(evidence_b, evidence_b_payload)
+
+            old_a = self.bus.prepare_release(
+                product_a,
+                evidence_a,
+                "2026-08-01",
+                9,
+                root=root,
+            )
+            old_b = self.bus.prepare_release(
+                product_b,
+                evidence_b,
+                "2026-08-01",
+                10,
+                root=root,
+            )
+            shutil.copytree(root, public_root)
+            for manifest_path in (paths["manifest"], manifest_b_path):
+                public_product = public_root / manifest_path.parent.relative_to(root)
+                public_page = public_product / "index.html"
+                public_page.write_text(
+                    public_page.read_text(encoding="utf-8")
+                    + "<footer data-editorial-attribution>Antigravity</footer>\n",
+                    encoding="utf-8",
+                )
+                references_path = public_product / "references.json"
+                references = json.loads(references_path.read_text(encoding="utf-8"))
+                references["totalFiles"] = len(references["items"])
+                write_json(references_path, references)
+
+            inventory_a = self.bus.supersession_inventory(
+                product_a,
+                old_a["tafCode"],
+                root=root,
+                public_root=public_root,
+            )
+            self.bind_evidence_to_inventory(evidence_a, inventory_a)
+            self.bus.supersede_release(
+                product_a,
+                old_a["tafCode"],
+                evidence_a,
+                "2026-08-01",
+                11,
+                reason=self.bus.SUPERSESSION_REASON,
+                root=root,
+                public_root=public_root,
+            )
+
+            inventory_b = self.bus.supersession_inventory(
+                product_b,
+                old_b["tafCode"],
+                root=root,
+                public_root=public_root,
+            )
+            self.bind_evidence_to_inventory(evidence_b, inventory_b)
+            self.bus.supersede_release(
+                product_b,
+                old_b["tafCode"],
+                evidence_b,
+                "2026-08-01",
+                12,
+                reason=self.bus.SUPERSESSION_REASON,
+                root=root,
+                public_root=public_root,
+            )
+            state = self.bus.validate_release_state(
+                root,
+                public_root=public_root,
+            )
+            self.assertEqual(state["preparedReleases"], 2)
+            self.assertEqual(state["ledgerEvents"], 20)
+            self.assertEqual(state["publication"], "LOCKED")
 
     def test_repeated_identical_preparation_is_idempotent(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

@@ -126,6 +126,25 @@ UMBRELLA_FILE_SUFFIXES = {
 }
 UMBRELLA_IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp"}
 MAX_RELEASE_MEMBERS = 5000
+SOURCE_BOUND = "SOURCE_BOUND"
+POST_BUILD_POST_SANITIZE = "POST_BUILD_POST_SANITIZE"
+RELEASE_ARTIFACT_PROFILES = {SOURCE_BOUND, POST_BUILD_POST_SANITIZE}
+SUPERSESSION_REASON = "VOID_PREPUBLICATION_SOURCE_SCOPE"
+SUPERSEDED_RELEASE_FIELDS = {
+    "procedureCode",
+    "auditCode",
+    "homologationCode",
+    "tombstoneCode",
+    "tafCode",
+    "artifactProfile",
+    "artifactRootSha256",
+    "memberCount",
+    "supersededAt",
+    "supersededByTafCode",
+    "supersessionProcedureCode",
+    "reason",
+    "publication",
+}
 
 
 class ContractError(ValueError):
@@ -974,6 +993,59 @@ def _relative_regular_file(base: Path, relative: str, root: Path) -> Path:
     return candidate
 
 
+def _resolve_public_root(public_root: Path | None, source_root: Path) -> Path:
+    """Resolve uma raiz pública materializada sem aceitar atalhos ambíguos."""
+
+    if public_root is None:
+        raise ContractError(
+            "--public-root é obrigatório para o perfil POST_BUILD_POST_SANITIZE"
+        )
+    candidate = Path(public_root).expanduser()
+    try:
+        status_value = candidate.lstat()
+        resolved = candidate.resolve(strict=True)
+    except OSError as exc:
+        raise ContractError("public-root materializado está ausente") from exc
+    if stat.S_ISLNK(status_value.st_mode) or not stat.S_ISDIR(status_value.st_mode):
+        raise ContractError("public-root precisa ser diretório regular, não symlink")
+    if resolved == Path(resolved.anchor) or resolved == source_root.resolve(strict=True):
+        raise ContractError(
+            "public-root precisa ser uma saída dedicada, distinta da fonte"
+        )
+    return resolved
+
+
+def _release_artifact_profile(product: dict, manifest: dict) -> str:
+    """Exige uma única declaração explícita do estágio que fornece os bytes."""
+
+    product_release = product.get("releasePreparation")
+    manifest_release = manifest.get("releasePreparation")
+    if product_release is not None and not isinstance(product_release, dict):
+        raise ContractError("releasePreparation do catálogo precisa ser objeto")
+    if manifest_release is not None and not isinstance(manifest_release, dict):
+        raise ContractError("releasePreparation do manifesto precisa ser objeto")
+    declarations = [
+        product.get("artifactProfile"),
+        (product_release or {}).get("artifactProfile"),
+        manifest.get("artifactProfile"),
+        (manifest_release or {}).get("artifactProfile"),
+    ]
+    profiles = {value for value in declarations if value is not None}
+    if not profiles:
+        # Registros preparados antes da introdução do perfil continuam
+        # verificáveis como source-bound. Novas preparações precisam declarar
+        # o perfil para não tombar a árvore-fonte por acidente.
+        if product.get("tafCode") is not None:
+            return SOURCE_BOUND
+        raise ContractError(
+            "artifactProfile explícito é obrigatório: SOURCE_BOUND ou "
+            "POST_BUILD_POST_SANITIZE"
+        )
+    if len(profiles) != 1 or not profiles.issubset(RELEASE_ARTIFACT_PROFILES):
+        raise ContractError("artifactProfile ausente, inválido ou divergente")
+    return next(iter(profiles))
+
+
 def _validate_release_html_state(path: Path) -> None:
     try:
         page_text = path.read_text(encoding="utf-8")
@@ -1011,6 +1083,7 @@ def _umbrella_release_artifact_inventory(
 
     allowed_manifest_fields = {
         "schemaVersion",
+        "artifactProfile",
         "identity",
         "classification",
         "publication",
@@ -1019,6 +1092,7 @@ def _umbrella_release_artifact_inventory(
         "bundle",
         "audit",
         "releasePreparation",
+        "supersededReleases",
     }
     extra_manifest_fields = sorted(set(manifest) - allowed_manifest_fields)
     if extra_manifest_fields:
@@ -1366,6 +1440,117 @@ def _release_artifact_inventory(
     return members, hashlib.sha256(root_lines.encode("utf-8")).hexdigest()
 
 
+def _release_public_artifact_inventory(
+    root: Path,
+    public_root: Path | None,
+    manifest_path: Path,
+    manifest: dict,
+) -> tuple[list[dict], str]:
+    """Tomba os mesmos membros permitidos pela fonte, usando os bytes públicos."""
+
+    source_members, _ = _release_artifact_inventory(root, manifest_path, manifest)
+    public_root = _resolve_public_root(public_root, root)
+    public_members: list[dict] = []
+    for source_member in source_members:
+        relative = source_member["path"]
+        path = _relative_regular_file(public_root, relative, public_root)
+        actual_size = path.stat().st_size
+        if actual_size > MAX_FILE_BYTES:
+            raise ContractError(f"membro público excede o limite seguro: {relative}")
+        suffix = path.suffix.casefold()
+        if suffix in UMBRELLA_IMAGE_SUFFIXES:
+            validate_materialized_file(path, "gpt-image", suffix)
+        elif suffix == ".pdf":
+            validate_materialized_file(path, "gpt-pdf", suffix)
+        elif suffix == ".html":
+            _validate_release_html_state(path)
+        elif suffix == ".json":
+            try:
+                json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+                raise ContractError(f"JSON público tombável inválido: {relative}") from exc
+
+        record = {
+            "path": relative,
+            "sha256": sha256_file(path),
+            "bytes": actual_size,
+        }
+        if source_member.get("kind") is not None:
+            record["kind"] = source_member["kind"]
+        if source_member.get("catalogCode") is not None:
+            code = source_member["catalogCode"]
+            if not code.endswith(record["sha256"][:8].upper()):
+                raise ContractError(
+                    f"####IMG público diverge dos bytes catalogados: {relative}"
+                )
+            record["catalogCode"] = code
+        public_members.append(record)
+
+    if manifest.get("schemaVersion") != UMBRELLA_RELEASE_SCHEMA:
+        manifest_relative = manifest_path.relative_to(root).as_posix()
+        product_relative = manifest_path.parent.relative_to(root)
+        public_product = public_root / product_relative
+        try:
+            product_status = public_product.lstat()
+        except OSError as exc:
+            raise ContractError("diretório público do produto está ausente") from exc
+        if stat.S_ISLNK(product_status.st_mode) or not stat.S_ISDIR(product_status.st_mode):
+            raise ContractError("diretório público do produto é inseguro")
+        actual_paths: set[str] = set()
+        for path in public_product.rglob("*"):
+            try:
+                path_status = path.lstat()
+            except OSError as exc:
+                raise ContractError("lote público contém membro inacessível") from exc
+            relative = path.relative_to(public_root).as_posix()
+            if stat.S_ISLNK(path_status.st_mode):
+                raise ContractError(f"lote público contém symlink: {relative}")
+            if stat.S_ISREG(path_status.st_mode) and relative != manifest_relative:
+                actual_paths.add(relative)
+            elif not (
+                stat.S_ISDIR(path_status.st_mode)
+                or stat.S_ISREG(path_status.st_mode)
+            ):
+                raise ContractError(f"lote público contém membro inseguro: {relative}")
+        declared_paths = {member["path"] for member in public_members}
+        if actual_paths != declared_paths:
+            missing = sorted(declared_paths - actual_paths)
+            extra = sorted(actual_paths - declared_paths)
+            detail = []
+            if missing:
+                detail.append("ausentes=" + ",".join(missing))
+            if extra:
+                detail.append("não declarados=" + ",".join(extra))
+            raise ContractError(
+                "lote público não coincide com o manifesto: " + "; ".join(detail)
+            )
+
+    root_lines = "".join(
+        f"{member['path']}\t{member['sha256']}\t{member['bytes']}\n"
+        for member in public_members
+    )
+    return public_members, hashlib.sha256(root_lines.encode("utf-8")).hexdigest()
+
+
+def _release_inventory_for_profile(
+    root: Path,
+    manifest_path: Path,
+    manifest: dict,
+    artifact_profile: str,
+    public_root: Path | None,
+) -> tuple[list[dict], str]:
+    if artifact_profile == SOURCE_BOUND:
+        return _release_artifact_inventory(root, manifest_path, manifest)
+    if artifact_profile == POST_BUILD_POST_SANITIZE:
+        return _release_public_artifact_inventory(
+            root,
+            public_root,
+            manifest_path,
+            manifest,
+        )
+    raise ContractError("artifactProfile inválido")
+
+
 def _event_hash(event: dict) -> str:
     payload = dict(event)
     payload.pop("eventHash", None)
@@ -1611,7 +1796,213 @@ def _default_homologation_reports() -> dict:
     }
 
 
-def validate_release_state(root: Path = ROOT) -> dict:
+def _validate_superseded_release_history(
+    *,
+    product: dict,
+    manifest: dict,
+    source_members: list[dict],
+    source_artifact_root: str,
+    active_artifact_root: str,
+    active_taf_code: str,
+    tombstones: list[dict],
+    reports: list[dict],
+    ledger: dict,
+) -> None:
+    """Valida o índice append-only de cadeias pré-publicação substituídas."""
+
+    catalog_history = product.get("supersededReleases", [])
+    manifest_history = manifest.get("supersededReleases", [])
+    if (
+        not isinstance(catalog_history, list)
+        or not isinstance(manifest_history, list)
+        or catalog_history != manifest_history
+        or len(catalog_history) > 1
+    ):
+        raise ContractError("índice de releases superseded é inválido ou divergente")
+
+    active_release = product.get("releasePreparation", {})
+    supersession_code = active_release.get("supersessionProcedureCode")
+    if not catalog_history:
+        if supersession_code is not None:
+            raise ContractError("release ativa declara supersessão sem histórico")
+        expected_tom_codes = {product.get("tombstoneCode")}
+        expected_hom_codes = {product.get("homologationCode")}
+    else:
+        if (
+            not PRC.fullmatch(supersession_code or "")
+            or active_release.get("supersedesTafCode")
+            != catalog_history[-1].get("tafCode")
+            or active_release.get("supersessionReason") != SUPERSESSION_REASON
+        ):
+            raise ContractError("release ativa não aponta a supersessão mais recente")
+        expected_tom_codes = {product.get("tombstoneCode")}
+        expected_hom_codes = {product.get("homologationCode")}
+
+    seen_taf: set[str] = set()
+    seen_supersession_codes: set[str] = set()
+    ledger_by_code = {
+        event.get("code"): event for event in ledger.get("events", [])
+    }
+    for index, record in enumerate(catalog_history):
+        if not isinstance(record, dict) or set(record) != SUPERSEDED_RELEASE_FIELDS:
+            raise ContractError("registro superseded possui campos inválidos")
+        old_taf = record.get("tafCode", "")
+        old_hom = record.get("homologationCode", "")
+        old_tom = record.get("tombstoneCode", "")
+        old_procedure = record.get("procedureCode", "")
+        old_audit = record.get("auditCode", "")
+        supersession = record.get("supersessionProcedureCode", "")
+        expected_successor = (
+            catalog_history[index + 1].get("tafCode")
+            if index + 1 < len(catalog_history)
+            else active_taf_code
+        )
+        if (
+            not TAF.fullmatch(old_taf)
+            or not HOM.fullmatch(old_hom)
+            or not TOM.fullmatch(old_tom)
+            or not PRC.fullmatch(old_procedure)
+            or not AUD.fullmatch(old_audit)
+            or not PRC.fullmatch(supersession)
+            or old_taf == active_taf_code
+            or old_taf in seen_taf
+            or supersession in seen_supersession_codes
+            or record.get("artifactProfile") != SOURCE_BOUND
+            or record.get("artifactRootSha256") != source_artifact_root
+            or record.get("memberCount") != len(source_members)
+            or record.get("supersededByTafCode") != expected_successor
+            or record.get("reason") != SUPERSESSION_REASON
+            or record.get("publication") != "VOID_PREPUBLICATION"
+        ):
+            raise ContractError("cadeia superseded é inválida, reutilizada ou não linear")
+        _aware_timestamp(str(record.get("supersededAt", "")), "supersededAt")
+        seen_taf.add(old_taf)
+        seen_supersession_codes.add(supersession)
+        expected_tom_codes.add(old_tom)
+        expected_hom_codes.add(old_hom)
+
+        old_tombstones = [
+            item for item in tombstones if item.get("tombstoneCode") == old_tom
+        ]
+        if len(old_tombstones) != 1:
+            raise ContractError("TOM### superseded não resolve registro histórico único")
+        old_tombstone = old_tombstones[0]
+        if (
+            old_tombstone.get("productCode") != product.get("productCode")
+            or old_tombstone.get("auditCode") != old_audit
+            or old_tombstone.get("homologationCode") != old_hom
+            or old_tombstone.get("tafCode") != old_taf
+            or old_tombstone.get("artifactProfile") not in {None, SOURCE_BOUND}
+            or old_tombstone.get("artifactRootSha256") != source_artifact_root
+            or old_tombstone.get("memberCount") != len(source_members)
+            or old_tombstone.get("members") != source_members
+            or old_tombstone.get("publication") != "LOCKED"
+        ):
+            raise ContractError("TOM### superseded foi alterado ou não é source-bound")
+
+        old_reports = [
+            item for item in reports if item.get("homologationCode") == old_hom
+        ]
+        if len(old_reports) != 1:
+            raise ContractError("HOM### superseded não resolve relatório histórico único")
+        old_report = old_reports[0]
+        old_core = old_report.get("report")
+        if (
+            not isinstance(old_core, dict)
+            or old_report.get("reportSha256") != _canonical_sha256(old_core)
+            or old_report.get("procedureCode") != old_procedure
+            or old_report.get("tombstoneCode") != old_tom
+            or old_report.get("tafCode") != old_taf
+            or old_core.get("productCode") != product.get("productCode")
+            or old_core.get("auditCode") != old_audit
+            or old_core.get("artifactProfile") not in {None, SOURCE_BOUND}
+            or old_core.get("artifactRootSha256") != source_artifact_root
+            or old_core.get("memberCount") != len(source_members)
+            or old_core.get("auditBinding") != {
+                "auditCode": old_audit,
+                "artifactRootSha256": source_artifact_root,
+                "status": "PASS",
+            }
+            or old_report.get("publication", {}).get("status") != "LOCKED"
+            or old_report.get("publication", {}).get("officialPublication") is not False
+        ):
+            raise ContractError("HOM### superseded foi alterado")
+
+        hom_scope, hom_date, hom_sequence, _ = _release_code_parts(old_hom, "HOM###")
+        if old_hom != (
+            f"HOM###-{hom_scope}-{hom_date}-{hom_sequence:04d}-"
+            f"{digest8(hom_scope, old_report['reportSha256'], old_core['reviewer'], old_core['reviewedAt'])}"
+        ):
+            raise ContractError("HOM### superseded diverge do relatório histórico")
+        tom_scope, tom_date, tom_sequence, _ = _release_code_parts(old_tom, "TOM###")
+        if old_tom != (
+            f"TOM###-{tom_scope}-{tom_date}-{tom_sequence:04d}-"
+            f"{digest8(tom_scope, source_artifact_root, str(len(source_members)), old_tombstone['frozenAt'])}"
+        ):
+            raise ContractError("TOM### superseded diverge dos bytes source-bound")
+        if not old_taf.endswith(
+            digest8(
+                product["productCode"],
+                old_audit,
+                old_hom,
+                old_tom,
+                source_artifact_root,
+            )
+        ):
+            raise ContractError("TAF### superseded diverge da cadeia histórica")
+
+        historical_codes = {old_procedure, old_audit, old_hom, old_tom, old_taf}
+        if not historical_codes.issubset(ledger_by_code):
+            raise ContractError("ledger perdeu evento da cadeia superseded")
+        old_audit_event = ledger_by_code[old_audit]
+        if (
+            old_audit_event.get("subjectCode") != product.get("productCode")
+            or old_audit_event.get("inputHash") != source_artifact_root
+            or old_audit_event.get("result")
+            != "PASS_BOUND_TO_CURRENT_ARTIFACT_ROOT"
+        ):
+            raise ContractError("AUD### histórico não permanece source-bound")
+        supersession_event = ledger_by_code.get(supersession)
+        if (
+            not isinstance(supersession_event, dict)
+            or supersession_event.get("type")
+            != "RELEASE_SUPERSEDED_PREPUBLICATION"
+            or supersession_event.get("subjectCode") != product.get("productCode")
+            or supersession_event.get("inputHash") != source_artifact_root
+            or supersession_event.get("outputHash") != active_artifact_root
+            or supersession_event.get("result") != SUPERSESSION_REASON
+            or supersession_event.get("evidence", {}).get("previousTafCode")
+            != old_taf
+            or supersession_event.get("evidence", {}).get("replacementTafCode")
+            != expected_successor
+            or supersession_event.get("evidence", {}).get("auditBinding") != {
+                "auditCode": old_audit,
+                "artifactRootSha256": active_artifact_root,
+                "status": "PASS",
+            }
+            or supersession_event.get("evidence", {}).get("publication") != "LOCKED"
+        ):
+            raise ContractError("evento de supersessão está ausente ou divergente")
+
+    product_tom_codes = {
+        item.get("tombstoneCode")
+        for item in tombstones
+        if item.get("productCode") == product.get("productCode")
+    }
+    product_hom_codes = {
+        item.get("homologationCode")
+        for item in reports
+        if item.get("report", {}).get("productCode") == product.get("productCode")
+    }
+    if product_tom_codes != expected_tom_codes or product_hom_codes != expected_hom_codes:
+        raise ContractError("produto não possui exatamente uma cadeia ativa e histórico indexado")
+
+
+def validate_release_state(
+    root: Path = ROOT,
+    *,
+    public_root: Path | None = None,
+) -> dict:
     root = root.resolve(strict=True)
     data = root / "23_Cosmos_NEXUS/data"
     catalog = _load_json_path(data / "product-catalog.json", "catálogo de produtos")
@@ -1648,25 +2039,37 @@ def validate_release_state(root: Path = ROOT) -> dict:
         hom_code = product.get("homologationCode", "")
         tom_code = product.get("tombstoneCode", "")
         audit_code = product.get("auditCode", "")
-        procedure_code = product.get("releasePreparation", {}).get("procedureCode", "")
+        release = product.get("releasePreparation", {})
+        if not isinstance(release, dict):
+            raise ContractError("releasePreparation ativa precisa ser objeto")
+        procedure_code = release.get("procedureCode", "")
+        supersession_code = release.get("supersessionProcedureCode")
         if not HOM.fullmatch(hom_code) or not TOM.fullmatch(tom_code) or not AUD.fullmatch(audit_code) or not PRC.fullmatch(procedure_code):
             raise ContractError(f"cadeia de aceite incompleta: {product.get('productCode')}")
-        if not {
+        required_ledger_codes = {
             audit_code, hom_code, tom_code, taf_code, procedure_code
-        }.issubset(ledger_codes):
+        }
+        if supersession_code is not None:
+            if not PRC.fullmatch(supersession_code):
+                raise ContractError("código de supersessão ativo é inválido")
+            required_ledger_codes.add(supersession_code)
+        if not required_ledger_codes.issubset(ledger_codes):
             raise ContractError("ledger não contém toda a cadeia PRC/AUD/HOM/TOM/TAF")
         audit_events = [
             event for event in ledger.get("events", [])
             if event.get("code") == audit_code
         ]
-        if (
+        audit_event_invalid = (
             len(audit_events) != 1
             or audit_events[0].get("subjectCode") != product.get("productCode")
-            or audit_events[0].get("inputHash") != product.get(
-                "releasePreparation", {}
-            ).get("artifactRootSha256")
             or audit_events[0].get("result") != "PASS_BOUND_TO_CURRENT_ARTIFACT_ROOT"
-        ):
+        )
+        if supersession_code is None:
+            audit_event_invalid = audit_event_invalid or (
+                audit_events[0].get("inputHash")
+                != release.get("artifactRootSha256")
+            )
+        if audit_event_invalid:
             raise ContractError("AUD### do ledger não está vinculado ao root atual")
         tombstone = tomb_by_code.get(tom_code)
         if not tombstone or tombstone.get("productCode") != product.get("productCode"):
@@ -1675,10 +2078,39 @@ def validate_release_state(root: Path = ROOT) -> dict:
         manifest = _load_json_path(source_path, "manifesto do produto preparado")
         if sha256_file(source_path) != product["source"].get("sha256"):
             raise ContractError("catálogo diverge do manifesto preparado")
-        members, artifact_root = _release_artifact_inventory(root, source_path, manifest)
+        artifact_profile = _release_artifact_profile(product, manifest)
+        members, artifact_root = _release_inventory_for_profile(
+            root,
+            source_path,
+            manifest,
+            artifact_profile,
+            public_root,
+        )
+        chain_codes = {hom_code, tom_code, taf_code, procedure_code}
+        chain_codes.add(supersession_code or audit_code)
+        chain_events = [
+            event
+            for event in ledger.get("events", [])
+            if event.get("code") in chain_codes
+            and event.get("subjectCode") == product.get("productCode")
+        ]
+        if artifact_profile == POST_BUILD_POST_SANITIZE and (
+            len(chain_events) != len(chain_codes)
+            or any(
+                event.get("evidence", {}).get("artifactProfile")
+                != artifact_profile
+                or event.get("evidence", {}).get("artifactRootSha256")
+                != artifact_root
+                for event in chain_events
+            )
+        ):
+            raise ContractError(
+                "ledger público não está vinculado ao perfil e aos bytes finais"
+            )
+        if supersession_code is not None and artifact_profile != POST_BUILD_POST_SANITIZE:
+            raise ContractError("release superseded precisa ativar o perfil público")
         if tombstone.get("members") != members or tombstone.get("artifactRootSha256") != artifact_root:
             raise ContractError("TOM### diverge dos artefatos físicos atuais")
-        release = product.get("releasePreparation", {})
         report_path = _relative_regular_file(root, release.get("homologationReport", ""), root)
         report_collection = _load_json_path(report_path, "relatórios de homologação")
         reports = [
@@ -1691,6 +2123,37 @@ def validate_release_state(root: Path = ROOT) -> dict:
         report_core = report.get("report")
         if not isinstance(report_core, dict) or report.get("reportSha256") != _canonical_sha256(report_core):
             raise ContractError("hash do relatório de homologação diverge")
+        profile_records = [
+            tombstone.get("artifactProfile"),
+            release.get("artifactProfile"),
+            manifest.get("releasePreparation", {}).get("artifactProfile"),
+            report_core.get("artifactProfile"),
+        ]
+        if artifact_profile == POST_BUILD_POST_SANITIZE:
+            if any(value != artifact_profile for value in profile_records):
+                raise ContractError(
+                    "cadeia pública não declara POST_BUILD_POST_SANITIZE em todos os registros"
+                )
+        elif any(
+            value not in {None, SOURCE_BOUND} for value in profile_records
+        ):
+            raise ContractError("cadeia source-bound possui artifactProfile divergente")
+        source_members, source_artifact_root = _release_artifact_inventory(
+            root,
+            source_path,
+            manifest,
+        )
+        _validate_superseded_release_history(
+            product=product,
+            manifest=manifest,
+            source_members=source_members,
+            source_artifact_root=source_artifact_root,
+            active_artifact_root=artifact_root,
+            active_taf_code=taf_code,
+            tombstones=items,
+            reports=report_collection.get("items", []),
+            ledger=ledger,
+        )
         if (
             report.get("procedureCode") != procedure_code
             or report.get("homologationCode") != hom_code
@@ -1700,6 +2163,11 @@ def validate_release_state(root: Path = ROOT) -> dict:
             or report_core.get("auditCode") != audit_code
             or report_core.get("artifactRootSha256") != artifact_root
             or report_core.get("memberCount") != len(members)
+            or report_core.get("auditBinding") != {
+                "auditCode": audit_code,
+                "artifactRootSha256": artifact_root,
+                "status": "PASS",
+            }
             or report_core.get("outcome") != "PASS"
             or report.get("publication", {}).get("status") != "LOCKED"
             or report.get("publication", {}).get("officialPublication") is not False
@@ -1776,7 +2244,12 @@ def validate_release_state(root: Path = ROOT) -> dict:
     }
 
 
-def release_inventory(product_code: str, root: Path = ROOT) -> dict:
+def release_inventory(
+    product_code: str,
+    root: Path = ROOT,
+    *,
+    public_root: Path | None = None,
+) -> dict:
     """Calcula o root físico e fornece um modelo PENDING sem alterar arquivos."""
 
     root = root.resolve(strict=True)
@@ -1797,13 +2270,19 @@ def release_inventory(product_code: str, root: Path = ROOT) -> dict:
     if sha256_file(manifest_path) != product["source"].get("sha256"):
         raise ContractError("hash do manifesto candidato diverge do catálogo")
     manifest = _load_json_path(manifest_path, "manifesto candidato")
-    members, artifact_root = _release_artifact_inventory(
-        root, manifest_path, manifest
+    artifact_profile = _release_artifact_profile(product, manifest)
+    members, artifact_root = _release_inventory_for_profile(
+        root,
+        manifest_path,
+        manifest,
+        artifact_profile,
+        public_root,
     )
     return {
         "schemaVersion": "antigravity-release-inventory-v1",
         "productCode": product_code,
         "auditCode": product.get("auditCode"),
+        "artifactProfile": artifact_profile,
         "artifactRootSha256": artifact_root,
         "memberCount": len(members),
         "members": members,
@@ -1830,6 +2309,126 @@ def release_inventory(product_code: str, root: Path = ROOT) -> dict:
     }
 
 
+def supersession_inventory(
+    product_code: str,
+    supersedes_taf: str,
+    *,
+    public_root: Path,
+    root: Path = ROOT,
+) -> dict:
+    """Calcula, sem gravar, os bytes públicos que substituirão uma cadeia legada."""
+
+    root = root.resolve(strict=True)
+    public_root = _resolve_public_root(public_root, root)
+    if not AGX.fullmatch(product_code):
+        raise ContractError("product-code ####AGX válido é obrigatório")
+    if not TAF.fullmatch(supersedes_taf):
+        raise ContractError("--supersedes-taf precisa ser TAF### válido")
+    catalog = _load_json_path(
+        root / "23_Cosmos_NEXUS/data/product-catalog.json",
+        "catálogo de produtos",
+    )
+    products = [
+        item for item in catalog.get("items", [])
+        if item.get("productCode") == product_code
+    ]
+    if len(products) != 1:
+        raise ContractError("product-code não resolve um único item do catálogo")
+    product = products[0]
+    if product.get("tafCode") != supersedes_taf:
+        raise ContractError("TAF### informado não é a cadeia ativa exata")
+    if product.get("published") is not False:
+        raise ContractError("release publicada não pode ser superseded")
+    manifest_path = _relative_regular_file(root, product["source"]["path"], root)
+    if sha256_file(manifest_path) != product["source"].get("sha256"):
+        raise ContractError("hash do manifesto preparado diverge do catálogo")
+    manifest = _load_json_path(manifest_path, "manifesto preparado")
+    if _release_artifact_profile(product, manifest) != SOURCE_BOUND:
+        raise ContractError("somente cadeia legado/SOURCE_BOUND pode ser superseded")
+    if product.get("supersededReleases") or manifest.get("supersededReleases"):
+        raise ContractError("produto já possui histórico superseded")
+    validate_release_state(root, public_root=public_root)
+    publication = manifest.get("publication", {})
+    if (
+        publication.get("officialPublication") is not False
+        or publication.get("officialPublicationCode") is not None
+        or publication.get("finalAcceptanceCode") != supersedes_taf
+        or publication.get("requiredCommand") != f"PUBLICAR {supersedes_taf}"
+        or product.get("gates", {}).get("ownerUnlock") != "AUSENTE"
+    ):
+        raise ContractError("cadeia ativa não está LOCKED e inequivocamente não publicada")
+    members, artifact_root = _release_public_artifact_inventory(
+        root,
+        public_root,
+        manifest_path,
+        manifest,
+    )
+    return {
+        "schemaVersion": "antigravity-release-inventory-v1",
+        "productCode": product_code,
+        "auditCode": product.get("auditCode"),
+        "artifactProfile": POST_BUILD_POST_SANITIZE,
+        "supersedesTafCode": supersedes_taf,
+        "artifactRootSha256": artifact_root,
+        "memberCount": len(members),
+        "members": members,
+        "publication": "LOCKED",
+        "evidenceTemplate": {
+            "schemaVersion": "antigravity-release-evidence-v1",
+            "productCode": product_code,
+            "reviewer": "PREENCHER",
+            "reviewedAt": "PREENCHER_ISO8601_COM_FUSO",
+            "confirmations": {
+                "safariMacOS": "PENDING",
+                "safariIPhone": "PENDING",
+                "clinicalReview": "PENDING",
+                "rightsReview": "PENDING",
+            },
+            "auditBinding": {
+                "auditCode": product.get("auditCode"),
+                "artifactRootSha256": artifact_root,
+                "status": "PENDING",
+            },
+            "testRuns": [],
+            "notes": [],
+        },
+    }
+
+
+def _active_child_taf_codes(catalog: dict, child_taf_codes: list[str]) -> list[str]:
+    """Resolve referências filhas antigas para a única cadeia ativa atual."""
+
+    if not isinstance(child_taf_codes, list) or not child_taf_codes:
+        raise ContractError("guarda-chuva precisa declarar childTafCodes")
+    active_codes: list[str] = []
+    for child_taf in child_taf_codes:
+        if not isinstance(child_taf, str) or not TAF.fullmatch(child_taf):
+            raise ContractError("childTafCodes contém TAF### inválido")
+        matches: list[str] = []
+        for item in catalog.get("items", []):
+            active_taf = item.get("tafCode")
+            if not isinstance(active_taf, str) or not TAF.fullmatch(active_taf):
+                continue
+            if active_taf == child_taf:
+                matches.append(active_taf)
+                continue
+            for record in item.get("supersededReleases", []):
+                if (
+                    record.get("tafCode") == child_taf
+                    and record.get("publication") == "VOID_PREPUBLICATION"
+                    and record.get("supersededByTafCode") == active_taf
+                ):
+                    matches.append(active_taf)
+        if len(matches) != 1:
+            raise ContractError(
+                "childTafCodes não resolve uma única cadeia ativa no catálogo"
+            )
+        active_codes.append(matches[0])
+    if len(set(active_codes)) != len(active_codes):
+        raise ContractError("childTafCodes resolve cadeias ativas duplicadas")
+    return active_codes
+
+
 def prepare_release(
     product_code: str,
     evidence_path: Path,
@@ -1837,6 +2436,7 @@ def prepare_release(
     sequence: int,
     *,
     root: Path = ROOT,
+    public_root: Path | None = None,
     fail_after: int | None = None,
 ) -> dict:
     """Prepara PRC/HOM/TOM/TAF de modo transacional, sem publicar nada."""
@@ -1874,7 +2474,14 @@ def prepare_release(
         manifest = _load_json_path(manifest_path, "manifesto candidato")
         if sha256_file(manifest_path) != product["source"].get("sha256"):
             raise ContractError("hash do manifesto candidato diverge do catálogo")
-        members, artifact_root = _release_artifact_inventory(root, manifest_path, manifest)
+        artifact_profile = _release_artifact_profile(product, manifest)
+        members, artifact_root = _release_inventory_for_profile(
+            root,
+            manifest_path,
+            manifest,
+            artifact_profile,
+            public_root,
+        )
         evidence, evidence_hash = _validate_release_evidence(
             evidence_path,
             product_code,
@@ -1883,7 +2490,7 @@ def prepare_release(
         )
 
         if product.get("tafCode") is not None:
-            state = validate_release_state(root)
+            state = validate_release_state(root, public_root=public_root)
             release = product.get("releasePreparation", {})
             if (
                 release.get("artifactRootSha256") != artifact_root
@@ -1899,6 +2506,7 @@ def prepare_release(
                 "tombstoneCode": product.get("tombstoneCode"),
                 "tafCode": product.get("tafCode"),
                 "artifactRootSha256": artifact_root,
+                "artifactProfile": artifact_profile,
                 "memberCount": len(members),
                 "publication": state["publication"],
                 "requiredCommand": f"PUBLICAR {product.get('tafCode')}",
@@ -1919,6 +2527,7 @@ def prepare_release(
             "testRuns": evidence["testRuns"],
             "notes": evidence["notes"],
             "artifactRootSha256": artifact_root,
+            "artifactProfile": artifact_profile,
             "memberCount": len(members),
             "auditOutcome": manifest["audit"]["outcome"],
             "outcome": "PASS",
@@ -2009,6 +2618,7 @@ def prepare_release(
             "scope": scope,
             "frozenAt": now,
             "artifactRootAlgorithm": "SHA256 de path, SHA-256 e bytes separados por tabulação, ordenados por path e terminados por nova linha",
+            "artifactProfile": artifact_profile,
             "artifactRootSha256": artifact_root,
             "memberCount": len(members),
             "members": members,
@@ -2038,6 +2648,7 @@ def prepare_release(
             "tombstoneCode": tom_code,
             "tafCode": taf_code,
             "artifactRootSha256": artifact_root,
+            "artifactProfile": artifact_profile,
             "memberCount": len(members),
             "sourceEvidenceSha256": evidence_hash,
             "preparedAt": now,
@@ -2061,6 +2672,7 @@ def prepare_release(
                     "procedureCode": procedure_code,
                     "homologationReport": report_relative.as_posix(),
                     "artifactRootSha256": artifact_root,
+                    "artifactProfile": artifact_profile,
                     "memberCount": len(members),
                     "sourceEvidenceSha256": evidence_hash,
                     "preparedAt": now,
@@ -2115,6 +2727,7 @@ def prepare_release(
         ledger_next.setdefault("ledgerHeadSha256", ZERO_HASH)
         common_evidence = {
             "artifactRootSha256": artifact_root,
+            "artifactProfile": artifact_profile,
             "homologationReport": report_relative.as_posix(),
             "publication": "LOCKED",
         }
@@ -2203,7 +2816,7 @@ def prepare_release(
         }
         _transactional_json_update(
             updates,
-            lambda: validate_release_state(root),
+            lambda: validate_release_state(root, public_root=public_root),
             fail_after=fail_after,
         )
         return {
@@ -2215,8 +2828,503 @@ def prepare_release(
             "tombstoneCode": tom_code,
             "tafCode": taf_code,
             "artifactRootSha256": artifact_root,
+            "artifactProfile": artifact_profile,
             "memberCount": len(members),
             "homologationReport": report_relative.as_posix(),
+            "publication": "LOCKED",
+            "requiredCommand": f"PUBLICAR {taf_code}",
+        }
+    finally:
+        fcntl.flock(lock_fd, fcntl.LOCK_UN)
+        os.close(lock_fd)
+
+
+def supersede_release(
+    product_code: str,
+    supersedes_taf: str,
+    evidence_path: Path,
+    release_date: str,
+    sequence: int,
+    *,
+    reason: str,
+    public_root: Path,
+    root: Path = ROOT,
+    fail_after: int | None = None,
+) -> dict:
+    """Substitui uma cadeia source-bound pré-publicação sem apagar o histórico."""
+
+    root = root.resolve(strict=True)
+    if not AGX.fullmatch(product_code):
+        raise ContractError("product-code ####AGX válido é obrigatório")
+    if not TAF.fullmatch(supersedes_taf):
+        raise ContractError("--supersedes-taf precisa ser TAF### válido")
+    if reason != SUPERSESSION_REASON:
+        raise ContractError(f"--reason precisa ser exatamente {SUPERSESSION_REASON}")
+    date_code = _parse_calendar_date(release_date)
+    if sequence < 1 or sequence > 9999:
+        raise ContractError("sequence deve estar entre 1 e 9999")
+    sequence_code = f"{sequence:04d}"
+    public_root = _resolve_public_root(public_root, root)
+
+    data = root / "23_Cosmos_NEXUS/data"
+    private_locks = root / ".nexus-sync-private/release-locks"
+    _secure_directory(private_locks.parent)
+    _secure_directory(private_locks)
+    lock_path = private_locks / f"{hashlib.sha256(product_code.encode()).hexdigest()}.lock"
+    lock_fd = os.open(str(lock_path), os.O_RDWR | os.O_CREAT, 0o600)
+    os.chmod(lock_path, 0o600)
+    fcntl.flock(lock_fd, fcntl.LOCK_EX)
+    try:
+        # O snapshot anterior precisa fechar integralmente antes da nova cadeia.
+        validate_release_state(root, public_root=public_root)
+        catalog_path = data / "product-catalog.json"
+        ledger_path = data / "execution-ledger.json"
+        module_path = root / "23_Cosmos_NEXUS/module.manifest.json"
+        tombstone_path = data / "tombstone-manifest.json"
+        report_relative = Path("23_Cosmos_NEXUS/data/homologation-reports.json")
+        report_path = root / report_relative
+        catalog = _load_json_path(catalog_path, "catálogo de produtos")
+        ledger = _load_json_path(ledger_path, "ledger de execução")
+        _validate_execution_ledger(ledger)
+        tombstones = _load_json_path(tombstone_path, "manifesto de tombamento")
+        report_collection = _load_json_path(
+            report_path,
+            "relatórios de homologação",
+        )
+        products = [
+            item for item in catalog.get("items", [])
+            if item.get("productCode") == product_code
+        ]
+        if len(products) != 1:
+            raise ContractError("product-code não resolve um único item do catálogo")
+        product = products[0]
+        if product.get("tafCode") != supersedes_taf:
+            raise ContractError("TAF### informado não é a cadeia ativa exata")
+        if product.get("published") is not False:
+            raise ContractError("release publicada não pode ser superseded")
+        if product.get("supersededReleases"):
+            raise ContractError("cadeia ativa já possui supersessão; TAF antigo não pode ser reutilizado")
+        old_release = product.get("releasePreparation")
+        if not isinstance(old_release, dict):
+            raise ContractError("cadeia ativa não possui releasePreparation válida")
+        if old_release.get("supersessionProcedureCode") is not None:
+            raise ContractError("cadeia ativa já é substituta e não pode reutilizar o TAF antigo")
+
+        manifest_path = _relative_regular_file(root, product["source"]["path"], root)
+        if sha256_file(manifest_path) != product["source"].get("sha256"):
+            raise ContractError("hash do manifesto preparado diverge do catálogo")
+        manifest = _load_json_path(manifest_path, "manifesto preparado")
+        if manifest.get("supersededReleases"):
+            raise ContractError("manifesto já registra cadeia superseded")
+        if _release_artifact_profile(product, manifest) != SOURCE_BOUND:
+            raise ContractError("somente cadeia legado/SOURCE_BOUND pode ser superseded")
+        publication = manifest.get("publication", {})
+        if (
+            publication.get("officialPublication") is not False
+            or publication.get("officialPublicationCode") is not None
+            or publication.get("finalAcceptanceCode") != supersedes_taf
+            or publication.get("requiredCommand") != f"PUBLICAR {supersedes_taf}"
+            or product.get("gates", {}).get("ownerUnlock") != "AUSENTE"
+        ):
+            raise ContractError("cadeia ativa não está LOCKED e inequivocamente não publicada")
+
+        old_members, old_artifact_root = _release_artifact_inventory(
+            root,
+            manifest_path,
+            manifest,
+        )
+        if (
+            old_release.get("artifactRootSha256") != old_artifact_root
+            or old_release.get("memberCount") != len(old_members)
+        ):
+            raise ContractError("índice ativo não fecha a cadeia source-bound anterior")
+        members, artifact_root = _release_public_artifact_inventory(
+            root,
+            public_root,
+            manifest_path,
+            manifest,
+        )
+        evidence, evidence_hash = _validate_release_evidence(
+            evidence_path,
+            product_code,
+            product.get("auditCode", ""),
+            artifact_root,
+        )
+
+        now = datetime.now(timezone.utc).isoformat(timespec="seconds").replace(
+            "+00:00", "Z"
+        )
+        scope = token(f"{product['universe']}-{product['block']}", "scope")
+        report_core = {
+            "schemaVersion": "antigravity-homologation-report-v1",
+            "productCode": product_code,
+            "auditCode": product["auditCode"],
+            "reviewer": evidence["reviewer"],
+            "reviewedAt": evidence["reviewedAt"],
+            "sourceEvidenceSha256": evidence_hash,
+            "confirmations": evidence["confirmations"],
+            "auditBinding": evidence["auditBinding"],
+            "testRuns": evidence["testRuns"],
+            "notes": evidence["notes"],
+            "artifactRootSha256": artifact_root,
+            "artifactProfile": POST_BUILD_POST_SANITIZE,
+            "memberCount": len(members),
+            "auditOutcome": manifest["audit"]["outcome"],
+            "outcome": "PASS",
+        }
+        report_hash = _canonical_sha256(report_core)
+        hom_code = (
+            f"HOM###-{scope}-{date_code}-{sequence_code}-"
+            f"{digest8(scope, report_hash, evidence['reviewer'], evidence['reviewedAt'])}"
+        )
+        tom_code = (
+            f"TOM###-{scope}-{date_code}-{sequence_code}-"
+            f"{digest8(scope, artifact_root, str(len(members)), now)}"
+        )
+        taf_code = (
+            f"TAF###-{product['universe']}-{product['block']}-"
+            f"{date_code}-{sequence_code}-"
+            f"{digest8(product_code, product['auditCode'], hom_code, tom_code, artifact_root)}"
+        )
+        output_hash = _canonical_sha256(
+            {
+                "reportSha256": report_hash,
+                "artifactRootSha256": artifact_root,
+                "homologationCode": hom_code,
+                "tombstoneCode": tom_code,
+                "tafCode": taf_code,
+                "supersedesTafCode": supersedes_taf,
+            }
+        )
+        input_hash = sha256_file(manifest_path)
+        procedure_code = (
+            f"PRC###-PREPARAR-RELEASE-{date_code}-{sequence_code}-"
+            f"{digest8('PREPARAR-RELEASE', product_code, input_hash, output_hash, now)}"
+        )
+        supersession_code = (
+            f"PRC###-SUPERSEDE-RELEASE-{date_code}-{sequence_code}-"
+            f"{digest8('SUPERSEDE-RELEASE', product_code, supersedes_taf, taf_code, old_artifact_root, artifact_root, reason, now)}"
+        )
+        proposed_codes = {
+            procedure_code,
+            supersession_code,
+            hom_code,
+            tom_code,
+            taf_code,
+        }
+        if len(proposed_codes) != 5:
+            raise ContractError("colisão interna ao gerar nova cadeia")
+        existing_codes = {
+            event.get("code") for event in ledger.get("events", [])
+        }
+        existing_codes.update(
+            item.get("tombstoneCode") for item in tombstones.get("items", [])
+        )
+        existing_codes.update(
+            item.get("homologationCode")
+            for item in report_collection.get("items", [])
+        )
+        reserved_coordinates = (
+            f"PRC###-PREPARAR-RELEASE-{date_code}-{sequence_code}-",
+            f"PRC###-SUPERSEDE-RELEASE-{date_code}-{sequence_code}-",
+            f"HOM###-{scope}-{date_code}-{sequence_code}-",
+            f"TOM###-{scope}-{date_code}-{sequence_code}-",
+            f"TAF###-{product['universe']}-{product['block']}-{date_code}-{sequence_code}-",
+        )
+        coordinate_collision = any(
+            isinstance(code, str)
+            and any(code.startswith(prefix) for prefix in reserved_coordinates)
+            for code in existing_codes
+        )
+        if (
+            proposed_codes & existing_codes
+            or taf_code == supersedes_taf
+            or coordinate_collision
+        ):
+            raise ContractError("colisão ou reutilização de código na nova cadeia")
+
+        report_payload = {
+            "schemaVersion": "antigravity-homologation-record-v1",
+            "report": report_core,
+            "reportSha256": report_hash,
+            "procedureCode": procedure_code,
+            "homologationCode": hom_code,
+            "tombstoneCode": tom_code,
+            "tafCode": taf_code,
+            "preparedAt": now,
+            "publication": {
+                "status": "LOCKED",
+                "officialPublication": False,
+                "requiredCommand": f"PUBLICAR {taf_code}",
+            },
+        }
+        reports_next = copy.deepcopy(report_collection)
+        reports_next["items"].append(report_payload)
+        reports_next["updatedAt"] = now
+
+        tombstone_record = {
+            "tombstoneCode": tom_code,
+            "productCode": product_code,
+            "auditCode": product["auditCode"],
+            "homologationCode": hom_code,
+            "tafCode": taf_code,
+            "scope": scope,
+            "frozenAt": now,
+            "artifactRootAlgorithm": "SHA256 de path, SHA-256 e bytes separados por tabulação, ordenados por path e terminados por nova linha",
+            "artifactProfile": POST_BUILD_POST_SANITIZE,
+            "artifactRootSha256": artifact_root,
+            "memberCount": len(members),
+            "members": members,
+            "excludedGovernanceMetadata": [
+                manifest_path.relative_to(root).as_posix()
+            ],
+            "publication": "LOCKED",
+        }
+        tombstones_next = copy.deepcopy(tombstones)
+        tombstones_next["items"].append(tombstone_record)
+        tombstones_next["updatedAt"] = now
+
+        superseded_record = {
+            "procedureCode": old_release["procedureCode"],
+            "auditCode": product["auditCode"],
+            "homologationCode": product["homologationCode"],
+            "tombstoneCode": product["tombstoneCode"],
+            "tafCode": supersedes_taf,
+            "artifactProfile": SOURCE_BOUND,
+            "artifactRootSha256": old_artifact_root,
+            "memberCount": len(old_members),
+            "supersededAt": now,
+            "supersededByTafCode": taf_code,
+            "supersessionProcedureCode": supersession_code,
+            "reason": reason,
+            "publication": "VOID_PREPUBLICATION",
+        }
+        superseded_history = [superseded_record]
+
+        manifest_next = copy.deepcopy(manifest)
+        if manifest_next.get("schemaVersion") == UMBRELLA_RELEASE_SCHEMA:
+            identity_next = manifest_next.get("identity")
+            if not isinstance(identity_next, dict):
+                raise ContractError("identity do guarda-chuva é inválida")
+            if "childTafCodes" in identity_next:
+                identity_next["childTafCodes"] = _active_child_taf_codes(
+                    catalog,
+                    identity_next.get("childTafCodes"),
+                )
+        manifest_next["artifactProfile"] = POST_BUILD_POST_SANITIZE
+        manifest_next["supersededReleases"] = superseded_history
+        manifest_next["publication"].update(
+            {
+                "status": "release-prepared",
+                "officialPublication": False,
+                "finalAcceptanceCode": taf_code,
+                "officialPublicationCode": None,
+                "ownerPublicationAuthorization": False,
+                "requiredCommand": f"PUBLICAR {taf_code}",
+            }
+        )
+        manifest_next["releasePreparation"] = {
+            "procedureCode": procedure_code,
+            "homologationCode": hom_code,
+            "homologationReport": report_relative.as_posix(),
+            "tombstoneCode": tom_code,
+            "tafCode": taf_code,
+            "artifactRootSha256": artifact_root,
+            "artifactProfile": POST_BUILD_POST_SANITIZE,
+            "memberCount": len(members),
+            "sourceEvidenceSha256": evidence_hash,
+            "preparedAt": now,
+            "supersessionProcedureCode": supersession_code,
+            "supersedesTafCode": supersedes_taf,
+            "supersessionReason": reason,
+            "publication": "LOCKED",
+        }
+        manifest_next_hash = hashlib.sha256(_json_bytes(manifest_next)).hexdigest()
+
+        catalog_next = copy.deepcopy(catalog)
+        target = next(
+            item for item in catalog_next["items"]
+            if item.get("productCode") == product_code
+        )
+        target.update(
+            {
+                "artifactProfile": POST_BUILD_POST_SANITIZE,
+                "status": "TAF_PREPARED",
+                "homologationCode": hom_code,
+                "tombstoneCode": tom_code,
+                "tafCode": taf_code,
+                "published": False,
+                "supersededReleases": superseded_history,
+                "releasePreparation": {
+                    "procedureCode": procedure_code,
+                    "homologationReport": report_relative.as_posix(),
+                    "artifactRootSha256": artifact_root,
+                    "artifactProfile": POST_BUILD_POST_SANITIZE,
+                    "memberCount": len(members),
+                    "sourceEvidenceSha256": evidence_hash,
+                    "preparedAt": now,
+                    "supersessionProcedureCode": supersession_code,
+                    "supersedesTafCode": supersedes_taf,
+                    "supersessionReason": reason,
+                },
+            }
+        )
+        target["source"]["sha256"] = manifest_next_hash
+        target["gates"].update(
+            {
+                "automatedTechnical": "APROVADO",
+                "humanVisual": "APROVADO",
+                "clinical": "APROVADO",
+                "rights": "APROVADO",
+                "ownerUnlock": "AUSENTE",
+            }
+        )
+        catalog_next["updatedAt"] = now
+
+        module_next = _load_json_path(module_path, "manifesto do módulo NEXUS")
+        candidates = [
+            item for item in module_next.get("candidateProducts", [])
+            if item.get("productCode") == product_code
+        ]
+        if len(candidates) != 1:
+            raise ContractError("manifesto NEXUS não resolve o produto candidato")
+        candidates[0].update(
+            {
+                "status": "release-prepared",
+                "tafCode": taf_code,
+                "officialPublication": False,
+            }
+        )
+        if manifest.get("schemaVersion") == UMBRELLA_RELEASE_SCHEMA:
+            module_publication = module_next.get("publication")
+            if not isinstance(module_publication, dict):
+                raise ContractError("publication do manifesto NEXUS é inválida")
+            module_publication.update(
+                {
+                    "published": False,
+                    "tafIssued": True,
+                    "stationTafCode": taf_code,
+                    "requiredCommand": f"PUBLICAR {taf_code}",
+                    "ownerPublicationAuthorization": False,
+                }
+            )
+        module_source = module_path.relative_to(root).as_posix()
+        module_catalog_items = [
+            item for item in catalog_next.get("items", [])
+            if item.get("source", {}).get("path") == module_source
+        ]
+        if len(module_catalog_items) > 1:
+            raise ContractError("catálogo possui manifesto NEXUS duplicado")
+        if module_catalog_items:
+            module_catalog_items[0]["source"]["sha256"] = hashlib.sha256(
+                _json_bytes(module_next)
+            ).hexdigest()
+
+        common_evidence = {
+            "artifactRootSha256": artifact_root,
+            "artifactProfile": POST_BUILD_POST_SANITIZE,
+            "homologationReport": report_relative.as_posix(),
+            "publication": "LOCKED",
+        }
+        supersession_event = {
+            "code": supersession_code,
+            "type": "RELEASE_SUPERSEDED_PREPUBLICATION",
+            "subjectCode": product_code,
+            "timestamp": now,
+            "inputHash": old_artifact_root,
+            "outputHash": artifact_root,
+            "result": reason,
+            "evidence": {
+                **common_evidence,
+                "previousTafCode": supersedes_taf,
+                "replacementTafCode": taf_code,
+                "previousArtifactRootSha256": old_artifact_root,
+                "auditBinding": evidence["auditBinding"],
+                "reason": reason,
+            },
+        }
+        release_events = [
+            supersession_event,
+            {
+                "code": procedure_code,
+                "type": "RELEASE_PREPARATION",
+                "subjectCode": product_code,
+                "timestamp": now,
+                "inputHash": input_hash,
+                "outputHash": output_hash,
+                "result": "PASS_PREPARED_NOT_PUBLISHED",
+                "evidence": common_evidence,
+            },
+            {
+                "code": hom_code,
+                "type": "HOMOLOGATION",
+                "subjectCode": product_code,
+                "timestamp": now,
+                "inputHash": evidence_hash,
+                "outputHash": report_hash,
+                "result": "PASS",
+                "evidence": common_evidence,
+            },
+            {
+                "code": tom_code,
+                "type": "TOMBSTONE",
+                "subjectCode": product_code,
+                "timestamp": now,
+                "inputHash": report_hash,
+                "outputHash": artifact_root,
+                "result": "FROZEN_NOT_PUBLISHED",
+                "evidence": common_evidence,
+            },
+            {
+                "code": taf_code,
+                "type": "FINAL_ACCEPTANCE_PREPARED",
+                "subjectCode": product_code,
+                "timestamp": now,
+                "inputHash": artifact_root,
+                "outputHash": hashlib.sha256(taf_code.encode("utf-8")).hexdigest(),
+                "result": "PREPARED_AWAITING_LITERAL_OWNER_COMMAND",
+                "evidence": {
+                    **common_evidence,
+                    "requiredCommand": f"PUBLICAR {taf_code}",
+                },
+            },
+        ]
+        ledger_next = copy.deepcopy(ledger)
+        for event in release_events:
+            _append_ledger_event(ledger_next, event)
+        ledger_next.update(
+            {
+                "updatedAt": now,
+                "status": "release-prepared-publication-locked",
+            }
+        )
+
+        updates = {
+            report_path: reports_next,
+            tombstone_path: tombstones_next,
+            manifest_path: manifest_next,
+            module_path: module_next,
+            catalog_path: catalog_next,
+            ledger_path: ledger_next,
+        }
+        _transactional_json_update(
+            updates,
+            lambda: validate_release_state(root, public_root=public_root),
+            fail_after=fail_after,
+        )
+        return {
+            "status": "SUPERSEDED_PREPUBLICATION",
+            "idempotent": False,
+            "productCode": product_code,
+            "supersededTafCode": supersedes_taf,
+            "supersessionProcedureCode": supersession_code,
+            "procedureCode": procedure_code,
+            "homologationCode": hom_code,
+            "tombstoneCode": tom_code,
+            "tafCode": taf_code,
+            "artifactProfile": POST_BUILD_POST_SANITIZE,
+            "artifactRootSha256": artifact_root,
+            "memberCount": len(members),
             "publication": "LOCKED",
             "requiredCommand": f"PUBLICAR {taf_code}",
         }
@@ -2358,7 +3466,7 @@ def _validate_block_item(item: dict, block_id: str, schema: dict, relations: set
             raise ContractError(f"item {item.get('id', '?')} usa relação fora do vocabulário")
 
 
-def validate() -> dict:
+def validate(*, public_root: Path | None = None) -> dict:
     required = [
         "cosmos.json", "atlas.json", "block-registry.json", "tag-topology.json",
         "surface-routing.json", "command-contract.json", "render-recipes.json",
@@ -2477,7 +3585,7 @@ def validate() -> dict:
         if product.get("published") and not product.get("tafCode"):
             raise ContractError("Produto publicado sem TAF###")
 
-    release_state = validate_release_state(ROOT)
+    release_state = validate_release_state(ROOT, public_root=public_root)
 
     return {
         "status": "OK",
@@ -2495,6 +3603,19 @@ def validate() -> dict:
         "ledgerEvents": release_state["ledgerEvents"],
         "publication": "LOCKED",
     }
+
+
+def _reject_superseded_taf(taf_code: str, root: Path = ROOT) -> None:
+    catalog_path = root / "23_Cosmos_NEXUS/data/product-catalog.json"
+    if not catalog_path.exists():
+        return
+    catalog = _load_json_path(catalog_path, "catálogo de produtos")
+    for product in catalog.get("items", []):
+        for record in product.get("supersededReleases", []):
+            if isinstance(record, dict) and record.get("tafCode") == taf_code:
+                raise ContractError(
+                    "TAF### superseded/VOID_PREPUBLICATION não pode gerar publicação"
+                )
 
 
 def issue_code(args: argparse.Namespace) -> str:
@@ -2547,6 +3668,7 @@ def issue_code(args: argparse.Namespace) -> str:
         final_code = args.final_product_code or ""
         if not TAF.fullmatch(final_code):
             raise ContractError("final-product-code TAF### válido é obrigatório")
+        _reject_superseded_taf(final_code)
         authorization_mode = getattr(
             args, "authorization_mode", "literal-owner-command"
         )
@@ -2585,8 +3707,15 @@ def route(kind: str) -> dict:
 def parser() -> argparse.ArgumentParser:
     root = argparse.ArgumentParser(description="Barramento local NEXUS Cosmos")
     sub = root.add_subparsers(dest="command", required=True)
-    sub.add_parser("validate", help="validar contratos, grafo, blocos e imagens")
-    sub.add_parser("status", help="mostrar resumo fail-closed")
+    validate_parser = sub.add_parser(
+        "validate", help="validar contratos, grafo, blocos e imagens"
+    )
+    status_parser = sub.add_parser("status", help="mostrar resumo fail-closed")
+    for validation_parser in (validate_parser, status_parser):
+        validation_parser.add_argument(
+            "--public-root",
+            help="saída materializada exigida quando houver release de perfil público",
+        )
     route_parser = sub.add_parser("route", help="resolver a seção canônica de um conteúdo")
     route_parser.add_argument("--kind", required=True)
 
@@ -2660,15 +3789,49 @@ def parser() -> argparse.ArgumentParser:
     )
     release.add_argument("--date", default=date.today().isoformat())
     release.add_argument("--sequence", required=True, type=int)
-    sub.add_parser(
+    release.add_argument(
+        "--public-root",
+        help="saída materializada após build e sanitize; obrigatória no perfil público",
+    )
+    validate_release = sub.add_parser(
         "validate-release",
         help="validar ledger, relatórios, tombstones e TAF sem publicar",
+    )
+    validate_release.add_argument(
+        "--public-root",
+        help="saída materializada após build e sanitize; obrigatória no perfil público",
     )
     inventory = sub.add_parser(
         "release-inventory",
         help="calcular membros/root e modelo de evidência PENDING sem gravar",
     )
     inventory.add_argument("--product-code", required=True)
+    inventory.add_argument(
+        "--public-root",
+        help="saída materializada após build e sanitize; obrigatória no perfil público",
+    )
+    supersede_inventory_parser = sub.add_parser(
+        "supersede-inventory",
+        help="calcular root público para substituir TAF source-bound sem gravar",
+    )
+    supersede_inventory_parser.add_argument("--product-code", required=True)
+    supersede_inventory_parser.add_argument("--supersedes-taf", required=True)
+    supersede_inventory_parser.add_argument("--public-root", required=True)
+    supersede = sub.add_parser(
+        "supersede-release",
+        help="substituir cadeia source-bound pré-publicação sem apagar histórico",
+    )
+    supersede.add_argument("--product-code", required=True)
+    supersede.add_argument("--supersedes-taf", required=True)
+    supersede.add_argument("--evidence", required=True)
+    supersede.add_argument("--date", default=date.today().isoformat())
+    supersede.add_argument("--sequence", required=True, type=int)
+    supersede.add_argument("--public-root", required=True)
+    supersede.add_argument(
+        "--reason",
+        required=True,
+        choices=[SUPERSESSION_REASON],
+    )
     return root
 
 
@@ -2676,7 +3839,19 @@ def main() -> int:
     args = parser().parse_args()
     try:
         if args.command in {"validate", "status"}:
-            print(json.dumps(validate(), ensure_ascii=False, indent=2))
+            print(
+                json.dumps(
+                    validate(
+                        public_root=(
+                            Path(args.public_root).expanduser()
+                            if args.public_root
+                            else None
+                        )
+                    ),
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
         elif args.command == "route":
             print(json.dumps(route(args.kind), ensure_ascii=False, indent=2))
         elif args.command == "code":
@@ -2710,14 +3885,66 @@ def main() -> int:
                 Path(args.evidence).expanduser(),
                 args.date,
                 args.sequence,
+                public_root=(
+                    Path(args.public_root).expanduser()
+                    if args.public_root
+                    else None
+                ),
             )
             print(json.dumps(result, ensure_ascii=False, indent=2))
         elif args.command == "validate-release":
-            print(json.dumps(validate_release_state(), ensure_ascii=False, indent=2))
+            print(
+                json.dumps(
+                    validate_release_state(
+                        public_root=(
+                            Path(args.public_root).expanduser()
+                            if args.public_root
+                            else None
+                        )
+                    ),
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
         elif args.command == "release-inventory":
             print(
                 json.dumps(
-                    release_inventory(args.product_code),
+                    release_inventory(
+                        args.product_code,
+                        public_root=(
+                            Path(args.public_root).expanduser()
+                            if args.public_root
+                            else None
+                        ),
+                    ),
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
+        elif args.command == "supersede-inventory":
+            print(
+                json.dumps(
+                    supersession_inventory(
+                        args.product_code,
+                        args.supersedes_taf,
+                        public_root=Path(args.public_root).expanduser(),
+                    ),
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
+        elif args.command == "supersede-release":
+            print(
+                json.dumps(
+                    supersede_release(
+                        args.product_code,
+                        args.supersedes_taf,
+                        Path(args.evidence).expanduser(),
+                        args.date,
+                        args.sequence,
+                        reason=args.reason,
+                        public_root=Path(args.public_root).expanduser(),
+                    ),
                     ensure_ascii=False,
                     indent=2,
                 )

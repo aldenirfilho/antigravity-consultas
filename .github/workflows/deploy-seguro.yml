@@ -90,7 +90,6 @@ jobs:
           python3 scripts_admin/editorial_gate.py --check --json
           python3 scripts_admin/editorial_gate.py --check --changed-since "$BASE_SHA" --json
           python3 scripts_admin/validate_activation_roadmap.py --json
-          python3 -m unittest discover -s tests -p 'test_*.py' -v
           node tests/validate_clinical_catalogs.js
           python3 scripts_admin/check_static_manifests.py
           python3 scripts_admin/update_library_publication_baseline.py --check
@@ -107,6 +106,7 @@ jobs:
           python3 scripts_admin/publication_guard.py sanitize-site site
           python3 scripts_admin/publication_guard.py check-site site
           python3 scripts_admin/editorial_gate.py --check --public-root site --json
+          ANTIGRAVITY_PUBLIC_ROOT=site python3 -m unittest discover -s tests -p 'test_*.py' -v
           test -f site/admin/desafios.html
           test -f site/data/desafios.json
           test -f site/desafios/index.html
@@ -133,6 +133,9 @@ jobs:
           test -s site/01_Modulos_Clinicos/Reumatologia_Critica/index.html
           test -s site/01_Modulos_Clinicos/Delirium_UTI/index.html
           test -s site/01_Modulos_Clinicos/Delirium_UTI/CHECKLIST_OPERACIONAL.md
+          test -s site/mnemonicos/index.html
+          test -s site/mnemonicos/styles.css
+          test -s site/mnemonicos/app.js
           test -s site/15_Radar_Cientifico/index.html
           test -s site/15_Radar_Cientifico/data/radar.js
           test -s site/15_Radar_Cientifico/data/radar-history.json
@@ -227,6 +230,8 @@ jobs:
           unzip -t site/downloads/Antigravity-Consultas-Windows.zip
           unzip -t site/downloads/Antigravity-Consultas-iPhone-Icones.zip
           (cd site/downloads && sha256sum -c SHA256SUMS.txt)
+          python3 scripts_admin/nexus_cosmos.py validate --public-root site
+          python3 scripts_admin/nexus_cosmos.py validate-release --public-root site
 
       - name: Upload Pages artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

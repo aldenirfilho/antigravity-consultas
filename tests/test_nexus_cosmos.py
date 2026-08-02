@@ -8,6 +8,7 @@ import copy
 import hashlib
 import importlib.util
 import json
+import os
 import re
 import tempfile
 import unittest
@@ -699,7 +700,7 @@ class NexusCosmosTests(unittest.TestCase):
             codes.add(asset["catalogCode"])
             hashes.add(digest)
             total_bytes += len(raw)
-            self.assertIn(
+            self.assertNotIn(
                 f'"./23_Cosmos_NEXUS/products/biblioteca-visual-cosmica/{asset["path"]}"',
                 worker,
             )
@@ -755,13 +756,15 @@ class NexusCosmosTests(unittest.TestCase):
         self.assertTrue(any(item["href"] == "23_Cosmos_NEXUS/" for item in self.home_manifest["mainLinks"]))
         self.assertIn('"23_Cosmos_NEXUS",', read("scripts_admin/build_public_site.py"))
         worker = read("sw.js")
-        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v22`', worker)
+        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v23`', worker)
         self.assertIn('"./23_Cosmos_NEXUS/index.html"', worker)
         for block in self.blocks["blocks"]:
             self.assertIn(f'"./23_Cosmos_NEXUS/{block["ingestionPath"]}"', worker)
 
     def test_bus_validator_and_route_resolution_are_fail_closed(self) -> None:
-        report = self.bus.validate()
+        public_root_value = os.environ.get("ANTIGRAVITY_PUBLIC_ROOT")
+        public_root = Path(public_root_value) if public_root_value else None
+        report = self.bus.validate(public_root=public_root)
         self.assertEqual(report["status"], "OK")
         self.assertEqual(report["publication"], "LOCKED")
         self.assertEqual(report["blocks"], 13)
@@ -826,7 +829,10 @@ class NexusCosmosTests(unittest.TestCase):
                 next(
                     item["artifactRootSha256"]
                     for item in load("23_Cosmos_NEXUS/data/tombstone-manifest.json")["items"]
-                    if item["productCode"] == product["productCode"]
+                    if (
+                        item["productCode"] == product["productCode"]
+                        and item["tafCode"] == product["tafCode"]
+                    )
                 ),
             )
             source = ROOT / product["source"]["path"]
