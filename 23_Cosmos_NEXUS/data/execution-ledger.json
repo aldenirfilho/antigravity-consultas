@@ -1,7 +1,7 @@
 {
   "schemaVersion": "antigravity-execution-ledger-v1",
   "version": "1.0.0",
-  "updatedAt": "2026-08-01T19:02:27Z",
+  "updatedAt": "2026-08-02T00:16:48Z",
   "status": "release-prepared-publication-locked",
   "events": [
     {
@@ -261,6 +261,291 @@
       },
       "previousEventHash": "9796c20a1c2b8de9fe70e3ba07032f858dac9369fc5d7696b482bfc8db88faa8",
       "eventHash": "f5a39d6f71ef88ca56e4e1cf046a0c834aef5543534b85c71c07aa129122c5d1"
+    },
+    {
+      "code": "PRC###-SUPERSEDE-RELEASE-20260801-0004-AA0422FB",
+      "type": "RELEASE_SUPERSEDED_PREPUBLICATION",
+      "subjectCode": "####AGX-MUX-PROD-20260801-0001-D0394A79",
+      "timestamp": "2026-08-02T00:16:31Z",
+      "inputHash": "6e41a807793da96074bdae3d0f9cff2c3b923a2425f3b3b380b57b8f1df22db3",
+      "outputHash": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+      "result": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+      "evidence": {
+        "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED",
+        "previousTafCode": "TAF###-MUX-PROD-20260801-0001-3B26350F",
+        "replacementTafCode": "TAF###-MUX-PROD-20260801-0004-F3D57535",
+        "previousArtifactRootSha256": "6e41a807793da96074bdae3d0f9cff2c3b923a2425f3b3b380b57b8f1df22db3",
+        "auditBinding": {
+          "auditCode": "AUD###-PROD-20260801-0002-2EB68C7B",
+          "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+          "status": "PASS"
+        },
+        "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE"
+      },
+      "previousEventHash": "f5a39d6f71ef88ca56e4e1cf046a0c834aef5543534b85c71c07aa129122c5d1",
+      "eventHash": "cdf9648cc77117771075b28bc4476baa87a93ed6bf555bf9ffc1094163f74431"
+    },
+    {
+      "code": "PRC###-PREPARAR-RELEASE-20260801-0004-CD0A61CB",
+      "type": "RELEASE_PREPARATION",
+      "subjectCode": "####AGX-MUX-PROD-20260801-0001-D0394A79",
+      "timestamp": "2026-08-02T00:16:31Z",
+      "inputHash": "43a44ad30ba9918868b04c839fd8e5edd2be178af22f0f1ddb822d489b6eabe9",
+      "outputHash": "875c7680754a8c7baf91ee1b3a8169512b00bf923fcc33abb2b13ba710a0c0fa",
+      "result": "PASS_PREPARED_NOT_PUBLISHED",
+      "evidence": {
+        "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED"
+      },
+      "previousEventHash": "cdf9648cc77117771075b28bc4476baa87a93ed6bf555bf9ffc1094163f74431",
+      "eventHash": "27453115280ff3d70502e57016d5f85213ea781b4591606703c69c0fa8295931"
+    },
+    {
+      "code": "HOM###-MUX-PROD-20260801-0004-5C0FAEF7",
+      "type": "HOMOLOGATION",
+      "subjectCode": "####AGX-MUX-PROD-20260801-0001-D0394A79",
+      "timestamp": "2026-08-02T00:16:31Z",
+      "inputHash": "0a4ba4134420542767be793011cab545e455ebd841d090cff84623348c433f45",
+      "outputHash": "d0edb4b7edad56a00415eb9d7b559b5610dfded3d3fac5068262264f8762dd79",
+      "result": "PASS",
+      "evidence": {
+        "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED"
+      },
+      "previousEventHash": "27453115280ff3d70502e57016d5f85213ea781b4591606703c69c0fa8295931",
+      "eventHash": "09e1dd711ac610752933c5b16351ff5864d97a5fbe520249621c737dbd2f61ec"
+    },
+    {
+      "code": "TOM###-MUX-PROD-20260801-0004-DF465110",
+      "type": "TOMBSTONE",
+      "subjectCode": "####AGX-MUX-PROD-20260801-0001-D0394A79",
+      "timestamp": "2026-08-02T00:16:31Z",
+      "inputHash": "d0edb4b7edad56a00415eb9d7b559b5610dfded3d3fac5068262264f8762dd79",
+      "outputHash": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+      "result": "FROZEN_NOT_PUBLISHED",
+      "evidence": {
+        "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED"
+      },
+      "previousEventHash": "09e1dd711ac610752933c5b16351ff5864d97a5fbe520249621c737dbd2f61ec",
+      "eventHash": "d7924ac22869a02206b70b845339c78e62c047b32ff6307bcab7ec838360d0d9"
+    },
+    {
+      "code": "TAF###-MUX-PROD-20260801-0004-F3D57535",
+      "type": "FINAL_ACCEPTANCE_PREPARED",
+      "subjectCode": "####AGX-MUX-PROD-20260801-0001-D0394A79",
+      "timestamp": "2026-08-02T00:16:31Z",
+      "inputHash": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+      "outputHash": "55ab5308237a78096a376f980713ddfda565ca1caaca94d9764f8c6a998336b3",
+      "result": "PREPARED_AWAITING_LITERAL_OWNER_COMMAND",
+      "evidence": {
+        "artifactRootSha256": "61abaf0d0ffbedc9c68bcc7eb667cca6cd8d8e4cb9a7605dbe912027926b6381",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED",
+        "requiredCommand": "PUBLICAR TAF###-MUX-PROD-20260801-0004-F3D57535"
+      },
+      "previousEventHash": "d7924ac22869a02206b70b845339c78e62c047b32ff6307bcab7ec838360d0d9",
+      "eventHash": "4f4bad44174da8cf67e57cfe98dfe384efc18f630ed3f645e12d92d9859100ce"
+    },
+    {
+      "code": "PRC###-SUPERSEDE-RELEASE-20260801-0005-8BA8D8A5",
+      "type": "RELEASE_SUPERSEDED_PREPUBLICATION",
+      "subjectCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+      "timestamp": "2026-08-02T00:16:39Z",
+      "inputHash": "804a993e26a11ef2f483d1bb29f378fcdc1455ff23e57858ebcb1335db53cb5f",
+      "outputHash": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+      "result": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+      "evidence": {
+        "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED",
+        "previousTafCode": "TAF###-U3-IMGT-20260801-0002-23F72FD1",
+        "replacementTafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
+        "previousArtifactRootSha256": "804a993e26a11ef2f483d1bb29f378fcdc1455ff23e57858ebcb1335db53cb5f",
+        "auditBinding": {
+          "auditCode": "AUD###-IMGT-20260801-0002-B16AA83A",
+          "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+          "status": "PASS"
+        },
+        "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE"
+      },
+      "previousEventHash": "4f4bad44174da8cf67e57cfe98dfe384efc18f630ed3f645e12d92d9859100ce",
+      "eventHash": "12f8a61278a7d516c1b021294e3bffe7939d860d56f6b710305ea94a0e1e8fa6"
+    },
+    {
+      "code": "PRC###-PREPARAR-RELEASE-20260801-0005-BF11D9C7",
+      "type": "RELEASE_PREPARATION",
+      "subjectCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+      "timestamp": "2026-08-02T00:16:39Z",
+      "inputHash": "8dc6255c76fce344d2a22d98d78d84dd4692f137ad08470b85d000f0c5a47eec",
+      "outputHash": "a3da6c9fd1aafbe557bfa06827f8a949e93f4f4a65c4d5c3c79769d78152af55",
+      "result": "PASS_PREPARED_NOT_PUBLISHED",
+      "evidence": {
+        "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED"
+      },
+      "previousEventHash": "12f8a61278a7d516c1b021294e3bffe7939d860d56f6b710305ea94a0e1e8fa6",
+      "eventHash": "e9712d467c8cdda172cee3008a3e75ab1920a0b9235c565f59674aafe4dbba05"
+    },
+    {
+      "code": "HOM###-U3-IMGT-20260801-0005-67364B28",
+      "type": "HOMOLOGATION",
+      "subjectCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+      "timestamp": "2026-08-02T00:16:39Z",
+      "inputHash": "62fc57370df63166e276f863ef02307aeee8384d780de406b8ba69c2fd580458",
+      "outputHash": "63968c822aaba77033401a5cee51c014cc55c953ea9f6668fa36b53b92abf715",
+      "result": "PASS",
+      "evidence": {
+        "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED"
+      },
+      "previousEventHash": "e9712d467c8cdda172cee3008a3e75ab1920a0b9235c565f59674aafe4dbba05",
+      "eventHash": "8de91f6a856900e3f0c1bfeee30c22457156380cd7120bc9efaf212a2171f919"
+    },
+    {
+      "code": "TOM###-U3-IMGT-20260801-0005-DAD0842F",
+      "type": "TOMBSTONE",
+      "subjectCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+      "timestamp": "2026-08-02T00:16:39Z",
+      "inputHash": "63968c822aaba77033401a5cee51c014cc55c953ea9f6668fa36b53b92abf715",
+      "outputHash": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+      "result": "FROZEN_NOT_PUBLISHED",
+      "evidence": {
+        "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED"
+      },
+      "previousEventHash": "8de91f6a856900e3f0c1bfeee30c22457156380cd7120bc9efaf212a2171f919",
+      "eventHash": "d27c3e62e075375c91e93271513cb09eefe48c202541c0eae4c278b76ee6845a"
+    },
+    {
+      "code": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6",
+      "type": "FINAL_ACCEPTANCE_PREPARED",
+      "subjectCode": "####AGX-U3-IMGT-20260801-0001-2C0470E6",
+      "timestamp": "2026-08-02T00:16:39Z",
+      "inputHash": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+      "outputHash": "90a50543d3901718762bbdf87802e8a9f3ee942cd29ddc75818d680a154fc192",
+      "result": "PREPARED_AWAITING_LITERAL_OWNER_COMMAND",
+      "evidence": {
+        "artifactRootSha256": "64be73767042964f867ff902800f3a98d6cfc8e13a09cbf0818099541b0f2e49",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED",
+        "requiredCommand": "PUBLICAR TAF###-U3-IMGT-20260801-0005-BF1AC3E6"
+      },
+      "previousEventHash": "d27c3e62e075375c91e93271513cb09eefe48c202541c0eae4c278b76ee6845a",
+      "eventHash": "9214c1de2a04afc0d246de9301a5dd5550f15fd8bb4f47e1b7848d8e79787174"
+    },
+    {
+      "code": "PRC###-SUPERSEDE-RELEASE-20260801-0006-1876AD82",
+      "type": "RELEASE_SUPERSEDED_PREPUBLICATION",
+      "subjectCode": "####AGX-MUX-EXT-20260731-0001-847D3013",
+      "timestamp": "2026-08-02T00:16:48Z",
+      "inputHash": "92ea526fe834d494cd4807a448fec1941b4a947b6bce26fe02759a9c703cfb56",
+      "outputHash": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+      "result": "VOID_PREPUBLICATION_SOURCE_SCOPE",
+      "evidence": {
+        "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED",
+        "previousTafCode": "TAF###-MUX-EXT-20260801-0003-6445E9A3",
+        "replacementTafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
+        "previousArtifactRootSha256": "92ea526fe834d494cd4807a448fec1941b4a947b6bce26fe02759a9c703cfb56",
+        "auditBinding": {
+          "auditCode": "AUD###-EXT-20260801-0001-74C31336",
+          "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+          "status": "PASS"
+        },
+        "reason": "VOID_PREPUBLICATION_SOURCE_SCOPE"
+      },
+      "previousEventHash": "9214c1de2a04afc0d246de9301a5dd5550f15fd8bb4f47e1b7848d8e79787174",
+      "eventHash": "c0e94d6077976ef8136287ff292d788302502bfdf7187a1b410ed046ec50ff70"
+    },
+    {
+      "code": "PRC###-PREPARAR-RELEASE-20260801-0006-F0F3C3FB",
+      "type": "RELEASE_PREPARATION",
+      "subjectCode": "####AGX-MUX-EXT-20260731-0001-847D3013",
+      "timestamp": "2026-08-02T00:16:48Z",
+      "inputHash": "6ac9c3f17560cb19bd7b4361fa526fa0ca654c0bb4bc24da2ad13ab92ad3dc7d",
+      "outputHash": "061d6b34dbc6f8a39d70bd8007be02667634541171f4a81ec4a544de49b9113d",
+      "result": "PASS_PREPARED_NOT_PUBLISHED",
+      "evidence": {
+        "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED"
+      },
+      "previousEventHash": "c0e94d6077976ef8136287ff292d788302502bfdf7187a1b410ed046ec50ff70",
+      "eventHash": "09c4f656d73fb620e584adf4c143e895a14434320808585ea88a44f7291bdf50"
+    },
+    {
+      "code": "HOM###-MUX-EXT-20260801-0006-8EA2244D",
+      "type": "HOMOLOGATION",
+      "subjectCode": "####AGX-MUX-EXT-20260731-0001-847D3013",
+      "timestamp": "2026-08-02T00:16:48Z",
+      "inputHash": "f64800cfddb270978ff7fc85d7b0b26a39e5026dc508a4e730ec63f40a819842",
+      "outputHash": "6ef77a68c4187b8b95f66871b7b1f582edfc236d8363e0c2f9ea22511b62def4",
+      "result": "PASS",
+      "evidence": {
+        "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED"
+      },
+      "previousEventHash": "09c4f656d73fb620e584adf4c143e895a14434320808585ea88a44f7291bdf50",
+      "eventHash": "a2a0ebbd561965f375272a2b181365edd5f5184a8cc6f334cdb62de3f556657e"
+    },
+    {
+      "code": "TOM###-MUX-EXT-20260801-0006-E6A2DC89",
+      "type": "TOMBSTONE",
+      "subjectCode": "####AGX-MUX-EXT-20260731-0001-847D3013",
+      "timestamp": "2026-08-02T00:16:48Z",
+      "inputHash": "6ef77a68c4187b8b95f66871b7b1f582edfc236d8363e0c2f9ea22511b62def4",
+      "outputHash": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+      "result": "FROZEN_NOT_PUBLISHED",
+      "evidence": {
+        "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED"
+      },
+      "previousEventHash": "a2a0ebbd561965f375272a2b181365edd5f5184a8cc6f334cdb62de3f556657e",
+      "eventHash": "a2a3ffcae04fd2926c4145ab852a7369fdb904bb1b618155b3f7faa393fbc90f"
+    },
+    {
+      "code": "TAF###-MUX-EXT-20260801-0006-351C123E",
+      "type": "FINAL_ACCEPTANCE_PREPARED",
+      "subjectCode": "####AGX-MUX-EXT-20260731-0001-847D3013",
+      "timestamp": "2026-08-02T00:16:48Z",
+      "inputHash": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+      "outputHash": "77f491924590898fe5d6a6d0e3103f0200e28c2ff06e9c3070bed67e3685b63e",
+      "result": "PREPARED_AWAITING_LITERAL_OWNER_COMMAND",
+      "evidence": {
+        "artifactRootSha256": "a6b6fccaf62f3d7c56af848c1dbdbbf746e1d4474622f4d1141c9df86f7f47c5",
+        "artifactProfile": "POST_BUILD_POST_SANITIZE",
+        "homologationReport": "23_Cosmos_NEXUS/data/homologation-reports.json",
+        "publication": "LOCKED",
+        "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0006-351C123E"
+      },
+      "previousEventHash": "a2a3ffcae04fd2926c4145ab852a7369fdb904bb1b618155b3f7faa393fbc90f",
+      "eventHash": "ec875d6793baab3b1cea03b73d751345cd5dbaa03e258a2c8cc2841bb71c9b87"
     }
   ],
   "rules": [
@@ -269,5 +554,5 @@
     "Nenhum identificador de paciente, segredo, token ou URL privada entra neste ledger público.",
     "Publicação exige encadeamento AGX → HOM → TOM → TAF → autorização → PUB."
   ],
-  "ledgerHeadSha256": "f5a39d6f71ef88ca56e4e1cf046a0c834aef5543534b85c71c07aa129122c5d1"
+  "ledgerHeadSha256": "ec875d6793baab3b1cea03b73d751345cd5dbaa03e258a2c8cc2841bb71c9b87"
 }

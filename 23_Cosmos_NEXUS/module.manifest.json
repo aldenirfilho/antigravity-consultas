@@ -44,8 +44,8 @@
     "publicPreview": false,
     "published": false,
     "tafIssued": true,
-    "stationTafCode": "TAF###-MUX-EXT-20260801-0003-6445E9A3",
-    "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0003-6445E9A3",
+    "stationTafCode": "TAF###-MUX-EXT-20260801-0006-351C123E",
+    "requiredCommand": "PUBLICAR TAF###-MUX-EXT-20260801-0006-351C123E",
     "ownerPublicationAuthorization": false,
     "clinicalReviewOngoing": true,
     "purpose": "engenharia-cognitiva-educacional-e-apoio-a-revisao-humana",
@@ -115,7 +115,7 @@
       "registry": "../data/editorial/registry.json",
       "status": "release-prepared",
       "officialPublication": false,
-      "tafCode": "TAF###-MUX-EXT-20260801-0003-6445E9A3"
+      "tafCode": "TAF###-MUX-EXT-20260801-0006-351C123E"
     },
     {
       "id": "maquina-turbo-temi-360x",
@@ -127,7 +127,7 @@
       "registry": "blocks/10_produtos_turbo_temi/items.json",
       "status": "release-prepared",
       "officialPublication": false,
-      "tafCode": "TAF###-MUX-PROD-20260801-0001-3B26350F"
+      "tafCode": "TAF###-MUX-PROD-20260801-0004-F3D57535"
     },
     {
       "id": "biblioteca-visual-cosmica",
@@ -139,7 +139,7 @@
       "registry": "blocks/09_imagens_turbo_temi/items.json",
       "status": "release-prepared",
       "officialPublication": false,
-      "tafCode": "TAF###-U3-IMGT-20260801-0002-23F72FD1"
+      "tafCode": "TAF###-U3-IMGT-20260801-0005-BF1AC3E6"
     }
   ],
   "audit": {
