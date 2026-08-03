@@ -14,12 +14,22 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ONLY_EXCLUDED = {
     "01_Modulos_Clinicos/Dermatologia_Critica/module.manifest.json",
+    "01_Modulos_Clinicos/Sepse_Choque_Septico/module.manifest.json",
+    "01_Modulos_Clinicos/Sepse_Choque_Septico/PHASE4A_LOCAL_CHECKPOINT.md",
+    "01_Modulos_Clinicos/Sepse_Choque_Septico/PHASE4A_VISUAL_HOMOLOGATION_60_120_2026-08-03.md",
+    "01_Modulos_Clinicos/Sepse_Choque_Septico/data/acra-plan.json",
+    "01_Modulos_Clinicos/Sepse_Choque_Septico/data/visual-assets.json",
+    "01_Modulos_Clinicos/Sepse_Choque_Septico/data/visual-plan.json",
 }
 ABSENT_INTERNAL = {
     "01_UpDown_Hub/content/reumatologia/les-manifestacoes/metadata.json",
     "05_Midia_E_Feed/data/recovery_manifest.json",
 }
 EXCLUDED = SOURCE_ONLY_EXCLUDED | ABSENT_INTERNAL
+LOCAL_ONLY_PREFIXES = {
+    "01_Modulos_Clinicos/Sepse_Choque_Septico/acra",
+    "01_Modulos_Clinicos/Sepse_Choque_Septico/specs",
+}
 
 
 def load_builder():
@@ -39,6 +49,20 @@ class PublicContentIsolationTests(unittest.TestCase):
 
     def test_builder_excludes_all_explicitly_protected_files(self) -> None:
         self.assertEqual(set(self.builder.PUBLIC_BUILD_EXCLUSIONS), EXCLUDED)
+        self.assertEqual(
+            set(self.builder.PUBLIC_BUILD_EXCLUSION_PREFIXES),
+            LOCAL_ONLY_PREFIXES,
+        )
+
+    def test_sepsis_public_page_is_allowed_but_internal_sources_stay_excluded(self) -> None:
+        module = "01_Modulos_Clinicos/Sepse_Choque_Septico"
+        self.assertFalse(self.builder.is_public_build_excluded(module))
+        self.assertFalse(self.builder.is_public_build_excluded(f"{module}/index.html"))
+        self.assertTrue(
+            self.builder.is_public_build_excluded(f"{module}/module.manifest.json")
+        )
+        self.assertTrue(self.builder.is_public_build_excluded(f"{module}/acra/item.json"))
+        self.assertTrue(self.builder.is_public_build_excluded(f"{module}/specs/sue2-a/README.md"))
 
     def test_copy_preserves_sources_and_adjacent_public_files(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -47,6 +71,24 @@ class PublicContentIsolationTests(unittest.TestCase):
             fixtures = {
                 "01_Modulos_Clinicos/Dermatologia_Critica/module.manifest.json":
                     '{"status":"published","visibility":"source-only"}',
+                "01_Modulos_Clinicos/Sepse_Choque_Septico/index.html":
+                    "<!doctype html><title>Prévia local de Sepse</title>",
+                "01_Modulos_Clinicos/Sepse_Choque_Septico/module.manifest.json":
+                    '{"status":"em-revisao-medica","publication":{"mode":"public-preview"}}',
+                "01_Modulos_Clinicos/Sepse_Choque_Septico/PHASE4A_LOCAL_CHECKPOINT.md":
+                    "checkpoint interno",
+                "01_Modulos_Clinicos/Sepse_Choque_Septico/PHASE4A_VISUAL_HOMOLOGATION_60_120_2026-08-03.md":
+                    "homologação interna",
+                "01_Modulos_Clinicos/Sepse_Choque_Septico/data/acra-plan.json":
+                    '{"internal":true}',
+                "01_Modulos_Clinicos/Sepse_Choque_Septico/data/visual-assets.json":
+                    '{"internal":true}',
+                "01_Modulos_Clinicos/Sepse_Choque_Septico/data/visual-plan.json":
+                    '{"internal":true}',
+                "01_Modulos_Clinicos/Sepse_Choque_Septico/specs/sue2-a/README.md":
+                    "bloco adjacente local",
+                "01_Modulos_Clinicos/Sepse_Choque_Septico/acra/item.json":
+                    '{"source":"interno"}',
                 "01_UpDown_Hub/content/reumatologia/les-manifestacoes/metadata.json":
                     '{"state":"review"}',
                 "01_UpDown_Hub/content/reumatologia/les-manifestacoes/reader/metadata.json":
@@ -71,6 +113,12 @@ class PublicContentIsolationTests(unittest.TestCase):
             for relative in EXCLUDED:
                 self.assertTrue((root / relative).is_file())
                 self.assertFalse((site / relative).exists())
+            for prefix in LOCAL_ONLY_PREFIXES:
+                self.assertTrue((root / prefix).is_dir())
+                self.assertFalse((site / prefix).exists())
+            self.assertTrue(
+                (site / "01_Modulos_Clinicos/Sepse_Choque_Septico/index.html").is_file()
+            )
             for relative in {
                 "01_UpDown_Hub/content/reumatologia/les-manifestacoes/reader/metadata.json",
                 "05_Midia_E_Feed/data/public.json",
@@ -79,6 +127,40 @@ class PublicContentIsolationTests(unittest.TestCase):
                     (site / relative).read_bytes(),
                     (root / relative).read_bytes(),
                 )
+
+    def test_clinical_gate_still_checks_public_sepsis_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            local_module = (
+                root / "01_Modulos_Clinicos/Sepse_Choque_Septico"
+            )
+            local_module.mkdir(parents=True)
+            (local_module / "module.manifest.json").write_text(
+                '{"status":"rascunho","publication":{"mode":"local-only"}}',
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError,
+                r"Módulo clínico não publicável \(rascunho\)",
+            ):
+                self.builder.validate_clinical_publication(root)
+
+    def test_clinical_gate_still_blocks_nonexcluded_draft_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            public_module = root / "01_Modulos_Clinicos/Outro_Modulo"
+            public_module.mkdir(parents=True)
+            (public_module / "module.manifest.json").write_text(
+                '{"status":"rascunho"}',
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError,
+                r"Módulo clínico não publicável \(rascunho\)",
+            ):
+                self.builder.validate_clinical_publication(root)
 
     def test_preview_metadata_quarantines_source_and_all_public_indexes(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -638,8 +720,12 @@ class PublicContentIsolationTests(unittest.TestCase):
 
     def test_service_worker_revokes_the_previous_public_cache(self) -> None:
         worker = (ROOT / "sw.js").read_text(encoding="utf-8")
-        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v18`', worker)
-        self.assertNotIn('const CACHE_NAME = `${CACHE_PREFIX}v12`', worker)
+        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v19`', worker)
+        self.assertNotIn('const CACHE_NAME = `${CACHE_PREFIX}v18`', worker)
+        self.assertIn(
+            '"./01_Modulos_Clinicos/Sepse_Choque_Septico/index.html"',
+            worker,
+        )
         self.assertIn(
             "key.startsWith(CACHE_PREFIX) && key !== CACHE_NAME",
             worker,

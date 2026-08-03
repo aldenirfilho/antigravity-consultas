@@ -3,10 +3,49 @@
 // Gerado de data/posts.json; não editar manualmente.
 window.ANTIGRAVITY_PORTAL={
   "schemaVersion": "portal-vivo-v1",
-  "updatedAt": "2026-07-30T00:43:13-03:00",
+  "updatedAt": "2026-08-03T18:39:48-03:00",
   "timezone": "America/Fortaleza",
   "editorialPolicy": "Conteúdo educacional, rastreável e proporcional à evidência. Toda afirmação clínica deve apontar para fonte verificável e explicitar limitações.",
   "posts": [
+    {
+      "destination": "Portal Vivo — UPGRADE da plataforma",
+      "target": "portal-vivo-upgrade",
+      "type": "system-upgrade",
+      "category": "Módulos clínicos",
+      "priority": 1,
+      "title": "Sepse Ultra Expert estreia como revista clínica interativa",
+      "summary": "O primeiro bloco funcional de Sepse Ultra Expert passa a integrar o Antigravity como publicação educacional em revisão contínua. A revista percorre reconhecimento, manejo, refratariedade, prevenção e cuidado pós-sepse, com 60 visuais expandidos, legendas rastreáveis, download e 10 ACRA opcionais.",
+      "publishedAt": "2026-08-03T18:39:48-03:00",
+      "source": {
+        "name": "Sepse Ultra Expert — Antigravity Consultas",
+        "url": "../01_Modulos_Clinicos/Sepse_Choque_Septico/",
+        "id": "sepse-ultra-expert-public-preview-v0.5.0",
+        "date": "2026-08-03",
+        "checkedAt": "2026-08-03T18:39:48-03:00"
+      },
+      "turbo": {
+        "clinicalImpact": "Concentra em uma única trilha visual pontos de reconhecimento, priorização, reavaliação e transição de cuidados, preservando links para documentos oficiais e alertas de incerteza.",
+        "temiHook": "A navegação conecta fisiopatologia, primeira hora, antimicrobianos, perfusão, fenótipos, suporte orgânico, refratariedade e pós-sepse.",
+        "memoryAnchor": "SUSPEITAR → AGIR → REAVALIAR → RECUPERAR",
+        "takeaways": [
+          "Todos os 60 visuais aparecem expandidos como páginas de revista",
+          "Cada visual oferece legenda didática, referências e download",
+          "Os 10 ACRA são opcionais e funcionam sem envio de dados clínicos",
+          "POCUS séptico, disfunção orgânica avançada e B153–B154 continuam fora desta publicação"
+        ],
+        "caveat": "Conteúdo educacional em revisão clínica contínua; não substitui julgamento à beira-leito, protocolo institucional, microbiologia local nem checagem individual de doses e contraindicações."
+      },
+      "audit": {
+        "sourceChecked": true,
+        "clinicalReview": "pending",
+        "noDirectPatientData": true,
+        "reviewedAt": "2026-08-03T18:39:48-03:00",
+        "reviewedBy": "Codex Antigravity — publicação autorizada pelo proprietário"
+      },
+      "id": "2026-08-03-sepse-ultra-expert-estreia-como-revista-clinica-inte-c7397671",
+      "sourceIdentity": "source-id:sepse-ultra-expert-public-preview-v0.5.0",
+      "sourceHash": "sha256:c7397671798bcd0c"
+    },
     {
       "destination": "Portal Vivo — UPGRADE da plataforma",
       "target": "portal-vivo-upgrade",

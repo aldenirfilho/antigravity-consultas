@@ -1,0 +1,2425 @@
+{
+  "schemaVersion": "antigravity-visual-assets-v1",
+  "moduleId": "sepse-ultra-expert",
+  "updatedAt": "2026-08-03",
+  "derivedFrom": "data/visual-plan.json",
+  "status": "integrated-local-owner-review-pending",
+  "generator": {
+    "tool": "sips",
+    "version": "316",
+    "format": "jpeg",
+    "quality": 88,
+    "widths": [
+      960,
+      1672
+    ],
+    "mastersPreserved": true
+  },
+  "inventory": {
+    "originalMastersPreserved": 60,
+    "integrationMasters": 60,
+    "reviewedMasters": 2,
+    "derivatives": 120,
+    "generatedRevisions": 2,
+    "reviewPending": 22
+  },
+  "review": {
+    "status": "owner-review-pending",
+    "pendingIds": [
+      "IMG-08",
+      "IMG-18",
+      "IMG-41",
+      "IMG-42",
+      "IMG-43",
+      "IMG-44",
+      "IMG-45",
+      "IMG-46",
+      "IMG-47",
+      "IMG-48",
+      "IMG-49",
+      "IMG-50",
+      "IMG-51",
+      "IMG-52",
+      "IMG-53",
+      "IMG-54",
+      "IMG-55",
+      "IMG-56",
+      "IMG-57",
+      "IMG-58",
+      "IMG-59",
+      "IMG-60"
+    ],
+    "clinicalBlocker": false,
+    "note": "As duas revisões históricas e as 20 novas pranchas aguardam revisão visual final do proprietário antes de qualquer publicação; integração local técnica não equivale a homologação clínica."
+  },
+  "integrity": {
+    "originalMasterSetSha256": "8d580d5d00d4cbe52860eda7e0a5c3c5657b9319e05db61bb98c8c1e71b3f8a4",
+    "integrationMasterSetSha256": "8f62047cf9c3d443364b874400356cbf4e8a66e33c9ae145d807919b46a4ed7c",
+    "derivativeSetSha256": "2f0838761f069569b197238fc0c7cef96ce12c3752542e247738d11e6928026b"
+  },
+  "items": [
+    {
+      "id": "IMG-01",
+      "anchor": "hero-title",
+      "title": "Pense. Pode ser sepse.",
+      "role": "alerta de abertura",
+      "master": {
+        "path": "assets/images/img-01-pense-pode-ser-sepse.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1681303,
+        "sha256": "8bda13f5f271cea26ee68a8a52e72d50d5d8acc43083c3373ba11967c266f5f2"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-01-pense-pode-ser-sepse-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 161121,
+          "sha256": "40a29f10371434615e9b725600355c768a82f279ce24c6b4e4517ecedbacf557"
+        },
+        {
+          "path": "assets/images/optimized/img-01-pense-pode-ser-sepse-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 413132,
+          "sha256": "e36b1074fb492d273acb592f6383a72daed431c8c46b5e4fc4a0c5ea9c51d02e"
+        }
+      ],
+      "alt": "Pense. Pode ser sepse. Paciente hospitalar deteriorando no centro; múltiplas pistas discretas convergem para disfunção orgânica, com relógio clínico em primeiro plano.",
+      "caption": "Pense. Pode ser sepse. — Paciente hospitalar deteriorando no centro; múltiplas pistas discretas convergem para disfunção orgânica, com relógio clínico em primeiro plano.",
+      "longDescription": "Imagem didática IMG-01, com função de alerta de abertura. Paciente hospitalar deteriorando no centro; múltiplas pistas discretas convergem para disfunção orgânica, com relógio clínico em primeiro plano. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "sepsis3"
+      ]
+    },
+    {
+      "id": "IMG-02",
+      "anchor": "burden-title",
+      "title": "Carga global associada à sepse",
+      "role": "impacto epidemiológico",
+      "master": {
+        "path": "assets/images/img-02-carga-global.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1979609,
+        "sha256": "94696e6181c6f5383b5b30cdad8ca7af123564adb1e631b961d49fa949cbd469"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-02-carga-global-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 178236,
+          "sha256": "5b27197db35f478b0fd4ef52fddd1995e900bae05400d7d5249b00421c8d8b99"
+        },
+        {
+          "path": "assets/images/optimized/img-02-carga-global-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 496589,
+          "sha256": "df0b4de0721b557d87b6098d7f27bf7aecf71e1dbcf2716fb71f572fd0dc22aa"
+        }
+      ],
+      "alt": "Carga global associada à sepse. Visual de escala global com 21,4 milhões de mortes associadas em 2021 e aviso explícito de estimativa modelada, não contador real.",
+      "caption": "Carga global associada à sepse — Visual de escala global com 21,4 milhões de mortes associadas em 2021 e aviso explícito de estimativa modelada, não contador real.",
+      "longDescription": "Imagem didática IMG-02, com função de impacto epidemiológico. Visual de escala global com 21,4 milhões de mortes associadas em 2021 e aviso explícito de estimativa modelada, não contador real. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "gbd2021",
+        "who2024"
+      ]
+    },
+    {
+      "id": "IMG-03",
+      "anchor": "impacto",
+      "title": "Muitas doenças, um desfecho comum",
+      "role": "mapa integrativo",
+      "master": {
+        "path": "assets/images/img-03-desfecho-transversal.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1552424,
+        "sha256": "e87942c59756bedf8c92b294440845cce360daf3a67ef23cebd5f79f28ce6099"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-03-desfecho-transversal-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 145241,
+          "sha256": "012f848dcf801bdc518ce100597abd2535ec4510da59230095fc2448c03bc609"
+        },
+        {
+          "path": "assets/images/optimized/img-03-desfecho-transversal-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 374449,
+          "sha256": "42716bf929b683075acf7971d3047aa9b2ce252340a61fa1c4e27c62357962a7"
+        }
+      ],
+      "alt": "Muitas doenças, um desfecho comum. Cardiologia, oncologia, reumatologia, pneumologia, nefrologia, cirurgia e obstetrícia convergindo probabilisticamente para infecção, disfunção e recuperação ou falência orgânica.",
+      "caption": "Muitas doenças, um desfecho comum — Cardiologia, oncologia, reumatologia, pneumologia, nefrologia, cirurgia e obstetrícia convergindo probabilisticamente para infecção, disfunção e recuperação ou falência orgânica.",
+      "longDescription": "Imagem didática IMG-03, com função de mapa integrativo. Cardiologia, oncologia, reumatologia, pneumologia, nefrologia, cirurgia e obstetrícia convergindo probabilisticamente para infecção, disfunção e recuperação ou falência orgânica. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "sepsis3",
+        "who2024"
+      ]
+    },
+    {
+      "id": "IMG-04",
+      "anchor": "costForm",
+      "title": "Custo da trajetória clínica",
+      "role": "contraste econômico",
+      "master": {
+        "path": "assets/images/img-04-custo-do-atraso.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1902856,
+        "sha256": "ea5dda9c32190ace66f4d8a6802dec175a928cedb043fb9300f89dc8d5cc2043"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-04-custo-do-atraso-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 185334,
+          "sha256": "9b7c966f1404dadf5d409f0f2b71b166634e7e7c6be4096ec3016c35c6e4e7c1"
+        },
+        {
+          "path": "assets/images/optimized/img-04-custo-do-atraso-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 479584,
+          "sha256": "403bf5280fb8fc60a8f4d55ed2cb3f7ce395ad49960bf3d102d6e0961a42213d"
+        }
+      ],
+      "alt": "Custo da trajetória clínica. Contrastar cuidado oportuno e controle do foco com UTI, ventilação, terapia renal, nutrição e antimicrobianos complexos; não sugerir causalidade monetária individual.",
+      "caption": "Custo da trajetória clínica — Contrastar cuidado oportuno e controle do foco com UTI, ventilação, terapia renal, nutrição e antimicrobianos complexos; não sugerir causalidade monetária individual.",
+      "longDescription": "Imagem didática IMG-04, com função de contraste econômico. Contrastar cuidado oportuno e controle do foco com UTI, ventilação, terapia renal, nutrição e antimicrobianos complexos; não sugerir causalidade monetária individual. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "who2024"
+      ]
+    },
+    {
+      "id": "IMG-05",
+      "anchor": "suspeita",
+      "title": "Infecção, disfunção orgânica e ameaça à vida",
+      "role": "explicação diagnóstica",
+      "master": {
+        "path": "assets/images/img-05-triade-diagnostica.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1875674,
+        "sha256": "42b1ca95a84f055aece6377335048aa45f06d00908600559990b36b3d673c0e3"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-05-triade-diagnostica-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 200637,
+          "sha256": "53ad4a5a33efe646c2137c37a96d4fd002d8a94eb3b0f42deafe39cd94be1137"
+        },
+        {
+          "path": "assets/images/optimized/img-05-triade-diagnostica-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 532082,
+          "sha256": "324c9b89c48901e463275d886780fbe1d5a056c44032f671140153dd7aa9d5bd"
+        }
+      ],
+      "alt": "Infecção, disfunção orgânica e ameaça à vida. Diagrama de três camadas mostrando que infecção isolada não é sepse e que disfunção orgânica aguda define a síndrome clínica.",
+      "caption": "Infecção, disfunção orgânica e ameaça à vida — Diagrama de três camadas mostrando que infecção isolada não é sepse e que disfunção orgânica aguda define a síndrome clínica.",
+      "longDescription": "Imagem didática IMG-05, com função de explicação diagnóstica. Diagrama de três camadas mostrando que infecção isolada não é sepse e que disfunção orgânica aguda define a síndrome clínica. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "sepsis3"
+      ]
+    },
+    {
+      "id": "IMG-06",
+      "anchor": "triageForm",
+      "title": "Rastreie sem ancorar",
+      "role": "comparação de ferramentas",
+      "master": {
+        "path": "assets/images/img-06-rastreio-sem-ancoragem.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1726533,
+        "sha256": "8073b3f80a5489800bfdb631ca7d4aa28f02ec3b6b0804b8ea82395a187ebae8"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-06-rastreio-sem-ancoragem-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 180023,
+          "sha256": "7f64a97e02dd3a3ce65b17ace69bb0329d622670ae5fc496eecb4be3524c0817"
+        },
+        {
+          "path": "assets/images/optimized/img-06-rastreio-sem-ancoragem-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 448119,
+          "sha256": "ec2d6be9f4924d1c9c5fbd937b3d12bf905b226196b5661f59d900a18134b26a"
+        }
+      ],
+      "alt": "Rastreie sem ancorar. NEWS2, MEWS e SIRS como sensores de deterioração; qSOFA como alerta prognóstico contextual e SOFA como quantificação, nunca gates isolados.",
+      "caption": "Rastreie sem ancorar — NEWS2, MEWS e SIRS como sensores de deterioração; qSOFA como alerta prognóstico contextual e SOFA como quantificação, nunca gates isolados.",
+      "longDescription": "Imagem didática IMG-06, com função de comparação de ferramentas. NEWS2, MEWS e SIRS como sensores de deterioração; qSOFA como alerta prognóstico contextual e SOFA como quantificação, nunca gates isolados. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "sepsis3"
+      ]
+    },
+    {
+      "id": "IMG-07",
+      "anchor": "triageResult",
+      "title": "Sepse e mimetizadores em paralelo",
+      "role": "diferencial crítico",
+      "master": {
+        "path": "assets/images/img-07-mimetizadores.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1856351,
+        "sha256": "9a8a49ffa0518b869901cc82bdd0eb252cd887348a3f3e243ada653d3b12a998"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-07-mimetizadores-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 174313,
+          "sha256": "d21d2d7314ee37c4e242bf61e6644739b02f724db2cd9be0b2f86d72e85ce583"
+        },
+        {
+          "path": "assets/images/optimized/img-07-mimetizadores-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 447603,
+          "sha256": "e14d38a53fdcb08a6b7ea3b60f00a59db2ce5e0342659e9e8d1a4389fc917c52"
+        }
+      ],
+      "alt": "Sepse e mimetizadores em paralelo. Fluxo paralelo para hemorragia, TEP, tamponamento, anafilaxia, crise adrenal, intoxicação e pancreatite durante estabilização.",
+      "caption": "Sepse e mimetizadores em paralelo — Fluxo paralelo para hemorragia, TEP, tamponamento, anafilaxia, crise adrenal, intoxicação e pancreatite durante estabilização.",
+      "longDescription": "Imagem didática IMG-07, com função de diferencial crítico. Fluxo paralelo para hemorragia, TEP, tamponamento, anafilaxia, crise adrenal, intoxicação e pancreatite durante estabilização. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-08",
+      "anchor": "relogio",
+      "title": "Relógio terapêutico completo",
+      "role": "mapa temporal",
+      "master": {
+        "path": "assets/images/reviewed/img-08-relogio-completo.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1506986,
+        "sha256": "472b53bc137768ea96b972751c2e8d16eed95090c70de9565b46ef75fc8b9184"
+      },
+      "originalMaster": {
+        "path": "assets/images/img-08-relogio-completo.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1679375,
+        "sha256": "25532c6799b0c044f705a64e1f3be3c3076c8872a7cee925465c4ea7a7da64b6"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-08-relogio-completo-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 171110,
+          "sha256": "bf30a8a9c24d68d1e75590c70150d28f468860959d2d9a1387cb936715fc8159"
+        },
+        {
+          "path": "assets/images/optimized/img-08-relogio-completo-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 446585,
+          "sha256": "27b1e440a504191af7502687cbc062e09182308f298cdf617e55a907a8e2cd63"
+        }
+      ],
+      "alt": "Relógio terapêutico completo. Linha do tempo 0–10 min, 10–60 min, 1–3 h, 3–6 h, 6–24 h, 24–72 h e pós-agudo com ações e checkpoints.",
+      "caption": "Relógio terapêutico completo — Linha do tempo 0–10 min, 10–60 min, 1–3 h, 3–6 h, 6–24 h, 24–72 h e pós-agudo com ações e checkpoints.",
+      "longDescription": "Imagem didática IMG-08, com função de mapa temporal. Linha do tempo 0–10 min, 10–60 min, 1–3 h, 3–6 h, 6–24 h, 24–72 h e pós-agudo com ações e checkpoints. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "antibiotic-framework",
+        "hemodynamic-guide"
+      ],
+      "generatedRevision": true,
+      "reviewPending": true,
+      "revisionSource": "assets/images/reviewed/img-08-relogio-completo.png"
+    },
+    {
+      "id": "IMG-09",
+      "anchor": "timelinePanel",
+      "title": "Os primeiros dez minutos",
+      "role": "alerta operacional",
+      "master": {
+        "path": "assets/images/img-09-primeiros-dez-minutos.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1794691,
+        "sha256": "cc8996d676f0fe678be2b9f2434b25bb8aa31fb8a5637442eda1e90caba669d2"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-09-primeiros-dez-minutos-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 180757,
+          "sha256": "1beb6e529bd4e262c7781b615b3cfdef8fcb3a7505d7082117848996b604c742"
+        },
+        {
+          "path": "assets/images/optimized/img-09-primeiros-dez-minutos-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 458693,
+          "sha256": "f40a6917a9ffeca113efeef226fa1e1b58048086a88f35fe8752b5144596cc92"
+        }
+      ],
+      "alt": "Os primeiros dez minutos. ABCDE, monitorização, acesso, perfusão, oxigenação e acionamento simultâneo; escore nunca antecede estabilização.",
+      "caption": "Os primeiros dez minutos — ABCDE, monitorização, acesso, perfusão, oxigenação e acionamento simultâneo; escore nunca antecede estabilização.",
+      "longDescription": "Imagem didática IMG-09, com função de alerta operacional. ABCDE, monitorização, acesso, perfusão, oxigenação e acionamento simultâneo; escore nunca antecede estabilização. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-10",
+      "anchor": "relogio",
+      "title": "Tempo de antimicrobiano por probabilidade",
+      "role": "algoritmo decisório",
+      "master": {
+        "path": "assets/images/img-10-tempo-antimicrobiano.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1588299,
+        "sha256": "da2431bd4d225b10fd753a9380224ea5661fd981faca569e82116239f72bd3a6"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-10-tempo-antimicrobiano-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 174057,
+          "sha256": "a9a644c954061978078302177fdeb85b21e7ec9e9e685a1e7eabbd3caf3ac686"
+        },
+        {
+          "path": "assets/images/optimized/img-10-tempo-antimicrobiano-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 429193,
+          "sha256": "5a10e28608e3e9bfe54854b7dbd36f01afabf8178fee622520cce9ed4aa667a7"
+        }
+      ],
+      "alt": "Tempo de antimicrobiano por probabilidade. Três trilhas: choque/provável-definida idealmente até 1 h; possível sem choque investigar e tratar até 3 h se persistir; baixa probabilidade diferir com vigilância.",
+      "caption": "Tempo de antimicrobiano por probabilidade — Três trilhas: choque/provável-definida idealmente até 1 h; possível sem choque investigar e tratar até 3 h se persistir; baixa probabilidade diferir com vigilância.",
+      "longDescription": "Imagem didática IMG-10, com função de algoritmo decisório. Três trilhas: choque/provável-definida idealmente até 1 h; possível sem choque investigar e tratar até 3 h se persistir; baixa probabilidade diferir com vigilância. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "antibiotic-framework"
+      ]
+    },
+    {
+      "id": "IMG-11",
+      "anchor": "infeccao",
+      "title": "Culturas úteis sem atrasar terapia",
+      "role": "sequência prática",
+      "master": {
+        "path": "assets/images/img-11-culturas-sem-atraso.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1744432,
+        "sha256": "db2af4f669b3d9f5cba2432d3ebadf656a4460ec2512c3abb9e80ba14615b9b9"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-11-culturas-sem-atraso-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 175942,
+          "sha256": "0c947e1ff3f0d22cc8225716d23be884601b1ce3994dc2515fcb5b79cfaefc1b"
+        },
+        {
+          "path": "assets/images/optimized/img-11-culturas-sem-atraso-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 437712,
+          "sha256": "c43905c0323bde5ee7f2f16b51c0ea712d4e29c01df3702d57d1abbf088611b8"
+        }
+      ],
+      "alt": "Culturas úteis sem atrasar terapia. Coleta de hemoculturas e foco antes do antimicrobiano quando viável, com linha vermelha contra atraso clinicamente relevante.",
+      "caption": "Culturas úteis sem atrasar terapia — Coleta de hemoculturas e foco antes do antimicrobiano quando viável, com linha vermelha contra atraso clinicamente relevante.",
+      "longDescription": "Imagem didática IMG-11, com função de sequência prática. Coleta de hemoculturas e foco antes do antimicrobiano quando viável, com linha vermelha contra atraso clinicamente relevante. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-12",
+      "anchor": "infeccao",
+      "title": "Carga, exposição e infusão prolongada",
+      "role": "mecanismo PK/PD",
+      "master": {
+        "path": "assets/images/img-12-pkpd-beta-lactamico.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1230092,
+        "sha256": "342955133cd9cbd783eeb52d61c3c57af1dc3aef9984dd43ae374cec09f6a724"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-12-pkpd-beta-lactamico-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 119287,
+          "sha256": "31a2474c6223c347ad592be6c28967d9651e01678a56de5b352177eba641f20a"
+        },
+        {
+          "path": "assets/images/optimized/img-12-pkpd-beta-lactamico-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 287368,
+          "sha256": "9a199eecf5b17c3644d6c4146de52cd37ea986c95d81afe749199347568b4989"
+        }
+      ],
+      "alt": "Carga, exposição e infusão prolongada. Curva concentração-tempo de betalactâmico após dose de carga, comparando manutenção convencional e prolongada acima da CIM sem fornecer dose específica.",
+      "caption": "Carga, exposição e infusão prolongada — Curva concentração-tempo de betalactâmico após dose de carga, comparando manutenção convencional e prolongada acima da CIM sem fornecer dose específica.",
+      "longDescription": "Imagem didática IMG-12, com função de mecanismo PK/PD. Curva concentração-tempo de betalactâmico após dose de carga, comparando manutenção convencional e prolongada acima da CIM sem fornecer dose específica. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-13",
+      "anchor": "infeccao",
+      "title": "Antibiótico não corrige anatomia",
+      "role": "alerta de foco",
+      "master": {
+        "path": "assets/images/img-13-controle-do-foco.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2124064,
+        "sha256": "98278c16ba24017ca3032bc195318c8ab37c99e8595f44e8cd4b37a29a917cd0"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-13-controle-do-foco-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 211715,
+          "sha256": "f987d98fc93bd0599ead61d73a2e7ccdcd6a0cfc9bf62e4aebf048017c449722"
+        },
+        {
+          "path": "assets/images/optimized/img-13-controle-do-foco-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 541130,
+          "sha256": "6d3dab3f3b26a77c7845a360a0f7857fa95ffb70e7738a1b142bafe2fbc4c7db"
+        }
+      ],
+      "alt": "Antibiótico não corrige anatomia. Abscesso, prótese infectada, obstrução e tecido necrótico ligados a drenagem, retirada, descompressão e desbridamento; ideal precoce até 6 h quando indicado.",
+      "caption": "Antibiótico não corrige anatomia — Abscesso, prótese infectada, obstrução e tecido necrótico ligados a drenagem, retirada, descompressão e desbridamento; ideal precoce até 6 h quando indicado.",
+      "longDescription": "Imagem didática IMG-13, com função de alerta de foco. Abscesso, prótese infectada, obstrução e tecido necrótico ligados a drenagem, retirada, descompressão e desbridamento; ideal precoce até 6 h quando indicado. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-14",
+      "anchor": "hemodinamica",
+      "title": "Fluido como fármaco",
+      "role": "modelo mental",
+      "master": {
+        "path": "assets/images/img-14-fluido-como-farmaco.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1897246,
+        "sha256": "e6677c198dc40a8a5943e5a8143f3b2810448f7c5b21a451c8e39e9d5089c755"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-14-fluido-como-farmaco-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 184870,
+          "sha256": "019b40350bab1cd399af141abeb46a83d01988361f97db6463921480386d3966"
+        },
+        {
+          "path": "assets/images/optimized/img-14-fluido-como-farmaco-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 468740,
+          "sha256": "0ff105d99149eb972d0100ab78eaf098cb3f8f4b566485b1b95ebd353a2baf72"
+        }
+      ],
+      "alt": "Fluido como fármaco. Indicação, dose, resposta e toxicidade; 30 mL/kg como ponto inicial condicional em hipoperfusão/choque, nunca bolus universal cego.",
+      "caption": "Fluido como fármaco — Indicação, dose, resposta e toxicidade; 30 mL/kg como ponto inicial condicional em hipoperfusão/choque, nunca bolus universal cego.",
+      "longDescription": "Imagem didática IMG-14, com função de modelo mental. Indicação, dose, resposta e toxicidade; 30 mL/kg como ponto inicial condicional em hipoperfusão/choque, nunca bolus universal cego. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-15",
+      "anchor": "hemodinamica",
+      "title": "Responsividade dinâmica",
+      "role": "explicação fisiológica",
+      "master": {
+        "path": "assets/images/img-15-responsividade-dinamica.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1653425,
+        "sha256": "2e8fc526d47de09b45d45c23c7b5c55a7f2bd5b19ba700e5ca38e312d6cb460c"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-15-responsividade-dinamica-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 192103,
+          "sha256": "048e98973e07d4e741b56c885eb4605d3b533308ac3668921e7997d1d28f3113"
+        },
+        {
+          "path": "assets/images/optimized/img-15-responsividade-dinamica-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 478458,
+          "sha256": "46abce4fce785dfbaa1d062629ec790463aaa298b6fbfaf6d1fe29447944ea6a"
+        }
+      ],
+      "alt": "Responsividade dinâmica. Elevação passiva das pernas e pequena prova de fluido alterando volume sistólico; separar responsividade de necessidade e tolerância.",
+      "caption": "Responsividade dinâmica — Elevação passiva das pernas e pequena prova de fluido alterando volume sistólico; separar responsividade de necessidade e tolerância.",
+      "longDescription": "Imagem didática IMG-15, com função de explicação fisiológica. Elevação passiva das pernas e pequena prova de fluido alterando volume sistólico; separar responsividade de necessidade e tolerância. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-16",
+      "anchor": "hemodinamica",
+      "title": "Quando o tanque transborda",
+      "role": "alerta de dano",
+      "master": {
+        "path": "assets/images/img-16-tolerancia-congestao.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1802088,
+        "sha256": "6f3dea1d4de488073614e299a348f619d6c265706401e4465a509791ee8f0244"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-16-tolerancia-congestao-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 188075,
+          "sha256": "f0cb7a1e3731dfad0489ae8e60bfdcf7e0916367b8828a8ccb9c841398194445"
+        },
+        {
+          "path": "assets/images/optimized/img-16-tolerancia-congestao-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 473908,
+          "sha256": "4c73c678fc71828b4539c17b8827ce942055893abfff5bf717c457ff8cb64436"
+        }
+      ],
+      "alt": "Quando o tanque transborda. Pulmão, sistema venoso, VD, rim e abdome mostrando congestão e perda de tolerância a novos bolus.",
+      "caption": "Quando o tanque transborda — Pulmão, sistema venoso, VD, rim e abdome mostrando congestão e perda de tolerância a novos bolus.",
+      "longDescription": "Imagem didática IMG-16, com função de alerta de dano. Pulmão, sistema venoso, VD, rim e abdome mostrando congestão e perda de tolerância a novos bolus. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-17",
+      "anchor": "hemodinamica",
+      "title": "Escada vasopressora",
+      "role": "algoritmo farmacológico",
+      "master": {
+        "path": "assets/images/img-17-escada-vasopressora.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1658269,
+        "sha256": "8fbc4a6b23f367e9a2be8a8827670c9ca8f8a7059f37e6874d4f487d3baa5134"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-17-escada-vasopressora-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 171058,
+          "sha256": "517f16ba4ea2e051db9b1e14328efc07e3fd0def19e981d33f8869311c34d9bf"
+        },
+        {
+          "path": "assets/images/optimized/img-17-escada-vasopressora-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 442304,
+          "sha256": "4ae2dce022a679a69e1fca8ed7d82070bb188d519d5c19ffdf1de2d45c1df052"
+        }
+      ],
+      "alt": "Escada vasopressora. Noradrenalina primeiro, vasopressina com escalada e adrenalina se PAM seguir inadequada; sem limiar de dose universal inventado.",
+      "caption": "Escada vasopressora — Noradrenalina primeiro, vasopressina com escalada e adrenalina se PAM seguir inadequada; sem limiar de dose universal inventado.",
+      "longDescription": "Imagem didática IMG-17, com função de algoritmo farmacológico. Noradrenalina primeiro, vasopressina com escalada e adrenalina se PAM seguir inadequada; sem limiar de dose universal inventado. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-18",
+      "anchor": "hemodinamica",
+      "title": "Vasopressor periférico sem atraso",
+      "role": "segurança operacional",
+      "master": {
+        "path": "assets/images/reviewed/img-18-noradrenalina-periferica.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1719729,
+        "sha256": "5166a3b5d4217baec6959ac9101094414d1a1eb9a49ebd6c2e21a43ddfb03c55"
+      },
+      "originalMaster": {
+        "path": "assets/images/img-18-noradrenalina-periferica.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1889351,
+        "sha256": "a00043b4e7b6774bb1bdbe9efa12585d6b940efec89b153c4b0e043a59cc9118"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-18-noradrenalina-periferica-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 197094,
+          "sha256": "9aa1575c4f9a75e4d29a3a310665e9fc90edc9f6ce455dc8fb92da2a383d0c82"
+        },
+        {
+          "path": "assets/images/optimized/img-18-noradrenalina-periferica-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 486713,
+          "sha256": "2828b0262fa01a20c37040b15fd00886fc0498c215d41ff902be32938271b2e8"
+        }
+      ],
+      "alt": "Vasopressor periférico sem atraso. Acesso periférico pérvio, visível e monitorado conforme protocolo local, com reavaliação da estratégia se o suporte persistir; a SSC 2026 não define sítio, calibre, dose ou duração universais.",
+      "caption": "Vasopressor periférico sem atraso — Acesso periférico pérvio, visível e monitorado conforme protocolo local, com reavaliação da estratégia se o suporte persistir; a SSC 2026 não define sítio, calibre, dose ou duração universais.",
+      "longDescription": "Imagem didática IMG-18, com função de segurança operacional. Acesso periférico pérvio, visível e monitorado conforme protocolo local, com reavaliação da estratégia se o suporte persistir; a SSC 2026 não define sítio, calibre, dose ou duração universais. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ],
+      "generatedRevision": true,
+      "reviewPending": true,
+      "revisionSource": "assets/images/reviewed/img-18-noradrenalina-periferica.png"
+    },
+    {
+      "id": "IMG-19",
+      "anchor": "hemodinamica",
+      "title": "PAM: alvo inicial e individualização",
+      "role": "comparação de recomendação",
+      "master": {
+        "path": "assets/images/img-19-alvos-pam.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1577158,
+        "sha256": "26c069489732d3ab6f4ce84fbad8eeb43cd9370c0ad58e8a7f7a76021a56b1b2"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-19-alvos-pam-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 186359,
+          "sha256": "b2e15276cd1a29eb72b8c56a8e73d5302fd20ab15bed1f469d5334cd25205d91"
+        },
+        {
+          "path": "assets/images/optimized/img-19-alvos-pam-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 443393,
+          "sha256": "96c734793f1dcad94b192ce3018cffe4590f9c5fea52a61cf1e4a93650851162"
+        }
+      ],
+      "alt": "PAM: alvo inicial e individualização. PAM 65 mmHg como alvo inicial geral; faixa 60–65 mmHg em adultos com 65 anos ou mais destacada como condicional de baixa certeza.",
+      "caption": "PAM: alvo inicial e individualização — PAM 65 mmHg como alvo inicial geral; faixa 60–65 mmHg em adultos com 65 anos ou mais destacada como condicional de baixa certeza.",
+      "longDescription": "Imagem didática IMG-19, com função de comparação de recomendação. PAM 65 mmHg como alvo inicial geral; faixa 60–65 mmHg em adultos com 65 anos ou mais destacada como condicional de baixa certeza. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-20",
+      "anchor": "fenotipos",
+      "title": "Três camadas de fenotipagem",
+      "role": "mapa conceitual",
+      "master": {
+        "path": "assets/images/img-20-tres-camadas-fenotipo.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1883392,
+        "sha256": "10f11c6b00c1a6b1af412fb3663e4a5e03c9a9a1d01989b9e18c01817781ec30"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-20-tres-camadas-fenotipo-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 197648,
+          "sha256": "51cd3fcfab19157ae78df39135f20b7ee9e6612590910ca98976f8780721d13c"
+        },
+        {
+          "path": "assets/images/optimized/img-20-tres-camadas-fenotipo-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 509885,
+          "sha256": "fd07f8afee3b2e0a95f047a5824661eb64a7e2344c1147410180e1b622fa77b5"
+        }
+      ],
+      "alt": "Três camadas de fenotipagem. Fisiologia hemodinâmica acionável hoje, SENECA descritivo e CTS molecular investigacional; linha clara entre explicação e prescrição.",
+      "caption": "Três camadas de fenotipagem — Fisiologia hemodinâmica acionável hoje, SENECA descritivo e CTS molecular investigacional; linha clara entre explicação e prescrição.",
+      "longDescription": "Imagem didática IMG-20, com função de mapa conceitual. Fisiologia hemodinâmica acionável hoje, SENECA descritivo e CTS molecular investigacional; linha clara entre explicação e prescrição. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "seneca",
+        "transcriptomic"
+      ]
+    },
+    {
+      "id": "IMG-21",
+      "anchor": "fenotipos",
+      "title": "Perfil vasoplégico",
+      "role": "fenótipo fisiológico",
+      "master": {
+        "path": "assets/images/img-21-fenotipo-vasoplegico.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1715029,
+        "sha256": "a6d18869e2433104aa56f8ec56ff6ecacb2bd6576e678ffd16fbaef785e56efe"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-21-fenotipo-vasoplegico-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 200494,
+          "sha256": "a442b89b53285cc2bd3a44104d87ca78b7772b904bfe97d28b5f2942b083e7cb"
+        },
+        {
+          "path": "assets/images/optimized/img-21-fenotipo-vasoplegico-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 502296,
+          "sha256": "97c43e1918b274fa578df72ed94de5aa276cb301fdff6def4ef2f2ff8c51ded5"
+        }
+      ],
+      "alt": "Perfil vasoplégico. Baixo tônus arterial, pressão diastólica reduzida, fluxo mal distribuído e necessidade de vasopressor; pressão corrigida não significa perfusão restaurada.",
+      "caption": "Perfil vasoplégico — Baixo tônus arterial, pressão diastólica reduzida, fluxo mal distribuído e necessidade de vasopressor; pressão corrigida não significa perfusão restaurada.",
+      "longDescription": "Imagem didática IMG-21, com função de fenótipo fisiológico. Baixo tônus arterial, pressão diastólica reduzida, fluxo mal distribuído e necessidade de vasopressor; pressão corrigida não significa perfusão restaurada. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-22",
+      "anchor": "fenotipos",
+      "title": "Baixa pré-carga responsiva",
+      "role": "fenótipo fisiológico",
+      "master": {
+        "path": "assets/images/img-22-baixa-pre-carga.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1405292,
+        "sha256": "1d6c21760e71be4b07bec6d3e040e2dfec04e504b0e2ce89052d60d8dcf87602"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-22-baixa-pre-carga-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 109976,
+          "sha256": "98abbb52981c79e1dc4c509386d4456cc6f8f2ce8b833261d265c91e943da218"
+        },
+        {
+          "path": "assets/images/optimized/img-22-baixa-pre-carga-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 269034,
+          "sha256": "501baac972834c2683a91317661246015dee55be5b25672a6ddcd752160a7d1b"
+        }
+      ],
+      "alt": "Baixa pré-carga responsiva. Curva de Frank-Starling com resposta mensurável e vigilância simultânea de congestão; hipotensão ou VCI isolada não bastam.",
+      "caption": "Baixa pré-carga responsiva — Curva de Frank-Starling com resposta mensurável e vigilância simultânea de congestão; hipotensão ou VCI isolada não bastam.",
+      "longDescription": "Imagem didática IMG-22, com função de fenótipo fisiológico. Curva de Frank-Starling com resposta mensurável e vigilância simultânea de congestão; hipotensão ou VCI isolada não bastam. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-23",
+      "anchor": "fenotipos",
+      "title": "Perfil cardiomiopático",
+      "role": "fenótipo fisiológico",
+      "master": {
+        "path": "assets/images/img-23-cardiomiopatia-septica.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1934576,
+        "sha256": "0939e609798dfc974009a07151523e0fa66755298f0ad860d6c2c8fe9aa8241d"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-23-cardiomiopatia-septica-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 169783,
+          "sha256": "6658f6b2bb3f0400143e891c2e851ceef4b2943dc2aa5789db6a486dcdb89bc5"
+        },
+        {
+          "path": "assets/images/optimized/img-23-cardiomiopatia-septica-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 447139,
+          "sha256": "45d5ff6cc17283db8b90fe5332af1b0fb8f93404c02d2c6eb1eda67421efa8d1"
+        }
+      ],
+      "alt": "Perfil cardiomiopático. Disfunção VE/VD, acoplamento ventrículo-arterial e baixo fluxo apesar de PAM; fração de ejeção isolada não indica inotrópico.",
+      "caption": "Perfil cardiomiopático — Disfunção VE/VD, acoplamento ventrículo-arterial e baixo fluxo apesar de PAM; fração de ejeção isolada não indica inotrópico.",
+      "longDescription": "Imagem didática IMG-23, com função de fenótipo fisiológico. Disfunção VE/VD, acoplamento ventrículo-arterial e baixo fluxo apesar de PAM; fração de ejeção isolada não indica inotrópico. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-24",
+      "anchor": "fenotipos",
+      "title": "VD e choque obstrutivo",
+      "role": "fenótipo fisiológico",
+      "master": {
+        "path": "assets/images/img-24-vd-obstrutivo.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1764972,
+        "sha256": "27045e21b04886b742332c4169df50098e174e879944f8b1eb9273edc5eb5e31"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-24-vd-obstrutivo-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 175940,
+          "sha256": "7ad46e6fc7555ac01eae59b1559da073c75319eed4b1bec8b127ede1581de6eb"
+        },
+        {
+          "path": "assets/images/optimized/img-24-vd-obstrutivo-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 455605,
+          "sha256": "66c035972bf1d05baf269b52ba34f1d20580f1ec3d0e308f4143075772677cac"
+        }
+      ],
+      "alt": "VD e choque obstrutivo. VD dilatado, TEP, tamponamento, pneumotórax, auto-PEEP e pressão abdominal como causas reversíveis que podem coexistir com infecção.",
+      "caption": "VD e choque obstrutivo — VD dilatado, TEP, tamponamento, pneumotórax, auto-PEEP e pressão abdominal como causas reversíveis que podem coexistir com infecção.",
+      "longDescription": "Imagem didática IMG-24, com função de fenótipo fisiológico. VD dilatado, TEP, tamponamento, pneumotórax, auto-PEEP e pressão abdominal como causas reversíveis que podem coexistir com infecção. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-25",
+      "anchor": "fenotipos",
+      "title": "Choque misto e dinâmico",
+      "role": "modelo temporal",
+      "master": {
+        "path": "assets/images/img-25-choque-misto-dinamico.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1732754,
+        "sha256": "ffc3b06f2476fe03357ef9a6be47aba9986732b66ea3f1e9cfe0d922df4f8454"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-25-choque-misto-dinamico-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 154542,
+          "sha256": "658d9f6849faa0856cc7daf13663b9bc1d836cd7f562ba3fac96b6ae9bc7ec98"
+        },
+        {
+          "path": "assets/images/optimized/img-25-choque-misto-dinamico-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 399689,
+          "sha256": "6f09c65f9a8fe604ecabbefb078ac52f71cdc1595ddd896ebd349587e0b98ca6"
+        }
+      ],
+      "alt": "Choque misto e dinâmico. Perfis sobrepostos mudando após fluido, intubação e vasopressor; reclassificação seriada em vez de rótulo fixo.",
+      "caption": "Choque misto e dinâmico — Perfis sobrepostos mudando após fluido, intubação e vasopressor; reclassificação seriada em vez de rótulo fixo.",
+      "longDescription": "Imagem didática IMG-25, com função de modelo temporal. Perfis sobrepostos mudando após fluido, intubação e vasopressor; reclassificação seriada em vez de rótulo fixo. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-26",
+      "anchor": "fenotipos",
+      "title": "SENECA α β γ δ",
+      "role": "resumo de pesquisa",
+      "master": {
+        "path": "assets/images/img-26-seneca-alpha-beta-gamma-delta.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1777156,
+        "sha256": "22de7ecfe7cf128cc7db4bd38629312ec40130763928a0d6efe1aa890a24f4e1"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-26-seneca-alpha-beta-gamma-delta-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 157496,
+          "sha256": "63102ab088a444225e87889ed66351e0567dec817218258dcb0ddc766fdb7303"
+        },
+        {
+          "path": "assets/images/optimized/img-26-seneca-alpha-beta-gamma-delta-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 406210,
+          "sha256": "42f8d211f69c26a5cb78e5c8a8fd9a7ec2a2f3186cb801fc6f2c6c2c052dd2d3"
+        }
+      ],
+      "alt": "SENECA α β γ δ. Quatro clusters com características originais, mortalidade relativa e aviso dominante: retrospectivos, distribuição variável e não prescritivos.",
+      "caption": "SENECA α β γ δ — Quatro clusters com características originais, mortalidade relativa e aviso dominante: retrospectivos, distribuição variável e não prescritivos.",
+      "longDescription": "Imagem didática IMG-26, com função de resumo de pesquisa. Quatro clusters com características originais, mortalidade relativa e aviso dominante: retrospectivos, distribuição variável e não prescritivos. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "seneca",
+        "seneca-validation"
+      ]
+    },
+    {
+      "id": "IMG-27",
+      "anchor": "fenotipos",
+      "title": "CTS1, CTS2 e CTS3",
+      "role": "mecanismo molecular",
+      "master": {
+        "path": "assets/images/img-27-cts-transcriptomica.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1858582,
+        "sha256": "4edd5e05704648bb64715a0a3b95749efee61a02650690e20d7c1135696b915f"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-27-cts-transcriptomica-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 184187,
+          "sha256": "fdeb9ce1ac88fc7686f14c757795ada987220f8b8330436a312f216e789d9107"
+        },
+        {
+          "path": "assets/images/optimized/img-27-cts-transcriptomica-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 470015,
+          "sha256": "87864196f2ac8606283d1a11361108bba91e3d7574a2deef6d8f9af64eac429f"
+        }
+      ],
+      "alt": "CTS1, CTS2 e CTS3. Assinaturas transcriptômicas de inflamação/endotélio, heme/fibrinólise e interferon/imunidade adaptativa, sem correspondência clínica simplista.",
+      "caption": "CTS1, CTS2 e CTS3 — Assinaturas transcriptômicas de inflamação/endotélio, heme/fibrinólise e interferon/imunidade adaptativa, sem correspondência clínica simplista.",
+      "longDescription": "Imagem didática IMG-27, com função de mecanismo molecular. Assinaturas transcriptômicas de inflamação/endotélio, heme/fibrinólise e interferon/imunidade adaptativa, sem correspondência clínica simplista. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "transcriptomic"
+      ]
+    },
+    {
+      "id": "IMG-28",
+      "anchor": "refrataria",
+      "title": "Oito domínios antes do resgate",
+      "role": "checklist visual",
+      "master": {
+        "path": "assets/images/img-28-auditoria-choque-refratario.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1827382,
+        "sha256": "9fe068297abe4255840d2da8a989a81a73459043515545a995663aaf81f0453f"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-28-auditoria-choque-refratario-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 178026,
+          "sha256": "126f519671dcb1571b5436762f4ea29ab7e1dcb490990d89873554fce1360160"
+        },
+        {
+          "path": "assets/images/optimized/img-28-auditoria-choque-refratario-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 442535,
+          "sha256": "f5a07a3122c0f8bc617b1c4fad6aa9d5f68b127d2ad29b14887ee1940af1a561"
+        }
+      ],
+      "alt": "Oito domínios antes do resgate. Diagnóstico, foco, antimicrobiano, tanque, vasoplegia, bomba, tubos/pressões e metabolismo em circuito fechado.",
+      "caption": "Oito domínios antes do resgate — Diagnóstico, foco, antimicrobiano, tanque, vasoplegia, bomba, tubos/pressões e metabolismo em circuito fechado.",
+      "longDescription": "Imagem didática IMG-28, com função de checklist visual. Diagnóstico, foco, antimicrobiano, tanque, vasoplegia, bomba, tubos/pressões e metabolismo em circuito fechado. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-29",
+      "anchor": "refrataria",
+      "title": "Lactato persistente tem múltiplos mecanismos",
+      "role": "anti-ancoragem",
+      "master": {
+        "path": "assets/images/img-29-lactato-persistente.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1840505,
+        "sha256": "58110d6713cd71efa3e28a3849f9d09f621e4c5b26dec44187395ef8e641ad9b"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-29-lactato-persistente-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 193243,
+          "sha256": "fd08cf58cda8d427d79048a47fe03985fb5252095a2d05dfb34f76a4f6f24cd8"
+        },
+        {
+          "path": "assets/images/optimized/img-29-lactato-persistente-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 488898,
+          "sha256": "9b794b423933c8b948aa2338493cd9a75e47588234c701945e25ffd3fa8cc953"
+        }
+      ],
+      "alt": "Lactato persistente tem múltiplos mecanismos. Hipoperfusão, catecolaminas, depuração hepática, convulsão e disfunção mitocondrial como caminhos possíveis; não ordenar fluido isoladamente.",
+      "caption": "Lactato persistente tem múltiplos mecanismos — Hipoperfusão, catecolaminas, depuração hepática, convulsão e disfunção mitocondrial como caminhos possíveis; não ordenar fluido isoladamente.",
+      "longDescription": "Imagem didática IMG-29, com função de anti-ancoragem. Hipoperfusão, catecolaminas, depuração hepática, convulsão e disfunção mitocondrial como caminhos possíveis; não ordenar fluido isoladamente. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-30",
+      "anchor": "refrataria",
+      "title": "POCUS integrado, não oráculo",
+      "role": "mapa de avaliação",
+      "master": {
+        "path": "assets/images/img-30-pocus-hemodinamica-integrada.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1440766,
+        "sha256": "93a25e9367f4b145d2f58b6fa7d2972e158bdb462cb0f20496871b76e2b8e7c0"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-30-pocus-hemodinamica-integrada-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 149450,
+          "sha256": "f84fd967116ced87b0d7fc75f5e847d214c33db846e4c309d801306af1bd4407"
+        },
+        {
+          "path": "assets/images/optimized/img-30-pocus-hemodinamica-integrada-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 372360,
+          "sha256": "bb35f09e5acad41c88ffa18477a4d14d4382dcd3f451361c562d9d36edd52503"
+        }
+      ],
+      "alt": "POCUS integrado, não oráculo. Coração, pulmão, veias, abdome e resposta dinâmica integrados à clínica; imagem isolada nunca fecha volume ou etiologia.",
+      "caption": "POCUS integrado, não oráculo — Coração, pulmão, veias, abdome e resposta dinâmica integrados à clínica; imagem isolada nunca fecha volume ou etiologia.",
+      "longDescription": "Imagem didática IMG-30, com função de mapa de avaliação. Coração, pulmão, veias, abdome e resposta dinâmica integrados à clínica; imagem isolada nunca fecha volume ou etiologia. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "andromeda2"
+      ]
+    },
+    {
+      "id": "IMG-31",
+      "anchor": "suporte",
+      "title": "Proteção respiratória",
+      "role": "suporte orgânico",
+      "master": {
+        "path": "assets/images/img-31-suporte-respiratorio.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1685100,
+        "sha256": "910069535894e6b4625f333a4cca86b21e9882b89b90a33791c375d1ecff27c1"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-31-suporte-respiratorio-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 168494,
+          "sha256": "06a33830a98c8daa3d4df0fc3da82f5ddf31b9be41d0ee92745532e18ca22687"
+        },
+        {
+          "path": "assets/images/optimized/img-31-suporte-respiratorio-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 420143,
+          "sha256": "7d291c126aa5c325d1a6026cc358ea8451784de8632b3f3280afd584f60f0737"
+        }
+      ],
+      "alt": "Proteção respiratória. CNAF em hipoxemia selecionada, reconhecimento de falha, intubação oportuna e ventilação protetora em SDRA com peso predito.",
+      "caption": "Proteção respiratória — CNAF em hipoxemia selecionada, reconhecimento de falha, intubação oportuna e ventilação protetora em SDRA com peso predito.",
+      "longDescription": "Imagem didática IMG-31, com função de suporte orgânico. CNAF em hipoxemia selecionada, reconhecimento de falha, intubação oportuna e ventilação protetora em SDRA com peso predito. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-32",
+      "anchor": "suporte",
+      "title": "Rim, dose e terapia renal",
+      "role": "suporte orgânico",
+      "master": {
+        "path": "assets/images/img-32-rim-e-trs.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1912945,
+        "sha256": "86ec98e1279c53b051fa3c082ece638a37be1a55072f5d3027aa2fae00523753"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-32-rim-e-trs-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 204522,
+          "sha256": "1a1dc8cd9a6fb4bc887963bb2cacdea0e4be8f5074615224e300d8a854a3872e"
+        },
+        {
+          "path": "assets/images/optimized/img-32-rim-e-trs-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 521937,
+          "sha256": "43999370706138c9c059e1a98d6e7cbd4c67985ee95117bf0d3af8971c9a5f3d"
+        }
+      ],
+      "alt": "Rim, dose e terapia renal. Ajuste antimicrobiano dinâmico, nefrotóxicos, indicações clássicas de TRS e separação entre suporte renal e purificação experimental.",
+      "caption": "Rim, dose e terapia renal — Ajuste antimicrobiano dinâmico, nefrotóxicos, indicações clássicas de TRS e separação entre suporte renal e purificação experimental.",
+      "longDescription": "Imagem didática IMG-32, com função de suporte orgânico. Ajuste antimicrobiano dinâmico, nefrotóxicos, indicações clássicas de TRS e separação entre suporte renal e purificação experimental. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-33",
+      "anchor": "suporte",
+      "title": "Transfusão e tromboprofilaxia",
+      "role": "suporte orgânico",
+      "master": {
+        "path": "assets/images/img-33-hematologia.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1825902,
+        "sha256": "c8467096de5fca528978c3fb4a390c640c87523541183a44895a346ab4463680"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-33-hematologia-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 182754,
+          "sha256": "c921afe985f3c4418569b2adc43b263b6a6a8bdb3a04a8c5a3487ee0b6c1728f"
+        },
+        {
+          "path": "assets/images/optimized/img-33-hematologia-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 462319,
+          "sha256": "862f0cfcfa2f407b74430229cea57f8b417ea1f8777405689df67668e5bed594"
+        }
+      ],
+      "alt": "Transfusão e tromboprofilaxia. Estratégia restritiva contextualizada e tromboprofilaxia salvo contraindicação, com sangramento, isquemia e procedimentos como modificadores.",
+      "caption": "Transfusão e tromboprofilaxia — Estratégia restritiva contextualizada e tromboprofilaxia salvo contraindicação, com sangramento, isquemia e procedimentos como modificadores.",
+      "longDescription": "Imagem didática IMG-33, com função de suporte orgânico. Estratégia restritiva contextualizada e tromboprofilaxia salvo contraindicação, com sangramento, isquemia e procedimentos como modificadores. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-34",
+      "anchor": "suporte",
+      "title": "Nutrição e metabolismo",
+      "role": "suporte orgânico",
+      "master": {
+        "path": "assets/images/img-34-nutricao-metabolismo.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1700001,
+        "sha256": "91b269cae3de86ddf0740b31d1ce363dcff335b77758cee944dcfa17c5464546"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-34-nutricao-metabolismo-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 173768,
+          "sha256": "f5ee59d49def2df8c9a6eb7e1726df562b61e8f28107f6df96689ae8d66d65d7"
+        },
+        {
+          "path": "assets/images/optimized/img-34-nutricao-metabolismo-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 439862,
+          "sha256": "42f1942ef68acc9084942c85d1e4d9970405920f8bfe7d07e2f7770ee76fb12f"
+        }
+      ],
+      "alt": "Nutrição e metabolismo. Nutrição enteral precoce quando viável, alvo glicêmico operacional e riscos de sobrealimentação e hipoglicemia.",
+      "caption": "Nutrição e metabolismo — Nutrição enteral precoce quando viável, alvo glicêmico operacional e riscos de sobrealimentação e hipoglicemia.",
+      "longDescription": "Imagem didática IMG-34, com função de suporte orgânico. Nutrição enteral precoce quando viável, alvo glicêmico operacional e riscos de sobrealimentação e hipoglicemia. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-35",
+      "anchor": "fronteira",
+      "title": "Corticosteroide no choque persistente",
+      "role": "evidência terapêutica",
+      "master": {
+        "path": "assets/images/img-35-corticosteroide-choque.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1586591,
+        "sha256": "ffb5d5233dbd36f1d7cb9f9a4e620c6332f6e46c5dc0fd4a149d142c7ce364d4"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-35-corticosteroide-choque-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 183982,
+          "sha256": "5db01ec734d813da5fdc5ef78e450e36b367b43a91a76145f9b1826df444d866"
+        },
+        {
+          "path": "assets/images/optimized/img-35-corticosteroide-choque-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 471086,
+          "sha256": "b3d0d5eb9df3a05f91db68a51b29d7aa289200b63f1895911e6ad8e34573f303"
+        }
+      ],
+      "alt": "Corticosteroide no choque persistente. Posição condicional, baixa certeza, monitorização e linha vermelha contra esquema curto de dose muito alta.",
+      "caption": "Corticosteroide no choque persistente — Posição condicional, baixa certeza, monitorização e linha vermelha contra esquema curto de dose muito alta.",
+      "longDescription": "Imagem didática IMG-35, com função de evidência terapêutica. Posição condicional, baixa certeza, monitorização e linha vermelha contra esquema curto de dose muito alta. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "steroids2024"
+      ]
+    },
+    {
+      "id": "IMG-36",
+      "anchor": "fronteira",
+      "title": "Apoiada, insuficiente ou sugerida contra",
+      "role": "letramento em evidência",
+      "master": {
+        "path": "assets/images/img-36-escada-evidencia-fronteira.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1848149,
+        "sha256": "b5430cd934d42b1c539aa68942498bd74eb1a82ce7f692669ece4f501d4ddaff"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-36-escada-evidencia-fronteira-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 171449,
+          "sha256": "68606b3b90b221bfde069830ff0755c0c44ead8e41f7b1c2243e9f86695158b3"
+        },
+        {
+          "path": "assets/images/optimized/img-36-escada-evidencia-fronteira-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 450238,
+          "sha256": "860d6eebd2b5fed74eeecb61df5947629b1222f812f27d3fc9805072ba7457b3"
+        }
+      ],
+      "alt": "Apoiada, insuficiente ou sugerida contra. Três níveis visuais separando prática apoiada, ausência de recomendação e recomendação contra rotina; off-label não equivale a benefício.",
+      "caption": "Apoiada, insuficiente ou sugerida contra — Três níveis visuais separando prática apoiada, ausência de recomendação e recomendação contra rotina; off-label não equivale a benefício.",
+      "longDescription": "Imagem didática IMG-36, com função de letramento em evidência. Três níveis visuais separando prática apoiada, ausência de recomendação e recomendação contra rotina; off-label não equivale a benefício. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-37",
+      "anchor": "fronteira",
+      "title": "Azul de metileno: fisiologia sedutora, evidência insuficiente",
+      "role": "alerta off-label",
+      "master": {
+        "path": "assets/images/img-37-azul-metileno-seguranca.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1988766,
+        "sha256": "aa186a6156d18808a452e0ef05f137389515550d18c621a33fc30a92df8fb698"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-37-azul-metileno-seguranca-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 197761,
+          "sha256": "8269a1338c06a1c510e15df9e348cfdf0553fbfccac5049058d1f3c2345f4600"
+        },
+        {
+          "path": "assets/images/optimized/img-37-azul-metileno-seguranca-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 522747,
+          "sha256": "a90847b5caa9ae7156a20048c51d0d1ffd359f67d0982a0ba14844039a31e08c"
+        }
+      ],
+      "alt": "Azul de metileno: fisiologia sedutora, evidência insuficiente. Via NO–guanilato ciclase, possibilidade de aumento pressórico e hard stops: G6PD, hemólise, serotonérgicos e interferência na oximetria; rótulo regulatório não inclui choque.",
+      "caption": "Azul de metileno: fisiologia sedutora, evidência insuficiente — Via NO–guanilato ciclase, possibilidade de aumento pressórico e hard stops: G6PD, hemólise, serotonérgicos e interferência na oximetria; rótulo regulatório não inclui choque.",
+      "longDescription": "Imagem didática IMG-37, com função de alerta off-label. Via NO–guanilato ciclase, possibilidade de aumento pressórico e hard stops: G6PD, hemólise, serotonérgicos e interferência na oximetria; rótulo regulatório não inclui choque. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "methylene-fda"
+      ]
+    },
+    {
+      "id": "IMG-38",
+      "anchor": "recuperacao",
+      "title": "Da estabilização à reconstrução",
+      "role": "trajetória pós-sepse",
+      "master": {
+        "path": "assets/images/img-38-jornada-pos-sepse.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1882762,
+        "sha256": "8c03670ab5445a8a5c8f608dd28caa2342074221b0d0f88430f7907d9898a2f4"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-38-jornada-pos-sepse-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 191425,
+          "sha256": "05bb939abdc042872669e39f715bdb210141f27feb7f7974129a57c0f3cfc882"
+        },
+        {
+          "path": "assets/images/optimized/img-38-jornada-pos-sepse-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 499170,
+          "sha256": "4d7e71b4a2aa57453d48c77ef813ff681e076c8d009d6b3bfdcc96da513a32f2"
+        }
+      ],
+      "alt": "Da estabilização à reconstrução. Estabilização, desressuscitação, reconstrução e transição com mobilidade, cognição, deglutição, saúde mental e reconciliação medicamentosa.",
+      "caption": "Da estabilização à reconstrução — Estabilização, desressuscitação, reconstrução e transição com mobilidade, cognição, deglutição, saúde mental e reconciliação medicamentosa.",
+      "longDescription": "Imagem didática IMG-38, com função de trajetória pós-sepse. Estabilização, desressuscitação, reconstrução e transição com mobilidade, cognição, deglutição, saúde mental e reconciliação medicamentosa. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-39",
+      "anchor": "prevencao",
+      "title": "Sistema hospitalar de prevenção e resposta",
+      "role": "arquitetura de qualidade",
+      "master": {
+        "path": "assets/images/img-39-sistema-prevencao.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1772984,
+        "sha256": "018af41904d5a5b2489231a04f53eda2263d86d2e70a29b1d2bb97a0ce9b5e8d"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-39-sistema-prevencao-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 180309,
+          "sha256": "ea72a84140b3d46574325eeb60bf0e9e8f590dd9189b7bf499119c9baeac682a"
+        },
+        {
+          "path": "assets/images/optimized/img-39-sistema-prevencao-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 452286,
+          "sha256": "a8c34552189ed2370366182d4857de4523b0fbfb863b8d2216e52be7e716a324"
+        }
+      ],
+      "alt": "Sistema hospitalar de prevenção e resposta. Prevenção de infecção, código sepse, stewardship, laboratório, farmácia, enfermagem, auditoria e aprendizagem em circuito.",
+      "caption": "Sistema hospitalar de prevenção e resposta — Prevenção de infecção, código sepse, stewardship, laboratório, farmácia, enfermagem, auditoria e aprendizagem em circuito.",
+      "longDescription": "Imagem didática IMG-39, com função de arquitetura de qualidade. Prevenção de infecção, código sepse, stewardship, laboratório, farmácia, enfermagem, auditoria e aprendizagem em circuito. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "cdc-core",
+        "ilas"
+      ]
+    },
+    {
+      "id": "IMG-40",
+      "anchor": "radar",
+      "title": "Radar Sepse com IA governada",
+      "role": "pipeline de atualização",
+      "master": {
+        "path": "assets/images/img-40-radar-ia-governada.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1802569,
+        "sha256": "049e60f1a7b1ad8aac4af116102cd53805b44cc4dadd25bd8d01c6edfcdf7c5b"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-40-radar-ia-governada-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 204499,
+          "sha256": "2a6aaf2a4d6a011dad46ddfa7b333d997f0d3cca21ccc8599a9a1baebf0d6ad6"
+        },
+        {
+          "path": "assets/images/optimized/img-40-radar-ia-governada-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 525321,
+          "sha256": "e34fad0fbc119ed0851687bee74ccd0e8fd375610a90c93a0d0392080c0bd1df"
+        }
+      ],
+      "alt": "Radar Sepse com IA governada. Fonte oficial, deduplicação, crítica metodológica, revisão médica e card aprovado; IA nunca altera protocolo ou prescreve autonomamente.",
+      "caption": "Radar Sepse com IA governada — Fonte oficial, deduplicação, crítica metodológica, revisão médica e card aprovado; IA nunca altera protocolo ou prescreve autonomamente.",
+      "longDescription": "Imagem didática IMG-40, com função de pipeline de atualização. Fonte oficial, deduplicação, crítica metodológica, revisão médica e card aprovado; IA nunca altera protocolo ou prescreve autonomamente. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "composer-llm"
+      ]
+    },
+    {
+      "id": "IMG-41",
+      "anchor": "suspeita",
+      "title": "Disfunção orgânica: o sinal de entrada",
+      "role": "reconhecimento multiorgânico",
+      "master": {
+        "path": "assets/images/img-41-disfuncao-organica-sinal-entrada.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1941160,
+        "sha256": "ec05fcb8221ebeda68c1910a61ce6fd925a4140e488db88cc125a2bfbf04b432"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-41-disfuncao-organica-sinal-entrada-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 250675,
+          "sha256": "41c59718c73bf143475b0cbef7528ca3c36f20e864d312096225f77a42b30bd5"
+        },
+        {
+          "path": "assets/images/optimized/img-41-disfuncao-organica-sinal-entrada-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 624942,
+          "sha256": "7a9ea4295aaa8583461781529efe4eb0e0d2938d1d5e9ed949e1c165812d1236"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Disfunção orgânica: o sinal de entrada. Cérebro, pulmão, circulação, rim, fígado e coagulação organizados como manifestações agudas que exigem busca imediata e reavaliação.",
+      "caption": "Disfunção orgânica: o sinal de entrada — Cérebro, pulmão, circulação, rim, fígado e coagulação organizados como manifestações agudas que exigem busca imediata e reavaliação.",
+      "longDescription": "Imagem didática IMG-41, com função de reconhecimento multiorgânico. Cérebro, pulmão, circulação, rim, fígado e coagulação organizados como manifestações agudas que exigem busca imediata e reavaliação. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "sepsis3",
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-42",
+      "anchor": "suspeita",
+      "title": "Do foco à falência orgânica",
+      "role": "fisiopatologia integrada",
+      "master": {
+        "path": "assets/images/img-42-foco-falencia-organica.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2234862,
+        "sha256": "db5a45267806d844b492d2bb422acc2fbbb216ac7f5b960f698f3d143f648ad5"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-42-foco-falencia-organica-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 254084,
+          "sha256": "dc5280cf11486dc362cff269d0994ab0f3ee15d3114641fe6ec0b6e2c3851cfb"
+        },
+        {
+          "path": "assets/images/optimized/img-42-foco-falencia-organica-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 671807,
+          "sha256": "2dbd5a137e7a790b2849b0b25b3af292012d3277babf7abc52e94d25e1fb4b96"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Do foco à falência orgânica. PAMPs/DAMPs, endotélio e glicocálix, vasoplegia, permeabilidade e imunotrombose conectados à disfunção orgânica sem reduzir sepse a uma única via.",
+      "caption": "Do foco à falência orgânica — PAMPs/DAMPs, endotélio e glicocálix, vasoplegia, permeabilidade e imunotrombose conectados à disfunção orgânica sem reduzir sepse a uma única via.",
+      "longDescription": "Imagem didática IMG-42, com função de fisiopatologia integrada. PAMPs/DAMPs, endotélio e glicocálix, vasoplegia, permeabilidade e imunotrombose conectados à disfunção orgânica sem reduzir sepse a uma única via. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "sepsis3",
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-43",
+      "anchor": "suspeita",
+      "title": "Exames que respondem perguntas",
+      "role": "mapa laboratorial",
+      "master": {
+        "path": "assets/images/img-43-exames-respondem-perguntas.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1937764,
+        "sha256": "bf48ef25b08f561ea904532ac9634c8f3dc1ecc875e441b7874494a62b9b6926"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-43-exames-respondem-perguntas-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 202995,
+          "sha256": "5f7b9313e9cbdef3025c3d38dc5d36a8a95a68798db1cd4c527a49a931261f15"
+        },
+        {
+          "path": "assets/images/optimized/img-43-exames-respondem-perguntas-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 530660,
+          "sha256": "02809494a754913442314dfb5644e59faed21f6d7a58341ed7d0832fdeb1585e"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Exames que respondem perguntas. Organiza exames por quatro perguntas: órgão em falha, foco/patógeno, mimetizador e tendência que realmente muda decisão.",
+      "caption": "Exames que respondem perguntas — Organiza exames por quatro perguntas: órgão em falha, foco/patógeno, mimetizador e tendência que realmente muda decisão.",
+      "longDescription": "Imagem didática IMG-43, com função de mapa laboratorial. Organiza exames por quatro perguntas: órgão em falha, foco/patógeno, mimetizador e tendência que realmente muda decisão. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "sepsis3"
+      ]
+    },
+    {
+      "id": "IMG-44",
+      "anchor": "hemodinamica",
+      "title": "Lactato alto não é bolus automático",
+      "role": "anti-ancoragem hemodinâmica",
+      "master": {
+        "path": "assets/images/img-44-lactato-nao-bolus.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1746451,
+        "sha256": "81568d21f7afa890e997c08e2e0c5076f203fca63357f5fb81096af28aafe693"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-44-lactato-nao-bolus-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 218626,
+          "sha256": "9b305fdb211ace38bfcb5b7cda057198fdba5120caaf7a47be781b46d15ebd47"
+        },
+        {
+          "path": "assets/images/optimized/img-44-lactato-nao-bolus-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 541645,
+          "sha256": "e890ad8d7f8cea5e272c95c6a3dfd6b636cdbf99bf36ffca80b61fcea9dcfaa3"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Lactato alto não é bolus automático. Produção, depuração e contexto de perfusão demonstram por que lactato elevado não mede diretamente volume nem ordena expansão isoladamente.",
+      "caption": "Lactato alto não é bolus automático — Produção, depuração e contexto de perfusão demonstram por que lactato elevado não mede diretamente volume nem ordena expansão isoladamente.",
+      "longDescription": "Imagem didática IMG-44, com função de anti-ancoragem hemodinâmica. Produção, depuração e contexto de perfusão demonstram por que lactato elevado não mede diretamente volume nem ordena expansão isoladamente. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-45",
+      "anchor": "infeccao",
+      "title": "Escolha empírica em cinco camadas",
+      "role": "seleção antimicrobiana",
+      "master": {
+        "path": "assets/images/img-45-escolha-empirica-camadas.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2055070,
+        "sha256": "c5be6c155a8cb2abef3628b3f70fc59d2b8bb3055489e0b7f8626016c7b4e7d5"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-45-escolha-empirica-camadas-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 226917,
+          "sha256": "28860820ff7d467f28eb8cbf54eec69e8aee811520ed9f221e5ce5361e57be42"
+        },
+        {
+          "path": "assets/images/optimized/img-45-escolha-empirica-camadas-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 595322,
+          "sha256": "381e4cafe2db1354169e2fa577bed40a0eb8e9d6881efb91f3a316791fa1022b"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Escolha empírica em cinco camadas. Foco, gravidade, hospedeiro, microbiologia prévia e ecologia local convergem para cobertura empírica responsável e revisão precoce.",
+      "caption": "Escolha empírica em cinco camadas — Foco, gravidade, hospedeiro, microbiologia prévia e ecologia local convergem para cobertura empírica responsável e revisão precoce.",
+      "longDescription": "Imagem didática IMG-45, com função de seleção antimicrobiana. Foco, gravidade, hospedeiro, microbiologia prévia e ecologia local convergem para cobertura empírica responsável e revisão precoce. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "antibiotic-framework"
+      ]
+    },
+    {
+      "id": "IMG-46",
+      "anchor": "infeccao",
+      "title": "Dose de ataque não é manutenção",
+      "role": "farmacocinética aplicada",
+      "master": {
+        "path": "assets/images/img-46-dose-ataque-manutencao.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1842387,
+        "sha256": "8878495d21b07a2be83ff3a6d251b446c86e6ebb2f5f4fd9f0ba5b9e70084199"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-46-dose-ataque-manutencao-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 221823,
+          "sha256": "818235c26c0caaea90f6a98105b24d6376d824097371e86a2d1b0ae55d54e7d6"
+        },
+        {
+          "path": "assets/images/optimized/img-46-dose-ataque-manutencao-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 553541,
+          "sha256": "5aa5c206ea4b6f40600167ab4569ffcd1f33319d68be4965971d42f475953588"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Dose de ataque não é manutenção. Volume de distribuição, depuração e suportes extracorpóreos alteram exposição; ataque e manutenção respondem a perguntas farmacocinéticas diferentes.",
+      "caption": "Dose de ataque não é manutenção — Volume de distribuição, depuração e suportes extracorpóreos alteram exposição; ataque e manutenção respondem a perguntas farmacocinéticas diferentes.",
+      "longDescription": "Imagem didática IMG-46, com função de farmacocinética aplicada. Volume de distribuição, depuração e suportes extracorpóreos alteram exposição; ataque e manutenção respondem a perguntas farmacocinéticas diferentes. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-47",
+      "anchor": "infeccao",
+      "title": "Time-out antimicrobiano em 24–72 horas",
+      "role": "stewardship em circuito fechado",
+      "master": {
+        "path": "assets/images/img-47-timeout-antimicrobiano.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2095955,
+        "sha256": "9be8bfc315034ecf184ac3ebde90b24e5f2a6d65d50a990f86b5ebe459fd743e"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-47-timeout-antimicrobiano-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 237406,
+          "sha256": "92d2023b2a4b36d5a574fd00be2ed1063fac25782c4e63560314864990aafccc"
+        },
+        {
+          "path": "assets/images/optimized/img-47-timeout-antimicrobiano-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 619627,
+          "sha256": "b0db4eb1d9a1488b4c48c9030575c3148e3bc98a2241c368a7d6bb294a3fb353"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Time-out antimicrobiano em 24–72 horas. Probabilidade, culturas, foco, órgãos, espectro e duração orientam manter, desescalar ou suspender com justificativa documentada.",
+      "caption": "Time-out antimicrobiano em 24–72 horas — Probabilidade, culturas, foco, órgãos, espectro e duração orientam manter, desescalar ou suspender com justificativa documentada.",
+      "longDescription": "Imagem didática IMG-47, com função de stewardship em circuito fechado. Probabilidade, culturas, foco, órgãos, espectro e duração orientam manter, desescalar ou suspender com justificativa documentada. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-48",
+      "anchor": "infeccao",
+      "title": "Controle do foco: feche o circuito",
+      "role": "algoritmo anatômico",
+      "master": {
+        "path": "assets/images/img-48-controle-foco-circuito.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2050450,
+        "sha256": "08f1bd4569f8e479a45be9bf00c40842afd567ccf03f3a4f0eddb77e7c03dcf9"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-48-controle-foco-circuito-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 229961,
+          "sha256": "0b0845b71959cc99d1ea3834dad9adb5163ee9e5517ccf077293d7df765ab324"
+        },
+        {
+          "path": "assets/images/optimized/img-48-controle-foco-circuito-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 597651,
+          "sha256": "581546fad3a8d031f0aefca080df92c9bd47124c67227f21abbb0190fdd75609"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Controle do foco: feche o circuito. Localizar anatomia, definir urgência, intervir, buscar controle precoce quando indicado e confirmar eficácia antes de encerrar o ciclo.",
+      "caption": "Controle do foco: feche o circuito — Localizar anatomia, definir urgência, intervir, buscar controle precoce quando indicado e confirmar eficácia antes de encerrar o ciclo.",
+      "longDescription": "Imagem didática IMG-48, com função de algoritmo anatômico. Localizar anatomia, definir urgência, intervir, buscar controle precoce quando indicado e confirmar eficácia antes de encerrar o ciclo. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-49",
+      "anchor": "hemodinamica",
+      "title": "Perfusão é um mosaico",
+      "role": "integração hemodinâmica",
+      "master": {
+        "path": "assets/images/img-49-perfusao-mosaico.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2015333,
+        "sha256": "79c097dbe04b0f0b8ea307e68145ae2ce8ce4df04886697b75916d398c936aab"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-49-perfusao-mosaico-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 223957,
+          "sha256": "92750e206ab7ae8ae79e01d03ba29c05e518a54fafc5416389a5b6ee533a1fed"
+        },
+        {
+          "path": "assets/images/optimized/img-49-perfusao-mosaico-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 583918,
+          "sha256": "297ef8eb892ff8e0f06072df46597debeac16cba9ab7375dd3af28aa1798ea1d"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Perfusão é um mosaico. Pressão, fluxo, microcirculação e metabolismo/órgãos precisam convergir; nenhum marcador isolado representa toda a perfusão.",
+      "caption": "Perfusão é um mosaico — Pressão, fluxo, microcirculação e metabolismo/órgãos precisam convergir; nenhum marcador isolado representa toda a perfusão.",
+      "longDescription": "Imagem didática IMG-49, com função de integração hemodinâmica. Pressão, fluxo, microcirculação e metabolismo/órgãos precisam convergir; nenhum marcador isolado representa toda a perfusão. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "andromeda2",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-50",
+      "anchor": "hemodinamica",
+      "title": "Prova de fluido é pergunta com prazo",
+      "role": "algoritmo de fluido",
+      "master": {
+        "path": "assets/images/img-50-prova-fluido-prazo.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1826699,
+        "sha256": "64720344159bccc5cf2d217b4520b6b55d9906060de811d8f51c229f55e89706"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-50-prova-fluido-prazo-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 210406,
+          "sha256": "c9590d814904fd77007367f9a01e4c8aa9a9390194fbda2e5ed20c956260de01"
+        },
+        {
+          "path": "assets/images/optimized/img-50-prova-fluido-prazo-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 535182,
+          "sha256": "c248d7bca428b105c7b2b12d73570d239b59e575c9601e68db0f83b9fdde5ac4"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Prova de fluido é pergunta com prazo. Hipoperfusão tratável, teste reversível, medida de fluxo, tolerância e decisão explícita transformam volume em intervenção verificável.",
+      "caption": "Prova de fluido é pergunta com prazo — Hipoperfusão tratável, teste reversível, medida de fluxo, tolerância e decisão explícita transformam volume em intervenção verificável.",
+      "longDescription": "Imagem didática IMG-50, com função de algoritmo de fluido. Hipoperfusão tratável, teste reversível, medida de fluxo, tolerância e decisão explícita transformam volume em intervenção verificável. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-51",
+      "anchor": "hemodinamica",
+      "title": "Fluido muda de papel com o tempo",
+      "role": "trajetória de ressuscitação",
+      "master": {
+        "path": "assets/images/img-51-fluido-muda-papel.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1753316,
+        "sha256": "647571e03e6fa749fc5e19598ea0cd8e72e3e687468594aa56e3ecf767c3bd08"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-51-fluido-muda-papel-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 224736,
+          "sha256": "21b97057789ef6377cb5aa8f4a81bbf375318a4ad61e6c83dd02a70da974349c"
+        },
+        {
+          "path": "assets/images/optimized/img-51-fluido-muda-papel-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 567777,
+          "sha256": "b49a8a94455109670db944d653f4400112dfce18df13bc4705639a5d6b994c14"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Fluido muda de papel com o tempo. Resgate, reavaliação, estabilização e eventual remoção ativa após a fase aguda separam benefício precoce de dano acumulado.",
+      "caption": "Fluido muda de papel com o tempo — Resgate, reavaliação, estabilização e eventual remoção ativa após a fase aguda separam benefício precoce de dano acumulado.",
+      "longDescription": "Imagem didática IMG-51, com função de trajetória de ressuscitação. Resgate, reavaliação, estabilização e eventual remoção ativa após a fase aguda separam benefício precoce de dano acumulado. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-52",
+      "anchor": "hemodinamica",
+      "title": "PAM: ponto de partida, não piloto automático",
+      "role": "individualização pressórica",
+      "master": {
+        "path": "assets/images/img-52-pam-ponto-partida.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1734100,
+        "sha256": "67dd108b7c5b8faecf296716ab6373cd7e18f5077c023dff334077206c70ac9f"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-52-pam-ponto-partida-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 214822,
+          "sha256": "c3a9dada96d0f9703318ea68ba972a33a3809af7fd4a3bc0d4b552015ef7ce28"
+        },
+        {
+          "path": "assets/images/optimized/img-52-pam-ponto-partida-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 539501,
+          "sha256": "77494fc872242d5b9cb00b16bef4f375460a7166eb3ce34dafdad749d8a29af8"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "PAM: ponto de partida, não piloto automático. Alvos iniciais da SSC 2026 são contextualizados por perfusão, idade, autorregulação, órgãos vulneráveis e toxicidade vasopressora.",
+      "caption": "PAM: ponto de partida, não piloto automático — Alvos iniciais da SSC 2026 são contextualizados por perfusão, idade, autorregulação, órgãos vulneráveis e toxicidade vasopressora.",
+      "longDescription": "Imagem didática IMG-52, com função de individualização pressórica. Alvos iniciais da SSC 2026 são contextualizados por perfusão, idade, autorregulação, órgãos vulneráveis e toxicidade vasopressora. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-53",
+      "anchor": "hemodinamica",
+      "title": "Vasopressor: alvo, efeito e toxicidade",
+      "role": "escada vasopressora ampliada",
+      "master": {
+        "path": "assets/images/img-53-vasopressor-alvo-efeito-toxicidade.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1780544,
+        "sha256": "1a7516ca0d503ffeca7569cf19c703af14b2b3c434d23669921d7762e0b4e240"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-53-vasopressor-alvo-efeito-toxicidade-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 221499,
+          "sha256": "096786be62bbbc9a105c0937db7973f4181aa3ade69c1fc9371a8b92930247b3"
+        },
+        {
+          "path": "assets/images/optimized/img-53-vasopressor-alvo-efeito-toxicidade-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 537950,
+          "sha256": "efe638fa67cb5a580fb254532df5d862397cfb6cc7f9f147927396045585bdee"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Vasopressor: alvo, efeito e toxicidade. Sequência de princípios, resposta de perfusão e efeitos adversos acompanhados a cada escalada, sem limiar universal de dose.",
+      "caption": "Vasopressor: alvo, efeito e toxicidade — Sequência de princípios, resposta de perfusão e efeitos adversos acompanhados a cada escalada, sem limiar universal de dose.",
+      "longDescription": "Imagem didática IMG-53, com função de escada vasopressora ampliada. Sequência de princípios, resposta de perfusão e efeitos adversos acompanhados a cada escalada, sem limiar universal de dose. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-54",
+      "anchor": "hemodinamica",
+      "title": "Inotrópico: quatro portas antes de usar",
+      "role": "decisão por baixo fluxo",
+      "master": {
+        "path": "assets/images/img-54-inotropico-quatro-portas.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2186870,
+        "sha256": "bd1111cf1c3e7a23316dedda70b7fa3957d0ffa3102a0f43ca07f4afaf4519be"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-54-inotropico-quatro-portas-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 229339,
+          "sha256": "d93132f8ef6bf5e225666b432b45fdf8376c769172a3d2eb79aecd657231b2e5"
+        },
+        {
+          "path": "assets/images/optimized/img-54-inotropico-quatro-portas-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 625640,
+          "sha256": "e3d743a8673437854d06019596d4dc19aa34331c9c56cbf45201949636b721bc"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Inotrópico: quatro portas antes de usar. Hipoperfusão persistente, volume e PAM adequados e disfunção cardíaca devem convergir antes de considerar inotropia condicional.",
+      "caption": "Inotrópico: quatro portas antes de usar — Hipoperfusão persistente, volume e PAM adequados e disfunção cardíaca devem convergir antes de considerar inotropia condicional.",
+      "longDescription": "Imagem didática IMG-54, com função de decisão por baixo fluxo. Hipoperfusão persistente, volume e PAM adequados e disfunção cardíaca devem convergir antes de considerar inotropia condicional. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-55",
+      "anchor": "refrataria",
+      "title": "Intubação no choque: antecipe o crash",
+      "role": "segurança peri-intubação",
+      "master": {
+        "path": "assets/images/img-55-intubacao-choque-crash.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2072453,
+        "sha256": "d6f7911126bca04d4c132752094d8ec0c92ca72214f6a5518abd451425c94fbf"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-55-intubacao-choque-crash-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 250677,
+          "sha256": "0334917f2d23a0093f158b00f77318e8ae9400d450fa9c015b26ffe738588407"
+        },
+        {
+          "path": "assets/images/optimized/img-55-intubacao-choque-crash-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 648911,
+          "sha256": "90db194b332050acdf8a9db0f08517fec2e342010074fa4b6b7c4f5410732a12"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Intubação no choque: antecipe o crash. Preparação hemodinâmica, mudança de retorno venoso e pós-carga de VD e busca de causas reversíveis reduzem ancoragem após deterioração.",
+      "caption": "Intubação no choque: antecipe o crash — Preparação hemodinâmica, mudança de retorno venoso e pós-carga de VD e busca de causas reversíveis reduzem ancoragem após deterioração.",
+      "longDescription": "Imagem didática IMG-55, com função de segurança peri-intubação. Preparação hemodinâmica, mudança de retorno venoso e pós-carga de VD e busca de causas reversíveis reduzem ancoragem após deterioração. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026",
+        "hemodynamic-guide"
+      ]
+    },
+    {
+      "id": "IMG-56",
+      "anchor": "suporte",
+      "title": "Hipoxemia: escada com reavaliação",
+      "role": "suporte respiratório",
+      "master": {
+        "path": "assets/images/img-56-hipoxemia-escada.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2085466,
+        "sha256": "f1deba843647f5ca332bc2bc3cfaa7a01b6947225d232e01d5053910e095a789"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-56-hipoxemia-escada-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 235094,
+          "sha256": "add7f5e42744f92403fdb387ee7964fc2bf3d14412e27ca82e86b9ee88f45f5f"
+        },
+        {
+          "path": "assets/images/optimized/img-56-hipoxemia-escada-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 603655,
+          "sha256": "227bc2e9ea572d2287d6b82dcbd50537fc58d3b4a50c44f30508e56826586e26"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Hipoxemia: escada com reavaliação. Oxigênio, cânula nasal de alto fluxo, prona desperto e intubação são organizados por critérios explícitos de sucesso e falha.",
+      "caption": "Hipoxemia: escada com reavaliação — Oxigênio, cânula nasal de alto fluxo, prona desperto e intubação são organizados por critérios explícitos de sucesso e falha.",
+      "longDescription": "Imagem didática IMG-56, com função de suporte respiratório. Oxigênio, cânula nasal de alto fluxo, prona desperto e intubação são organizados por critérios explícitos de sucesso e falha. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-57",
+      "anchor": "suporte",
+      "title": "SDRA na sepse: ventile para proteger",
+      "role": "ventilação protetora",
+      "master": {
+        "path": "assets/images/img-57-sdra-ventile-proteger.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1984464,
+        "sha256": "d032ab61478f73219b75a69bbbcb0b54a5e926de81cde194550d937c16e6cb3d"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-57-sdra-ventile-proteger-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 237625,
+          "sha256": "b6254fc79f95d590ea38a5339a2e3c124fb3b305a9644e1e1fee91895f359804"
+        },
+        {
+          "path": "assets/images/optimized/img-57-sdra-ventile-proteger-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 617597,
+          "sha256": "62e733d6acb3ad92b7d867cc62422503bbeb1e4ed2caaae882b3943424bade2e"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "SDRA na sepse: ventile para proteger. Volume corrente por peso predito, limite de platô, PEEP, prona e ECMO VV aparecem com força da recomendação e contexto de gravidade.",
+      "caption": "SDRA na sepse: ventile para proteger — Volume corrente por peso predito, limite de platô, PEEP, prona e ECMO VV aparecem com força da recomendação e contexto de gravidade.",
+      "longDescription": "Imagem didática IMG-57, com função de ventilação protetora. Volume corrente por peso predito, limite de platô, PEEP, prona e ECMO VV aparecem com força da recomendação e contexto de gravidade. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-58",
+      "anchor": "suporte",
+      "title": "LRA na sepse: TRS por indicação",
+      "role": "suporte renal",
+      "master": {
+        "path": "assets/images/img-58-lra-trs-indicacao.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2137817,
+        "sha256": "61e3c8c3686ecb40a782c3481ebea6e95da5af993ba051b2cdc5a18543caba66"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-58-lra-trs-indicacao-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 237993,
+          "sha256": "13eb771b81315375098027d1862aa79114f22abd1e9f3f6ebeb81e1723340bbe"
+        },
+        {
+          "path": "assets/images/optimized/img-58-lra-trs-indicacao-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 607489,
+          "sha256": "f53dfd1052dbc0186df6beadf047356055763ba985f4df7004e7d1867cf903c0"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "LRA na sepse: TRS por indicação. Reversíveis, indicações definitivas e escolha contextual da modalidade evitam transformar creatinina isolada em ordem automática de diálise.",
+      "caption": "LRA na sepse: TRS por indicação — Reversíveis, indicações definitivas e escolha contextual da modalidade evitam transformar creatinina isolada em ordem automática de diálise.",
+      "longDescription": "Imagem didática IMG-58, com função de suporte renal. Reversíveis, indicações definitivas e escolha contextual da modalidade evitam transformar creatinina isolada em ordem automática de diálise. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-59",
+      "anchor": "suporte",
+      "title": "Bicarbonato não é borracha de lactato",
+      "role": "acidose e segurança",
+      "master": {
+        "path": "assets/images/img-59-bicarbonato-lactato.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 1899512,
+        "sha256": "df36fd0bbf979c055e89e3603a2a955aec70efd5eb8e80bff92d7f30557a7f53"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-59-bicarbonato-lactato-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 247887,
+          "sha256": "0152258ff0ded50c96dc0f3c93104b5e523e4b688bff928d1a6e1c06d9d3853d"
+        },
+        {
+          "path": "assets/images/optimized/img-59-bicarbonato-lactato-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 625887,
+          "sha256": "89db066fe703d9755d96ebd6d09b0ca012aaab1d20eb6a6b748f2ff991807bcc"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Bicarbonato não é borracha de lactato. Separa acidemia láctica por hipoperfusão do cenário condicional de choque séptico, pH menor ou igual a 7,2 e LRA AKIN 2–3.",
+      "caption": "Bicarbonato não é borracha de lactato — Separa acidemia láctica por hipoperfusão do cenário condicional de choque séptico, pH menor ou igual a 7,2 e LRA AKIN 2–3.",
+      "longDescription": "Imagem didática IMG-59, com função de acidose e segurança. Separa acidemia láctica por hipoperfusão do cenário condicional de choque séptico, pH menor ou igual a 7,2 e LRA AKIN 2–3. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    },
+    {
+      "id": "IMG-60",
+      "anchor": "recuperacao",
+      "title": "Alta pós-sepse é intervenção",
+      "role": "transição pós-hospitalar",
+      "master": {
+        "path": "assets/images/img-60-alta-pos-sepse-intervencao.png",
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2101880,
+        "sha256": "d002f8aa83213e27f56a4405f35d00d3259ac645c849ac2eadaefb40e99c1760"
+      },
+      "derivatives": [
+        {
+          "path": "assets/images/optimized/img-60-alta-pos-sepse-intervencao-960.jpg",
+          "format": "jpeg",
+          "width": 960,
+          "height": 540,
+          "bytes": 259941,
+          "sha256": "3dac6ad3e39a9283d9213cede7c893387af1474ffca2a079d5e1b855026a8267"
+        },
+        {
+          "path": "assets/images/optimized/img-60-alta-pos-sepse-intervencao-1672.jpg",
+          "format": "jpeg",
+          "width": 1672,
+          "height": 941,
+          "bytes": 674816,
+          "sha256": "9b0eaa6d530397bd6ff37a77556a6f62f66924ee44f8c542eaa8b0b06620ad79"
+        }
+      ],
+      "reviewPending": true,
+      "alt": "Alta pós-sepse é intervenção. Resumo do foco, reconciliação, sequelas, reabilitação, sinais de alarme e seguimento com responsável fecham o cuidado pós-sepse.",
+      "caption": "Alta pós-sepse é intervenção — Resumo do foco, reconciliação, sequelas, reabilitação, sinais de alarme e seguimento com responsável fecham o cuidado pós-sepse.",
+      "longDescription": "Imagem didática IMG-60, com função de transição pós-hospitalar. Resumo do foco, reconciliação, sequelas, reabilitação, sinais de alarme e seguimento com responsável fecham o cuidado pós-sepse. A interpretação deve permanecer vinculada ao conteúdo clínico convencional e às fontes oficiais indicadas.",
+      "sourceIds": [
+        "ssc2026"
+      ]
+    }
+  ]
+}

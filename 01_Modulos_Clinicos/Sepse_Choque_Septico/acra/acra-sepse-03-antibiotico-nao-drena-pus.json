@@ -1,0 +1,398 @@
+{
+  "version": "1.0",
+  "id": "a03-acra-sepse-controle-foco-v1",
+  "title": "Antibiótico não drena pus",
+  "subtitle": "Anatomia · equipe certa · intervenção · confirmação de eficácia",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para reconhecer quando a persistência da sepse depende de controle de foco: localizar a anatomia, acionar precocemente a equipe capaz de intervir, escolher a abordagem efetiva e menos invasiva apropriada e confirmar se o foco foi realmente controlado. Não indica procedimento nem substitui avaliação multidisciplinar.",
+  "critical": [
+    {
+      "id": "a03-critical-escopo",
+      "severity": "danger",
+      "title": "Apoio educacional — não indica procedimento",
+      "text": "Drenagem, cirurgia, desbridamento, retirada de dispositivo e transferência dependem de anatomia, estabilidade, risco, competência, recursos e decisão multidisciplinar. Este ACRA não realiza indicação ou prescrição autônoma."
+    },
+    {
+      "id": "a03-critical-seguranca",
+      "severity": "warning",
+      "title": "Estabilizar e controlar o foco são trilhos paralelos",
+      "text": "Antimicrobiano e suporte não substituem uma intervenção necessária. A SSC 2026 sugere, de forma condicional e com certeza muito baixa, controle precoce, idealmente em até 6 horas do diagnóstico de sepse ou choque séptico que exija controle; viabilidade, modalidade e momento continuam individualizados."
+    },
+    {
+      "id": "a03-critical-revisao",
+      "severity": "info",
+      "title": "Caso sintético e revisão médica",
+      "text": "O cenário abdominal é inteiramente sintético e não contém dados identificáveis. Conteúdo local para treino TEMI; revisão clínica humana e adequação à cirurgia, radiologia intervencionista e fluxos do serviço permanecem obrigatórias."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a03-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "danger",
+      "text": "Se há material infectado, tecido desvitalizado, perfuração, obstrução ou dispositivo infectado, pergunte: o que precisa ser drenado, removido, desbridado, reparado ou descomprimido? Antimicrobiano compra tempo; anatomia não resolvida pode sustentar o choque."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a03-component-m1",
+      "title": "M1 · Mecanismo e sequência",
+      "items": [
+        {
+          "id": "a03-step-suspeitar",
+          "title": "Suspeite de foco não controlado",
+          "text": "Considere resposta inadequada, piora após melhora transitória, bacteremia persistente, coleção, obstrução, isquemia, necrose, perfuração ou dispositivo potencialmente infectado."
+        },
+        {
+          "id": "a03-step-anatomia",
+          "title": "Localize a anatomia",
+          "text": "Use exame e imagem direcionados pela síndrome. A pergunta não é apenas onde começou, mas qual estrutura mantém inóculo, pressão, tecido desvitalizado ou comunicação anormal."
+        },
+        {
+          "id": "a03-step-equipe",
+          "title": "Acione cedo quem pode resolver",
+          "text": "Cirurgia, radiologia intervencionista, endoscopia, urologia ou outra equipe deve participar enquanto a ressuscitação ocorre. Transferência pode integrar o controle de foco."
+        },
+        {
+          "id": "a03-step-escolha",
+          "title": "Escolha a abordagem apropriada",
+          "text": "Compare efetividade, invasividade, velocidade, risco anestésico, chance de acesso e necessidade de material microbiológico. A opção menos invasiva só é melhor se tiver probabilidade adequada de funcionar."
+        },
+        {
+          "id": "a03-step-executar",
+          "title": "Execute sem atraso indevido",
+          "text": "Faça suporte, antimicrobiano, correções essenciais e logística em paralelo. Quando o foco específico requer intervenção, use como objetivo controle precoce, idealmente em até 6 horas se viável; não espere normalização completa se o próprio foco impede estabilização."
+        },
+        {
+          "id": "a03-step-confirmar",
+          "title": "Confirme a eficácia",
+          "text": "Documente achado, material removido, permeabilidade do dreno e resposta clínica. Persistência de choque exige reavaliar drenagem incompleta, novo foco, complicação ou diagnóstico alternativo."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a03-component-m2",
+      "title": "M2 · Foco provável × ação anatômica",
+      "columns": [
+        {
+          "id": "a03-column-problema",
+          "label": "Problema a resolver"
+        },
+        {
+          "id": "a03-column-acao",
+          "label": "Modalidade possível"
+        },
+        {
+          "id": "a03-column-falha",
+          "label": "Como reconhecer falha"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a03-row-colecao",
+          "label": "Coleção fechada",
+          "cells": [
+            "Reduzir inóculo e pressão em cavidade infectada.",
+            "Drenagem percutânea, endoscópica ou cirúrgica conforme anatomia e recurso.",
+            "Dreno sem débito esperado, coleção residual ou resposta fisiológica inadequada."
+          ]
+        },
+        {
+          "id": "a03-row-perfuracao",
+          "label": "Perfuração, isquemia ou necrose",
+          "cells": [
+            "Interromper contaminação e remover/reparar tecido inviável.",
+            "Abordagem cirúrgica ou endoscópica selecionada pela equipe responsável.",
+            "Contaminação persistente, nova coleção ou disfunção orgânica em progressão."
+          ]
+        },
+        {
+          "id": "a03-row-obstrucao",
+          "label": "Sistema obstruído",
+          "cells": [
+            "Restabelecer drenagem urinária, biliar ou de outra estrutura.",
+            "Descompressão por via apropriada ao sítio e à estabilidade.",
+            "Drenagem ineficaz, obstrução residual ou sinais infecciosos persistentes."
+          ]
+        },
+        {
+          "id": "a03-row-dispositivo",
+          "label": "Dispositivo infectado",
+          "cells": [
+            "Eliminar biofilme e fonte contínua quando o dispositivo é provável foco.",
+            "Remoção ou troca conforme tipo, indicação, acesso alternativo e protocolo.",
+            "Bacteremia persistente, sinais locais ou recidiva sem outra fonte."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a03-component-m3",
+      "title": "M3 · Caso sintético progressivo",
+      "items": [
+        {
+          "id": "a03-case-entrada",
+          "label": "1 · Choque abdominal",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta apresenta choque, dor abdominal e imagem com coleção pós-operatória. Suporte e antimicrobiano foram iniciados, mas o foco é anatomicamente controlável; radiologia intervencionista e cirurgia são acionadas já na avaliação inicial."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Defina se há drenagem percutânea segura e efetiva.",
+                "Antecipe acesso, hemoderivados, transporte e suporte durante o procedimento.",
+                "Registre o que tornaria necessária outra abordagem."
+              ]
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a03-case-resposta",
+          "label": "2 · Melhora parcial não prova resolução",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Após antimicrobiano e suporte, a pressão melhora transitoriamente, porém perfusão e necessidade de vasopressor voltam a piorar. A equipe evita atribuir tudo à vasoplegia e prioriza o controle anatômico."
+            }
+          ]
+        },
+        {
+          "id": "a03-case-procedimento",
+          "label": "3 · Drenagem realizada",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "O procedimento obtém material purulento para microbiologia e posiciona dreno. A equipe documenta volume, aspecto, permeabilidade, limitações e se existe componente não acessado."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Resultado técnico não equivale automaticamente a sucesso clínico.",
+                "Integre débito do dreno, imagem quando indicada e evolução orgânica."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a03-case-falha",
+          "label": "4 · Persistência após intervenção",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Se o choque persiste, reabra o caso: dreno mal posicionado ou obstruído, coleção loculada, perfuração não reparada, segundo foco, antimicrobiano inadequado, complicação do procedimento ou diagnóstico concorrente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a03-component-m4",
+      "title": "M4 · Armadilhas do controle de foco",
+      "items": [
+        {
+          "id": "a03-pitfall-antibiotico",
+          "title": "Escalar espectro indefinidamente",
+          "text": "Erro: responder à anatomia não resolvida apenas com mais antimicrobiano. Correção: procurar foco controlável.",
+          "tone": "danger"
+        },
+        {
+          "id": "a03-pitfall-perfeito",
+          "title": "Esperar estabilidade perfeita",
+          "text": "Erro: ignorar que o foco mantém o choque. Correção: otimizar o essencial e organizar intervenção em paralelo.",
+          "tone": "warning"
+        },
+        {
+          "id": "a03-pitfall-menos-invasivo",
+          "title": "Menos invasivo sempre é melhor",
+          "text": "Erro: escolher uma técnica incapaz de resolver a anatomia. Correção: efetividade e segurança vêm antes do rótulo.",
+          "tone": "warning"
+        },
+        {
+          "id": "a03-pitfall-realizado",
+          "title": "Procedimento realizado = foco resolvido",
+          "text": "Erro: não verificar resultado. Correção: confirmar drenagem, anatomia residual e resposta clínica.",
+          "tone": "danger"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a03-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a03-question-colecao",
+          "prompt": "Choque persiste com coleção abdominal drenável. Qual princípio é mais seguro?",
+          "options": [
+            {
+              "id": "a03-option-colecao-espectro",
+              "label": "Apenas ampliar antimicrobiano"
+            },
+            {
+              "id": "a03-option-colecao-paralelo",
+              "label": "Suporte e controle de foco em paralelo"
+            },
+            {
+              "id": "a03-option-colecao-esperar",
+              "label": "Esperar normalização completa"
+            }
+          ],
+          "correctOptionId": "a03-option-colecao-paralelo",
+          "feedback": "Quando um diagnóstico anatômico específico requer controle, prefira intervenção precoce, idealmente em até 6 horas se médica e logisticamente praticável, junto à ressuscitação; a modalidade não é automática."
+        },
+        {
+          "id": "a03-question-modalidade",
+          "prompt": "Como comparar drenagem percutânea e cirurgia?",
+          "options": [
+            {
+              "id": "a03-option-modalidade-menor",
+              "label": "Escolher sempre a menos invasiva"
+            },
+            {
+              "id": "a03-option-modalidade-efetiva",
+              "label": "Equilibrar efetividade, anatomia, risco e recurso"
+            },
+            {
+              "id": "a03-option-modalidade-antibiotico",
+              "label": "Evitar ambas se há antimicrobiano"
+            }
+          ],
+          "correctOptionId": "a03-option-modalidade-efetiva",
+          "feedback": "A abordagem apropriada é a que tem chance suficiente de resolver o problema anatômico com risco aceitável naquele contexto."
+        },
+        {
+          "id": "a03-question-sucesso",
+          "prompt": "Após colocar um dreno, qual dado melhor fecha o ciclo de segurança?",
+          "options": [
+            {
+              "id": "a03-option-sucesso-feito",
+              "label": "Apenas registrar que foi feito"
+            },
+            {
+              "id": "a03-option-sucesso-confirmar",
+              "label": "Confirmar função, anatomia residual e resposta"
+            },
+            {
+              "id": "a03-option-sucesso-parar",
+              "label": "Suspender toda reavaliação"
+            }
+          ],
+          "correctOptionId": "a03-option-sucesso-confirmar",
+          "feedback": "Sucesso técnico precisa ser confrontado com permeabilidade, resolução anatômica e evolução fisiológica; falha exige reabertura diagnóstica."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a03-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a03-resume-d0",
+          "label": "D0 · Recite os seis verbos do controle de foco",
+          "details": "Suspeitar, localizar, acionar, escolher, executar e confirmar.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a03-resume-d1",
+          "label": "D1 · Refaça as três questões",
+          "details": "Explique a trava de segurança de cada resposta.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a03-resume-d7",
+          "label": "D7 · Mapeie quatro focos controláveis",
+          "details": "Coleção, perfuração/necrose, obstrução e dispositivo.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a03-resume-d14",
+          "label": "D14 · Revise o fluxo institucional",
+          "details": "Identifique contatos, recursos, transferência e gargalos fora do horário comercial.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a03-resume-d30",
+          "label": "D30 · Simule falha após drenagem",
+          "details": "Liste cinco causas antes de apenas ampliar antimicrobiano.",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a03-component-progress",
+      "title": "Percurso ACRA",
+      "current": 7,
+      "total": 7,
+      "label": "M0–M6 concluídos"
+    },
+    {
+      "type": "sources",
+      "id": "a03-component-sources",
+      "title": "Diretriz oficial",
+      "sourceIds": [
+        "a03-source-ssc2026"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a03-component-followup",
+      "title": "Próximas ações em modo de prévia",
+      "actionIds": [
+        "a03-action-review",
+        "a03-action-deepen",
+        "a03-action-verify"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a03-action-review",
+      "kind": "review",
+      "label": "Revisar armadilhas",
+      "prompt": "Revise as armadilhas e formule uma pergunta de controle de foco para cada uma.",
+      "contextComponentIds": [
+        "a03-component-m4",
+        "a03-component-m5"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a03-action-deepen",
+      "kind": "deepen",
+      "label": "Aprofundar anatomia",
+      "prompt": "Relacione coleção, perfuração, obstrução e dispositivo às equipes e aos métodos que podem resolver cada foco.",
+      "contextComponentIds": [
+        "a03-component-m1",
+        "a03-component-m2"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a03-action-verify",
+      "kind": "verify",
+      "label": "Verificar logística local",
+      "prompt": "Confira contatos, disponibilidade de imagem, cirurgia, radiologia intervencionista, endoscopia e transporte no protocolo institucional.",
+      "contextComponentIds": [
+        "a03-component-m2",
+        "a03-component-m3"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a03-source-ssc2026",
+      "title": "Surviving Sepsis Campaign: Adult Guidelines 2026",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "publisher": "Society of Critical Care Medicine"
+    }
+  ]
+}

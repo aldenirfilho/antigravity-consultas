@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "antigravity-clinical-module-v1",
+  "moduleId": "sepse-ultra-expert",
+  "title": "Sepse Ultra Expert",
+  "version": "0.5.0-public-preview",
+  "updatedAt": "2026-08-03",
+  "status": "em-revisao-medica",
+  "entrypoint": "index.html",
+  "catalog": "data/catalog.js",
+  "visualPlan": "data/visual-plan.json",
+  "visualAssets": "data/visual-assets.json",
+  "acraPlan": "data/acra-plan.json",
+  "acraDirectory": "acra",
+  "acraBundle": "data/acra-bundle.js",
+  "localRuntimes": [
+    "assets/visual-runtime.js",
+    "assets/acra-runtime.js",
+    "assets/acra-controller.js"
+  ],
+  "publication": {
+    "mode": "public-preview",
+    "publicPreview": true,
+    "clinicalReviewOngoing": true,
+    "ownerPublicationAuthorization": true,
+    "authorizedAt": "2026-08-03T18:31:23-03:00",
+    "authorizedScope": "primeiro-bloco-funcional-sepse-ultra-expert-b127-b152",
+    "blockedBlocks": [
+      "B153",
+      "B154",
+      "blocos Ultra Expert adjacentes até finalizar e publicar separadamente o primeiro bloco"
+    ],
+    "excludedFromThisPublication": [
+      "B153 e B154",
+      "especificações SUE2-A de disfunção orgânica e POCUS séptico",
+      "blocos Ultra Expert adjacentes",
+      "Notion e Google Drive"
+    ]
+  },
+  "scope": {
+    "population": "adultos",
+    "settings": [
+      "emergência",
+      "enfermaria",
+      "terapia intensiva",
+      "transição pós-alta"
+    ],
+    "purpose": "educacional-e-apoio-cognitivo-para-medicos",
+    "notAProtocol": true
+  },
+  "evidence": {
+    "primaryGuideline": "Surviving Sepsis Campaign Adult Guidelines 2026",
+    "definitions": "Sepsis-3",
+    "sourcesVerifiedAt": "2026-08-03",
+    "granularSourceIds": true,
+    "correctionTracked": true,
+    "humanClinicalReviewRequired": true
+  },
+  "contentInventory": {
+    "timelineWindows": 7,
+    "hemodynamicProfiles": 5,
+    "senecaProfiles": 4,
+    "molecularProfiles": 3,
+    "organSupportCards": 8,
+    "frontierCards": 10,
+    "syntheticCases": 4,
+    "temiQuestions": 8,
+    "references": 19,
+    "plannedImages": 60,
+    "generatedImages": 60,
+    "integratedImages": 60,
+    "plannedAcra": 10,
+    "createdAcra": 10,
+    "integratedAcra": 10
+  },
+  "features": [
+    "triagem clínica em 60 segundos sem diagnóstico automático",
+    "relógio terapêutico acessível de 0–10 minutos ao pós-agudo",
+    "probabilidade infecciosa e janelas de antimicrobiano SSC 2026",
+    "controle do foco e estratégia antimicrobiana",
+    "ressuscitação hemodinâmica em ciclos de resposta e tolerância",
+    "fenótipos fisiológicos, SENECA e endótipos transcriptômicos com limites",
+    "auditoria de oito domínios no choque refratário",
+    "suporte orgânico, fronteira terapêutica e segurança off-label",
+    "recuperação, prevenção e radar de atualização com revisão humana",
+    "casos e questões Turbo TEMI convencionais",
+    "60 visuais Turbo TEMI em coluna única expandida, com legendas sempre abertas, fontes diretas e download",
+    "10 ACRA locais opcionais com fallback convencional",
+    "tema claro/escuro, modo foco, teclado, responsividade e impressão"
+  ],
+  "privacy": {
+    "network": false,
+    "cloud": false,
+    "telemetry": false,
+    "patientData": false,
+    "freeTextPatientFields": false,
+    "localStorage": [
+      "preferência visual global compartilhada",
+      "modo ACRA explícito: off, parcial ou auto",
+      "progresso educacional ACRA composto apenas por identificadores sintéticos"
+    ],
+    "clinicalOrCostDataPersisted": false
+  },
+  "safetyNotice": "Conteúdo educacional para médicos. Não fecha diagnóstico, não prescreve, não substitui avaliação presencial, microbiologia e epidemiologia locais, protocolo institucional, farmácia clínica, controle do foco nem dupla checagem de doses.",
+  "reviewGate": {
+    "phase1": "implemented-local-technical-validation-pass-clinical-review-pending",
+    "phase2": "generated-local-technical-and-clinical-visual-audit-pass-owner-review-pending",
+    "phase3": "created-local-canonical-and-clinical-cross-audit-pass-owner-review-pending",
+    "phase4": "public-preview-authorized-continuous-clinical-review",
+    "requiredBeforePublicIntegration": [
+      "revisão clínica e visual contínua após a prévia pública",
+      "homologação física em Safari e iPhone",
+      "nova autorização separada para acoplar blocos adjacentes"
+    ]
+  }
+}

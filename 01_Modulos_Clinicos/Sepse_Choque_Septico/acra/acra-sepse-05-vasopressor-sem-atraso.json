@@ -1,0 +1,430 @@
+{
+  "version": "1.0",
+  "id": "acra-sepse-05-vasopressor-sem-atraso-v1",
+  "title": "Vasopressor sem atraso",
+  "subtitle": "Pressão útil · Perfusão · Acesso periférico seguro · Escalada racional",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para iniciar noradrenalina periférica sem esperar acesso central no choque séptico, sob protocolo e vigilância locais, reconhecer os limites da evidência sobre essa via e escalar vasopressina ou adrenalina com reavaliação fisiológica — sem doses ou prescrição autônoma.",
+  "critical": [
+    {
+      "id": "a05-critical-educational-scope",
+      "severity": "danger",
+      "title": "Apoio educacional — não é prescrição",
+      "text": "Este ACRA não fornece concentração, dose, titulação, duração ou preparo de vasopressores. Use monitorização contínua, bomba apropriada, protocolo institucional, farmácia/enfermagem e supervisão médica; choque exige ABCDE e tratamento simultâneo da causa."
+    },
+    {
+      "id": "a05-critical-peripheral-safety",
+      "severity": "warning",
+      "title": "A via periférica tem uma fronteira de evidência",
+      "text": "A SSC 2026 sugere iniciar vasopressor por via periférica em vez de esperar acesso central, mas considera insuficientes os dados para recomendar duração, dose, calibre ou localização anatômica do acesso. Seleção, vigilância, transição e manejo de extravasamento seguem protocolo local."
+    },
+    {
+      "id": "a05-critical-synthetic-review",
+      "severity": "info",
+      "title": "Caso sintético em revisão médica",
+      "text": "O cenário é fictício e não contém dados de paciente. Conteúdo local para estudo TEMI, pendente de revisão clínica humana final e sem integração ao sistema assistencial."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a05-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "danger",
+      "text": "No choque séptico, não espere acesso central para iniciar noradrenalina periférica sob protocolo e vigilância locais. A SSC não define duração, dose, calibre ou sítio periférico. Alvo inicial geral: PAM 65 mmHg; em adultos com 65 anos ou mais, a faixa inicial sugerida é 60–65 mmHg."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a05-component-m1",
+      "title": "M1 · Mecanismo: da ameaça à escalada",
+      "items": [
+        {
+          "id": "a05-step-recognize",
+          "title": "Reconheça choque e confirme a medida",
+          "text": "Integre PAM confiável, pressão diastólica, consciência, pele, enchimento capilar, diurese, lactato em tendência e fluxo. Corrija erro de manguito ou linha antes de perseguir um número falso."
+        },
+        {
+          "id": "a05-step-parallel",
+          "title": "Trate em paralelo",
+          "text": "Antimicrobiano, controle do foco, fluido individualizado e vasopressor não precisam ocorrer em fila. Na instabilidade grave, noradrenalina pode começar enquanto necessidade, responsividade e tolerância ao fluido são avaliadas."
+        },
+        {
+          "id": "a05-step-peripheral",
+          "title": "Use a via periférica dentro do protocolo local",
+          "text": "Não atrase noradrenalina até o acesso central. A diretriz não estabelece duração, dose, calibre nem localização anatômica da via periférica; aplique critérios institucionais de seleção, patência, vigilância, transição e extravasamento."
+        },
+        {
+          "id": "a05-step-target",
+          "title": "Separe os dois alvos iniciais de PAM",
+          "text": "Para adultos em geral, a SSC recomenda PAM inicial de 65 mmHg em vez de metas maiores. Para adultos com 65 anos ou mais, sugere faixa inicial de 60–65 mmHg. Depois, individualize por perfusão, efeitos adversos e contexto; pressão corrigida não garante fluxo restaurado."
+        },
+        {
+          "id": "a05-step-escalate",
+          "title": "Escale sem automatismo",
+          "text": "Com necessidade crescente de noradrenalina, reavalie causa, tanque, bomba e obstrução e considere vasopressina. Se a PAM seguir inadequada apesar de ambas, adrenalina pode ser considerada conforme diretriz e contexto."
+        },
+        {
+          "id": "a05-step-reassess",
+          "title": "Reavalie perfusão, acesso e necessidade",
+          "text": "Cheque resposta e toxicidade em minutos, vigie a via conforme protocolo e reavalie qual acesso é mais adequado se o suporte persistir. A SSC não define duração ou dose periférica nem um corte universal para transição ou adição de outro vasopressor."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a05-component-m2",
+      "title": "M2 · Decisão segura: pressão é começo, não desfecho",
+      "columns": [
+        {
+          "id": "a05-column-signal",
+          "label": "Situação"
+        },
+        {
+          "id": "a05-column-risk",
+          "label": "Risco de erro"
+        },
+        {
+          "id": "a05-column-action",
+          "label": "Resposta segura"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a05-row-no-central",
+          "label": "Choque e acesso central indisponível",
+          "cells": [
+            "Atrasar noradrenalina até obter acesso central.",
+            "Prolongar hipotensão e hipoperfusão.",
+            "Iniciar por via periférica sob protocolo e vigilância locais; reavaliar a estratégia de acesso em paralelo."
+          ]
+        },
+        {
+          "id": "a05-row-site",
+          "label": "Dor, edema ou palidez no sítio",
+          "cells": [
+            "Cobrir o acesso ou esperar nova hipotensão.",
+            "Extravasamento e lesão tecidual.",
+            "Interromper, avaliar e ativar imediatamente o protocolo local."
+          ]
+        },
+        {
+          "id": "a05-row-perfusion",
+          "label": "PAM atingida, perfusão ainda ruim",
+          "cells": [
+            "Declarar ressuscitação concluída.",
+            "Perder baixo fluxo, falência cardíaca, obstrução ou foco persistente.",
+            "Reclassificar fisiologia, fluxo, foco, ventilação e metabolismo."
+          ]
+        },
+        {
+          "id": "a05-row-age-target",
+          "label": "Alvo inicial conforme idade",
+          "cells": [
+            "Aplicar automaticamente a mesma meta elevada a todas as idades.",
+            "Exposição vasopressora sem benefício e perda da recomendação específica ao idoso.",
+            "Adultos em geral: 65 mmHg; com 65 anos ou mais: faixa sugerida de 60–65 mmHg; depois individualizar."
+          ]
+        },
+        {
+          "id": "a05-row-escalation",
+          "label": "Noradrenalina em escalada",
+          "cells": [
+            "Usar um corte universal ou somar fármacos sem auditoria.",
+            "Polifarmácia vasopressora sem tratar o mecanismo.",
+            "Reavaliar causas e considerar vasopressina; adrenalina se PAM seguir inadequada."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a05-component-m3",
+      "title": "M3 · Caso sintético progressivo",
+      "items": [
+        {
+          "id": "a05-case-stage-1",
+          "label": "1 · Entrada: choque antes do acesso central",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta com provável infecção pulmonar, PAM 52 mmHg, extremidades moteadas e alteração do sensório. Há acesso periférico cuja seleção e vigilância atendem ao protocolo local; o acesso central ainda não está disponível."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "A equipe inicia ABCDE, antimicrobiano e ressuscitação individualizada sem colocar as intervenções em fila.",
+                "Noradrenalina periférica pode ser iniciada sem esperar acesso central; a SSC não define duração, dose, calibre ou sítio dessa via."
+              ]
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a05-case-stage-2",
+          "label": "2 · A pressão melhora",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A PAM chega ao alvo inicial, mas o enchimento capilar permanece lento e a diurese não melhora. O sítio periférico está íntegro."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Não confunda pressão com perfusão restaurada.",
+                "Reavalie volume efetivo, débito, VD/VE, obstrução, foco e tendência metabólica."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        },
+        {
+          "id": "a05-case-stage-3",
+          "label": "3 · Necessidade vasopressora cresce",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Apesar da correção de fatores reversíveis, a necessidade de noradrenalina aumenta. Não há mais responsividade a fluido e há margem de tolerância estreita."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "A diretriz apoia considerar vasopressina como estratégia adicional, sem corte universal de dose.",
+                "Se a PAM continuar inadequada com noradrenalina e vasopressina, adrenalina pode ser considerada após nova auditoria."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        },
+        {
+          "id": "a05-case-stage-4",
+          "label": "4 · Segurança e saída",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A equipe mantém vigilância segundo protocolo, reavalia a estratégia de acesso porque a necessidade persiste, documenta resposta e efeitos adversos e desescala conforme o choque resolve."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Toda escalada deve vir acompanhada de nova explicação fisiológica.",
+                "A decisão de manter ou mudar a via segue contexto e protocolo local; não há duração ou dose periférica definida pela SSC."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a05-component-m4",
+      "title": "M4 · Armadilhas de alto risco",
+      "items": [
+        {
+          "id": "a05-trap-wait",
+          "title": "Esperar o central",
+          "text": "Erro: manter choque hipotensivo enquanto se prepara um procedimento. Correção: início periférico sob protocolo e vigilância locais quando indicado.",
+          "tone": "danger"
+        },
+        {
+          "id": "a05-trap-hidden",
+          "title": "Transformar prática local em regra SSC",
+          "text": "Erro: atribuir à diretriz um calibre, sítio, dose ou duração que ela não define. Correção: reconhecer a incerteza e seguir barreiras institucionais de segurança.",
+          "tone": "danger"
+        },
+        {
+          "id": "a05-trap-pressure",
+          "title": "Tratar apenas a PAM",
+          "text": "Erro: declarar sucesso com perfusão ainda ruim. Correção: integrar fluxo, pele, consciência, diurese, lactato em tendência e causa.",
+          "tone": "warning"
+        },
+        {
+          "id": "a05-trap-dose",
+          "title": "Inventar limiar universal",
+          "text": "Erro: adicionar fármaco por um número rígido sem contexto. Correção: reavaliar mecanismo, tendência, efeitos adversos e recomendação vigente.",
+          "tone": "warning"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a05-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a05-question-central",
+          "prompt": "Paciente em choque séptico não tem acesso central. Qual princípio é mais fiel à SSC 2026?",
+          "options": [
+            {
+              "id": "a05-option-central-wait",
+              "label": "Esperar o central antes de qualquer vasopressor"
+            },
+            {
+              "id": "a05-option-central-bridge",
+              "label": "Iniciar por via periférica sob protocolo e vigilância locais"
+            },
+            {
+              "id": "a05-option-central-fluid",
+              "label": "Substituir vasopressor por bolus cegos"
+            }
+          ],
+          "correctOptionId": "a05-option-central-bridge",
+          "feedback": "A SSC sugere início periférico em vez de esperar o acesso central, mas informa dados insuficientes para recomendar duração, dose, calibre ou localização anatômica. As barreiras práticas são definidas localmente."
+        },
+        {
+          "id": "a05-question-map",
+          "prompt": "Em adulto de 71 anos com choque séptico, qual faixa inicial de PAM a SSC 2026 sugere em vez de faixas maiores?",
+          "options": [
+            {
+              "id": "a05-option-map-finish",
+              "label": "Exatamente 80 mmHg para todos"
+            },
+            {
+              "id": "a05-option-map-reassess",
+              "label": "60–65 mmHg, com reavaliação e individualização"
+            },
+            {
+              "id": "a05-option-map-volume",
+              "label": "Não utilizar qualquer alvo de pressão"
+            }
+          ],
+          "correctOptionId": "a05-option-map-reassess",
+          "feedback": "Para adultos com 65 anos ou mais, a SSC sugere faixa inicial de 60–65 mmHg. É recomendação distinta do alvo inicial geral de 65 mmHg; ambos exigem avaliação de perfusão e contexto."
+        },
+        {
+          "id": "a05-question-escalation",
+          "prompt": "A necessidade de noradrenalina cresce apesar da correção de causas reversíveis. Qual sequência geral é compatível com a diretriz?",
+          "options": [
+            {
+              "id": "a05-option-escalation-vaso",
+              "label": "Considerar vasopressina; adrenalina se PAM seguir inadequada"
+            },
+            {
+              "id": "a05-option-escalation-dose",
+              "label": "Aplicar sempre o mesmo limiar universal de dose"
+            },
+            {
+              "id": "a05-option-escalation-ignore",
+              "label": "Somar fármacos sem reavaliar o choque"
+            }
+          ],
+          "correctOptionId": "a05-option-escalation-vaso",
+          "feedback": "Vasopressina é considerada com escalada de noradrenalina; adrenalina pode ser adicionada se a PAM continuar inadequada. Não há autorização para corte universal ou automatismo."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a05-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a05-resume-d0",
+          "label": "D0 · Recite a fronteira da evidência periférica",
+          "details": "Não atrasar pelo central; dados insuficientes para duração, dose, calibre ou localização; aplicar protocolo local.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a05-resume-d1",
+          "label": "D1 · Refazer as três questões",
+          "details": "Explique por que acesso central e tratamento do choque devem ser organizados em paralelo.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a05-resume-d7",
+          "label": "D7 · Simular extravasamento",
+          "details": "Diga o que interrompe imediatamente e onde localizar o protocolo institucional, sem inventar dose de antídoto.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a05-resume-d14",
+          "label": "D14 · Comparar os dois alvos iniciais de PAM",
+          "details": "Adultos em geral: 65 mmHg; adultos com 65 anos ou mais: faixa sugerida de 60–65 mmHg; depois contextualizar.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a05-resume-d30",
+          "label": "D30 · Reconstruir a escada vasopressora",
+          "details": "Noradrenalina, consideração de vasopressina e adrenalina, sempre com reavaliação e sem limiar universal inventado.",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a05-component-progress",
+      "title": "Percurso concluído",
+      "current": 7,
+      "total": 7,
+      "label": "ACRA 05 · M0–M6"
+    },
+    {
+      "type": "sources",
+      "id": "a05-component-sources",
+      "title": "Fontes oficiais",
+      "sourceIds": [
+        "a05-source-ssc2026",
+        "a05-source-hemodynamic-guide"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a05-component-followup",
+      "title": "Próximas ações sugeridas",
+      "actionIds": [
+        "a05-action-review",
+        "a05-action-compare",
+        "a05-action-verify"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a05-action-review",
+      "kind": "review",
+      "label": "Revisar barreiras de segurança",
+      "prompt": "Reabra M1 e descreva o início periférico, os limites da evidência, a vigilância e a reavaliação do acesso em linguagem operacional.",
+      "contextComponentIds": [
+        "a05-component-m1",
+        "a05-component-m4"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a05-action-compare",
+      "kind": "compare",
+      "label": "Comparar pressão e perfusão",
+      "prompt": "Compare PAM corrigida com perfusão restaurada e liste dados que obrigam reabrir tanque, bomba, obstrução e foco.",
+      "contextComponentIds": [
+        "a05-component-m2",
+        "a05-component-m3"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a05-action-verify",
+      "kind": "verify",
+      "label": "Verificar protocolo local",
+      "prompt": "Confirme no protocolo institucional vigente concentração, preparo, titulação, vigilância e manejo de extravasamento antes de aplicar qualquer vasopressor na prática.",
+      "contextComponentIds": [
+        "a05-component-m6",
+        "a05-component-sources"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a05-source-ssc2026",
+      "title": "Surviving Sepsis Campaign: Adult Guidelines 2026",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "publisher": "Society of Critical Care Medicine"
+    },
+    {
+      "id": "a05-source-hemodynamic-guide",
+      "title": "Surviving Sepsis Campaign 2026 Adult Hemodynamic Quick Guide",
+      "url": "https://sccm.org/SCCM/media/SCCM/PDFs/SSC-Adult-Quick-Guide-Infographic-2026.pdf",
+      "publisher": "Society of Critical Care Medicine"
+    }
+  ]
+}

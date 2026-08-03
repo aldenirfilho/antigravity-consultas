@@ -1,0 +1,406 @@
+{
+  "version": "1.0",
+  "id": "a01-acra-sepse-reconhecimento-v1",
+  "title": "Pense, pode ser sepse",
+  "subtitle": "Deterioração aguda · ameaça fisiológica · infecção possível · disfunção orgânica",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para reconhecer sepse antes que um escore tranquilize indevidamente: detectar deterioração, executar ABCDE, procurar infecção e disfunção orgânica, manter mimetizadores perigosos no radar e escalar cuidado. É apoio educacional e não realiza diagnóstico nem prescrição autônoma.",
+  "critical": [
+    {
+      "id": "a01-critical-escopo",
+      "severity": "danger",
+      "title": "Apoio educacional — não substitui protocolo assistencial",
+      "text": "Em paciente real, estabilização ABCDE, avaliação médica à beira-leito, protocolo institucional, microbiologia local e julgamento clínico têm prioridade. Este ACRA não diagnostica sepse nem prescreve tratamento autonomamente."
+    },
+    {
+      "id": "a01-critical-seguranca",
+      "severity": "warning",
+      "title": "Sepse é diagnóstico clínico",
+      "text": "Nenhum escore, biomarcador ou teste diagnóstico isolado confirma ou exclui sepse. Ferramentas como SOFA apoiam avaliação e estratificação, mas não devem atrasar resposta à deterioração. Procure simultaneamente infecção, disfunção orgânica e diagnósticos alternativos tempo-dependentes."
+    },
+    {
+      "id": "a01-critical-revisao",
+      "severity": "info",
+      "title": "Caso sintético e revisão médica",
+      "text": "O cenário é inteiramente sintético, sem dados identificáveis de paciente. Conteúdo local destinado ao estudo TEMI; revisão clínica humana final e adaptação às condições do serviço permanecem necessárias."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a01-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "danger",
+      "text": "Deterioração aguda + infecção possível + nova disfunção orgânica = trate a hipótese de sepse como tempo-dependente enquanto testa alternativas. Reconheça a ameaça fisiológica primeiro; o escore organiza risco, mas não autoriza esperar."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a01-component-m1",
+      "title": "M1 · Mecanismo e sequência",
+      "items": [
+        {
+          "id": "a01-step-deterioracao",
+          "title": "Detecte a mudança",
+          "text": "Compare com o basal: estado mental, frequência respiratória, oxigenação, pressão, perfusão, diurese e temperatura. Uma tendência desfavorável pode ser mais informativa que um valor isolado."
+        },
+        {
+          "id": "a01-step-abcde",
+          "title": "Estabilize pelo ABCDE",
+          "text": "Avalie via aérea, respiração, circulação, estado neurológico e exposição em paralelo à investigação. Corrija ameaças imediatas e peça ajuda proporcional à gravidade."
+        },
+        {
+          "id": "a01-step-infeccao",
+          "title": "Teste a hipótese infecciosa",
+          "text": "Procure foco provável, dispositivos, procedimentos, imunossupressão, exposições e antimicrobianos prévios. Obtenha hemoculturas assim que possível e idealmente antes do antimicrobiano, sem criar atraso inseguro ao tratamento indicado."
+        },
+        {
+          "id": "a01-step-disfuncao",
+          "title": "Mapeie disfunção orgânica",
+          "text": "Integre consciência, oxigenação, perfusão, pressão, diurese, função renal/hepática, coagulação, plaquetas e lactato em tendência. Nenhum marcador isolado define todo o quadro."
+        },
+        {
+          "id": "a01-step-mimetizadores",
+          "title": "Mantenha mimetizadores ativos",
+          "text": "Hemorragia, tromboembolismo, síndrome coronariana, arritmia, insuficiência adrenal, anafilaxia, pancreatite, intoxicação e causas metabólicas podem coexistir ou simular sepse."
+        },
+        {
+          "id": "a01-step-escalada",
+          "title": "Escale e reavalie",
+          "text": "Defina responsável, local de cuidado, frequência de reavaliação e gatilhos de UTI. Registre hipótese, incertezas, intervenções e resposta fisiológica."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a01-component-m2",
+      "title": "M2 · Decisão segura diante da deterioração",
+      "columns": [
+        {
+          "id": "a01-column-sinais",
+          "label": "Pistas dominantes"
+        },
+        {
+          "id": "a01-column-risco",
+          "label": "Risco cognitivo"
+        },
+        {
+          "id": "a01-column-conduta",
+          "label": "Próximo passo seguro"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a01-row-sepse",
+          "label": "Sepse possível ou provável",
+          "cells": [
+            "Infecção plausível, deterioração e nova disfunção orgânica.",
+            "Esperar febre, hipotensão ou escore completo para agir.",
+            "ABCDE, investigação e tratamento tempo-dependente em paralelo, com escalada conforme gravidade."
+          ]
+        },
+        {
+          "id": "a01-row-infeccao",
+          "label": "Infecção sem disfunção aparente",
+          "cells": [
+            "Foco provável, fisiologia preservada e ausência atual de lesão orgânica.",
+            "Confundir estado atual com garantia de estabilidade futura.",
+            "Tratar conforme síndrome, definir monitorização e explicitar sinais de deterioração."
+          ]
+        },
+        {
+          "id": "a01-row-mimetizador",
+          "label": "Mimetizador tempo-dependente",
+          "cells": [
+            "Dados discordantes com infecção ou pista forte de causa não infecciosa.",
+            "Ancorar em sepse e perder hemorragia, embolia, isquemia ou toxicidade.",
+            "Investigar e tratar hipóteses perigosas em paralelo; coexistência é possível."
+          ]
+        },
+        {
+          "id": "a01-row-incerteza",
+          "label": "Incerteza persistente",
+          "cells": [
+            "Quadro inicial inespecífico e informação incompleta.",
+            "Usar um exame negativo precoce como encerramento diagnóstico.",
+            "Reavaliação seriada com prazo, responsável e gatilhos objetivos de escalada."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a01-component-m3",
+      "title": "M3 · Caso sintético progressivo",
+      "items": [
+        {
+          "id": "a01-case-entrada",
+          "label": "1 · A mudança que não pode ser banalizada",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta internada por doença crônica passa a ficar sonolenta, taquipneica e oligúrica. Não há febre documentada. O primeiro movimento é reconhecer deterioração e executar ABCDE, não aguardar um rótulo."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Compare sinais atuais com o basal.",
+                "Acione ajuda e monitorização compatíveis com a instabilidade.",
+                "Procure ameaças reversíveis imediatas."
+              ]
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a01-case-hipoteses",
+          "label": "2 · Infecção e disfunção entram no mesmo quadro",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Há tosse recente, necessidade crescente de oxigênio, creatinina acima do basal e perfusão periférica lenta. Infecção pulmonar com disfunção orgânica torna-se provável, embora causas cardíacas e tromboembólicas ainda precisem ser testadas."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Localize o foco e obtenha amostras sem atraso inseguro.",
+                "Mapeie a disfunção órgão por órgão.",
+                "Declare dados que favorecem e que enfraquecem cada hipótese."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a01-case-decisao",
+          "label": "3 · Escalada não depende de um único escore",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A pressão ainda não é profundamente baixa, mas consciência, oxigenação, diurese e perfusão pioram. A decisão segura é intensificar suporte, investigação e tratamento, solicitar avaliação crítica e definir destino de maior vigilância."
+            }
+          ]
+        },
+        {
+          "id": "a01-case-reavaliacao",
+          "label": "4 · Feche o ciclo",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Após as primeiras intervenções, registre tendência de perfusão, oxigenação, consciência, diurese e lactato quando indicado. Se a resposta for inadequada, reabra foco, adequação terapêutica, mimetizadores e necessidade de UTI."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a01-component-m4",
+      "title": "M4 · Armadilhas de plantão",
+      "items": [
+        {
+          "id": "a01-pitfall-febre",
+          "title": "Sem febre, sem sepse",
+          "text": "Erro: febre pode faltar. Correção: valorize deterioração, infecção plausível e disfunção orgânica.",
+          "tone": "danger"
+        },
+        {
+          "id": "a01-pitfall-escore",
+          "title": "Escore baixo tranquiliza",
+          "text": "Erro: usar triagem como teste de exclusão. Correção: trate ameaça fisiológica e tendência clínica.",
+          "tone": "warning"
+        },
+        {
+          "id": "a01-pitfall-lactato",
+          "title": "Lactato normal encerra o caso",
+          "text": "Erro: um lactato não exclui sepse nem toda hipoperfusão. Correção: integre órgãos, perfusão e evolução.",
+          "tone": "warning"
+        },
+        {
+          "id": "a01-pitfall-ancoragem",
+          "title": "Tudo é sepse",
+          "text": "Erro: abandonar mimetizadores perigosos. Correção: investigue causas concorrentes em paralelo.",
+          "tone": "danger"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a01-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a01-question-escore",
+          "prompt": "Paciente deteriora com infecção provável, mas um escore de triagem está baixo. Qual interpretação é mais segura?",
+          "options": [
+            {
+              "id": "a01-option-escore-alta",
+              "label": "Sepse está excluída"
+            },
+            {
+              "id": "a01-option-escore-clinica",
+              "label": "A clínica e a disfunção orgânica mantêm prioridade"
+            },
+            {
+              "id": "a01-option-escore-espera",
+              "label": "Aguardar o escore subir"
+            }
+          ],
+          "correctOptionId": "a01-option-escore-clinica",
+          "feedback": "Escores apoiam reconhecimento e prognóstico, mas não devem funcionar como teste isolado de exclusão nem atrasar resposta à deterioração."
+        },
+        {
+          "id": "a01-question-definicao",
+          "prompt": "Qual combinação melhor sustenta a hipótese operacional de sepse?",
+          "options": [
+            {
+              "id": "a01-option-definicao-febre",
+              "label": "Febre isolada"
+            },
+            {
+              "id": "a01-option-definicao-cultura",
+              "label": "Cultura positiva isolada"
+            },
+            {
+              "id": "a01-option-definicao-orgao",
+              "label": "Infecção e nova disfunção orgânica"
+            }
+          ],
+          "correctOptionId": "a01-option-definicao-orgao",
+          "feedback": "Sepsis-3 define sepse como disfunção orgânica ameaçadora à vida causada por resposta desregulada do hospedeiro à infecção."
+        },
+        {
+          "id": "a01-question-mimetizador",
+          "prompt": "Ao suspeitar de sepse, o que fazer com mimetizadores tempo-dependentes?",
+          "options": [
+            {
+              "id": "a01-option-mimetizador-ignorar",
+              "label": "Ignorar até tratar a sepse"
+            },
+            {
+              "id": "a01-option-mimetizador-paralelo",
+              "label": "Investigar e tratar em paralelo quando plausíveis"
+            },
+            {
+              "id": "a01-option-mimetizador-impossivel",
+              "label": "Assumir que não coexistem"
+            }
+          ],
+          "correctOptionId": "a01-option-mimetizador-paralelo",
+          "feedback": "Sepse e outras emergências podem coexistir. O método seguro preserva hipóteses concorrentes e busca o dado que muda conduta."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a01-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a01-resume-d0",
+          "label": "D0 · Recite: deterioração, ABCDE, infecção, órgãos, mimetizadores, escalada",
+          "details": "Faça a sequência sem olhar e identifique onde costuma atrasar.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a01-resume-d1",
+          "label": "D1 · Refaça as três questões",
+          "details": "Explique em voz alta por que cada alternativa errada é insegura.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a01-resume-d7",
+          "label": "D7 · Reconstrua o caso em 90 segundos",
+          "details": "Inclua hipótese principal, dois mimetizadores e gatilho de UTI.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a01-resume-d14",
+          "label": "D14 · Audite um protocolo local",
+          "details": "Compare fluxos de reconhecimento, escalada e reavaliação com a prática do serviço.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a01-resume-d30",
+          "label": "D30 · Simule uma deterioração sem febre",
+          "details": "Treine comunicação em alça fechada e registro das incertezas.",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a01-component-progress",
+      "title": "Percurso ACRA",
+      "current": 7,
+      "total": 7,
+      "label": "M0–M6 concluídos"
+    },
+    {
+      "type": "sources",
+      "id": "a01-component-sources",
+      "title": "Diretriz e definição",
+      "sourceIds": [
+        "a01-source-ssc2026",
+        "a01-source-sepsis3"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a01-component-followup",
+      "title": "Próximas ações em modo de prévia",
+      "actionIds": [
+        "a01-action-review",
+        "a01-action-deepen",
+        "a01-action-compare"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a01-action-review",
+      "kind": "review",
+      "label": "Revisar erros",
+      "prompt": "Revise as respostas incorretas e converta cada erro em um gatilho de reconhecimento de deterioração.",
+      "contextComponentIds": [
+        "a01-component-m4",
+        "a01-component-m5"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a01-action-deepen",
+      "kind": "deepen",
+      "label": "Aprofundar disfunção orgânica",
+      "prompt": "Relacione cada sistema orgânico aos dados clínicos seriados que podem revelar piora precoce.",
+      "contextComponentIds": [
+        "a01-component-m1",
+        "a01-component-m2"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a01-action-compare",
+      "kind": "compare",
+      "label": "Comparar sepse e mimetizadores",
+      "prompt": "Compare sepse, hemorragia, tromboembolismo e causa cardíaca, destacando pistas convergentes, discordantes e testes que mudam conduta.",
+      "contextComponentIds": [
+        "a01-component-m2",
+        "a01-component-m3"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a01-source-ssc2026",
+      "title": "Surviving Sepsis Campaign: Adult Guidelines 2026",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "publisher": "Society of Critical Care Medicine"
+    },
+    {
+      "id": "a01-source-sepsis3",
+      "title": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26903338/",
+      "publisher": "JAMA"
+    }
+  ]
+}

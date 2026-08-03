@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "antigravity-acra-plan-v1",
+  "moduleId": "sepse-ultra-expert",
+  "updatedAt": "2026-08-03",
+  "status": "integrated-local-candidate",
+  "created": 10,
+  "target": 10,
+  "policy": {
+    "phase": "fase-4a-local-b127-b152-autorizada",
+    "mode": "PARCIAL por padrão; AUTO somente opt-in",
+    "fallback": "todo conteúdo clínico essencial permanece utilizável sem ACRA",
+    "integration": "integrada somente ao candidato local; Home, manifestos centrais e publicação permanecem bloqueados",
+    "layers": ["M0", "M1", "M2", "M3", "M4", "M5", "M6"],
+    "safety": "cenários sintéticos, feedback por decisão, sem paciente identificável, sem prescrição autônoma"
+  },
+  "items": [
+    {
+      "id": "ACRA-SEPSE-01",
+      "title": "Pense, pode ser sepse",
+      "anchor": "suspeita",
+      "scenario": "Paciente na enfermaria com deterioração inespecífica; reconhecer ameaça fisiológica antes do escore.",
+      "decisionCore": "ABCDE, infecção, disfunção orgânica, mimetizadores e prioridade de escalada.",
+      "sourceIds": ["ssc2026", "sepsis3"],
+      "artifactId": "a01-acra-sepse-reconhecimento-v1",
+      "file": "acra/acra-sepse-01-pense-pode-ser-sepse.json",
+      "status": "integrated-local-candidate"
+    },
+    {
+      "id": "ACRA-SEPSE-02",
+      "title": "O relógio do antimicrobiano",
+      "anchor": "relogio",
+      "scenario": "Três pacientes com choque, sepse provável sem choque e infecção possível em investigação.",
+      "decisionCore": "Distinguir janela ideal de 1 hora, investigação limitada a 3 horas e diferimento monitorado.",
+      "sourceIds": ["ssc2026", "antibiotic-framework"],
+      "artifactId": "a02-acra-sepse-relogio-antimicrobiano-v1",
+      "file": "acra/acra-sepse-02-relogio-antimicrobiano.json",
+      "status": "integrated-local-candidate"
+    },
+    {
+      "id": "ACRA-SEPSE-03",
+      "title": "Antibiótico não drena pus",
+      "anchor": "infeccao",
+      "scenario": "Choque abdominal com coleção e resposta parcial ao antimicrobiano.",
+      "decisionCore": "Localizar anatomia, acionar equipe, controlar foco cedo e confirmar eficácia.",
+      "sourceIds": ["ssc2026"],
+      "artifactId": "a03-acra-sepse-controle-foco-v1",
+      "file": "acra/acra-sepse-03-antibiotico-nao-drena-pus.json",
+      "status": "integrated-local-candidate"
+    },
+    {
+      "id": "ACRA-SEPSE-04",
+      "title": "Fluido: benefício ou dano",
+      "anchor": "hemodinamica",
+      "scenario": "Hipotensão com possível responsividade, seguida de perda de tolerância e congestão.",
+      "decisionCore": "Separar necessidade, responsividade e tolerância; reavaliar cada ciclo.",
+      "sourceIds": ["ssc2026", "hemodynamic-guide", "andromeda2"],
+      "artifactId": "acra-sepse-04-fluido-beneficio-ou-dano-v1",
+      "file": "acra/acra-sepse-04-fluido-beneficio-ou-dano.json",
+      "status": "integrated-local-candidate"
+    },
+    {
+      "id": "ACRA-SEPSE-05",
+      "title": "Vasopressor sem atraso",
+      "anchor": "hemodinamica",
+      "scenario": "Choque instável sem acesso central disponível.",
+      "decisionCore": "Noradrenalina periférica por protocolo, alvo de PAM, vasopressina e adrenalina sem automatismo.",
+      "sourceIds": ["ssc2026", "hemodynamic-guide"],
+      "artifactId": "acra-sepse-05-vasopressor-sem-atraso-v1",
+      "file": "acra/acra-sepse-05-vasopressor-sem-atraso.json",
+      "status": "integrated-local-candidate"
+    },
+    {
+      "id": "ACRA-SEPSE-06",
+      "title": "Fenótipo muda, conduta muda",
+      "anchor": "fenotipos",
+      "scenario": "Choque inicialmente vasoplégico que após intubação revela falência de VD e congestão.",
+      "decisionCore": "Reclassificar fisiologia seriada; evitar volume cego e rótulo fixo.",
+      "sourceIds": ["ssc2026", "hemodynamic-guide"],
+      "artifactId": "acra-sepse-06-fenotipo-muda-conduta-muda-v1",
+      "file": "acra/acra-sepse-06-fenotipo-muda-conduta-muda.json",
+      "status": "integrated-local-candidate"
+    },
+    {
+      "id": "ACRA-SEPSE-07",
+      "title": "SENECA e CTS sem extrapolação",
+      "anchor": "fenotipos",
+      "scenario": "Equipe tenta escolher terapia usando cluster retrospectivo e assinatura molecular presumida.",
+      "decisionCore": "Diferenciar descrição, prognóstico, predição e prescrição; reconhecer limites de validade.",
+      "sourceIds": ["seneca", "seneca-validation", "transcriptomic"],
+      "artifactId": "acra-sepse-07-v1",
+      "file": "acra/acra-sepse-07-seneca-cts-sem-extrapolacao.json",
+      "status": "integrated-local-candidate"
+    },
+    {
+      "id": "ACRA-SEPSE-08",
+      "title": "Choque refratário: explique antes de resgatar",
+      "anchor": "refrataria",
+      "scenario": "Vasopressor em escalada com foco duvidoso, drenagem ineficaz, auto-PEEP e acidemia.",
+      "decisionCore": "Auditar os oito domínios e priorizar causas reversíveis antes de intervenção não padrão.",
+      "sourceIds": ["ssc2026", "hemodynamic-guide"],
+      "artifactId": "acra-sepse-08-v1",
+      "file": "acra/acra-sepse-08-choque-refratario-explicar-antes-resgatar.json",
+      "status": "integrated-local-candidate"
+    },
+    {
+      "id": "ACRA-SEPSE-09",
+      "title": "Fronteira terapêutica e segurança off-label",
+      "anchor": "fronteira",
+      "scenario": "Discussão de azul de metileno em vasoplegia extrema com fármaco serotonérgico concomitante.",
+      "decisionCore": "Classificar evidência insuficiente, reconhecer hard stops, definir alvo, janela e interrupção.",
+      "sourceIds": ["ssc2026", "methylene-fda"],
+      "artifactId": "acra-sepse-09-v1",
+      "file": "acra/acra-sepse-09-fronteira-off-label-seguranca.json",
+      "status": "integrated-local-candidate"
+    },
+    {
+      "id": "ACRA-SEPSE-10",
+      "title": "Sobreviver não é voltar ao basal",
+      "anchor": "recuperacao",
+      "scenario": "Paciente após ventilação prolongada, fraco, disfágico, ansioso e com novas medicações.",
+      "decisionCore": "Reconciliação, avaliação física/cognitiva/emocional, reabilitação e transição com responsáveis.",
+      "sourceIds": ["ssc2026"],
+      "artifactId": "acra-sepse-10-v1",
+      "file": "acra/acra-sepse-10-sobreviver-nao-voltar-basal.json",
+      "status": "integrated-local-candidate"
+    }
+  ],
+  "validation": {
+    "contract": "ACRA renderable profile v1.0",
+    "validatedAt": "2026-08-03",
+    "parser": "pass",
+    "validator": "pass",
+    "sanitizer": "pass",
+    "renderer": "pass",
+    "unmount": "pass",
+    "clinicalCrossAudit": "pass-owner-review-pending",
+    "runtimeIntegration": "integrated-local-candidate"
+  }
+}

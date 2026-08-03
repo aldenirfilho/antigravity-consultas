@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-02",
+  "updatedAt": "2026-08-03",
   "project": "Enciclopédia Médica Intensiva & Medicina Interna",
-  "version": "manifest-canonico-v9",
+  "version": "manifest-canonico-v10-sepse",
   "stack": "html-css-js-json-static",
   "hubs": {
     "home": "index.html",
@@ -17,6 +17,7 @@
     "pneumologia": "01_Modulos_Clinicos/Pneumologia_Critica/index.html",
     "dermatologia": "01_Modulos_Clinicos/Dermatologia_Critica/index.html",
     "delirium": "01_Modulos_Clinicos/Delirium_UTI/index.html",
+    "sepse": "01_Modulos_Clinicos/Sepse_Choque_Septico/index.html",
     "radar": "15_Radar_Cientifico/index.html",
     "diretorio": "16_Diretorio_Medico/index.html",
     "portal": "17_Portal_Vivo/index.html",
@@ -44,6 +45,7 @@
     "pneumologia_critica": "01_Modulos_Clinicos/Pneumologia_Critica/index.html",
     "dermatologia_critica": "01_Modulos_Clinicos/Dermatologia_Critica/index.html",
     "delirium_uti": "01_Modulos_Clinicos/Delirium_UTI/index.html",
+    "sepse_ultra_expert": "01_Modulos_Clinicos/Sepse_Choque_Septico/index.html",
     "respirasense": "01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/index.html",
     "respiracrit": "01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html",
     "renaldose": "13_RenalDose_Antimicrobianos/index.html",
@@ -111,6 +113,7 @@
     { "id": "pneumologia_critica", "path": "01_Modulos_Clinicos/Pneumologia_Critica/index.html", "label": "Pneumologia Crítica" },
     { "id": "dermatologia_critica", "path": "01_Modulos_Clinicos/Dermatologia_Critica/index.html", "label": "Dermatologia Crítica" },
     { "id": "delirium_uti", "path": "01_Modulos_Clinicos/Delirium_UTI/index.html", "label": "Delirium UTI/Enfermaria" },
+    { "id": "sepse_ultra_expert", "path": "01_Modulos_Clinicos/Sepse_Choque_Septico/index.html", "label": "Sepse Ultra Expert" },
     { "id": "respirasense", "path": "01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/index.html", "label": "RespiraSense ICU" },
     { "id": "respiracrit", "path": "01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html", "label": "RespiraCrit" }
   ],

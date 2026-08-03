@@ -6,6 +6,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -62,7 +63,7 @@ class EditorialProvenanceTests(unittest.TestCase):
             (root / "obra.md").write_text("obra", encoding="utf-8")
             result = subprocess.run(
                 [
-                    "python3",
+                    sys.executable,
                     str(SCRIPT),
                     "--root",
                     str(root),

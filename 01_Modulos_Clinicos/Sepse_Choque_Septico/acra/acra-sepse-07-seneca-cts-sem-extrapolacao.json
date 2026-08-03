@@ -1,0 +1,394 @@
+{
+  "version": "1.0",
+  "id": "acra-sepse-07-v1",
+  "title": "SENECA e CTS sem extrapolação",
+  "subtitle": "Fenótipo de pesquisa não é receita individual",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para distinguir classificação descritiva, associação prognóstica, predição validada de efeito e prescrição. Os fenótipos SENECA e os subtipos transcriptômicos de consenso (CTS) ajudam a estudar heterogeneidade da sepse, mas não autorizam selecionar tratamento individual fora de estudo ou protocolo validado.",
+  "critical": [
+    {
+      "id": "a07-critical-educational",
+      "severity": "danger",
+      "title": "Apoio educacional — não é protocolo assistencial",
+      "text": "Este ACRA ensina leitura crítica de fenótipos de pesquisa. Não substitui avaliação fisiológica, diretriz, microbiologia, protocolo institucional ou julgamento clínico e não prescreve terapia por cluster."
+    },
+    {
+      "id": "a07-critical-no-prescription",
+      "severity": "warning",
+      "title": "SENECA e CTS não são seletores terapêuticos validados",
+      "text": "Associação com desfecho ou resposta observada em análise exploratória não demonstra benefício causal no paciente classificado à beira-leito. Aplicação prescritiva exige ensaio prospectivo, teste disponível e válido, regra reproduzível e benefício clínico confirmado."
+    },
+    {
+      "id": "a07-critical-synthetic",
+      "severity": "info",
+      "title": "Caso sintético em revisão médica",
+      "text": "O cenário é fictício e não contém dados identificáveis. Conteúdo local para estudo TEMI; revisão clínica humana final permanece obrigatória antes de qualquer integração ou uso institucional."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a07-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "warning",
+      "text": "Pergunta-mãe: o rótulo apenas descreve um grupo ou já prediz, de modo prospectivamente validado, qual intervenção melhora desfecho? SENECA e CTS organizam heterogeneidade; hoje não devem comandar prescrição individual."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a07-component-m1",
+      "title": "M1 · Mecanismo: da semelhança ao benefício causal",
+      "items": [
+        {
+          "id": "a07-step-describe",
+          "title": "1 · Descrever",
+          "text": "Um algoritmo agrupa pessoas por características clínicas ou moleculares semelhantes. O cluster resume padrões da coorte; não é uma nova etiologia nem uma certeza biológica individual."
+        },
+        {
+          "id": "a07-step-prognosis",
+          "title": "2 · Associar a prognóstico",
+          "text": "O grupo pode apresentar mortalidade ou disfunção diferente. Isso estima risco em determinada população, mas não informa automaticamente qual tratamento modifica esse risco."
+        },
+        {
+          "id": "a07-step-predict",
+          "title": "3 · Demonstrar predição de efeito",
+          "text": "Para escolher terapia, é preciso mostrar interação reproduzível entre subtipo e efeito do tratamento, com classificação válida no tempo clínico útil e confirmação prospectiva."
+        },
+        {
+          "id": "a07-step-prescribe",
+          "title": "4 · Só então prescrever",
+          "text": "A prescrição exige benefício clínico, segurança, teste operacional, população aplicável e regra decisória validada. Sem essa cadeia, use fisiologia, foco, microbiologia e recomendações vigentes."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a07-component-m2",
+      "title": "M2 · Quatro níveis que não podem ser confundidos",
+      "columns": [
+        {
+          "id": "a07-column-claim",
+          "label": "O que responde"
+        },
+        {
+          "id": "a07-column-proof",
+          "label": "Evidência necessária"
+        },
+        {
+          "id": "a07-column-limit",
+          "label": "Limite prático"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a07-row-descriptive",
+          "label": "Descritivo",
+          "cells": [
+            "Quais padrões coexistem nesta coorte?",
+            "Agrupamento robusto, estabilidade e validação externa.",
+            "Não define causa nem terapia."
+          ]
+        },
+        {
+          "id": "a07-row-prognostic",
+          "label": "Prognóstico",
+          "cells": [
+            "Quem apresenta maior risco de determinado desfecho?",
+            "Discriminação, calibração e validação na população-alvo.",
+            "Risco maior não revela qual intervenção ajuda."
+          ]
+        },
+        {
+          "id": "a07-row-predictive",
+          "label": "Preditivo",
+          "cells": [
+            "O efeito de uma intervenção difere entre subgrupos?",
+            "Interação tratamento-subgrupo pré-especificada e confirmada.",
+            "Análise exploratória pode gerar hipótese, não conduta."
+          ]
+        },
+        {
+          "id": "a07-row-prescriptive",
+          "label": "Prescritivo",
+          "cells": [
+            "A regra melhora desfechos quando usada para decidir?",
+            "Ensaio prospectivo, teste disponível, segurança e utilidade clínica.",
+            "SENECA e CTS ainda não atingem esse nível para rotina."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a07-component-m3",
+      "title": "M3 · Caso sintético progressivo",
+      "items": [
+        {
+          "id": "a07-case-1",
+          "label": "1 · O atalho sedutor",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta com choque séptico, disfunção renal e pulmonar. Alguém sugere: “parece SENECA δ; vamos escolher a terapia pelo fenótipo”."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Interrompa a passagem direta de rótulo para prescrição.",
+                "Pergunte qual classificador validado foi aplicado e qual ensaio demonstrou benefício guiado por ele."
+              ]
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a07-case-2",
+          "label": "2 · O que SENECA realmente oferece",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "O estudo original derivou quatro fenótipos clínicos α, β, γ e δ. Uma validação externa encontrou subtipos semelhantes, porém com distribuição variável entre coortes. Isso apoia heterogeneidade e reprodutibilidade parcial, não prescrição automática."
+            }
+          ]
+        },
+        {
+          "id": "a07-case-3",
+          "label": "3 · A assinatura molecular presumida",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A equipe também presume um CTS por aparência clínica. O framework transcriptômico depende de expressão gênica no sangue e permanece investigacional; não há correspondência simples ou confiável entre aparência e subtipo molecular."
+            }
+          ]
+        },
+        {
+          "id": "a07-case-4",
+          "label": "4 · Decisão segura agora",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Reoriente a decisão para fisiologia atual, perfusão, foco, controle anatômico, microbiologia, farmacocinética e recomendações vigentes. Registre o fenótipo de pesquisa apenas como hipótese educacional ou variável de estudo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a07-component-m4",
+      "title": "M4 · Armadilhas de extrapolação",
+      "items": [
+        {
+          "id": "a07-pitfall-cluster",
+          "title": "Cluster = doença nova",
+          "text": "Erro: tratar um agrupamento estatístico como entidade causal estável. Correção: verificar variáveis de entrada, temporalidade, estabilidade e validação externa.",
+          "tone": "warning"
+        },
+        {
+          "id": "a07-pitfall-risk",
+          "title": "Prognóstico = benefício terapêutico",
+          "text": "Erro: concluir que o grupo de maior risco será o que mais se beneficia. Correção: exigir evidência de interação e utilidade clínica.",
+          "tone": "danger"
+        },
+        {
+          "id": "a07-pitfall-posthoc",
+          "title": "Sinal pós-hoc = regra",
+          "text": "Erro: converter análise exploratória em protocolo. Correção: tratar como hipótese até replicação pré-especificada e prospectiva.",
+          "tone": "danger"
+        },
+        {
+          "id": "a07-pitfall-cts",
+          "title": "Aparência clínica = CTS",
+          "text": "Erro: presumir assinatura transcriptômica sem ensaio molecular validado. Correção: não usar CTS para decisão assistencial rotineira.",
+          "tone": "warning"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a07-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a07-question-1",
+          "prompt": "Um subtipo associado a maior mortalidade permite escolher automaticamente tratamento mais agressivo?",
+          "options": [
+            {
+              "id": "a07-option-1a",
+              "label": "Sim, risco define benefício"
+            },
+            {
+              "id": "a07-option-1b",
+              "label": "Não; prognóstico não é predição de efeito"
+            },
+            {
+              "id": "a07-option-1c",
+              "label": "Sim, se o cluster tiver nome"
+            }
+          ],
+          "correctOptionId": "a07-option-1b",
+          "feedback": "Risco e resposta ao tratamento são perguntas diferentes. Prescrição por subtipo exige interação validada e demonstração de utilidade clínica."
+        },
+        {
+          "id": "a07-question-2",
+          "prompt": "Qual uso atual é mais seguro para SENECA e CTS?",
+          "options": [
+            {
+              "id": "a07-option-2a",
+              "label": "Selecionar fármaco individual"
+            },
+            {
+              "id": "a07-option-2b",
+              "label": "Organizar pesquisa e compreender heterogeneidade"
+            },
+            {
+              "id": "a07-option-2c",
+              "label": "Substituir avaliação fisiológica"
+            }
+          ],
+          "correctOptionId": "a07-option-2b",
+          "feedback": "Os frameworks são úteis para ciência e estratificação investigacional. Não substituem fisiologia, etiologia, microbiologia ou diretriz."
+        },
+        {
+          "id": "a07-question-3",
+          "prompt": "O que falta antes de uma classificação se tornar prescritiva?",
+          "options": [
+            {
+              "id": "a07-option-3a",
+              "label": "Somente uma associação retrospectiva"
+            },
+            {
+              "id": "a07-option-3b",
+              "label": "Ensaio prospectivo e regra operacional validada"
+            },
+            {
+              "id": "a07-option-3c",
+              "label": "A opinião de um único serviço"
+            }
+          ],
+          "correctOptionId": "a07-option-3b",
+          "feedback": "É necessário demonstrar que usar a regra para decidir melhora desfechos, com teste reprodutível, aplicável e seguro."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a07-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a07-resume-d0",
+          "label": "D0 · recite: descritivo, prognóstico, preditivo, prescritivo",
+          "details": "Diga a pergunta respondida por cada nível sem consultar o quadro.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a07-resume-d1",
+          "label": "D1 · explique por que maior risco não prova benefício",
+          "details": "Use as palavras interação, validação e causalidade.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a07-resume-d7",
+          "label": "D7 · reconstrua o caso do atalho terapêutico",
+          "details": "Substitua o rótulo pela decisão fisiológica e etiológica imediata.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a07-resume-d14",
+          "label": "D14 · compare SENECA e CTS",
+          "details": "Diferencie dados clínicos de expressão gênica e declare o limite prescritivo comum.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a07-resume-d30",
+          "label": "D30 · faça uma defesa oral de 90 segundos",
+          "details": "Responda: quando um biomarcador ou fenótipo pode mudar tratamento?",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a07-component-progress",
+      "title": "Percurso ACRA 07",
+      "current": 7,
+      "total": 7,
+      "label": "M0–M6 concluídos"
+    },
+    {
+      "type": "sources",
+      "id": "a07-component-sources",
+      "title": "Fontes primárias",
+      "sourceIds": [
+        "a07-source-seneca",
+        "a07-source-validation",
+        "a07-source-cts"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a07-component-followup",
+      "title": "Próximas ações sugeridas",
+      "actionIds": [
+        "a07-action-review",
+        "a07-action-compare",
+        "a07-action-deepen"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a07-action-review",
+      "kind": "review",
+      "label": "Revisar extrapolações",
+      "prompt": "Reabra o caso e identifique toda passagem indevida entre descrição, prognóstico, predição e prescrição.",
+      "contextComponentIds": [
+        "a07-component-m2",
+        "a07-component-m3",
+        "a07-component-m4"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a07-action-compare",
+      "kind": "compare",
+      "label": "Comparar SENECA e CTS",
+      "prompt": "Compare dados de entrada, finalidade de pesquisa, validação e limitações clínicas dos fenótipos SENECA e dos CTS.",
+      "contextComponentIds": [
+        "a07-component-m1",
+        "a07-component-m3"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a07-action-deepen",
+      "kind": "deepen",
+      "label": "Aprofundar predição",
+      "prompt": "Explique como interação tratamento-subgrupo, validação prospectiva e utilidade clínica transformam hipótese em decisão.",
+      "contextComponentIds": [
+        "a07-component-m2",
+        "a07-component-m5"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a07-source-seneca",
+      "title": "Derivation, Validation, and Potential Treatment Implications of Novel Clinical Phenotypes for Sepsis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31104070/",
+      "publisher": "JAMA"
+    },
+    {
+      "id": "a07-source-validation",
+      "title": "Clinical subtypes in critically ill patients with sepsis: validation and parsimonious classifier model development",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39905513/"
+    },
+    {
+      "id": "a07-source-cts",
+      "title": "A consensus blood transcriptomic framework for sepsis",
+      "url": "https://www.nature.com/articles/s41591-025-03964-5",
+      "publisher": "Nature Medicine"
+    }
+  ]
+}

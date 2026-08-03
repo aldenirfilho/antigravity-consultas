@@ -1,0 +1,400 @@
+{
+  "version": "1.0",
+  "id": "acra-sepse-08-v1",
+  "title": "Choque refratário: explique antes de resgatar",
+  "subtitle": "Oito domínios para procurar causas reversíveis",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para enfrentar vasopressor em escalada sem usar um resgate experimental como atalho. Audite diagnóstico, foco, antimicrobiano, volume e tolerância, vasoplegia, bomba, ventilação e pressões, e metabolismo; corrija causas reversíveis, reavalie a fisiologia e só discuta intervenção não padrão sob governança clínica.",
+  "critical": [
+    {
+      "id": "a08-critical-educational",
+      "severity": "danger",
+      "title": "Apoio educacional — não é protocolo assistencial",
+      "text": "Choque persistente é emergência. Este ACRA não substitui ressuscitação simultânea, equipe experiente, monitorização adequada, diretriz ou protocolo institucional e não oferece prescrição autônoma de terapias de resgate."
+    },
+    {
+      "id": "a08-critical-reversible",
+      "severity": "warning",
+      "title": "Escalada pressora não define a causa",
+      "text": "Não existe um único limiar universal que explique refratariedade. Foco não controlado, terapia anti-infecciosa inadequada, congestão, falência ventricular, obstrução, auto-PEEP, acidemia e diagnósticos alternativos podem coexistir e exigem busca dirigida."
+    },
+    {
+      "id": "a08-critical-synthetic",
+      "severity": "info",
+      "title": "Caso sintético em revisão médica",
+      "text": "O cenário é fictício e não contém dados identificáveis. Conteúdo local para estudo TEMI; revisão clínica humana final permanece obrigatória antes de integração ou uso institucional."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a08-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "danger",
+      "text": "Quando o vasopressor sobe, não pergunte primeiro “qual resgate acrescentar?”. Pergunte “o que ainda não expliquei?”. Rode oito domínios em circuito fechado, trate o reversível e documente resposta e incerteza."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a08-component-m1",
+      "title": "M1 · Mecanismo: auditoria dos oito domínios",
+      "items": [
+        {
+          "id": "a08-step-diagnosis",
+          "title": "1 · Diagnóstico",
+          "text": "Reabra a hipótese: sepse isolada, choque misto ou mimetizador? Procure hemorragia, anafilaxia, crise adrenal, intoxicação, isquemia, TEP, tamponamento e pneumotórax conforme contexto."
+        },
+        {
+          "id": "a08-step-source",
+          "title": "2 · Foco",
+          "text": "Confirme anatomia, drenagem, descompressão, desbridamento ou retirada de dispositivo quando indicados. Controle incompleto mantém a agressão apesar de antimicrobiano."
+        },
+        {
+          "id": "a08-step-antimicrobial",
+          "title": "3 · Antimicrobiano",
+          "text": "Revise coleta, início, espectro, exposição, alergias, função renal e hepática, terapia renal, obesidade, interações e resultados microbiológicos com infectologia e farmácia quando disponíveis."
+        },
+        {
+          "id": "a08-step-volume",
+          "title": "4 · Volume e tolerância",
+          "text": "Separe necessidade, responsividade e tolerância. Hipotensão não autoriza bolus cego; procure resposta dinâmica, perfusão e sinais pulmonares, venosos, direitos, renais e abdominais de congestão."
+        },
+        {
+          "id": "a08-step-vasoplegia",
+          "title": "5 · Vasoplegia",
+          "text": "Confirme pressão e infusão, acesso, equipo e bomba; avalie tônus vascular, pressão diastólica e perfusão. Otimize a estratégia vasopressora apoiada antes de considerar terapia fora de padrão."
+        },
+        {
+          "id": "a08-step-pump",
+          "title": "6 · Bomba",
+          "text": "Avalie função do VE e VD, ritmo, isquemia, valvas e pericárdio. Pressão inadequada pode refletir baixo fluxo, vasoplegia ou ambos; inotrópico não deve ser inferido pela fração de ejeção isolada."
+        },
+        {
+          "id": "a08-step-pressure",
+          "title": "7 · Ventilação, tubos e pressões",
+          "text": "Procure auto-PEEP, pressão intratorácica excessiva, pneumotórax, TEP, tamponamento e hipertensão intra-abdominal. A ventilação pode reduzir retorno venoso e sobrecarregar o VD."
+        },
+        {
+          "id": "a08-step-metabolism",
+          "title": "8 · Metabolismo",
+          "text": "Investigue acidemia, cálcio ionizado, glicemia, temperatura e múltiplas causas de lactato. Corrija mecanismo e causa; um valor isolado não é ordem automática de fluido ou bicarbonato."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a08-component-m2",
+      "title": "M2 · Sinal de refratariedade × pergunta que falta",
+      "columns": [
+        {
+          "id": "a08-column-hidden",
+          "label": "O que pode estar oculto"
+        },
+        {
+          "id": "a08-column-check",
+          "label": "Verificação imediata"
+        },
+        {
+          "id": "a08-column-error",
+          "label": "Erro a evitar"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a08-row-pressure",
+          "label": "PAM continua inadequada",
+          "cells": [
+            "Medição incorreta, infusão falha, vasoplegia, baixo fluxo ou obstrução.",
+            "Curva e manguito, acesso/equipo, perfusão e avaliação cardiovascular focal.",
+            "Somar fármacos sem confirmar entrega e fisiologia."
+          ]
+        },
+        {
+          "id": "a08-row-lactate",
+          "label": "Lactato persiste",
+          "cells": [
+            "Hipoperfusão, catecolaminas, depuração reduzida, convulsão ou outros mecanismos.",
+            "Tendência, perfusão periférica, débito, fígado, drogas e contexto metabólico.",
+            "Tratar o número com volume indiscriminado."
+          ]
+        },
+        {
+          "id": "a08-row-hypoxemia",
+          "label": "Piora após intubação",
+          "cells": [
+            "Auto-PEEP, pressão elevada, pneumotórax, falência do VD ou hipovolemia relativa.",
+            "Ventilador, ausculta, pressões, POCUS integrado e exame do tórax.",
+            "Atribuir toda deterioração à sepse."
+          ]
+        },
+        {
+          "id": "a08-row-fever",
+          "label": "Inflamação e choque persistem",
+          "cells": [
+            "Foco não controlado, espectro ou exposição inadequados, nova infecção ou mimetizador.",
+            "Imagem, cultura, procedimento, dispositivos e revisão farmacológica.",
+            "Trocar antimicrobiano sem rever anatomia e diagnóstico."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a08-component-m3",
+      "title": "M3 · Caso sintético progressivo",
+      "items": [
+        {
+          "id": "a08-case-1",
+          "label": "1 · Vasopressor em escalada",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta com choque atribuído a infecção abdominal. A pressão segue inadequada apesar de vasopressor em escalada. A primeira tarefa é confirmar medição, acesso, entrega da infusão e sinais de perfusão enquanto a auditoria começa."
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a08-case-2",
+          "label": "2 · O foco não fechou",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A tomografia prévia mostrava coleção; o dreno tem débito mínimo e posição incerta. O problema pode ser anatômico, não resistência farmacológica. Acione a equipe de controle do foco e verifique eficácia do procedimento."
+            }
+          ]
+        },
+        {
+          "id": "a08-case-3",
+          "label": "3 · A ventilação mudou a fisiologia",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Após intubação, há hiperinsuflação dinâmica, pressão intratorácica elevada e sinais de sobrecarga do VD. Revise ventilador e pressões, exclua obstrução e pneumotórax e reclassifique o choque antes de novo fluido."
+            }
+          ]
+        },
+        {
+          "id": "a08-case-4",
+          "label": "4 · Acidemia e decisão de resgate",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Acidemia importante pode reduzir resposta cardiovascular, mas deve ser explicada por ventilação, perfusão, rim, metabolismo e drogas. Corrija causas reversíveis e só então discuta terapia não padrão com equipe experiente, justificativa, monitorização e critérios de interrupção."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a08-component-m4",
+      "title": "M4 · Armadilhas no choque persistente",
+      "items": [
+        {
+          "id": "a08-pitfall-dose",
+          "title": "Dose alta = diagnóstico fechado",
+          "text": "Erro: chamar de vasoplegia refratária sem procurar baixo fluxo, obstrução, falha de infusão ou diagnóstico alternativo. Correção: classificar a fisiologia seriada.",
+          "tone": "danger"
+        },
+        {
+          "id": "a08-pitfall-fluid",
+          "title": "Lactato = mais fluido",
+          "text": "Erro: ignorar mecanismos não hipovolêmicos e tolerância. Correção: integrar tendência, perfusão, resposta dinâmica e congestão.",
+          "tone": "danger"
+        },
+        {
+          "id": "a08-pitfall-antibiotic",
+          "title": "Escalar antibiótico sem anatomia",
+          "text": "Erro: esquecer dreno obstruído, coleção residual, prótese, obstrução ou tecido necrótico. Correção: confirmar controle do foco.",
+          "tone": "warning"
+        },
+        {
+          "id": "a08-pitfall-rescue",
+          "title": "Resgate antes da auditoria",
+          "text": "Erro: usar intervenção não padrão sem alvo, plausibilidade, governança ou stop rule. Correção: tratar reversíveis e documentar o racional.",
+          "tone": "danger"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a08-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a08-question-1",
+          "prompt": "Qual é a primeira resposta cognitiva diante de vasopressor em escalada?",
+          "options": [
+            {
+              "id": "a08-option-1a",
+              "label": "Adicionar resgate experimental"
+            },
+            {
+              "id": "a08-option-1b",
+              "label": "Confirmar entrega e auditar causas reversíveis"
+            },
+            {
+              "id": "a08-option-1c",
+              "label": "Dar volume por hipotensão isolada"
+            }
+          ],
+          "correctOptionId": "a08-option-1b",
+          "feedback": "Confirme pressão, infusão e perfusão; depois percorra os oito domínios enquanto mantém estabilização e tratamento apoiado."
+        },
+        {
+          "id": "a08-question-2",
+          "prompt": "Lactato persistente significa necessariamente hipovolemia?",
+          "options": [
+            {
+              "id": "a08-option-2a",
+              "label": "Sim, sempre"
+            },
+            {
+              "id": "a08-option-2b",
+              "label": "Não; existem múltiplos mecanismos"
+            },
+            {
+              "id": "a08-option-2c",
+              "label": "Não tem qualquer relevância"
+            }
+          ],
+          "correctOptionId": "a08-option-2b",
+          "feedback": "Use lactato em tendência e no contexto. Hipoperfusão é possível, mas catecolaminas, depuração e outros mecanismos também importam."
+        },
+        {
+          "id": "a08-question-3",
+          "prompt": "Piora hemodinâmica imediatamente após intubação deve levar primeiro a quê?",
+          "options": [
+            {
+              "id": "a08-option-3a",
+              "label": "Revisar ventilador, pressões e VD"
+            },
+            {
+              "id": "a08-option-3b",
+              "label": "Assumir progressão infecciosa"
+            },
+            {
+              "id": "a08-option-3c",
+              "label": "Ignorar auto-PEEP"
+            }
+          ],
+          "correctOptionId": "a08-option-3a",
+          "feedback": "A mudança temporal sugere mecanismo ventilatório ou cardiopulmonar potencialmente reversível. Reavalie tubos, pressões, tórax e função do VD."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a08-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a08-resume-d0",
+          "label": "D0 · recite os oito domínios",
+          "details": "Diagnóstico, foco, antimicrobiano, volume/tolerância, vasoplegia, bomba, ventilação/pressões e metabolismo.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a08-resume-d1",
+          "label": "D1 · escolha um reversível por domínio",
+          "details": "Faça a lista sem consultar e marque a lacuna.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a08-resume-d7",
+          "label": "D7 · reconstrua a deterioração pós-intubação",
+          "details": "Explique auto-PEEP, retorno venoso, VD e choque misto.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a08-resume-d14",
+          "label": "D14 · refaça as três questões",
+          "details": "Explique por que cada alternativa errada pode atrasar a correção causal.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a08-resume-d30",
+          "label": "D30 · simule um briefing de 90 segundos",
+          "details": "Diga fisiologia, reversíveis, ações em curso, incerteza e próximo checkpoint.",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a08-component-progress",
+      "title": "Percurso ACRA 08",
+      "current": 7,
+      "total": 7,
+      "label": "M0–M6 concluídos"
+    },
+    {
+      "type": "sources",
+      "id": "a08-component-sources",
+      "title": "Diretriz e guia oficial",
+      "sourceIds": [
+        "a08-source-ssc",
+        "a08-source-hemodynamic"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a08-component-followup",
+      "title": "Próximas ações sugeridas",
+      "actionIds": [
+        "a08-action-review",
+        "a08-action-verify",
+        "a08-action-deepen"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a08-action-review",
+      "kind": "review",
+      "label": "Revisar os oito domínios",
+      "prompt": "Percorra a auditoria e descreva uma causa reversível, um teste útil e uma armadilha em cada domínio.",
+      "contextComponentIds": [
+        "a08-component-m1",
+        "a08-component-m2"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a08-action-verify",
+      "kind": "verify",
+      "label": "Verificar o caso",
+      "prompt": "Reavalie o caso sintético, identifique o foco ineficaz, a alteração ventilatória e os dados que faltam antes de qualquer resgate.",
+      "contextComponentIds": [
+        "a08-component-m3",
+        "a08-component-m4"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a08-action-deepen",
+      "kind": "deepen",
+      "label": "Aprofundar refratariedade",
+      "prompt": "Estude como vasoplegia, baixo fluxo, obstrução, ventilação e metabolismo interagem no choque persistente.",
+      "contextComponentIds": [
+        "a08-component-m1",
+        "a08-component-m5"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a08-source-ssc",
+      "title": "Surviving Sepsis Campaign: Adult Guidelines 2026",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "publisher": "Society of Critical Care Medicine"
+    },
+    {
+      "id": "a08-source-hemodynamic",
+      "title": "Quick Guide for Resuscitation and Hemodynamic Support",
+      "url": "https://sccm.org/SCCM/media/SCCM/PDFs/SSC-Adult-Quick-Guide-Infographic-2026.pdf",
+      "publisher": "Society of Critical Care Medicine"
+    }
+  ]
+}

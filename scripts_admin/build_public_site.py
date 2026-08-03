@@ -120,8 +120,22 @@ EDITORIAL_PUBLIC_FILES = {
 PUBLIC_BUILD_EXCLUSIONS = frozenset(
     {
         "01_Modulos_Clinicos/Dermatologia_Critica/module.manifest.json",
+        "01_Modulos_Clinicos/Sepse_Choque_Septico/module.manifest.json",
+        "01_Modulos_Clinicos/Sepse_Choque_Septico/PHASE4A_LOCAL_CHECKPOINT.md",
+        "01_Modulos_Clinicos/Sepse_Choque_Septico/PHASE4A_VISUAL_HOMOLOGATION_60_120_2026-08-03.md",
+        "01_Modulos_Clinicos/Sepse_Choque_Septico/data/acra-plan.json",
+        "01_Modulos_Clinicos/Sepse_Choque_Septico/data/visual-assets.json",
+        "01_Modulos_Clinicos/Sepse_Choque_Septico/data/visual-plan.json",
         "01_UpDown_Hub/content/reumatologia/les-manifestacoes/metadata.json",
         "05_Midia_E_Feed/data/recovery_manifest.json",
+    }
+)
+PUBLIC_BUILD_EXCLUSION_PREFIXES = frozenset(
+    {
+        # A prévia pública usa o bundle ACRA e os visuais finais. Fontes ACRA,
+        # checkpoints e especificações dos blocos adjacentes ficam fora do site.
+        "01_Modulos_Clinicos/Sepse_Choque_Septico/acra",
+        "01_Modulos_Clinicos/Sepse_Choque_Septico/specs",
     }
 )
 PUBLIC_DOWNLOADS = (
@@ -158,6 +172,21 @@ def canonical_relative(value: str) -> str:
     """Compara paths em NFC sem depender da normalização do macOS/iCloud."""
 
     return unicodedata.normalize("NFC", value)
+
+
+def is_public_build_excluded(
+    relative: str,
+    dynamic_exclusions: frozenset[str] = frozenset(),
+) -> bool:
+    """Aplica exclusões exatas e de diretório sem depender de glob."""
+
+    canonical = canonical_relative(relative).rstrip("/")
+    if canonical in PUBLIC_BUILD_EXCLUSIONS or canonical in dynamic_exclusions:
+        return True
+    return any(
+        canonical == prefix or canonical.startswith(prefix + "/")
+        for prefix in PUBLIC_BUILD_EXCLUSION_PREFIXES
+    )
 
 
 def should_skip(root: Path, candidate: Path) -> bool:
@@ -742,6 +771,15 @@ def validate_clinical_publication(root: Path) -> None:
 
     modules_root = root / "01_Modulos_Clinicos"
     for manifest_path in sorted(modules_root.rglob("module.manifest.json")):
+        relative_manifest = canonical_relative(
+            manifest_path.relative_to(root).as_posix()
+        )
+        if any(
+            relative_manifest == prefix
+            or relative_manifest.startswith(prefix + "/")
+            for prefix in PUBLIC_BUILD_EXCLUSION_PREFIXES
+        ):
+            continue
         try:
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError) as exc:
@@ -868,7 +906,7 @@ def copy_entry(
     dynamic_exclusions: frozenset[str] = frozenset(),
 ) -> None:
     canonical = canonical_relative(relative)
-    if canonical in PUBLIC_BUILD_EXCLUSIONS or canonical in dynamic_exclusions:
+    if is_public_build_excluded(canonical, dynamic_exclusions):
         return
 
     source = root / relative

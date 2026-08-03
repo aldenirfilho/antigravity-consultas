@@ -1,0 +1,400 @@
+{
+  "version": "1.0",
+  "id": "acra-sepse-10-v1",
+  "title": "Sobreviver não é voltar ao basal",
+  "subtitle": "Reconstrução funcional, cognitiva e emocional após sepse",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para transformar alta da UTI ou hospital em transição segura. Compare o estado atual ao basal, reconcilie medicamentos, avalie mobilidade, cognição, saúde emocional, deglutição e nutrição, organize reabilitação e atribua responsáveis e checkpoints. Novos sintomas não devem ser automaticamente chamados de síndrome pós-sepse.",
+  "critical": [
+    {
+      "id": "a10-critical-educational",
+      "severity": "danger",
+      "title": "Apoio educacional — não substitui plano individual",
+      "text": "Este ACRA não substitui avaliação médica, multiprofissional, farmacêutica ou protocolo de transição. Déficits, destino, suporte familiar, acesso e seguimento precisam ser individualizados e documentados."
+    },
+    {
+      "id": "a10-critical-redflags",
+      "severity": "warning",
+      "title": "Não atribua toda piora à recuperação",
+      "text": "Febre, hipotensão, dispneia, dor torácica, oligúria, alteração neurológica, incapacidade de deglutir ou declínio agudo exigem reavaliação de infecção recorrente, evento tromboembólico, aspiração, toxicidade medicamentosa e outras emergências."
+    },
+    {
+      "id": "a10-critical-synthetic",
+      "severity": "info",
+      "title": "Caso sintético em revisão médica",
+      "text": "O cenário é fictício e não contém dados identificáveis. Conteúdo local para estudo TEMI; revisão clínica humana final permanece obrigatória antes de integração ou uso institucional."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a10-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "info",
+      "text": "Alta não é desfecho; é transferência de risco. Compare com o basal, torne cada déficit visível, associe intervenção + responsável + prazo + gatilho de retorno e reconcilie cada medicamento."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a10-component-m1",
+      "title": "M1 · Mecanismo: da estabilização à reconstrução",
+      "items": [
+        {
+          "id": "a10-step-baseline",
+          "title": "1 · Reconstrua o basal",
+          "text": "Registre mobilidade, autonomia, cognição, comunicação, alimentação, trabalho, sono e saúde emocional antes da doença. Sem referência, um novo déficit pode parecer normal."
+        },
+        {
+          "id": "a10-step-medication",
+          "title": "2 · Reconcilie medicamentos",
+          "text": "Para cada fármaco, escreva indicação atual, continuidade ou suspensão, duração quando aplicável, ajuste por função renal/hepática, interação, monitorização e quem revisará. Retire duplicidades e heranças da UTI sem indicação."
+        },
+        {
+          "id": "a10-step-function",
+          "title": "3 · Meça função física",
+          "text": "Avalie força, mobilidade, equilíbrio, atividades diárias, dispneia e risco de queda. Mobilização e reabilitação devem ser graduais, seguras e coordenadas com fisioterapia e terapia ocupacional."
+        },
+        {
+          "id": "a10-step-swallow",
+          "title": "4 · Proteja deglutição e nutrição",
+          "text": "Após intubação prolongada, procure tosse, voz molhada, engasgo, fadiga alimentar e ingestão insuficiente. Defina consistência e via somente após avaliação adequada; coordene fonoaudiologia e nutrição."
+        },
+        {
+          "id": "a10-step-brain",
+          "title": "5 · Avalie cérebro e emoção",
+          "text": "Rastreie cognição, memória, atenção, delirium residual, ansiedade, depressão, sintomas traumáticos e sono. Diferencie déficit novo, doença prévia, medicamento e fator social."
+        },
+        {
+          "id": "a10-step-transition",
+          "title": "6 · Feche a transição",
+          "text": "Entregue resumo compreensível, lista de problemas, resultados pendentes, dispositivos, contatos, sinais de alarme e consultas. Cada pendência precisa de responsável nominal e checkpoint verificável."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a10-component-m2",
+      "title": "M2 · Domínio, ação e gatilho de escalada",
+      "columns": [
+        {
+          "id": "a10-column-assess",
+          "label": "O que avaliar"
+        },
+        {
+          "id": "a10-column-plan",
+          "label": "Plano mínimo seguro"
+        },
+        {
+          "id": "a10-column-escalate",
+          "label": "Quando escalar"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a10-row-medication",
+          "label": "Medicamentos",
+          "cells": [
+            "Indicação, duplicidade, duração, função orgânica, interação e adesão.",
+            "Lista única com mudança explicada e profissional responsável pela revisão.",
+            "Evento adverso, erro de lista, fármaco sem indicação ou monitorização ausente."
+          ]
+        },
+        {
+          "id": "a10-row-physical",
+          "label": "Função física",
+          "cells": [
+            "Força, transferência, marcha, equilíbrio, fadiga e atividades diárias.",
+            "Meta funcional graduada, equipamento necessário e plano de reabilitação.",
+            "Queda, nova dispneia, intolerância desproporcional ou ausência de cuidador seguro."
+          ]
+        },
+        {
+          "id": "a10-row-swallow",
+          "label": "Deglutição e nutrição",
+          "cells": [
+            "Engasgo, voz, tosse, fadiga, hidratação, ingestão e perda ponderal.",
+            "Avaliação apropriada, via e consistência definidas, metas e seguimento.",
+            "Aspiração suspeita, incapacidade de manter hidratação ou ingestão insuficiente."
+          ]
+        },
+        {
+          "id": "a10-row-cognition",
+          "label": "Cognição",
+          "cells": [
+            "Atenção, memória, orientação, planejamento e diferença em relação ao basal.",
+            "Rastreio, apoio do cuidador, revisão de drogas e reavaliação programada.",
+            "Alteração aguda, risco de segurança, incapacidade de gerir medicações ou autocuidado."
+          ]
+        },
+        {
+          "id": "a10-row-emotional",
+          "label": "Saúde emocional e sono",
+          "cells": [
+            "Ansiedade, humor, sintomas traumáticos, sono, sofrimento familiar e trabalho.",
+            "Escuta, rastreio, orientação, encaminhamento e rede de apoio.",
+            "Ideação suicida, sofrimento intenso, insônia incapacitante ou risco social."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a10-component-m3",
+      "title": "M3 · Caso sintético progressivo",
+      "items": [
+        {
+          "id": "a10-case-1",
+          "label": "1 · O aparente sucesso",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta sobreviveu a sepse, ventilação prolongada e internação extensa. Está hemodinamicamente estável e a equipe considera alta rápida. Antes da transição, compare autonomia, cognição e alimentação atuais com o basal."
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a10-case-2",
+          "label": "2 · Déficits que estavam invisíveis",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A pessoa precisa de ajuda para levantar, esquece orientações, está ansiosa e tosse ao ingerir líquidos. Estabilidade vital não significa prontidão funcional; fisioterapia, fonoaudiologia, nutrição e avaliação cognitivo-emocional entram no plano."
+            }
+          ]
+        },
+        {
+          "id": "a10-case-3",
+          "label": "3 · A lista de medicações diverge",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A prescrição contém medicamentos iniciados na UTI sem indicação de continuidade documentada e há divergência com a lista domiciliar. Farmácia e equipe assistente reconciliam indicação, duração, ajuste, monitorização e suspensão."
+            }
+          ]
+        },
+        {
+          "id": "a10-case-4",
+          "label": "4 · Transição em circuito fechado",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A alta só fecha quando paciente e cuidador compreendem o plano, demonstram manejo seguro, recebem sinais de alarme e sabem quem responde por cada pendência e quando ocorrerá a próxima avaliação."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a10-component-m4",
+      "title": "M4 · Armadilhas da recuperação",
+      "items": [
+        {
+          "id": "a10-pitfall-alive",
+          "title": "Sobreviveu = recuperou",
+          "text": "Erro: usar mortalidade como único desfecho. Correção: medir função, cognição, emoção, nutrição, autonomia e qualidade da transição.",
+          "tone": "danger"
+        },
+        {
+          "id": "a10-pitfall-baseline",
+          "title": "Sem comparar com o basal",
+          "text": "Erro: normalizar déficit novo. Correção: reconstruir capacidade prévia com paciente, família e registros.",
+          "tone": "warning"
+        },
+        {
+          "id": "a10-pitfall-medications",
+          "title": "Copiar a prescrição da UTI",
+          "text": "Erro: perpetuar sedativos, protetores, insulina, anti-hipertensivos ou outros fármacos sem indicação revisada. Correção: reconciliação item a item.",
+          "tone": "danger"
+        },
+        {
+          "id": "a10-pitfall-dysphagia",
+          "title": "Tosse ao beber = detalhe",
+          "text": "Erro: ignorar disfagia pós-extubação e risco de aspiração. Correção: avaliação apropriada antes de liberalizar via ou consistência.",
+          "tone": "danger"
+        },
+        {
+          "id": "a10-pitfall-vague",
+          "title": "Acompanhar depois",
+          "text": "Erro: deixar pendência sem dono nem data. Correção: responsável, checkpoint, canal de contato e gatilho de retorno.",
+          "tone": "warning"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a10-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a10-question-1",
+          "prompt": "Qual é a referência mais útil para reconhecer novo déficit após sepse?",
+          "options": [
+            {
+              "id": "a10-option-1a",
+              "label": "A média da enfermaria"
+            },
+            {
+              "id": "a10-option-1b",
+              "label": "O estado basal da própria pessoa"
+            },
+            {
+              "id": "a10-option-1c",
+              "label": "A alta da UTI"
+            }
+          ],
+          "correctOptionId": "a10-option-1b",
+          "feedback": "A comparação com o basal torna visíveis déficits físicos, cognitivos e emocionais adquiridos e orienta metas individualizadas."
+        },
+        {
+          "id": "a10-question-2",
+          "prompt": "O que fecha uma pendência de transição com segurança?",
+          "options": [
+            {
+              "id": "a10-option-2a",
+              "label": "Escrever “acompanhar”"
+            },
+            {
+              "id": "a10-option-2b",
+              "label": "Responsável, prazo, ação e gatilho"
+            },
+            {
+              "id": "a10-option-2c",
+              "label": "Entregar uma lista extensa"
+            }
+          ],
+          "correctOptionId": "a10-option-2b",
+          "feedback": "Circuito fechado exige tarefa explícita, dono, checkpoint e escalada se o plano falhar."
+        },
+        {
+          "id": "a10-question-3",
+          "prompt": "Tosse e voz molhada após extubação prolongada devem ser tratadas como quê?",
+          "options": [
+            {
+              "id": "a10-option-3a",
+              "label": "Possível disfagia que exige avaliação"
+            },
+            {
+              "id": "a10-option-3b",
+              "label": "Achado irrelevante"
+            },
+            {
+              "id": "a10-option-3c",
+              "label": "Autorização para dieta livre"
+            }
+          ],
+          "correctOptionId": "a10-option-3a",
+          "feedback": "Disfagia pós-extubação pode causar aspiração e ingestão inadequada. Via e consistência precisam de avaliação apropriada e plano multiprofissional."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a10-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a10-resume-d0",
+          "label": "D0 · recite os seis domínios da reconstrução",
+          "details": "Basal, medicamentos, função física, deglutição/nutrição, cérebro/emoção e transição.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a10-resume-d1",
+          "label": "D1 · faça uma reconciliação fictícia",
+          "details": "Para três fármacos, declare indicação, duração, monitorização e responsável.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a10-resume-d7",
+          "label": "D7 · reconstrua o caso de disfagia",
+          "details": "Identifique sinais, risco, profissional acionado e condição para transição segura.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a10-resume-d14",
+          "label": "D14 · transforme três pendências em circuito fechado",
+          "details": "Cada uma deve ter ação, responsável, prazo e gatilho de escalada.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a10-resume-d30",
+          "label": "D30 · simule alta em 90 segundos",
+          "details": "Resuma basal, déficits, medicações, reabilitação, alertas e próximo contato.",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a10-component-progress",
+      "title": "Percurso ACRA 10",
+      "current": 7,
+      "total": 7,
+      "label": "M0–M6 concluídos"
+    },
+    {
+      "type": "sources",
+      "id": "a10-component-sources",
+      "title": "Diretriz oficial",
+      "sourceIds": [
+        "a10-source-ssc"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a10-component-followup",
+      "title": "Próximas ações sugeridas",
+      "actionIds": [
+        "a10-action-review",
+        "a10-action-verify",
+        "a10-action-deepen"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a10-action-review",
+      "kind": "review",
+      "label": "Revisar riscos de transição",
+      "prompt": "Reabra o caso e liste déficits, medicamentos duvidosos, riscos imediatos e pendências sem circuito fechado.",
+      "contextComponentIds": [
+        "a10-component-m2",
+        "a10-component-m3",
+        "a10-component-m4"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a10-action-verify",
+      "kind": "verify",
+      "label": "Verificar plano mínimo",
+      "prompt": "Confirme se cada domínio tem avaliação, ação, responsável, prazo e sinal de alarme antes da transição.",
+      "contextComponentIds": [
+        "a10-component-m1",
+        "a10-component-m2"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a10-action-deepen",
+      "kind": "deepen",
+      "label": "Aprofundar pós-sepse",
+      "prompt": "Estude deficiência física, cognitiva e emocional pós-doença crítica e como a reabilitação multiprofissional pode ser individualizada.",
+      "contextComponentIds": [
+        "a10-component-m0",
+        "a10-component-m5",
+        "a10-component-m6"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a10-source-ssc",
+      "title": "Surviving Sepsis Campaign: Adult Guidelines 2026",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "publisher": "Society of Critical Care Medicine"
+    }
+  ]
+}

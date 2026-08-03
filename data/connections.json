@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-07-30T02:42:50-03:00",
-  "version": "4.6-acra-microparticles",
-  "description": "Mapa vivo organizado da Enciclopédia: Home, Central de Ativação, Portais da missão, Estações, canais de integridade e memória editorial, Biblioteca IA, Card Feed, Banco TEMI, Calculadoras, módulos críticos, Micropartículas Ativas ACRA e macrotemas de UTI.",
+  "updatedAt": "2026-08-03T18:31:23-03:00",
+  "version": "4.7-sepse-ultra-expert",
+  "description": "Mapa vivo organizado da Enciclopédia: Home, Central de Ativação, Portais da missão, Estações, canais de integridade e memória editorial, Biblioteca IA, Card Feed, Banco TEMI, Calculadoras, módulos críticos, Sepse Ultra Expert, Micropartículas Ativas ACRA e macrotemas de UTI.",
   "legend": {
     "hub": "Nó central do projeto",
     "biblioteca": "Base de documentos e curadoria IA",
@@ -216,13 +216,13 @@
     },
     {
       "id": "sepse-choque",
-      "label": "🩸 Sepse/Choque",
-      "body": "Bundle, lactato, antibiótico, fluidos, vasopressores e choque refratário.",
+      "label": "🦠 Sepse Ultra Expert",
+      "body": "Reconhecimento, antimicrobianos, controle do foco, hemodinâmica, fenótipos, suporte orgânico, refratariedade e recuperação.",
       "x": 15.199913893298108,
       "y": 15.715156851016355,
-      "type": "theme",
-      "url": "#",
-      "status": "planejado"
+      "type": "module",
+      "url": "01_Modulos_Clinicos/Sepse_Choque_Septico/index.html",
+      "status": "em_revisao"
     },
     {
       "id": "nefro-aki-trs",

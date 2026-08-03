@@ -1,0 +1,428 @@
+{
+  "version": "1.0",
+  "id": "acra-sepse-04-fluido-beneficio-ou-dano-v1",
+  "title": "Fluido: benefício ou dano",
+  "subtitle": "Necessidade · Responsividade · Tolerância · Reavaliação",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para tratar fluido como intervenção com indicação, alvo, resposta e toxicidade. O treino separa três perguntas que não são sinônimas — o paciente precisa de volume, consegue aumentar fluxo e tolera a expansão — sem transformar recomendação inicial ou marcador isolado em prescrição automática.",
+  "critical": [
+    {
+      "id": "a04-critical-educational-scope",
+      "severity": "danger",
+      "title": "Apoio educacional — não é protocolo assistencial",
+      "text": "Este ACRA não prescreve volume, solução ou velocidade. Instabilidade exige ABCDE, tratamento simultâneo da causa, monitorização, julgamento clínico e protocolo institucional com supervisão médica."
+    },
+    {
+      "id": "a04-critical-stop-blind-fluid",
+      "severity": "warning",
+      "title": "30 mL/kg é recomendação condicional, não piloto automático",
+      "text": "A SSC 2026 sugere pelo menos 30 mL/kg de cristaloide IV nas primeiras 3 horas para hipoperfusão induzida por sepse ou choque séptico, com baixa certeza. Volume inicial deve considerar paciente e contexto, com reavaliação frequente para evitar sub ou sobrerressuscitação."
+    },
+    {
+      "id": "a04-critical-synthetic-review",
+      "severity": "info",
+      "title": "Caso sintético em revisão médica",
+      "text": "O cenário é fictício e não contém dados de paciente. Conteúdo local para estudo TEMI; requer revisão clínica humana final e não está integrado ao fluxo assistencial da plataforma."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a04-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "warning",
+      "text": "Antes de cada ciclo, responda: há hipoperfusão que o fluido pode corrigir? Uma manobra dinâmica aumenta volume sistólico/débito? Pulmão, sistema venoso e ventrículos toleram expansão? Defina o benefício esperado e o sinal de parada antes de intervir."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a04-component-m1",
+      "title": "M1 · Mecanismo: fluido como fármaco",
+      "items": [
+        {
+          "id": "a04-step-threat",
+          "title": "Reconheça a ameaça e trate em paralelo",
+          "text": "Avalie perfusão, pressão confiável, oxigenação, consciência, pele, diurese e tendência do lactato; procure hemorragia, vasoplegia, disfunção cardíaca e obstrução sem atrasar suporte tempo-dependente."
+        },
+        {
+          "id": "a04-step-need",
+          "title": "Pergunta 1 — há necessidade plausível?",
+          "text": "Identifique perda, baixa pré-carga efetiva ou outro mecanismo em que elevar retorno venoso possa melhorar fluxo. Pressão baixa sozinha não diferencia vasoplegia, bomba, tanque ou obstrução."
+        },
+        {
+          "id": "a04-step-response",
+          "title": "Pergunta 2 — há responsividade dinâmica?",
+          "text": "Quando válida, use elevação passiva das pernas ou pequena prova acompanhada por mudança de volume sistólico, débito ou variável dinâmica apropriada. Medidas estáticas isoladas têm baixo poder decisório."
+        },
+        {
+          "id": "a04-step-tolerance",
+          "title": "Pergunta 3 — há tolerância?",
+          "text": "Procure congestão pulmonar e venosa, piora de oxigenação, pressões de enchimento elevadas, disfunção de VD/VE e pressão abdominal. Um paciente pode ser responsivo e, ainda assim, ter margem de segurança pequena."
+        },
+        {
+          "id": "a04-step-cycle",
+          "title": "Faça um ciclo por vez, individualizado",
+          "text": "A SSC 2026 sugere pelo menos 30 mL/kg de cristaloide IV nas primeiras 3 horas na hipoperfusão induzida por sepse ou choque séptico, mas a recomendação é condicional: individualize o volume e reavalie frequentemente, sem completar o número cegamente."
+        },
+        {
+          "id": "a04-step-stop",
+          "title": "Pare, pivote ou repita conscientemente",
+          "text": "Repita somente com ganho relevante e tolerância preservada. Sem resposta ou com dano, suspenda expansão, reclassifique o fenótipo e considere vasopressor, correção da bomba/obstrução ou nenhuma nova intervenção."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a04-component-m2",
+      "title": "M2 · Decisão segura: três perguntas, três respostas",
+      "columns": [
+        {
+          "id": "a04-column-question",
+          "label": "Dado que ajuda"
+        },
+        {
+          "id": "a04-column-limit",
+          "label": "O que não prova"
+        },
+        {
+          "id": "a04-column-conduct",
+          "label": "Próxima decisão"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a04-row-need",
+          "label": "Necessidade",
+          "cells": [
+            "Hipoperfusão, perdas e contexto compatível com baixa pré-carga efetiva.",
+            "Que toda hipotensão seja déficit de volume.",
+            "Diferenciar tanque, vasoplegia, bomba e obstrução."
+          ]
+        },
+        {
+          "id": "a04-row-response",
+          "label": "Responsividade",
+          "cells": [
+            "Aumento mensurável de fluxo após manobra dinâmica válida.",
+            "Que o fluido seja necessário, seguro ou capaz de melhorar desfecho.",
+            "Confirmar tolerância e definir alvo clínico antes do ciclo."
+          ]
+        },
+        {
+          "id": "a04-row-tolerance",
+          "label": "Tolerância",
+          "cells": [
+            "Pulmão, oxigenação, sistema venoso, VD/VE e abdome sem sinais relevantes de sobrecarga.",
+            "Que a expansão possa continuar sem limite.",
+            "Vigiar toxicidade durante e após cada intervenção."
+          ]
+        },
+        {
+          "id": "a04-row-benefit",
+          "label": "Benefício real",
+          "cells": [
+            "Melhora coerente de fluxo e perfusão, não apenas de pressão.",
+            "Que lactato ou PAM isolados representem perfusão restaurada.",
+            "Documentar resposta, dano e novo fenótipo; então decidir."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a04-component-m3",
+      "title": "M3 · Caso sintético progressivo",
+      "items": [
+        {
+          "id": "a04-case-stage-1",
+          "label": "1 · Entrada: hipotensão e hipoperfusão",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta com provável pneumonia, PAM reduzida, enchimento capilar lento e oligúria. A equipe inicia suporte e quer administrar volume apenas porque a pressão está baixa."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Recupere: quais mecanismos além de baixa pré-carga explicam a hipotensão?",
+                "Decida: qual variável mostrará ganho de fluxo/perfusão e qual sinal fará parar?"
+              ]
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a04-case-stage-2",
+          "label": "2 · Primeira janela de oportunidade",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A elevação passiva das pernas, tecnicamente válida, aumenta o volume sistólico estimado. Não há congestão importante e a oxigenação permanece estável. Um pequeno ciclo individualizado é realizado segundo protocolo local."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "A resposta dinâmica apoia capacidade de elevar fluxo; não prova segurança ilimitada.",
+                "Reavalie imediatamente perfusão, débito e sinais de intolerância."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        },
+        {
+          "id": "a04-case-stage-3",
+          "label": "3 · A fisiologia muda",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Após melhora inicial, nova manobra já não aumenta fluxo. Surgem crepitações, piora da oxigenação, congestão venosa e dilatação de VD. A PAM continua limítrofe."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Mais fluido agora tem baixa probabilidade de benefício e risco crescente.",
+                "Reabra vasoplegia, disfunção de VD, ventilação, obstrução e adequação do vasopressor."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        },
+        {
+          "id": "a04-case-stage-4",
+          "label": "4 · Resolução do dilema",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A equipe interrompe expansão, ajusta suporte conforme o fenótipo reavaliado, procura causas reversíveis e define nova checagem em minutos. O acerto foi mudar de estratégia quando benefício e tolerância desapareceram."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Registre: indicação, intervenção, variável de resposta, toxicidade e decisão subsequente.",
+                "Não transforme a melhora do primeiro ciclo em permissão para repetir o segundo."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a04-component-m4",
+      "title": "M4 · Armadilhas que produzem sobrecarga",
+      "items": [
+        {
+          "id": "a04-trap-hypotension",
+          "title": "Hipotensão = hipovolemia",
+          "text": "Erro: ignorar vasoplegia, falência cardíaca ou obstrução. Correção: classificar mecanismo e perfusão antes de escolher a intervenção.",
+          "tone": "danger"
+        },
+        {
+          "id": "a04-trap-responsive",
+          "title": "Responsivo = deve receber fluido",
+          "text": "Erro: confundir capacidade de aumentar fluxo com necessidade clínica e tolerância. Correção: exigir as três perguntas separadamente.",
+          "tone": "warning"
+        },
+        {
+          "id": "a04-trap-recommendation",
+          "title": "Recomendação inicial em piloto automático",
+          "text": "Erro: tratar a sugestão condicional de 30 mL/kg como ordem automática apesar da mudança fisiológica. Correção: considerar contexto e reavaliar benefício e dano com frequência.",
+          "tone": "warning"
+        },
+        {
+          "id": "a04-trap-static",
+          "title": "Um marcador estático decide tudo",
+          "text": "Erro: usar VCI, PVC, lactato ou pressão isoladamente. Correção: integrar variáveis dinâmicas, perfusão, congestão e contexto.",
+          "tone": "info"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a04-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a04-question-responsive",
+          "prompt": "Uma manobra dinâmica válida aumenta o volume sistólico. Qual interpretação é mais segura?",
+          "options": [
+            {
+              "id": "a04-option-responsive-auto",
+              "label": "Indica bolus repetidos automaticamente"
+            },
+            {
+              "id": "a04-option-responsive-capacity",
+              "label": "Apoia capacidade de aumentar fluxo, mas exige necessidade e tolerância"
+            },
+            {
+              "id": "a04-option-responsive-none",
+              "label": "Não tem utilidade clínica"
+            }
+          ],
+          "correctOptionId": "a04-option-responsive-capacity",
+          "feedback": "Responsividade dinâmica informa potencial de aumento de fluxo. A decisão de expandir ainda depende de hipoperfusão potencialmente reversível, risco de dano, alvo e reavaliação."
+        },
+        {
+          "id": "a04-question-congestion",
+          "prompt": "Após benefício inicial, não há nova resposta dinâmica e surgem congestão e piora da oxigenação. O melhor princípio é:",
+          "options": [
+            {
+              "id": "a04-option-congestion-continue",
+              "label": "Continuar até completar um volume predefinido"
+            },
+            {
+              "id": "a04-option-congestion-stop",
+              "label": "Interromper expansão e reclassificar a fisiologia"
+            },
+            {
+              "id": "a04-option-congestion-lactate",
+              "label": "Usar apenas o lactato para decidir"
+            }
+          ],
+          "correctOptionId": "a04-option-congestion-stop",
+          "feedback": "Ausência de ganho e perda de tolerância mudam a relação benefício–dano. Pare o fluido cego e procure vasoplegia, falência cardíaca, obstrução e outras causas."
+        },
+        {
+          "id": "a04-question-loop",
+          "prompt": "Como interpretar a sugestão SSC 2026 de pelo menos 30 mL/kg de cristaloide IV nas primeiras 3 horas?",
+          "options": [
+            {
+              "id": "a04-option-loop-number",
+              "label": "Ordem rígida que dispensa reavaliação"
+            },
+            {
+              "id": "a04-option-loop-three",
+              "label": "Recomendação condicional, individualizada e reavaliada"
+            },
+            {
+              "id": "a04-option-loop-pressure",
+              "label": "Regra aplicável a qualquer hipotensão"
+            }
+          ],
+          "correctOptionId": "a04-option-loop-three",
+          "feedback": "A recomendação se aplica à hipoperfusão induzida por sepse ou ao choque séptico, tem baixa certeza e exige consideração das características do paciente, do contexto e reavaliação frequente contra sub ou sobrerressuscitação."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a04-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a04-resume-d0",
+          "label": "D0 · Diga sem olhar as três perguntas",
+          "details": "Necessidade, responsividade e tolerância; acrescente um marcador de benefício e um de dano.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a04-resume-d1",
+          "label": "D1 · Refazer as três questões",
+          "details": "Explique por que responsividade não equivale a indicação automática de fluido.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a04-resume-d7",
+          "label": "D7 · Reconstruir o caso em 90 segundos",
+          "details": "Marque o ponto exato em que o benefício terminou e a toxicidade começou.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a04-resume-d14",
+          "label": "D14 · Comparar quatro mecanismos de hipotensão",
+          "details": "Tanque, vasoplegia, bomba e obstrução; diga qual dado mudaria a conduta em cada um.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a04-resume-d30",
+          "label": "D30 · Simular um ciclo hemodinâmico",
+          "details": "Declare indicação, alvo, teste, intervenção, reavaliação e critério de parada conforme protocolo local.",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a04-component-progress",
+      "title": "Percurso concluído",
+      "current": 7,
+      "total": 7,
+      "label": "ACRA 04 · M0–M6"
+    },
+    {
+      "type": "sources",
+      "id": "a04-component-sources",
+      "title": "Fontes oficiais e estudo primário",
+      "sourceIds": [
+        "a04-source-ssc2026",
+        "a04-source-hemodynamic-guide",
+        "a04-source-andromeda2"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a04-component-followup",
+      "title": "Próximas ações sugeridas",
+      "actionIds": [
+        "a04-action-review",
+        "a04-action-compare",
+        "a04-action-deepen"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a04-action-review",
+      "kind": "review",
+      "label": "Revisar armadilhas",
+      "prompt": "Reabra M4 e explique em uma frase por que cada armadilha pode causar sobrecarga ou atraso do tratamento correto.",
+      "contextComponentIds": [
+        "a04-component-m4",
+        "a04-component-m5"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a04-action-compare",
+      "kind": "compare",
+      "label": "Comparar os três conceitos",
+      "prompt": "Compare necessidade, responsividade e tolerância e dê um exemplo em que apenas uma ou duas dessas condições estejam presentes.",
+      "contextComponentIds": [
+        "a04-component-m1",
+        "a04-component-m2"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a04-action-deepen",
+      "kind": "deepen",
+      "label": "Aprofundar a evidência",
+      "prompt": "Revise a recomendação SSC 2026 sobre fluidos e medidas dinâmicas e compare seus limites com a estratégia personalizada do ANDROMEDA-SHOCK-2.",
+      "contextComponentIds": [
+        "a04-component-m1",
+        "a04-component-sources"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a04-source-ssc2026",
+      "title": "Surviving Sepsis Campaign: Adult Guidelines 2026",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "publisher": "Society of Critical Care Medicine"
+    },
+    {
+      "id": "a04-source-hemodynamic-guide",
+      "title": "Surviving Sepsis Campaign 2026 Adult Hemodynamic Quick Guide",
+      "url": "https://sccm.org/SCCM/media/SCCM/PDFs/SSC-Adult-Quick-Guide-Infographic-2026.pdf",
+      "publisher": "Society of Critical Care Medicine"
+    },
+    {
+      "id": "a04-source-andromeda2",
+      "title": "ANDROMEDA-SHOCK-2: Personalized Hemodynamic Management in Septic Shock",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/2840823",
+      "publisher": "JAMA"
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "version": "1.0",
+  "id": "acra-sepse-09-v1",
+  "title": "Fronteira terapêutica e segurança off-label",
+  "subtitle": "Azul de metileno: governança antes de sedução fisiológica",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para enquadrar, sem prescrever, a discussão excepcional de azul de metileno na vasoplegia. Choque séptico não é indicação aprovada no rótulo FDA citado; a SSC 2026 considera insuficiente a evidência para emitir recomendação sobre azul de metileno intravenoso no choque, e melhora pressórica não equivale a benefício em desfechos. O artefato organiza barreiras de segurança, governança, alvo, monitorização e interrupção; não fornece dose.",
+  "critical": [
+    {
+      "id": "a09-critical-educational",
+      "severity": "danger",
+      "title": "Off-label e educacional — não é prescrição",
+      "text": "Este ACRA não autoriza nem recomenda administrar azul de metileno no choque. Qualquer discussão excepcional depende de otimização do cuidado padrão, equipe experiente, farmácia clínica, protocolo e governança locais, avaliação individual e documentação."
+    },
+    {
+      "id": "a09-critical-hard-stops",
+      "severity": "danger",
+      "title": "Hard stops regulatórios e farmacológicos",
+      "text": "O rótulo FDA citado contraindica o produto em deficiência de G6PD e hipersensibilidade grave; alerta para síndrome serotoninérgica grave ou fatal com fármacos serotonérgicos e opioides, hemólise e interferência na oximetria. Revise a bula vigente e todo o prontuário farmacológico."
+    },
+    {
+      "id": "a09-critical-synthetic",
+      "severity": "info",
+      "title": "Caso sintético em revisão médica",
+      "text": "O cenário é fictício e não contém dados identificáveis. Conteúdo local para estudo TEMI; revisão clínica humana final permanece obrigatória antes de integração ou uso institucional."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a09-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "danger",
+      "text": "Fisiologia plausível + aumento de PAM não provam sobrevida nem segurança. Antes de qualquer fronteira: audite o choque, esgote medidas apoiadas, confirme status off-label, procure hard stops, defina alvo mensurável e estabeleça stop rules — sem automatismo."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a09-component-m1",
+      "title": "M1 · Mecanismo: firewall de decisão não prescritivo",
+      "items": [
+        {
+          "id": "a09-step-standard",
+          "title": "1 · Proteja o cuidado apoiado",
+          "text": "Confirme diagnóstico, foco, antimicrobiano, perfusão, volume e tolerância, vasopressores apoiados, função cardíaca, ventilação, pressões e metabolismo. A intervenção de fronteira nunca substitui correção causal."
+        },
+        {
+          "id": "a09-step-evidence",
+          "title": "2 · Classifique evidência e regulação",
+          "text": "Registre que a indicação FDA do produto citado é metemoglobinemia, não choque. A SSC 2026 considera insuficiente a evidência para recomendar azul de metileno intravenoso no choque; estudos pequenos e desfechos fisiológicos não sustentam rotina nem esquema universal."
+        },
+        {
+          "id": "a09-step-safety",
+          "title": "3 · Faça triagem de contraindicações e riscos",
+          "text": "Confirme deficiência de G6PD e hipersensibilidade grave, contraindicações do rótulo citado; revise também gestação, função renal e hepática, hemólise, fármacos serotonérgicos, opioides e todas as advertências da bula vigente. Não presuma segurança pela urgência."
+        },
+        {
+          "id": "a09-step-governance",
+          "title": "4 · Exija governança",
+          "text": "Se a discussão permanecer, envolva intensivista sênior, farmácia e especialistas pertinentes; confirme protocolo institucional, responsabilidade decisória, consentimento conforme política local, rastreabilidade e plano de farmacovigilância."
+        },
+        {
+          "id": "a09-step-target",
+          "title": "5 · Defina alvo e monitorização antes",
+          "text": "Declare qual falha fisiológica se pretende testar, em qual janela e por quais medidas válidas. Planeje pressão, perfusão, ritmo, estado neurológico, hemólise e métodos alternativos de oxigenação quando a oximetria estiver interferida."
+        },
+        {
+          "id": "a09-step-stop",
+          "title": "6 · Defina interrupção antes de começar",
+          "text": "Ausência de resposta predefinida, toxicidade, síndrome serotoninérgica, hemólise, hipersensibilidade ou nova explicação do choque exigem interrupção e reavaliação. Este ACRA não define dose, duração ou autorização para uso."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a09-component-m2",
+      "title": "M2 · Evidência, risco e decisão segura",
+      "columns": [
+        {
+          "id": "a09-column-known",
+          "label": "O que sabemos"
+        },
+        {
+          "id": "a09-column-unknown",
+          "label": "O que não sabemos"
+        },
+        {
+          "id": "a09-column-barrier",
+          "label": "Barreira de segurança"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a09-row-regulatory",
+          "label": "Status regulatório",
+          "cells": [
+            "O rótulo FDA citado indica metemoglobinemia adquirida.",
+            "Não há indicação aprovada nesse rótulo para choque séptico.",
+            "Marcar explicitamente off-label e conferir regra local e bula vigente."
+          ]
+        },
+        {
+          "id": "a09-row-outcome",
+          "label": "Efeito observado",
+          "cells": [
+            "Há plausibilidade vasopressora e sinais fisiológicos em estudos limitados.",
+            "A SSC 2026 considera insuficiente a evidência para recomendar o uso intravenoso no choque; benefício clínico líquido, população ideal e esquema permanecem incertos.",
+            "Não converter aumento de PAM em benefício de sobrevida."
+          ]
+        },
+        {
+          "id": "a09-row-interaction",
+          "label": "Interações",
+          "cells": [
+            "A bula contém alerta máximo para síndrome serotoninérgica com serotonérgicos e opioides.",
+            "Suspender uma droga imediatamente pode não eliminar risco por meia-vida e exposição acumulada.",
+            "Reconciliação completa com farmácia; não improvisar washout."
+          ]
+        },
+        {
+          "id": "a09-row-g6pd",
+          "label": "G6PD e hemólise",
+          "cells": [
+            "Deficiência de G6PD é contraindicação do produto citado pelo risco de hemólise.",
+            "Status desconhecido não equivale a ausência de risco.",
+            "Verificar história, exames disponíveis e bula; monitorar hemólise quando aplicável."
+          ]
+        },
+        {
+          "id": "a09-row-monitor",
+          "label": "Monitorização",
+          "cells": [
+            "O corante pode subestimar a saturação na oximetria de pulso.",
+            "Queda aparente de SpO₂ pode ser artefato ou deterioração real.",
+            "Correlacionar clínica e método alternativo de oxigenação conforme bula e contexto."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a09-component-m3",
+      "title": "M3 · Caso sintético progressivo",
+      "items": [
+        {
+          "id": "a09-case-1",
+          "label": "1 · A proposta de fronteira",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta com vasoplegia extrema e vasopressores em escalada. Surge a proposta de azul de metileno para aumentar a pressão. Antes de discutir o fármaco, a equipe precisa provar que diagnóstico, foco, entrega de infusões e fisiologia foram reavaliados."
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a09-case-2",
+          "label": "2 · A reconciliação muda tudo",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "O prontuário mostra antidepressivo serotonérgico crônico e opioide em uso. A bula FDA alerta para síndrome serotoninérgica grave ou fatal nessa combinação. Pausar uma dose agora não cria segurança imediata; meia-vida e exposição prévia importam."
+            }
+          ]
+        },
+        {
+          "id": "a09-case-3",
+          "label": "3 · Mais um dado ausente",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "O status de G6PD é desconhecido. O produto citado é contraindicado na deficiência de G6PD pelo risco de hemólise. A incerteza deve ser declarada; urgência não transforma ausência de informação em teste negativo."
+            }
+          ]
+        },
+        {
+          "id": "a09-case-4",
+          "label": "4 · Decisão de não automatizar",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Com hard stops e evidência insuficiente, este ACRA não produz um esquema de uso. A equipe volta à auditoria causal e ao cuidado apoiado, documenta a discussão e, se necessário, busca governança institucional e parecer farmacológico."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a09-component-m4",
+      "title": "M4 · Armadilhas da fronteira",
+      "items": [
+        {
+          "id": "a09-pitfall-map",
+          "title": "PAM subiu = paciente melhorou",
+          "text": "Erro: usar um desfecho fisiológico substituto como benefício clínico. Correção: avaliar perfusão, órgãos, toxicidade e desfechos centrados no paciente.",
+          "tone": "danger"
+        },
+        {
+          "id": "a09-pitfall-label-dose",
+          "title": "Dose da bula = dose do choque",
+          "text": "Erro: transportar esquema de metemoglobinemia para indicação off-label. Correção: não extrapolar e não criar posologia sem protocolo validado.",
+          "tone": "danger"
+        },
+        {
+          "id": "a09-pitfall-medication",
+          "title": "Lista curta de medicamentos",
+          "text": "Erro: esquecer antidepressivos, opioides, linezolida, dextrometorfano e outras exposições relevantes. Correção: reconciliação farmacológica completa.",
+          "tone": "warning"
+        },
+        {
+          "id": "a09-pitfall-spo2",
+          "title": "SpO₂ caiu = hipoxemia certa",
+          "text": "Erro: ignorar interferência do corante na oximetria. Correção: correlacionar exame e método alternativo sem deixar de investigar hipoxemia real.",
+          "tone": "warning"
+        },
+        {
+          "id": "a09-pitfall-offlabel",
+          "title": "Off-label = proibido ou comprovado",
+          "text": "Erro: usar rótulos extremos. Correção: separar legalidade local, qualidade da evidência, risco, governança e excepcionalidade clínica.",
+          "tone": "info"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a09-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a09-question-1",
+          "prompt": "Qual é a indicação aprovada no rótulo FDA citado para o azul de metileno?",
+          "options": [
+            {
+              "id": "a09-option-1a",
+              "label": "Choque séptico"
+            },
+            {
+              "id": "a09-option-1b",
+              "label": "Metemoglobinemia adquirida"
+            },
+            {
+              "id": "a09-option-1c",
+              "label": "Qualquer vasoplegia"
+            }
+          ],
+          "correctOptionId": "a09-option-1b",
+          "feedback": "O rótulo citado indica metemoglobinemia adquirida. Uso no choque é off-label e não recebe posologia neste ACRA."
+        },
+        {
+          "id": "a09-question-2",
+          "prompt": "Qual achado é hard stop no rótulo FDA citado?",
+          "options": [
+            {
+              "id": "a09-option-2a",
+              "label": "Deficiência de G6PD"
+            },
+            {
+              "id": "a09-option-2b",
+              "label": "Taquicardia isolada"
+            },
+            {
+              "id": "a09-option-2c",
+              "label": "Lactato elevado isolado"
+            }
+          ],
+          "correctOptionId": "a09-option-2a",
+          "feedback": "A deficiência de G6PD é contraindicação do produto citado devido ao risco de anemia hemolítica. Hipersensibilidade grave também é contraindicação."
+        },
+        {
+          "id": "a09-question-3",
+          "prompt": "Aumento de PAM após uma terapia off-label demonstra benefício clínico?",
+          "options": [
+            {
+              "id": "a09-option-3a",
+              "label": "Sim, sempre"
+            },
+            {
+              "id": "a09-option-3b",
+              "label": "Não; é desfecho substituto"
+            },
+            {
+              "id": "a09-option-3c",
+              "label": "Dispensa monitorização"
+            }
+          ],
+          "correctOptionId": "a09-option-3b",
+          "feedback": "Pressão pode melhorar sem benefício em perfusão, órgãos ou sobrevida e com toxicidade. Evidência de desfecho clínico e segurança continua necessária."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a09-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a09-resume-d0",
+          "label": "D0 · diga cinco barreiras antes da fronteira",
+          "details": "Cuidado padrão, evidência/regulação, hard stops, governança e stop rules.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a09-resume-d1",
+          "label": "D1 · recite os alertas críticos da bula",
+          "details": "G6PD, hipersensibilidade, serotonérgicos/opioides, hemólise e oximetria.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a09-resume-d7",
+          "label": "D7 · reconstrua o caso farmacológico",
+          "details": "Explique por que pausar uma dose não apaga exposição nem interação.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a09-resume-d14",
+          "label": "D14 · diferencie PAM de benefício clínico",
+          "details": "Liste perfusão, órgãos, eventos adversos e desfechos centrados no paciente.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a09-resume-d30",
+          "label": "D30 · faça um briefing de governança",
+          "details": "Declare off-label, incerteza, hard stops, responsáveis, monitorização e interrupção sem prescrever dose.",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a09-component-progress",
+      "title": "Percurso ACRA 09",
+      "current": 7,
+      "total": 7,
+      "label": "M0–M6 concluídos"
+    },
+    {
+      "type": "sources",
+      "id": "a09-component-sources",
+      "title": "Diretriz e documento regulatório",
+      "sourceIds": [
+        "a09-source-ssc",
+        "a09-source-fda"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a09-component-followup",
+      "title": "Próximas ações sugeridas",
+      "actionIds": [
+        "a09-action-review",
+        "a09-action-verify",
+        "a09-action-compare"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a09-action-review",
+      "kind": "review",
+      "label": "Revisar hard stops",
+      "prompt": "Recupere as contraindicações e advertências críticas do documento regulatório e relacione cada uma a uma ação de segurança.",
+      "contextComponentIds": [
+        "a09-component-m1",
+        "a09-component-m2",
+        "a09-component-m4"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a09-action-verify",
+      "kind": "verify",
+      "label": "Verificar reconciliação",
+      "prompt": "No caso sintético, revise exposição serotonérgica, G6PD, hipersensibilidade, hemólise e limitações da oximetria.",
+      "contextComponentIds": [
+        "a09-component-m3",
+        "a09-component-m5"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a09-action-compare",
+      "kind": "compare",
+      "label": "Comparar evidência e regulação",
+      "prompt": "Compare plausibilidade fisiológica, sinal substituto, benefício clínico, indicação regulatória e governança off-label.",
+      "contextComponentIds": [
+        "a09-component-m0",
+        "a09-component-m2"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a09-source-ssc",
+      "title": "Surviving Sepsis Campaign: Adult Guidelines 2026",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "publisher": "Society of Critical Care Medicine"
+    },
+    {
+      "id": "a09-source-fda",
+      "title": "FDA label — PROVAYBLUE (methylene blue), revised January 2024",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/204630s021lbl.pdf",
+      "publisher": "U.S. Food and Drug Administration"
+    }
+  ]
+}

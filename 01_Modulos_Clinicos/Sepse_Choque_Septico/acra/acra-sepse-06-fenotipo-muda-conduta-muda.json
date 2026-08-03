@@ -1,0 +1,439 @@
+{
+  "version": "1.0",
+  "id": "acra-sepse-06-fenotipo-muda-conduta-muda-v1",
+  "title": "Fenótipo muda, conduta muda",
+  "subtitle": "Vasoplegia inicial · Intubação · VD · Congestão · Reclassificação seriada",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para acompanhar um choque séptico inicialmente vasoplégico que, após intubação, passa a exibir falência de ventrículo direito e congestão. O fenótipo é uma hipótese fisiológica temporal para orientar a próxima avaliação — nunca um rótulo fixo, diagnóstico etiológico ou prescrição automática.",
+  "critical": [
+    {
+      "id": "a06-critical-educational-scope",
+      "severity": "danger",
+      "title": "Apoio educacional — não é protocolo assistencial",
+      "text": "Este ACRA não seleciona fluido, vasopressor, inotrópico ou ajuste ventilatório. Choque após intubação exige ABCDE, monitorização, busca imediata de causas reversíveis e decisão da equipe conforme protocolo institucional."
+    },
+    {
+      "id": "a06-critical-obstruction",
+      "severity": "warning",
+      "title": "Deterioração pós-intubação é emergência fisiológica",
+      "text": "Procure prontamente desconexão ou problema do tubo, pneumotórax hipertensivo, auto-PEEP, pressão intratorácica excessiva, hipovolemia, falência de VD, TEP, tamponamento e sedação. Não atribua toda hipotensão à sepse nem administre volume às cegas."
+    },
+    {
+      "id": "a06-critical-synthetic-review",
+      "severity": "info",
+      "title": "Caso sintético em revisão médica",
+      "text": "O cenário é fictício, sem dados identificáveis. Os fenótipos são rótulos operacionais didáticos, não classificação validada; conteúdo local pendente de revisão clínica humana final."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a06-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "warning",
+      "text": "Fenótipo é uma fotografia com hora: vasoplegia, baixa pré-carga, bomba, VD/obstrução e perfis mistos podem coexistir e mudar após fluido, vasopressor, sedação ou ventilação. Após cada intervenção relevante, repita pressão, perfusão, fluxo, pulmão e congestão antes de repetir a mesma terapia."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a06-component-m1",
+      "title": "M1 · Mecanismo: por que o choque muda",
+      "items": [
+        {
+          "id": "a06-step-t0",
+          "title": "T0 — descreva antes de rotular",
+          "text": "Baixa pressão diastólica, pulso amplo, vasodilatação e necessidade de vasopressor apoiam vasoplegia, mas registre também fluxo, perfusão, volume efetivo, VD/VE, pulmão e incertezas."
+        },
+        {
+          "id": "a06-step-intervention",
+          "title": "Toda intervenção é um teste fisiológico",
+          "text": "Fluido, noradrenalina, sedação e mudança ventilatória alteram pré-carga, pós-carga, tônus e interação coração–pulmão. Defina antecipadamente qual resposta espera e qual dano fará interromper."
+        },
+        {
+          "id": "a06-step-intubation",
+          "title": "T1 — reabra o diagnóstico após intubação",
+          "text": "A pressão intratorácica positiva pode reduzir retorno venoso e elevar pós-carga do VD; sedativos podem reduzir tônus. Hipotensão abrupta também exige excluir tubo/circuito, auto-PEEP, pneumotórax e outras causas mecânicas."
+        },
+        {
+          "id": "a06-step-rv",
+          "title": "Reconheça falência de VD e congestão",
+          "text": "Integre dilatação/disfunção de VD, desvio septal, pressões venosas, congestão sistêmica, hipoxemia, ventilação de alta pressão e baixo fluxo. Nenhum achado isolado confirma TEP ou define tratamento."
+        },
+        {
+          "id": "a06-step-pivot",
+          "title": "Pivote para o componente dominante",
+          "text": "Quando VD/obstrução e congestão dominam, suspenda volume cego, revise ventilador e causas mecânicas, trate a etiologia e sustente pressão/fluxo conforme avaliação completa e protocolo local."
+        },
+        {
+          "id": "a06-step-loop",
+          "title": "Documente uma nova fotografia",
+          "text": "Registre horário, intervenção, achados convergentes e discordantes, hipótese dominante, risco imediato e momento da próxima reavaliação. O rótulo antigo perde validade quando a fisiologia muda."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a06-component-m2",
+      "title": "M2 · Decisão segura por perfil dominante",
+      "columns": [
+        {
+          "id": "a06-column-clues",
+          "label": "Pistas convergentes"
+        },
+        {
+          "id": "a06-column-trap",
+          "label": "Armadilha"
+        },
+        {
+          "id": "a06-column-pivot",
+          "label": "Próximo dado/ação"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a06-row-vasoplegic",
+          "label": "Vasoplégico",
+          "cells": [
+            "Tônus baixo, pressão diastólica reduzida e hipotensão apesar de volume avaliado.",
+            "Corrigir PAM e assumir que a perfusão normalizou.",
+            "Noradrenalina sem atraso e reavaliação de fluxo, foco e perfusão."
+          ]
+        },
+        {
+          "id": "a06-row-preload",
+          "label": "Baixa pré-carga responsiva",
+          "cells": [
+            "Manobra dinâmica positiva com ganho de fluxo e tolerância preservada.",
+            "Confundir VCI ou hipotensão isolada com indicação de volume.",
+            "Ciclo pequeno, alvo explícito e nova avaliação de dano."
+          ]
+        },
+        {
+          "id": "a06-row-rv",
+          "label": "VD/obstrutivo",
+          "cells": [
+            "VD disfuncional, congestão, hipoxemia, alta pressão ventilatória ou baixo fluxo.",
+            "Rotular como distributivo e repetir fluido cegamente.",
+            "Excluir causa mecânica, revisar ventilador e definir etiologia."
+          ]
+        },
+        {
+          "id": "a06-row-mixed",
+          "label": "Misto e dinâmico",
+          "cells": [
+            "Resposta parcial, sinais discordantes e mudança após intervenção.",
+            "Forçar uma única etiqueta durante toda a evolução.",
+            "Tratar componente dominante e marcar reavaliação seriada."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a06-component-m3",
+      "title": "M3 · Caso sintético progressivo",
+      "items": [
+        {
+          "id": "a06-case-stage-1",
+          "label": "1 · T0: predomínio vasoplégico",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta com pneumonia, vasodilatação, pressão diastólica baixa e PAM reduzida. Avaliação inicial não mostra congestão relevante; noradrenalina é iniciada enquanto o tratamento etiológico e a avaliação de fluido ocorrem em paralelo."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Hipótese dominante agora: vasoplegia, sem excluir componentes mistos.",
+                "Registre dados basais de perfusão, VD/VE, pulmão e tolerância."
+              ]
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a06-case-stage-2",
+          "label": "2 · Intubação muda as forças",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Após sedação e ventilação com pressão positiva, ocorre hipotensão abrupta, aumento das pressões de via aérea e piora da oxigenação. Repetir simplesmente o tratamento do T0 seria ancoragem."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Faça checagem imediata de tubo/circuito e causas mecânicas tempo-dependentes.",
+                "Considere redução de retorno venoso, aumento da pós-carga do VD e perda de tônus pela sedação."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        },
+        {
+          "id": "a06-case-stage-3",
+          "label": "3 · Nova fotografia: VD e congestão",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A reavaliação mostra VD dilatado e hipocinético, congestão venosa e baixo fluxo. Não há resposta dinâmica favorável a volume. Vasoplegia pode persistir, mas já não explica tudo."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Novo perfil dominante: misto com falência de VD/possível componente obstrutivo.",
+                "Dilatação do VD não confirma TEP; integre história, ventilação, pulmão e testes apropriados."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        },
+        {
+          "id": "a06-case-stage-4",
+          "label": "4 · Conduta muda com a hipótese",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A equipe interrompe expansão cega, revisa PEEP, auto-PEEP e mecânica, procura pneumotórax e TEP, sustenta perfusão e trata a causa identificada conforme protocolo."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "O objetivo não é tratar o nome do fenótipo, mas o mecanismo confirmado.",
+                "Nova reavaliação verifica se VD, fluxo, congestão e perfusão responderam."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        },
+        {
+          "id": "a06-case-stage-5",
+          "label": "5 · Aprendizado transferível",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "O paciente pode voltar a ter vasoplegia dominante, desenvolver disfunção de VE ou recuperar tolerância. Por isso, cada rótulo recebe horário, evidência, limite e prazo de validade."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Fenótipo não é identidade permanente.",
+                "Intervenção sem reavaliação transforma uma hipótese útil em dano por inércia."
+              ]
+            }
+          ],
+          "initiallyOpen": false
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a06-component-m4",
+      "title": "M4 · Armadilhas de ancoragem",
+      "items": [
+        {
+          "id": "a06-trap-label",
+          "title": "Fenótipo como rótulo fixo",
+          "text": "Erro: repetir a terapia inicial apesar de novas forças. Correção: atribuir horário, evidência e prazo de validade à hipótese.",
+          "tone": "danger"
+        },
+        {
+          "id": "a06-trap-distributive",
+          "title": "Infecção = tudo distributivo",
+          "text": "Erro: ignorar TEP, pneumotórax, auto-PEEP, tamponamento ou falência biventricular. Correção: reabrir diagnóstico quando o choque é desproporcional.",
+          "tone": "danger"
+        },
+        {
+          "id": "a06-trap-fluid",
+          "title": "Hipotensão pós-intubação = fluido",
+          "text": "Erro: não avaliar pressão intratorácica, VD, sedação e obstrução. Correção: checagem mecânica e fisiológica antes de expandir.",
+          "tone": "warning"
+        },
+        {
+          "id": "a06-trap-echo",
+          "title": "Um achado define a terapia",
+          "text": "Erro: usar VD dilatado ou fração de ejeção isolada como prescrição. Correção: integrar fluxo, contexto, qualidade da imagem e tendência.",
+          "tone": "warning"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a06-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a06-question-change",
+          "prompt": "Choque inicialmente vasoplégico piora abruptamente após intubação. Qual princípio vem primeiro?",
+          "options": [
+            {
+              "id": "a06-option-change-repeat",
+              "label": "Repetir automaticamente a terapia do T0"
+            },
+            {
+              "id": "a06-option-change-reopen",
+              "label": "Reabrir tubo/circuito, mecânica, VD, obstrução e perfusão"
+            },
+            {
+              "id": "a06-option-change-label",
+              "label": "Manter o rótulo distributivo até o fim"
+            }
+          ],
+          "correctOptionId": "a06-option-change-reopen",
+          "feedback": "A intubação altera pré-carga, pós-carga do VD e tônus e pode revelar emergências mecânicas. A fisiologia deve ser reavaliada imediatamente."
+        },
+        {
+          "id": "a06-question-rv",
+          "prompt": "VD dilatado e disfuncional após intubação confirma TEP e determina uma terapia específica?",
+          "options": [
+            {
+              "id": "a06-option-rv-confirm",
+              "label": "Sim, confirma e prescreve sozinho"
+            },
+            {
+              "id": "a06-option-rv-integrate",
+              "label": "Não; apoia sobrecarga do VD e exige integração etiológica"
+            },
+            {
+              "id": "a06-option-rv-fluid",
+              "label": "Indica sempre mais volume"
+            }
+          ],
+          "correctOptionId": "a06-option-rv-integrate",
+          "feedback": "O achado sugere sobrecarga/falência de VD, mas não é específico. Integre ventilação, TEP, pressões, cronicidade, pulmão, pericárdio e exames confirmatórios."
+        },
+        {
+          "id": "a06-question-definition",
+          "prompt": "Qual definição prática de fenótipo é mais segura?",
+          "options": [
+            {
+              "id": "a06-option-definition-fixed",
+              "label": "Classificação permanente que escolhe tratamento"
+            },
+            {
+              "id": "a06-option-definition-photo",
+              "label": "Hipótese fisiológica temporal que organiza a próxima avaliação"
+            },
+            {
+              "id": "a06-option-definition-molecular",
+              "label": "Sinônimo de endótipo molecular comprovado"
+            }
+          ],
+          "correctOptionId": "a06-option-definition-photo",
+          "feedback": "O fenótipo hemodinâmico é uma fotografia operacional com limitações. Deve ser atualizado após intervenções ou mudança clínica e não substitui diagnóstico etiológico."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a06-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a06-resume-d0",
+          "label": "D0 · Diga por que fenótipo tem horário",
+          "details": "Nomeie duas intervenções capazes de mudar pré-carga, pós-carga, tônus ou bomba.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a06-resume-d1",
+          "label": "D1 · Refazer as três questões",
+          "details": "Explique por que deterioração pós-intubação exige auditoria mecânica imediata.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a06-resume-d7",
+          "label": "D7 · Reconstruir a linha T0 → T1",
+          "details": "Vasoplegia inicial, intervenção, deterioração, dados de VD/congestão e pivô decisório.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a06-resume-d14",
+          "label": "D14 · Comparar quatro perfis",
+          "details": "Vasoplégico, baixa pré-carga responsiva, VD/obstrutivo e misto; cite uma pista e uma armadilha de cada.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a06-resume-d30",
+          "label": "D30 · Simulação de reclassificação em 90 segundos",
+          "details": "Declare hipótese dominante, evidências, discordâncias, causa reversível, intervenção e momento de repetir a avaliação.",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a06-component-progress",
+      "title": "Percurso concluído",
+      "current": 7,
+      "total": 7,
+      "label": "ACRA 06 · M0–M6"
+    },
+    {
+      "type": "sources",
+      "id": "a06-component-sources",
+      "title": "Fontes oficiais",
+      "sourceIds": [
+        "a06-source-ssc2026",
+        "a06-source-hemodynamic-guide"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a06-component-followup",
+      "title": "Próximas ações sugeridas",
+      "actionIds": [
+        "a06-action-review",
+        "a06-action-compare",
+        "a06-action-deepen"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a06-action-review",
+      "kind": "review",
+      "label": "Revisar a linha temporal",
+      "prompt": "Reabra o caso e explique quais forças mudaram depois da intubação e quais causas reversíveis não podem ser perdidas.",
+      "contextComponentIds": [
+        "a06-component-m1",
+        "a06-component-m3"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a06-action-compare",
+      "kind": "compare",
+      "label": "Comparar fenótipos",
+      "prompt": "Compare vasoplegia, baixa pré-carga responsiva, VD/obstrutivo e perfil misto usando pistas, limites e próximo dado útil.",
+      "contextComponentIds": [
+        "a06-component-m2",
+        "a06-component-m4"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a06-action-deepen",
+      "kind": "deepen",
+      "label": "Aprofundar coração–pulmão",
+      "prompt": "Revise como sedação, pressão positiva, PEEP e auto-PEEP podem alterar retorno venoso, pós-carga do VD e pressão arterial no choque.",
+      "contextComponentIds": [
+        "a06-component-m1",
+        "a06-component-sources"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a06-source-ssc2026",
+      "title": "Surviving Sepsis Campaign: Adult Guidelines 2026",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "publisher": "Society of Critical Care Medicine"
+    },
+    {
+      "id": "a06-source-hemodynamic-guide",
+      "title": "Surviving Sepsis Campaign 2026 Adult Hemodynamic Quick Guide",
+      "url": "https://sccm.org/SCCM/media/SCCM/PDFs/SSC-Adult-Quick-Guide-Infographic-2026.pdf",
+      "publisher": "Society of Critical Care Medicine"
+    }
+  ]
+}

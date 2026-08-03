@@ -1,0 +1,397 @@
+{
+  "version": "1.0",
+  "id": "a02-acra-sepse-relogio-antimicrobiano-v1",
+  "title": "O relógio do antimicrobiano",
+  "subtitle": "Choque · probabilidade de sepse · investigação rápida · reavaliação",
+  "mode": "tutorial",
+  "summary": "Micropartícula ACRA para aplicar o tempo do antimicrobiano por gravidade e probabilidade: início imediato, idealmente em até 1 hora, no choque séptico ou na sepse provável/definida; investigação rápida e limitada no caso possível sem choque; diferimento monitorado quando a probabilidade de infecção é baixa e não há choque. Não substitui protocolo, infectologia, microbiologia local ou prescrição médica.",
+  "critical": [
+    {
+      "id": "a02-critical-escopo",
+      "severity": "danger",
+      "title": "Apoio educacional — não prescreve antimicrobiano",
+      "text": "Seleção, dose, infusão, alergias, função renal/hepática, interações, foco, resistência local e controle de foco exigem avaliação individual e protocolo institucional. Este ACRA não emite prescrição autônoma."
+    },
+    {
+      "id": "a02-critical-seguranca",
+      "severity": "warning",
+      "title": "Uma hora não é regra cega para todos",
+      "text": "No choque séptico ou na sepse provável/definida, inicie imediatamente, idealmente em até 1 hora. Na sepse possível sem choque, faça investigação rápida e, se a preocupação persistir, administre em até 3 horas. Baixa probabilidade sem choque permite diferimento com monitorização e reavaliação documentadas."
+    },
+    {
+      "id": "a02-critical-revisao",
+      "severity": "info",
+      "title": "Cenários sintéticos e revisão médica",
+      "text": "Os três cenários são sintéticos e não contêm dados identificáveis. Conteúdo local para treino TEMI; revisão médica final e adaptação à epidemiologia e aos fluxos do serviço permanecem obrigatórias."
+    }
+  ],
+  "components": [
+    {
+      "type": "callout",
+      "id": "a02-component-m0",
+      "title": "M0 · Essência em 30 segundos",
+      "tone": "danger",
+      "text": "O relógio depende de duas perguntas: há choque? Qual é a probabilidade de sepse? Choque séptico possível/provável/definido ou sepse provável/definida sem choque: antimicrobiano imediato, idealmente até 1 hora. Possível sem choque: investigação rápida e limite de 3 horas se a preocupação persistir. Baixa probabilidade sem choque: diferir com vigilância ativa."
+    },
+    {
+      "type": "numberedSteps",
+      "id": "a02-component-m1",
+      "title": "M1 · Mecanismo e sequência",
+      "items": [
+        {
+          "id": "a02-step-gravidade",
+          "title": "Classifique a gravidade agora",
+          "text": "Reconheça choque, hipoperfusão e disfunção orgânica em paralelo ao ABCDE. Instabilidade reduz a tolerância a atraso diagnóstico e terapêutico."
+        },
+        {
+          "id": "a02-step-probabilidade",
+          "title": "Declare a probabilidade de sepse",
+          "text": "Use foco, síndrome, imagem, microbiologia prévia, exposições e alternativas plausíveis. Registre se a hipótese é definida/provável, possível ou de baixa probabilidade."
+        },
+        {
+          "id": "a02-step-janela",
+          "title": "Aplique a janela correspondente",
+          "text": "Choque séptico ou sepse provável/definida pede início imediato, idealmente em até 1 hora. Sepse possível sem choque permite investigação rápida, com decisão até 3 horas se a preocupação persistir."
+        },
+        {
+          "id": "a02-step-amostras",
+          "title": "Colete amostras sem criar atraso inseguro",
+          "text": "Culturas apropriadas antes do antimicrobiano aumentam rendimento quando obtidas prontamente; não espere indefinidamente se isso atrasar tratamento necessário."
+        },
+        {
+          "id": "a02-step-escolha",
+          "title": "Escolha cobertura proporcional",
+          "text": "Integre foco, gravidade, resistência prévia, epidemiologia local, alergias e função orgânica. Evite tanto cobertura insuficiente quanto expansão sem justificativa."
+        },
+        {
+          "id": "a02-step-reavaliacao",
+          "title": "Reavalie e desescale quando possível",
+          "text": "Revise hipótese, culturas, imagem, controle de foco e resposta clínica. Interrompa antimicrobiano quando infecção deixar de ser provável e estreite cobertura quando dados permitirem."
+        }
+      ]
+    },
+    {
+      "type": "comparisonTable",
+      "id": "a02-component-m2",
+      "title": "M2 · Perfil clínico × relógio seguro",
+      "columns": [
+        {
+          "id": "a02-column-quando",
+          "label": "Quando iniciar"
+        },
+        {
+          "id": "a02-column-investigar",
+          "label": "Investigação paralela"
+        },
+        {
+          "id": "a02-column-trava",
+          "label": "Trava de segurança"
+        }
+      ],
+      "rows": [
+        {
+          "id": "a02-row-choque",
+          "label": "Choque séptico ou sepse provável/definida",
+          "cells": [
+            "Imediatamente, idealmente em até 1 hora após reconhecimento.",
+            "Culturas, foco, imagem e controle de foco sem atrasar estabilização e antimicrobiano.",
+            "Não esperar confirmação microbiológica ou um escore completar."
+          ]
+        },
+        {
+          "id": "a02-row-possivel",
+          "label": "Sepse possível sem choque",
+          "cells": [
+            "Investigue rapidamente; se a preocupação persistir, iniciar em até 3 horas do reconhecimento.",
+            "História, exame, exames focais e mimetizadores em uma janela delimitada.",
+            "Não transformar investigação rápida em espera aberta e sem responsável."
+          ]
+        },
+        {
+          "id": "a02-row-baixa",
+          "label": "Baixa probabilidade de infecção",
+          "cells": [
+            "Pode diferir enquanto procura diagnóstico alternativo.",
+            "Monitorização clínica e revisão programada da probabilidade.",
+            "Diferimento exige prazo, responsável e gatilhos de mudança; não é abandono."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "id": "a02-component-m3",
+      "title": "M3 · Três casos sintéticos, três relógios",
+      "items": [
+        {
+          "id": "a02-case-choque",
+          "label": "1 · Hipotensão, hipoperfusão e foco provável",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa adulta apresenta hipotensão persistente, perfusão ruim e síndrome infecciosa plausível. Classificação operacional: choque séptico provável. Antimicrobiano é iniciado imediatamente, idealmente dentro de 1 hora, em paralelo ao suporte, culturas oportunas e busca do foco."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Não aguarde imagem definitiva se houver atraso inseguro.",
+                "Documente horário do reconhecimento e da administração.",
+                "Acione controle de foco desde o início quando indicado."
+              ]
+            }
+          ],
+          "initiallyOpen": true
+        },
+        {
+          "id": "a02-case-provavel",
+          "label": "2 · Sepse provável sem choque",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa está hemodinamicamente estável, mas apresenta foco convincente e nova disfunção orgânica. A hipótese é provável, não apenas possível; a estratégia continua sendo início imediato, idealmente em até 1 hora, junto à investigação."
+            }
+          ]
+        },
+        {
+          "id": "a02-case-possivel",
+          "label": "3 · Infecção possível e mimetizador plausível",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Pessoa sem choque apresenta taquicardia e alteração laboratorial inespecífica; infecção e causa não infecciosa são igualmente plausíveis. A equipe delimita investigação rápida e decide até 3 horas: se a preocupação com sepse persistir, administra; se a probabilidade cair, difere com monitorização."
+            },
+            {
+              "type": "bulletList",
+              "items": [
+                "Escreva a probabilidade inicial.",
+                "Defina qual dado pode mudá-la.",
+                "Marque horário e responsável pela reavaliação."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a02-case-revisao",
+          "label": "4 · O relógio não termina na primeira dose",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "A revisão posterior confronta culturas, imagem, foco, resposta e diagnósticos alternativos. Cobertura é ajustada, estreitada ou suspensa conforme a informação acumulada e o protocolo do serviço."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "id": "a02-component-m4",
+      "title": "M4 · Armadilhas do relógio",
+      "items": [
+        {
+          "id": "a02-pitfall-universal",
+          "title": "Uma hora para qualquer suspeita",
+          "text": "Erro: ignorar probabilidade e ausência de choque. Correção: use a estrutura estratificada da diretriz.",
+          "tone": "danger"
+        },
+        {
+          "id": "a02-pitfall-espera",
+          "title": "Investigação sem limite",
+          "text": "Erro: transformar até 3 horas em espera passiva. Correção: prazo, responsável e pergunta diagnóstica explícita.",
+          "tone": "warning"
+        },
+        {
+          "id": "a02-pitfall-cultura",
+          "title": "Esperar cultura a qualquer custo",
+          "text": "Erro: atrasar tratamento indicado. Correção: colher prontamente, sem atraso inseguro.",
+          "tone": "danger"
+        },
+        {
+          "id": "a02-pitfall-sem-revisao",
+          "title": "Primeira dose encerra o raciocínio",
+          "text": "Erro: não revisar diagnóstico e espectro. Correção: stewardship, controle de foco e desescalada seriada.",
+          "tone": "warning"
+        }
+      ]
+    },
+    {
+      "type": "quiz",
+      "id": "a02-component-m5",
+      "title": "M5 · Recuperação ativa",
+      "questions": [
+        {
+          "id": "a02-question-choque",
+          "prompt": "Em choque séptico provável, qual janela é mais consistente com a diretriz?",
+          "options": [
+            {
+              "id": "a02-option-choque-imediato",
+              "label": "Imediatamente, idealmente até 1 hora"
+            },
+            {
+              "id": "a02-option-choque-tres",
+              "label": "Sempre aguardar 3 horas"
+            },
+            {
+              "id": "a02-option-choque-cultura",
+              "label": "Somente após cultura positiva"
+            }
+          ],
+          "correctOptionId": "a02-option-choque-imediato",
+          "feedback": "Choque séptico exige antimicrobiano imediato, idealmente em até 1 hora, sem atrasar suporte e controle de foco."
+        },
+        {
+          "id": "a02-question-possivel",
+          "prompt": "Na sepse possível sem choque, qual estratégia é mais segura?",
+          "options": [
+            {
+              "id": "a02-option-possivel-universal",
+              "label": "Aplicar uma hora de forma automática"
+            },
+            {
+              "id": "a02-option-possivel-janela",
+              "label": "Investigar rápido e decidir até 3 horas"
+            },
+            {
+              "id": "a02-option-possivel-dias",
+              "label": "Esperar vários dias sem monitorização"
+            }
+          ],
+          "correctOptionId": "a02-option-possivel-janela",
+          "feedback": "A janela diagnóstica deve ser ativa e limitada. Persistindo preocupação com sepse, o antimicrobiano deve ser administrado em até 3 horas."
+        },
+        {
+          "id": "a02-question-baixa",
+          "prompt": "Quando a probabilidade de infecção é baixa, diferir antimicrobiano significa o quê?",
+          "options": [
+            {
+              "id": "a02-option-baixa-abandono",
+              "label": "Encerrar monitorização"
+            },
+            {
+              "id": "a02-option-baixa-ativo",
+              "label": "Vigiar, investigar alternativas e reavaliar"
+            },
+            {
+              "id": "a02-option-baixa-infeccao",
+              "label": "Confirmar que infecção é impossível"
+            }
+          ],
+          "correctOptionId": "a02-option-baixa-ativo",
+          "feedback": "Diferimento seguro é uma estratégia ativa: prazo, responsável, sinais de alarme e revisão da probabilidade."
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "id": "a02-component-m6",
+      "title": "M6 · Retomada espaçada",
+      "items": [
+        {
+          "id": "a02-resume-d0",
+          "label": "D0 · Diga as três categorias do relógio",
+          "details": "Choque séptico ou sepse provável/definida, possível sem choque e baixa probabilidade sem choque.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a02-resume-d1",
+          "label": "D1 · Refaça as três questões",
+          "details": "Recupere as janelas sem consultar a tabela.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a02-resume-d7",
+          "label": "D7 · Classifique três cenários do plantão",
+          "details": "Registre gravidade, probabilidade, janela e próxima reavaliação.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a02-resume-d14",
+          "label": "D14 · Compare com protocolo e antibiograma local",
+          "details": "Identifique onde fluxo, resistência e stewardship exigem adaptação.",
+          "initiallyChecked": false
+        },
+        {
+          "id": "a02-resume-d30",
+          "label": "D30 · Simule decisão em 90 segundos",
+          "details": "Declare probabilidade, relógio, amostras, cobertura e plano de revisão.",
+          "initiallyChecked": false
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "id": "a02-component-progress",
+      "title": "Percurso ACRA",
+      "current": 7,
+      "total": 7,
+      "label": "M0–M6 concluídos"
+    },
+    {
+      "type": "sources",
+      "id": "a02-component-sources",
+      "title": "Diretriz e ferramenta oficial",
+      "sourceIds": [
+        "a02-source-ssc2026",
+        "a02-source-timing2026"
+      ]
+    },
+    {
+      "type": "followupActions",
+      "id": "a02-component-followup",
+      "title": "Próximas ações em modo de prévia",
+      "actionIds": [
+        "a02-action-review",
+        "a02-action-compare",
+        "a02-action-verify"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "a02-action-review",
+      "kind": "review",
+      "label": "Revisar erros do relógio",
+      "prompt": "Reabra as questões e transforme cada erro em uma frase operacional de plantão.",
+      "contextComponentIds": [
+        "a02-component-m4",
+        "a02-component-m5"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a02-action-compare",
+      "kind": "compare",
+      "label": "Comparar os três perfis",
+      "prompt": "Compare choque séptico ou sepse provável/definida, possível sem choque e baixa probabilidade sem choque, incluindo janela, investigação e trava de segurança.",
+      "contextComponentIds": [
+        "a02-component-m2",
+        "a02-component-m3"
+      ],
+      "requiresPreview": true
+    },
+    {
+      "id": "a02-action-verify",
+      "kind": "verify",
+      "label": "Verificar adaptação local",
+      "prompt": "Confronte o raciocínio temporal com protocolo institucional, resistência local, estoque, vias de administração e fluxo de liberação.",
+      "contextComponentIds": [
+        "a02-component-m1",
+        "a02-component-sources"
+      ],
+      "requiresPreview": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "a02-source-ssc2026",
+      "title": "Surviving Sepsis Campaign: Adult Guidelines 2026",
+      "url": "https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines",
+      "publisher": "Society of Critical Care Medicine"
+    },
+    {
+      "id": "a02-source-timing2026",
+      "title": "SSC Adult Antibiotic Timing Framework Infographic 2026",
+      "url": "https://www.sccm.org/SCCM/media/SCCM/PDFs/SSC-Adult-Antibiotic-Timing-Framework-Infographic-2026.pdf",
+      "publisher": "Society of Critical Care Medicine"
+    }
+  ]
+}

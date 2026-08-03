@@ -285,12 +285,12 @@
   },
   {
     "id": "sepse-choque",
-    "title": "🩸 Sepse / Choque",
-    "description": "Bundle, lactato, antibiótico, fluidos, vasopressores e choque refratário.",
-    "url": "#",
+    "title": "🦠 Sepse Ultra Expert",
+    "description": "Reconhecimento, antimicrobianos, controle do foco, hemodinâmica, fenótipos, suporte orgânico, refratariedade e recuperação.",
+    "url": "01_Modulos_Clinicos/Sepse_Choque_Septico/index.html",
     "parent": "medicina-intensiva",
-    "type": "theme",
-    "status": "planejado",
+    "type": "module",
+    "status": "em_revisao",
     "priority": "alta",
     "tags": [
       "Sepse",

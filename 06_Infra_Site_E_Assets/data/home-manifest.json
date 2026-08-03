@@ -119,6 +119,12 @@
       "href": "01_Modulos_Clinicos/Reumatologia_Critica/"
     },
     {
+      "title": "Sepse Ultra Expert",
+      "icon": "🚨",
+      "description": "Revista clínica interativa da suspeita ao pós-sepse, com 60 visuais expandidos, fontes oficiais, download e 10 ACRA opcionais.",
+      "href": "01_Modulos_Clinicos/Sepse_Choque_Septico/"
+    },
+    {
       "title": "Infectologia Crítica",
       "icon": "🦠",
       "description": "Sepse, controle do foco, PAV, neuroinfecção, imunossupressão, resistência antimicrobiana e stewardship em decisões práticas.",
@@ -207,6 +213,11 @@
       "title": "🧬 Reumatologia Crítica",
       "text": "Plataforma plugável para proteger órgãos ameaçados, excluir mimetizadores e treinar pulmão–rim, CAPS, crise renal esclerodérmica, MAS/HLH, LES grave, anti-MDA5 e vasculites.",
       "tags": ["Pulmão–rim", "CAPS", "MAS/HLH", "LES grave", "Turbo TEMI"]
+    },
+    "sepse": {
+      "title": "🚨 Sepse Ultra Expert",
+      "text": "Revista clínica interativa e rastreável: reconhecimento, primeira hora, antimicrobianos, perfusão, fenótipos, refratariedade, prevenção e cuidado pós-sepse. Os visuais ficam expandidos, com legenda, referências e botão de download.",
+      "tags": ["Sepse", "Choque séptico", "60 visuais", "10 ACRA", "SSC 2026"]
     },
     "infectologia": {
       "title": "🦠 Infectologia Crítica",
