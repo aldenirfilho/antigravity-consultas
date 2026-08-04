@@ -72,7 +72,8 @@ class SepsisBlockPublicationTests(unittest.TestCase):
         self.assertIn(".topic-pills .topic-pill.yellow > sup", self.home_status_css)
         self.assertIn("visibility: hidden;", self.home_status_css)
         self.assertIn('content: "publicada";', self.home_status_css)
-        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v19`;', self.service_worker)
+        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v18`;', self.service_worker)
+        self.assertIn("Publicação visual de Sepse em 2026-08-04", self.service_worker)
         self.assertIn('"./assets/editorial-attribution.css"', self.service_worker)
 
 
