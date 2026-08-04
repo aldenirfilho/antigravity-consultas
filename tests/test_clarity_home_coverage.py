@@ -20,6 +20,7 @@ EXPECTED_MODULE_ENTRYPOINTS = {
     "09_POCUS_Hub/index.html",
     "22_Microparticulas_Ativas_ACRA/index.html",
     "01_Modulos_Clinicos/Dermatologia_Critica/index.html",
+    "01_Modulos_Clinicos/Sepse_Choque/index.html",
     "13_RenalDose_Antimicrobianos/index.html",
     "14_SAPS3_Calculator/index.html",
     "01_Modulos_Clinicos/Hematologia_Critica/index.html",
