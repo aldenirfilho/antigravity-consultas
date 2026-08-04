@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="dark" data-preference-key="antigravity:a11y:v1">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -35,7 +35,7 @@
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
   <header class="top"><div class="wrap nav">
     <a class="brand" href="../../index.html" aria-label="Voltar ao Antigravity"><i aria-hidden="true">🦠</i><span>Sepse & Choque Séptico<small>Antigravity · Turbo TEMI 2026</small></span></a>
-    <nav class="navlinks" aria-label="Navegação do módulo"><a href="#primeira-hora">Primeira hora</a><a href="#hemodinamica">Hemodinâmica</a><a href="#antimicrobianos">Antimicrobianos</a><a href="#reavaliacao">Reavaliação</a><button class="iconbtn" id="theme" type="button" aria-pressed="false">☀️ Clara</button><button class="iconbtn" id="print" type="button">🖨️ PDF</button></nav>
+    <nav class="navlinks" aria-label="Navegação do módulo"><a href="#primeira-hora">Primeira hora</a><a href="#hemodinamica">Hemodinâmica</a><a href="#antimicrobianos">Antimicrobianos</a><a href="#reavaliacao">Reavaliação</a><button class="iconbtn" id="theme" type="button" data-clarity-toggle aria-pressed="false" aria-label="Ativar visualização clara com fundo branco">☀️ Clara</button><button class="iconbtn" id="print" type="button">🖨️ PDF</button></nav>
   </div></header>
   <div class="notice"><div class="wrap"><strong>⚠️ Apoio cognitivo educacional.</strong> Não substitui avaliação do paciente, antibiograma/ecologia local, protocolo institucional, monitorização nem dupla checagem de doses.</div></div>
 
@@ -93,7 +93,87 @@
 
   <footer><div class="wrap foot"><span>ATV · TURBO TEMI · ALD 360 · Sepse/Choque Séptico v1.0</span><span>Última revisão editorial: 04/08/2026</span></div></footer>
   <script>
-    (()=>{const root=document.documentElement,key='antigravity:a11y:v1',button=document.getElementById('theme');let light=false;try{const state=JSON.parse(localStorage.getItem(key)||'{}');light=state.theme==='light'||state.clarity===true}catch(_){light=false}const apply=()=>{root.dataset.theme=light?'light':'dark';button.textContent=light?'🌙 Escura':'☀️ Clara';button.setAttribute('aria-pressed',String(light));document.querySelector('meta[name="theme-color"]').content=light?'#f5fbf8':'#06131b'};button.addEventListener('click',()=>{light=!light;apply();try{const state=JSON.parse(localStorage.getItem(key)||'{}');state.theme=light?'light':'dark';state.clarity=light;localStorage.setItem(key,JSON.stringify(state))}catch(_){}});apply();document.getElementById('print').addEventListener('click',()=>window.print());const checks=[...document.querySelectorAll('#checklist input[type="checkbox"]')],result=document.getElementById('result');checks.forEach(c=>c.addEventListener('change',()=>{const n=checks.filter(x=>x.checked).length;result.textContent=n===5?'✅ Fechamento completo: comunique a síntese e mantenha o próximo horário de reavaliação.':n>=3?`🟡 ${n}/5 itens: complete as lacunas antes da passagem.`:`🔴 ${n}/5 itens: risco de omissão — priorize fonte, antimicrobiano, perfusão, foco e rechecagem.`}));})();
+    (() => {
+      const root = document.documentElement;
+      const key = 'antigravity:a11y:v1';
+      const button = document.getElementById('theme');
+      const printButton = document.getElementById('print');
+      const systemTheme = window.matchMedia('(prefers-color-scheme: light)');
+      let preferences = {};
+
+      const readPreferences = () => {
+        try {
+          const parsed = JSON.parse(localStorage.getItem(key) || '{}');
+          return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
+        } catch (_) {
+          return {};
+        }
+      };
+
+      const isLight = () => preferences.theme === 'system'
+        ? systemTheme.matches
+        : preferences.theme === 'light' || preferences.clarity === true;
+
+      const applyTheme = () => {
+        const light = isLight();
+        root.dataset.theme = light ? 'light' : 'dark';
+        button.textContent = light ? '🌙 Escura' : '☀️ Clara';
+        button.setAttribute('aria-pressed', String(light));
+        button.setAttribute(
+          'aria-label',
+          light ? 'Ativar visualização escura' : 'Ativar visualização clara com fundo branco'
+        );
+        const themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta) themeMeta.content = light ? '#f5fbf8' : '#06131b';
+      };
+
+      const savePreferences = () => {
+        try {
+          localStorage.setItem(key, JSON.stringify(preferences));
+        } catch (_) {
+          /* Preferências locais são opcionais. */
+        }
+      };
+
+      preferences = readPreferences();
+      applyTheme();
+
+      button.addEventListener('click', () => {
+        const nextLight = !isLight();
+        preferences.theme = nextLight ? 'light' : 'dark';
+        preferences.clarity = nextLight;
+        preferences.contrast = false;
+        savePreferences();
+        applyTheme();
+      });
+
+      const syncSystemTheme = () => {
+        if (preferences.theme === 'system') applyTheme();
+      };
+      if (typeof systemTheme.addEventListener === 'function') {
+        systemTheme.addEventListener('change', syncSystemTheme);
+      } else if (typeof systemTheme.addListener === 'function') {
+        systemTheme.addListener(syncSystemTheme);
+      }
+
+      window.addEventListener('storage', (event) => {
+        if (event.key !== key) return;
+        preferences = readPreferences();
+        applyTheme();
+      });
+
+      printButton.addEventListener('click', () => window.print());
+      const checks = [...document.querySelectorAll('#checklist input[type="checkbox"]')];
+      const result = document.getElementById('result');
+      checks.forEach((check) => check.addEventListener('change', () => {
+        const completed = checks.filter((item) => item.checked).length;
+        result.textContent = completed === 5
+          ? '✅ Fechamento completo: comunique a síntese e mantenha o próximo horário de reavaliação.'
+          : completed >= 3
+            ? `🟡 ${completed}/5 itens: complete as lacunas antes da passagem.`
+            : `🔴 ${completed}/5 itens: risco de omissão — priorize fonte, antimicrobiano, perfusão, foco e rechecagem.`;
+      }));
+    })();
   </script>
 </body>
 </html>
