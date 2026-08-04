@@ -36,6 +36,27 @@
   color: #70839b;
 }
 
+/*
+ * A Home ainda preserva o marcador estrutural legado de Sepse.
+ * Este estado público substitui apenas o rótulo visual obsoleto, sem tocar
+ * no marcador de VM + SDRA nem ampliar o escopo clínico publicado.
+ */
+.topic-pills .topic-pill.yellow > sup {
+  position: relative;
+  display: inline-block;
+  min-width: 3.9rem;
+  visibility: hidden;
+}
+
+.topic-pills .topic-pill.yellow > sup::after {
+  position: absolute;
+  inset: 0 auto auto 0;
+  content: "publicada";
+  visibility: visible;
+  color: inherit;
+  white-space: nowrap;
+}
+
 @media (prefers-color-scheme: light) {
   .antigravity-editorial-attribution {
     border-top-color: rgba(15, 77, 102, 0.2);
