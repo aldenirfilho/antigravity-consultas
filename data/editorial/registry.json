@@ -739,6 +739,58 @@
           "accessedAt": "2026-08-02"
         }
       ]
+    },
+    {
+      "id": "release-sepse-choque-septico-2026-08-04",
+      "classification": "public-cited",
+      "paths": [
+        "01_Modulos_Clinicos/Sepse_Choque/index.html",
+        "01_Modulos_Clinicos/Sepse_Choque/module.manifest.json",
+        "01_UpDown_Hub/content/intensiva/sepse-choque-septico-2026.md",
+        "01_UpDown_Hub/registry.json",
+        "data/navigation.json",
+        "data/site_manifest.json",
+        "data/topics.json",
+        "index.html"
+      ],
+      "publishTargets": [
+        "github-pages"
+      ],
+      "ownerApproval": true,
+      "reviewer": "Codex — revisão clínica, técnica, editorial, de privacidade e integração; conclusão e publicação solicitadas explicitamente pelo proprietário em 2026-08-04",
+      "reviewedAt": "2026-08-04",
+      "rights": {
+        "basis": "owned",
+        "statement": "Código, interface, organização e redação são síntese autoral deste projeto. Não há imagens ou tabelas de terceiros; recomendações médicas são parafraseadas e vinculadas às fontes primárias ou oficiais."
+      },
+      "professionalClaims": [],
+      "personalData": {
+        "contains": false
+      },
+      "medical": true,
+      "clinicalReviewer": "Aldenir Rocha de Oliveira Filho — médico proprietário, direção clínica e autorização explícita da conclusão/publicação em 2026-08-04; o material permanece educacional e não substitui avaliação presencial nem protocolo institucional",
+      "sources": [
+        {
+          "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2026",
+          "url": "https://doi.org/10.1097/CCM.0000000000007075",
+          "publishedAt": "2026-03-23"
+        },
+        {
+          "title": "SCCM Surviving Sepsis Campaign Adult Guidelines 2026",
+          "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026",
+          "accessedAt": "2026-08-04"
+        },
+        {
+          "title": "The Third International Consensus Definitions for Sepsis and Septic Shock",
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/2492881",
+          "publishedAt": "2016-02-23"
+        },
+        {
+          "title": "SES-DF — Protocolo do atendimento da sepse nas primeiras 6 horas",
+          "url": "https://www.saude.df.gov.br/documents/d/saude/protocolo-do-atendimento-da-sepse-nas-primeiras-6-horas-pdf",
+          "publishedAt": "2026-02-12"
+        }
+      ]
     }
   ],
   "exampleTemplates": [
