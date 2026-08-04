@@ -13,6 +13,8 @@ class SepsisBlockPublicationTests(unittest.TestCase):
         cls.manifest = json.loads((MODULE / "module.manifest.json").read_text(encoding="utf-8"))
         cls.html = (MODULE / "index.html").read_text(encoding="utf-8")
         cls.home = (ROOT / "index.html").read_text(encoding="utf-8")
+        cls.home_status_css = (ROOT / "assets" / "editorial-attribution.css").read_text(encoding="utf-8")
+        cls.service_worker = (ROOT / "sw.js").read_text(encoding="utf-8")
 
     def test_manifest_records_only_the_published_sepsis_scope(self):
         self.assertEqual(self.manifest["status"], "em-revisao-medica")
@@ -64,6 +66,14 @@ class SepsisBlockPublicationTests(unittest.TestCase):
         hash_route = 'href="01_Modulos_Clinicos/Infectologia_Critica/index.html#sepse-publicada"'
         self.assertIn(stable_route, self.home)
         self.assertNotIn(hash_route, self.home)
+
+    def test_home_status_is_published_and_reaches_existing_pwa_users(self):
+        self.assertIn('span class="topic-pill yellow">🦠 Sepse', self.home)
+        self.assertIn(".topic-pills .topic-pill.yellow > sup", self.home_status_css)
+        self.assertIn("visibility: hidden;", self.home_status_css)
+        self.assertIn('content: "publicada";', self.home_status_css)
+        self.assertIn('const CACHE_NAME = `${CACHE_PREFIX}v19`;', self.service_worker)
+        self.assertIn('"./assets/editorial-attribution.css"', self.service_worker)
 
 
 if __name__ == "__main__":
