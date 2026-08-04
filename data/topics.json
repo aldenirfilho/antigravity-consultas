@@ -442,7 +442,12 @@
     "type": "module",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["Hematologia", "UTI", "Emergência", "TEMI"]
+    "tags": [
+      "Hematologia",
+      "UTI",
+      "Emergência",
+      "TEMI"
+    ]
   },
   {
     "id": "ttp-mat",
@@ -453,7 +458,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["PTT", "MAT", "SHU", "ADAMTS13"]
+    "tags": [
+      "PTT",
+      "MAT",
+      "SHU",
+      "ADAMTS13"
+    ]
   },
   {
     "id": "hlh-mas",
@@ -464,7 +474,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["HLH", "MAS", "Ferritina", "HScore"]
+    "tags": [
+      "HLH",
+      "MAS",
+      "Ferritina",
+      "HScore"
+    ]
   },
   {
     "id": "lpa-civd",
@@ -475,7 +490,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["LPA", "ATRA", "CIVD", "Hemorragia"]
+    "tags": [
+      "LPA",
+      "ATRA",
+      "CIVD",
+      "Hemorragia"
+    ]
   },
   {
     "id": "leucostase-lise",
@@ -486,7 +506,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["Leucostase", "Hiperleucocitose", "SLT", "Onco-hemato"]
+    "tags": [
+      "Leucostase",
+      "Hiperleucocitose",
+      "SLT",
+      "Onco-hemato"
+    ]
   },
   {
     "id": "hemolise-transfusao",
@@ -497,7 +522,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["Hemólise", "AHAI", "Transfusão", "Falciforme"]
+    "tags": [
+      "Hemólise",
+      "AHAI",
+      "Transfusão",
+      "Falciforme"
+    ]
   },
   {
     "id": "reumatologia-critica",
@@ -508,7 +538,12 @@
     "type": "module",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["Reumatologia", "UTI", "Emergência", "TEMI"]
+    "tags": [
+      "Reumatologia",
+      "UTI",
+      "Emergência",
+      "TEMI"
+    ]
   },
   {
     "id": "pulmao-rim-reuma",
@@ -519,7 +554,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["AAV", "Anti-GBM", "DAH", "RPGN"]
+    "tags": [
+      "AAV",
+      "Anti-GBM",
+      "DAH",
+      "RPGN"
+    ]
   },
   {
     "id": "caps-crise-renal",
@@ -530,7 +570,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["CAPS", "SAF", "Esclerose sistêmica", "TMA"]
+    "tags": [
+      "CAPS",
+      "SAF",
+      "Esclerose sistêmica",
+      "TMA"
+    ]
   },
   {
     "id": "mas-still-reuma",
@@ -541,7 +586,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["MAS", "HLH", "Still", "Ferritina"]
+    "tags": [
+      "MAS",
+      "HLH",
+      "Still",
+      "Ferritina"
+    ]
   },
   {
     "id": "mda5-dpi-rp",
@@ -552,7 +602,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["Anti-MDA5", "DPI-RP", "Dermatomiosite", "Miopatia"]
+    "tags": [
+      "Anti-MDA5",
+      "DPI-RP",
+      "Dermatomiosite",
+      "Miopatia"
+    ]
   },
   {
     "id": "scores-reuma",
@@ -563,7 +618,12 @@
     "type": "tool",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["Classificação", "Prognóstico", "ACR", "EULAR"]
+    "tags": [
+      "Classificação",
+      "Prognóstico",
+      "ACR",
+      "EULAR"
+    ]
   },
   {
     "id": "delirium-uti",
@@ -574,7 +634,13 @@
     "type": "module",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["Delirium", "UTI", "Enfermaria", "Sedação", "TEMI"]
+    "tags": [
+      "Delirium",
+      "UTI",
+      "Enfermaria",
+      "Sedação",
+      "TEMI"
+    ]
   },
   {
     "id": "rass-cam-icu",
@@ -585,7 +651,12 @@
     "type": "tool",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["RASS", "CAM-ICU", "iCAM-ICU", "Rastreio"]
+    "tags": [
+      "RASS",
+      "CAM-ICU",
+      "iCAM-ICU",
+      "Rastreio"
+    ]
   },
   {
     "id": "icdsc-4at",
@@ -596,7 +667,12 @@
     "type": "tool",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["ICDSC", "4AT", "Enfermaria", "UTI"]
+    "tags": [
+      "ICDSC",
+      "4AT",
+      "Enfermaria",
+      "UTI"
+    ]
   },
   {
     "id": "delirium-prevencao",
@@ -607,7 +683,12 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["ABCDEF", "Prevenção", "Mobilização", "Sono"]
+    "tags": [
+      "ABCDEF",
+      "Prevenção",
+      "Mobilização",
+      "Sono"
+    ]
   },
   {
     "id": "delirium-agitacao",
@@ -618,6 +699,92 @@
     "type": "topic",
     "status": "em_revisao",
     "priority": "alta",
-    "tags": ["Agitação", "Dexmedetomidina", "Antipsicótico", "Abstinência"]
+    "tags": [
+      "Agitação",
+      "Dexmedetomidina",
+      "Antipsicótico",
+      "Abstinência"
+    ]
+  },
+  {
+    "id": "sepse-choque-2026",
+    "title": "🦠 Sepse e Choque Séptico 2026",
+    "description": "Reconhecimento, primeira hora, perfusão, antimicrobianos, controle de foco, suporte e pós-sepse.",
+    "url": "01_Modulos_Clinicos/Sepse_Choque/index.html",
+    "parent": "projeto",
+    "type": "module",
+    "status": "ativo",
+    "priority": "alta",
+    "tags": [
+      "Sepse",
+      "Choque séptico",
+      "UTI",
+      "SSC 2026",
+      "TEMI"
+    ]
+  },
+  {
+    "id": "sepse-primeira-hora",
+    "title": "⏱️ Primeira hora da sepse",
+    "description": "Probabilidade, culturas, antimicrobiano, ressuscitação e controle de foco com prazos.",
+    "url": "01_Modulos_Clinicos/Sepse_Choque/index.html#primeira-hora",
+    "parent": "sepse-choque-2026",
+    "type": "topic",
+    "status": "ativo",
+    "priority": "alta",
+    "tags": [
+      "Antimicrobianos",
+      "Lactato",
+      "Culturas",
+      "Controle de foco"
+    ]
+  },
+  {
+    "id": "sepse-hemodinamica",
+    "title": "💧 Hemodinâmica na sepse",
+    "description": "Cristaloide, responsividade, perfusão, noradrenalina, vasopressina, adrenalina e inotrópico.",
+    "url": "01_Modulos_Clinicos/Sepse_Choque/index.html#hemodinamica",
+    "parent": "sepse-choque-2026",
+    "type": "topic",
+    "status": "ativo",
+    "priority": "alta",
+    "tags": [
+      "Fluidos",
+      "Noradrenalina",
+      "Vasopressina",
+      "Perfusão"
+    ]
+  },
+  {
+    "id": "sepse-stewardship",
+    "title": "🧫 Antimicrobianos e foco",
+    "description": "Espectro, dose de ataque, infusão prolongada, desescalada e duração.",
+    "url": "01_Modulos_Clinicos/Sepse_Choque/index.html#antimicrobianos",
+    "parent": "sepse-choque-2026",
+    "type": "topic",
+    "status": "ativo",
+    "priority": "alta",
+    "tags": [
+      "Stewardship",
+      "MDR",
+      "Beta-lactâmico",
+      "Foco"
+    ]
+  },
+  {
+    "id": "sepse-reavaliacao",
+    "title": "🔁 Reavaliação e pós-sepse",
+    "description": "Gatilhos, de-resuscitation, transição e sequelas físicas, cognitivas e emocionais.",
+    "url": "01_Modulos_Clinicos/Sepse_Choque/index.html#reavaliacao",
+    "parent": "sepse-choque-2026",
+    "type": "topic",
+    "status": "ativo",
+    "priority": "alta",
+    "tags": [
+      "Reavaliação",
+      "De-resuscitation",
+      "Pós-sepse",
+      "Segurança"
+    ]
   }
 ]

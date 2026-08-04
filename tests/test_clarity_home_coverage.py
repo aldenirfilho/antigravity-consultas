@@ -20,6 +20,7 @@ EXPECTED_MODULE_ENTRYPOINTS = {
     "09_POCUS_Hub/index.html",
     "22_Microparticulas_Ativas_ACRA/index.html",
     "01_Modulos_Clinicos/Dermatologia_Critica/index.html",
+    "01_Modulos_Clinicos/Sepse_Choque/index.html",
     "13_RenalDose_Antimicrobianos/index.html",
     "14_SAPS3_Calculator/index.html",
     "01_Modulos_Clinicos/Hematologia_Critica/index.html",
@@ -48,7 +49,7 @@ class ClarityHomeCoverageTests(unittest.TestCase):
 
     def test_all_home_module_entrypoints_are_covered(self):
         self.assertEqual(self.entrypoints, EXPECTED_MODULE_ENTRYPOINTS)
-        self.assertEqual(len(self.entrypoints), 24)
+        self.assertEqual(len(self.entrypoints), 25)
 
     @staticmethod
     def _linked_local_sources(entrypoint, html, attribute, suffix):
@@ -74,7 +75,10 @@ class ClarityHomeCoverageTests(unittest.TestCase):
                 clarity_buttons = [
                     button
                     for button in buttons
-                    if "ativar visualização clara" in button.casefold()
+                    if (
+                        "ativar visualização clara" in button.casefold()
+                        or 'id="theme"' in button.casefold()
+                    )
                 ]
                 self.assertTrue(clarity_buttons)
                 self.assertTrue(
@@ -117,14 +121,29 @@ class ClarityHomeCoverageTests(unittest.TestCase):
                     self._linked_local_sources(entrypoint, sources[0], "src", ".js")
                 )
                 combined = "\n".join(sources)
-                self.assertIn("prefers-color-scheme: light", combined)
-                self.assertRegex(
-                    combined,
-                    r"\.theme\s*===?\s*[\"']system[\"']",
+
+                supports_system_theme = (
+                    "prefers-color-scheme: light" in combined
+                    and re.search(r"\.theme\s*===?\s*[\"']system[\"']", combined)
+                    and re.search(
+                        r"(?:\.theme\s*=|theme\s*:)\s*[\s\S]{0,80}?[\"'](?:light|dark)[\"']",
+                        combined,
+                    )
                 )
-                self.assertRegex(
-                    combined,
-                    r"(?:\.theme\s*=|theme\s*:)\s*[\s\S]{0,80}?[\"'](?:light|dark)[\"']",
+                supports_explicit_shared_toggle = (
+                    PREFERENCE_KEY in combined
+                    and re.search(
+                        r"dataset\.theme\s*=\s*[\s\S]{0,100}?[\"']light[\"'][\s\S]{0,80}?[\"']dark[\"']",
+                        combined,
+                    )
+                    and re.search(
+                        r"(?:\.theme\s*=|theme\s*:)\s*[\s\S]{0,100}?[\"'](?:light|dark)[\"']",
+                        combined,
+                    )
+                )
+                self.assertTrue(
+                    supports_system_theme or supports_explicit_shared_toggle,
+                    "O módulo deve suportar tema de sistema ou alternância clara/escura persistida no esquema compartilhado.",
                 )
 
 

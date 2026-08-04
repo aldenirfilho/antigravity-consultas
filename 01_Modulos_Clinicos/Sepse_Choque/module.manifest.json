@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "sepse-choque-septico-adulto-2026",
+  "title": "Sepse e Choque Séptico no Adulto — Reconhecimento, Ressuscitação e Reavaliação",
+  "shortTitle": "Sepse 2026",
+  "emoji": "🦠",
+  "entrypoint": "index.html",
+  "href": "01_Modulos_Clinicos/Sepse_Choque/index.html",
+  "version": "1.0.0",
+  "status": "ativo-educacional",
+  "clinicalReviewRequired": true,
+  "publication": {
+    "mode": "public-educational",
+    "publicPreview": false,
+    "clinicalReviewOngoing": true,
+    "purpose": "educacional-e-apoio-cognitivo",
+    "authorizedAt": "2026-08-04"
+  },
+  "updatedAt": "2026-08-04",
+  "primaryGuideline": "Surviving Sepsis Campaign 2026",
+  "category": ["Medicina Intensiva", "Clínica Médica", "Medicina de Emergência", "Infectologia", "TEMI"],
+  "keywords": ["sepse", "choque séptico", "SOFA", "lactato", "controle de foco", "antimicrobianos", "noradrenalina", "vasopressina", "hidrocortisona", "ressuscitação", "TEMI"],
+  "features": [
+    "Fluxo dos primeiros minutos até seis horas",
+    "Distinção entre sepse possível, provável/definida e choque séptico",
+    "Ressuscitação volêmica com reavaliação dinâmica e limites",
+    "Escalonamento de vasopressores, inotrópicos e corticosteroide",
+    "Antimicrobianos com stewardship, controle de foco e desescalada",
+    "Suporte respiratório, renal, metabólico e profilaxias",
+    "De-resuscitation, transição e pós-sepse",
+    "Checklist interativo local sem dados do paciente",
+    "Visualização clara, impressão e navegação responsiva",
+    "HTML/CSS/JavaScript puros, sem backend, rede em runtime ou telemetria"
+  ],
+  "privacy": {"networkRuntime": false, "cloud": false, "telemetry": false, "patientData": false, "localStorage": ["preferência global de tema"]},
+  "safetyNotice": "Conteúdo educacional e apoio cognitivo. Não substitui avaliação clínica, protocolo institucional, ecologia/antibiograma local, monitorização nem dupla checagem farmacológica.",
+  "sources": [
+    {"title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2026", "url": "https://doi.org/10.1097/CCM.0000000000007075", "publishedAt": "2026-03-23"},
+    {"title": "SCCM Surviving Sepsis Campaign Adult Guidelines 2026", "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026", "accessedAt": "2026-08-04"},
+    {"title": "Sepsis-3 International Consensus Definitions", "url": "https://jamanetwork.com/journals/jama/fullarticle/2492881", "publishedAt": "2016-02-23"},
+    {"title": "SES-DF Protocolo do Atendimento da Sepse nas Primeiras 6 Horas", "url": "https://www.saude.df.gov.br/documents/d/saude/protocolo-do-atendimento-da-sepse-nas-primeiras-6-horas-pdf", "publishedAt": "2026-02-12"}
+  ]
+}

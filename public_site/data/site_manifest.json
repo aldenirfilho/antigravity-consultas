@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-02",
+  "updatedAt": "2026-08-04",
   "project": "Enciclopédia Médica Intensiva & Medicina Interna",
-  "version": "manifest-canonico-v9",
+  "version": "manifest-canonico-v10",
   "stack": "html-css-js-json-static",
   "hubs": {
     "home": "index.html",
@@ -25,7 +25,8 @@
     "idealizador": "20_Conheca_Aldenir/index.html",
     "ativacao": "21_Central_Ativacao/index.html",
     "microparticulas_acra": "22_Microparticulas_Ativas_ACRA/index.html",
-    "english": "en/index.html"
+    "english": "en/index.html",
+    "sepse": "01_Modulos_Clinicos/Sepse_Choque/index.html"
   },
   "canonicalRoutes": {
     "home": "index.html",
@@ -58,7 +59,8 @@
     "microparticulas_acra": "22_Microparticulas_Ativas_ACRA/index.html",
     "english_home": "en/index.html",
     "english_radar": "en/radar/index.html",
-    "mapa": "data/connections.json"
+    "mapa": "data/connections.json",
+    "sepse_choque_2026": "01_Modulos_Clinicos/Sepse_Choque/index.html"
   },
   "legacyRoutes": [
     { "from": "07_Estudos_Markdown/index.html", "to": "01_UpDown_Hub/index.html", "status": "wrapper-redirect" },
@@ -92,7 +94,8 @@
     "microparticlesAcraPocus": "22_Microparticulas_Ativas_ACRA/data/pocus-choque-acra.json",
     "microparticlesAcraVisuals": "22_Microparticulas_Ativas_ACRA/data/visual-assets.json",
     "themeCatalog": "data/theme-catalog.json",
-    "englishRadarData": "en/radar/data/radar.en.js"
+    "englishRadarData": "en/radar/data/radar.en.js",
+    "sepseManifest": "01_Modulos_Clinicos/Sepse_Choque/module.manifest.json"
   },
   "modules": [
     { "id": "updown", "path": "01_UpDown_Hub/index.html", "label": "UpDown Hub" },
@@ -112,7 +115,8 @@
     { "id": "dermatologia_critica", "path": "01_Modulos_Clinicos/Dermatologia_Critica/index.html", "label": "Dermatologia Crítica" },
     { "id": "delirium_uti", "path": "01_Modulos_Clinicos/Delirium_UTI/index.html", "label": "Delirium UTI/Enfermaria" },
     { "id": "respirasense", "path": "01_Modulos_Clinicos/Ventilacao_Mecanica/respirasense/index.html", "label": "RespiraSense ICU" },
-    { "id": "respiracrit", "path": "01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html", "label": "RespiraCrit" }
+    { "id": "respiracrit", "path": "01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html", "label": "RespiraCrit" },
+    { "id": "sepse_choque_2026", "path": "01_Modulos_Clinicos/Sepse_Choque/index.html", "label": "Sepse e Choque Séptico 2026" }
   ],
   "stations": [
     {
