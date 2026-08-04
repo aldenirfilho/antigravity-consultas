@@ -56,7 +56,7 @@ class SepseChoque2026Tests(unittest.TestCase):
             "medida dinâmica",
             "vasopressina",
             "infusão prolongada",
-            "vitamina C IV",
+            "Vitamina C IV",
             "pós-sepse",
         ]
         for marker in required:
