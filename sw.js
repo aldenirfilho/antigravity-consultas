@@ -1,7 +1,8 @@
 "use strict";
 
 const CACHE_PREFIX = "antigravity-root-";
-const CACHE_NAME = `${CACHE_PREFIX}v19`;
+// Publicação visual de Sepse em 2026-08-04: a mudança deste worker renova os ativos aquecidos.
+const CACHE_NAME = `${CACHE_PREFIX}v18`;
 const SHELL_ASSETS = [
   "./",
   "./index.html",
