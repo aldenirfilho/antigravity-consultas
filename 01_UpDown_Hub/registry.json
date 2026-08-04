@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25",
+  "updatedAt": "2026-08-04",
   "version": "3.0-markdown-vivo",
   "purpose": "Registro central dos estudos em Markdown transformado, com versões, temas, status e conexões.",
   "documents": [
@@ -12,7 +12,14 @@
       "status": "ativo",
       "version": "v1.0",
       "summary": "Protocolo completo de CAD: manejo de insulina, reposição de potássio, correção de acidose e critérios de resolução.",
-      "tags": ["cad", "diabetes", "endocrino", "uti", "emergencia", "temi"]
+      "tags": [
+        "cad",
+        "diabetes",
+        "endocrino",
+        "uti",
+        "emergencia",
+        "temi"
+      ]
     },
     {
       "id": "app-cad-dashboard",
@@ -23,7 +30,13 @@
       "status": "ativo",
       "version": "v1.0",
       "summary": "Painel interativo com simulador de protocolo de insulina e monitoramento clínico em tempo real.",
-      "tags": ["app", "simulador", "cad", "insulina", "uti"]
+      "tags": [
+        "app",
+        "simulador",
+        "cad",
+        "insulina",
+        "uti"
+      ]
     },
     {
       "id": "app-cad-checklist",
@@ -34,7 +47,12 @@
       "status": "ativo",
       "version": "v1.0",
       "summary": "Checklist rápido para garantir que nenhum passo do protocolo foi esquecido durante a fase crítica.",
-      "tags": ["checklist", "seguranca", "cad", "uti"]
+      "tags": [
+        "checklist",
+        "seguranca",
+        "cad",
+        "uti"
+      ]
     },
     {
       "id": "app-cad-transicao",
@@ -45,7 +63,12 @@
       "status": "ativo",
       "version": "v1.0",
       "summary": "Infográfico interativo com os critérios de resolução e o esquema de transição segura para enfermaria.",
-      "tags": ["transicao", "insulina", "diabetes", "alta"]
+      "tags": [
+        "transicao",
+        "insulina",
+        "diabetes",
+        "alta"
+      ]
     },
     {
       "id": "updown-004-avc-agudo",
@@ -56,7 +79,14 @@
       "status": "ativo",
       "version": "v1.0",
       "summary": "Protocolo completo de AVC Agudo: trombólise (tenecteplase/alteplase), trombectomia, checklists de segurança e questões TEMI.",
-      "tags": ["avc", "neuro", "trombólise", "temi", "uti", "emergencia"]
+      "tags": [
+        "avc",
+        "neuro",
+        "trombólise",
+        "temi",
+        "uti",
+        "emergencia"
+      ]
     },
     {
       "id": "updown-003-les-autoanticorpos",
@@ -67,7 +97,14 @@
       "status": "ativo",
       "version": "v1.0",
       "summary": "Interpretação de anti-dsDNA, anti-Sm e anti-U1 RNP: diagnóstico, atividade, nefrite lúpica e armadilhas.",
-      "tags": ["updown", "lupus", "autoanticorpos", "nefrite", "reumatologia", "temi"]
+      "tags": [
+        "updown",
+        "lupus",
+        "autoanticorpos",
+        "nefrite",
+        "reumatologia",
+        "temi"
+      ]
     },
     {
       "id": "UPDOWN_001_LES_Manifestacoes_Diagnostico",
@@ -78,7 +115,14 @@
       "status": "ativo",
       "version": "v1.1",
       "summary": "Guia didático completo sobre Lúpus com modo escuro, sumário interativo e ferramentas de acessibilidade.",
-      "tags": ["updown", "lupus", "reumatologia", "diagnostico", "temi", "r3"]
+      "tags": [
+        "updown",
+        "lupus",
+        "reumatologia",
+        "diagnostico",
+        "temi",
+        "r3"
+      ]
     },
     {
       "id": "updown-002-les-manejo-prognostico",
@@ -89,7 +133,14 @@
       "status": "ativo",
       "version": "v1.0",
       "summary": "Estratégias de tratamento, monitoramento clínico/laboratorial e fatores de prognóstico no LES.",
-      "tags": ["updown", "lupus", "reumatologia", "manejo", "temi", "r3"]
+      "tags": [
+        "updown",
+        "lupus",
+        "reumatologia",
+        "manejo",
+        "temi",
+        "r3"
+      ]
     },
     {
       "id": "template-estudo-seguro",
@@ -100,7 +151,12 @@
       "status": "template",
       "version": "v1.0",
       "summary": "Modelo padrão para transformar material estudado em análise própria, didática, navegável e com menor risco autoral.",
-      "tags": ["template", "direitos-autorais", "gemini-flash", "markdown"]
+      "tags": [
+        "template",
+        "direitos-autorais",
+        "gemini-flash",
+        "markdown"
+      ]
     },
     {
       "id": "exemplo-vm-sdra-markdown",
@@ -111,7 +167,12 @@
       "status": "exemplo",
       "version": "v0.1",
       "summary": "Documento demonstrativo em Markdown para mostrar como um estudo vira resumo clínico, algoritmo e produtos didáticos.",
-      "tags": ["uti", "ventilacao", "sdra", "temi"],
+      "tags": [
+        "uti",
+        "ventilacao",
+        "sdra",
+        "temi"
+      ],
       "relatedUrl": "../01_Modulos_Clinicos/Ventilacao_Mecanica/respiracrit.html"
     },
     {
@@ -123,7 +184,14 @@
       "status": "ativo",
       "version": "v1.0",
       "summary": "Dashboard completo de Vasculites: calculadora ACR/EULAR 2022, algoritmo de anticorpos, FFS, complicações de plantão, flashcards e questões TEMI/R3.",
-      "tags": ["vasculites", "anca", "acr-eular-2022", "uti", "temi", "r3"]
+      "tags": [
+        "vasculites",
+        "anca",
+        "acr-eular-2022",
+        "uti",
+        "temi",
+        "r3"
+      ]
     },
     {
       "id": "updown-007-hematologia-critica",
@@ -134,7 +202,17 @@
       "status": "em_revisao",
       "version": "v1.1.0-rc.1",
       "summary": "Fonte canônica do módulo PTT/MAT, HLH/MAS, LPA/CIVD, leucostase, lise tumoral, HIT, hemólise e emergências transfusionais.",
-      "tags": ["hematologia", "ptt", "mat", "hlh", "mas", "lpa", "civd", "uti", "temi"],
+      "tags": [
+        "hematologia",
+        "ptt",
+        "mat",
+        "hlh",
+        "mas",
+        "lpa",
+        "civd",
+        "uti",
+        "temi"
+      ],
       "relatedUrl": "../01_Modulos_Clinicos/Hematologia_Critica/index.html"
     },
     {
@@ -146,7 +224,17 @@
       "status": "em_revisao",
       "version": "v1.0.0-rc.1",
       "summary": "Fonte canônica do módulo pulmão–rim, CAPS, crise renal esclerodérmica, MAS/HLH, LES grave, anti-MDA5, miopatias, vasculites e via aérea.",
-      "tags": ["reumatologia", "vasculite", "pulmao-rim", "caps", "mas", "lupus", "mda5", "uti", "temi"],
+      "tags": [
+        "reumatologia",
+        "vasculite",
+        "pulmao-rim",
+        "caps",
+        "mas",
+        "lupus",
+        "mda5",
+        "uti",
+        "temi"
+      ],
       "relatedUrl": "../01_Modulos_Clinicos/Reumatologia_Critica/index.html"
     },
     {
@@ -158,8 +246,38 @@
       "status": "em_revisao",
       "version": "v1.0.0-rc.1",
       "summary": "Fonte canônica do módulo RASS, CAM-ICU, ICDSC, 4AT, prevenção ABCDEF e agitação perigosa ou refratária.",
-      "tags": ["delirium", "cam-icu", "icdsc", "4at", "rass", "sedacao", "uti", "enfermaria", "temi"],
+      "tags": [
+        "delirium",
+        "cam-icu",
+        "icdsc",
+        "4at",
+        "rass",
+        "sedacao",
+        "uti",
+        "enfermaria",
+        "temi"
+      ],
       "relatedUrl": "../01_Modulos_Clinicos/Delirium_UTI/index.html"
+    },
+    {
+      "id": "updown-010-sepse-choque-2026",
+      "title": "UPDOWN #010 — Sepse e Choque Séptico no Adulto",
+      "icon": "🦠",
+      "path": "content/intensiva/sepse-choque-septico-2026.md",
+      "theme": "sepse-choque",
+      "status": "ativo",
+      "version": "v1.0.0",
+      "summary": "Fonte canônica do módulo de reconhecimento, primeira hora, ressuscitação, antimicrobianos, controle de foco, suporte e reavaliação conforme SSC 2026.",
+      "tags": [
+        "sepse",
+        "choque-septico",
+        "ssc-2026",
+        "antimicrobianos",
+        "fluidos",
+        "vasopressores",
+        "temi"
+      ],
+      "relatedUrl": "../01_Modulos_Clinicos/Sepse_Choque/index.html"
     }
   ]
 }
