@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <meta name="description" content="Módulo prático e interativo de Infectologia Crítica para UTI, plantão e preparação TEMI.">
+  <meta name="description" content="Módulo prático e interativo de Infectologia Crítica, com bloco publicado de sepse e choque séptico para UTI, plantão e preparação TEMI.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <title>Infectologia Crítica — Antigravity</title>
   <script src="../_shared_critical/assets/critical-theme.js"></script>
@@ -24,15 +24,17 @@
     <h1 id="moduleTitle">Infectologia Crítica</h1>
     <p id="moduleSubtitle"></p>
     <div class="status-row">
-      <span class="status review-strip">🩺 Prévia pública · revisão médica em andamento</span>
+      <span class="status safe">✅ Bloco de sepse publicado · 04/08/2026</span>
+      <span class="status review-strip">🩺 Demais temas · revisão médica em andamento</span>
       <span class="status safe">🔒 Local · offline · sem telemetria</span>
       <span class="status" id="moduleVersion"></span>
     </div>
     <nav class="module-nav" aria-label="Seções do módulo">
-      <a href="#plantao">⚡ Plantão 60 s</a><a href="#emergencias">🚨 Emergências</a>
-      <a href="#fluxos">🧭 Fluxos</a><a href="#comparacoes">🔬 Diferenciais</a>
-      <a href="#ferramentas">🧮 Ferramentas</a><a href="#temi">🏆 Turbo TEMI</a>
-      <a href="#casos">🧩 Casos</a><a href="#flashcards">🧠 Flashcards</a><a href="#fontes">📚 Fontes</a>
+      <a href="#sepse-publicada">✅ Sepse publicada</a><a href="#plantao">⚡ Plantão 60 s</a>
+      <a href="#emergencias">🚨 Emergências</a><a href="#fluxos">🧭 Fluxos</a>
+      <a href="#comparacoes">🔬 Diferenciais</a><a href="#ferramentas">🧮 Ferramentas</a>
+      <a href="#temi">🏆 Turbo TEMI</a><a href="#casos">🧩 Casos</a>
+      <a href="#flashcards">🧠 Flashcards</a><a href="#fontes">📚 Fontes</a>
     </nav>
     <div class="focus-box" aria-label="Sprint de foco">
       <div><strong>⏱️ Sprint TDAH de 12 min</strong><div id="focusStatus" class="meta">Escolha um bloco e foque apenas nele.</div></div>
@@ -41,6 +43,51 @@
     </div>
   </div>
   <main id="conteudo">
+    <section id="sepse-publicada" aria-labelledby="sepseTitle">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Bloco publicado · 4 de agosto de 2026</div>
+          <h2 id="sepseTitle">Sepse e choque séptico</h2>
+          <p>Uma rota curta para reconhecer disfunção e choque, organizar amostras e controle do foco, reavaliar perfusão e usar o qSOFA apenas como alerta contextual.</p>
+        </div>
+        <span class="status safe">✅ Publicado</span>
+      </div>
+      <div class="grid quick-grid">
+        <article class="card">
+          <span class="card-tag">1 · Reconhecer</span>
+          <h3>Choque séptico</h3>
+          <p>Abra o cenário para revisar sinais, primeira hora, exames decisivos e condutas que não devem ser automatizadas.</p>
+          <p><a href="#emergencias">Ir para Emergências →</a></p>
+        </article>
+        <article class="card">
+          <span class="card-tag">2 · Agir</span>
+          <h3>Sepse, foco e reavaliação</h3>
+          <p>Siga o fluxo de 0 a 6 horas: fenótipo, amostras úteis, terapia empírica racional, controle do foco e checkpoint.</p>
+          <p><a href="#fluxos">Ir para Fluxos →</a></p>
+        </article>
+        <article class="card">
+          <span class="card-tag">3 · Diferenciar</span>
+          <h3>Mimetizadores de sepse</h3>
+          <p>Compare infecção com inflamação estéril e outras síndromes que podem produzir febre, choque ou disfunção orgânica.</p>
+          <p><a href="#comparacoes">Ir para Diferenciais →</a></p>
+        </article>
+        <article class="card">
+          <span class="card-tag">4 · Conferir limites</span>
+          <h3>qSOFA contextual</h3>
+          <p>Use a ferramenta como alerta prognóstico. Ela não rastreia nem exclui sepse e não substitui avaliação de disfunção orgânica.</p>
+          <p><a href="#ferramentas">Ir para Ferramentas →</a></p>
+        </article>
+      </div>
+      <div class="notice focus-box">
+        <strong>Resultado entregue:</strong> um plano documentado com fenótipo, suporte, amostras, foco, revisão microbiológica e horário de reavaliação. O bloco é educacional e deve ser adaptado ao protocolo institucional e ao paciente.
+      </div>
+      <div class="chips" aria-label="Fontes principais do bloco de sepse">
+        <a class="chip" href="https://www.sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026" target="_blank" rel="noopener noreferrer">Surviving Sepsis Campaign 2026</a>
+        <a class="chip" href="https://pubmed.ncbi.nlm.nih.gov/26903338/" target="_blank" rel="noopener noreferrer">Sepsis-3</a>
+        <a class="chip" href="https://doi.org/10.1007/s00134-026-08410-9" target="_blank" rel="noopener noreferrer">Correção editorial da SSC 2026</a>
+      </div>
+      <p class="meta">A correção editorial ajusta nomes de autores; não altera as recomendações clínicas da diretriz.</p>
+    </section>
     <section id="plantao"><div class="section-head"><div><div class="kicker">Plantão 60 s</div><h2>Primeiros movimentos seguros</h2></div></div><div id="quickGrid" class="grid quick-grid"></div></section>
     <section id="emergencias"><div class="section-head"><div><div class="kicker">Reconhecimento e ação</div><h2>Emergências infecciosas críticas</h2><p>Busque pelo fenótipo; abra o card para a primeira hora, exames decisivos e armadilhas.</p></div><span id="emergencyCount" class="meta"></span></div><div class="toolbar"><input id="emergencySearch" type="search" placeholder="Buscar síndrome, foco ou patógeno…" aria-label="Buscar emergência"><select id="emergencyCategory" aria-label="Filtrar por eixo"></select></div><div id="emergencyGrid" class="grid three"></div><div id="emergencyEmpty" class="empty">Nenhum cenário encontrado.</div></section>
     <section id="fluxos"><div class="section-head"><div><div class="kicker">Decisão por etapas</div><h2>Fluxos práticos</h2></div></div><div id="pathwayGrid" class="grid two"></div></section>
