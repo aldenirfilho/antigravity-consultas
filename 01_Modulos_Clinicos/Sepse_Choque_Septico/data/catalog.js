@@ -310,7 +310,7 @@ window.SEPSE_ULTRA_EXPERT = {
       title: "Azul de metileno",
       mechanism: "Inibição da via óxido nítrico–guanilato ciclase pode elevar tônus vascular.",
       evidence: "Pode elevar pressão, mas benefício de sobrevida é desconhecido; SSC 2026 não emite recomendação.",
-      guardrail: "Não protocolo universal. Se excepcionalmente discutido: G6PD, hemólise, serotonérgicos/opioides, síndrome serotoninérgica e interferência na oximetria são hard stops/riscos centrais.",
+      guardrail: "Não é protocolo universal. Contraindicações no rótulo citado: deficiência de G6PD e hipersensibilidade. Alertas distintos: síndrome serotoninérgica com serotonérgicos/opioides, hemólise e possível subestimação da saturação pela oximetria de pulso.",
       sourceIds: ["ssc2026", "methylene-fda"]
     },
     {

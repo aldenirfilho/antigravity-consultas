@@ -5,7 +5,7 @@
   const bundle = {
   "artifactCount": 10,
   "artifactSchemaVersion": "1.0",
-  "contentSha256": "6904c5f7fed87db1818b0557d2414104699f8b3ae1194edbeea21d6f850112be",
+  "contentSha256": "9b36dd5dbb20ab7000472d764349a4b1e7d8013a615b81f1355bbf4dc50959f6",
   "entries": [
     {
       "artifact": {
@@ -3387,12 +3387,12 @@
               },
               {
                 "id": "a09-step-evidence",
-                "text": "Registre que a indicação FDA do produto citado é metemoglobinemia, não choque. A SSC 2026 considera insuficiente a evidência para recomendar azul de metileno intravenoso no choque; estudos pequenos e desfechos fisiológicos não sustentam rotina nem esquema universal.",
+                "text": "Registre que a indicação FDA do produto citado é metemoglobinemia, não choque. A SSC 2026 considera insuficiente a evidência para emitir recomendação sobre azul de metileno intravenoso no choque; estudos pequenos e desfechos fisiológicos não sustentam rotina nem esquema universal.",
                 "title": "2 · Classifique evidência e regulação"
               },
               {
                 "id": "a09-step-safety",
-                "text": "Confirme deficiência de G6PD e hipersensibilidade grave, contraindicações do rótulo citado; revise também gestação, função renal e hepática, hemólise, fármacos serotonérgicos, opioides e todas as advertências da bula vigente. Não presuma segurança pela urgência.",
+                "text": "Confirme deficiência de G6PD e hipersensibilidade, contraindicações do rótulo citado; avalie separadamente os alertas sobre síndrome serotoninérgica com serotonérgicos/opioides, hemólise, interferência na oximetria, gestação, função renal e hepática e demais advertências da bula vigente. Não presuma segurança pela urgência.",
                 "title": "3 · Faça triagem de contraindicações e riscos"
               },
               {
@@ -3443,7 +3443,7 @@
               {
                 "cells": [
                   "Há plausibilidade vasopressora e sinais fisiológicos em estudos limitados.",
-                  "A SSC 2026 considera insuficiente a evidência para recomendar o uso intravenoso no choque; benefício clínico líquido, população ideal e esquema permanecem incertos.",
+                  "A SSC 2026 considera insuficiente a evidência para emitir recomendação sobre o uso intravenoso no choque; benefício clínico líquido, população ideal e esquema permanecem incertos.",
                   "Não converter aumento de PAM em benefício de sobrevida."
                 ],
                 "id": "a09-row-outcome",
@@ -3707,7 +3707,7 @@
           {
             "id": "a09-critical-hard-stops",
             "severity": "danger",
-            "text": "O rótulo FDA citado contraindica o produto em deficiência de G6PD e hipersensibilidade grave; alerta para síndrome serotoninérgica grave ou fatal com fármacos serotonérgicos e opioides, hemólise e interferência na oximetria. Revise a bula vigente e todo o prontuário farmacológico.",
+            "text": "O rótulo FDA citado contraindica o produto em deficiência de G6PD e hipersensibilidade. Em blocos distintos, alerta para síndrome serotoninérgica grave ou fatal com fármacos serotonérgicos e opioides, risco de hemólise e possível subestimação da saturação pela oximetria de pulso. Revise a bula vigente e todo o prontuário farmacológico.",
             "title": "Hard stops regulatórios e farmacológicos"
           },
           {
@@ -3738,7 +3738,7 @@
         "title": "Fronteira terapêutica e segurança off-label",
         "version": "1.0"
       },
-      "sha256": "7ea4cc60955e2caa9ef4f36cbb9e31c20b3426d69040eb70245d07dd757ea336",
+      "sha256": "e3a1c336b7f5ceb94df79613199dfaaaf40349b7cf2b1e5d9ae92fff01d4027c",
       "source": "acra/acra-sepse-09-fronteira-off-label-seguranca.json"
     },
     {

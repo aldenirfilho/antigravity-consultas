@@ -16,7 +16,7 @@
       "id": "a09-critical-hard-stops",
       "severity": "danger",
       "title": "Hard stops regulatórios e farmacológicos",
-      "text": "O rótulo FDA citado contraindica o produto em deficiência de G6PD e hipersensibilidade grave; alerta para síndrome serotoninérgica grave ou fatal com fármacos serotonérgicos e opioides, hemólise e interferência na oximetria. Revise a bula vigente e todo o prontuário farmacológico."
+      "text": "O rótulo FDA citado contraindica o produto em deficiência de G6PD e hipersensibilidade. Em blocos distintos, alerta para síndrome serotoninérgica grave ou fatal com fármacos serotonérgicos e opioides, risco de hemólise e possível subestimação da saturação pela oximetria de pulso. Revise a bula vigente e todo o prontuário farmacológico."
     },
     {
       "id": "a09-critical-synthetic",
@@ -46,12 +46,12 @@
         {
           "id": "a09-step-evidence",
           "title": "2 · Classifique evidência e regulação",
-          "text": "Registre que a indicação FDA do produto citado é metemoglobinemia, não choque. A SSC 2026 considera insuficiente a evidência para recomendar azul de metileno intravenoso no choque; estudos pequenos e desfechos fisiológicos não sustentam rotina nem esquema universal."
+          "text": "Registre que a indicação FDA do produto citado é metemoglobinemia, não choque. A SSC 2026 considera insuficiente a evidência para emitir recomendação sobre azul de metileno intravenoso no choque; estudos pequenos e desfechos fisiológicos não sustentam rotina nem esquema universal."
         },
         {
           "id": "a09-step-safety",
           "title": "3 · Faça triagem de contraindicações e riscos",
-          "text": "Confirme deficiência de G6PD e hipersensibilidade grave, contraindicações do rótulo citado; revise também gestação, função renal e hepática, hemólise, fármacos serotonérgicos, opioides e todas as advertências da bula vigente. Não presuma segurança pela urgência."
+          "text": "Confirme deficiência de G6PD e hipersensibilidade, contraindicações do rótulo citado; avalie separadamente os alertas sobre síndrome serotoninérgica com serotonérgicos/opioides, hemólise, interferência na oximetria, gestação, função renal e hepática e demais advertências da bula vigente. Não presuma segurança pela urgência."
         },
         {
           "id": "a09-step-governance",
@@ -103,7 +103,7 @@
           "label": "Efeito observado",
           "cells": [
             "Há plausibilidade vasopressora e sinais fisiológicos em estudos limitados.",
-            "A SSC 2026 considera insuficiente a evidência para recomendar o uso intravenoso no choque; benefício clínico líquido, população ideal e esquema permanecem incertos.",
+            "A SSC 2026 considera insuficiente a evidência para emitir recomendação sobre o uso intravenoso no choque; benefício clínico líquido, população ideal e esquema permanecem incertos.",
             "Não converter aumento de PAM em benefício de sobrevida."
           ]
         },
